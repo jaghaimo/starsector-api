@@ -6,13 +6,14 @@ import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 
 public class TargetAnalysis {
 	
-	public static final float DAMAGE_TO_MODULES_BONUS = 100;
-//	public static final float DAMAGE_TO_SHIELDS_BONUS = 15;
-//	public static final float HIT_STRENGTH_BONUS = 50;
+	public static float DAMAGE_TO_MODULES_BONUS = 100;
+//	public static float DAMAGE_TO_SHIELDS_BONUS = 15;
+//	public static float HIT_STRENGTH_BONUS = 50;
 	
-	public static final float DAMAGE_TO_DESTROYERS = 10;
-	public static final float DAMAGE_TO_CRUISERS = 15;
-	public static final float DAMAGE_TO_CAPITALS = 20;
+	public static float DAMAGE_TO_FRIGATES = 5;
+	public static float DAMAGE_TO_DESTROYERS = 10;
+	public static float DAMAGE_TO_CRUISERS = 15;
+	public static float DAMAGE_TO_CAPITALS = 20;
 	
 
 	public static class Level1 implements ShipSkillEffect {
@@ -26,6 +27,28 @@ public class TargetAnalysis {
 		
 		public String getEffectDescription(float level) {
 			return "+" + (int)(DAMAGE_TO_DESTROYERS) + "% damage to destroyers";
+		}
+		
+		public String getEffectPerLevelDescription() {
+			return null;
+		}
+		
+		public ScopeDescription getScopeDescription() {
+			return ScopeDescription.PILOTED_SHIP;
+		}
+	}
+	
+	public static class Level1A implements ShipSkillEffect {
+		public void apply(MutableShipStatsAPI stats, HullSize hullSize, String id, float level) {
+			stats.getDamageToFrigates().modifyPercent(id, DAMAGE_TO_FRIGATES);
+		}
+		
+		public void unapply(MutableShipStatsAPI stats, HullSize hullSize, String id) {
+			stats.getDamageToFrigates().unmodifyPercent(id);
+		}
+		
+		public String getEffectDescription(float level) {
+			return "+" + (int)(DAMAGE_TO_FRIGATES) + "% damage to frigates";
 		}
 		
 		public String getEffectPerLevelDescription() {

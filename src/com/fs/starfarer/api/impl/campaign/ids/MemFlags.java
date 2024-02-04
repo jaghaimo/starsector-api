@@ -13,10 +13,28 @@ package com.fs.starfarer.api.impl.campaign.ids;
  */
 public class MemFlags {
 
+	/**
+	 * About what is on a case-by-case basis determined by rules and other flags on the fleet.
+	 * This will just make a fleet with this flag periodically pursue the player and try to interact with them.
+	 */
+	public static final String WILL_HASSLE_PLAYER = "$willHasslePlayer";
+	public static final String HASSLE_TYPE = "$hassleType";
+	
+	public static final String NO_HIGH_BURN_TOPOGRAPHY_READINGS = "$noHighBurnTopographyReadings";
+	
+	public static final String DO_NOT_TRY_TO_AVOID_NEARBY_FLEETS= "$doNotTryToAvoidNearbyFleets";
+	
+	public static final String LIGHT_SOURCE_OVERRIDE = "$lightSourceOverride";
+	public static final String LIGHT_SOURCE_COLOR_OVERRIDE = "$lightColorOverride";
+	
 	public static final String AUTO_OPEN_BUY_SHIPS_TAB = "$autoOpenBuyShipsTab";
 	
 	public static final String SHRINE_PILGRIM_FLEET = "$shrinePilgrimFleet";
 	public static final String ACADEMY_FLEET = "$academyFleet";
+	
+	public static final String MAY_GO_INTO_ABYSS = "$mayGoIntoAbyss";
+	public static final String TEMPORARILY_NOT_AVOIDING_ABYSSAL = "$tempNotAvoidingAbyssal";
+	public static final String AVOIDING_ABYSSAL_HYPERSPACE = "$avoidingAbyssalHyperspace";
 	
 	public static final String OFFICER_SKILL_PICKS_PER_LEVEL = "$officerSkillPicksPerLevel";
 	public static final String OFFICER_MAX_LEVEL = "$officerMaxLevel";
@@ -41,6 +59,7 @@ public class MemFlags {
 	public static final String SUSPECTED_AI = "$suspectedAI";
 	
 	public static final String PLAYER_ATROCITIES = "$atrocities";
+	public static final String FACTION_SATURATION_BOMBARED_BY_PLAYER = "$numTimesSatBombardedByPlayer";
 	
 	public static final String STORY_CRITICAL = "$story_critical";
 	
@@ -63,6 +82,7 @@ public class MemFlags {
 	
 	public static final String FLEET_PATROL_DISTANCE = "$cfai_patrolDist";
 	
+	public static final String RECENTLY_PERFORMED_RAID = "$recentlyPerformedRaid";
 	public static final String RECENTLY_RAIDED = "$recentlyRaided";
 	public static final String RECENTLY_BOMBARDED = "$recentlyBombarded";
 	
@@ -97,6 +117,13 @@ public class MemFlags {
 	public static final String FLEET_FIGHT_TO_THE_LAST = "$core_fightToTheLast";
 	
 	public static final String FLEET_BUSY = "$core_fleetBusy";
+	/**
+	 * Should only be used in conjunction with FLEET_BUSY. "busy" fleets will not be
+	 * co-opted by MilitaryResponseScript, and FLEET_SPECIAL_ACTION is used to mark
+	 * already "busy" fleets as being engaged in doing something specific so that
+	 * they are not picked for a different action.
+	 */
+	public static final String FLEET_SPECIAL_ACTION = "$core_fleetSpecialAction";
 	public static final String FLEET_MILITARY_RESPONSE = "$core_fleetMilitaryResponse";
 	
 	public static final String FLEET_CHASING_GHOST = "$core_fleetChasingGhost";
@@ -120,6 +147,7 @@ public class MemFlags {
 	public static final String MEMORY_KEY_SMUGGLER = "$isSmuggler";
 	public static final String MEMORY_KEY_PIRATE = "$isPirate";
 	public static final String MEMORY_KEY_FLEET_TYPE = "$fleetType";
+	public static final String MEMORY_KEY_FLEET_DO_NOT_GET_SIDETRACKED = "$doNotGetSidetracked";
 	
 	public static final String MEMORY_KEY_FORCE_TRANSPONDER_OFF = "$forceTOff";
 	
@@ -131,6 +159,8 @@ public class MemFlags {
 	public static final String MEMORY_KEY_NEVER_AVOID_PLAYER_SLOWLY = "$cfai_neverAvoidPlayerSlowly";
 	
 	public static final String MEMORY_KEY_MAKE_HOSTILE = "$cfai_makeHostile";
+	public static final String MEMORY_KEY_MAKE_HOSTILE_TO_PLAYER_TRADE_FLEETS = "$cfai_makeHostileToPlayerTradeFleets";
+	public static final String MEMORY_KEY_MAKE_HOSTILE_TO_ALL_TRADE_FLEETS = "$cfai_makeHostileToAllTradeFleets";
 	public static final String MEMORY_KEY_MAKE_HOSTILE_WHILE_TOFF = "$cfai_makeHostileWhileTOff";
 	public static final String MEMORY_KEY_MAKE_NON_HOSTILE = "$cfai_makeNonHostile";
 	public static final String MEMORY_KEY_ALLOW_PLAYER_BATTLE_JOIN_TOFF = "$cfai_allowPlayerBattleJoinTOff";
@@ -158,6 +188,7 @@ public class MemFlags {
 	public static final String MEMORY_MARKET_SMUGGLING_SUSPICION_LEVEL = "$smugglingSuspicion";
 	public static final String MEMORY_KEY_PLAYER_HOSTILE_ACTIVITY_NEAR_MARKET = "$playerHostileTimeout";
 	
+	public static final String SPREAD_TOFF_HOSTILITY_IF_LOW_IMPACT = "$alwaysSpreadTOffHostility";
 	public static final String MEMORY_KEY_LOW_REP_IMPACT = "$lowRepImpact";
 	public static final String MEMORY_KEY_NO_REP_IMPACT = "$noRepImpact";
 	
@@ -165,6 +196,13 @@ public class MemFlags {
 	public static final String MEMORY_KEY_FORCE_AUTOFIT_ON_NO_AUTOFIT_SHIPS = "$overrideNoAutofit";
 	
 	public static final String MEMORY_KEY_MISSION_IMPORTANT = "$missionImportant";
+	
+	
+	/**
+	 * To make a faction consider the system its territory for the purpose of sending punitive expeditions
+	 * against player colonies there. 
+	 */
+	public static final String CLAIMING_FACTION = "$claimingFaction";
 	
 	
 	public static final String MEMORY_KEY_NUM_GR_INVESTIGATIONS = "$numGRInvestigations";

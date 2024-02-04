@@ -26,6 +26,9 @@ public class GhostFrequencies {
 		return Math.max(10f, total) * mult;
 		//return 10f;
 	}
+	public static float getAbyssalDrifterFrequency(SensorGhostManager manager) {
+		return 30;
+	}
 	public static float getChargerFrequency(SensorGhostManager manager) {
 		return 10f * getNotInCoreFactor() * getSBFactor(manager, 1f, 2f);
 	}

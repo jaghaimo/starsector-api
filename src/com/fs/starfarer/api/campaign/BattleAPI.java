@@ -16,6 +16,7 @@ public interface BattleAPI {
 	}
 
 	void genCombined();
+	void genCombinedDoNotRemoveEmpty();
 	void uncombine();
 	CampaignFleetAPI getCombinedOne();
 	CampaignFleetAPI getCombinedTwo();

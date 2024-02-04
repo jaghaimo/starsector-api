@@ -13,10 +13,12 @@ import com.fs.starfarer.api.campaign.SectorProcGenPlugin;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.characters.CharacterCreationData;
 import com.fs.starfarer.api.impl.campaign.ids.StarTypes;
+import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator.CustomConstellationParams;
 import com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator.StarSystemType;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.SectorThemeGenerator;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.ThemeGenContext;
+import com.fs.starfarer.api.impl.campaign.terrain.HyperspaceAbyssPlugin;
 import com.fs.starfarer.api.impl.campaign.terrain.HyperspaceTerrainPlugin;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.Pair;
@@ -99,10 +101,13 @@ public class SectorProcGen implements SectorProcGenPlugin {
 			blotOut(cells, x, y, 8);
 		}
 		
-		// for the Orion-Perseus Abyss label
-		blotOut(cells, 0, 0, 12);
-		blotOut(cells, 6, 0, 12);
-		blotOut(cells, 12, 0, 12);
+		// for the Orion-Perseus Abyss label/the Abyss itself
+//		blotOut(cells, 0, 0, 12);
+//		blotOut(cells, 6, 0, 12);
+//		blotOut(cells, 12, 0, 12);
+		blotOut(cells, 0, 0, 22);
+		blotOut(cells, 16, 3, 16);
+		blotOut(cells, 5, 11, 12);
 		
 		progress.render("Generating sector...", 0.1f);
 		
@@ -192,13 +197,14 @@ public class SectorProcGen implements SectorProcGenPlugin {
 			editor.clearArc(dir.x, dir.y, dist - width/2f, dist + width/2f, 0, 360f, clearThreshold);
 		}
 		
+		clearAbyssalHyperspaceAndSetSystemTags();
+		
 		progress.render("Generating objects...", 0.9f);
 		
 		
 		ThemeGenContext context = new ThemeGenContext();
 		context.constellations = constellations;
 		SectorThemeGenerator.generate(context);
-		
 		
 		progress.render("Finishing generation...", 1f);
 		
@@ -212,6 +218,28 @@ public class SectorProcGen implements SectorProcGenPlugin {
 //			CustomConstellationParams params = (CustomConstellationParams) constellations.get(i);
 //			new StarSystemGenerator(params).generate();
 //		}
+	}
+	
+	public static void clearAbyssalHyperspaceAndSetSystemTags() {
+		float w = Global.getSettings().getFloat("sectorWidth");
+		float h = Global.getSettings().getFloat("sectorHeight");
+		
+		HyperspaceTerrainPlugin hyper = (HyperspaceTerrainPlugin) Misc.getHyperspaceTerrain().getPlugin();
+		NebulaEditor editor = new NebulaEditor(hyper);
+		
+		HyperspaceAbyssPlugin ac = hyper.getAbyssPlugin();
+		float ts = editor.getTileSize();
+		for (float x = -w/2f; x < w/2f; x += ts * 0.8f) { 
+			for (float y = -h/2f; y < h/2f; y += ts * 0.8f) {
+				if (ac.isInAbyss(new Vector2f(x, y))) {
+					editor.setTileAt(x, y, -1, 0f, false);
+				}
+			}
+		}
+		
+		for (StarSystemAPI system : Misc.getAbyssalSystems()) {
+			system.addTag(Tags.SYSTEM_ABYSSAL);
+		}
 	}
 	
 	

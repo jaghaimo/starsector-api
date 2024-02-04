@@ -1,5 +1,7 @@
 package com.fs.starfarer.api.util;
 
+import java.util.Random;
+
 public class IntervalUtil {
 	
 	private float minInterval;
@@ -9,6 +11,8 @@ public class IntervalUtil {
 	private float elapsed = 0;
 	private boolean intervalElapsed = false;
 	
+	private Random random;
+	
 	public IntervalUtil(float minInterval, float maxInterval) {
 		setInterval(minInterval, maxInterval);
 	}
@@ -17,8 +21,20 @@ public class IntervalUtil {
 		currInterval = value;
 	}
 	
+	public Random getRandom() {
+		return random;
+	}
+
+	public void setRandom(Random random) {
+		this.random = random;
+	}
+
 	public void randomize() {
-		advance((float) Math.random() * minInterval);
+		if (random != null) {
+			advance(random.nextFloat() * minInterval);
+		} else {
+			advance((float) Math.random() * minInterval);
+		}
 	}
 	
 	public void forceIntervalElapsed() {
@@ -31,7 +47,11 @@ public class IntervalUtil {
 	}
 
 	private void nextInterval() {
-		currInterval = minInterval + (maxInterval - minInterval) * (float) Math.random();
+		if (random != null) {
+			currInterval = minInterval + (maxInterval - minInterval) * random.nextFloat();
+		} else {
+			currInterval = minInterval + (maxInterval - minInterval) * (float) Math.random();
+		}
 		elapsed = 0;
 		intervalElapsed = false;
 	}

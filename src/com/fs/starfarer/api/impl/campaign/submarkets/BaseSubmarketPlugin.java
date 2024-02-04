@@ -28,7 +28,6 @@ import com.fs.starfarer.api.impl.campaign.fleets.DefaultFleetInflater;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetFactoryV3;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetParamsV3;
 import com.fs.starfarer.api.impl.campaign.ids.FleetTypes;
-import com.fs.starfarer.api.impl.campaign.ids.HullMods;
 import com.fs.starfarer.api.impl.campaign.ids.Items;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.shared.SharedData;
@@ -44,7 +43,8 @@ import com.fs.starfarer.api.util.WeightedRandomPicker;
 
 public class BaseSubmarketPlugin implements SubmarketPlugin {
 
-	public static float TRADE_IMPACT_DAYS = 30f;
+	//public static float TRADE_IMPACT_DAYS = 30f;
+	public static float TRADE_IMPACT_DAYS = 120f;
 	
 	public static class ShipSalesData {
 		private String variantId;

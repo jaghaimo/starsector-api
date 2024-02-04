@@ -290,6 +290,9 @@ public interface CampaignFleetAPI extends SectorEntityToken, FleetOrStubAPI {
 	void goSlowOneFrame();
 	boolean getGoSlowOneFrame();
 	Vector2f getVelocityFromMovementModule();
+	void fadeOutIndicator();
+	void fadeInIndicator();
+	void forceOutIndicator();
 }
 
 

@@ -132,4 +132,8 @@ public interface WeaponSpecAPI {
 	float getReloadSize();
 	void setReloadSize(float reloadSize);
 	void setProjectileSpeed(float projectileSpeed);
+	float getTurnRate();
+	void setTurnRate(float turnRate);
+	boolean isRestrictToSpecifiedMountType();
+	void setRestrictToSpecifiedMountType(boolean restrictToSpecifiedMountType);
 }

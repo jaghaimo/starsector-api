@@ -10,4 +10,5 @@ public enum CutStyle {
 	TOP,
 	ALL,
 	C2_MENU,
+	NONE,
 }

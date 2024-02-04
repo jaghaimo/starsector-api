@@ -53,4 +53,10 @@ public interface PlanetAPI extends SectorEntityToken {
 	String getTypeNameWithWorldLowerCase();
 
 	void changeType(String type, Random random);
+
+	String getDescriptionIdOverride();
+
+	void setDescriptionIdOverride(String descriptionIdOverride);
+
+	boolean isBlackHole();
 }

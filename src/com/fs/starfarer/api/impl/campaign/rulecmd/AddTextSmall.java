@@ -9,6 +9,9 @@ import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.util.Misc.Token;
 
+/**
+ * AddTextSmall "text OR text OR text" <color>
+ */
 public class AddTextSmall extends BaseCommandPlugin {
 
 	public boolean execute(String ruleId, InteractionDialogAPI dialog, List<Token> params, Map<String, MemoryAPI> memoryMap) {

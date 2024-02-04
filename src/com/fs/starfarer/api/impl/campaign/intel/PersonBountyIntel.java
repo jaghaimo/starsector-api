@@ -39,6 +39,7 @@ import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.FleetTypes;
 import com.fs.starfarer.api.impl.campaign.ids.Industries;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
+import com.fs.starfarer.api.impl.campaign.ids.Ranks;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.intel.bases.PirateBaseManager;
 import com.fs.starfarer.api.impl.campaign.procgen.Constellation;
@@ -323,6 +324,11 @@ public class PersonBountyIntel extends BaseIntelPlugin implements EveryFrameScri
 		int personLevel = (int) (5 + level * 1.5f);
 		person = OfficerManagerEvent.createOfficer(Global.getSector().getFaction(factionId), 
 												   personLevel, false);
+		if (level >= 7) {
+			person.setRankId(Ranks.SPACE_ADMIRAL);
+		} else {
+			person.setRankId(Ranks.SPACE_CAPTAIN);
+		}
 	}
 	
 	private void pickBountyType() {
@@ -998,11 +1004,53 @@ public class PersonBountyIntel extends BaseIntelPlugin implements EveryFrameScri
 	public CampaignFleetAPI getFleet() {
 		return fleet;
 	}
+
+	public float getDuration() {
+		return duration;
+	}
+
+	public void setDuration(float duration) {
+		this.duration = duration;
+	}
+
+	public float getBountyCredits() {
+		return bountyCredits;
+	}
+
+	public void setBountyCredits(float bountyCredits) {
+		this.bountyCredits = bountyCredits;
+	}
+
+	public BountyType getBountyType() {
+		return bountyType;
+	}
+
+	public void setBountyType(BountyType bountyType) {
+		this.bountyType = bountyType;
+	}
+
+	public FactionAPI getFaction() {
+		return faction;
+	}
+
+	public FleetMemberAPI getFlagship() {
+		return flagship;
+	}
+
+	public SectorEntityToken getHideoutLocation() {
+		return hideoutLocation;
+	}
+
+	public BountyResult getResult() {
+		return result;
+	}
 	
 //	@Override
 //	public boolean hasLargeDescription() {
 //		return true;
 //	}
+	
+	
 }
 
 

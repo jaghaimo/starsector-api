@@ -19,10 +19,11 @@ public class RollProbability extends BaseCommandPlugin {
 	public boolean execute(String ruleId, InteractionDialogAPI dialog, List<Token> params, Map<String, MemoryAPI> memoryMap) {
 		
 		float prob = params.get(0).getFloat(memoryMap);
+		//prob = 1f;
 		
 		long seed;
 		if (dialog.getInteractionTarget() != null) {
-			seed = Misc.getSalvageSeed(dialog.getInteractionTarget());
+			seed = Misc.getSalvageSeed(dialog.getInteractionTarget(), true);
 			seed += (ruleId == null ? 0 : ruleId.hashCode());
 			seed /= 321L;
 			seed *= (Global.getSector().getClock().getMonth() + 10 + prob * 10f);

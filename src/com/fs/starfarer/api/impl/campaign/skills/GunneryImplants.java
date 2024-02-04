@@ -10,6 +10,7 @@ public class GunneryImplants {
 	public static float RECOIL_BONUS = 25f;
 	public static float TARGET_LEADING_BONUS = 100f;
 	public static float RANGE_BONUS = 15f;
+	public static float RANGE_BONUS_ELITE = 5f;
 	
 	public static float EW_FRIGATES = 4f;
 	public static float EW_DESTROYERS = 2f;
@@ -116,6 +117,30 @@ public class GunneryImplants {
 			return null;
 		}
 
+		public ScopeDescription getScopeDescription() {
+			return ScopeDescription.PILOTED_SHIP;
+		}
+	}
+	
+	public static class Level3A implements ShipSkillEffect {
+		public void apply(MutableShipStatsAPI stats, HullSize hullSize, String id, float level) {
+			stats.getBallisticWeaponRangeBonus().modifyPercent(id, RANGE_BONUS_ELITE);
+			stats.getEnergyWeaponRangeBonus().modifyPercent(id, RANGE_BONUS_ELITE);
+		}
+		
+		public void unapply(MutableShipStatsAPI stats, HullSize hullSize, String id) {
+			stats.getBallisticWeaponRangeBonus().unmodify(id);
+			stats.getEnergyWeaponRangeBonus().unmodify(id);
+		}
+		
+		public String getEffectDescription(float level) {
+			return "+" + (int)(RANGE_BONUS_ELITE) + "% ballistic and energy weapon range";
+		}
+		
+		public String getEffectPerLevelDescription() {
+			return null;
+		}
+		
 		public ScopeDescription getScopeDescription() {
 			return ScopeDescription.PILOTED_SHIP;
 		}

@@ -2,6 +2,7 @@ package com.fs.starfarer.api.impl.campaign.intel.events;
 
 import java.awt.Color;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 import java.util.Set;
@@ -97,33 +98,53 @@ public class BaseEventIntel extends BaseIntelPlugin implements EconomyTickListen
 		public void addResetReq(TooltipMakerAPI tooltip, float pad) {
 			addResetReq(tooltip, false, pad);
 		}
-		public void beginResetReqList(TooltipMakerAPI tooltip, boolean withResetInfo, float initPad) {
+		public void beginResetReqList(TooltipMakerAPI tooltip, boolean withAvertInfo, float initPad) {
+			beginResetReqList(tooltip, withAvertInfo, "outcome", initPad);
+		}
+		public void beginResetReqList(TooltipMakerAPI tooltip, boolean withAvertInfo, String outcome, float initPad) {
 			float opad = 10f;
 			float pad = 3f;
-			tooltip.addPara("This outcome will be averted if:", initPad);
+			tooltip.addPara("This " + outcome + " will be averted if:", initPad);
 			tooltip.setBulletedListMode(BaseIntelPlugin.BULLET);
-			if (withResetInfo) {
-				tooltip.addPara("Event progress drops to %s points or below",
+			if (withAvertInfo) {
+				tooltip.addPara("Event progress is reduced to %s points or below",
 						pad, Misc.getHighlightColor(), "" + progressToResetAt);
 			}
 			
 		}
 		public void endResetReqList(TooltipMakerAPI tooltip, boolean withTriggeredResetInfo) {
+			endResetReqList(tooltip, withTriggeredResetInfo, "outcome", -1, -1);
+		}
+		public void endResetReqList(TooltipMakerAPI tooltip, boolean withTriggeredResetInfo, String outcome, int min, int max) {
 			tooltip.setBulletedListMode(null);
 			if (withTriggeredResetInfo) {
 				float opad = 10f;
-				tooltip.addPara("If this outcome is triggered, event progress will be reset to a much lower value afterwards.",
-						opad, Misc.getHighlightColor(), "" + progressToResetAt);
+				if (min < 0 || max < 0) {
+					tooltip.addPara("If this " + outcome + " is triggered, event progress will be reset to a much lower value afterwards.",
+							opad);
+				} else {
+					tooltip.addPara("If this " + outcome + " is triggered, event progress will be reset to between %s and %s points.",
+							opad, Misc.getHighlightColor(), "" + min, "" + max);
+				}
 			}
 		}
 		
 		public void addResetReq(TooltipMakerAPI tooltip, boolean withResetIfTriggered, float pad) {
+			addResetReq(tooltip, withResetIfTriggered, "outcome", -1, -1, pad);
+		}
+		public void addResetReq(TooltipMakerAPI tooltip, boolean withResetIfTriggered, String outcome, int min, int max, float pad) {
 			if (withResetIfTriggered) {
-				tooltip.addPara("This outcome will be averted if event progress drops to %s points or below. "
-						+ "If this outcome is triggered, event progress will be reset to a much lower value afterwards.",
-						pad, Misc.getHighlightColor(), "" + progressToResetAt);
+				if (min < 0 || max < 0) {
+					tooltip.addPara("This " + outcome + " will be averted if event progress is reduced to %s points or below. "
+							+ "If this " + outcome + " is triggered, event progress will be reset to a lower value afterwards.",
+							pad, Misc.getHighlightColor(), "" + progressToResetAt);
+				} else {
+					tooltip.addPara("This " + outcome + " will be averted if event progress is reduced to %s points or below. "
+							+ "If this " + outcome + " is triggered, event progress will be reset to between %s and %s points.",
+							pad, Misc.getHighlightColor(), "" + progressToResetAt, "" + min, "" + max);
+				}
 			} else {
-				tooltip.addPara("This outcome will be averted if event progress drops to %s points or below.", 
+				tooltip.addPara("This " + outcome + " will be averted if event progress is reduced to %s points or below.", 
 						pad, Misc.getHighlightColor(), "" + progressToResetAt);
 			}
 		}
@@ -159,9 +180,21 @@ public class BaseEventIntel extends BaseIntelPlugin implements EconomyTickListen
 		
 		List<EventFactor> remove = new ArrayList<EventFactor>();
 		for (EventFactor curr : factors) {
-			if (curr.isExpired()) remove.add(curr);
+			if (curr.isExpired()) {
+				remove.add(curr);
+				continue;
+			}
+			
+			curr.advance(amount);
+			
+			if (curr.isExpired()) {
+				remove.add(curr);
+			}
 		}
 		factors.removeAll(remove);
+		for (EventFactor factor : remove) {
+			factor.notifyFactorRemoved();
+		}
 	}
 
 
@@ -202,6 +235,7 @@ public class BaseEventIntel extends BaseIntelPlugin implements EconomyTickListen
 		//setProgress(900);
 		//setProgress(499);
 		//setProgress(200);
+		//setProgress(0);
 		
 		TooltipMakerAPI main = panel.createUIElement(width, height, true);
 
@@ -216,7 +250,8 @@ public class BaseEventIntel extends BaseIntelPlugin implements EconomyTickListen
 		
 		for (EventStageData curr : stages) {
 			if (curr.progress <= 0) continue; // no icon for "starting" stage
-			if (curr.rollData == RANDOM_EVENT_NONE) continue;
+			//if (curr.rollData == null || curr.rollData.equals(RANDOM_EVENT_NONE)) continue;
+			if (RANDOM_EVENT_NONE.equals(curr.rollData)) continue;
 			if (curr.wasEverReached && curr.isOneOffEvent && !curr.isRepeatable) continue;
 			
 			if (curr.hideIconWhenPastStageUnlessLastActive && 
@@ -283,7 +318,7 @@ public class BaseEventIntel extends BaseIntelPlugin implements EconomyTickListen
 			if (desc != null) {
 				mFac.addRowWithGlow(Alignment.LMID, factor.getDescColor(this), desc,
 								    Alignment.RMID, factor.getProgressColor(this), factor.getProgressStr(this));
-				TooltipCreator t = factor.getMainRowTooltip();
+				TooltipCreator t = factor.getMainRowTooltip(this);
 				if (t != null) {
 					mFac.addTooltipToAddedRow(t, TooltipLocation.RIGHT, false);
 				}
@@ -306,7 +341,9 @@ public class BaseEventIntel extends BaseIntelPlugin implements EconomyTickListen
 				"Progress", strW
 				);
 		
-		for (EventFactor factor : factors) {
+		List<EventFactor> reversed = new ArrayList<EventFactor>(factors);
+		Collections.reverse(reversed);
+		for (EventFactor factor : reversed) {
 			if (!factor.isOneTime()) continue;
 			if (!factor.shouldShow(this)) continue;
 			
@@ -314,7 +351,7 @@ public class BaseEventIntel extends BaseIntelPlugin implements EconomyTickListen
 			if (desc != null) {
 				oFac.addRowWithGlow(Alignment.LMID, factor.getDescColor(this), desc,
 								    Alignment.RMID, factor.getProgressColor(this), factor.getProgressStr(this));
-				TooltipCreator t = factor.getMainRowTooltip();
+				TooltipCreator t = factor.getMainRowTooltip(this);
 				if (t != null) {
 					oFac.addTooltipToAddedRow(t, TooltipLocation.LEFT);
 				}
@@ -405,6 +442,13 @@ public class BaseEventIntel extends BaseIntelPlugin implements EconomyTickListen
 		return null;
 	}
 	
+	public float getImageSizeForStageDesc(Object stageId) {
+		return 64f;
+	}
+	public float getImageIndentForStageDesc(Object stageId) {
+		return 0f;
+	}
+	
 	public void addStageDescriptionWithImage(TooltipMakerAPI main, Object stageId) {
 		EventStageDisplayData data = createDisplayData(stageId);
 		String icon;
@@ -413,10 +457,11 @@ public class BaseEventIntel extends BaseIntelPlugin implements EconomyTickListen
 		} else {
 			icon = getIcon();
 		}
-		float imageSize = 64;
+		float imageSize = getImageSizeForStageDesc(stageId);
 		float opad = 10f;
 		float indent = 0;
 		indent = 10f;
+		indent += getImageIndentForStageDesc(stageId);
 		float width = getBarWidth() - indent * 2f;
 		
 		
@@ -761,8 +806,18 @@ public class BaseEventIntel extends BaseIntelPlugin implements EconomyTickListen
 		return factors;
 	}
 	
+	public EventFactor getFactorOfClass(Class c) {
+		for (EventFactor f : getFactors()) {
+			if (f.getClass() == c) {
+				return f;
+			}
+		}
+		return null;
+	}
+	
 	public void removeFactor(EventFactor factor) {
 		factors.remove(factor);
+		factor.notifyFactorRemoved();
 	}
 	
 	public void removeFactorOfClass(Class<EventFactor> c) {
@@ -773,25 +828,48 @@ public class BaseEventIntel extends BaseIntelPlugin implements EconomyTickListen
 			}
 		}
 		factors.removeAll(remove);
+		for (EventFactor factor : remove) {
+			factor.notifyFactorRemoved();
+		}
 	}
 	
 	public boolean isEventProgressANegativeThingForThePlayer() {
 		return false;
 	}
 
+	
+	public int getMaxMonthlyProgress() {
+		return 1000000;
+	}
 
 	public int getMonthlyProgress() {
 		int total = 0;
+		float mult = 1f;
 		for (EventFactor factor : factors) {
 			if (factor.isOneTime()) continue;
 			total += factor.getProgress(this);
+			mult *= factor.getAllProgressMult(this);
 		}
+		
+		if (total != 0) {
+			float sign = Math.signum(total);
+			total = Math.round(sign * Math.abs(total) * mult);
+			if (total == 0) total = (int) Math.round(1f * sign);
+		}
+		
+		total = Math.min(total, getMaxMonthlyProgress());
+		
 		return total;
 	}
 	
 	
 	public void reportEconomyTick(int iterIndex) {
 		float delta = getMonthlyProgress();
+		
+		if (delta <= 0 && this instanceof HostileActivityEventIntel) {
+			setProgress(0);
+			return;
+		}
 		
 		float numIter = Global.getSettings().getFloat("economyIterPerMonth");
 		float f = 1f / numIter;
@@ -804,6 +882,7 @@ public class BaseEventIntel extends BaseIntelPlugin implements EconomyTickListen
 		progressDeltaRemainder = delta - (float) apply;
 		
 		setProgress(progress + apply);
+		
 	}
 	
 	public int getProgress() {
@@ -840,10 +919,10 @@ public class BaseEventIntel extends BaseIntelPlugin implements EconomyTickListen
 			if (esd.wasEverReached && esd.isOneOffEvent && !esd.isRepeatable) continue;
 			
 			if (esd.randomized) {
-				if (esd.rollData != null && progress <= esd.progressToResetAt) {
+				if ((esd.rollData != null && !esd.rollData.equals(RANDOM_EVENT_NONE)) && progress <= esd.progressToResetAt) {
 					resetRandomizedStage(esd);
 				}
-				if (esd.rollData == null && progress >= esd.progressToRollAt) {
+				if ((esd.rollData == null || esd.rollData.equals(RANDOM_EVENT_NONE)) && progress >= esd.progressToRollAt) {
 					rollRandomizedStage(esd);
 					if (esd.rollData == null) {
 						esd.rollData = RANDOM_EVENT_NONE;
@@ -856,13 +935,14 @@ public class BaseEventIntel extends BaseIntelPlugin implements EconomyTickListen
 		// generally this'd just be one stage, but possible to have multiple for a large
 		// progress increase
 		for (EventStageData curr : getStages()) {
-			if (curr.progress <= prev.progress) continue;
+			if (curr.progress <= prev.progress && !prev.wasEverReached &&
+					(prev.rollData == null || prev.rollData.equals(RANDOM_EVENT_NONE))) continue;
 			//if (curr.progress > progress) continue;
 			
 			// reached
 			if (curr.progress <= progress) {
-				//EventStageData curr = getLastActiveStage(true);
-				if (curr != null && (curr != prev || !prev.wasEverReached)) {
+				boolean laterThanPrev = prev == null || ((Enum)prev.id).ordinal() < ((Enum)curr.id).ordinal();
+				if (curr != null && (laterThanPrev || !prev.wasEverReached)) {
 					if (curr.sendIntelUpdateOnReaching && curr.progress > 0 && (prev == null || prev.progress < curr.progress)) {
 						sendUpdateIfPlayerHasIntel(curr, getTextPanelForStageChange());
 					}
@@ -874,6 +954,40 @@ public class BaseEventIntel extends BaseIntelPlugin implements EconomyTickListen
 				}
 			}
 		}
+	}
+	
+	protected String getSoundForStageReachedUpdate(Object stageId) {
+		return getSoundMajorPosting();
+	}
+	protected String getSoundForOneTimeFactorUpdate(EventFactor factor) {
+		return null;
+	}
+	protected String getSoundForOtherUpdate(Object param) {
+		return null;
+	}
+	
+	public String getCommMessageSound() {
+		if (isSendingUpdate()) {
+			if (getListInfoParam() instanceof EventStageData) {
+				EventStageData esd = (EventStageData) getListInfoParam();
+				String sound = getSoundForStageReachedUpdate(esd.id);
+				if (sound != null) {
+					return sound;
+				}
+			} else if (getListInfoParam() instanceof EventFactor) {
+				String sound = getSoundForOneTimeFactorUpdate((EventFactor) getListInfoParam());
+				if (sound != null) {
+					return sound;
+				}
+			} else if (getListInfoParam() != null) {
+				String sound = getSoundForOtherUpdate(getListInfoParam());
+				if (sound != null) {
+					return sound;
+				}
+			}
+			return getSoundStandardUpdate();
+		}
+		return getSoundStandardPosting();
 	}
 
 	protected void notifyStageReached(EventStageData stage) {
@@ -921,6 +1035,10 @@ public class BaseEventIntel extends BaseIntelPlugin implements EconomyTickListen
 
 	public Random getRandom() {
 		return random;
+	}
+	
+	public void setRandom(Random random) {
+		this.random = random;
 	}
 
 	public void resetRandomizedStage(EventStageData stage) {

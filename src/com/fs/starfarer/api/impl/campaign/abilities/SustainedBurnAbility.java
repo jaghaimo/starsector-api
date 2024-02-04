@@ -196,6 +196,14 @@ public class SustainedBurnAbility extends BaseToggleAbility {
 		tooltip.addPara("The burn level increase does not apply to flat burn bonuses, " +
 						"such as those from Nav Buoys or tugs.", pad);
 		
+		CampaignFleetAPI fleet = getFleet();
+		if (fleet != null) {
+			if (!fleet.isAIMode() && fleet.getCargo().getFuel() <= 0 && 
+					fleet.getContainingLocation() != null && fleet.getContainingLocation().isHyperspace()) {
+				tooltip.addPara("Out of fuel.", Misc.getNegativeHighlightColor(), pad);
+			}
+		}
+		
 //		tooltip.addPara("Increases the maximum burn level by %s, Acceleration is greatly reduced, and " +
 //				"higher drive emissions interfere with sensors, decreasing their range by %s. " +
 //				"The fleet is also %s easier to detect.", pad,
@@ -206,6 +214,19 @@ public class SustainedBurnAbility extends BaseToggleAbility {
 //		);
 		//tooltip.addPara("Disables the transponder when activated.", pad);
 		addIncompatibleToTooltip(tooltip, expanded);
+	}
+	
+	public boolean isUsable() {
+		if (!super.isUsable()) return false;
+		if (getFleet() == null) return false;
+		
+		CampaignFleetAPI fleet = getFleet();
+		if (!fleet.isAIMode() && fleet.getCargo().getFuel() <= 0 && 
+				fleet.getContainingLocation() != null && fleet.getContainingLocation().isHyperspace()) {
+			return false;
+		}
+		
+		return true;
 	}
 
 	public boolean hasTooltip() {

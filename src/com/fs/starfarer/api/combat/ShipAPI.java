@@ -721,6 +721,16 @@ public interface ShipAPI extends CombatEntityAPI {
 
 	EnumSet<CombatEngineLayers> getActiveLayers();
 
+
+	boolean isShipSystemDisabled();
+
+
+	boolean isDoNotFlareEnginesWhenStrafingOrDecelerating();
+	void setDoNotFlareEnginesWhenStrafingOrDecelerating(boolean doNotFlare);
+
+
+	PersonAPI getFleetCommander();
+
 }
 
 

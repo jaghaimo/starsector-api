@@ -28,7 +28,6 @@ import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.CustomRepImpact;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepActionEnvelope;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepActions;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepRewards;
-import com.fs.starfarer.api.impl.campaign.ids.Conditions;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch;
@@ -68,6 +67,7 @@ public class DelayedFleetEncounter extends HubMissionWithTriggers implements Gat
 	public static float BASE_DAYS_IN_SYSTEM_BEFORE_IN_SYSTEM_ATTACK = 10f;
 	public static float BASE_TIMEOUT = 10f;
 	
+	public static float BASE_DELAY_VERY_SHORT = 365f * 0.25f; 
 	public static float BASE_DELAY_SHORT = 365f * 0.67f; 
 	public static float BASE_DELAY_MEDIUM = 365f * 2f; 
 	public static float BASE_DELAY_LONG = 365f * 5f;
@@ -599,6 +599,10 @@ public class DelayedFleetEncounter extends HubMissionWithTriggers implements Gat
 		setDelay(0f);
 	}
 	
+	public void setDelayVeryShort() {
+		setDelay(BASE_DELAY_VERY_SHORT);
+	}
+	
 	public void setDelayShort() {
 		setDelay(BASE_DELAY_SHORT);
 	}
@@ -856,16 +860,6 @@ public class DelayedFleetEncounter extends HubMissionWithTriggers implements Gat
 		return super.callAction(action, ruleId, dialog, params, memoryMap);
 	}
 	
-	
-	public void setFleetSource(String ... preferred) {
-		for (String id : preferred) {
-			MarketAPI market = Global.getSector().getEconomy().getMarket(id);
-			if (market != null && !market.hasCondition(Conditions.DECIVILIZED)) {
-				getPreviousCreateFleetAction().params.setSource(market, true);
-				break;
-			}
-		}
-	}
 	
 }
 

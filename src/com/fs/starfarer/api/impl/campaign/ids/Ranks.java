@@ -44,6 +44,11 @@ public class Ranks {
 	public static String POST_INTELLIGENCE_DIRECTOR = "intelligenceDirector";
 	public static String POST_GUARD_LEADER = "guardLeader";
 	
+	// ranks for aristocratic house leaders, eg. Persean League gens
+	public static String HOUSE_LEADER = "houseLeader"; 
+	public static String HOUSE_LEADER_MALE = "houseLeaderMale";
+	public static String HOUSE_LEADER_FEMALE = "houseLeaderFemale";
+	
 	public static String FACTION_LEADER = "factionLeader";
 	public static String POST_FACTION_LEADER = "factionLeader";
 	public static String POST_PROVOST = "provost";
@@ -84,6 +89,8 @@ public class Ranks {
 	
 	public static String POST_TRADER = "trader";
 	public static String POST_MERCHANT = "merchant";
+	public static String POST_BOSS = "boss";
+	public static String POST_CREW_BOSS = "crewBoss";
 	public static String POST_INVESTOR = "investor";
 	public static String POST_EXECUTIVE = "executive";
 	public static String POST_SENIOR_EXECUTIVE = "seniorExecutive";
@@ -106,6 +113,7 @@ public class Ranks {
 	public static String POST_ACTIVIST = "activist";
 	public static String POST_TERRORIST = "terrorist";
 	public static String POST_SYNOD_SUBCURATE = "synodSubcurate";
+	public static String POST_HERETIC = "heretic";
 	public static String POST_ARCHCURATE = "archcurate";
 	public static String POST_WARLORD = "warlord";
 	public static String POST_UNKNOWN = "unknown";

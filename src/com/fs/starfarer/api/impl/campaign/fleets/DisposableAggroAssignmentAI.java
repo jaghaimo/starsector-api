@@ -46,8 +46,24 @@ public class DisposableAggroAssignmentAI implements EveryFrameScript {
 				fleet.setLocation(loc.x, loc.y);
 			}
 		} else if (fleet.isInHyperspace()) { // fleet in hyper; don't care about player being there or not
-			Vector2f loc = Misc.pickHyperLocationNotNearPlayer(system.getLocation(), Global.getSettings().getMaxSensorRangeHyper() + 500f);
-			fleet.setLocation(loc.x, loc.y);
+			SectorEntityToken from = Misc.getSourceEntity(fleet);
+			if (from != null && system != null) {
+				float angle = Misc.getAngleInDegrees(system.getLocation(), from.getLocationInHyperspace());
+				float arc = 90f;
+				angle = angle - arc / 2f + arc * (float) Math.random();
+				//float dist = Global.getSettings().getMaxSensorRangeHyper() + 500f + 1000f * (float) Math.random();
+				float dist = Global.getSettings().getMaxSensorRangeHyper() + 1000f;
+				Vector2f loc = Misc.getUnitVectorAtDegreeAngle(angle);
+				loc.scale(dist);
+				Vector2f.add(loc, system.getLocation(), loc);
+				
+				loc = Misc.pickHyperLocationNotNearPlayer(new Vector2f(loc), Global.getSettings().getMaxSensorRangeHyper() + 500f);
+				
+				fleet.setLocation(loc.x, loc.y);
+			} else {
+				Vector2f loc = Misc.pickHyperLocationNotNearPlayer(system.getLocation(), Global.getSettings().getMaxSensorRangeHyper() + 500f);
+				fleet.setLocation(loc.x, loc.y);
+			}
 		} else { // player in same location, and in-system
 			target = pickEntityToGuard(new Random(), system, fleet);
 			Vector2f loc = new Vector2f(5000, 0);
@@ -71,12 +87,12 @@ public class DisposableAggroAssignmentAI implements EveryFrameScript {
 			LocationAPI hyper = Global.getSector().getHyperspace();
 			SectorEntityToken token = hyper.createToken(dest.x, dest.y);
 			fleet.addAssignment(FleetAssignment.GO_TO_LOCATION, token, 1000, 
-								manager.getTravelText(system));
+								manager.getTravelText(system, fleet));
 		}
 		
 		if (fleet.isInHyperspace() && (float) Math.random() < probStayInHyper) {
 			fleet.addAssignment(FleetAssignment.RAID_SYSTEM, system.getHyperspaceAnchor(), 10000,
-								manager.getActionOutsideText(system));
+								manager.getActionOutsideText(system, fleet));
 		} else {
 			if (target == null) target = pickEntityToGuard(new Random(), system, fleet);
 			if (target != null) {
@@ -86,12 +102,12 @@ public class DisposableAggroAssignmentAI implements EveryFrameScript {
 				float days = seconds / Global.getSector().getClock().getSecondsPerDay();
 				days += 30f + 10f * (float) Math.random();
 				fleet.addAssignment(FleetAssignment.PATROL_SYSTEM, target, days,
-									manager.getActionInsideText(system));
+									manager.getActionInsideText(system, fleet));
 				return;
 			} else {
 				float days = 5f + 5f * (float) Math.random();
 				fleet.addAssignment(FleetAssignment.PATROL_SYSTEM, null, days,
-									manager.getActionInsideText(system));
+									manager.getActionInsideText(system, fleet));
 			}
 		}
 	}

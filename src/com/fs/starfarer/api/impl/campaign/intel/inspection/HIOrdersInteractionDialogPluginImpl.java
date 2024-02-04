@@ -15,6 +15,7 @@ import com.fs.starfarer.api.campaign.VisualPanelAPI;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.combat.EngagementResultAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Sounds;
+import com.fs.starfarer.api.impl.campaign.intel.events.HegemonyHostileActivityFactor;
 import com.fs.starfarer.api.impl.campaign.intel.inspection.HegemonyInspectionIntel.AntiInspectionOrders;
 import com.fs.starfarer.api.impl.campaign.rulecmd.AddRemoveCommodity;
 import com.fs.starfarer.api.impl.campaign.rulecmd.SetStoryOption;
@@ -24,8 +25,8 @@ import com.fs.starfarer.api.util.Misc;
 public class HIOrdersInteractionDialogPluginImpl implements InteractionDialogPlugin {
 
 	//public static float BRIBE_BASE = 0;
-	public static int BRIBE_MULT = 10000;
-	public static int BRIBE_MAX = 100000;
+	public static int BRIBE_MULT = 200000;
+	public static int BRIBE_MAX = 500000;
 	
 	private static enum OptionId {
 		INIT,
@@ -85,7 +86,8 @@ public class HIOrdersInteractionDialogPluginImpl implements InteractionDialogPlu
 //		int bribe = (int) Math.round(BRIBE_BASE + threshold * BRIBE_MULT);
 //		return bribe;
 		
-		int bribe = (int) (Math.pow(1.5f, HegemonyInspectionManager.getInstance().getNumAttempts()) * BRIBE_MULT);
+		//int bribe = (int) (Math.pow(1.5f, HegemonyInspectionManager.getInstance().getNumAttempts()) * BRIBE_MULT);
+		int bribe = (int) (Math.pow(1.5f, HegemonyHostileActivityFactor.getInspectionAttempts()) * BRIBE_MULT);
 		if (bribe > BRIBE_MAX) bribe = BRIBE_MAX;
 		return bribe;
 		

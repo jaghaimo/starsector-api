@@ -6,14 +6,13 @@ import java.util.List;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Industries;
 import com.fs.starfarer.api.impl.campaign.ids.Strings;
-import com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel.Stage;
 import com.fs.starfarer.api.ui.Alignment;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI.TooltipCreator;
 import com.fs.starfarer.api.ui.TooltipMakerAPI.TooltipLocation;
 import com.fs.starfarer.api.util.Misc;
 
-public class HADefensiveMeasuresFactor extends BaseEventFactor {
+@Deprecated public class HADefensiveMeasuresFactor extends BaseEventFactor {
 	
 	public static int PATROL_HQ_POINTS = 5;
 	public static float MILITARY_SIZE_MULT = 2;
@@ -23,7 +22,7 @@ public class HADefensiveMeasuresFactor extends BaseEventFactor {
 	}
 
 	@Override
-	public TooltipCreator getMainRowTooltip() {
+	public TooltipCreator getMainRowTooltip(BaseEventIntel intel) {
 		return new BaseFactorTooltip() {
 			public void createTooltip(TooltipMakerAPI tooltip, boolean expanded, Object tooltipParam) {
 				Color h = Misc.getHighlightColor();
@@ -145,6 +144,10 @@ public class HADefensiveMeasuresFactor extends BaseEventFactor {
 		return p;
 	}
 	
+	public float getAllProgressMult(BaseEventIntel intel) {
+		return 1f;
+	}
+	
 //	public int getIncreasedDefensesScore(BaseEventIntel intel) {
 //		if (intel.isStageOrOneOffEventReached(Stage.INCREASED_DEFENSES)) {
 //			return (int) Math.round(getProgress(intel, false) * INCREASED_DEFENSES_MULT);
@@ -154,9 +157,9 @@ public class HADefensiveMeasuresFactor extends BaseEventFactor {
 	
 	public int getColonyIncreasedDefensesScore(BaseEventIntel intel, MarketAPI market) {
 		if (market == null) return 0;
-		if (intel.isStageOrOneOffEventReached(Stage.INCREASED_DEFENSES)) {
-			return -1 * Math.round(market.getSize() + market.getStabilityValue());
-		}
+//		if (intel.isStageOrOneOffEventReached(Stage.INCREASED_DEFENSES)) {
+//			return -1 * Math.round(market.getSize() + market.getStabilityValue());
+//		}
 		return 0;
 	}
 	

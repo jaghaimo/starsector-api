@@ -7,10 +7,13 @@ import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 public class FieldModulation {
 	
 	public static float SHIELD_DAMAGE_REDUCTION = 15f;
-	public static float FLUX_SHUNT_DISSIPATION = 15f;
+	public static float FLUX_SHUNT_DISSIPATION = 20f;
 	
 	public static float PHASE_FLUX_UPKEEP_REDUCTION = 25f;
 	public static float PHASE_COOLDOWN_REDUCTION = 50f;
+	
+	public static float ELITE_DAMAGE_TO_SHIELDS_PERCENT = 5f;
+	public static float OVERLOAD_REDUCTION = 25f;
 
 
 	public static class Level1 implements ShipSkillEffect {
@@ -92,6 +95,53 @@ public class FieldModulation {
 		
 		public String getEffectDescription(float level) {
 			return "-" + (int)(PHASE_COOLDOWN_REDUCTION) + "% phase cloak cooldown";
+		}
+		
+		public String getEffectPerLevelDescription() {
+			return null;
+		}
+		
+		public ScopeDescription getScopeDescription() {
+			return ScopeDescription.PILOTED_SHIP;
+		}
+	}
+	
+	
+	public static class Level5 implements ShipSkillEffect {
+
+		public void apply(MutableShipStatsAPI stats, HullSize hullSize, String id, float level) {
+			stats.getDamageToTargetShieldsMult().modifyPercent(id, ELITE_DAMAGE_TO_SHIELDS_PERCENT);
+		}
+		
+		public void unapply(MutableShipStatsAPI stats, HullSize hullSize, String id) {
+			stats.getDamageToTargetShieldsMult().unmodifyPercent(id);
+		}
+		
+		public String getEffectDescription(float level) {
+			return "+" + (int)(ELITE_DAMAGE_TO_SHIELDS_PERCENT) + "% damage dealt to shields";
+		}
+		
+		public String getEffectPerLevelDescription() {
+			return null;
+		}
+		
+		public ScopeDescription getScopeDescription() {
+			return ScopeDescription.PILOTED_SHIP;
+		}
+	}
+	
+	public static class Level6 implements ShipSkillEffect {
+		
+		public void apply(MutableShipStatsAPI stats, HullSize hullSize, String id, float level) {
+			stats.getOverloadTimeMod().modifyMult(id, 1f - OVERLOAD_REDUCTION / 100f);
+		}
+		
+		public void unapply(MutableShipStatsAPI stats, HullSize hullSize, String id) {
+			stats.getOverloadTimeMod().unmodify(id);
+		}	
+		
+		public String getEffectDescription(float level) {
+			return "-" + (int)(OVERLOAD_REDUCTION) + "% overload duration";
 		}
 		
 		public String getEffectPerLevelDescription() {

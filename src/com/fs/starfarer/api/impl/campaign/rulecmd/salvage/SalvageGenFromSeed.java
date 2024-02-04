@@ -75,6 +75,13 @@ public class SalvageGenFromSeed extends BaseCommandPlugin {
 		public float getStrength(SDMParams p, float strength, Random random, boolean withOverride) {
 			if (withOverride) return strength;
 			if (Factions.DERELICT.equals(p.factionId)) {
+				// Limbo stuff is not affected
+				if (p.entity.getMemoryWithoutUpdate().getBoolean("$limboWormholeCache") ||
+						p.entity.getMemoryWithoutUpdate().getBoolean("$limboMiningStation")) {
+					return strength;
+				}
+				
+				
 				float bonus = Global.getSector().getMemoryWithoutUpdate().getFloat(DEFEATED_DERELICT_STR) * DEFEATED_TO_ADDED_FACTOR;
 				
 				String type = p.entity.getCustomEntityType();
@@ -231,6 +238,30 @@ public class SalvageGenFromSeed extends BaseCommandPlugin {
 					member.getRepairTracker().setCR(member.getRepairTracker().getMaxCR());
 				}
 			} else
+			if (Entities.SPEC_LIMBO_WORMHOLE_CACHE.equals(p.entity.getCustomDescriptionId())) {
+				//fleet.getFleetData().clear();
+				for (ShipRolePick pick : fleet.getFaction().pickShip(ShipRoles.COMBAT_CAPITAL, ShipPickParams.all(), null, random)) {
+					fleet.getFleetData().addFleetMember(pick.variantId);
+				}
+				AICoreOfficerPlugin plugin = Misc.getAICoreOfficerPlugin(Commodities.GAMMA_CORE);
+				//PersonAPI person = OfficerManagerEvent.createOfficer(fleet.getFaction(), 20, true, SkillPickPreference.NON_CARRIER, random);
+				PersonAPI person = plugin.createPerson(Commodities.GAMMA_CORE, fleet.getFaction().getId(), random);
+				// so it's not the standard alpha core portrait but an older-looking one
+				//person.setPortraitSprite(fleet.getFaction().createRandomPerson().getPortraitSprite());
+				for (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {
+					if (member.isCapital()) {
+						fleet.getFleetData().setFlagship(member);
+						break;
+					}
+				}
+				fleet.setCommander(person);
+				fleet.getFlagship().setCaptain(person);
+				RemnantOfficerGeneratorPlugin.integrateAndAdaptCoreForAIFleet(fleet.getFlagship());
+				
+				for (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {
+					member.getRepairTracker().setCR(member.getRepairTracker().getMaxCR());
+				}
+			} else
 			if (Entities.DERELICT_MOTHERSHIP.equals(p.entity.getCustomEntityType()) ||
 					Entities.DERELICT_SURVEY_SHIP.equals(p.entity.getCustomEntityType()) ||
 					Entities.DERELICT_SURVEY_PROBE.equals(p.entity.getCustomEntityType())
@@ -368,7 +399,6 @@ public class SalvageGenFromSeed extends BaseCommandPlugin {
 		
 		//prob = 1f;
 		//strength = 0;
-		
 		
 		if (((int) strength > 0 || stationRole != null) &&  
 				random.nextFloat() < prob && 

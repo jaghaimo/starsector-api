@@ -390,12 +390,12 @@ public class CRPluginImpl implements CombatReadinessPlugin {
 	public float getMalfunctionThreshold(MutableShipStatsAPI stats) {
 		float mult = 1f;
 		if (stats != null) mult *= stats.getDynamic().getStat(Stats.CR_MALFUNCION_RANGE).getModifiedValue();
-		return MALFUNCTION_START * mult;
+		return MALFUNCTION_START * mult - 0.001f;
 	}
 	public float getCriticalMalfunctionThreshold(MutableShipStatsAPI stats) {
 		float mult = 1f;
 		if (stats != null) mult *= stats.getDynamic().getStat(Stats.CR_MALFUNCION_RANGE).getModifiedValue();
-		return CRITICAL_MALFUNCTION_START * mult;
+		return CRITICAL_MALFUNCTION_START * mult - 0.001f;
 	}
 	
 	public float getShieldMalfunctionThreshold(MutableShipStatsAPI stats) {
@@ -407,7 +407,7 @@ public class CRPluginImpl implements CombatReadinessPlugin {
 	public float getMissileAmmoReductionThreshold(MutableShipStatsAPI stats) {
 		float mult = 1f;
 		if (stats != null) mult *= stats.getDynamic().getStat(Stats.CR_MALFUNCION_RANGE).getModifiedValue();
-		return MISSILE_AMMO_REDUCTION_START * mult;
+		return MISSILE_AMMO_REDUCTION_START * mult - 0.001f;
 	}
 	
 	public float getDegradeThreshold(MutableShipStatsAPI stats) {

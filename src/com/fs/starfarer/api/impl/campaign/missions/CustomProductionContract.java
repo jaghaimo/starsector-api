@@ -77,7 +77,7 @@ public class CustomProductionContract extends HubMissionWithBarEvent {
 	
 	public static float PROB_ARMS_DEALER_IS_CONTACT = 0.05f;
 	
-	public static float MIN_CAPACITY = 50000;
+	public static float MIN_CAPACITY = 100000;
 	public static float MAX_CAPACITY = 500000;
 	public static int BAR_CAPACITY_BONUS_MIN = 50000;
 	public static int BAR_CAPACITY_BONUS_MAX = 150000;
@@ -90,8 +90,8 @@ public class CustomProductionContract extends HubMissionWithBarEvent {
 	public static float DEALER_MAX_CAPACITY = 2000000;
 	public static Map<PersonImportance, Float> DEALER_MULT = new LinkedHashMap<PersonImportance, Float>();
 	static {
-		DEALER_MULT.put(PersonImportance.VERY_LOW, 0.1f);
-		DEALER_MULT.put(PersonImportance.LOW, 0.2f);
+		DEALER_MULT.put(PersonImportance.VERY_LOW, 0.3f);
+		DEALER_MULT.put(PersonImportance.LOW, 0.3f);
 		DEALER_MULT.put(PersonImportance.MEDIUM, 0.3f);
 		DEALER_MULT.put(PersonImportance.HIGH, 0.6f);
 		DEALER_MULT.put(PersonImportance.VERY_HIGH, 1f);
@@ -303,6 +303,8 @@ public class CustomProductionContract extends HubMissionWithBarEvent {
 			nShips = 5 + genRandom.nextInt(3);
 			nFighters = 3 + genRandom.nextInt(3);
 			break;
+//		case LOW:
+//		case VERY_LOW:
 		case MEDIUM:
 			add[1] = true;
 			wSizes.add(wSizePicker.pickAndRemove());
@@ -360,6 +362,7 @@ public class CustomProductionContract extends HubMissionWithBarEvent {
 				if (spec.getHints().contains(ShipTypeHints.HIDE_IN_CODEX)) continue;
 				if (spec.getHints().contains(ShipTypeHints.UNBOARDABLE)) continue;
 				if (spec.isDefaultDHull()) continue; // || spec.isDHull()) continue;
+				if (spec.isDHullOldMethod()) continue;
 				if ("shuttlepod".equals(spec.getHullId())) continue;
 				if (ships.contains(spec.getHullId())) continue;
 				if (!hullSizes.contains(spec.getHullSize())) continue;
@@ -431,6 +434,8 @@ public class CustomProductionContract extends HubMissionWithBarEvent {
 		for (String id : faction.getKnownShips()) {
 			ShipHullSpecAPI spec = Global.getSettings().getHullSpec(id);
 			if (spec.hasTag(Tags.NO_SELL)) continue;
+			if (spec.isDHullOldMethod()) continue;
+			//if (spec.isDHull()) continue;
 			ships.add(id);
 		}
 		for (String id : faction.getKnownWeapons()) {
@@ -754,8 +759,9 @@ public class CustomProductionContract extends HubMissionWithBarEvent {
 	public PersonImportance pickArmsDealerImportance() {
 		WeightedRandomPicker<PersonImportance> picker = new WeightedRandomPicker<PersonImportance>(genRandom);
 		
-		picker.add(PersonImportance.VERY_LOW, 10f);
-		picker.add(PersonImportance.LOW, 10f);
+//		picker.add(PersonImportance.VERY_LOW, 10f);
+//		picker.add(PersonImportance.LOW, 10f);
+		picker.add(PersonImportance.MEDIUM, 10f);
 		
 //		int credits = (int) Global.getSector().getPlayerFleet().getCargo().getCredits().get();
 //		if (credits >= 200000) {
@@ -770,12 +776,15 @@ public class CustomProductionContract extends HubMissionWithBarEvent {
 		
 		float cycles = PirateBaseManager.getInstance().getDaysSinceStart() / 365f;
 		if (cycles > 1f) {
-			picker.remove(PersonImportance.VERY_LOW);
-			picker.add(PersonImportance.MEDIUM, 20f);
+//			picker.remove(PersonImportance.VERY_LOW);
+//			picker.add(PersonImportance.MEDIUM, 20f);
+			picker.add(PersonImportance.HIGH, 5f);
 		}
 		if (cycles > 3f) {
-			picker.remove(PersonImportance.LOW);
-			picker.add(PersonImportance.HIGH, 10f);
+//			picker.remove(PersonImportance.LOW);
+//			picker.add(PersonImportance.HIGH, 10f);
+			picker.remove(PersonImportance.MEDIUM);
+			picker.add(PersonImportance.VERY_HIGH, 5f);
 		}
 		if (cycles > 5f) {
 			//picker.add(PersonImportance.VERY_HIGH, 10f);

@@ -109,6 +109,9 @@ public interface PlanetSpecAPI {
 	void setShieldColor2(Color shieldColor2);
 	boolean isDoNotShowInCombat();
 	void setDoNotShowInCombat(boolean doNotShowInCombat);
+	boolean isGasGiant();
+	String getDescriptionId();
+	void setDescriptionId(String descriptionId);
 
 }
 	

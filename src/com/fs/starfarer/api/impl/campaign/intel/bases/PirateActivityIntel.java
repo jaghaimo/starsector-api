@@ -15,6 +15,7 @@ import com.fs.starfarer.api.impl.campaign.ids.Conditions;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin;
+import com.fs.starfarer.api.impl.campaign.intel.events.PiracyRespiteScript;
 import com.fs.starfarer.api.ui.Alignment;
 import com.fs.starfarer.api.ui.SectorMapAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
@@ -92,6 +93,8 @@ public class PirateActivityIntel extends BaseIntelPlugin {
 		}
 		
 		for (MarketAPI curr : source.getAffectedMarkets(system)) {
+			if (curr.isPlayerOwned() && PiracyRespiteScript.get() != null) continue;
+			
 			if (!curr.hasCondition(Conditions.PIRATE_ACTIVITY)) {
 				curr.addCondition(Conditions.PIRATE_ACTIVITY, source);
 			}

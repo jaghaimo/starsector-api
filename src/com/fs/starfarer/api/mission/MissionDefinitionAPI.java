@@ -218,6 +218,8 @@ public interface MissionDefinitionAPI {
 	BattleCreationContext getContext();
 
 	PersonAPI getDefaultCommander(FleetSide side);
+
+	boolean hasNebula();
 }
 
 

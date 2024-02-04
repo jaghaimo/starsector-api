@@ -90,8 +90,10 @@ public class DiktatLobsterBarEvent extends BaseGetCommodityBarEvent {
 		return "\"Why, just today an amazing opportunity fell into my lap. " +
 				"And yours as well, how wonderful!\" " + heOrShe + " sweeps " + hisOrHer + " arm regally " +
 				"to encompass the scale of your shared luck, somehow managing not to spill the drinks of " +
-				"several patrons. You are told the story of tiresome property seizures from " +
-				"'disloyal elements'. \"It's not so much trouble to, you know. Play along? " +
+				"several patrons.\n\n"
+				+ "You are told the story of tiresome property seizures from " +
+				"'disloyal elements'.\n\n"
+				+ " \"It's not so much trouble to, you know. Play along? " +
 				"But they insist on carrying on, and on... not that I mind the perks of the job, of course.\"";
 	}
 	
@@ -106,9 +108,10 @@ public class DiktatLobsterBarEvent extends BaseGetCommodityBarEvent {
 				"locker - and maintenance bay, and several interrogation rooms - are filled with cases " +
 				"of cyro-stabilized Volturnian Lobster, nearly %s units in all. The officers eat like " +
 				"royalty, yes, but there's only so much one can take and the coolant cells won't last " +
-				"another week without replacement, so. " + Misc.ucFirst(heOrShe) + " turns to " +
+				"another week without replacement, so.\n\n"
+				+ Misc.ucFirst(heOrShe) + " turns to " +
 				"you. %s will satisfy the district commandant as well as your new friend here, " +
-				"and the entire cargo can be transferred to your holds without bothering with tariffs.\n\n" +
+				"and the entire cargo can be transferred to your holds without the bother of tariffs.\n\n" +
 				
 				"\"What do you say, will you help maintain a little law and order?\"";
 	}

@@ -19,6 +19,7 @@ import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.FleetTypes;
 import com.fs.starfarer.api.impl.campaign.ids.People;
 import com.fs.starfarer.api.impl.campaign.ids.Ranks;
+import com.fs.starfarer.api.impl.campaign.ids.Skills;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.missions.hub.ReqMode;
 import com.fs.starfarer.api.impl.campaign.world.TTBlackSite;
@@ -194,6 +195,7 @@ public class GAProjectZiggurat extends GABaseMission { //implements ShipRecovery
 		beginEnteredLocationTrigger(relaySystem, Stage.GO_TO_RELAY_SYSTEM);
 		triggerCreateFleet(FleetSize.LARGE, FleetQuality.SMOD_2, Factions.MERCENARY, FleetTypes.MERC_BOUNTY_HUNTER, culann.getLocationInHyperspace());
 		triggerSetFleetOfficers(OfficerNum.MORE, OfficerQuality.HIGHER);
+		triggerFleetAddCommanderSkill(Skills.PHASE_CORPS, 1);
 		triggerSetFleetFaction(Factions.TRITACHYON);
 		triggerMakeHostileAndAggressive();
 		triggerMakeLowRepImpact();

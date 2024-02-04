@@ -64,6 +64,12 @@ public class MilitaryResponseScript implements EveryFrameScript {
 		elapsed += days;
 		
 		
+//		if (params != null) {
+//			System.out.println("MRS: " + params.responseReason);
+//		} else {
+//			System.out.println("NULL MRS params");
+//		}
+		
 		if (tracker.intervalElapsed()) {
 			initiateResponse();
 		}
@@ -72,7 +78,9 @@ public class MilitaryResponseScript implements EveryFrameScript {
 	
 	public void initiateResponse() {
 		if (params.target.getContainingLocation() == null) return;
-		
+//		if (params.faction.getId().equals(Factions.PIRATES) && params.target.isInCurrentLocation()) {
+//			System.out.println("wefwefwe");
+//		}
 		List<CampaignFleetAPI> fleets = params.target.getContainingLocation().getFleets();
 		for (CampaignFleetAPI fleet : fleets) {
 			seeIfFleetShouldRespond(fleet);

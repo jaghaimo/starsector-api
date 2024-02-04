@@ -89,7 +89,7 @@ public class PlayerTradeProfitabilityData {
 	public void advance(float days) {
 		tracker.advance(days);
 		if (tracker.intervalElapsed()) {
-			float factor = 1f - Misc.getGenericRollingAverageFactor();
+			float factor = Misc.getGenericRollingAverageFactor();
 			for (CommodityData cd : new ArrayList<CommodityData>(dataBought.values())) {
 				cd.setQuantity(cd.getQuantity() * factor);
 				cd.setTotalPrice(cd.getTotalPrice() * factor);

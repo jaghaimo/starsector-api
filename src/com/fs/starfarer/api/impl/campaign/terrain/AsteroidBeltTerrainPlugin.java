@@ -335,7 +335,8 @@ public class AsteroidBeltTerrainPlugin extends BaseRingTerrain implements Astero
 	}
 	
 	public boolean hasAIFlag(Object flag) {
-		return flag == TerrainAIFlags.REDUCES_SPEED_LARGE || flag == TerrainAIFlags.DANGEROUS_UNLESS_GO_SLOW;
+		return flag == TerrainAIFlags.REDUCES_SPEED_LARGE || flag == TerrainAIFlags.DANGEROUS_UNLESS_GO_SLOW ||
+				flag == TerrainAIFlags.NOT_SUPER_DANGEROUS_UNLESS_GO_SLOW;
 	}
 
 	

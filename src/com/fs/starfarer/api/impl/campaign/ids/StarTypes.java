@@ -15,6 +15,10 @@ public class StarTypes {
 	public static final String NEUTRON_STAR = "star_neutron";
 	public static final String BLACK_HOLE = "black_hole";
 	
+	
+	public static final String GAS_GIANT = "gas_giant";
+	public static final String ICE_GIANT = "ice_giant";
+	
 //	public static final String PLANET_LAVA = "lava";
 //	public static final String PLANET_LAVA_MINOR = "lava_minor";
 //	

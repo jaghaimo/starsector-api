@@ -335,7 +335,7 @@ public class OrbitalStation extends BaseIndustry implements FleetEventListener {
 	@Override
 	public void notifyColonyRenamed() {
 		super.notifyColonyRenamed();
-		if (!usingExistingStation) {
+		if (!usingExistingStation && stationFleet != null && stationEntity != null) {
 			stationFleet.setName(market.getName() + " Station");
 			stationEntity.setName(market.getName() + " Station");
 		}

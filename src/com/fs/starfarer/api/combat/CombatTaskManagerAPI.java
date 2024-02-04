@@ -59,4 +59,5 @@ public interface CombatTaskManagerAPI {
 	float getCPInterval();
 	MutableStat getCPRateModifier();
 	void removeAssignment(AssignmentInfo info);
+	void clearEmptyWaypoints();
 }

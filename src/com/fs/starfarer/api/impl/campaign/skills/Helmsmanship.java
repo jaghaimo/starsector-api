@@ -7,9 +7,9 @@ import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 public class Helmsmanship {
 	
 	public static float MANEUVERABILITY_BONUS = 50;
-	public static float SPEED_BONUS = 10f;
+	public static float SPEED_BONUS = 15f;
 	
-	public static float ELITE_SPEED_BONUS_FLAT = 5f;
+	public static float ELITE_SPEED_BONUS_FLAT = 10f;
 	
 	public static float ZERO_FLUX_LEVEL = 1f;
 	

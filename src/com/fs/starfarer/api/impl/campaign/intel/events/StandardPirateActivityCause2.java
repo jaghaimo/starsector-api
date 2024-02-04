@@ -112,6 +112,8 @@ public class StandardPirateActivityCause2 extends BaseHostileActivityCause2 {
 	public float getMagnitudeContribution(StarSystemAPI system) {
 		if (KantaCMD.playerHasProtection()) return 0f;
 		
+		if (getProgress() <= 0) return 0f;
+		
 		List<MarketAPI> markets = Misc.getMarketsInLocation(system, Factions.PLAYER);
 		
 		float max = 0.1f;

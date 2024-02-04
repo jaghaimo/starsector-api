@@ -76,15 +76,16 @@ public class NearbyEventsEvent extends BaseEventPlugin implements RouteFleetSpaw
 		DERELICT_SHIP,
 	}
 	
-	public static final float DISTRESS_REPEAT_TIMEOUT = 90f;
-	public static final float DISTRESS_ALREADY_WAS_NEARBY_TIMEOUT = 30f;
-	public static final float DISTRESS_MIN_SINCE_PLAYER_IN_SYSTEM = 90f;
-	public static final float DISTRESS_MIN_CHECK_INTERVAL = 5f;
-	public static final float DISTRESS_MAX_CHECK_INTERVAL = 15f;
-	public static final float DISTRESS_PROB_PER_SYSTEM = 0.2f;
-	public static final float DISTRESS_MAX_PROB = 0.6f;
+	public static float DISTRESS_REPEAT_TIMEOUT = 90f;
+	public static float DISTRESS_ALREADY_WAS_NEARBY_TIMEOUT = 30f;
+	public static float DISTRESS_MIN_SINCE_PLAYER_IN_SYSTEM = 90f;
+	public static float DISTRESS_MIN_CHECK_INTERVAL = 5f;
+	public static float DISTRESS_MAX_CHECK_INTERVAL = 15f;
+	public static float DISTRESS_PROB_PER_SYSTEM = 0.2f;
+	public static float DISTRESS_MAX_PROB = 0.6f;
 	
-	public static final float DERELICT_SKIP_PROB = 0.5f;
+	public static float DERELICT_SKIP_PROB = 0.5f;
+	public static float DERELICT_SKIP_PROB_ABYSS = 0.85f;
 	
 	protected IntervalUtil derelictShipInterval = new IntervalUtil(1f, 10f);
 	protected IntervalUtil distressCallInterval = new IntervalUtil(DISTRESS_MIN_CHECK_INTERVAL, DISTRESS_MAX_CHECK_INTERVAL);
@@ -141,7 +142,12 @@ public class NearbyEventsEvent extends BaseEventPlugin implements RouteFleetSpaw
 		CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();
 		if (!playerFleet.isInHyperspace()) return;
 		
-		if ((float) Math.random() < DERELICT_SKIP_PROB) return;
+		float skipProb = DERELICT_SKIP_PROB;
+		if (Misc.isInAbyss(playerFleet)) {
+			skipProb = DERELICT_SKIP_PROB_ABYSS;
+		}
+		
+		if ((float) Math.random() < skipProb) return;
 		
 		WeightedRandomPicker<String> factions = SalvageSpecialAssigner.getNearbyFactions(null, playerFleet,
 																					 	 15f, 5f, 5f);
@@ -170,6 +176,10 @@ public class NearbyEventsEvent extends BaseEventPlugin implements RouteFleetSpaw
 			float arc = 90f;
 			angle = angle - arc /2f + arc * (float) Math.random();
 			float speed = 10f + 10f * (float) Math.random();
+			
+			float depth = Misc.getAbyssalDepth(loc);
+			speed *= (0.5f + 0.5f * (1f - depth));
+			
 			Vector2f vel = Misc.getUnitVectorAtDegreeAngle(angle);
 			vel.scale(speed);
 			entity.getVelocity().set(vel);
@@ -208,6 +218,7 @@ public class NearbyEventsEvent extends BaseEventPlugin implements RouteFleetSpaw
 			if (system.hasPulsar()) continue;
 			if (system.hasTag(Tags.SYSTEM_CUT_OFF_FROM_HYPER)) continue;
 			if (system.hasTag(Tags.THEME_HIDDEN)) continue;
+			//if (system.hasTag(Tags.THEME_SPECIAL)) continue;
 			
 			float sincePlayerVisit = system.getDaysSinceLastPlayerVisit();
 			if (sincePlayerVisit < DISTRESS_MIN_SINCE_PLAYER_IN_SYSTEM) {

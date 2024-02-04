@@ -1,9 +1,11 @@
 package com.fs.starfarer.api.impl.campaign.rulecmd;
 
 import java.util.ArrayList;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
+import java.util.Set;
 
 import org.lwjgl.util.vector.Vector2f;
 
@@ -13,12 +15,16 @@ import com.fs.starfarer.api.campaign.BattleAPI;
 import com.fs.starfarer.api.campaign.CampaignEventListener.FleetDespawnReason;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.CargoAPI;
+import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.FleetAssignment;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.JumpPointAPI;
 import com.fs.starfarer.api.campaign.LocationAPI;
 import com.fs.starfarer.api.campaign.OptionPanelAPI;
+import com.fs.starfarer.api.campaign.RepLevel;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
+import com.fs.starfarer.api.campaign.SectorEntityToken.VisibilityLevel;
+import com.fs.starfarer.api.campaign.SpecialItemData;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.campaign.TextPanelAPI;
 import com.fs.starfarer.api.campaign.ai.ModularFleetAIAPI;
@@ -32,19 +38,53 @@ import com.fs.starfarer.api.campaign.listeners.EconomyTickListener;
 import com.fs.starfarer.api.campaign.listeners.FleetEventListener;
 import com.fs.starfarer.api.campaign.rules.MemKeys;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
+import com.fs.starfarer.api.impl.campaign.CargoPodsEntityPlugin;
+import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepRewards;
 import com.fs.starfarer.api.impl.campaign.ids.Conditions;
+import com.fs.starfarer.api.impl.campaign.ids.Entities;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
+import com.fs.starfarer.api.impl.campaign.ids.Industries;
+import com.fs.starfarer.api.impl.campaign.ids.Items;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
+import com.fs.starfarer.api.impl.campaign.ids.Stats;
+import com.fs.starfarer.api.impl.campaign.intel.GensHannanMachinations;
+import com.fs.starfarer.api.impl.campaign.intel.LuddicChurchImmigrationDeal;
+import com.fs.starfarer.api.impl.campaign.intel.PerseanLeagueMembership;
+import com.fs.starfarer.api.impl.campaign.intel.PerseanLeagueMembership.AgreementEndingType;
+import com.fs.starfarer.api.impl.campaign.intel.SindrianDiktatFuelDeal;
+import com.fs.starfarer.api.impl.campaign.intel.TriTachyonDeal;
 import com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathBaseManager;
 import com.fs.starfarer.api.impl.campaign.intel.bases.PirateBaseIntel;
 import com.fs.starfarer.api.impl.campaign.intel.bases.PirateBaseIntel.PirateBaseTier;
+import com.fs.starfarer.api.impl.campaign.intel.events.EventFactor;
 import com.fs.starfarer.api.impl.campaign.intel.events.HALuddicPathDealFactor;
 import com.fs.starfarer.api.impl.campaign.intel.events.HAPirateKingDealFactor;
+import com.fs.starfarer.api.impl.campaign.intel.events.HegemonyHostileActivityFactor;
+import com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityCause2;
 import com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel;
+import com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel.HAERandomEventData;
+import com.fs.starfarer.api.impl.campaign.intel.events.LuddicChurchHostileActivityFactor;
+import com.fs.starfarer.api.impl.campaign.intel.events.LuddicChurchStandardActivityCause;
+import com.fs.starfarer.api.impl.campaign.intel.events.LuddicPathHostileActivityFactor;
+import com.fs.starfarer.api.impl.campaign.intel.events.PerseanLeagueHostileActivityFactor;
 import com.fs.starfarer.api.impl.campaign.intel.events.PirateBasePirateActivityCause2;
+import com.fs.starfarer.api.impl.campaign.intel.events.SindrianDiktatHostileActivityFactor;
+import com.fs.starfarer.api.impl.campaign.intel.events.SindrianDiktatStandardActivityCause;
+import com.fs.starfarer.api.impl.campaign.intel.events.StandardPerseanLeagueActivityCause;
+import com.fs.starfarer.api.impl.campaign.intel.events.TriTachyonHostileActivityFactor;
+import com.fs.starfarer.api.impl.campaign.intel.events.ttcr.TriTachyonCommerceRaiding;
+import com.fs.starfarer.api.impl.campaign.intel.group.GenericRaidFGI.GenericRaidParams;
+import com.fs.starfarer.api.impl.campaign.intel.group.KnightsOfLuddTakeoverExpedition;
+import com.fs.starfarer.api.impl.campaign.intel.group.PerseanLeagueBlockade;
+import com.fs.starfarer.api.impl.campaign.intel.group.PerseanLeaguePunitiveExpedition;
+import com.fs.starfarer.api.impl.campaign.intel.group.SindrianDiktatPunitiveExpedition;
+import com.fs.starfarer.api.impl.campaign.intel.group.TTMercenaryAttack;
+import com.fs.starfarer.api.impl.campaign.intel.group.TTMercenaryReversedAttack;
 import com.fs.starfarer.api.impl.campaign.missions.FleetCreatorMission;
+import com.fs.starfarer.api.impl.campaign.missions.FleetCreatorMission.FleetStyle;
 import com.fs.starfarer.api.impl.campaign.missions.hub.MissionFleetAutoDespawn;
+import com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.MarketCMD.TempData;
 import com.fs.starfarer.api.impl.campaign.shared.SharedData;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
@@ -62,6 +102,7 @@ public class HA_CMD extends BaseCommandPlugin {
 
 	public static final String PATHER_AGREEMENT = "$patherAgreement";
 	public static final String PATHER_AGREEMENT_PERMANENT = "$patherAgreementPermanent";
+	
 	
 	public static void setPatherAgreement(boolean agreement, float duration) {
 		if (!agreement) {
@@ -403,6 +444,7 @@ public class HA_CMD extends BaseCommandPlugin {
 		}
 	}
 
+	protected SectorEntityToken other;
 	
 	public boolean execute(String ruleId, InteractionDialogAPI dialog, List<Token> params, Map<String, MemoryAPI> memoryMap) {
 		if (dialog == null) return false;
@@ -410,6 +452,7 @@ public class HA_CMD extends BaseCommandPlugin {
 		OptionPanelAPI options = dialog.getOptionPanel();
 		TextPanelAPI text = dialog.getTextPanel();
 		CampaignFleetAPI pf = Global.getSector().getPlayerFleet();
+		other = dialog.getInteractionTarget();
 		CargoAPI cargo = pf.getCargo();
 		
 		
@@ -486,6 +529,7 @@ public class HA_CMD extends BaseCommandPlugin {
 				cargo.getCredits().set(0);
 			}
 			setPatherAgreement(true, dur);
+			LuddicPathHostileActivityFactor.avertOrAbortAttack();
 			
 			final String factionId = Factions.LUDDIC_PATH;
 			float range = 100000f;
@@ -521,6 +565,7 @@ public class HA_CMD extends BaseCommandPlugin {
 				HALuddicPathDealFactor factor = new HALuddicPathDealFactor(points);
 				ha.addFactor(factor, dialog);
 			}
+			LuddicPathHostileActivityFactor.avertOrAbortAttack();
 		} else if ("computeMegaTithe".equals(action)) {
 			float credits = cargo.getCredits().get();
 			
@@ -546,9 +591,317 @@ public class HA_CMD extends BaseCommandPlugin {
 			memoryMap.get(MemKeys.LOCAL).set("$LP_megaTitheDuration", titheDuration, 0);
 			
 			return tithe > 0;
+		} else if ("kazeronInstallNanoforge".equals(action)) {
+			MarketAPI kazeron = PerseanLeagueHostileActivityFactor.getKazeron(false);
+			if (kazeron != null) {
+				SpecialItemData data = new SpecialItemData(Items.PRISTINE_NANOFORGE, null);
+				for (Industry ind : kazeron.getIndustries()) {
+					if (ind.wantsToUseSpecialItem(data)) {
+						ind.setSpecialItem(data);
+						break;
+					}
+				}
+			}
+		} else if ("kazeronNanoforgeMissing".equals(action)) {
+			MarketAPI kazeron = PerseanLeagueHostileActivityFactor.getKazeron(false);
+			if (kazeron == null) return true;
+			for (Industry ind : kazeron.getIndustries()) {
+				if (ind.getSpecialItem() == null) continue;
+				if (ind.getSpecialItem().getId().equals(Items.PRISTINE_NANOFORGE)) {
+					return false;
+				}
+			}
+			return true;
+		} else if ("stopPayingHouseHannan".equals(action)) {
+			PerseanLeagueMembership.stopPayingHouseHannan(params.get(1).getBoolean(memoryMap), dialog);
+//			PerseanLeagueMembership.setPayingHouseHannan(false);
+//			Misc.incrUntrustwortyCount();
+		} else if ("leaveLeague".equals(action)) {
+			PerseanLeagueMembership m = PerseanLeagueMembership.get();
+			if (m != null) {
+				// do this here so that the intel is shown; would also happen automatically
+				// when the membership is ended
+				PerseanLeagueMembership.stopPayingHouseHannan(false, dialog);
+				
+				m.endMembership(AgreementEndingType.ENDED, dialog);
+				//m.sendUpdate(new Object(), dialog.getTextPanel());
+			}
+		} else if ("printTriTachDealRepReq".equals(action)) {
+			FactionAPI triTach = Global.getSector().getFaction(Factions.TRITACHYON);
+			CoreReputationPlugin.addRequiredStanding(triTach, RepLevel.INHOSPITABLE, null, dialog.getTextPanel(), null, null, 0f, true);
+			CoreReputationPlugin.addCurrentStanding(triTach, null, dialog.getTextPanel(), null, null, 0f);
+		} else if ("isTTCRInProgress".equals(action)) {
+			return TriTachyonCommerceRaiding.get() != null;
+		} else if ("isTTRaidingPlayerCommerce".equals(action)) {
+			HostileActivityEventIntel intel = HostileActivityEventIntel.get();
+			if (intel != null) {
+				EventFactor factor = intel.getFactorOfClass(TriTachyonHostileActivityFactor.class);
+				if (factor instanceof TriTachyonHostileActivityFactor) {
+					TriTachyonHostileActivityFactor ttFactor = (TriTachyonHostileActivityFactor) factor;
+					return ttFactor.getProgress(intel) > 0;
+				}
+			}
+		} else if ("makeTriTachDeal".equals(action)) {
+			if (TriTachyonDeal.get() == null) {
+				new TriTachyonDeal(dialog);
+			}
+		} else if ("breakTriTachDeal".equals(action)) {
+			if (TriTachyonDeal.get() != null) {
+				TriTachyonDeal.get().endAgreement(com.fs.starfarer.api.impl.campaign.intel.TriTachyonDeal.AgreementEndingType.BROKEN, dialog);
+			}
+		} else if ("printLCDealRepReq".equals(action)) {
+			FactionAPI luddicChurch = Global.getSector().getFaction(Factions.LUDDIC_CHURCH);
+			CoreReputationPlugin.addRequiredStanding(luddicChurch, RepLevel.INHOSPITABLE, null, dialog.getTextPanel(), null, null, 0f, true);
+			CoreReputationPlugin.addCurrentStanding(luddicChurch, null, dialog.getTextPanel(), null, null, 0f);
+		} else if ("breakLCDeal".equals(action)) {
+			if (LuddicChurchImmigrationDeal.get() != null) {
+				LuddicChurchImmigrationDeal.get().endAgreement(com.fs.starfarer.api.impl.campaign.intel.LuddicChurchImmigrationDeal.AgreementEndingType.BROKEN, dialog);
+			}
+		} else if ("KOLTakeoverInProgress".equals(action)) {
+			return isKOLTakeoverInProgress();
+		} else if ("makeLuddicChurchDeal".equals(action)) {
+			if (LuddicChurchImmigrationDeal.get() == null) {
+				new LuddicChurchImmigrationDeal(dialog);
+			}
+		} else if ("joinLeague".equals(action)) {
+			new PerseanLeagueMembership(dialog);
+			
+			avertOrEndPLBlockadeAsNecessary();
+			HegemonyHostileActivityFactor.avertInspectionIfNotInProgress();
+		} else if ("canJoinLeague".equals(action)) {
+			return canPlayerJoinTheLeague();	
+		} else if ("isPLExpeditionInProgress".equals(action)) {
+			return isPLExpeditionInProgress();
+		} else if ("isPLProtectingPlayerSpace".equals(action)) {
+			HostileActivityEventIntel intel = HostileActivityEventIntel.get();
+			if (intel != null) {
+				EventFactor factor = intel.getFactorOfClass(PerseanLeagueHostileActivityFactor.class);
+				if (factor instanceof PerseanLeagueHostileActivityFactor) {
+					PerseanLeagueHostileActivityFactor plFactor = (PerseanLeagueHostileActivityFactor) factor;
+					return plFactor.getProgress(intel) > 0;
+				}
+			}			
+		} else if ("canSendPLPunitiveExpedition".equals(action)) {
+			return canSendPerseanLeaguePunitiveExpedition();
+		} else if ("updateLeagueData".equals(action)) {
+			float duesF = Global.getSettings().getFloat("perseanLeagueFeeFraction");
+			float hannanF = Global.getSettings().getFloat("houseHannanFeeFraction");
+			
+			memoryMap.get(MemKeys.LOCAL).set("$plDuesPercent", (int)Math.round(duesF * 100f) + "%", 0);
+			memoryMap.get(MemKeys.LOCAL).set("$hannanBribePercent", (int)Math.round(hannanF * 100f) + "%", 0);
+			return canPlayerJoinTheLeague();	
+			
+		} else if ("canRemakeDealWithHouseHannan".equals(action)) {
+			return GensHannanMachinations.canRemakeDealWithHouseHannan();
+		} else if ("endGHMachinations".equals(action)) {
+			GensHannanMachinations m = GensHannanMachinations.get();
+			if (m != null) {
+				m.endMachinations(text);
+			}
+		} else if ("doKOLTTakeover".equals(action)) {
+			KnightsOfLuddTakeoverExpedition takeover = KnightsOfLuddTakeoverExpedition.get();
+			if (takeover != null) {
+				takeover.performTakeover(true);
+			}
+		} else if ("updateKOLTArmadaData".equals(action)) {
+			KnightsOfLuddTakeoverExpedition takeover = KnightsOfLuddTakeoverExpedition.get();
+			if (takeover != null) {
+				MemoryAPI mem = memoryMap.get(MemKeys.LOCAL);
+				mem.set("$KOLT_target", takeover.getBlockadeParams().specificMarket.getName());
+				return true;
+			}
+		} else if ("updateTTMAData".equals(action)) {
+			MemoryAPI mem = memoryMap.get(MemKeys.LOCAL);
+			
+//			int bribe = Global.getSettings().getInt("triTachyonMercBribe");
+//			int bribeSmall = bribe / 2;
+//			mem.set("$bribeSmall", Misc.getWithDGS(bribeSmall));
+//			mem.set("$bribe", Misc.getWithDGS(bribe));
+			
+			TTMercenaryAttack attack = TTMercenaryAttack.get();
+			StarSystemAPI target = TriTachyonHostileActivityFactor.getPrimaryTriTachyonSystem();
+			boolean reversible = attack != null && !attack.isSpawning() && !attack.isFailed() &&
+					!attack.isSucceeded() && !attack.isAborted() && !attack.isEnding() && !attack.isEnded() &&
+					target != null;
+			
+			mem.set("$attackReversible", reversible);
+			if (target != null) {
+				mem.set("$triTachSystem", target.getNameWithLowercaseTypeShort());
+			}
+			return true;
+			
+		} else if ("retargetTTMA".equals(action)) {
+			TTMercenaryReversedAttack.sendReversedAttack(dialog);
+		} else if ("computeSacredProtectorsData".equals(action)) {
+			MemoryAPI mem = memoryMap.get(MemKeys.LOCAL);
+			int supplies = (int) Global.getSector().getPlayerFleet().getFleetPoints() * 1;
+			mem.set("$SP_supplies", (int)supplies, 0);
+			return true;
+		} else if ("sacredProtectorsCheckCargoPods".equals(action)) {
+			MemoryAPI mem = memoryMap.get(MemKeys.LOCAL);
+			int supplies = mem.getInt("$SP_supplies");
+			return sacredProtectorsCheckCargoPods(supplies);
+		} else if ("knightsHasslingPlayerColonies".equals(action)) {
+			HostileActivityEventIntel intel = HostileActivityEventIntel.get();
+			if (intel != null) {
+				HostileActivityCause2 cause = intel.getActivityCause(LuddicChurchHostileActivityFactor.class, LuddicChurchStandardActivityCause.class);
+				if (cause instanceof LuddicChurchStandardActivityCause) {
+					LuddicChurchStandardActivityCause lcCause = (LuddicChurchStandardActivityCause) cause;
+					return lcCause.getProgress() > 0;
+				}
+			}
+		} else if ("printSDDealRepReq".equals(action)) {
+			FactionAPI diktat = Global.getSector().getFaction(Factions.DERELICT);
+			CoreReputationPlugin.addRequiredStanding(diktat, RepLevel.INHOSPITABLE, null, dialog.getTextPanel(), null, null, 0f, true);
+			CoreReputationPlugin.addCurrentStanding(diktat, null, dialog.getTextPanel(), null, null, 0f);
+		} else if ("breakSDDeal".equals(action)) {
+			if (SindrianDiktatFuelDeal.get() != null) {
+				SindrianDiktatFuelDeal.get().endAgreement(com.fs.starfarer.api.impl.campaign.intel.SindrianDiktatFuelDeal.AgreementEndingType.BROKEN, dialog);
+			}
+		} else if ("makeDiktatDeal".equals(action)) {
+			if (SindrianDiktatFuelDeal.get() == null) {
+				new SindrianDiktatFuelDeal(dialog);
+			}
+		} else if ("diktatConcernedByFuelProd".equals(action)) {
+			HostileActivityEventIntel intel = HostileActivityEventIntel.get();
+			if (intel != null) {
+				HostileActivityCause2 cause = intel.getActivityCause(SindrianDiktatHostileActivityFactor.class, SindrianDiktatStandardActivityCause.class);
+				if (cause instanceof SindrianDiktatStandardActivityCause) {
+					SindrianDiktatStandardActivityCause lcCause = (SindrianDiktatStandardActivityCause) cause;
+					return lcCause.getProgress() > 0;
+				}
+			}
 		}
 		
+//		else if ("printLeagueRequirements".equals(action)) {
+//			
+//		}
+		
 		return false;
+	}
+	
+	public boolean sacredProtectorsCheckCargoPods(int remove) {
+		float maxPodsDist = 1500f;
+		for (SectorEntityToken entity : other.getContainingLocation().getAllEntities()) {
+			if (Entities.CARGO_PODS.equals(entity.getCustomEntityType())) {
+				VisibilityLevel vLevel = entity.getVisibilityLevelTo(other);
+				if (entity.getCustomPlugin() instanceof CargoPodsEntityPlugin) {
+					float dist = Misc.getDistance(other, entity);
+					if (dist > maxPodsDist) continue;
+					
+					if (vLevel == VisibilityLevel.COMPOSITION_DETAILS ||
+							vLevel == VisibilityLevel.COMPOSITION_AND_FACTION_DETAILS) {
+						CargoPodsEntityPlugin plugin = (CargoPodsEntityPlugin) entity.getCustomPlugin();
+						if (plugin.getElapsed() <= 1f && entity.getCargo() != null) {
+							float supplies = entity.getCargo().getSupplies();
+							if (supplies >= remove) {
+								entity.getCargo().removeSupplies(remove * 2);
+								return true;
+							}
+						}
+					}
+				}
+			}
+		}
+		return false;
+	}
+	
+	
+	public static boolean isKOLTakeoverInProgress() {
+		return KnightsOfLuddTakeoverExpedition.get() != null && 
+				!KnightsOfLuddTakeoverExpedition.get().isSucceeded() && 
+				!KnightsOfLuddTakeoverExpedition.get().isAborted() && 
+				!KnightsOfLuddTakeoverExpedition.get().isFailed();
+	}
+	
+	public static boolean isPLExpeditionInProgress() {
+		return PerseanLeaguePunitiveExpedition.get() != null && 
+				!PerseanLeaguePunitiveExpedition.get().isSucceeded() && 
+				!PerseanLeaguePunitiveExpedition.get().isAborted() && 
+				!PerseanLeaguePunitiveExpedition.get().isFailed();
+	}
+	
+	public static void avertOrEndKOLTakeoverAsNecessary() {
+		KnightsOfLuddTakeoverExpedition takeover = KnightsOfLuddTakeoverExpedition.get();
+		if (takeover != null) {
+			takeover.finish(false);
+		}
+		
+		HostileActivityEventIntel intel = HostileActivityEventIntel.get();
+		if (intel != null) {
+			HAERandomEventData data = intel.getRollDataForEvent();
+			if (data != null && data.factor instanceof LuddicChurchHostileActivityFactor) {
+				intel.resetHA_EVENT();
+			}
+		}
+	}
+	
+	public static void avertOrEndDiktatAttackAsNecessary() {
+		SindrianDiktatPunitiveExpedition attack = SindrianDiktatPunitiveExpedition.get();
+		if (attack != null) {
+			attack.finish(false);
+		}
+		
+		HostileActivityEventIntel intel = HostileActivityEventIntel.get();
+		if (intel != null) {
+			HAERandomEventData data = intel.getRollDataForEvent();
+			if (data != null && data.factor instanceof SindrianDiktatHostileActivityFactor) {
+				intel.resetHA_EVENT();
+			}
+		}
+	}
+	
+	
+	public static void avertOrEndPLBlockadeAsNecessary() {
+		PerseanLeagueBlockade blockade = PerseanLeagueBlockade.get();
+		if (blockade != null) {
+			blockade.finish(false);
+		}
+
+		PerseanLeaguePunitiveExpedition expedition = PerseanLeaguePunitiveExpedition.get();
+		if (expedition != null) {
+			expedition.finish(false);
+		}
+		
+		HostileActivityEventIntel intel = HostileActivityEventIntel.get();
+		if (intel != null) {
+			HAERandomEventData data = intel.getRollDataForEvent();
+			if (data != null && data.factor instanceof PerseanLeagueHostileActivityFactor) {
+				intel.resetHA_EVENT();
+			}
+		}
+	}
+	
+	public static boolean canPlayerJoinTheLeague() {
+		if (isPLExpeditionInProgress()) return false;
+		
+		if (PerseanLeagueMembership.isLeagueMember()) return false;
+		if (PerseanLeagueMembership.isLeftLeagueWhenGoodDeal()) return false;
+		
+		if (PerseanLeagueHostileActivityFactor.wasPLEverSatBombardedByPlayer()) return false;
+		if (PerseanLeagueHostileActivityFactor.getKazeron(false) == null) return false;
+		
+		if (PerseanLeagueMembership.getNumTimesLeftLeague() >= PerseanLeagueMembership.TIMES_LEFT_LEAGUE_FOR_NO_REJOIN) {
+			return false;
+		}
+		
+		int large = 0;
+		int count = 0;
+		int medium = 0;
+		for (MarketAPI market : Misc.getPlayerMarkets(false)) {
+			int size = market.getSize();
+			if (size >= StandardPerseanLeagueActivityCause.LARGE_COLONY) {
+				large++;
+			}
+			if (size >= StandardPerseanLeagueActivityCause.MEDIUM_COLONY) {
+				medium++;
+			}
+			count++;
+		}
+		if (large > 0 || (medium > 0 && count >= StandardPerseanLeagueActivityCause.COUNT_IF_MEDIUM)) {
+			return true;
+		}
+		return false; 
 	}
 
 	public static boolean baseInvolved(StarSystemAPI system, PirateBaseIntel base) {
@@ -558,4 +911,130 @@ public class HA_CMD extends BaseCommandPlugin {
 		return !PirateBasePirateActivityCause2.getColoniesAffectedBy(base).isEmpty();
 	}
 	
+
+	public static class PLPunExData {
+		public HostileActivityEventIntel intel;
+		public StarSystemAPI target;
+		public MarketAPI kazeron;
+	}
+	
+	public static boolean canSendPerseanLeaguePunitiveExpedition() {
+		return computePerseanLeaguePunitiveExpeditionData() != null;
+	}
+	public static PLPunExData computePerseanLeaguePunitiveExpeditionData() {
+		if (PerseanLeagueMembership.isDefeatedBlockadeOrPunEx()) {
+			return null;
+		}
+		if (isPLExpeditionInProgress()) {
+			return null;
+		}
+		
+		HostileActivityEventIntel intel = HostileActivityEventIntel.get();
+		if (intel == null) return null;
+		
+		StarSystemAPI target = PerseanLeagueHostileActivityFactor.findBlockadeTarget(intel, null);
+		if (target == null) return null;
+		
+		MarketAPI kazeron = PerseanLeagueHostileActivityFactor.getKazeron(true);
+		if (kazeron == null) return null;
+		
+		PLPunExData data = new PLPunExData();
+		data.intel = intel;
+		data.target = target;
+		data.kazeron = kazeron;
+		return data;
+	}
+	
+	public static void sendPerseanLeaguePunitiveExpedition(InteractionDialogAPI dialog) {
+		
+		PLPunExData data = computePerseanLeaguePunitiveExpeditionData();
+		if (data == null) {
+			return;
+		}
+		
+		avertOrEndPLBlockadeAsNecessary();
+		
+		GenericRaidParams params = new GenericRaidParams(new Random(), true);
+		params.factionId = data.kazeron.getFactionId();
+		params.source = data.kazeron;
+		
+		Random random = new Random();
+		
+		params.prepDays = 14f + random.nextFloat() * 14f;
+		params.payloadDays = 27f + 7f * random.nextFloat();
+		
+		params.raidParams.where = data.target;
+		
+		Set<String> disrupt = new LinkedHashSet<String>();
+		for (MarketAPI market : Misc.getMarketsInLocation(data.target, Factions.PLAYER)) {
+			params.raidParams.allowedTargets.add(market);
+			params.raidParams.allowNonHostileTargets = true;
+			for (Industry ind : market.getIndustries()) {
+				if (ind.getSpec().hasTag(Industries.TAG_UNRAIDABLE)) continue;
+				disrupt.add(ind.getId());
+				
+			}
+		}
+		
+		// this is set in the custom fleet creation in PerseanLeaguePunitiveExpedition
+		//params.makeFleetsHostile = false;
+		
+		params.raidParams.disrupt.addAll(disrupt);
+		params.raidParams.raidsPerColony = Math.min(disrupt.size(), 4);
+		if (disrupt.isEmpty()) {
+			params.raidParams.raidsPerColony = 2;
+		}
+		
+		if (params.raidParams.allowedTargets.isEmpty()) {
+			return;
+		}
+		
+		params.style = FleetStyle.STANDARD;
+		
+		
+		float fleetSizeMult = data.kazeron.getStats().getDynamic().getMod(Stats.COMBAT_FLEET_SIZE_MULT).computeEffective(0f);
+		
+		float f = data.intel.getMarketPresenceFactor(data.target);
+		
+		float totalDifficulty = fleetSizeMult * 50f * (0.5f + 0.5f * f);
+		if (totalDifficulty < 30) {
+			return;
+		}
+		if (totalDifficulty > 100) {
+			totalDifficulty = 100;
+		}
+		
+		Random r = data.intel.getRandom();
+		
+		// mostly maxed-out fleets, some smaller ones
+		while (totalDifficulty > 0) {
+			float max = 6f;
+			float min = 3f;
+			
+			if (r.nextFloat() > 0.3f) {
+				min = (int) Math.min(totalDifficulty, 8f);
+				max = (int) Math.min(totalDifficulty, 10f);
+			}
+			
+			int diff = Math.round(StarSystemGenerator.getNormalRandom(r, min, max));
+			
+			params.fleetSizes.add(diff);
+			totalDifficulty -= diff;
+		}
+		
+		PerseanLeaguePunitiveExpedition punex = new PerseanLeaguePunitiveExpedition(params);
+		punex.setPreFleetDeploymentDelay(30f + random.nextFloat() * 60f);
+		//punex.setPreFleetDeploymentDelay(1f);
+		TextPanelAPI text = dialog == null ? null : dialog.getTextPanel();
+		Global.getSector().getIntelManager().addIntel(punex, false, text);		
+		
+	}
+	
+	
+	
 }
+
+
+
+
+

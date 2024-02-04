@@ -7,8 +7,9 @@ import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 public class MissileSpecialization {
 	
 	public static final float MISSILE_AMMO_BONUS = 100f;
-	public static final float MISSILE_SPEC_PERK_HEALTH_BONUS = 50f;
-	public static final float MISSILE_SPEC_ROF_BONUS = 50f;
+	public static final float MISSILE_SPEC_PERK_HEALTH_BONUS = 25f;
+	public static final float MISSILE_SPEC_ROF_BONUS = 25f;
+	public static final float MISSILE_SPEC_AMMO_REGEN_BONUS = 25f;
 	public static final float MISSILE_SPEC_DAMAGE_BONUS = 10f;
 
 	public static class Level1 implements ShipSkillEffect {
@@ -79,6 +80,31 @@ public class MissileSpecialization {
 			return null;
 		}
 
+		public ScopeDescription getScopeDescription() {
+			return ScopeDescription.PILOTED_SHIP;
+		}
+	}
+	
+	public static class Level3A implements ShipSkillEffect {
+		
+		public void apply(MutableShipStatsAPI stats, HullSize hullSize, String id, float level) {
+			//stats.getMissileWeaponDamageMult().modifyPercent(id, MISSILE_SPEC_PERK_DAMAGE_BONUS);
+			stats.getMissileAmmoRegenMult().modifyPercent(id, MISSILE_SPEC_AMMO_REGEN_BONUS);
+		}
+		
+		public void unapply(MutableShipStatsAPI stats, HullSize hullSize, String id) {
+			//stats.getMissileWeaponDamageMult().unmodify(id);
+			stats.getMissileAmmoRegenMult().unmodify(id);
+		}
+		
+		public String getEffectDescription(float level) {
+			return "+" + (int)(MISSILE_SPEC_AMMO_REGEN_BONUS) + "% missile weapon ammo regeneration rate (only for missile weapons that regenerate ammo)";
+		}
+		
+		public String getEffectPerLevelDescription() {
+			return null;
+		}
+		
 		public ScopeDescription getScopeDescription() {
 			return ScopeDescription.PILOTED_SHIP;
 		}

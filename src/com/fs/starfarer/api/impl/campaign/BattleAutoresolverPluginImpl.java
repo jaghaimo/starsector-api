@@ -28,8 +28,8 @@ import com.fs.starfarer.api.util.WeightedRandomPicker;
 public class BattleAutoresolverPluginImpl implements BattleAutoresolverPlugin {
 
 	public static class EngagementResultImpl implements EngagementResultAPI {
-		protected BattleAPI battle;
-		protected EngagementResultForFleetImpl winnerResult, loserResult;
+		public BattleAPI battle;
+		public EngagementResultForFleetImpl winnerResult, loserResult;
 		
 		public EngagementResultImpl(BattleAPI battle, CampaignFleetAPI winner, CampaignFleetAPI loser) {
 			this.battle = battle;
@@ -75,14 +75,14 @@ public class BattleAutoresolverPluginImpl implements BattleAutoresolverPlugin {
 	}
 	
 	public static class EngagementResultForFleetImpl implements EngagementResultForFleetAPI {
-		protected CampaignFleetAPI fleet;
-		protected FleetGoal goal;
-		protected boolean winner = false;
-		protected List<FleetMemberAPI> deployed = new ArrayList<FleetMemberAPI>();
-		protected List<FleetMemberAPI> reserves = new ArrayList<FleetMemberAPI>();
-		protected List<FleetMemberAPI> destroyed = new ArrayList<FleetMemberAPI>();
-		protected List<FleetMemberAPI> disabled = new ArrayList<FleetMemberAPI>();
-		protected List<FleetMemberAPI> retreated = new ArrayList<FleetMemberAPI>();
+		public CampaignFleetAPI fleet;
+		public FleetGoal goal;
+		public boolean winner = false;
+		public List<FleetMemberAPI> deployed = new ArrayList<FleetMemberAPI>();
+		public List<FleetMemberAPI> reserves = new ArrayList<FleetMemberAPI>();
+		public List<FleetMemberAPI> destroyed = new ArrayList<FleetMemberAPI>();
+		public List<FleetMemberAPI> disabled = new ArrayList<FleetMemberAPI>();
+		public List<FleetMemberAPI> retreated = new ArrayList<FleetMemberAPI>();
 		
 		public EngagementResultForFleetImpl(CampaignFleetAPI fleet) {
 			this.fleet = fleet;

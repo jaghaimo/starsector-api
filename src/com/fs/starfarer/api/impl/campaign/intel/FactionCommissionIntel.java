@@ -24,6 +24,7 @@ import com.fs.starfarer.api.campaign.econ.MonthlyReport;
 import com.fs.starfarer.api.campaign.econ.MonthlyReport.FDNode;
 import com.fs.starfarer.api.campaign.listeners.EconomyTickListener;
 import com.fs.starfarer.api.campaign.listeners.FleetEventListener;
+import com.fs.starfarer.api.campaign.listeners.ListenerUtil;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.CustomRepImpact;
@@ -60,6 +61,7 @@ public class FactionCommissionIntel extends BaseMissionIntel implements EveryFra
 	
 	protected float baseBounty = 0;
 	protected FactionAPI faction = null;
+	//protected FactionCommissionPlugin plugin = null;
 	
 	protected CommissionBountyResult latestResult;
 	
@@ -122,6 +124,8 @@ public class FactionCommissionIntel extends BaseMissionIntel implements EveryFra
 		
 		//endAfterDelay();
 		endImmediately();
+		
+		ListenerUtil.reportCommissionEnded(this);
 	}
 	
 	public void makeRepChanges(InteractionDialogAPI dialog) {	
@@ -279,7 +283,7 @@ public class FactionCommissionIntel extends BaseMissionIntel implements EveryFra
 			CoreReputationPlugin.addAdjustmentMessage(latestResult.rep1.delta, faction, null, 
 													  null, null, info, tc, isUpdate, 0f);
 		} else if (mode == ListInfoMode.IN_DESC) {
-			info.addPara("%s base reward per frigate", initPad, tc, h, Misc.getDGSCredits(baseBounty));
+			info.addPara("%s base bounty per hostile frigate", initPad, tc, h, Misc.getDGSCredits(baseBounty));
 			info.addPara("%s monthly stipend", 0f, tc, h, Misc.getDGSCredits(computeStipend()));
 		} else {
 //			info.addPara("Faction: " + faction.getDisplayName(), initPad, tc,
@@ -309,24 +313,37 @@ public class FactionCommissionIntel extends BaseMissionIntel implements EveryFra
 	}
 	
 	public String getName() {
-		String prefix = Misc.ucFirst(faction.getPersonNamePrefix());
+		String prefix = Misc.ucFirst(faction.getPersonNamePrefix()) + " Commission";
+//		if (plugin != null) {
+//			String override = plugin.getNameOverride();
+//			if (override != null) {
+//				prefix = override;
+//			}
+//		}
 		if (isEnding()) {
 			if (missionResult != null && missionResult.payment < 0) {
 				if (isSendingUpdate()) {
-					return prefix + " Commission Annulled";
+					return prefix + " - Annulled";
 				}
-				return prefix + " Commission (Annulled)";
+				return prefix + " - Annulled";
+				//return prefix + " (Annulled)";
 			}
-			return prefix + " Commission (Resigned)";
+			//return prefix + " (Resigned)";
+			return prefix + " - Resigned";
 		}
 		if (isSendingUpdate() && getListInfoParam() == UPDATE_PARAM_ACCEPTED) {
-			return prefix + " Commission Accepted";
+			//return prefix + " Accepted";
+			return prefix + " - Accepted";
 		}
-		return prefix + " Commission";
+		return prefix;
 	}
 	
 	@Override
 	public FactionAPI getFactionForUIColors() {
+		return faction;
+	}
+	
+	public FactionAPI getFaction() {
 		return faction;
 	}
 
@@ -389,7 +406,13 @@ public class FactionCommissionIntel extends BaseMissionIntel implements EveryFra
 		}
 
 		if (!isEnding() && !isEnded()) {
-			addAbandonButton(info, width, "Resign commission");
+			boolean plMember = PerseanLeagueMembership.isLeagueMember();
+			if (!plMember) {
+				addAbandonButton(info, width, "Resign commission");
+			} else {
+				info.addPara("You can not resign your commission while polities under your "
+						+ "control are members of the League.", opad);
+			}
 		}
 	}
 	
@@ -400,7 +423,9 @@ public class FactionCommissionIntel extends BaseMissionIntel implements EveryFra
 	public Set<String> getIntelTags(SectorMapAPI map) {
 		Set<String> tags = super.getIntelTags(map);
 		tags.remove(Tags.INTEL_ACCEPTED);
-		tags.add(Tags.INTEL_COMMISSION);
+		tags.remove(Tags.INTEL_MISSIONS);
+		//tags.add(Tags.INTEL_COMMISSION);
+		tags.add(Tags.INTEL_AGREEMENTS);
 		tags.add(faction.getId());
 		return tags;
 	}
@@ -449,7 +474,9 @@ public class FactionCommissionIntel extends BaseMissionIntel implements EveryFra
 
 
 	public void reportEconomyMonthEnd() {
-		
+//		if (plugin != null) {
+//			plugin.reportEconomyMonthEnd();
+//		}
 	}
 
 	public void reportEconomyTick(int iterIndex) {
@@ -485,7 +512,19 @@ public class FactionCommissionIntel extends BaseMissionIntel implements EveryFra
 			};
 		}
 		
+//		if (plugin != null) {
+//			plugin.reportEconomyTick(iterIndex);
+//		}
 	}
+
+//	public FactionCommissionPlugin getPlugin() {
+//		return plugin;
+//	}
+//
+//	public void setPlugin(FactionCommissionPlugin plugin) {
+//		this.plugin = plugin;
+//	}
+	
 	
 }
 

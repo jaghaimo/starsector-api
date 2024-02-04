@@ -199,6 +199,8 @@ public interface MissileAPI extends DamagingProjectileAPI {
 	float getEtaModifier();
 	void setEtaModifier(float etaModifier);
 	float getGuidanceBonus();
+	boolean isDoNotFlareEnginesWhenStrafingOrDecelerating();
+	void setDoNotFlareEnginesWhenStrafingOrDecelerating(boolean doNotFlare);
 	
 	// always null anyway
 	//MutableShipStatsAPI getStats();

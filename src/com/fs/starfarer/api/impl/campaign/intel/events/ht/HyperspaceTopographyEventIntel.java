@@ -1,7 +1,9 @@
 package com.fs.starfarer.api.impl.campaign.intel.events.ht;
 
 import java.awt.Color;
+import java.util.ArrayList;
 import java.util.EnumSet;
+import java.util.List;
 import java.util.Set;
 
 import org.lwjgl.util.vector.Vector2f;
@@ -13,6 +15,8 @@ import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.CargoAPI;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.LocationAPI;
+import com.fs.starfarer.api.campaign.PersistentUIDataAPI.AbilitySlotAPI;
+import com.fs.starfarer.api.campaign.PersistentUIDataAPI.AbilitySlotsAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.SpecialItemData;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
@@ -25,6 +29,7 @@ import com.fs.starfarer.api.campaign.listeners.FleetEventListener;
 import com.fs.starfarer.api.combat.MutableStat;
 import com.fs.starfarer.api.combat.MutableStat.StatMod;
 import com.fs.starfarer.api.combat.StatBonus;
+import com.fs.starfarer.api.impl.campaign.ids.Abilities;
 import com.fs.starfarer.api.impl.campaign.ids.Industries;
 import com.fs.starfarer.api.impl.campaign.ids.Items;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
@@ -32,11 +37,14 @@ import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel;
 import com.fs.starfarer.api.impl.campaign.intel.events.BaseFactorTooltip;
 import com.fs.starfarer.api.impl.campaign.intel.events.EventFactor;
+import com.fs.starfarer.api.impl.campaign.rulecmd.AddAbility;
 import com.fs.starfarer.api.impl.campaign.velfield.SlipstreamTerrainPlugin2;
 import com.fs.starfarer.api.ui.SectorMapAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI.TooltipCreator;
 import com.fs.starfarer.api.util.Misc;
+import com.fs.starfarer.api.util.Misc.Token;
+import com.fs.starfarer.api.util.Misc.TokenType;
 import com.fs.starfarer.api.util.TimeoutTracker;
 
 public class HyperspaceTopographyEventIntel extends BaseEventIntel implements FleetEventListener,
@@ -50,10 +58,12 @@ public class HyperspaceTopographyEventIntel extends BaseEventIntel implements Fl
 //	public static int PROGRESS_1 = 100;
 //	public static int PROGRESS_2 = 400;
 //	public static int PROGRESS_3 = 700;
-	public static int PROGRESS_MAX = 500;
+	public static int PROGRESS_MAX = 1000;
 	public static int PROGRESS_1 = 100;
 	public static int PROGRESS_2 = 250;
 	public static int PROGRESS_3 = 400;
+	public static int PROGRESS_4 = 550;
+	public static int PROGRESS_5 = 700;
 	
 	public static float BASE_DETECTION_RANGE_LY = 3f;
 	public static float RANGE_WITHIN_WHICH_SENSOR_ARRAYS_HELP_LY = 5f;
@@ -63,7 +73,7 @@ public class HyperspaceTopographyEventIntel extends BaseEventIntel implements Fl
 	public static float WAYSTATION_BONUS = 2f;
 	
 	
-	public static float SLIPSTREAM_FUEL_MULT = 0.5f;
+	public static float SLIPSTREAM_FUEL_MULT = 0.25f;
 	public static float HYPER_BURN_BONUS = 3f;
 	
 	public static String KEY = "$hte_ref";
@@ -72,7 +82,9 @@ public class HyperspaceTopographyEventIntel extends BaseEventIntel implements Fl
 		START,
 		SLIPSTREAM_DETECTION,
 		SLIPSTREAM_NAVIGATION,
+		REVERSE_POLARITY,
 		HYPERFIELD_OPTIMIZATION,
+		GENERATE_SLIPSURGE,
 		TOPOGRAPHIC_DATA,
 	}
 	
@@ -115,25 +127,40 @@ public class HyperspaceTopographyEventIntel extends BaseEventIntel implements Fl
 		
 		Global.getSector().getMemoryWithoutUpdate().set(KEY, this);
 		
+		
+		setup();
+		
+		// now that the event is fully constructed, add it and send notification
+		Global.getSector().getIntelManager().addIntel(this, !withIntelNotification, text);
+	}
+	
+	protected void setup() {
+		factors.clear();
+		stages.clear();
+		
 		setMaxProgress(PROGRESS_MAX);
 		
 		addStage(Stage.START, 0);
 		addStage(Stage.SLIPSTREAM_NAVIGATION, PROGRESS_1, StageIconSize.MEDIUM);
 		addStage(Stage.SLIPSTREAM_DETECTION, PROGRESS_2, StageIconSize.MEDIUM);
-		addStage(Stage.HYPERFIELD_OPTIMIZATION, PROGRESS_3, false, StageIconSize.LARGE);
+		addStage(Stage.REVERSE_POLARITY, PROGRESS_3, StageIconSize.LARGE);
+		addStage(Stage.HYPERFIELD_OPTIMIZATION, PROGRESS_4, StageIconSize.MEDIUM);
+		addStage(Stage.GENERATE_SLIPSURGE, PROGRESS_5, StageIconSize.LARGE);
 		addStage(Stage.TOPOGRAPHIC_DATA, PROGRESS_MAX, true, StageIconSize.SMALL);
 		
-		//setRandomized(Stage.TOPOGRAPHIC_DATA, RandomizedStageType.BAD, 400, 450, false);
 		getDataFor(Stage.SLIPSTREAM_NAVIGATION).keepIconBrightWhenLaterStageReached = true;
 		getDataFor(Stage.SLIPSTREAM_DETECTION).keepIconBrightWhenLaterStageReached = true;
+		getDataFor(Stage.REVERSE_POLARITY).keepIconBrightWhenLaterStageReached = true;
 		getDataFor(Stage.HYPERFIELD_OPTIMIZATION).keepIconBrightWhenLaterStageReached = true;
-
+		getDataFor(Stage.GENERATE_SLIPSURGE).keepIconBrightWhenLaterStageReached = true;
 		
-//		addFactor(new HADefensiveMeasuresFactor());
-//		addFactor(new HAShipsDestroyedFactorHint());
-		
-		// now that the event is fully constructed, add it and send notification
-		Global.getSector().getIntelManager().addIntel(this, !withIntelNotification, text);
+	}
+	
+	protected Object readResolve() {
+		if (getDataFor(Stage.GENERATE_SLIPSURGE) == null) {
+			setup();
+		}
+		return this;
 	}
 	
 	
@@ -171,6 +198,12 @@ public class HyperspaceTopographyEventIntel extends BaseEventIntel implements Fl
 				info.addPara("Maximum burn increased by %s while in hyperspace", initPad, tc, 
 						h, "" + (int) HYPER_BURN_BONUS);
 			}
+			if (esd.id == Stage.REVERSE_POLARITY) {
+				info.addPara("%s ability unlocked", initPad, tc, h, "Reverse Polarity");
+			}
+			if (esd.id == Stage.GENERATE_SLIPSURGE) {
+				info.addPara("%s ability unlocked", initPad, tc, h, "Generate Slipsurge");
+			}
 			if (esd.id == Stage.TOPOGRAPHIC_DATA) {
 				info.addPara("Topographic data gained", tc, initPad);
 			}
@@ -181,6 +214,25 @@ public class HyperspaceTopographyEventIntel extends BaseEventIntel implements Fl
 //		if (esd != null && EnumSet.of(Stage.START, Stage.HA_1, Stage.HA_2, Stage.HA_3, Stage.HA_4).contains(esd.id)) {
 //			
 //		}
+	}
+	
+	public float getImageSizeForStageDesc(Object stageId) {
+//		if (stageId == Stage.REVERSE_POLARITY || stageId == Stage.GENERATE_SLIPSURGE) {
+//			return 48f;
+//		}
+		if (stageId == Stage.START) {
+			return 64f;
+		}
+		return 48f;
+	}
+	public float getImageIndentForStageDesc(Object stageId) {
+//		if (stageId == Stage.REVERSE_POLARITY || stageId == Stage.GENERATE_SLIPSURGE) {
+//			return 16f;
+//		}
+		if (stageId == Stage.START) {
+			return 0f;
+		}
+		return 16f;
 	}
 
 	@Override
@@ -222,12 +274,24 @@ public class HyperspaceTopographyEventIntel extends BaseEventIntel implements Fl
 					+ "traveling through hyperspace at a very high burn level, or simply buying the data from scavengers.",
 					initPad);
 		} else if (stageId == Stage.SLIPSTREAM_DETECTION) {
-			info.addPara("The facilities and staff at a Spaceport are able to interpret data from various sources "
-					+ "to discover the presence of nearby slipstreams. The detection range is increased "
-					+ "for larger colonies. Claimed sensor arrays within %s light-years provide an additional "
-					+ "bonus - %s ly for Domain-era arrays, and %s ly for makeshift ones. "
-					+ "Up to %s sensor arrays can be of use.", initPad, 
+//			info.addPara("The facilities and staff at a Spaceport are able to interpret data from various sources "
+//					+ "to discover the presence of nearby slipstreams. The detection range is increased "
+//					+ "for larger colonies. Claimed sensor arrays within %s light-years provide an additional "
+//					+ "bonus - %s ly for Domain-era arrays, and %s ly for makeshift ones. "
+//					+ "Up to %s sensor arrays can be of use.", initPad, 
+//					Misc.getHighlightColor(),
+//					"" + (int) RANGE_WITHIN_WHICH_SENSOR_ARRAYS_HELP_LY,
+//					"+" + (int) RANGE_PER_DOMAIN_SENSOR_ARRAY,
+//					"+" + (int) RANGE_PER_MAKESHIFT_SENSOR_ARRAY,
+//					"" + (int) MAX_SENSOR_ARRAYS
+//					);
+			info.addPara("Allows a Spaceport "
+					+ "to detect nearby slipstreams. Detection range increased "
+					+ "for %s. Claimed sensor arrays within %s light-years provide extra detection range: "
+					+ "%s ly for Domain-era arrays, and %s ly for makeshift ones. "
+					+ "Up to %s sensor arrays can be used.", initPad, 
 					Misc.getHighlightColor(),
+					"larger colonies",
 					"" + (int) RANGE_WITHIN_WHICH_SENSOR_ARRAYS_HELP_LY,
 					"+" + (int) RANGE_PER_DOMAIN_SENSOR_ARRAY,
 					"+" + (int) RANGE_PER_MAKESHIFT_SENSOR_ARRAY,
@@ -238,6 +302,14 @@ public class HyperspaceTopographyEventIntel extends BaseEventIntel implements Fl
 						 "with the baseline fuel use reduction for traveling inside a slipstream.",
 					initPad, h,
 					"" + (int)Math.round((1f - SLIPSTREAM_FUEL_MULT) * 100f) + "%");
+		} else if (stageId == Stage.REVERSE_POLARITY) {
+			info.addPara("Unlocks the %s ability, which allows your fleet to "
+					+ "travel against the current of slipstreams.", initPad, h,
+					"Reverse Polarity");
+		} else if (stageId == Stage.GENERATE_SLIPSURGE) {
+			info.addPara("Unlocks the %s ability, which allows your fleet to "
+					+ "create powerful, short-lived slipstreams useful for rapid travel.", initPad, h,
+					"Generate Slipsurge");
 		} else if (stageId == Stage.HYPERFIELD_OPTIMIZATION) {
 			info.addPara("Maximum burn increased by %s while in hyperspace.", initPad, h,
 					"" + (int) HYPER_BURN_BONUS);
@@ -255,6 +327,7 @@ public class HyperspaceTopographyEventIntel extends BaseEventIntel implements Fl
 		final EventStageData esd = getDataFor(stageId);
 		
 		if (esd != null && EnumSet.of(Stage.SLIPSTREAM_DETECTION, Stage.SLIPSTREAM_NAVIGATION,
+				Stage.GENERATE_SLIPSURGE, Stage.REVERSE_POLARITY,
 				Stage.HYPERFIELD_OPTIMIZATION, Stage.TOPOGRAPHIC_DATA).contains(esd.id)) {
 			return new BaseFactorTooltip() {
 				@Override
@@ -267,6 +340,10 @@ public class HyperspaceTopographyEventIntel extends BaseEventIntel implements Fl
 						tooltip.addTitle("Slipstream navigation");
 					} else if (esd.id == Stage.HYPERFIELD_OPTIMIZATION) {
 						tooltip.addTitle("Hyperfield optimization");
+					} else if (esd.id == Stage.REVERSE_POLARITY) {
+						tooltip.addTitle("Reverse Polarity");
+					} else if (esd.id == Stage.GENERATE_SLIPSURGE) {
+						tooltip.addTitle("Generate Slipsurge");
 					} else if (esd.id == Stage.TOPOGRAPHIC_DATA) {
 						tooltip.addTitle("Topographic data");
 					}
@@ -296,6 +373,12 @@ public class HyperspaceTopographyEventIntel extends BaseEventIntel implements Fl
 		if (EnumSet.of(Stage.SLIPSTREAM_DETECTION, Stage.SLIPSTREAM_NAVIGATION, Stage.HYPERFIELD_OPTIMIZATION, 
 				Stage.TOPOGRAPHIC_DATA, Stage.START).contains(esd.id)) {
 			return Global.getSettings().getSpriteName("events", "hyperspace_topography_" + ((Stage)esd.id).name());
+		}
+		if (stageId == Stage.REVERSE_POLARITY) {
+			return Global.getSettings().getAbilitySpec(Abilities.REVERSE_POLARITY).getIconName();
+		}
+		if (stageId == Stage.GENERATE_SLIPSURGE) {
+			return Global.getSettings().getAbilitySpec(Abilities.GENERATE_SLIPSURGE).getIconName();
 		}
 		// should not happen - the above cases should handle all possibilities - but just in case
 		return Global.getSettings().getSpriteName("events", "hyperspace_topography");
@@ -342,7 +425,7 @@ public class HyperspaceTopographyEventIntel extends BaseEventIntel implements Fl
 	
 
 	public int getTopoResetMin() {
-		EventStageData stage = getDataFor(Stage.HYPERFIELD_OPTIMIZATION);
+		EventStageData stage = getDataFor(Stage.GENERATE_SLIPSURGE);
 		return stage.progress;
 	}
 	public int getTopoResetMax() {
@@ -373,10 +456,47 @@ public class HyperspaceTopographyEventIntel extends BaseEventIntel implements Fl
 		//setProgress(getProgress() + 10);
 	}
 	
+	public void addAbility(String id) {
+		if (Global.getSector().getPlayerFleet().hasAbility(id)) {
+			return;
+		}
+		List<Token> params = new ArrayList<Token>();
+		Token t = new Token(id, TokenType.LITERAL);
+		params.add(t);
+		t = new Token("-1", TokenType.LITERAL);
+		params.add(t); // don't want to assign it to a slot - will assign as hyper-only alternate later here
+		new AddAbility().execute(null, null, params, null);
+		
+		
+		AbilitySlotsAPI slots = Global.getSector().getUIData().getAbilitySlotsAPI();
+		int curr = slots.getCurrBarIndex();
+		OUTER: for (int i = 0; i < 5; i++) {
+			slots.setCurrBarIndex(i);
+			for (AbilitySlotAPI slot : slots.getCurrSlotsCopy()) {
+				if (Abilities.REVERSE_POLARITY.equals(id) && Abilities.SCAVENGE.equals(slot.getAbilityId())) {
+					slot.setInHyperAbilityId(Abilities.REVERSE_POLARITY);
+					break OUTER;
+				}
+				if (Abilities.GENERATE_SLIPSURGE.equals(id) && Abilities.DISTRESS_CALL.equals(slot.getAbilityId())) {
+					slot.setInHyperAbilityId(Abilities.GENERATE_SLIPSURGE);
+					break OUTER;
+				}
+			}
+		}
+		slots.setCurrBarIndex(curr);
+	}
+	
+	
 	@Override
 	protected void notifyStageReached(EventStageData stage) {
 		//applyFleetEffects();
 		
+		if (stage.id == Stage.REVERSE_POLARITY) {
+			addAbility(Abilities.REVERSE_POLARITY);
+		}
+		if (stage.id == Stage.GENERATE_SLIPSURGE) {
+			addAbility(Abilities.GENERATE_SLIPSURGE);
+		}
 		if (stage.id == Stage.TOPOGRAPHIC_DATA) {
 			resetTopographicData();
 			
@@ -518,6 +638,24 @@ public class HyperspaceTopographyEventIntel extends BaseEventIntel implements Fl
 		}
 		return false;
 	}
+	
+	protected String getSoundForStageReachedUpdate(Object stageId) {
+		if (stageId == Stage.REVERSE_POLARITY || stageId == Stage.GENERATE_SLIPSURGE) {
+			return "ui_learned_ability";
+		}
+		return super.getSoundForStageReachedUpdate(stageId);
+	}
+
+	@Override
+	protected String getSoundForOneTimeFactorUpdate(EventFactor factor) {
+//		if (factor instanceof HTAbyssalLightFactor) {
+//			return "sound_none";
+//		}
+		return null;
+	}
+	
+	
+	
 }
 
 

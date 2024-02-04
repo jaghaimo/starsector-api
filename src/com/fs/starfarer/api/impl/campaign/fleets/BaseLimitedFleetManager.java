@@ -27,12 +27,13 @@ public abstract class BaseLimitedFleetManager implements EveryFrameScript, Fleet
 	public static Logger log = Global.getLogger(BaseLimitedFleetManager.class);
 	
 	public static class ManagedFleetData {
-		public float startingFleetPoints = 0;
+		//public float startingFleetPoints = 0;
 		public CampaignFleetAPI fleet;
 		public LocationAPI spawnedFor;
 		public ManagedFleetData(CampaignFleetAPI fleet, LocationAPI spawnedFor) {
 			this.fleet = fleet;
 			this.spawnedFor = spawnedFor;
+			//startingFleetPoints = fleet.getFleetPoints();
 		}
 	}
 	

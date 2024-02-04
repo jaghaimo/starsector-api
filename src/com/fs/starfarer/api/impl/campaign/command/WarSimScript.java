@@ -132,8 +132,12 @@ public class WarSimScript implements EveryFrameScript, ObjectiveEventListener {
 		
 		List<FactionAPI> factions = new ArrayList<FactionAPI>(str.keySet());
 		
-//		if (system.getName().toLowerCase().contains("naraka")) {
+//		if (system.getName().toLowerCase().contains("old milix")) {
 //			System.out.println("wefwefwe");
+//		}
+		
+//		if (system.isCurrentLocation()) {
+//			System.out.println("ff23f23f32");
 //		}
 		
 		for (SectorEntityToken obj : system.getEntitiesWithTag(Tags.OBJECTIVE)) {
@@ -184,6 +188,8 @@ public class WarSimScript implements EveryFrameScript, ObjectiveEventListener {
 		
 		
 		for (SectorEntityToken sLoc : system.getEntitiesWithTag(Tags.STABLE_LOCATION)) {
+			if (sLoc.hasTag(Tags.NON_CLICKABLE)) continue;
+			if (sLoc.hasTag(Tags.FADING_OUT_AND_EXPIRING)) continue;
 			if (!inSpawnRange) {
 				String id = getBuildSimTimeoutId(sLoc);
 				if (timeouts.contains(id)) continue;
@@ -482,11 +488,7 @@ public class WarSimScript implements EveryFrameScript, ObjectiveEventListener {
 			if (route.getFactionId() == null) continue;
 			if (!faction.getId().equals(route.getFactionId())) continue;
 			
-			if (data.strength != null) {
-				float mult = 1f;
-				if (data.damage != null) mult *= (1f - data.damage);
-				strength += (int) Math.round(data.strength * mult);
-			}
+			strength += data.getStrengthModifiedByDamage();
 		}
 		
 		return strength;
@@ -516,17 +518,33 @@ public class WarSimScript implements EveryFrameScript, ObjectiveEventListener {
 	}
 	
 	
-	public static void removeFightOrdersFor(SectorEntityToken objective, FactionAPI faction) {
-		for (EveryFrameScript s : objective.getContainingLocation().getScripts()) {
+	public static void removeFightOrdersFor(SectorEntityToken target, FactionAPI faction) {
+		for (EveryFrameScript s : target.getContainingLocation().getScripts()) {
 			if (s instanceof MilitaryResponseScript) {
 				MilitaryResponseScript script = (MilitaryResponseScript) s;
-				if (script.getParams() != null && script.getParams().target == objective &&
+				if (script.getParams() != null && script.getParams().target == target &&
 						script.getParams().faction == faction) {
 					script.forceDone();
 				}
 			}
 		}
 	}
+	
+	public static void setNoFightingForObjective(SectorEntityToken objective, FactionAPI faction, float timeout) {
+		removeFightOrdersFor(objective, faction);
+		if (timeout > 0) {
+			WarSimScript wss = getInstance();
+			String id = wss.getControlTimeoutId(objective, faction);
+			wss.timeouts.add(id, timeout);
+		}
+	}
+	
+	public static void removeNoFightingTimeoutForObjective(SectorEntityToken objective, FactionAPI faction) {
+		WarSimScript wss = getInstance();
+		String id = wss.getControlTimeoutId(objective, faction);
+		wss.timeouts.remove(id);
+	}
+	
 	public static boolean isAlreadyFightingFor(SectorEntityToken objective, FactionAPI faction) {
 		for (EveryFrameScript s : objective.getContainingLocation().getScripts()) {
 			if (s instanceof MilitaryResponseScript) {

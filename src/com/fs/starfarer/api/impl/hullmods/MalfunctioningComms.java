@@ -7,7 +7,7 @@ import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
 
 public class MalfunctioningComms extends BaseHullMod {
-	public static final float ENGAGEMENT_REDUCTION = 0.4f;
+	public static float ENGAGEMENT_REDUCTION = 0.4f;
 	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 		float effect = stats.getDynamic().getValue(Stats.DMOD_EFFECT_MULT);

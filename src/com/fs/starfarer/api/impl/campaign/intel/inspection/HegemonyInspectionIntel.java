@@ -41,6 +41,10 @@ public class HegemonyInspectionIntel extends RaidIntel implements RaidDelegate {
 
 	//public static float DEFAULT_INSPECTION_GROUND_STRENGTH = 1000;
 	
+	public static interface InspectionEndedListener {
+		public void notifyInspectionEnded(HegemonyInspectionOutcome outcome);
+	}
+	
 	public static enum HegemonyInspectionOutcome {
 		COLONY_NO_LONGER_EXISTS,
 		TASK_FORCE_DESTROYED, // rep hit due to destruction, depends on transponder status and other factors
@@ -77,6 +81,8 @@ public class HegemonyInspectionIntel extends RaidIntel implements RaidDelegate {
 	protected HegemonyInspectionOutcome outcome;
 	protected Random random = new Random();
 	
+	protected InspectionEndedListener listener;
+	
 	public HegemonyInspectionIntel(MarketAPI from, MarketAPI target, float inspectionFP) {
 		super(target.getStarSystem(), from.getFaction(), null);
 		this.delegate = this;
@@ -96,6 +102,10 @@ public class HegemonyInspectionIntel extends RaidIntel implements RaidDelegate {
 		}
 		
 		float orgDur = 20f + 10f * (float) Math.random();
+		if (Global.getSettings().isDevMode()) {
+			orgDur = 1f;
+		}
+		
 		if (DebugFlags.HEGEMONY_INSPECTION_DEBUG || DebugFlags.FAST_RAIDS) orgDur = 0.5f;
 		addStage(new HIOrganizeStage(this, from, orgDur));
 		
@@ -132,6 +142,17 @@ public class HegemonyInspectionIntel extends RaidIntel implements RaidDelegate {
 		Global.getSector().getIntelManager().addIntel(this);
 	}
 	
+	public InspectionEndedListener getListener() {
+		return listener;
+	}
+
+
+	public void setListener(InspectionEndedListener listener) {
+		this.listener = listener;
+	}
+
+
+
 	public Random getRandom() {
 		return random;
 	}
@@ -503,6 +524,9 @@ public class HegemonyInspectionIntel extends RaidIntel implements RaidDelegate {
 				outcome = HegemonyInspectionOutcome.TASK_FORCE_DESTROYED;
 			}
 			//sendOutcomeUpdate(); // don't do this - base raid sends an UPDATE_FAILED so we're good already
+		}
+		if (listener != null && outcome != null) {
+			listener.notifyInspectionEnded(outcome);
 		}
 	}
 	

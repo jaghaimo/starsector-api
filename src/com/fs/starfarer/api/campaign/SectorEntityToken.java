@@ -301,6 +301,26 @@ public interface SectorEntityToken extends HasMemory {
 
 	List<EveryFrameScript> getScripts();
 
+	
+	/**
+	 * Applies to the 5000/2000 max sensor range limit in normal/hyper space. Does not, by itself, increase the
+	 * range at which the entity is detected, just applies to the limit.
+	 * @return
+	 */
+	float getExtendedDetectedAtRange();
+	/**
+	 * Applies to the 5000/2000 max sensor range limit in normal/hyper space. Does not, by itself, increase the
+	 * range at which the entity is detected, just applies to the limit.
+	 * @return
+	 */
+	void setExtendedDetectedAtRange(Float extendedDetectedAtRange);
+
+	void fadeOutIndicator();
+
+	void fadeInIndicator();
+
+	void forceOutIndicator();
+
 }
 	
 	

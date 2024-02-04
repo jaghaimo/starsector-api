@@ -153,8 +153,7 @@ public class ConvertedHangar extends BaseHullMod {
 		return ship != null && !ship.isFrigate() && ship.getHullSpec().getFighterBays() <= 0 &&
 								//ship.getNumFighterBays() <= 0 &&
 								!ship.getVariant().hasHullMod(HullMods.CONVERTED_BAY) &&
-								!ship.getVariant().hasHullMod(HullMods.PHASE_FIELD);
-								//ship.getHullSpec().getShieldType() != ShieldType.PHASE;		
+								!ship.getHullSpec().isPhase();
 	}
 	
 	public String getUnapplicableReason(ShipAPI ship) {

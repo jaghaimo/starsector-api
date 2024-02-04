@@ -35,6 +35,11 @@ public class EncounterManager implements EveryFrameScript, EncounterPointProvide
 		
 		CREATORS.add(new OutsideSystemRemnantEPEC());
 		CREATORS.add(new OutsideSystemNoEPEC());
+		
+		CREATORS.add(new AbyssalLightEPEC());
+		CREATORS.add(new AbyssalRogueStellarObjectEPEC());
+		CREATORS.add(new AbyssalRogueStellarObjectDireHintsEPEC());
+		CREATORS.add(new AbyssalNoEPEC());
 	}
 	
 	
@@ -74,6 +79,10 @@ public class EncounterManager implements EveryFrameScript, EncounterPointProvide
 		pointTimeout.advance(days);
 		creatorTimeout.advance(days);
 		
+		if (interval.getRandom() == null) {
+			interval.setRandom(random);
+		}
+		
 		interval.advance(days);
 		if (interval.intervalElapsed()) {
 			
@@ -86,8 +95,18 @@ public class EncounterManager implements EveryFrameScript, EncounterPointProvide
 			List<EncounterPoint> points = ListenerUtil.generateEncounterPoints(where);
 			EncounterPoint closest = null;
 			float minDist = Float.MAX_VALUE;
+			
+//			System.out.println("EncounterManager potential points");
+//			System.out.println("---------------------------------");
+//			for (EncounterPoint p : points) {
+//				System.out.println(p);
+//			}
+//			System.out.println("---------------------------------");
+			
 			for (EncounterPoint p : points) {
-				if (pointTimeout.contains(p.id)) continue;
+				if (pointTimeout.contains(p.id)) {
+					continue;
+				}
 				float dist = Misc.getDistance(pf.getLocation(), p.loc);
 				if (dist < minRange || dist > maxRange) continue;
 				if (dist < minDist) {
@@ -95,6 +114,8 @@ public class EncounterManager implements EveryFrameScript, EncounterPointProvide
 					minDist = dist;
 				}
 			}
+			
+			//System.out.println("Point picked: " + closest);
 			
 			if (closest != null) {
 				WeightedRandomPicker<EPEncounterCreator> picker = new WeightedRandomPicker<EPEncounterCreator>(random);

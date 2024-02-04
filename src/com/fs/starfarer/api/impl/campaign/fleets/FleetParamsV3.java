@@ -1,5 +1,6 @@
 package com.fs.starfarer.api.impl.campaign.fleets;
 
+import java.util.List;
 import java.util.Random;
 
 import org.lwjgl.util.vector.Vector2f;
@@ -100,6 +101,11 @@ public class FleetParamsV3 {
 	public transient Boolean blockFallback = null;
 
 	public Boolean allWeapons = null;
+	
+	/**
+	 * If non-null: these ship variants will be added to the fleet before anything else
+	 */
+	public List<String> addShips;
 	
 	public FleetParamsV3(MarketAPI source, Vector2f locInHyper, String factionId, Float qualityOverride, String fleetType,
 			float combatPts, float freighterPts, float tankerPts,

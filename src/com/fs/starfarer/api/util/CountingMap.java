@@ -40,6 +40,26 @@ public class CountingMap<K> extends LinkedHashMap<K, Integer> {
 	public Integer get(Object key) {
 		return getCount((K) key);
 	}
+	
+	public int getTotal() {
+		int total = 0;
+		for (K key : keySet()) {
+			total += get(key);
+		}
+		return total;
+	}
 
+	public K getLargest() {
+		int max = 0;
+		K maxKey = null;
+		for (K key : keySet()) {
+			int c = getCount(key);
+			if (c > max) {
+				max = c;
+				maxKey = key;
+			}
+		}
+		return maxKey;
+	}
 	
 }

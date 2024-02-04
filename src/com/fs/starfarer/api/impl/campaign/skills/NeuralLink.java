@@ -71,12 +71,19 @@ public class NeuralLink {
 //				};
 //			info.addPara(modSpec.getDescription(size).replaceAll("\\%", "%%"), 0f, hc, hc, params);
 			
-			info.addPara("Enables rapid switching between two ships. If the combined deployment cost "
-					+ "is " + dp + " points or below, the neural transfer is instant. Otherwise it takes "
-							+ "a few seconds, based on how much the threshold is exceeded.", hc, 0f);
-			info.addPara("Both linked ships benefit from your personal combat skills at all times, though certain "
-					+ "effects that modify ship stats at the start of combat - such as increasing ammo capacity - "
-					+ "only apply to the flagship.", hc, 5f);
+//			info.addPara("Allows two ships to benefit from your combat skills at the same time and enables rapid switching between them. If the combined deployment cost "
+//					+ "is " + dp + " points or below, the neural transfer is instant, otherwise it takes "
+//							+ "a few seconds.", hc, 0f);
+//			info.addPara("Certain skill effects that apply at the start of combat or earlier - such as increasing ammo capacity or combat readiness - "
+//					+ "only apply to the flagship.", hc, 5f);
+			
+			
+			info.addPara("Allows two ships to benefit from your combat skills at the same time "
+					+ "and enables rapid switching between them.", hc, 0f);
+			info.addPara("The destination ship "
+					+ "must not be under the command of an officer or an AI core.", hc, 5f);
+//			info.addPara("Certain skill effects that apply at the start of combat or earlier - such as increasing ammo capacity or combat readiness - "
+//					+ "only apply to the flagship.", hc, 5f);			
 			//info.addSpacer(5f);
 		}
 		

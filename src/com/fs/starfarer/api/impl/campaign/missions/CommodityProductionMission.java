@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.lwjgl.util.vector.Vector2f;
 
@@ -25,6 +26,7 @@ import com.fs.starfarer.api.impl.campaign.ids.Ranks;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithBarEvent;
 import com.fs.starfarer.api.impl.campaign.shared.SharedData;
+import com.fs.starfarer.api.ui.SectorMapAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI.TooltipCreator;
 import com.fs.starfarer.api.util.Misc;
@@ -407,5 +409,17 @@ public class CommodityProductionMission extends HubMissionWithBarEvent implement
 	protected String getMissionTypeNoun() {
 		return "contract";
 	}
+
+	@Override
+	public Set<String> getIntelTags(SectorMapAPI map) {
+		Set<String> tags = super.getIntelTags(map);
+		if (currentStage == Stage.PAYING) {
+			tags.add(Tags.INTEL_AGREEMENTS);
+			tags.remove(Tags.INTEL_ACCEPTED);
+		}
+		return tags;
+	}
+	
+	
 }
 

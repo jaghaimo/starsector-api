@@ -727,6 +727,21 @@ public class BaseIntelPlugin implements IntelInfoPlugin, CallableEvent, EveryFra
 		label.setHighlight("" + (int) market.getSize(), market.getFaction().getDisplayName());
 		label.setHighlightColors(Misc.getHighlightColor(), market.getFaction().getBaseUIColor());
 	}
+	
+	public static void addMarketTable(TooltipMakerAPI info, Color base, Color dark, Color bright, List<MarketAPI> markets, float width, float pad) {
+		Color h = Misc.getHighlightColor();
+		FactionAPI f = Global.getSector().getPlayerFaction();
+		info.beginTable(base, dark, bright, 20f, "Colony", 130f, "Faction", 130f, "Size", width - 260f);
+		for (MarketAPI market : markets) {
+			//info.addRow(Misc.getTextColor(), market.getName(),
+			info.addRow(market.getFaction().getBaseUIColor(), market.getName(),
+					 market.getFaction().getBaseUIColor(), market.getFaction().getDisplayName(),
+					 h, "" + market.getSize());
+		}
+		
+		info.addTable("None", 0, pad);
+		info.addSpacer(5f);
+	}
 
 	public StoryPointActionDelegate getButtonStoryPointActionDelegate(Object buttonId) {
 		return null;

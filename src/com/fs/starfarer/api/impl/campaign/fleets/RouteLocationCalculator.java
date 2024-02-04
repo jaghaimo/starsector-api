@@ -12,6 +12,8 @@ import com.fs.starfarer.api.campaign.LocationAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
+import com.fs.starfarer.api.impl.campaign.JumpPointInteractionDialogPluginImpl;
+import com.fs.starfarer.api.impl.campaign.shared.WormholeManager;
 import com.fs.starfarer.api.util.Misc;
 
 public class RouteLocationCalculator {
@@ -313,6 +315,7 @@ public class RouteLocationCalculator {
 			}
 			
 			JumpPointAPI jp = findJumpPointToUse(fleet, inSystem);
+			if (jp == null) return;
 			float d1 = Misc.getDistance(inSystem, jp);
 			float d2 = Misc.getDistance(jp.getLocationInHyperspace(), inHyper.getLocation());
 			if (d1 < 1) d1 = 1;
@@ -342,7 +345,7 @@ public class RouteLocationCalculator {
 //			JumpPointAPI jp2 = Misc.findNearestJumpPointTo(to);
 			JumpPointAPI jp1 = findJumpPointToUse(fleet, from);
 			JumpPointAPI jp2 = findJumpPointToUse(fleet, to);
-			
+			if (jp1 == null || jp2 == null) return;
 			float d1 = Misc.getDistance(from, jp1);
 			float d2 = Misc.getDistance(Misc.getSystemJumpPointHyperExitLocation(jp1),
 										Misc.getSystemJumpPointHyperExitLocation(jp1));
@@ -395,7 +398,9 @@ public class RouteLocationCalculator {
 		
 		
 		if (fleet.getContainingLocation() != conLoc) {
-			fleet.getContainingLocation().removeEntity(fleet);
+			if (fleet.getContainingLocation() != null) {
+				fleet.getContainingLocation().removeEntity(fleet);
+			}
 			conLoc.addEntity(fleet);
 		}
 		fleet.setLocation(loc.x, loc.y);
@@ -427,6 +432,13 @@ public class RouteLocationCalculator {
 		
 		
 		for (JumpPointAPI curr : points) {
+			if (curr.getMemoryWithoutUpdate().getBoolean(JumpPointInteractionDialogPluginImpl.UNSTABLE_KEY)) {
+				continue;
+			}
+			if (curr.getMemoryWithoutUpdate().getBoolean(WormholeManager.WORMHOLE)) {
+				continue;
+			}
+			
 			float dist = Misc.getDistance(from.getLocation(), curr.getLocation());
 			if (dist < min) {
 				min = dist;

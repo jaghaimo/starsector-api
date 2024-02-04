@@ -1078,7 +1078,7 @@ public abstract class BaseIndustry implements Industry, Cloneable {
 			tooltip.addPara("Requires %s " + days + " to build.", opad, highlight, "" + left);
 			
 			//return;
-		} else if (!isFunctional() && mode == IndustryTooltipMode.NORMAL) {
+		} else if (!isFunctional() && mode == IndustryTooltipMode.NORMAL && !isDisrupted()) {
 			tooltip.addPara("Currently under construction and not producing anything or providing other benefits.", opad);
 			
 			int left = (int) (buildTime - buildProgress);
@@ -1145,7 +1145,7 @@ public abstract class BaseIndustry implements Industry, Cloneable {
 			if (!getIncome().isUnmodified()) {
 				int income = getIncome().getModifiedInt();
 				tooltip.addPara("Monthly income: %s", opad, highlight, Misc.getDGSCredits(income));
-				tooltip.addStatModGrid(250, 65, 10, pad, getIncome(), true, new StatModValueGetter() {
+				tooltip.addStatModGrid(300, 65, 10, pad, getIncome(), true, new StatModValueGetter() {
 					public String getPercentValue(StatMod mod) {return null;}
 					public String getMultValue(StatMod mod) {return null;}
 					public Color getModColor(StatMod mod) {return null;}
@@ -1158,7 +1158,7 @@ public abstract class BaseIndustry implements Industry, Cloneable {
 			if (!getUpkeep().isUnmodified()) {
 				int upkeep = getUpkeep().getModifiedInt();
 				tooltip.addPara("Monthly upkeep: %s", opad, highlight, Misc.getDGSCredits(upkeep));
-				tooltip.addStatModGrid(250, 65, 10, pad, getUpkeep(), true, new StatModValueGetter() {
+				tooltip.addStatModGrid(300, 65, 10, pad, getUpkeep(), true, new StatModValueGetter() {
 					public String getPercentValue(StatMod mod) {return null;}
 					public String getMultValue(StatMod mod) {return null;}
 					public Color getModColor(StatMod mod) {return null;}

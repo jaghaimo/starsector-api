@@ -185,6 +185,13 @@ public class StarCoronaTerrainPlugin extends BaseRingTerrain implements AuroraRe
 	@Override
 	public void applyEffect(SectorEntityToken entity, float days) {
 		if (entity instanceof CampaignFleetAPI) {
+			
+			// larger sim step when not current location means fleets tend to get trapped in black holes
+			// so: just don't apply its effects
+			if (!entity.isInCurrentLocation() && this instanceof EventHorizonPlugin) {
+				return;
+			}
+			
 			CampaignFleetAPI fleet = (CampaignFleetAPI) entity;
 			
 			boolean inFlare = false;

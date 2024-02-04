@@ -5,12 +5,15 @@ import java.util.LinkedHashSet;
 import com.fs.starfarer.api.EveryFrameScript;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
+import com.fs.starfarer.api.campaign.CampaignTerrainAPI;
 import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.characters.AbilityPlugin;
 import com.fs.starfarer.api.impl.campaign.ids.Abilities;
+import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
+import com.fs.starfarer.api.impl.campaign.ids.Terrain;
 import com.fs.starfarer.api.impl.campaign.terrain.PulsarBeamTerrainPlugin;
 import com.fs.starfarer.api.impl.campaign.terrain.StarCoronaTerrainPlugin;
 import com.fs.starfarer.api.util.IntervalUtil;
@@ -27,6 +30,7 @@ public class HTFactorTracker implements EveryFrameScript {
 	
 	protected IntervalUtil interval = new IntervalUtil(CHECK_DAYS * 0.8f, CHECK_DAYS * 1.2f);
 	protected float burnBasedPoints = 0f;
+	protected float daysSinceAtHighBurn = 1f;
 	protected boolean canCheckSB = true;
 	
 	protected LinkedHashSet<String> scanned = new LinkedHashSet<String>();
@@ -52,15 +56,21 @@ public class HTFactorTracker implements EveryFrameScript {
 		interval.advance(days);
 		
 		if (interval.intervalElapsed()) {
-			checkHighBurn();
+			checkHighBurn(interval.getIntervalDuration());
 			checkSensorBursts();
 		}
 	}
 
-	protected void checkHighBurn() {
+	protected void checkHighBurn(float days) {
 		CampaignFleetAPI pf = Global.getSector().getPlayerFleet();
 		if (pf != null && pf.isInHyperspace()) {
 			float burn = pf.getCurrBurnLevel();
+			
+			if (burn > 20) {
+				daysSinceAtHighBurn = 0f;
+			} else {
+				daysSinceAtHighBurn += days;
+			}
 
 			float add = 0f;
 			float min = 0;
@@ -69,7 +79,7 @@ public class HTFactorTracker implements EveryFrameScript {
 			if (burn > 40) {
 				min = HTPoints.PER_DAY_AT_BURN_40;
 				max = HTPoints.PER_DAY_AT_BURN_50;
-				f = (burn - 40) / 10f;
+				f = (Math.min(burn, HTPoints.MAX_BURN_FOR_POINT_GAIN) - 40) / 10f;
 			} else if (burn > 30) {
 				min = HTPoints.PER_DAY_AT_BURN_30;
 				max = HTPoints.PER_DAY_AT_BURN_40;
@@ -84,16 +94,28 @@ public class HTFactorTracker implements EveryFrameScript {
 			add *= CHECK_DAYS;
 			//add *= 100;
 			
+//			if (Global.getSettings().isDevMode()) {
+//				add = 100;
+//			}
+			
+			if (pf.getMemoryWithoutUpdate().getBoolean(MemFlags.NO_HIGH_BURN_TOPOGRAPHY_READINGS)) {
+				add = 0;
+			}
+			
 			if (add > 0) {
 				burnBasedPoints += add;
 				//System.out.println("Added: " + add + ", total: " + burnBasedPoints);
-				int chunk = HTPoints.BURN_POINT_CHUNK_SIZE;
-				//chunk = 1;
-				if (burnBasedPoints >= chunk) {
-					burnBasedPoints -= chunk;
-					HyperspaceTopographyEventIntel.addFactorCreateIfNecessary(new HTHighBurnFactor(chunk), null);
-				}
 			}
+			int chunk = HTPoints.BURN_POINT_CHUNK_SIZE;
+			//chunk = 1;
+			if (burnBasedPoints >= chunk && daysSinceAtHighBurn > 0.3f) {
+				int mult = (int) burnBasedPoints / chunk;
+				int points = chunk * mult;
+				burnBasedPoints -= points;
+				HyperspaceTopographyEventIntel.addFactorCreateIfNecessary(new HTHighBurnFactor(points), null);
+			}
+		} else {
+			daysSinceAtHighBurn = 1f;
 		}
 	}
 
@@ -114,6 +136,9 @@ public class HTFactorTracker implements EveryFrameScript {
 				checkIonStorm(entity);
 				checkGasGiant(entity);
 				checkPulsar(entity);
+			}
+			for (CampaignTerrainAPI terrain : pf.getContainingLocation().getTerrainCopy()) {
+				checkMagneticField(terrain);
 			}
 			
 			checkSystemCenter();
@@ -177,6 +202,25 @@ public class HTFactorTracker implements EveryFrameScript {
 			} else {
 				HyperspaceTopographyEventIntel.addFactorCreateIfNecessary(
 						new HTScanFactor("Ion storm scanned (" + planet.getName() + ")", HTPoints.SCAN_ION_STORM), null);
+				scanned.add(id);
+			}
+		}
+	}
+	
+	protected void checkMagneticField(CampaignTerrainAPI terrain) {
+		if (terrain.getPlugin() == null) return;
+		if (!Terrain.MAGNETIC_FIELD.equals(terrain.getType())) return;
+
+		CampaignFleetAPI pf = Global.getSector().getPlayerFleet();
+		
+		String id = terrain.getId();
+		
+		if (terrain.getPlugin().containsEntity(pf)) {
+			if (scanned.contains(id)) {
+				addMessage("Magnetic field already scanned");
+			} else {
+				HyperspaceTopographyEventIntel.addFactorCreateIfNecessary(
+						new HTScanFactor("Magnetic field scanned", HTPoints.SCAN_MAGNETIC_FIELD), null);
 				scanned.add(id);
 			}
 		}

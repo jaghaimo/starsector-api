@@ -41,7 +41,8 @@ public class TOffAlarm implements EveryFrameScript {
 		
 		// don't spread "hostile" status if this fleet was the aggressor or if attacking it has a low
 		// reputation impact for some other reason
-		if (fleet.getMemoryWithoutUpdate().getBoolean(MemFlags.MEMORY_KEY_LOW_REP_IMPACT)) {
+		if (fleet.getMemoryWithoutUpdate().getBoolean(MemFlags.MEMORY_KEY_LOW_REP_IMPACT) &&
+				!fleet.getMemoryWithoutUpdate().getBoolean(MemFlags.SPREAD_TOFF_HOSTILITY_IF_LOW_IMPACT)) {
 			return;
 		}
 		
@@ -52,14 +53,21 @@ public class TOffAlarm implements EveryFrameScript {
 			
 			if (level == VisibilityLevel.COMPOSITION_AND_FACTION_DETAILS && other.getFaction() == fleet.getFaction()) {
 				MemoryAPI mem = other.getMemoryWithoutUpdate();
-				Misc.setFlagWithReason(mem, MemFlags.MEMORY_KEY_MAKE_HOSTILE_WHILE_TOFF, "tOffAlarm", true, 1f);
+				Misc.setFlagWithReason(mem, MemFlags.MEMORY_KEY_MAKE_HOSTILE_WHILE_TOFF, "tOffAlarm", true, 3f + (float) Math.random() * 3f);
 			}
+			
+//			if (!other.hasScriptOfClass(TOffAlarm.class)) {
+//				other.addScript(new TOffAlarm(otherFleet));
+//			}
 		}
 	}
 
 	public boolean isDone() {
 		MemoryAPI mem = fleet.getMemoryWithoutUpdate();
-		if (mem.getBoolean(MemFlags.MEMORY_KEY_LOW_REP_IMPACT)) return true;
+		if (mem.getBoolean(MemFlags.MEMORY_KEY_LOW_REP_IMPACT) &&
+				!fleet.getMemoryWithoutUpdate().getBoolean(MemFlags.SPREAD_TOFF_HOSTILITY_IF_LOW_IMPACT)) {
+			return true;
+		}
 		return !(mem.is(MemFlags.MEMORY_KEY_SAW_PLAYER_WITH_TRANSPONDER_OFF, true) &&
 			   mem.is(MemFlags.MEMORY_KEY_MAKE_HOSTILE_WHILE_TOFF, true));
 	}

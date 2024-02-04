@@ -100,7 +100,7 @@ public class HistorianData {
 		}
 		if (backstory == null) {
 			backstory = new ArrayList<HistorianBackstoryInfo>();
-			HistorianBackstory.init(backstory);
+			//HistorianBackstory.init(backstory);
 		}
 		if (shownBackstory == null) {
 			shownBackstory = new LinkedHashSet<String>();

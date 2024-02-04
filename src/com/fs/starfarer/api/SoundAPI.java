@@ -6,4 +6,5 @@ public interface SoundAPI {
 	void setVolume(float newValue);
 	void setPitch(float pitch);
 	void setLocation(float x, float y);
+	boolean isPlaying();
 }

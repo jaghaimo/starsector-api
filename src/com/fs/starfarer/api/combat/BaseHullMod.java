@@ -181,6 +181,8 @@ public class BaseHullMod implements HullModEffect {
 //				tooltip.addSpacer(opad);
 //			}
 			if (!isSModEffectAPenalty()) {
+//				Color c = Misc.getStoryOptionColor();
+//				if (!sMod) c = Misc.getStoryDarkColor()
 				if (isForBuildInList) {
 					tooltip.addSectionHeading(spec.getDisplayName() + " bonus", Misc.getStoryOptionColor(), Misc.getStoryDarkColor(), Alignment.MID, opad);
 				} else {

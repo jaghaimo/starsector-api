@@ -155,7 +155,6 @@ public class LuddicPilgrimTransport extends HubMissionWithBarEvent {
 		set("$lpt_manOrWoman", getPerson().getManOrWoman());
 		set("$lpt_heOrShe", getPerson().getHeOrShe());
 		set("$lpt_hisOrHer", getPerson().getHisOrHer());
-		set("$lpt_hisOrHer", getPerson().getHisOrHer());
 		set("$lpt_himOrHer", getPerson().getHimOrHer());
 		set("$lpt_HeOrShe", getPerson().getHeOrShe().substring(0, 1).toUpperCase() + getPerson().getHeOrShe().substring(1));
 		set("$lpt_HisOrHer", getPerson().getHisOrHer().substring(0, 1).toUpperCase() + getPerson().getHisOrHer().substring(1));

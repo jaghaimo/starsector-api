@@ -7,6 +7,7 @@ import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.campaign.comm.IntelInfoPlugin.ListInfoMode;
 import com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.EventStageData;
+import com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel.HAERandomEventData;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI.TooltipCreator;
 
@@ -35,7 +36,8 @@ public interface HostileActivityFactor {
 	void addStageDescriptionForEvent(HostileActivityEventIntel intel, EventStageData stage, TooltipMakerAPI info);
 
 	String getEventStageIcon(HostileActivityEventIntel intel, EventStageData stage);
-
+	String getEventStageSound(HAERandomEventData data);
+	
 	TooltipCreator getStageTooltipImpl(HostileActivityEventIntel intel, EventStageData stage);
 
 	void resetEvent(HostileActivityEventIntel intel, EventStageData stage);

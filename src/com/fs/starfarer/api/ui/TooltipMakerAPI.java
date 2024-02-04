@@ -234,6 +234,7 @@ public interface TooltipMakerAPI extends UIPanelAPI {
 	ButtonAPI addAreaCheckbox(String text, Object data, Color base, Color bg, Color bright, float width, float height,
 			float pad, boolean leftAlign);
 	UIComponentAPI addSkillPanel(PersonAPI person, float pad);
+	UIComponentAPI addSkillPanelOneColumn(PersonAPI person, float pad);
 	float computeStringWidth(String in);
 	TextFieldAPI addTextField(float width, float pad);
 	TextFieldAPI addTextField(float width, String font, float pad);
@@ -336,13 +337,17 @@ public interface TooltipMakerAPI extends UIPanelAPI {
 	void setButtonFontOrbitron20Bold();
 	void setButtonFontOrbitron24();
 	void setButtonFontOrbitron24Bold();
-	UIComponentAPI addSkillPanelOneColumn(PersonAPI person, float pad);
+
 	void showPlanetInfo(PlanetAPI planet, float pad);
 	void showPlanetInfo(PlanetAPI planet, float w, float h, boolean withName, float pad);
 	
 	ButtonAPI addCheckbox(float width, float height, String text, Object data, UICheckboxSize size, float pad);
 	ButtonAPI addCheckbox(float width, float height, String text, Object data, String font, Color textColor,
 			UICheckboxSize size, float pad);
+	UIComponentAPI addSkillPanel(PersonAPI person, boolean admin, float pad);
+	UIComponentAPI addSkillPanelOneColumn(PersonAPI person, boolean admin, float pad);
+	
+	//UIPanelAPI beginTable(float itemHeight, Object[] columns);
 	
 	//LabelAPI addParaWithIndent(String text, Color color, float indent, String format, float pad, Color hl, String... highlights);
 }

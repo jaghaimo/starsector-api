@@ -5,7 +5,9 @@ import java.util.List;
 import com.fs.starfarer.api.EveryFrameScript;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
+import com.fs.starfarer.api.campaign.FleetAssignment;
 import com.fs.starfarer.api.campaign.SectorEntityToken.VisibilityLevel;
+import com.fs.starfarer.api.campaign.ai.FleetAssignmentDataAPI;
 import com.fs.starfarer.api.campaign.ai.ModularFleetAIAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
@@ -113,6 +115,8 @@ public class SmugglingScanScript implements EveryFrameScript {
 			MemoryAPI mem = curr.getMemoryWithoutUpdate();
 			Misc.setFlagWithReason(mem, MemFlags.MEMORY_KEY_PURSUE_PLAYER, "smugglingScan", true, 1f);
 			Misc.setFlagWithReason(mem, MemFlags.MEMORY_KEY_STICK_WITH_PLAYER_IF_ALREADY_TARGET, "smugglingScan", true, currDuration);
+		} else {
+			curr = null;
 		}
 		
 		
@@ -163,6 +167,20 @@ public class SmugglingScanScript implements EveryFrameScript {
 	
 	protected void cleanUpCurr() {
 		if (curr != null) {
+			CampaignFleetAPI pf = Global.getSector().getPlayerFleet();
+			FleetAssignmentDataAPI a = curr.getCurrentAssignment();
+			if (a != null && a.getAssignment() == FleetAssignment.INTERCEPT &&
+					a.getTarget() == pf) {
+				curr.removeFirstAssignmentIfItIs(a.getAssignment());
+			}
+			curr.setInteractionTarget(null);
+			if (curr.getAI() instanceof ModularFleetAIAPI) {
+				ModularFleetAIAPI ai = (ModularFleetAIAPI) curr.getAI();
+				if (ai.getTacticalModule().getTarget() == pf) {
+					ai.getTacticalModule().setTarget(null);
+				}
+			}
+			
 			MemoryAPI mem = curr.getMemoryWithoutUpdate();
 			Misc.setFlagWithReason(mem, MemFlags.MEMORY_KEY_PURSUE_PLAYER, "smugglingScan", false, 0f);
 			Misc.setFlagWithReason(mem, MemFlags.MEMORY_KEY_STICK_WITH_PLAYER_IF_ALREADY_TARGET, "smugglingScan", false, 0f);

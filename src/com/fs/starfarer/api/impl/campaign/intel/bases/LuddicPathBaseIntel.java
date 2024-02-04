@@ -107,6 +107,14 @@ public class LuddicPathBaseIntel extends BaseIntelPlugin implements EveryFrameSc
 		return null;
 	}
 	
+	public static LuddicPathBaseIntel getIntelFor(MarketAPI market) {
+		for (IntelInfoPlugin p : Global.getSector().getIntelManager().getIntel(LuddicPathBaseIntel.class)) {
+			LuddicPathBaseIntel intel = (LuddicPathBaseIntel) p;
+			if (intel.getMarket() == market) return intel;
+		}
+		return null;
+	}
+	
 	public LuddicPathBaseIntel(StarSystemAPI system, String factionId) {
 		this.system = system;
 	
@@ -700,7 +708,7 @@ public class LuddicPathBaseIntel extends BaseIntelPlugin implements EveryFrameSc
 //		}
 		
 		for (LuddicPathCellsIntel cell : LuddicPathCellsIntel.getCellsForBase(this, true)) {
-			if (cell.getMarket().isPlayerOwned()) {
+			if (cell.getMarket().isPlayerOwned() && !cell.isSleeper()) {
 				tags.add(Tags.INTEL_COLONIES);
 				break;
 			}

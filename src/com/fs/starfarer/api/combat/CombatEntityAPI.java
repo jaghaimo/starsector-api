@@ -75,7 +75,17 @@ public interface CombatEntityAPI {
 	boolean isExpired();
 	void setCustomData(String key, Object data);
 	void removeCustomData(String key);
+	
+	/**
+	 * DO NOT call .put() methods on the returned map. Use setCustomData() instead.
+	 * When the map is empty, it will return a new non-null map that will not be retained,
+	 * so any additions to it would be lost. 
+	 * 
+	 * @return
+	 */
 	Map<String, Object> getCustomData();
 	void setHitpoints(float hitpoints);
 	
 }
+
+

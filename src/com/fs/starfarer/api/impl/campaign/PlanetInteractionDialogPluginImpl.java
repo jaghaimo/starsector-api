@@ -24,6 +24,9 @@ import com.fs.starfarer.api.combat.EngagementResultAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.Items;
 import com.fs.starfarer.api.impl.campaign.ids.Sounds;
+import com.fs.starfarer.api.impl.campaign.intel.events.ht.HTNonASBScanFactor;
+import com.fs.starfarer.api.impl.campaign.intel.events.ht.HTPoints;
+import com.fs.starfarer.api.impl.campaign.intel.events.ht.HyperspaceTopographyEventIntel;
 import com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator;
 import com.fs.starfarer.api.impl.campaign.rulecmd.AddRemoveCommodity;
 import com.fs.starfarer.api.impl.campaign.rulecmd.DumpMemory;
@@ -158,6 +161,37 @@ public class PlanetInteractionDialogPluginImpl implements InteractionDialogPlugi
 			//boolean scannedAlready = planet.getMemoryWithoutUpdate().getBoolean(BLACK_HOLE_SCANNED);
 			boolean didAlready = planet.getMemoryWithoutUpdate().getBoolean(ADDED_KEY);
 			addText(getString("approach"));
+			
+			if (planet.getMemoryWithoutUpdate().getBoolean("$abyssalBlackHoleReadings")) {
+				planet.getMemoryWithoutUpdate().unset("$abyssalBlackHoleReadings");
+				planet.getMemoryWithoutUpdate().set("$abyssalBlackHoleReadingsRevisit", true);
+				
+				addText("Your sensors officer hesitates, then calls for your attention. \"Captain, there's a... pattern. "
+						+ "From the black hole. Or, rather,\" they pause, looking almost embarrassed. \"-The energy radiated"
+						+ " by the accretion disc."
+						+ "\n\n"
+						+ "They pull a collated sensor output map into the primary holo. \"It's almost a signal. See, if we "
+						+ "chart these fluctuations in energy output over time..."
+						+ "\n\n"
+						+ "You see it now, an orderly series. Not quite a sequence of prime numbers, "
+						+ "unless you jig the math. Statistically this is nearly impossible. Possible explanations "
+						+ "are as unlikely: a series of planets - large moons? - with specific mass-ratio relationships, "
+						+ "all pulled into the accretion disc at just such an angle, like an intentional "
+						+ "message... or orderly annihilation of a constructed planetary system at a scale beyond the wildest "
+						+ "dreams of the most bloody-minded war-planners of the Domain."
+						+ "\n\n"
+						+ "It can't be known. The pattern disappears as quickly as it arose.");
+				
+				int points = HTPoints.ABYSSAL_BLACK_HOLE_UNUSUAL_READINGS;
+				if (points > 0) {
+					HyperspaceTopographyEventIntel.addFactorCreateIfNecessary(
+						new HTNonASBScanFactor("Picked up unusual readings from abyssal black hole", points), dialog);
+				}
+			} else if (planet.getMemoryWithoutUpdate().getBoolean("$abyssalBlackHoleReadingsRevisit")) {
+				addText("Your sensors officer detects no more unusual energy patterns from the inner rim of the accretion disc, just noise,"
+						+ " as mindless as the background radiation of the cosmos itself.");
+			}
+			
 			if (didAlready) {
 				addText("The " + corona + " exhibits fluctuations indicative of recent antimatter application.");
 			}
@@ -294,7 +328,8 @@ public class PlanetInteractionDialogPluginImpl implements InteractionDialogPlugi
 		StarSystemAPI system = planet.getStarSystem();
 		//boolean scannedAlready = planet.getMemoryWithoutUpdate().getBoolean(BLACK_HOLE_SCANNED);
 		boolean didAlready = planet.getMemoryWithoutUpdate().getBoolean(ADDED_KEY);
-		if (system != null && planet == system.getStar() && !didAlready) {
+		boolean deepSpace = system.isDeepSpace();
+		if (system != null && planet == system.getStar() && !didAlready && !deepSpace) {
 //			int num = Misc.getNumStableLocations(planet.getStarSystem());
 			//options.addOption("Induce a resonance cascade in the star's hyperfield, creating a stable location", OptionId.ADD_STABLE_DESCRIBE, null);
 			options.addOption("Consider inducing a resonance cascade in the " + type + "'s hyperfield, creating a stable location", OptionId.ADD_STABLE_DESCRIBE, null);

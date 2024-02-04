@@ -1,5 +1,6 @@
 package com.fs.starfarer.api.impl.campaign.intel.bar.events.historian;
 
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
@@ -8,14 +9,15 @@ import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.TextPanelAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
+import com.fs.starfarer.api.campaign.rules.MemKeys;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.impl.campaign.intel.bar.events.BarEventManager;
 import com.fs.starfarer.api.impl.campaign.intel.bar.events.BaseBarEvent;
-import com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.HistorianBackstory.HistorianBackstoryInfo;
 import com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.HistorianData.HistorianOffer;
 import com.fs.starfarer.api.impl.campaign.plog.PLIntel;
 import com.fs.starfarer.api.impl.campaign.plog.PlaythroughLog;
 import com.fs.starfarer.api.impl.campaign.rulecmd.FireBest;
+import com.fs.starfarer.api.impl.campaign.shared.SharedData;
 import com.fs.starfarer.api.util.Misc;
 
 public class HistorianBarEvent extends BaseBarEvent {
@@ -41,7 +43,7 @@ public class HistorianBarEvent extends BaseBarEvent {
 	
 	protected transient Random random;
 	protected transient List<HistorianOffer> offers = null;
-	protected transient HistorianBackstoryInfo backstory = null;
+	//protected transient HistorianBackstoryInfo backstory = null;
 	
 	public HistorianBarEvent() {
 		super();
@@ -98,6 +100,18 @@ public class HistorianBarEvent extends BaseBarEvent {
 		
 		dialog.getVisualPanel().showPersonInfo(hd.getPerson(), true, true);
 		
+		// oh the hacks
+		if (dialog.getInteractionTarget() != null && hd.getPerson() != null) {
+			this.memoryMap = new LinkedHashMap<String, MemoryAPI>(memoryMap);
+			memoryMap = this.memoryMap;
+			
+			dialog.getInteractionTarget().setActivePerson(hd.getPerson());
+			MemoryAPI memory = hd.getPerson().getMemory();
+			memoryMap.put(MemKeys.LOCAL, memory);
+			memoryMap.put(MemKeys.PERSON_FACTION, hd.getPerson().getFaction().getMemory());
+			memoryMap.put(MemKeys.ENTITY, dialog.getInteractionTarget().getMemory());
+		}
+		
 		if (!hd.isIntroduced()) {
 			optionSelected(null, OptionId.GREETING);
 		} else {
@@ -140,8 +154,8 @@ public class HistorianBarEvent extends BaseBarEvent {
 //		}
 		
 		if (optionData == OptionId.GREETING) {
-			text.addPara("\"Welcome, welcome, please have a seat! I'm sure you're wondering why I called you over.\" " +
-					hd.getHeOrShe() + " leans in as if conspiring, \"" +
+			text.addPara("\"Welcome, welcome, please sit! I'm sure you're wondering why I called you over.\"\n\n" +
+					hd.getUCHeOrShe() + " leans in as if conspiring, \"" +
 						 "I think we can help each other, you and I. See, I have the information,\" " +
 							hd.getHeOrShe() + " taps the book, "+"\"And you have the means.\"");
 			text.addPara("\"I am what you might call a historian-adventurer; a rogue archaelogist uncovering the " +
@@ -159,15 +173,15 @@ public class HistorianBarEvent extends BaseBarEvent {
 		}
 		
 		if (optionData == OptionId.GREETNG_CONTINUE_1) {
-			text.addPara("A weary expression passes over the " + hd.getManOrWoman() + "'s face for just a moment before resuming " + hd.getHisOrHer() + 
-						 " energetic demeanor.");
-			text.addPara("\"I understand why you would assume that. This is indeed a mercenary age; " + 
-						"but no, nothing quite so transactional. " +
+			text.addPara("A weary expression passes over the " + hd.getManOrWoman() + "'s face for just a moment before " + hd.getHeOrShe() + 
+						 " resumes an energetic demeanor.");
+			text.addPara("\"I understand why you would assume that; this is a mercenary age. " + 
+						"But no, nothing quite so transactional. " +
 						 "History is an uncertain trade, and such an approach " +
 						 "would lead to expectations, disappointment, and recrimination. All of which I'm eager to avoid, " +
-						 "especially the last of those.\" An additional wrinkle forms on " + hd.getHisOrHer()+ " face at this.");
-			text.addPara("\"However, if you did find my information valuable, I would gladly accept... donations. Think of it as, as patronage to " +
-						 "fuel my research, which in turn would produce valuable leads. Or it " +
+						 "especially the last.\" An additional wrinkle forms on " + hd.getHisOrHer()+ " face at this.");
+			text.addPara("\"However, if you did find my information valuable, I would gladly accept... donations. Think of it as patronage to " +
+						 "fuel my research, which in turn could produce valuable leads. Or it " +
 						 "might help to think of it as an investment, but with no obligations incurred " +
 						 "by either party. Consider it- you could enrich your own enterprises while contributing to" + 
 						 " the sum of human knowledge!\"");
@@ -197,9 +211,9 @@ public class HistorianBarEvent extends BaseBarEvent {
 				offers = HistorianData.getInstance().getOffers(random, dialog);
 			}
 			
-			if (backstory == null) {
-				backstory = HistorianData.getInstance().pickBackstoryBit(random);
-			}
+//			if (backstory == null) {
+//				backstory = HistorianData.getInstance().pickBackstoryBit(random);
+//			}
 			
 			options.clearOptions();
 			if (offers != null) {
@@ -214,19 +228,25 @@ public class HistorianBarEvent extends BaseBarEvent {
 		
 		boolean forceEnd = false;
 		if (optionData == OptionId.BACKSTORY_BIT) {
-			if (backstory == null) {
-				forceEnd = true;
-			} else {
+//			if (backstory == null) {
+//				forceEnd = true;
+//			} else {
 				Random currRandom = Misc.getRandom(seed, 11);
 				Global.getSector().getRules().setRandomForNextRulePick(currRandom);
-				if (FireBest.fire(null, dialog, memoryMap, "HistorianBackstoryBit")) {
-				} else {
-					HistorianData.getInstance().getShownBackstory().add(backstory.getId());
-					text.addPara(backstory.getText());
+				boolean shown = FireBest.fire(null, dialog, memoryMap, "HistorianBackstoryBlurb");
+				if (!shown) {
+					SharedData.getData().getUniqueEncounterData().historianBlurbsShown.clear();
+					currRandom = Misc.getRandom(seed, 11);
+					Global.getSector().getRules().setRandomForNextRulePick(currRandom);
+					shown = FireBest.fire(null, dialog, memoryMap, "HistorianBackstoryBlurb");
 				}
+//				if (!shown) {
+//					HistorianData.getInstance().getShownBackstory().add(backstory.getId());
+//					text.addPara(backstory.getText());
+//				}
 				options.clearOptions();
 				options.addOption("End the conversation", OptionId.END_CONVERSATION);
-			}
+//			}
 		}
 		
 		

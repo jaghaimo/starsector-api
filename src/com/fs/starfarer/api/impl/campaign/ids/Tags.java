@@ -79,6 +79,7 @@ public class Tags {
 	
 	public static final String PK_SYSTEM = "pk_system";
 	public static final String SYSTEM_CUT_OFF_FROM_HYPER = "system_cut_off_from_hyper";
+	public static final String SYSTEM_ABYSSAL = "system_abyssal";
 	
 	public static final String THEME_HIDDEN = "theme_hidden";
 	
@@ -319,6 +320,7 @@ public class Tags {
 	public static final String INTEL_ACCEPTED = "Accepted";
 	public static final String INTEL_STORY = "Story";
 	public static final String INTEL_COMMISSION = "Commission";
+	public static final String INTEL_AGREEMENTS = "Agreements";
 	public static final String INTEL_HOSTILITIES = "Hostilities";
 	public static final String INTEL_MILITARY = "Military";
 	public static final String INTEL_BEACON = "Warning beacons";
@@ -361,6 +363,10 @@ public class Tags {
 	
 	public static final String LUDDIC_SHRINE = "luddic_shrine";
 	
+	public static final String SLIPSTREAM_VISIBLE_IN_ABYSS = "slipstream_visible_in_abyss";
+	
+	public static final String TEMPORARY_LOCATION = "temporary_location";
+	public static final String STAR_HIDDEN_ON_MAP = "star_hidden_on_map";
 	
 	// MissileAutoloader
 	public static final String RELOAD_1PT = "reload_1pt";

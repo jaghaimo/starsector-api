@@ -6,6 +6,7 @@ import java.util.Map;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
+import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.Misc.Token;
 
@@ -22,6 +23,17 @@ public class MakeOtherFleetImportant extends BaseCommandPlugin {
 
 		if (dialog == null) return false;
 		if (!(dialog.getInteractionTarget() instanceof CampaignFleetAPI)) return false;
+		
+		if (params.size() == 1) {
+			CampaignFleetAPI fleet = (CampaignFleetAPI) dialog.getInteractionTarget();
+			boolean value = params.get(0).getBoolean(memoryMap);;
+			if (value) {
+				Misc.makeImportant(fleet, Misc.genUID());
+			} else {
+				Misc.clearFlag(fleet.getMemoryWithoutUpdate(), MemFlags.ENTITY_MISSION_IMPORTANT);
+			}
+			return true;
+		}
 		
 		String reason = params.get(0).getString(memoryMap);
 		boolean value = params.get(1).getBoolean(memoryMap);;

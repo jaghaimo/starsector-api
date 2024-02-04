@@ -483,7 +483,7 @@ public class DeliveryBarEvent extends BaseGetCommodityBarEvent {
 						"There have been some disagreements over hazard pay, and it's left us in the lurch.\"";
 			}
 		} else {
-			str = "After brief introductions, " + getHeOrShe() + " wastes no time in getting to the point. " +
+			str = "After a brief introduction, " + getHeOrShe() + " wastes no time in getting to the point.\n\n" +
 			   "\"I've got %s units of " + data.comFrom.getCommodity().getLowerCaseName() + " that urgently need to be delivered " +
 			   " to %s" + 
 			   ", in the " + data.dest.getStarSystem().getNameWithLowercaseType() + ". ";
@@ -507,7 +507,7 @@ public class DeliveryBarEvent extends BaseGetCommodityBarEvent {
 			where = "located in the " + data.dest.getStarSystem().getNameWithLowercaseType() + "";
 		}
 		//str += "\n\nYou recall that " + data.dest.getName() + " is under %s control, and " + where + " %s light-years away. ";
-		str += "\n\nYou recall that " + data.dest.getName() + " is under %s control, and " + where + ". ";
+		str += "\n\nYou recall that " + data.dest.getName() + " is under %s control, and " + where + ".";
 		
 		CargoAPI cargo = Global.getSector().getPlayerFleet().getCargo();
 		if (data.comFrom.isFuel()) {

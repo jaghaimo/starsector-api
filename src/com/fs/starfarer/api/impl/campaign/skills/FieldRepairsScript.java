@@ -30,6 +30,10 @@ public class FieldRepairsScript implements EveryFrameScript {
 
 	public static int MONTHS_PER_DMOD_REMOVAL = 1;
 	
+	public static float RATE_DP_MAX = 40f;
+	public static float RATE_DP_MIN = 4f;
+	public static float MAX_RATE_MULT = 3f;
+	
 	public static boolean REMOVE_DMOD_FROM_NEW_SHIPS = true;
 	public static float MIN_NEW_REMOVE_PROB = 0.2f;
 	public static float NEW_REMOVE_PROB_PER_DMOD = 0.2f;
@@ -59,6 +63,10 @@ public class FieldRepairsScript implements EveryFrameScript {
 	}
 	
 	public void advance(float amount) {
+		
+//		System.out.println(RecoverAPlanetkiller.getNexus().getContainingLocation().getName() +
+//				"   " + RecoverAPlanetkiller.getNexus().getContainingLocation().getLocation());
+		
 		CampaignFleetAPI fleet = Global.getSector().getPlayerFleet();
 		if (fleet == null) return;
 		
@@ -71,16 +79,25 @@ public class FieldRepairsScript implements EveryFrameScript {
 		float days = Global.getSector().getClock().convertToDays(amount);
 		float rateMult = 1f / (float) MONTHS_PER_DMOD_REMOVAL;
 		//days *= 100f;
+		if (picked != null) {
+			float dp = picked.getDeploymentPointsCost();
+			float f = (dp - RATE_DP_MIN) / (RATE_DP_MAX - RATE_DP_MIN);
+			f = 1 - f;
+			if (f > 1f) f = 1f;
+			if (f < 0f) f = 0f;
+			
+			rateMult *= 1f + (MAX_RATE_MULT - 1f) * f;
+		}
 		tracker.advance(days * rateMult * 0.5f); // * 0.5f since the tracker interval averages 15 days
 		if (tracker.intervalElapsed()) {
-			// pick which ship to remove which d-mod from half a month ahead of time
-			// if it's no longer present in the fleet when it's time to remove the d-mod,
+			// if picked ship is no longer present in the fleet when it's time to remove the d-mod,
 			// don't remove a d-mod at all
 			if (picked == null || dmod == null) {
 				pickNext();
 			} else {
 				if (fleet.getFleetData().getMembersListCopy().contains(picked) &&
 						DModManager.getNumDMods(picked.getVariant()) > 0) {
+					
 					DModManager.removeDMod(picked.getVariant(), dmod);
 					
 					HullModSpecAPI spec = DModManager.getMod(dmod);

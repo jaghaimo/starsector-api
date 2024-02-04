@@ -461,6 +461,7 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 		}
 		
 		battle.uncombine();
+		//battle.genCombinedDoNotRemoveEmpty();
 		battle.genCombined();
 	}
 	
@@ -1723,7 +1724,7 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 			member.getStatus().setHullFraction(hull);
 			
 			float cr = (float) Math.random() * (maxCR - minCR) + minCR;
-			if (cr < 0) cr = 0;
+			if (cr < 0 || member.isMothballed()) cr = 0;
 			float max = member.getRepairTracker() == null ? 1f : member.getRepairTracker().getMaxCR();
 			if (cr > max) cr = max;
 			member.getRepairTracker().setCR(cr);
@@ -2048,10 +2049,11 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 					data.getStatus() == Status.DESTROYED) {
 				float [] bonus = Misc.getBonusXPForScuttling(data.getMember());
 				points += bonus[0];
-				bonusXP += bonus[1];
+				bonusXP += bonus[1] * bonus[0];
 			}
 		}
 		if (bonusXP > 0 && points > 0) {
+			points = 1;
 			Global.getSector().getPlayerStats().setOnlyAddBonusXPDoNotSpendStoryPoints(true);
 			Global.getSector().getPlayerStats().setBonusXPGainReason("from losing s-modded ships");
 			Global.getSector().getPlayerStats().spendStoryPoints((int)Math.round(points), true, textPanelForXPGain, false, bonusXP, null);

@@ -129,11 +129,13 @@ public class ExtractionMission extends HubMissionWithBarEvent {
 				preferMarketInDirectionOfOtherMissions();
 				MarketAPI pathBase = pickMarket();
 				
+				boolean allowPath = !Factions.LUDDIC_PATH.equals(createdAt.getFaction().getId());
+				
 				if (rollProbability(PROB_PIRATE_BASE_WHEN_BASE) && pirateBase != null) {
 					market = pirateBase;
 					variation = Variation.PIRATE_BASE;
 					danger = RaidDangerLevel.EXTREME;
-				} else {
+				} else if (allowPath) {
 					market = pathBase;
 					variation = Variation.LUDDIC_PATH_BASE;
 					danger = RaidDangerLevel.EXTREME;

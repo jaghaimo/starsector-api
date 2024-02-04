@@ -378,6 +378,9 @@ public class RealityDisruptorChargeGlow extends CombatEntityPluginWithParticles 
 		case DEST:
 			size = 50f;
 			vel.set(target.getVelocity());
+			if (vel.length() > 100f) {
+				vel.scale(100f / vel.length());
+			}
 			break;
 		case DEST_NO_TARGET:
 			break;
@@ -421,6 +424,11 @@ public class RealityDisruptorChargeGlow extends CombatEntityPluginWithParticles 
 				if (durMult < 0.1f) durMult = 0.1f;
 				dur *= 0.5f + 0.5f * durMult;
 			}
+			
+//			if (type == EMPArcHitType.DEST || type == EMPArcHitType.DEST_NO_TARGET) {
+//				v.set(0f, 0f);
+//			}
+			
 			engine.addNegativeNebulaParticle(pt, v, nSize * 1f, endSizeMult,
 			//engine.addNegativeSwirlyNebulaParticle(pt, v, nSize * 1f, endSizeMult,
 											0.25f / dur, 0f, dur, color);

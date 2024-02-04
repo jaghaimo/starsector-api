@@ -28,8 +28,12 @@ public class HTPoints {
 	public static int SCAN_BINARY = 20;
 	public static int SCAN_TRINARY = 30;
 	public static int SCAN_GAS_GIANT = 5;
-	public static int SCAN_NEUTRON_STAR = 10;
+	public static int SCAN_MAGNETIC_FIELD = 5;
+	public static int SCAN_NEUTRON_STAR = 15;
 	public static int SCAN_PULSAR_BEAM = 25;
+	
+	public static int ABYSSAL_STELLAR_OBJECT_BONUS = 10;
+	public static int ABYSSAL_BLACK_HOLE_UNUSUAL_READINGS = 25;
 	
 	// from data found as a salvage special, see TopographicDataSpecial
 	public static int LOW_MIN = 10;
@@ -44,8 +48,16 @@ public class HTPoints {
 	public static int PER_DAY_AT_BURN_30 = 3;
 	public static int PER_DAY_AT_BURN_40 = 6;
 	public static int PER_DAY_AT_BURN_50 = 12;
+	public static int MAX_BURN_FOR_POINT_GAIN = 60;
 	public static int BURN_POINT_CHUNK_SIZE = 20; // once this many points are accumulated, they get given to the player
 	
-
+	
+	// sensor burst/interdiction pulse of an Abyssal Light
+	public static int ABYSSAL_LIGHT_MIN = 3;
+	public static int ABYSSAL_LIGHT_AVG = 7;
 	
 }
+
+
+
+

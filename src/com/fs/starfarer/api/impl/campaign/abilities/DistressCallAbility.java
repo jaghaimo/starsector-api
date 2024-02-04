@@ -9,13 +9,13 @@ import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.JumpPointAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
-import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken.VisibilityLevel;
+import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.characters.FullName;
 import com.fs.starfarer.api.impl.campaign.econ.impl.MilitaryBase;
+import com.fs.starfarer.api.impl.campaign.fleets.FleetFactory.PatrolType;
 import com.fs.starfarer.api.impl.campaign.fleets.PirateFleetManager;
 import com.fs.starfarer.api.impl.campaign.fleets.RouteManager;
-import com.fs.starfarer.api.impl.campaign.fleets.FleetFactory.PatrolType;
 import com.fs.starfarer.api.impl.campaign.fleets.RouteManager.OptionalFleetData;
 import com.fs.starfarer.api.impl.campaign.fleets.RouteManager.RouteData;
 import com.fs.starfarer.api.impl.campaign.fleets.RouteManager.RouteFleetSpawner;
@@ -23,6 +23,7 @@ import com.fs.starfarer.api.impl.campaign.fleets.RouteManager.RouteSegment;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.FleetTypes;
 import com.fs.starfarer.api.impl.campaign.ids.Pings;
+import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.RuinsFleetRouteManager;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.SalvageSpecialAssigner;
 import com.fs.starfarer.api.ui.LabelAPI;
@@ -248,6 +249,10 @@ public class DistressCallAbility extends BaseDurationAbility implements RouteFle
 		CampaignFleetAPI fleet = getFleet();
 		if (fleet.isInHyperspace() || fleet.isInHyperspaceTransition()) return false;
 		
+		if (fleet.getContainingLocation() != null && fleet.getContainingLocation().hasTag(Tags.SYSTEM_ABYSSAL)) {
+			return false;
+		}
+		
 		return true;
 	}
 	
@@ -279,18 +284,22 @@ public class DistressCallAbility extends BaseDurationAbility implements RouteFle
 		float pad = 10f;
 		
 		tooltip.addPara("May be used by a stranded fleet to punch a distress signal through to hyperspace, " +
-						"signaling nearby fleets to bring aid in the form of fuel and supplies. " +
+						"asking nearby fleets to bring aid in the form of fuel and supplies. " +
 						"Help may take many days to arrive, if it arrives at all, and taking advantage " +
 						"of it will result in a progressively higher reduction in standing with the responders.", pad);
 		
 		tooltip.addPara("By long-standing convention, the fleet in distress is expected to meet any responders at the " +
-						"innermost jump-point inside a star system.", pad);
+						"innermost jump-point inside a star system.", pad, highlight,
+						"innermost jump-point");
 		
 		tooltip.addPara("The signal is non-directional and carries no data, and is therefore not useful for " +
 						"calling for help in a tactical situation.", pad);
 		
 		if (fleet.isInHyperspace()) {
 			tooltip.addPara("Can not be used in hyperspace.", bad, pad);
+		}
+		if (fleet.getContainingLocation() != null && fleet.getContainingLocation().hasTag(Tags.SYSTEM_ABYSSAL)) {
+			tooltip.addPara("Can not be used in star systems deep within abyssal hyperspace.", bad, pad);
 		}
 		
 		addIncompatibleToTooltip(tooltip, expanded);

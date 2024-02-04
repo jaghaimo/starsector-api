@@ -87,6 +87,11 @@ public interface VisualPanelAPI {
 	void hideFirstPerson();
 
 	void showLargePlanet(SectorEntityToken planet);
+
+	/**
+	 * Only checks the "first" person, not second or third.
+	 */
+	boolean isShowingPersonInfo(PersonAPI person);
 }
 
 

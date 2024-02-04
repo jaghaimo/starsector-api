@@ -9,6 +9,7 @@ import com.fs.starfarer.api.EveryFrameScript;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
+import com.fs.starfarer.api.impl.campaign.ghosts.types.AbyssalDrifterGhostCreator;
 import com.fs.starfarer.api.impl.campaign.ghosts.types.ChargerGhostCreator;
 import com.fs.starfarer.api.impl.campaign.ghosts.types.EchoGhostCreator;
 import com.fs.starfarer.api.impl.campaign.ghosts.types.EncounterTricksterGhostCreator;
@@ -49,10 +50,13 @@ public class SensorGhostManager implements EveryFrameScript {
 		CREATORS.add(new StormcallerGhostCreator());
 		CREATORS.add(new StormTricksterGhostCreator());
 		CREATORS.add(new ZigguratGhostCreator());
+		CREATORS.add(new AbyssalDrifterGhostCreator());
 	}
 	
 	
 	public static float GHOST_SPAWN_RATE_MULT = 0.75f;
+	
+	public static float GHOST_SPAWN_RATE_MULT_IN_ABYSS = 3f;
 	
 	public static float SB_ATTRACT_GHOSTS_PROBABILITY = 0.5f;
 	public static float SB_FAILED_TO_ATTRACT_TIMEOUT_MULT = 0.25f;
@@ -109,7 +113,13 @@ public class SensorGhostManager implements EveryFrameScript {
 		if (pf == null) return;
 		
 		float days = Global.getSector().getClock().convertToDays(amount);
+		
+		if (Misc.getAbyssalDepth(pf) >= 1f) {
+			days *= GHOST_SPAWN_RATE_MULT_IN_ABYSS;
+		}
+		
 		perCreatorTimeouts.advance(days);
+		
 		
 		sbTimeoutRemaining -= days;
 		if (sbTimeoutRemaining <= 0f) {
@@ -165,10 +175,14 @@ public class SensorGhostManager implements EveryFrameScript {
 		CampaignFleetAPI pf = Global.getSector().getPlayerFleet();
 		boolean nearStream = Misc.isInsideSlipstream(pf.getLocation(), 1000f, pf.getContainingLocation());
 		
+		boolean inAbyss = Misc.isInAbyss(pf);
+		
 		WeightedRandomPicker<SensorGhostCreator> picker = new WeightedRandomPicker<SensorGhostCreator>(random);
 		for (SensorGhostCreator creator : CREATORS) {
 			if (perCreatorTimeouts.contains(creator.getId())) continue;
 			if (nearStream && !creator.canSpawnWhilePlayerInOrNearSlipstream()) continue;
+			if (inAbyss && !creator.canSpawnWhilePlayerInAbyss()) continue;
+			if (!inAbyss && !creator.canSpawnWhilePlayerOutsideAbyss()) continue;
 			
 			float freq = creator.getFrequency(this);
 			picker.add(creator, freq);
@@ -197,6 +211,7 @@ public class SensorGhostManager implements EveryFrameScript {
 		if (ghosts != null) {
 			for (SensorGhost curr : ghosts) {
 				anyFailed |= curr.isCreationFailed();
+				curr.setDespawnInAbyss(!creator.canSpawnWhilePlayerInAbyss());
 			}
 		}
 		if (!canSpawn) {

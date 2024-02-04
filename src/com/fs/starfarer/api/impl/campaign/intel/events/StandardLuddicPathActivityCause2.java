@@ -89,6 +89,7 @@ public class StandardLuddicPathActivityCause2 extends BaseHostileActivityCause2 
 
 	public int getProgress() {
 		if (HA_CMD.playerHasPatherAgreement()) return 0;
+		if (LuddicPathHostileActivityFactor.isPlayerDefeatedPatherExpedition()) return 0;
 		
 		int progress = (int) Math.round(getTotalPatherInterest());
 		
@@ -161,6 +162,7 @@ public class StandardLuddicPathActivityCause2 extends BaseHostileActivityCause2 
 	
 	public float getMagnitudeContribution(StarSystemAPI system) {
 		if (HA_CMD.playerHasPatherAgreement()) return 0f;
+		if (LuddicPathHostileActivityFactor.isPlayerDefeatedPatherExpedition()) return 0f;
 		
 		List<MarketAPI> markets = Misc.getMarketsInLocation(system, Factions.PLAYER);
 		

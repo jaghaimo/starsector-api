@@ -5,6 +5,9 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
+
+import org.lwjgl.util.vector.Vector2f;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignClockAPI;
@@ -15,6 +18,7 @@ import com.fs.starfarer.api.campaign.InteractionDialogPlugin;
 import com.fs.starfarer.api.campaign.LocationAPI;
 import com.fs.starfarer.api.campaign.OptionPanelAPI;
 import com.fs.starfarer.api.campaign.PlanetAPI;
+import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.TextPanelAPI;
 import com.fs.starfarer.api.campaign.VisualPanelAPI;
 import com.fs.starfarer.api.campaign.comm.IntelInfoPlugin;
@@ -27,11 +31,16 @@ import com.fs.starfarer.api.combat.EngagementResultAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.combat.ShipHullSpecAPI;
 import com.fs.starfarer.api.combat.WeaponAPI.AIHints;
+import com.fs.starfarer.api.impl.campaign.AbyssalLightEntityPlugin.AbyssalLightParams;
 import com.fs.starfarer.api.impl.campaign.DebugFlags;
 import com.fs.starfarer.api.impl.campaign.eventide.DuelDialogDelegate;
 import com.fs.starfarer.api.impl.campaign.eventide.DuelPanel;
+import com.fs.starfarer.api.impl.campaign.ids.Entities;
+import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.intel.bases.PirateBaseIntel;
+import com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel;
+import com.fs.starfarer.api.impl.campaign.intel.events.ht.HTScanFactor;
 import com.fs.starfarer.api.impl.campaign.intel.events.ht.HyperspaceTopographyEventIntel;
 import com.fs.starfarer.api.impl.campaign.intel.inspection.HegemonyInspectionManager;
 import com.fs.starfarer.api.impl.campaign.intel.misc.LuddicShrineIntel;
@@ -54,6 +63,8 @@ public class EventTestPluginImpl implements InteractionDialogPlugin {
 		INSPECTION,
 		PICK_STRENGTH,
 		PRINT_LOG,
+		TOPOGRAPHY_POINTS,
+		HAEI_POINTS,
 		ADD_LOG_INTEL,
 		INCREASE_COLONY_SIZE,
 		FINISH_CONSTRUCTION,
@@ -151,6 +162,13 @@ public class EventTestPluginImpl implements InteractionDialogPlugin {
 		case FIGHT:
 			final DuelPanel duelPanel2 = DuelPanel.createDefault(true, true, "soe_ambience");
 			dialog.showCustomVisualDialog(1024, 700, new DuelDialogDelegate("music_soe_fight", duelPanel2, dialog, null, true));
+			
+			//Global.getSector().getIntelManager().addIntel(new TestFleetGroupIntel());
+			
+			//new PerseanLeagueBlockade(params, blockadeParams)
+			
+//			new GensHannanMachinations(dialog);
+			
 //			dialog.showCustomVisualDialog(1024, 700, new CustomVisualDialogDelegate() {
 //				public CustomUIPanelPlugin getCustomPanelPlugin() {
 //					return duelPanel2;
@@ -226,14 +244,47 @@ public class EventTestPluginImpl implements InteractionDialogPlugin {
 			options.addOption("1000", 1000);
 			options.addOption("Leave", OptionId.LEAVE, null);
 			break;
+		case TOPOGRAPHY_POINTS:
+			HyperspaceTopographyEventIntel.addFactorCreateIfNecessary(
+					new HTScanFactor("Dev mode point increase", 50), dialog);
+			break;
+		case HAEI_POINTS:
+			if (HostileActivityEventIntel.get() != null) {
+				HostileActivityEventIntel intel = HostileActivityEventIntel.get();
+				intel.setRandom(new Random());
+				int p = intel.getProgress();
+				if (p < 400 || p == 499) p = 400;
+				else if (p < 450) p = 450;
+				else p = 499;
+				intel.setProgress(p);
+				textPanel.addPara("Progress set to " + p);
+			}
+			//HostileActivityEventIntel.get().addFactor(new BaseOneTimeFactor(50), dialog);
+			break;
 		case PRINT_LOG:
+			
+			
+			for (int i = 0; i < 10; i++) {
+				Vector2f loc = Misc.getPointWithinRadius(playerFleet.getLocation(), 10000f);
+				if (Misc.getAbyssalDepth(loc) >= 1f) {
+					AbyssalLightParams params = new AbyssalLightParams();
+					SectorEntityToken e2 = Global.getSector().getHyperspace().addCustomEntity(Misc.genUID(), null, Entities.ABYSSAL_LIGHT, Factions.NEUTRAL, params);
+					e2.setLocation(loc.x, loc.y);
+				}
+			}
+			
+//			SectorEntityToken e2 = Global.getSector().getHyperspace().addCustomEntity(Misc.genUID(), null, Entities.ABYSSAL_LIGHT, Factions.NEUTRAL);
+//			e2.setLocation(playerFleet.getLocation().x, playerFleet.getLocation().y);
+			
+			
+			//new GensHannanMachinations(dialog);
 			
 //			if (Global.getSector().getCurrentLocation() instanceof StarSystemAPI) {
 //				new HostileActivityIntel((StarSystemAPI) Global.getSector().getCurrentLocation());
 //			}
 			
 			//BaseEventIntel event = new BaseEventIntel();
-			HyperspaceTopographyEventIntel event = new HyperspaceTopographyEventIntel(dialog.getTextPanel(), true);
+			//HyperspaceTopographyEventIntel event = new HyperspaceTopographyEventIntel(dialog.getTextPanel(), true);
 			//Global.getSector().addScript(this);
 			//Global.getSector().getIntelManager().addIntel(event);
 			//Global.getSector().getListenerManager().addListener(this);
@@ -330,6 +381,8 @@ public class EventTestPluginImpl implements InteractionDialogPlugin {
 		}
 		options.addOption("Send a punitive expedition", OptionId.PUNITIVE_EXPEDITION);
 		options.addOption("Send an AI inspection", OptionId.INSPECTION);
+		options.addOption("Hyperspace Topography +50 points", OptionId.TOPOGRAPHY_POINTS);
+		options.addOption("Hostile Activity: reseed RNG and cycle progress through 400/450/499", OptionId.HAEI_POINTS);
 		options.addOption("Print player log", OptionId.PRINT_LOG);
 		options.addOption("Add player log intel", OptionId.ADD_LOG_INTEL);
 		

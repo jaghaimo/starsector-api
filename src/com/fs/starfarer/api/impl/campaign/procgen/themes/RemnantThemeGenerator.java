@@ -154,6 +154,9 @@ public class RemnantThemeGenerator extends BaseThemeGenerator {
 				type = RemnantSystemType.SUPPRESSED;
 			}
 			
+//			if (type == RemnantSystemType.RESURGENT) {
+//				System.out.println("ewfwefwefwe");
+//			}
 			context.majorThemes.put(c, Themes.REMNANTS);
 			numUsed++;
 
@@ -425,7 +428,7 @@ public class RemnantThemeGenerator extends BaseThemeGenerator {
 		for (StarSystemData data : systems) {
 			if (data.isBlackHole() || data.isNebula() || data.isPulsar()) continue;
 			
-			if (data.planets.size() >= 4 || data.habitable.size() >= 1) {
+			if (data.planets.size() >= 3 || data.habitable.size() >= 1) {
 				result.add(data);
 				
 //				Collections.sort(data.habitable, new Comparator<PlanetAPI>() {

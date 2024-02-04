@@ -25,6 +25,7 @@ import com.fs.starfarer.api.combat.ViewportAPI;
 import com.fs.starfarer.api.fleet.FleetMemberViewAPI;
 import com.fs.starfarer.api.graphics.SpriteAPI;
 import com.fs.starfarer.api.impl.campaign.DebugFlags;
+import com.fs.starfarer.api.impl.campaign.abilities.ReversePolarityToggle;
 import com.fs.starfarer.api.impl.campaign.abilities.SustainedBurnAbility;
 import com.fs.starfarer.api.impl.campaign.ghosts.SensorGhost;
 import com.fs.starfarer.api.impl.campaign.ghosts.SensorGhostManager;
@@ -48,6 +49,9 @@ public class SlipstreamTerrainPlugin2 extends BaseTerrain {
 	public static String FUEL_USE_MODIFIER_DESC = "Inside slipstream";
 	
 	public static class SlipstreamParams2 {
+		public String enteringSlipstreamTextOverride = null;
+		public Float enteringSlipstreamTextDurationOverride = null;
+		public boolean forceNoWindVisualEffectOnFleets = false;
 		public String spriteKey1 = "slipstream0";
 		public String spriteKey2 = "slipstream1";
 		public String spriteKey3 = "slipstream2";
@@ -76,11 +80,19 @@ public class SlipstreamTerrainPlugin2 extends BaseTerrain {
 		public boolean slowDownInWiderSections = true;
 		public float widthForMaxSpeedMinMult = 0.67f;
 		public float widthForMaxSpeedMaxMult = 1.5f;
+		public float accelerationMult = 1f;
 		public String name = null;
 		
 		public float texScrollMult0 = 0f;
 		public float texScrollMult1 = -1.13f;
 		public float texScrollMult2 = -0.28f;
+		
+		Object readResolve() {
+			if (accelerationMult <= 0f) {
+				accelerationMult = 1f;
+			}
+			return this;
+		}
 	}
 	
 	public static class SlipstreamSegment {
@@ -630,6 +642,9 @@ public class SlipstreamTerrainPlugin2 extends BaseTerrain {
 		
 		// advance faders for all segments, not just nearby, since it's not just aesthetic
 		for (int i = 0; i < segments.size(); i++) {
+//			if (i == 6) {
+//				System.out.println("wefwefwef");
+//			}
 			SlipstreamSegment curr = segments.get(i);
 			curr.fader.advance(amount);
 		}
@@ -1045,6 +1060,9 @@ public class SlipstreamTerrainPlugin2 extends BaseTerrain {
 		//if (true) return;
 		recomputeIfNeeded();
 		if (lengthToIndexMap == null) return;
+		
+		float bMult = getAbyssalBMult(false);
+		if (bMult <= 0f) return;
 		
 		if (false && builder != null) {
 //			CampaignFleetAPI pf = Global.getSector().getPlayerFleet();
@@ -1604,6 +1622,7 @@ public class SlipstreamTerrainPlugin2 extends BaseTerrain {
 			}
 			
 			a *= getFaderBrightness(p.dist);
+			a *= bMult;
 			
 			//a *= 0.5f;
 			//a *= 0.1f;
@@ -1708,9 +1727,31 @@ public class SlipstreamTerrainPlugin2 extends BaseTerrain {
 //	public void renderSegments(SpriteAPI sprite, SpriteAPI edge, float alpha, List<SlipstreamSegment> segments) {
 //		renderSegments(sprite, edge, alpha, segments, 0f);
 //	}
+	
+	public float getAbyssalBMult(boolean forMap) {
+		if (forMap) return 1f;
+		if (entity.hasTag(Tags.SLIPSTREAM_VISIBLE_IN_ABYSS)) return 1f;
+		float bMult = 1f;
+		if (!forMap) {
+			CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();
+			if (playerFleet != null) {
+				float depth = Misc.getAbyssalDepth(playerFleet);
+				if (depth > 0) {
+					bMult = Math.max(0f, 1f - depth);
+				}
+			}
+		}
+		return bMult;
+	}
+	
 	public void renderSegments(SpriteAPI sprite0, SpriteAPI sprite1, SpriteAPI sprite2, 
 							   SpriteAPI edge, float alpha, List<SlipstreamSegment> segments, float extraTX, boolean forMap) {
 		//if (true) return;
+		
+		float bMult = getAbyssalBMult(forMap);
+		if (bMult <= 0f) return;
+		
+		
 		GL11.glEnable(GL11.GL_TEXTURE_2D);
 		GL11.glEnable(GL11.GL_BLEND);
 		//GL11.glDisable(GL11.GL_BLEND);
@@ -1763,7 +1804,7 @@ public class SlipstreamTerrainPlugin2 extends BaseTerrain {
 		GL11.glBegin(GL11.GL_QUAD_STRIP);
 		for (int i = 0; i < segments.size(); i++) {
 			SlipstreamSegment curr = segments.get(i);
-			float a = curr.fader.getBrightness() * curr.bMult;
+			float a = curr.fader.getBrightness() * curr.bMult * bMult;
 			if (i == 0 || i == segments.size() - 1) a = 0f;
 			
 			Vector2f p1 = new Vector2f(curr.loc);
@@ -1794,7 +1835,7 @@ public class SlipstreamTerrainPlugin2 extends BaseTerrain {
 			GL11.glBegin(GL11.GL_QUAD_STRIP);
 			for (int i = 0; i < segments.size(); i++) {
 				SlipstreamSegment curr = segments.get(i);
-				float a = curr.fader.getBrightness() * curr.bMult;
+				float a = curr.fader.getBrightness() * curr.bMult * bMult;
 				if (i == 0 || i == segments.size() - 1) a = 0f;
 				
 				Vector2f p1 = new Vector2f(curr.loc);
@@ -1822,7 +1863,7 @@ public class SlipstreamTerrainPlugin2 extends BaseTerrain {
 			GL11.glBegin(GL11.GL_QUAD_STRIP);
 			for (int i = 0; i < segments.size(); i++) {
 				SlipstreamSegment curr = segments.get(i);
-				float a = curr.fader.getBrightness() * curr.bMult;
+				float a = curr.fader.getBrightness() * curr.bMult * bMult;
 				if (i == 0 || i == segments.size() - 1) a = 0f;
 
 				Vector2f p1 = new Vector2f(curr.loc);
@@ -1858,7 +1899,7 @@ public class SlipstreamTerrainPlugin2 extends BaseTerrain {
 		
 		for (int i = 0; i < segments.size(); i++) {
 			SlipstreamSegment curr = segments.get(i);
-			float a = curr.fader.getBrightness() * curr.bMult;
+			float a = curr.fader.getBrightness() * curr.bMult * bMult;
 			if (i == 0 || i == segments.size() - 1) a = 0f;
 			
 //			float width = getWidth(curr.totalLength);
@@ -1902,7 +1943,7 @@ public class SlipstreamTerrainPlugin2 extends BaseTerrain {
 		
 		for (int i = 0; i < segments.size(); i++) {
 			SlipstreamSegment curr = segments.get(i);
-			float a = curr.fader.getBrightness() * curr.bMult;
+			float a = curr.fader.getBrightness() * curr.bMult * bMult;
 			if (i == 0 || i == segments.size() - 1) a = 0f;
 			
 			Vector2f p1 = new Vector2f(curr.loc);
@@ -2143,7 +2184,17 @@ public class SlipstreamTerrainPlugin2 extends BaseTerrain {
 				//if (!playerWasInSlipstream) {
 				//	playerWasInSlipstream = true;
 				if (playerWasInSlipstreamFramesAgo > 5) {
-					fleet.addFloatingText("Entering slipstream", Misc.setAlpha(fleet.getIndicatorColor(), 255), 0.5f);
+					String text = "Entering slipstream";
+					if (params.enteringSlipstreamTextOverride != null) {
+						text = params.enteringSlipstreamTextOverride;
+					}
+					float dur = 0.5f;
+					if (params.enteringSlipstreamTextDurationOverride != null) {
+						dur = params.enteringSlipstreamTextDurationOverride;
+					}
+					if (!text.isEmpty()) {
+						fleet.addFloatingText(text, Misc.setAlpha(fleet.getIndicatorColor(), 255), dur);
+					}
 				}
 				playerWasInSlipstreamFramesAgo = 0;
 			}
@@ -2154,16 +2205,22 @@ public class SlipstreamTerrainPlugin2 extends BaseTerrain {
 			float maxFleetBurn = fleet.getFleetData().getBurnLevel();
 			float currFleetBurn = fleet.getCurrBurnLevel();
 			
-			float maxWindBurn = params.burnLevel * 2f;
+			boolean reversePolarity = Misc.isReversePolarity(fleet);
 			
+			float maxWindBurn = params.burnLevel * 2f;
 			float currWindBurn = intensity * maxWindBurn;
 			float maxFleetBurnIntoWind = maxFleetBurn - Math.abs(currWindBurn);
 			float seconds = days * Global.getSector().getClock().getSecondsPerDay();
+			
 			
 //			float angle = Misc.getAngleInDegreesStrict(this.entity.getLocation(), fleet.getLocation()) + 180f;
 //			Vector2f windDir = Misc.getUnitVectorAtDegreeAngle(angle);
 			Vector2f p1 = getPointAt(distAlong, yOff);
 			Vector2f p2 = getPointAt(distAlong + 1f, yOff);
+			if (reversePolarity) {
+				p1 = getPointAt(distAlong, yOff);
+				p2 = getPointAt(distAlong - 1f, yOff);
+			}
 			if (p1 == null || p2 == null) {
 				if (fleet.isPlayerFleet()) {
 					playerNoLongerinSlipstream();
@@ -2171,11 +2228,13 @@ public class SlipstreamTerrainPlugin2 extends BaseTerrain {
 				return;
 			}
 			
+			
 			//Vector2f windDir = Misc.getUnitVectorAtDegreeAngle(entity.getFacing());
 			Vector2f windDir = Misc.getUnitVectorAtDegreeAngle(Misc.getAngleInDegrees(p1, p2));
 			if (currWindBurn < 0) {
 				windDir.negate();
 			}
+			
 			Vector2f velDir = Misc.normalise(new Vector2f(fleet.getVelocity()));
 			//float baseFleetAccel = Misc.getSpeedForBurnLevel(fleet.getFleetData().getMinBurnLevel());
 			float baseFleetAccel = fleet.getTravelSpeed();
@@ -2217,6 +2276,9 @@ public class SlipstreamTerrainPlugin2 extends BaseTerrain {
 					float currOffset = offset[1];
 					float diff = playerDesiredYOffset - currOffset;
 					float sign = Math.signum(diff);
+					if (reversePolarity) {
+						sign = -sign;
+					}
 					float mult = Math.min(Math.abs(diff) * 1f, 1f);
 					dest = Misc.rotateAroundOrigin(dest, Math.min(60f, 60f * mult * 1f) * sign);
 				}
@@ -2244,6 +2306,13 @@ public class SlipstreamTerrainPlugin2 extends BaseTerrain {
 			if (windSpeedReduction > 0) {
 				maxSpeedWithWind = Misc.getSpeedForBurnLevel(
 							Math.max(params.burnLevel  * 0.5f * intensity, params.burnLevel * intensity - windSpeedReduction));
+			}
+			
+			if (reversePolarity) {
+				float polarityMult = fleet.getMemoryWithoutUpdate().getFloat(ReversePolarityToggle.POLARITY_SPEED_MULT);
+				maxSpeedWithWind *= polarityMult;
+				//System.out.println("MSWW: " + maxSpeedWithWind + ", mult: " + polarityMult);
+				//maxSpeedWithWind *= ReversePolarity.SLIPSTREAM_SPEED_MULT;
 			}
 			
 			float fleetSpeedAlongWind = Vector2f.dot(windDir, fleet.getVelocity());
@@ -2300,8 +2369,21 @@ public class SlipstreamTerrainPlugin2 extends BaseTerrain {
 			//Vector2f vel = fleet.getVelocity();
 			//windDir.scale(seconds * fleet.getAcceleration() * accelMult);
 			//float baseFleetAccel = Math.max(fleet.getTravelSpeed(), fleet.getAcceleration());
+
+			float extraAccelMult = params.accelerationMult;
+			windDir.scale(seconds * baseFleetAccel * accelMult * extraAccelMult);
 			
-			windDir.scale(seconds * baseFleetAccel * accelMult);
+			if (extraAccelMult > 1f) {
+				float windAccelAmountThisFrame = windDir.length();
+				float maxAccelThisFrame = maxSpeedWithWind - fleetSpeedAlongWind;
+				
+				if (windAccelAmountThisFrame > maxAccelThisFrame) {
+					float accelThisFrameMult = maxAccelThisFrame / Math.max(1f, windAccelAmountThisFrame);
+					if (accelThisFrameMult > 1f) accelThisFrameMult = 1f;
+					windDir.scale(accelThisFrameMult);
+				}
+			}
+			
 			fleet.setVelocity(vel.x + windDir.x, vel.y + windDir.y);
 			
 			fleet.getStats().addTemporaryModMult(0.1f, getModId() + "_1",
@@ -2311,9 +2393,14 @@ public class SlipstreamTerrainPlugin2 extends BaseTerrain {
 			
 			
 			boolean withGlow = true;
+			withGlow = !params.forceNoWindVisualEffectOnFleets;
 			//withGlow = false;
 			if (withGlow) {
 				Color glowColor = params.windGlowColor;
+				if (fleet.getMemoryWithoutUpdate().contains(ReversePolarityToggle.POLARITY_WIND_GLOW_COLOR_KEY)) {
+					glowColor = (Color) fleet.getMemoryWithoutUpdate().get(ReversePolarityToggle.POLARITY_WIND_GLOW_COLOR_KEY);
+				}
+				
 				int alpha = glowColor.getAlpha();
 				if (alpha < 75) {
 					glowColor = Misc.setAlpha(glowColor, 75);
@@ -2322,6 +2409,10 @@ public class SlipstreamTerrainPlugin2 extends BaseTerrain {
 				
 				p1 = getNoWobblePointAt(distAlong, yOff);
 				p2 = getNoWobblePointAt(distAlong + 100f, yOff);
+				if (reversePolarity) {
+					p1 = getNoWobblePointAt(distAlong, yOff);
+					p2 = getNoWobblePointAt(distAlong - 100f, yOff);
+				}
 				if (p1 != null && p2 != null) {
 					windDir = Misc.getUnitVectorAtDegreeAngle(Misc.getAngleInDegrees(p1, p2));
 					
@@ -3114,15 +3205,30 @@ public class SlipstreamTerrainPlugin2 extends BaseTerrain {
 			float loopFade = 0.5f;
 			//loopFade = 5f;
 			String soundId = getSpec().getLoopOne();
-			if (soundId != null && innerVolume > 0f) {
+			
+			float filterMult = innerVolume;
+			if (innerVolume > 0f) {
+				filterMult = 1f;
+//			} else if (outerVolume > 0f) {
+//				filterMult = Math.min(1f, outerVolume * 2f);
+//				if (filterMult < 0.5f) filterMult *= filterMult;
+//			}
+			} else if (outerVolume > 0.5f) {
+				filterMult = Math.min(1f, (outerVolume - 0.5f) * 4f);
+			}
+			//System.out.println("Filter: " + filterMult);
+			if (innerVolume > 0) {
 				float gain = (float) getSpec().getCustom().optDouble("gain", 0.75f);
 				float gainHF = (float) getSpec().getCustom().optDouble("gainHF", 0.5f);
 				
 				Global.getSoundPlayer().applyLowPassFilter(
-									Math.max(0f, 1f - (1f - gain) * innerVolume),
-									Math.max(0f, 1f - Math.min(1f - gainHF, innerVolume)));
-//									Math.max(0f, 1f - 0.25f * innerVolume),
-//									Math.max(0f, 1f - Math.min(0.5f, innerVolume)));
+						Math.max(0f, 1f - (1f - gain) * innerVolume),
+						Math.max(0f, 1f - Math.min(1f - gainHF, innerVolume)));
+//						Math.max(0f, 1f - 0.25f * innerVolume),
+//						Math.max(0f, 1f - Math.min(0.5f, innerVolume)));
+			}
+			
+			if (soundId != null && innerVolume > 0f) {
 				Global.getSoundPlayer().playLoop(soundId, fleet, innerPitch,
 						getLoopOneVolume() * innerVolume, fleet.getLocation(), Misc.ZERO, loopFade, loopFade);
 			}
@@ -3135,6 +3241,7 @@ public class SlipstreamTerrainPlugin2 extends BaseTerrain {
 			}
 			
 			float suppressionMult = innerVolume;
+			suppressionMult = filterMult;
 			Global.getSector().getCampaignUI().suppressMusic(getSpec().getMusicSuppression() * suppressionMult);
 		}
 	}

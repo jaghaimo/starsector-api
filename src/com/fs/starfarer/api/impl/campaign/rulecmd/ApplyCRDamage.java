@@ -64,15 +64,20 @@ public class ApplyCRDamage extends BaseCommandPlugin {
 		
 		Random random = Misc.getRandom(seed, 7);
 		
+		applyCRDamage(playerFleet, baseFP * fpMult, crMult, desc, text, random);
+		
+		return true;
+	}
+	
+	public static void applyCRDamage(CampaignFleetAPI fleet, float damageFP, float crMult, String desc, TextPanelAPI text, Random random) {
 		List<FleetMemberAPI> shipsToDamage = new ArrayList<FleetMemberAPI>();
 		WeightedRandomPicker<FleetMemberAPI> picker = new WeightedRandomPicker<FleetMemberAPI>(random);
-		for (FleetMemberAPI member : playerFleet.getFleetData().getMembersListCopy()) {
+		for (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {
 			if (member.isMothballed() && member.getRepairTracker().getBaseCR() < 0.2f) continue;
 			picker.add(member, member.getFleetPointCost());
 		}
 
-		//float totalDamage = Math.min(playerFleet.getFleetPoints(), other.getFleetPoints()) * INSPECTION_DAMAGE_MULT;
-		float totalDamage = baseFP * fpMult;
+		float totalDamage = damageFP;
 		float picked = 0f;
 		while (picked < totalDamage && !picker.isEmpty()) {
 			FleetMemberAPI pick = picker.pickAndRemove();
@@ -87,11 +92,11 @@ public class ApplyCRDamage extends BaseCommandPlugin {
 			crLost *= crMult;
 			if (crLost > 0) {
 				member.getRepairTracker().applyCREvent(-crLost, desc);
-				AddRemoveCommodity.addCRLossText(member, text, crLost);
+				if (text != null) {
+					AddRemoveCommodity.addCRLossText(member, text, crLost);
+				}
 			}
 		}
-		
-		return true;
 	}
 
 }

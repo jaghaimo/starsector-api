@@ -25,7 +25,7 @@ import com.fs.starfarer.api.util.Range;
 
 public class PirateBasePirateActivityCause2 extends BaseHostileActivityCause2 {
 
-	public static boolean DEAL_PROVIDES_NEGATIVE_PROGRESS = true;
+	public static boolean DEAL_PROVIDES_NEGATIVE_PROGRESS = false;
 	
 	public static float MAX_MAG = 0.5f;
 	

@@ -335,6 +335,7 @@ public class DEMScript extends BaseEveryFrameCombatPlugin implements MissileAIPl
 					missile.setNoGlowTime(0f);
 					missile.setFizzleTime(0.5f);
 					missile.setFadeTime(0.5f);
+					missile.setEtaModifier(0f);
 				}
 			}
 		} else if (state == State.FIRE) {

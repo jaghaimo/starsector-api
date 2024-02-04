@@ -147,6 +147,7 @@ import com.fs.starfarer.api.impl.campaign.econ.impl.Spaceport;
 import com.fs.starfarer.api.impl.campaign.econ.impl.TechMining;
 import com.fs.starfarer.api.impl.campaign.econ.impl.Waystation;
 import com.fs.starfarer.api.impl.campaign.enc.EncounterManager;
+import com.fs.starfarer.api.impl.campaign.enc.StrandedGiveTJScript;
 import com.fs.starfarer.api.impl.campaign.events.BaseEventPlugin;
 import com.fs.starfarer.api.impl.campaign.events.CoreEventProbabilityManager;
 import com.fs.starfarer.api.impl.campaign.events.FactionHostilityEvent;
@@ -337,6 +338,7 @@ import com.fs.starfarer.api.impl.campaign.plog.PlaythroughLog;
 import com.fs.starfarer.api.impl.campaign.plog.SModRecord;
 import com.fs.starfarer.api.impl.campaign.procgen.DefenderDataOverride;
 import com.fs.starfarer.api.impl.campaign.procgen.ProcgenUsedNames;
+import com.fs.starfarer.api.impl.campaign.procgen.SectorProcGen;
 import com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.BaseAssignmentAI;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.OmegaOfficerGeneratorPlugin;
@@ -426,6 +428,8 @@ import com.fs.starfarer.api.impl.campaign.velfield.SlipstreamTerrainPlugin2;
 import com.fs.starfarer.api.impl.campaign.velfield.SlipstreamTerrainPlugin2.SlipstreamParams2;
 import com.fs.starfarer.api.impl.campaign.velfield.SlipstreamTerrainPlugin2.SlipstreamSegment;
 import com.fs.starfarer.api.impl.campaign.velfield.SlipstreamVisibilityManager;
+import com.fs.starfarer.api.impl.campaign.world.GateHaulerLocation;
+import com.fs.starfarer.api.impl.campaign.world.Limbo;
 import com.fs.starfarer.api.impl.campaign.world.TTBlackSite;
 import com.fs.starfarer.api.impl.campaign.world.TTBlackSite.ZigFIDConfig;
 import com.fs.starfarer.api.impl.campaign.world.ZigLeashAssignmentAI;
@@ -446,6 +450,14 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 	@Override
 	public void onGameLoad(boolean newGame) {
 		econPostSaveRestore();
+		
+		
+		StarSystemAPI limbo = Global.getSector().getStarSystem("Limbo");
+		if (limbo == null || !limbo.hasTag(Tags.SYSTEM_ABYSSAL)) {
+			new Limbo().generate(Global.getSector());
+			new GateHaulerLocation().generate(Global.getSector());
+			SectorProcGen.clearAbyssalHyperspaceAndSetSystemTags();
+		}
 		
 		// the token replacement generators don't get saved
 		// add them on every game load
@@ -469,6 +481,14 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 //		}
 		
 		convertTo0951aSkillSystemIfNeeded();
+
+		addMissingPeople();
+	}
+	
+	public static void addMissingPeople() {
+		if (People.getPerson(People.REYNARD_HANNAN) == null) {
+			People.addReynardHannan();
+		}
 	}
 	
 	public static void verifyFactionData() {
@@ -585,6 +605,9 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 		PlayerFleetPersonnelTracker.getInstance();
 		
 		
+		if (!sector.hasScript(StrandedGiveTJScript.class)) {
+			sector.addScript(new StrandedGiveTJScript());
+		}
 		if (!sector.hasScript(PersonalFleetHoracioCaden.class)) {
 			sector.addScript(new PersonalFleetHoracioCaden());
 		}
@@ -632,9 +655,9 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 		if (!sector.hasScript(LuddicPathBaseManager.class)) {
 			sector.addScript(new LuddicPathBaseManager());
 		}
-		if (!sector.hasScript(HegemonyInspectionManager.class)) {
-			sector.addScript(new HegemonyInspectionManager());
-		}
+//		if (!sector.hasScript(HegemonyInspectionManager.class)) {
+//			sector.addScript(new HegemonyInspectionManager());
+//		}
 		if (!sector.hasScript(PunitiveExpeditionManager.class)) {
 			sector.addScript(new PunitiveExpeditionManager());
 		}
@@ -683,6 +706,9 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 		
 		if (!sector.hasScript(SmugglingScanScript.class)) {
 			sector.addScript(new SmugglingScanScript());
+		}
+		if (!sector.hasScript(HasslePlayerScript.class)) {
+			sector.addScript(new HasslePlayerScript());
 		}
 		
 		PlaythroughLog.getInstance();
@@ -748,6 +774,8 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 		junkList.clear();
 		
 		new TTBlackSite().generate(Global.getSector());
+		new Limbo().generate(Global.getSector());
+		new GateHaulerLocation().generate(Global.getSector());
 	}
 	
 	
@@ -946,7 +974,8 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 		Misc.makeStoryCritical("chalcedon", id);
 		Misc.makeStoryCritical("mazalot", id);
 		
-		//Misc.makeStoryCritical("new_maxios", id);
+		id = Missions.KANTA_LIBRE; // Like, not a real mission. Yet? Set so Kanta's Den doesn't deciv and break Stuff. -dgb
+		Misc.makeStoryCritical("kantas_den", id);
 	}
 	
 	public void tagLuddicShrines() {
@@ -1896,6 +1925,7 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 		
 		x.alias("ProcgenUsedNames", ProcgenUsedNames.class);
 		x.alias("SmugglingScanScript", SmugglingScanScript.class);
+		x.alias("HasslePlayerScript", HasslePlayerScript.class);
 		
 		//x.alias("BaseToggleAbility", BaseToggleAbility.class);
 		

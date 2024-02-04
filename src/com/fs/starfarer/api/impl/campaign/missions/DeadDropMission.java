@@ -147,9 +147,10 @@ public class DeadDropMission extends HubMissionWithBarEvent {
 					"the dead drop coordinates", "they",
 					"the dead drop coordinates given to you by " + person.getNameString(),
 					0,
-					true, ComplicationRepImpact.FULL,
+					true, ComplicationRepImpact.LOW,
 					DelayedFleetEncounter.TRIGGER_REP_LOSS_MEDIUM, getPerson());
 			e.triggerSetAdjustStrengthBasedOnQuality(true, getQuality());
+			e.triggerMakeLowRepImpact();
 			e.triggerSetPatrol();
 			e.triggerSetStandardAggroInterceptFlags();
 			e.endCreate();

@@ -3,8 +3,10 @@
  */
 package com.fs.starfarer.api.impl.campaign.shared;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -15,6 +17,27 @@ import com.fs.starfarer.api.impl.campaign.CoreScript;
 import com.fs.starfarer.api.util.TimeoutTracker;
 
 public class SharedData {
+	
+	public static class UniqueEncounterData {
+		public List<String> interactedWith = new ArrayList<String>();
+		public List<String> historianBlurbsShown = new ArrayList<String>();
+		
+		public boolean wasInteractedWith(String id) {
+			return interactedWith.contains(id);
+		}
+		
+		public void setWasInteractedWith(String id) {
+			interactedWith.add(id);
+		}
+		
+		protected Object readResolve() {
+			if (historianBlurbsShown == null) {
+				historianBlurbsShown = new ArrayList<String>();
+			}
+			return this;
+		}
+		
+	}
 	
 	protected TimeoutTracker<String> marketsThatSentRelief = new TimeoutTracker<String>();
 	protected TimeoutTracker<String> marketsThatSentTradeFleet = new TimeoutTracker<String>();
@@ -37,6 +60,8 @@ public class SharedData {
 	
 	protected MonthlyReport previousReport = new MonthlyReport();
 	protected MonthlyReport currentReport = new MonthlyReport();
+	
+	protected UniqueEncounterData uniqueEncounterData = new UniqueEncounterData();
 	
 	public SharedData() {
 	}
@@ -85,12 +110,19 @@ public class SharedData {
 		this.playerPreLosingBattleCrew = playerPreLosingBattleCrew;
 	}
 
+	public UniqueEncounterData getUniqueEncounterData() {
+		return uniqueEncounterData;
+	}
+
 	protected Object readResolve() {
 		if (starSystemCustomsTimeout == null) {
 			starSystemCustomsTimeout = new LinkedHashMap<String, TimeoutTracker<String>>();
 		}
 		if (personBountyEventData == null) {
 			personBountyEventData = new PersonBountyEventData();
+		}
+		if (uniqueEncounterData == null) {
+			uniqueEncounterData = new UniqueEncounterData();
 		}
 		return this;
 	}

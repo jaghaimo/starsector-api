@@ -25,6 +25,7 @@ import com.fs.starfarer.api.campaign.FleetStubAPI;
 import com.fs.starfarer.api.campaign.FleetStubConverterPlugin;
 import com.fs.starfarer.api.campaign.InteractionDialogPlugin;
 import com.fs.starfarer.api.campaign.JumpPointAPI;
+import com.fs.starfarer.api.campaign.PersonImportance;
 import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.RepLevel;
 import com.fs.starfarer.api.campaign.ReputationActionResponsePlugin;
@@ -192,6 +193,8 @@ public class CoreCampaignPluginImpl extends BaseCampaignPlugin {
 		for (String tag : entity.getTags()) {
 			memory.set("$tag:" + tag, true, 0);
 		}
+		
+		memory.set("$abyssalDepth", Misc.getAbyssalDepth(entity), 0);
 		
 		String onOrAt = "on";
 		if (entity.hasTag(Tags.STATION)) {
@@ -420,7 +423,9 @@ public class CoreCampaignPluginImpl extends BaseCampaignPlugin {
 		
 		//int rel = (int)Math.round(person.getRelToPlayer().getRel() * 100f);
 		float rel = person.getRelToPlayer().getRel();
-		memory.set("$rel", rel, 0);
+		memory.set("$relValue", rel, 0);
+		memory.set("$rel", rel, 0); // inconsistent with $faction, oops.
+		memory.set("$relName", person.getRelToPlayer().getLevel().name(), 0);
 		
 		if (Misc.isMercenary(person)) {
 			memory.set("$mercContractDur", (int)Global.getSettings().getFloat("officerMercContractDur"), 0);
@@ -452,6 +457,8 @@ public class CoreCampaignPluginImpl extends BaseCampaignPlugin {
 			memory.set("$Post", Misc.ucFirst(person.getPost()), 0);
 		}
 		memory.set("$importance", person.getImportance().name(), 0);
+		memory.set("$importanceAtLeastHigh", person.getImportance().ordinal() >= PersonImportance.HIGH.ordinal(), 0);
+		memory.set("$importanceAtMostLow", person.getImportance().ordinal() <= PersonImportance.LOW.ordinal(), 0);
 		
 		memory.set("$level", person.getStats().getLevel(), 0);
 		
@@ -513,6 +520,7 @@ public class CoreCampaignPluginImpl extends BaseCampaignPlugin {
 		
 		memory.set("$relValue", rel, 0);
 		memory.set("$rel", level.name(), 0);
+		memory.set("$relName", level.name(), 0);
 		//memory.set("$relAdjective", level.getDisplayName().toLowerCase(), 0);
 	}
 
@@ -536,10 +544,17 @@ public class CoreCampaignPluginImpl extends BaseCampaignPlugin {
 	public void updatePlayerFacts(MemoryAPI memory) {
 		CampaignFleetAPI fleet = Global.getSector().getPlayerFleet();
 
+		if (fleet != null) {
+			memory.set("$abyssalDepth", Misc.getAbyssalDepth(fleet), 0);
+		}
+		
 		PersonAPI person = Global.getSector().getPlayerPerson();
 		memory.set("$firstName", person.getName().getFirst(), 0);
 		memory.set("$lastName", person.getName().getLast(), 0);
 		memory.set("$name", person.getName().getFullName(), 0);
+		
+		memory.set("$factionName", Global.getSector().getFaction(Factions.PLAYER).getDisplayNameOverride(), 0);
+		memory.set("$theFactionName", Global.getSector().getFaction(Factions.PLAYER).getDisplayNameWithArticleOverride(), 0);
 		
 		
 		if (Misc.getCommissionFactionId() != null) {

@@ -106,6 +106,8 @@ public interface SoundPlayerAPI {
 	void setListenerPosOverrideOneFrame(Vector2f listenerPosOverrideOneFrame);
 
 	void pauseMusic();
+
+	void setNextLoopFadeInAndOut(float nextLoopFadeIn, float nextLoopFadeOut);
 }
 
 

@@ -16,6 +16,17 @@ public class FleetTypes {
 	public static final String PATROL_MEDIUM = "patrolMedium";
 	public static final String PATROL_LARGE = "patrolLarge";
 	
+	public static final String SACRED_PROTECTORS = "sacredProtectors";
+	
+	public static final String INVESTIGATORS = "investigators";
+	
+	public static final String LEAGUE_ENFORCER = "leagueEnforcer";
+	public static final String LEAGUE_ARMADA = "leagueArmada";
+	public static final String SUPPLY_FLEET = "supplyFleet";
+	
+	public static final String COMMERCE_RAIDERS = "commerceRaiders";
+	public static final String RAIDER = "raider";
+	
 	public static final String INSPECTION_FLEET = "inspectionFleet";
 	public static final String TASK_FORCE = "taskForce";
 	

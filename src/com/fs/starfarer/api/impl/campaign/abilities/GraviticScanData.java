@@ -188,7 +188,9 @@ public class GraviticScanData {
 	//private float totalForce;
 	public void doSpecialPings() {
 		CampaignFleetAPI fleet = ability.getFleet();
-		if (fleet.isInHyperspace()) return;
+		boolean abyss = Misc.isInAbyss(fleet);
+		//abyss = false;
+		if (fleet.isInHyperspace() && !abyss) return;
 		
 		Vector2f loc = fleet.getLocation();
 		LocationAPI location = fleet.getContainingLocation();
@@ -205,9 +207,13 @@ public class GraviticScanData {
 					boolean neutrinoHigh = entity.hasTag(Tags.NEUTRINO_HIGH);
 					if (neutrinoHigh) continue;
 					
+					if (abyss && !Misc.isInAbyss(entity)) continue;
+					
 					boolean neutrino = entity.hasTag(Tags.NEUTRINO);
 					boolean neutrinoLow = entity.hasTag(Tags.NEUTRINO_LOW);
 					boolean station = entity.hasTag(Tags.STATION);
+					
+					
 					
 					if (!neutrino && !neutrinoLow && !station) continue;
 					if (neutrinoLow && (float) Math.random() < neutrinoLowSkipProb) continue;
@@ -226,6 +232,8 @@ public class GraviticScanData {
 				
 				boolean neutrinoHigh = curr.hasTag(Tags.NEUTRINO_HIGH);
 				if (neutrinoHigh) continue;
+				
+				if (abyss && !Misc.isInAbyss(fleet)) continue;
 				
 				if ((float) Math.random() < neutrinoLowSkipProb) continue;
 				special.add(curr);
@@ -313,7 +321,7 @@ public class GraviticScanData {
 		
 		float range = GraviticScanAbility.SLIPSTREAM_DETECTION_RANGE;
 
-		if (Misc.isInsideSlipstream(fleet)) return;
+		if (Misc.isInsideSlipstream(fleet) || Misc.isInAbyss(fleet)) return;
 		
 		for (CampaignTerrainAPI ter : location.getTerrainCopy()) {
 			if (ter.getPlugin() instanceof SlipstreamTerrainPlugin2) {
@@ -366,7 +374,8 @@ public class GraviticScanData {
 		
 		maintainSlipstreamPings();
 		
-		if (fleet.isInHyperspace()) {
+		boolean abyss = Misc.isInAbyss(fleet);
+		if (fleet.isInHyperspace() && !abyss) {
 			return;
 		}
 		
@@ -377,6 +386,7 @@ public class GraviticScanData {
 		for (Object object : location.getEntities(CustomCampaignEntityAPI.class)) {
 			if (object instanceof SectorEntityToken) {
 				SectorEntityToken entity = (SectorEntityToken) object;
+				if (abyss && !Misc.isInAbyss(entity)) continue;
 				
 				boolean neutrinoHigh = entity.hasTag(Tags.NEUTRINO_HIGH);
 				if (neutrinoHigh) {
@@ -386,6 +396,7 @@ public class GraviticScanData {
 		}
 		for (CampaignFleetAPI curr : location.getFleets()) {
 			if (fleet == curr) continue;
+			if (abyss && !Misc.isInAbyss(fleet)) continue;
 			boolean neutrinoHigh = curr.hasTag(Tags.NEUTRINO_HIGH);
 			if (neutrinoHigh) {
 				all.add(curr);
@@ -395,6 +406,7 @@ public class GraviticScanData {
 		for (Object object : location.getEntities(OrbitalStationAPI.class)) {
 			if (object instanceof SectorEntityToken) {
 				SectorEntityToken entity = (SectorEntityToken) object;
+				if (abyss && !Misc.isInAbyss(entity)) continue;
 				all.add(entity);
 			}
 		}
@@ -402,6 +414,7 @@ public class GraviticScanData {
 		for (Object object : location.getJumpPoints()) {
 			if (object instanceof SectorEntityToken) {
 				SectorEntityToken entity = (SectorEntityToken) object;
+				if (abyss && !Misc.isInAbyss(entity)) continue;
 				all.add(entity);
 			}
 		}

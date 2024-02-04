@@ -456,9 +456,18 @@ public class PopulationAndInfrastructure extends BaseIndustry implements MarketI
 		}
 	}
 	
+	/**
+	 * Called from core code after all industry effects are applied.
+	 * @param industry
+	 * @param market
+	 * @param modId
+	 */
+	public static void modifyUpkeepByHazardRating(MarketAPI market, String modId) {
+		market.getUpkeepMult().modifyMultAlways(modId, getUpkeepHazardMult(market.getHazardValue()), "Hazard rating");
+	}
+	
 	public static void modifyStability(Industry industry, MarketAPI market, String modId) {
 		market.getIncomeMult().modifyMultAlways(modId, getIncomeStabilityMult(market.getPrevStability()), "Stability");
-		market.getUpkeepMult().modifyMultAlways(modId, getUpkeepHazardMult(market.getHazardValue()), "Hazard rating");
 		
 		market.getStability().modifyFlat("_" + modId + "_ms", Global.getSettings().getFloat("stabilityBaseValue"), "Base value");
 		
@@ -565,7 +574,7 @@ public class PopulationAndInfrastructure extends BaseIndustry implements MarketI
 			cid = "population_" + size;
 			MarketConditionSpecAPI mcs = Global.getSettings().getMarketConditionSpec(cid);
 			if (mcs != null) {
-				return spec.getDesc() + "\n\n" + mcs.getDesc().replaceAll("\\$market", market.getName());
+				return spec.getDesc() + "\n\n" + mcs.getDesc().replaceAll("\\$marketName", market.getName());
 			}
 		}
 		return super.getDescriptionOverride();

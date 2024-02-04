@@ -35,6 +35,7 @@ import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.enc.EncounterPoint;
 import com.fs.starfarer.api.impl.campaign.enc.EncounterPointProvider;
 import com.fs.starfarer.api.impl.campaign.graid.GroundRaidObjectivePlugin;
+import com.fs.starfarer.api.impl.campaign.intel.FactionCommissionIntel;
 import com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCellsIntel;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.MarketCMD.RaidType;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.MarketCMD.TempData;
@@ -405,14 +406,34 @@ public class ListenerUtil {
 		for (NavigationDataSectionListener x : Global.getSector().getListenerManager().getListeners(NavigationDataSectionListener.class)) {
 			x.reportNavigationDataSectionAboutToBeCreated(target);
 		}
+//		CampaignFleetAPI pf = Global.getSector().getPlayerFleet();
+//		MutableStat stat = pf.getStats().getFuelUseHyperMult();
+//		stat.modifyMult("test123", 0.1f, "Test");
 	}
 	
 	public static void reportNavigationDataSectionWasCreated(SectorEntityToken target) {
 		for (NavigationDataSectionListener x : Global.getSector().getListenerManager().getListeners(NavigationDataSectionListener.class)) {
 			x.reportNavigationDataSectionWasCreated(target);
 		}
+//		CampaignFleetAPI pf = Global.getSector().getPlayerFleet();
+//		MutableStat stat = pf.getStats().getFuelUseHyperMult();
+//		stat.unmodifyMult("test123");
 	}
 	
+	
+	
+	public static void reportCommissionEnded(FactionCommissionIntel intel) {
+		for (CommissionEndedListener x : Global.getSector().getListenerManager().getListeners(CommissionEndedListener.class)) {
+			x.reportCommissionEnded(intel);
+		}
+	}
+	
+	
+	public static void reportColonySizeChanged(MarketAPI market, int prevSize) {
+		for (ColonySizeChangeListener x : Global.getSector().getListenerManager().getListeners(ColonySizeChangeListener.class)) {
+			x.reportColonySizeChanged(market, prevSize);
+		}
+	}
 	
 }
 

@@ -50,6 +50,8 @@ import com.fs.starfarer.api.impl.campaign.intel.contacts.ContactIntel;
 import com.fs.starfarer.api.impl.campaign.intel.contacts.ContactIntel.ContactState;
 import com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel;
 import com.fs.starfarer.api.impl.campaign.intel.events.KantasProtectionOneTimeFactor;
+import com.fs.starfarer.api.impl.campaign.intel.events.PiracyRespiteScript;
+import com.fs.starfarer.api.impl.campaign.intel.events.PirateHostileActivityFactor;
 import com.fs.starfarer.api.impl.campaign.missions.DelayedFleetEncounter;
 import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.FleetQuality;
 import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.FleetSize;
@@ -72,7 +74,7 @@ public class KantaCMD extends BaseCommandPlugin {
 	public static final String EVER_HAD_KANTA_PROTECTION = "$everHadKantaProtection";
 	
 	public static boolean playerHasProtection() {
-		//if (true) return true;
+		//if (true) return false;
 		return Global.getSector().getCharacterData().getMemoryWithoutUpdate().getBoolean(KANTA_PROTECTION);
 	}
 	public static boolean playerEverHadProtection() {
@@ -513,10 +515,15 @@ public class KantaCMD extends BaseCommandPlugin {
 			
 			Global.getSoundPlayer().playUISound("ui_rep_raise", 1f, 1f);
 			
+			PirateHostileActivityFactor.avertOrAbortRaid();
+			
 			HostileActivityEventIntel intel = HostileActivityEventIntel.get();
 			if (intel != null) {
 				intel.addFactor(new KantasProtectionOneTimeFactor(-Global.getSettings().getInt("HA_kantaProtection")), dialog);
 			}
+			
+			new PiracyRespiteScript();
+			
 		} else if ("loseProtection".equals(action)) {
 			loseProtection(dialog);
 		}

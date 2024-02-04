@@ -97,7 +97,11 @@ public class FractureJumpAbility extends BaseDurationAbility {
 		}
 		
 		if (level == 1 && primed != null) {
-			if (well != null && fleet.isInHyperspace() && canUseToJumpToSystem()) { 
+			float dist = Float.MAX_VALUE;
+			if (well != null) {
+				dist = Misc.getDistance(fleet, well) - well.getRadius() - fleet.getRadius();
+			}
+			if (well != null && fleet.isInHyperspace() && canUseToJumpToSystem() && dist < 500f) { 
 				SectorEntityToken planet = well.getTarget();
 				Vector2f loc = Misc.getPointAtRadius(planet.getLocation(), planet.getRadius() + 200f + fleet.getRadius());
 				SectorEntityToken token = planet.getContainingLocation().createToken(loc.x, loc.y);
@@ -106,7 +110,7 @@ public class FractureJumpAbility extends BaseDurationAbility {
 				Global.getSector().doHyperspaceTransition(fleet, fleet, dest);
 			} else if (!fleet.isInHyperspace() && canUseToJumpToHyper() &&
 					fleet.getContainingLocation() instanceof StarSystemAPI) {
-				float crCostFleetMult = fleet.getStats().getDynamic().getValue(Stats.DIRECT_JUMP_CR_MULT);
+				float crCostFleetMult = getCRCostMult(fleet);
 				if (crCostFleetMult > 0) {
 					for (FleetMemberAPI member : getNonReadyShips()) {
 						if ((float) Math.random() < EmergencyBurnAbility.ACTIVATION_DAMAGE_PROB) {
@@ -118,6 +122,8 @@ public class FractureJumpAbility extends BaseDurationAbility {
 						float crLoss = member.getDeployCost() * CR_COST_MULT * crCostFleetMult;
 						member.getRepairTracker().applyCREvent(-crLoss, "Transverse jump");
 					}
+					String key = "$makeTranverseJumpCostMoreCROnce";
+					fleet.getMemoryWithoutUpdate().unset(key);
 				}
 				
 				float cost = computeFuelCost();
@@ -167,6 +173,7 @@ public class FractureJumpAbility extends BaseDurationAbility {
 		CampaignFleetAPI fleet = getFleet();
 		if (fleet == null) return;
 	}
+	
 	@Override
 	public boolean isUsable() {
 		if (!super.isUsable()) return false;
@@ -266,12 +273,12 @@ public class FractureJumpAbility extends BaseDurationAbility {
 								"and may suffer damage if the ability is activated:", pad, 
 								Misc.getNegativeHighlightColor(), "may suffer damage");
 				int j = 0;
-				int max = 7;
+				int max = 4;
 				float initPad = 5f;
 				for (FleetMemberAPI member : nonReady) {
 					if (j >= max) {
 						if (nonReady.size() > max + 1) {
-							tooltip.addToGrid(0, j++, "... and several other ships", "", bad);
+							tooltip.addPara(BaseIntelPlugin.INDENT + "... and several other ships", initPad);
 							break;
 						}
 					}
@@ -285,6 +292,7 @@ public class FractureJumpAbility extends BaseDurationAbility {
 					
 					tooltip.addPara(BaseIntelPlugin.INDENT + str, initPad);
 					initPad = 0f;
+					j++;
 				}
 			}
 			
@@ -349,7 +357,8 @@ public class FractureJumpAbility extends BaseDurationAbility {
 		if (fleet == null) return result;
 		
 		//float crCostFleetMult = fleet.getStats().getDynamic().getValue(Stats.EMERGENCY_BURN_CR_MULT);
-		float crCostFleetMult = 1f;
+		//float crCostFleetMult = 1f;
+		float crCostFleetMult = getCRCostMult(fleet);
 		for (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {
 			//if (member.isMothballed()) continue;
 			float crLoss = member.getDeployCost() * CR_COST_MULT * crCostFleetMult;
@@ -368,16 +377,26 @@ public class FractureJumpAbility extends BaseDurationAbility {
 		return cost;
 	}
 	
+	protected float getCRCostMult(CampaignFleetAPI fleet) {
+		float crCostFleetMult = fleet.getStats().getDynamic().getValue(Stats.DIRECT_JUMP_CR_MULT);
+		String key = "$makeTranverseJumpCostMoreCROnce";
+		if (fleet.getMemoryWithoutUpdate().contains(key)) {
+			crCostFleetMult = 20f;
+		}
+		return crCostFleetMult;
+	}
+	
 	protected float computeSupplyCost() {
 		CampaignFleetAPI fleet = getFleet();
 		if (fleet == null) return 0f;
 		
 		//float crCostFleetMult = fleet.getStats().getDynamic().getValue(Stats.EMERGENCY_BURN_CR_MULT);
-		float crCostFleetMult = 1f;
+		//float crCostFleetMult = 1f;
+		float crCostFleetMult = getCRCostMult(fleet);
 		
 		float cost = 0f;
 		for (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {
-			cost += member.getDeploymentPointsCost() * CR_COST_MULT * crCostFleetMult;
+			cost += member.getDeploymentCostSupplies() * CR_COST_MULT * crCostFleetMult;
 		}
 		return cost;
 	}

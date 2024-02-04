@@ -33,4 +33,7 @@ public interface SensorGhost extends EveryFrameScript {
 	void clearScript();
 
 	boolean isCreationFailed();
+
+	boolean isDespawnInAbyss();
+	void setDespawnInAbyss(boolean despawnInAbyss);
 }

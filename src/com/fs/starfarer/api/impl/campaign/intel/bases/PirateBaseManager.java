@@ -188,6 +188,7 @@ public class PirateBaseManager extends BaseEventManager {
 		for (StarSystemAPI system : Global.getSector().getStarSystems()) {
 			if (system.hasPulsar()) continue;
 			if (system.hasTag(Tags.THEME_SPECIAL)) continue;
+			if (system.hasTag(Tags.THEME_HIDDEN)) continue;
 			
 			float days = Global.getSector().getClock().getElapsedDaysSince(system.getLastPlayerVisitTimestamp());
 			if (days < 45f) continue;

@@ -516,4 +516,11 @@ public interface SettingsAPI {
 	JSONObject loadJSON(String filename, boolean withMods) throws IOException, JSONException;
 	JSONArray loadCSV(String filename, boolean withMods) throws IOException, JSONException;
 
+	float getSensorRangeMaxHyper();
+	float getSensorRangeMax();
+
+	void loadFont(String filename) throws IOException;
+
+	boolean isStrafeKeyAToggle();
+
 }

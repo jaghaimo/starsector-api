@@ -1236,6 +1236,8 @@ public abstract class BaseThemeGenerator implements ThemeGenerator {
 		switch (system.getType()) {
 		case NEBULA:
 			return 0;
+		case DEEP_SPACE:
+			return 500f;
 		case SINGLE:
 		case BINARY_FAR:
 		case TRINARY_2FAR:

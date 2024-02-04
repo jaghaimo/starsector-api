@@ -192,12 +192,26 @@ public class BreadcrumbSpecial extends BaseSalvageSpecial {
 				orbiting = "orbiting " + custom.getCustomEntitySpec().getAOrAn() + " " + custom.getCustomEntitySpec().getNameInText() + " in ";
 			} else if (target.getOrbitFocus() instanceof JumpPointAPI) {
 				orbiting = "orbiting a jump-point in ";
+			} else if (target.getOrbitFocus() instanceof CampaignTerrainAPI) {
+				CampaignTerrainAPI t = (CampaignTerrainAPI) target.getOrbitFocus();
+				String n = t.getPlugin().getNameForTooltip().toLowerCase();
+				String a = Misc.getAOrAnFor(n);
+				orbiting = "located inside " + a + " " + n + " ";
+				
+				float dist = Misc.getDistance(new Vector2f(), target.getLocation());
+				if (dist < 3000) {
+					orbiting += "in the heart of ";
+				} else if (dist > 12000) {
+					orbiting += "in the outer reaches of ";
+				} else {
+					orbiting += "some distance away from the center of ";
+				}
 			} else { // center of a binary/nebula/etc
 				//float dist = Misc.getDistance(target.getOrbitFocus().getLocation(), target.getLocation());
 				float dist = Misc.getDistance(new Vector2f(), target.getLocation());
 				if (dist < 3000) {
 					orbiting = "located in the heart of ";
-				} else if (dist > 8000) {
+				} else if (dist > 12000) {
 					orbiting = "located in the outer reaches of ";
 				} else {
 					//orbiting = "located in ";
@@ -209,7 +223,7 @@ public class BreadcrumbSpecial extends BaseSalvageSpecial {
 			float dist = Misc.getDistance(new Vector2f(), target.getLocation());
 			if (dist < 3000) {
 				orbiting = "located in the heart of ";
-			} else if (dist > 8000) {
+			} else if (dist > 12000) {
 				orbiting = "located on the outskirts of ";
 			} else {
 				//orbiting = "located in ";

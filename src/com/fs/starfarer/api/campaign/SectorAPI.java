@@ -351,6 +351,15 @@ public interface SectorAPI {
 	 */
 	MemoryAPI getPlayerMemoryWithoutUpdate();
 
+	/**
+	 * Useful for remove star systems from scripts etc where using removeStarSystem() would cause a 
+	 * ConcurrentModificationException.
+	 * @param system
+	 */
+	void removeStarSystemNextFrame(StarSystemAPI system);
+
+	SectorEntityToken getMousedOverEntity();
+
 }
 
 

@@ -33,7 +33,7 @@ public class KantasProtectionPirateActivityCause2 extends BaseHostileActivityCau
 	public TooltipCreator getTooltip() {
 		return new BaseFactorTooltip() {
 			public void createTooltip(TooltipMakerAPI tooltip, boolean expanded, Object tooltipParam) {
-				tooltip.addPara("You have %s, which is enough dissuade most pirates from attacking your interests.",
+				tooltip.addPara("You have %s, which is enough to dissuade most pirates from attacking your interests.",
 						0f, Misc.getPositiveHighlightColor(), "Kanta's protection");
 			}
 		};

@@ -214,6 +214,10 @@ public class HIActionStage extends ActionStage implements FleetActionDelegate {
 			valExpected += spec.getBasePrice();
 		}
 		
+		if (valExpected < 30000) {
+			valExpected = 30000;
+		}
+		
 		//resist = false;
 		if (!resist && valExpected > valFound * 1.25f) {
 			intel.setOutcome(HegemonyInspectionOutcome.FOUND_EVIDENCE_NO_CORES);

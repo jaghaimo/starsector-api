@@ -13,14 +13,17 @@ import com.fs.starfarer.api.campaign.OptionPanelAPI;
 import com.fs.starfarer.api.campaign.RepLevel;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.TextPanelAPI;
+import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
+import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin;
+import com.fs.starfarer.api.impl.campaign.ids.Entities;
 import com.fs.starfarer.api.impl.campaign.ids.Ranks;
 import com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin;
-import com.fs.starfarer.api.impl.campaign.intel.FactionCommissionIntel;
 import com.fs.starfarer.api.impl.campaign.intel.BaseMissionIntel.MissionResult;
 import com.fs.starfarer.api.impl.campaign.intel.BaseMissionIntel.MissionState;
+import com.fs.starfarer.api.impl.campaign.intel.FactionCommissionIntel;
 import com.fs.starfarer.api.impl.campaign.rulecmd.BaseCommandPlugin;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
@@ -89,13 +92,16 @@ public class Commission extends BaseCommandPlugin {
 		} else if (command.equals("hasOtherCommission")) {
 			if (hasOtherCommission()) {
 				memory.set("$theOtherCommissionFaction", Misc.getCommissionFaction().getDisplayNameWithArticle(), 0);
+				memory.set("$otherCommissionFaction", Misc.getCommissionFaction().getPersonNamePrefix(), 0);
 				return true;
 			}
 			return false;
 		} else if (command.equals("accept")) {
 			accept();
 		} else if (command.equals("resign")) {
-			resign();
+			resign(true);
+		} else if (command.equals("resignNoPenalty")) {
+			resign(false);
 		} else if (command.equals("personCanGiveCommission")) {
 			return personCanGiveCommission();
 		}
@@ -111,6 +117,89 @@ public class Commission extends BaseCommandPlugin {
 				}
 			}
 			return false;
+		}
+		else if (command.equals("isCargoPodsScam")) {
+			MarketAPI market = dialog.getInteractionTarget().getMarket();
+			if(market == null) 
+				return false;
+			//Misc.getStorage(market)
+			for (SectorEntityToken entity : market.getContainingLocation().getAllEntities()) {
+				if (Entities.CARGO_PODS.equals(entity.getCustomEntityType())) {
+					
+					// use player fleet 'cause it's in market range, right? And therefore scan range.
+					// market is otherwise attached to a station or planet entity (who knows!)
+					float dist = Misc.getDistance(entity.getLocation(), playerFleet.getLocation()); 
+					if( dist < 500f)
+						if (entity.getCargo().getSupplies() >= 10)
+						{
+							return true;
+						}
+							
+				}
+			}
+			return false;
+		}
+		else if (command.equals("recalcFreeSupplyDaysRemaining")) {
+			Object obj1 = person.getFaction().getMemoryWithoutUpdate().get("$playerReceivedCommissionResupplyOn");
+			Object obj2 = Global.getSector().getMemoryWithoutUpdate().get("$daysSinceStart"); 
+			if(obj1 == null) return false;
+			if(obj2 == null) return false;
+
+			float d1 = (Float) obj1;
+			float d2 = (Float) obj2;
+			
+			faction.getMemoryWithoutUpdate().set("$daysLeft", (int)d1 + 365 - (int)d2 , 0);
+		}
+		else if (command.equals("doesPlayerFleetNeedRepairs")) {
+	
+			
+			float fleetCRcurrent = 0f;
+			float fleetCRmax = 0f;
+			float fleetHullDamage = 0f;
+
+			//playerFleet.getFleetData().getMembersListCopy()
+			for (FleetMemberAPI member : playerFleet.getMembersWithFightersCopy()) {
+				if(member.isFighterWing()) continue; // no one cares about fighters.
+				
+				//if (member.canBeRepaired()) {
+				fleetHullDamage += 1f - member.getStatus().getHullFraction();
+				fleetCRcurrent += member.getRepairTracker().getCR();
+				fleetCRmax += member.getRepairTracker().getMaxCR();
+
+			}
+			
+
+			//System.out.println("doesPlayerFleetNeedRepairs results:");
+			//System.out.println("fleetCRcurrent = " + fleetCRcurrent);
+			//System.out.println("fleetCRmax = " + fleetCRmax);
+			//System.out.println("fleetHullDamage = " + fleetHullDamage); // ever 1f is about 100% of a ship
+			
+			boolean needsSupplies = false;
+			
+			if(fleetHullDamage > 0.5) {
+				needsSupplies = true;
+				
+				Global.getSector().getPlayerMemoryWithoutUpdate().set("$fleetDamaged", true , 0);
+				//memory.set("$fleetDamaged", true , 0); // "Looks like you've taken some damage."
+			}
+			
+			if(fleetHullDamage > 2.5) {
+				needsSupplies = true;
+				Global.getSector().getPlayerMemoryWithoutUpdate().set("$fleetDamagedLots", true , 0); // "Your fleet is in rough shape, captain."
+			}
+			
+
+			// basically, if the CR percent is less than 60% (of max) for the fleet, acknowledge that supplies are needed.
+			if(fleetCRcurrent == 0 || (fleetCRcurrent / fleetCRmax < 0.6f) ) {
+				needsSupplies = true;
+				Global.getSector().getPlayerMemoryWithoutUpdate().set("$fleetLowCR", true , 0);
+			}
+			
+			//memory.set("$fleetLowCR", true , 0);
+			//memory.set("$fleetDamaged", true , 0);
+			//memory.set("$fleetDamagedLots", true , 0);
+			
+			return needsSupplies;
 		}
 		
 		return true;
@@ -136,12 +225,14 @@ public class Commission extends BaseCommandPlugin {
 			   Ranks.POST_OUTPOST_COMMANDER.equals(person.getPostId());
 	}
 	
-	protected void resign() {
+	protected void resign(boolean withPenalty) {
 		FactionCommissionIntel intel = Misc.getCommissionIntel();
-		MissionResult result = intel.createResignedCommissionResult(true, true, dialog);
-		intel.setMissionResult(result);
-		intel.setMissionState(MissionState.ABANDONED);
-		intel.endMission(dialog);
+		if (intel != null) {
+			MissionResult result = intel.createResignedCommissionResult(withPenalty, true, dialog);
+			intel.setMissionResult(result);
+			intel.setMissionState(MissionState.ABANDONED);
+			intel.endMission(dialog);
+		}
 	}
 	
 	protected void accept() {

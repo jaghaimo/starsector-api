@@ -9,6 +9,7 @@ import com.fs.starfarer.api.campaign.ai.ModularFleetAIAPI;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.abilities.EmergencyBurnAbility;
+import com.fs.starfarer.api.impl.campaign.terrain.HyperspaceTerrainPlugin;
 import com.fs.starfarer.api.util.IntervalUtil;
 import com.fs.starfarer.api.util.Misc;
 
@@ -67,6 +68,24 @@ public class EmergencyBurnAbilityAI extends BaseAbilityAI {
 		if (mem.getBoolean(AI_USE_TIMEOUT_KEY)) {
 			return;
 		}
+		
+		if (fleet.isInHyperspace() && Misc.isInsideSlipstream(fleet)) {
+			activate();
+			return;
+		}
+		
+		if (fleet.getMemoryWithoutUpdate().getBoolean(HyperspaceTerrainPlugin.STORM_STRIKE_TIMEOUT_KEY) &&
+				!Misc.isSlowMoving(fleet)) {
+			activate();
+			return;
+		}
+		
+		if (Misc.isInsideBlackHole(fleet, false)) {
+			activate();
+			return;
+		}
+		
+		
 		
 		CampaignFleetAPI pursueTarget = mem.getFleet(FleetAIFlags.PURSUIT_TARGET);
 		CampaignFleetAPI fleeingFrom = mem.getFleet(FleetAIFlags.NEAREST_FLEEING_FROM);

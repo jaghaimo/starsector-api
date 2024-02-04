@@ -32,4 +32,6 @@ public class Pings {
 	
 	public static final String TRANSVERSE_JUMP = "transverse_jump";
 	
+	public static final String SLIPSURGE = "slipsurge";
+	
 }

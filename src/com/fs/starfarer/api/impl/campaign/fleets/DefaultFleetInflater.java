@@ -42,7 +42,7 @@ public class DefaultFleetInflater implements FleetInflater, AutofitPluginDelegat
 	
 	
 	public static class SortedWeapons {
-		private Map<Integer, WeaponsForTier> tierMap = new LinkedHashMap<Integer, WeaponsForTier>();
+		protected Map<Integer, WeaponsForTier> tierMap = new LinkedHashMap<Integer, WeaponsForTier>();
 
 		public WeaponsForTier getWeapons(int tier) {
 			WeaponsForTier data = tierMap.get(tier);
@@ -55,7 +55,7 @@ public class DefaultFleetInflater implements FleetInflater, AutofitPluginDelegat
 	}
 	
 	public static class WeaponsForTier {
-//		private Map<String, List<AvailableWeapon>> catMap = new LinkedHashMap<String, List<AvailableWeapon>>();
+//		protected Map<String, List<AvailableWeapon>> catMap = new LinkedHashMap<String, List<AvailableWeapon>>();
 //
 //		public List<AvailableWeapon> getWeapons(String cat) {
 //			List<AvailableWeapon> list = catMap.get(cat);
@@ -65,7 +65,7 @@ public class DefaultFleetInflater implements FleetInflater, AutofitPluginDelegat
 //			}
 //			return list;
 //		}
-		private Map<String, WeaponsForSize> catMap = new LinkedHashMap<String, WeaponsForSize>();
+		protected Map<String, WeaponsForSize> catMap = new LinkedHashMap<String, WeaponsForSize>();
 		
 		public WeaponsForSize getWeapons(String cat) {
 			WeaponsForSize size = catMap.get(cat);
@@ -78,7 +78,7 @@ public class DefaultFleetInflater implements FleetInflater, AutofitPluginDelegat
 	}
 	
 	public static class WeaponsForSize {
-		private Map<WeaponSize, List<AvailableWeapon>> sizeMap = new LinkedHashMap<WeaponAPI.WeaponSize, List<AvailableWeapon>>();
+		protected Map<WeaponSize, List<AvailableWeapon>> sizeMap = new LinkedHashMap<WeaponAPI.WeaponSize, List<AvailableWeapon>>();
 		public List<AvailableWeapon> getWeapons(WeaponSize size) {
 			List<AvailableWeapon> list = sizeMap.get(size);
 			if (list == null) {
@@ -90,8 +90,8 @@ public class DefaultFleetInflater implements FleetInflater, AutofitPluginDelegat
 	}
 	
 	public static class AvailableFighterImpl implements AvailableFighter {
-		private FighterWingSpecAPI spec;
-		private int quantity = 0;
+		protected FighterWingSpecAPI spec;
+		protected int quantity = 0;
 		
 		public AvailableFighterImpl(FighterWingSpecAPI spec, int quantity) {
 			this.spec = spec;
@@ -127,8 +127,8 @@ public class DefaultFleetInflater implements FleetInflater, AutofitPluginDelegat
 	}
 	
 	public static class AvailableWeaponImpl implements AvailableWeapon {
-		private WeaponSpecAPI spec;
-		private int quantity = 0;
+		protected WeaponSpecAPI spec;
+		protected int quantity = 0;
 		public AvailableWeaponImpl(WeaponSpecAPI spec, int quantity) {
 			this.spec = spec;
 			this.quantity = quantity;
@@ -156,8 +156,8 @@ public class DefaultFleetInflater implements FleetInflater, AutofitPluginDelegat
 			this.quantity = quantity;	
 		}
 		
-		private MutableShipStatsAPI savedCostStats = null;
-		private float cachedOPCost = -1;
+		protected MutableShipStatsAPI savedCostStats = null;
+		protected float cachedOPCost = -1;
 		public float getOPCost(MutableCharacterStatsAPI stats, MutableShipStatsAPI shipStats) {
 			if (savedCostStats == shipStats && cachedOPCost >= 0) return cachedOPCost;
 			
@@ -167,21 +167,21 @@ public class DefaultFleetInflater implements FleetInflater, AutofitPluginDelegat
 		}
 	}
 	
-//	private float quality = 1f;
-//	private Long seed = null;
-//	private Long timestamp = null;
-//	private Boolean persistent = null;
-//	private ShipPickMode mode = null;
+//	protected float quality = 1f;
+//	protected Long seed = null;
+//	protected Long timestamp = null;
+//	protected Boolean persistent = null;
+//	protected ShipPickMode mode = null;
 	
 	protected DefaultFleetInflaterParams p;
 	
-	transient FleetMemberAPI currMember = null;
-	transient ShipVariantAPI currVariant = null;
-	transient List<AvailableFighter> fighters;
-	transient List<AvailableWeapon> weapons;
-	transient List<String> hullmods;
-	transient CampaignFleetAPI fleet;
-	transient FactionAPI faction;
+	protected transient FleetMemberAPI currMember = null;
+	protected transient ShipVariantAPI currVariant = null;
+	protected transient List<AvailableFighter> fighters;
+	protected transient List<AvailableWeapon> weapons;
+	protected transient List<String> hullmods;
+	protected transient CampaignFleetAPI fleet;
+	protected transient FactionAPI faction;
 	
 
 	public DefaultFleetInflater(DefaultFleetInflaterParams p) {
@@ -672,6 +672,9 @@ public class DefaultFleetInflater implements FleetInflater, AutofitPluginDelegat
 	}
 	public float getQuality() {
 		return p.quality;
+	}
+	public int getAverageNumSMods() {
+		return p.averageSMods == null ? 0 : p.averageSMods;
 	}
 	public void setQuality(float quality) {
 		this.p.quality = quality;

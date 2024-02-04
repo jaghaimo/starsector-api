@@ -6,8 +6,8 @@ import java.util.List;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.BattleAPI;
-import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.BuffManagerAPI.Buff;
+import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.fleet.FleetMemberViewAPI;
@@ -240,7 +240,7 @@ public class EmergencyBurnAbility extends BaseDurationAbility {
 		
 		float cost = 0f;
 		for (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {
-			cost += member.getDeploymentPointsCost() * CR_COST_MULT * crCostFleetMult;
+			cost += member.getDeploymentCostSupplies() * CR_COST_MULT * crCostFleetMult;
 		}
 		return cost;
 	}
@@ -303,12 +303,12 @@ public class EmergencyBurnAbility extends BaseDurationAbility {
 			//tooltip.beginGridFlipped(getTooltipWidth(), 1, 30, pad);
 			//tooltip.setGridLabelColor(bad);
 			int j = 0;
-			int max = 7;
+			int max = 4;
 			float initPad = 5f;
 			for (FleetMemberAPI member : nonReady) {
 				if (j >= max) {
 					if (nonReady.size() > max + 1) {
-						tooltip.addToGrid(0, j++, "... and several other ships", "", bad);
+						tooltip.addPara(BaseIntelPlugin.INDENT + "... and several other ships", initPad);
 						break;
 					}
 				}
@@ -325,6 +325,7 @@ public class EmergencyBurnAbility extends BaseDurationAbility {
 				
 				tooltip.addPara(BaseIntelPlugin.INDENT + str, initPad);
 				initPad = 0f;
+				j++;
 				
 				//tooltip.addToGrid(0, j++, str, cost, bad);
 			}

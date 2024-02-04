@@ -9,6 +9,7 @@ public class NebulaEditor {
 	
 	protected BaseTiledTerrain plugin;
 	protected int [][] tiles;
+	protected int [][] orig;
 	protected float ts;
 	protected float width, height;
 	protected float cx, cy;
@@ -30,9 +31,33 @@ public class NebulaEditor {
 		w = tiles.length;
 		h = tiles[0].length;
 		
+		orig = getTilesCopy();
+		
 		regenNoise();
 	}
 	
+	public int[][] getTilesCopy() {
+		int [][] copy = new int[w][h];
+		for (int i = 0; i < w; i++) {
+			for (int j = 0; j < h; j++) {
+				copy[i][j] = tiles[i][j];
+			}
+		}
+		return copy;
+	}
+	
+	public int[][] getTiles() {
+		return tiles;
+	}
+
+	public int[][] getOrigTiles() {
+		return orig;
+	}
+	
+	public float getTileSize() {
+		return ts;
+	}
+
 	public void regenNoise() {
 		float spikes = 1f;
 		noise = Misc.initNoise(StarSystemGenerator.random, w, h, spikes);
@@ -125,16 +150,27 @@ public class NebulaEditor {
 				curr.scale(dist);
 				curr.x += x;
 				curr.y += y;
-				setTileAt(curr.x, curr.y, -1, noiseThresholdToClear);
+				setTileAt(curr.x, curr.y, -1, noiseThresholdToClear, setToOrigInsteadOfClear);
 			}
 		}
 	}
 	
+	protected boolean setToOrigInsteadOfClear = false;
+	public boolean isSetToOrigInsteadOfClear() {
+		return setToOrigInsteadOfClear;
+	}
+	public void setSetToOrigInsteadOfClear(boolean setToOrigInsteadOfClear) {
+		this.setToOrigInsteadOfClear = setToOrigInsteadOfClear;
+	}
+
 	public void setTileAt(float x, float y, int value) {
 		setTileAt(x, y, value, 0f);
 	}
 	
 	public void setTileAt(float x, float y, int value, float noiseThresholdToClear) {
+		setTileAt(x, y, value, noiseThresholdToClear, false);
+	}
+	public void setTileAt(float x, float y, int value, float noiseThresholdToClear, boolean setToOrigTile) {
 		int cellX = (int) ((width / 2f + x - cx) / ts);
 		int cellY = (int) ((height / 2f + y - cy) / ts);
 		
@@ -152,6 +188,9 @@ public class NebulaEditor {
 //		if (cellX > tiles.length - 1) cellX = tiles.length - 1; 
 //		if (cellY > tiles[0].length - 1) cellY = tiles[0].length - 1;
 		
+		if (setToOrigTile) {
+			value = orig[cellX][cellY];
+		}
 		if (noiseThresholdToClear <= 0 || noise[cellX][cellY] > noiseThresholdToClear) {
 			tiles[cellX][cellY] = value;
 		}

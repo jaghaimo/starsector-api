@@ -693,11 +693,29 @@ public class MarketCMD extends BaseCommandPlugin {
 		
 		return attackerStr;
 	}
+	
+	public static float MARINES_IN_MARKET_CARGO_DEFENSE_BONUS = 1f;
 	public static float getDefenderStr(MarketAPI market) {
+		return getDefenderStr(market, false);
+	}
+	public static float getDefenderStr(MarketAPI market, boolean forBombard) {
 		StatBonus stat = market.getStats().getDynamic().getMod(Stats.GROUND_DEFENSES_MOD);
 		float defenderStr = (int) Math.round(stat.computeEffective(0f));
 		float added = getDefenderIncreaseValue(market);
 		defenderStr += added;
+		
+		if (market.isPlayerOwned() && !forBombard) {
+			float marineDefenseValueMult = MARINES_IN_MARKET_CARGO_DEFENSE_BONUS;
+			CargoAPI cargo = Misc.getStorageCargo(market);
+			if (cargo != null) {
+				defenderStr += cargo.getMarines() * marineDefenseValueMult;
+			}
+			cargo = Misc.getLocalResourcesCargo(market);
+			if (cargo != null) {
+				defenderStr += cargo.getMarines() * marineDefenseValueMult;
+			}
+		}
+		
 		return defenderStr;
 	}
 	
@@ -2146,7 +2164,7 @@ public class MarketCMD extends BaseCommandPlugin {
 	}
 	
 	public static int applyRaidStabiltyPenalty(MarketAPI target, String desc, float re, float maxPenalty) {
-		int penalty = Math.round((0.5f + maxPenalty) * re);
+		int penalty = Math.round((0.45f + maxPenalty) * re);
 		if (penalty > 0) {
 			RecentUnrest.get(target).add(penalty, desc);
 		}
@@ -2176,7 +2194,7 @@ public class MarketCMD extends BaseCommandPlugin {
 	
 	
 	public static int getBombardmentCost(MarketAPI market, CampaignFleetAPI fleet) {
-		float str = getDefenderStr(market);
+		float str = getDefenderStr(market, true);
 		int result = (int) (str * Global.getSettings().getFloat("bombardFuelFraction"));
 		if (result < 2) result = 2;
 		if (fleet != null) {
@@ -2566,6 +2584,13 @@ public class MarketCMD extends BaseCommandPlugin {
 			int atrocities = (int) Global.getSector().getCharacterData().getMemoryWithoutUpdate().getFloat(MemFlags.PLAYER_ATROCITIES);
 			atrocities++;
 			Global.getSector().getCharacterData().getMemoryWithoutUpdate().set(MemFlags.PLAYER_ATROCITIES, atrocities);
+			
+			if (market != null && market.getFaction() != null) {
+				MemoryAPI mem = market.getFaction().getMemoryWithoutUpdate();
+				int count = mem.getInt(MemFlags.FACTION_SATURATION_BOMBARED_BY_PLAYER);
+				count++;
+				mem.set(MemFlags.FACTION_SATURATION_BOMBARED_BY_PLAYER, count);
+			}
 		}
 		
 		
@@ -2730,7 +2755,7 @@ public class MarketCMD extends BaseCommandPlugin {
 		// require 2 months of debt in a row
 		if (report.getPreviousDebt() <= 0 || report.getDebt() <= 0) return false;
 		
-		float debt = report.getDebt() + report.getDebt();
+		float debt = report.getDebt() + report.getPreviousDebt();
 		float income = report.getRoot().totalIncome;
 		if (income < 1) income = 1;
 		
@@ -2751,7 +2776,7 @@ public class MarketCMD extends BaseCommandPlugin {
 	protected void applyDebtEffect() {
 		
 		MonthlyReport report = SharedData.getData().getPreviousReport();
-		float debt = report.getDebt() + report.getDebt();
+		float debt = report.getDebt() + report.getPreviousDebt();
 		float income = report.getRoot().totalIncome;
 		if (income < 1) income = 1;
 		
@@ -2799,9 +2824,12 @@ public class MarketCMD extends BaseCommandPlugin {
 	}
 	
 	public void doGenericRaid(FactionAPI faction, float attackerStr, float maxPenalty) {
+		doGenericRaid(faction, attackerStr, maxPenalty, false);
+	}
+	public void doGenericRaid(FactionAPI faction, float attackerStr, float maxPenalty, boolean allowedRepeat) {
 		// needed for pirate raids not to stack
 		// not needed anymore, but doesn't hurt anything
-		if (Misc.flagHasReason(market.getMemoryWithoutUpdate(), 
+		if (!allowedRepeat && Misc.flagHasReason(market.getMemoryWithoutUpdate(), 
 				MemFlags.RECENTLY_RAIDED, faction.getId())) {
 			return;
 		}
@@ -2909,7 +2937,12 @@ public class MarketCMD extends BaseCommandPlugin {
 		
 		
 		if (stabilityPenalty > 0) {
-			String reason = faction.getDisplayName() + " bombardment";
+			//String reason = faction.getDisplayName() + " bombardment";
+			String reason = "Saturation bombardment";
+			if (temp.bombardType == BombardType.TACTICAL) {
+				reason = "Tactical bombardment";
+			}
+			
 			RecentUnrest.get(market).add(stabilityPenalty, reason);
 		}
 		

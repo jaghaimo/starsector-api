@@ -39,6 +39,7 @@ import com.fs.starfarer.api.impl.campaign.fleets.DefaultFleetInflaterParams;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetFactoryV3;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetParamsV3;
 import com.fs.starfarer.api.impl.campaign.ids.Abilities;
+import com.fs.starfarer.api.impl.campaign.ids.Conditions;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.FleetTypes;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
@@ -183,6 +184,7 @@ public abstract class HubMissionWithTriggers extends BaseHubMission {
 			}
 		}
 	}
+	
 	public static class UnhideCommListing implements TriggerAction {
 		protected PersonAPI person;
 		public UnhideCommListing(PersonAPI person) {
@@ -1598,6 +1600,8 @@ public abstract class HubMissionWithTriggers extends BaseHubMission {
 		public Float utilityMult = null;
 		public Float qualityMod = null;
 		
+		public Float damage = null;
+		
 		public Boolean allWeapons;
 		public ShipPickMode shipPickMode;
 		public Boolean removeInflater;
@@ -1636,19 +1640,21 @@ public abstract class HubMissionWithTriggers extends BaseHubMission {
 			float max = fSize.maxFPFraction + (fSize.next().maxFPFraction - fSize.maxFPFraction) / 2f;
 			float fraction = min + (max - min) * random.nextFloat();
 			
+			float excess = 0;
+			
 			if (fSizeOverride != null) {
 				fraction = fSizeOverride * (0.95f + random.nextFloat() * 0.1f);
 			}
-			
-			int numShipsDoctrine = 1;
-			if (params.doctrineOverride != null) numShipsDoctrine = params.doctrineOverride.getNumShips();
-			else if (faction != null) numShipsDoctrine = faction.getDoctrine().getNumShips();
-			float doctrineMult = FleetFactoryV3.getDoctrineNumShipsMult(numShipsDoctrine);
-			fraction *= 0.75f * doctrineMult;
-			float excess = 0;
-			if (fraction > FleetSize.MAXIMUM.maxFPFraction) {
-				excess = fraction - FleetSize.MAXIMUM.maxFPFraction;
-				fraction = FleetSize.MAXIMUM.maxFPFraction;
+			else {
+				int numShipsDoctrine = 1;
+				if (params.doctrineOverride != null) numShipsDoctrine = params.doctrineOverride.getNumShips();
+				else if (faction != null) numShipsDoctrine = faction.getDoctrine().getNumShips();
+				float doctrineMult = FleetFactoryV3.getDoctrineNumShipsMult(numShipsDoctrine);
+				fraction *= 0.75f * doctrineMult;
+				if (fraction > FleetSize.MAXIMUM.maxFPFraction) {
+					excess = fraction - FleetSize.MAXIMUM.maxFPFraction;
+					fraction = FleetSize.MAXIMUM.maxFPFraction;
+				}
 			}
 			
 			//fraction = 1f;
@@ -1695,6 +1701,18 @@ public abstract class HubMissionWithTriggers extends BaseHubMission {
 			params.linerPts = combatPoints * linerMult;
 			params.utilityPts = combatPoints * utilityMult;
 			params.qualityMod = qualityMod;
+			
+//			if (damage != null && damage > 0) {
+//				if (damage > 1) damage = 1f;
+//				float mult1 = 1f - damage;
+//				float mult2 = 1f - damage * 0.5f;
+//				params.combatPts *= mult1;
+//				params.freighterPts *= mult2;
+//				params.tankerPts *= mult2;
+//				params.transportPts *= mult2;
+//				params.linerPts *= mult2;
+//				params.utilityPts *= mult2;
+//			}
 			
 			//params.modeOverride = ShipPickMode.PRIORITY_THEN_ALL; 
 			params.doctrineOverride = doctrine;
@@ -1849,6 +1867,10 @@ public abstract class HubMissionWithTriggers extends BaseHubMission {
 				context.fleet.addScript(new MissionFleetAutoDespawn(context.mission, context.fleet));
 			}
 			
+			if (damage != null) {
+				FleetFactoryV3.applyDamageToFleet(context.fleet, damage, false, random);
+			}
+			
 //			if (Factions.PIRATES.equals(params.factionId)) {
 //				
 //			}
@@ -1963,6 +1985,19 @@ public abstract class HubMissionWithTriggers extends BaseHubMission {
 		float f = getQualityFraction();
 		CreateFleetAction cfa = getPreviousCreateFleetAction();
 		cfa.oQuality = (OfficerQuality) pickEnum(f, getEnums(min, max));
+	}
+	
+	public void triggerSetFleetQuality(FleetQuality quality) {
+		CreateFleetAction cfa = getPreviousCreateFleetAction();
+		if (cfa != null) {
+			cfa.fQuality = quality;
+		}
+	}
+	public void triggerSetFleetSize(FleetSize size) {
+		CreateFleetAction cfa = getPreviousCreateFleetAction();
+		if (cfa != null) {
+			cfa.fSize= size;
+		}
 	}
 	
 	public void triggerRandomizeFleetStrengthMinor() {
@@ -2258,6 +2293,16 @@ public abstract class HubMissionWithTriggers extends BaseHubMission {
 		cfa.params.doctrineOverride.setPhaseShips(phaseShips);
 	}
 	
+	public void triggerAddShips(String ...variants) {
+		CreateFleetAction cfa = getPreviousCreateFleetAction();
+		if (cfa.params.addShips == null) {
+			cfa.params.addShips = new ArrayList<String>();
+		}
+		for (String id : variants) {
+			cfa.params.addShips.add(id);
+		}
+	}
+	
 	public void triggerSetFleetProbabilityCombatFreighters(float prob) {
 		CreateFleetAction cfa = getPreviousCreateFleetAction();
 		if (cfa.params.doctrineOverride == null) {
@@ -2323,6 +2368,11 @@ public abstract class HubMissionWithTriggers extends BaseHubMission {
 		cfa.params.fleetType = fleetType;
 		cfa.fSizeOverride = null;
 	}
+	public void triggerSetFleetType(String fleetType) {
+		CreateFleetAction cfa = getPreviousCreateFleetAction();
+		cfa.params.fleetType = fleetType;
+	}
+	
 	public void triggerSetFleetOfficers(OfficerNum num, OfficerQuality quality) {
 		CreateFleetAction cfa = getPreviousCreateFleetAction();
 		cfa.oNum = num;
@@ -2576,6 +2626,12 @@ public abstract class HubMissionWithTriggers extends BaseHubMission {
 	public void triggerMakeHostile() {
 		triggerSetFleetFlagsWithReason(MemFlags.MEMORY_KEY_MAKE_HOSTILE);
 	}
+	public void triggerMakeHostileToPlayerTradeFleets() {
+		triggerSetFleetFlagsWithReason(MemFlags.MEMORY_KEY_MAKE_HOSTILE_TO_PLAYER_TRADE_FLEETS);
+	}
+	public void triggerMakeHostileToAllTradeFleets() {
+		triggerSetFleetFlagsWithReason(MemFlags.MEMORY_KEY_MAKE_HOSTILE_TO_ALL_TRADE_FLEETS);
+	}
 	public void triggerMakeHostileWhileTransponderOff() {
 //		triggerSetFleetFlagsWithReason(MemFlags.MEMORY_KEY_MAKE_HOSTILE,
 //							 MemFlags.MEMORY_KEY_MAKE_HOSTILE_WHILE_TOFF);
@@ -2583,6 +2639,9 @@ public abstract class HubMissionWithTriggers extends BaseHubMission {
 	}
 	public void triggerMakeLowRepImpact() {
 		triggerSetFleetFlagsWithReason(MemFlags.MEMORY_KEY_LOW_REP_IMPACT);
+	}
+	public void triggerMakeAlwaysSpreadTOffHostility() {
+		triggerSetFleetFlagsWithReason(MemFlags.SPREAD_TOFF_HOSTILITY_IF_LOW_IMPACT);
 	}
 	public void triggerMakeNoRepImpact() {
 		triggerSetFleetFlagsWithReason(MemFlags.MEMORY_KEY_LOW_REP_IMPACT,
@@ -2620,8 +2679,20 @@ public abstract class HubMissionWithTriggers extends BaseHubMission {
 	public void triggerSetPatrol() {
 		triggerSetFleetFlagPermanent(MemFlags.MEMORY_KEY_PATROL_FLEET);
 	}
+	public void triggerSetFleetHasslePlayer(String hassleType) {
+		triggerSetFleetFlag(MemFlags.WILL_HASSLE_PLAYER);
+		triggerSetFleetMemoryValue(MemFlags.HASSLE_TYPE, hassleType);
+	}
 	public void triggerSetFleetExtraSmugglingSuspicion(float extraSuspicion) {
 		triggerSetFleetMemoryValue(MemFlags.PATROL_EXTRA_SUSPICION, extraSuspicion);
+	}
+	public void triggerMakeNonHostileToFaction(String factionId) {
+		String flag = MemFlags.MEMORY_KEY_MAKE_NON_HOSTILE + "_" + factionId;
+		triggerSetFleetFlag(flag);
+	}
+	public void triggerMakeHostileToFaction(String factionId) {
+		String flag = MemFlags.MEMORY_KEY_MAKE_HOSTILE + "_" + factionId;
+		triggerSetFleetFlag(flag);
 	}
 	public void triggerSetPirateFleet() {
 		triggerSetFleetFlagPermanent(MemFlags.MEMORY_KEY_PIRATE);
@@ -3527,6 +3598,34 @@ public abstract class HubMissionWithTriggers extends BaseHubMission {
 				FleetMemberAPI member = fleet.getFleetData().addFleetMember(pick.variantId);
 				member.updateStats();
 				member.getRepairTracker().setCR(member.getRepairTracker().getMaxCR());
+				break;
+			}
+		}
+	}
+	
+	public void setFleetDamageTaken(float damage) {
+		getPreviousCreateFleetAction().damage = damage;
+	}
+	
+	
+	public void setFleetSource(MarketAPI... preferred) {
+		if (preferred == null) return;
+		
+		for (MarketAPI market : preferred) {
+			if (!market.hasCondition(Conditions.DECIVILIZED)) {
+				getPreviousCreateFleetAction().params.setSource(market, true);
+				break;
+			}
+		}
+	}
+	
+	public void setFleetSource(String ... preferred) {
+		if (preferred == null) return;
+		
+		for (String id : preferred) {
+			MarketAPI market = Global.getSector().getEconomy().getMarket(id);
+			if (market != null && !market.hasCondition(Conditions.DECIVILIZED)) {
+				getPreviousCreateFleetAction().params.setSource(market, true);
 				break;
 			}
 		}

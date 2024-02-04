@@ -443,6 +443,17 @@ public interface CombatEngineAPI {
 
 	void addNebulaSmoothParticle(Vector2f loc, Vector2f vel, float size, float endSizeMult, float rampUpFraction,
 			float fullBrightnessFraction, float totalDuration, Color color, boolean expandAsSqrt);
+
+	Color getBackgroundColor();
+	void setBackgroundColor(Color backgroundColor);
+	boolean isBackgroundGlowColorNonAdditive();
+	void setBackgroundGlowColorNonAdditive(boolean backgroundGlowColorNonAdditive);
+	void setBackgroundGlowColor(Color backgroundGlowColor);
+	Color getBackgroundGlowColor();
+	boolean isRenderStarfield();
+	void setRenderStarfield(boolean renderStarfield);
+
+	void setShipPlayerLastTransferredCommandTo(ShipAPI ship);
 	
 	//float getElapsedInCurrentFrame();
 

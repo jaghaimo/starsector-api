@@ -54,7 +54,7 @@ public class ShipGhost extends BaseSensorGhost implements Script {
 
 	public void run() {
 		WeightedRandomPicker<String> factions = SalvageSpecialAssigner.getNearbyFactions(
-										random, entity.getLocation(), 15f, 10f, 10f);
+										random, entity.getLocationInHyperspace(), 15f, 10f, 10f);
 		String faction = factions.pick();
 		DerelictShipData params = DerelictShipEntityPlugin.createRandom(faction, null, random, DerelictShipEntityPlugin.getDefaultSModProb());
 		if (params != null) {

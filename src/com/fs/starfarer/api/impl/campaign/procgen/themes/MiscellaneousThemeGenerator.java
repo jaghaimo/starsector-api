@@ -22,6 +22,7 @@ import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.CoronalTapParticleScript;
 import com.fs.starfarer.api.impl.campaign.DerelictShipEntityPlugin;
+import com.fs.starfarer.api.impl.campaign.DerelictShipEntityPlugin.DerelictShipData;
 import com.fs.starfarer.api.impl.campaign.econ.impl.PlanetaryShield;
 import com.fs.starfarer.api.impl.campaign.fleets.DefaultFleetInflater;
 import com.fs.starfarer.api.impl.campaign.fleets.DefaultFleetInflaterParams;
@@ -46,6 +47,7 @@ import com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator;
 import com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator.StarSystemType;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.SalvageSpecialAssigner.ShipRecoverySpecialCreator;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.SalvageSpecialAssigner.SpecialCreationContext;
+import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.ShipRecoverySpecial.PerShipData;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.ShipRecoverySpecial.ShipCondition;
 import com.fs.starfarer.api.impl.campaign.terrain.AsteroidFieldTerrainPlugin.AsteroidFieldParams;
 import com.fs.starfarer.api.util.Misc;
@@ -62,6 +64,16 @@ public class MiscellaneousThemeGenerator extends BaseThemeGenerator {
 	public static String PLANETARY_SHIELD_PLANET_KEY = "$core_planetaryShieldPlanet";
 	public static String PLANETARY_SHIELD_PLANET = "$psi_planet";
 	
+	public static String LOCR_BLOCK_FIRST_SURVEY = "$locr_blockFirstSurvey";
+	public static String LOCR_LUDDIC_PLANET_KEY = "$locr_luddicPlanet";
+	public static String LOCR_LUDDIC_TRANSPORT_KEY = "$locr_luddicTransport";
+	public static String LOCR_LUDDIC = "$locr_luddic";
+	public static String LOCR_MINERS_PLANET_KEY = "$locr_minersPlanet";
+	public static String LOCR_MINERS = "$locr_miners";
+	//public static String LOCR_UTOPIA_PLANET_KEY = "$locr_utopiaPlanet";
+	//public static String LOCR_UTOPIA = "$locr_utopia";
+	public static String LOCR_PIRATE_PLANET_KEY = "$locr_piratePlanet";
+	public static String LOCR_PIRATE = "$locr_pirate";
 	
 	public static float PROB_TO_ADD_SOMETHING = 0.5f;
 	
@@ -144,12 +156,16 @@ public class MiscellaneousThemeGenerator extends BaseThemeGenerator {
 		
 		addRedPlanet(context);
 		addPKSystem(context);
-		
 		addSolarShadesAndMirrors(context);
 		
 		addCoronalTaps(context);
 		
 		addExtraGates(context);
+		
+		addLOCRPiratePlanet(context);
+		addLOCRLuddicPlanet(context);
+		//addLOCRUtopiaPlanet(context);
+		addLOCRMinersPlanet(context);
 	}
 	
 	protected void addRedPlanet(ThemeGenContext context) {
@@ -1087,6 +1103,227 @@ public class MiscellaneousThemeGenerator extends BaseThemeGenerator {
 			
 			Misc.addDefeatTrigger(nexus, "PKNexusDefeated");
 		}
+	}
+	
+	protected void addLOCRLuddicPlanet(ThemeGenContext context) {
+		if (DEBUG) System.out.println("Looking for LOCR_LUDDIC planet");
+		
+		WeightedRandomPicker<PlanetAPI> picker = new WeightedRandomPicker<PlanetAPI>(random);
+		WeightedRandomPicker<PlanetAPI> picker_fallback = new WeightedRandomPicker<PlanetAPI>(random);
+
+		// looking for a habitable planet in the fringe WITH good farming
+		for (Constellation c : context.constellations) {
+			for (StarSystemAPI system : c.getSystems()) {
+				
+				if (system.hasTag(Tags.THEME_SPECIAL)) continue;
+				if (system.isNebula()) continue;
+				if (system.hasPulsar()) continue;
+				if (system.hasBlackHole()) continue;
+				if (!system.hasTag(Tags.THEME_MISC_SKIP) && !system.hasTag(Tags.THEME_MISC)) continue;
+				if (system.hasTag(Tags.THEME_DERELICT)) continue;
+				
+				for (PlanetAPI curr : system.getPlanets()) {
+					if (curr.isStar()) continue;
+					if (!curr.getMarket().isPlanetConditionMarketOnly()) continue;	
+					
+					if (curr.hasTag(Tags.NOT_RANDOM_MISSION_TARGET)) continue;
+					if (curr.getMarket().hasCondition(Conditions.WATER_SURFACE)) continue; // Ludd gets seasick, I guess.
+					if (curr.isGasGiant()) continue; // I mean, let's just be sure, right?
+					if (curr.getMarket().hasCondition(Conditions.DECIVILIZED_SUBPOP)) continue;
+					
+					// must have good farmland! Or at least OK farmland.
+					if (curr.getMarket().hasCondition("farmland_rich") || curr.getMarket().hasCondition("farmland_bountiful"))
+					{
+						picker.add(curr);
+					}
+					else if ( curr.getMarket().hasCondition("farmland_adequate"))
+					{
+						picker_fallback.add(curr);
+					}
+				}
+			}
+		}
+
+		PlanetAPI planet = picker.pick();
+		if (planet == null) 
+		{
+			planet = picker_fallback.pick();
+		}
+		
+		if (planet != null) {
+			
+			// add the ship they came in on
+			
+			DerelictShipData params = new DerelictShipData(new PerShipData("nebula_Standard", ShipCondition.BATTERED, 0f), false);
+			params.ship.shipName = "CGR Light of Exultation";
+			params.ship.nameAlwaysKnown = true;
+			//params.ship.fleetMemberId = id;
+			
+			SectorEntityToken ship = BaseThemeGenerator.addSalvageEntity(planet.getStarSystem(), Entities.WRECK, Factions.NEUTRAL, params);
+			ship.setDiscoverable(true);
+			float orbitDays = 200f / (10f + (float) Math.random() * 5f);
+			ship.setCircularOrbit(planet, (float) Math.random() * 360f, planet.getRadius() + 100f, orbitDays);
+			ShipRecoverySpecialCreator creator = new ShipRecoverySpecialCreator(null, 0, 0, false, null, null);
+			Misc.setSalvageSpecial(ship, creator.createSpecial(ship, null));
+			
+			Global.getSector().getMemoryWithoutUpdate().set(LOCR_LUDDIC_TRANSPORT_KEY, ship);
+			//ship.getMemoryWithoutUpdate().set(LOCR_LUDDIC, true);
+			
+			
+			if (DEBUG) System.out.println("Adding LOCR_LUDDIC flag to [" + planet.getName() + "] in [" + planet.getContainingLocation().getNameWithLowercaseType() + "]");
+			Global.getSector().getMemoryWithoutUpdate().set(LOCR_LUDDIC_PLANET_KEY, planet);
+			planet.getMemoryWithoutUpdate().set(LOCR_LUDDIC, true);
+			planet.getMemoryWithoutUpdate().set(LOCR_BLOCK_FIRST_SURVEY, true);
+			
+			long seed = StarSystemGenerator.random.nextLong();
+			planet.addTag(Tags.NOT_RANDOM_MISSION_TARGET);
+			
+		} else {
+			if (DEBUG) System.out.println("Failed to find a LOCR_LUDDIC planet, may Ludd forgive you.");
+		}
+		if (DEBUG) System.out.println("Finished adding LOCR_LUDDIC  planet\n\n\n");
+	}
+	
+/* Maybe later. -dgb
+	protected void addLOCRUtopiaPlanet(ThemeGenContext context) {
+		if (DEBUG) System.out.println("Looking for LOCR_UTOPIA planet");
+		
+		WeightedRandomPicker<PlanetAPI> picker = new WeightedRandomPicker<PlanetAPI>(random);
+
+		// looking for a habitable planet in the fringe
+		for (Constellation c : context.constellations) {
+			for (StarSystemAPI system : c.getSystems()) {
+				
+				if (system.hasTag(Tags.THEME_SPECIAL)) continue;
+				if (system.isNebula()) continue;
+				if (system.hasPulsar()) continue;
+				if (system.hasBlackHole()) continue;
+				if (!system.hasTag(Tags.THEME_MISC_SKIP) && !system.hasTag(Tags.THEME_MISC)) continue;
+				if (system.hasTag(Tags.THEME_DERELICT)) continue;
+				
+				for (PlanetAPI curr : system.getPlanets()) {
+					if (curr.isStar()) continue;
+					if (!curr.getMarket().isPlanetConditionMarketOnly()) continue;	
+					if (curr.hasTag(Tags.NOT_RANDOM_MISSION_TARGET)) continue;
+					if (curr.getMarket().hasCondition(Conditions.DECIVILIZED_SUBPOP)) continue; // no competition, please.
+					if (curr.getMarket().hasCondition(Conditions.WATER_SURFACE)) continue; // I'd have to write around this.
+					if (!curr.getMarket().hasCondition(Conditions.HABITABLE)) continue;
+					
+					picker.add(curr);
+				}
+			}
+		}
+		
+		PlanetAPI planet =  picker.pick();
+
+		if (planet != null) {
+			if (DEBUG) System.out.println("Adding LOCR_UTOPIA flag to [" + planet.getName() + "] in [" + planet.getContainingLocation().getNameWithLowercaseType() + "]");
+			Global.getSector().getMemoryWithoutUpdate().set(LOCR_UTOPIA_PLANET_KEY, planet);
+			planet.getMemoryWithoutUpdate().set(LOCR_UTOPIA, true);
+			planet.getMemoryWithoutUpdate().set(LOCR_BLOCK_FIRST_SURVEY, true);
+			
+			long seed = StarSystemGenerator.random.nextLong();
+			planet.addTag(Tags.NOT_RANDOM_MISSION_TARGET);
+			
+		} else {
+			if (DEBUG) System.out.println("Failed to find a planet for LOCR_UTOPIA; the dream is dead :( ");
+		}
+		if (DEBUG) System.out.println("Finished adding LOCR_UTOPIA planet\n\n\n");
+	}
+*/
+	
+	protected void addLOCRMinersPlanet(ThemeGenContext context) {
+		if (DEBUG) System.out.println("Looking for LOCR_MINERS planet");
+		
+		WeightedRandomPicker<PlanetAPI> picker = new WeightedRandomPicker<PlanetAPI>(random);
+
+		// looking for a non-habitable planet or moon with good mining in the fringe
+		for (Constellation c : context.constellations) {
+			for (StarSystemAPI system : c.getSystems()) {
+				
+				if (system.hasTag(Tags.THEME_SPECIAL)) continue;
+				if (system.hasPulsar()) continue;
+				if (!system.hasTag(Tags.THEME_MISC_SKIP) && !system.hasTag(Tags.THEME_MISC)) continue;
+				if (system.hasTag(Tags.THEME_DERELICT)) continue;
+				
+				for (PlanetAPI curr : system.getPlanets()) {
+					if (curr.isStar()) continue;
+					if (!curr.getMarket().isPlanetConditionMarketOnly()) continue;	
+					if (curr.hasTag(Tags.NOT_RANDOM_MISSION_TARGET)) continue;
+					if (curr.getMarket().hasCondition(Conditions.HABITABLE)) continue;
+					if (curr.getMarket().hasCondition(Conditions.EXTREME_TECTONIC_ACTIVITY)) continue; // It has to be a GOOD planet.
+					if (curr.getMarket().hasCondition(Conditions.DECIVILIZED_SUBPOP)) continue;
+					if (curr.getMarket().hasCondition(Conditions.WATER_SURFACE)) continue; // don't want to write around this.
+					if (curr.isGasGiant()) continue;
+					if (!( curr.getMarket().hasCondition(Conditions.VOLATILES_PLENTIFUL) || 
+							curr.getMarket().hasCondition(Conditions.ORGANICS_ABUNDANT) ||
+							curr.getMarket().hasCondition(Conditions.RARE_ORE_ULTRARICH) ) ) continue;	
+					//		curr.getMarket().hasCondition(Conditions.ORE_ULTRARICH) ) ) continue;	
+					
+					picker.add(curr);
+				}
+			}
+		}
+		
+		PlanetAPI planet =  picker.pick();
+
+		if (planet != null) {
+			if (DEBUG) System.out.println("Adding LOCR_MINERS flag to [" + planet.getName() + "] in [" + planet.getContainingLocation().getNameWithLowercaseType() + "]");
+			Global.getSector().getMemoryWithoutUpdate().set(LOCR_MINERS_PLANET_KEY, planet);
+			planet.getMemoryWithoutUpdate().set(LOCR_MINERS, true);
+			planet.getMemoryWithoutUpdate().set(LOCR_BLOCK_FIRST_SURVEY, true);
+			
+			long seed = StarSystemGenerator.random.nextLong();
+			planet.addTag(Tags.NOT_RANDOM_MISSION_TARGET);
+			
+		} else {
+			if (DEBUG) System.out.println("Failed to find a planet for LOCR_MINERS.");
+		}
+		if (DEBUG) System.out.println("Finished adding LOCR_MINERS planet\n\n\n\n\n");
+	}
+	
+	protected void addLOCRPiratePlanet(ThemeGenContext context) {
+		if (DEBUG) System.out.println("Looking for LOCR_PIRATE planet");
+		
+		WeightedRandomPicker<PlanetAPI> picker = new WeightedRandomPicker<PlanetAPI>(random);
+		
+		// looking for an obscure non-habitable planet or moon
+		for (Constellation c : context.constellations) {
+			for (StarSystemAPI system : c.getSystems()) {
+				
+				if (system.hasTag(Tags.THEME_SPECIAL)) continue;
+				if (system.hasPulsar()) continue;
+				if (!system.hasTag(Tags.THEME_MISC_SKIP) && !system.hasTag(Tags.THEME_MISC)) continue;
+				if (system.hasTag(Tags.THEME_DERELICT)) continue;
+				
+				for (PlanetAPI curr : system.getPlanets()) {
+					if (curr.isStar()) continue;
+					if (!curr.getMarket().isPlanetConditionMarketOnly()) continue;	
+					if (curr.hasTag(Tags.NOT_RANDOM_MISSION_TARGET)) continue;
+					if (curr.getMarket().hasCondition(Conditions.DECIVILIZED_SUBPOP)) continue; // no competition, please.
+					if (curr.getMarket().hasCondition(Conditions.HABITABLE)) continue; // should be a POS
+					if (curr.isGasGiant()) continue;
+					
+					picker.add(curr);
+				}
+			}
+		}
+
+		PlanetAPI planet =  picker.pick();
+
+		if (planet != null) {
+			if (DEBUG) System.out.println("Adding LOCR_PIRATE flag to [" + planet.getName() + "] in [" + planet.getContainingLocation().getNameWithLowercaseType() + "]");
+			Global.getSector().getMemoryWithoutUpdate().set(LOCR_PIRATE_PLANET_KEY, planet);
+			planet.getMemoryWithoutUpdate().set(LOCR_PIRATE, true);
+			planet.getMemoryWithoutUpdate().set(LOCR_BLOCK_FIRST_SURVEY, true);
+			
+			long seed = StarSystemGenerator.random.nextLong();
+			planet.addTag(Tags.NOT_RANDOM_MISSION_TARGET);
+			
+		} else {
+			if (DEBUG) System.out.println("Failed to find a planet for LOCR_PIRATE; the dream is dead :( ");
+		}
+		if (DEBUG) System.out.println("Finished adding LOCR_PIRATE planet\n\n\n");
 	}
 	
 	

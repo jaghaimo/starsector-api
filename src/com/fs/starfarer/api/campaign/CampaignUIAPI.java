@@ -50,7 +50,7 @@ public interface CampaignUIAPI {
 	
 	/**
 	 * @param tab
-	 * @param custom CommMessageAPI to select in intel tab, or FleetMemberAPI to select in refit tab
+	 * @param custom IntelInfoPlugin to select in intel tab, or FleetMemberAPI to select in refit tab
 	 */
 	void showCoreUITab(CoreUITabId tab, Object custom);
 	
@@ -137,6 +137,11 @@ public interface CampaignUIAPI {
 
 	int getMaxIntelMapIcons();
 	void setMaxIntelMapIcons(int maxIntelMapIcons);
+
+	boolean isHideUI();
+	void setHideUI(boolean hideUI);
+
+	void setZoomFactor(float zoomFactor);
 
 
 }

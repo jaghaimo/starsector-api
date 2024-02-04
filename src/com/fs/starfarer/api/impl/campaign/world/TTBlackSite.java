@@ -43,6 +43,7 @@ import com.fs.starfarer.api.impl.campaign.ids.Skills;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.ids.Terrain;
 import com.fs.starfarer.api.impl.campaign.procgen.NebulaEditor;
+import com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator.StarSystemType;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.RemnantSeededFleetManager.RemnantFleetInteractionConfigGen;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.SalvageSpecialAssigner.ShipRecoverySpecialCreator;
@@ -149,8 +150,10 @@ public class TTBlackSite {
 		StarSystemAPI system = sector.createStarSystem("Unknown Location");
 		//system.setType(StarSystemType.NEBULA);
 		system.setName("Unknown Location"); // to get rid of "Star System" at the end of the name
+		system.setType(StarSystemType.DEEP_SPACE);
 		system.addTag(Tags.THEME_UNSAFE);
 		system.addTag(Tags.THEME_HIDDEN);
+		system.addTag(Tags.THEME_SPECIAL);
 		LocationAPI hyper = Global.getSector().getHyperspace();
 		
 		system.getMemoryWithoutUpdate().set(MusicPlayerPluginImpl.MUSIC_SET_MEM_KEY, "music_campaign_alpha_site");
@@ -169,6 +172,7 @@ public class TTBlackSite {
 		SectorEntityToken center = system.initNonStarCenter();
 		
 		system.setLightColor(new Color(225,170,255,255)); // light color in entire system, affects all entities
+		center.addTag(Tags.AMBIENT_LS);
 		
 		String type = "barren";
 		type = "irradiated";

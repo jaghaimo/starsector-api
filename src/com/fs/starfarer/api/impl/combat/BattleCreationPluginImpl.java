@@ -20,11 +20,14 @@ import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin;
 import com.fs.starfarer.api.combat.BattleCreationContext;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
+import com.fs.starfarer.api.combat.MissileAPI;
+import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.fleet.FleetGoal;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Planets;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.ids.Terrain;
+import com.fs.starfarer.api.impl.campaign.terrain.HyperspaceAbyssPluginImpl;
 import com.fs.starfarer.api.impl.campaign.terrain.PulsarBeamTerrainPlugin;
 import com.fs.starfarer.api.impl.campaign.terrain.StarCoronaTerrainPlugin;
 import com.fs.starfarer.api.input.InputEventAPI;
@@ -39,6 +42,12 @@ public class BattleCreationPluginImpl implements BattleCreationPlugin {
 		String getNebulaTex();
 		String getNebulaMapTex();
 	}
+	
+	
+	public static float ABYSS_SHIP_SPEED_PENALTY = 20f;
+	public static float ABYSS_MISSILE_SPEED_PENALTY = 20f;
+	//public static float ABYSS_MISSILE_FLIGHT_TIME_MULT = 1.25f;
+	public static float ABYSS_OVERLAY_ALPHA = 0.2f;
 	
 	protected float width, height;
 	
@@ -214,9 +223,63 @@ public class BattleCreationPluginImpl implements BattleCreationPlugin {
 				}
 			});
 		}
+		
+		if (abyssalDepth > 0) {
+			Color color = Misc.scaleColor(Color.white, 1f - abyssalDepth);
+			engine.setBackgroundColor(color);
+
+			color = Misc.scaleAlpha(Color.black, abyssalDepth * ABYSS_OVERLAY_ALPHA);
+			engine.setBackgroundGlowColor(color);
+			engine.setBackgroundGlowColorNonAdditive(true);
+			
+			if (abyssalDepth > HyperspaceAbyssPluginImpl.DEPTH_THRESHOLD_FOR_NO_DUST_PARTICLES_IN_COMBAT) {
+				engine.setRenderStarfield(false);
+			}
+			
+			final Object key1 = new Object();
+			final Object key2 = new Object();
+			final String icon = Global.getSettings().getSpriteName("ui", "icon_tactical_engine_damage");
+			final String name = "Abyssal hyperspace";
+			engine.addPlugin(new BaseEveryFrameCombatPlugin() {
+				@Override
+				public void advance(float amount, List<InputEventAPI> events) {
+					String percentSpeed = "-" + (int)Math.round(ABYSS_SHIP_SPEED_PENALTY) + "%";
+					String percentMissile = "-" + (int)Math.round(ABYSS_MISSILE_SPEED_PENALTY) + "%";
+					engine.maintainStatusForPlayerShip(key1, icon, name, percentSpeed + " top speed", true);
+					engine.maintainStatusForPlayerShip(key2, icon, name, percentMissile + " missle speed / range", true);
+					
+					String modId = "abyssal";
+					float modW = -0.0f * abyssalDepth;
+					float modL = -0.33f * abyssalDepth;
+					float modG = -0.5f * abyssalDepth;
+					
+					for (ShipAPI curr : engine.getShips()) {
+						if (curr.isHulk()) continue;
+						
+						curr.getEngineController().fadeToOtherColor(this, Color.black, null, 1f, abyssalDepth * 0.4f);
+						curr.getEngineController().extendFlame(this, modL, modW, modG);
+						
+						curr.getMutableStats().getMaxSpeed().modifyMult(modId, 
+											1f - abyssalDepth * ABYSS_SHIP_SPEED_PENALTY * 0.01f);
+						curr.getMutableStats().getMissileWeaponRangeBonus().modifyMult(modId, 
+											1f - abyssalDepth * ABYSS_MISSILE_SPEED_PENALTY * 0.01f);
+						curr.getMutableStats().getMissileMaxSpeedBonus().modifyMult(modId,
+											1f - abyssalDepth * ABYSS_MISSILE_SPEED_PENALTY * 0.01f);
+					}
+					
+					for (MissileAPI missile : engine.getMissiles()) {
+						missile.getEngineController().fadeToOtherColor(this, Color.black, null, 1f, abyssalDepth * 0.4f);
+						missile.getEngineController().extendFlame(this, modL, modW, 0f);
+					}
+						
+				}
+			});
+			
+		}
 	}
 	
 	
+	protected float abyssalDepth = 0f;
 	protected float coronaIntensity = 0f;
 	protected StarCoronaTerrainPlugin corona = null;
 	protected PulsarBeamTerrainPlugin pulsar = null;
@@ -235,6 +298,8 @@ public class BattleCreationPluginImpl implements BattleCreationPlugin {
 				break;
 			}
 		}
+		
+		abyssalDepth = Misc.getAbyssalDepth(playerFleet);
 		
 		float numRings = 0;
 		
@@ -663,7 +728,7 @@ public class BattleCreationPluginImpl implements BattleCreationPlugin {
 		
 		loader.addObjective(x, y, type);
 		
-		if (random.nextFloat() > 0.6f) {
+		if (random.nextFloat() > 0.6f && loader.hasNebula()) {
 			float nebulaSize = random.nextFloat() * 1500f + 500f;
 			loader.addNebula(x, y, nebulaSize);
 		}

@@ -9,4 +9,5 @@ public interface FleetInflater {
 	
 	float getQuality();
 	void setQuality(float quality);
+	int getAverageNumSMods();
 }

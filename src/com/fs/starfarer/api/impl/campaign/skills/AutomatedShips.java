@@ -61,7 +61,7 @@ public class AutomatedShips {
 			Color h = Misc.getHighlightColor();
 			h = Misc.getDarkHighlightColor();
 			Color bad = Misc.getNegativeHighlightColor();
-			bad = Misc.setAlpha(bad, 200);
+			//bad = Misc.setAlpha(bad, 240);
 			return new Color[] {h, h, h, bad};
 		}
 		public String[] getHighlights() {

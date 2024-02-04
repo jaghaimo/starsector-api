@@ -29,6 +29,7 @@ public class BaseSensorGhost implements SensorGhost {
 	protected CustomCampaignEntityAPI entity;
 	protected float despawnRange = 100f;
 	protected boolean despawnOutsideSector = true;
+	protected boolean despawnInAbyss = true;
 	protected boolean fleeing = false;
 	protected int fleeBurnLevel = 30;
 	protected float accelMult = 1f;
@@ -215,7 +216,9 @@ public class BaseSensorGhost implements SensorGhost {
 		}
 		if (!entity.hasTag(Tags.FADING_OUT_AND_EXPIRING)) {
 			if (script.isEmpty() ||
-					(despawnOutsideSector && Misc.isOutsideSector(entity.getLocation()))) {
+					(despawnOutsideSector && Misc.isOutsideSector(entity.getLocation())) ||
+					(despawnInAbyss && Misc.isInAbyss(entity))
+					) {
 				Misc.fadeAndExpire(entity, 1f);
 				reportDespawning(DespawnReason.SCRIPT_ENDED, null);
 				entity = null;
@@ -335,6 +338,14 @@ public class BaseSensorGhost implements SensorGhost {
 
 	public void setDespawnOutsideSector(boolean despawnOutsideSector) {
 		this.despawnOutsideSector = despawnOutsideSector;
+	}
+	
+	public boolean isDespawnInAbyss() {
+		return despawnInAbyss;
+	}
+
+	public void setDespawnInAbyss(boolean despawnInAbyss) {
+		this.despawnInAbyss = despawnInAbyss;
 	}
 
 	public boolean isCreationFailed() {

@@ -24,6 +24,8 @@ import com.fs.starfarer.api.campaign.listeners.ListenerUtil;
 import com.fs.starfarer.api.impl.campaign.DebugFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.ids.Terrain;
+import com.fs.starfarer.api.impl.campaign.terrain.HyperspaceAbyssPlugin;
+import com.fs.starfarer.api.impl.campaign.terrain.HyperspaceTerrainPlugin;
 import com.fs.starfarer.api.impl.campaign.velfield.SlipstreamBuilder.StreamType;
 import com.fs.starfarer.api.impl.campaign.velfield.SlipstreamTerrainPlugin2.SlipstreamParams2;
 import com.fs.starfarer.api.impl.campaign.velfield.SlipstreamTerrainPlugin2.SlipstreamSegment;
@@ -720,6 +722,12 @@ public class SlipstreamManager implements EveryFrameScript {
 												 (distAlong - minDistAlong) / (fadeDistAlong - minDistAlong));
 						}
 					}
+				} else if (obj instanceof AbyssStreamBlocker) {
+					AbyssStreamBlocker abyss = (AbyssStreamBlocker) obj;
+					if (abyss.containsPoint(curr.loc)) {
+						curr.fader.forceOut();
+						curr.bMult = 0f;
+					}
 				}
 			}
 		}
@@ -822,6 +830,19 @@ public class SlipstreamManager implements EveryFrameScript {
 			this.radius = radius;
 		}
 	}
+	public static class AbyssStreamBlocker {
+		public HyperspaceAbyssPlugin plugin;
+		public AbyssStreamBlocker() {
+			CampaignTerrainAPI terrain = Misc.getHyperspaceTerrain();
+			if (terrain != null) {
+				this.plugin = ((HyperspaceTerrainPlugin) terrain.getPlugin()).getAbyssPlugin();
+			}
+		}
+		public boolean containsPoint(Vector2f loc) {
+			if (plugin == null) return false;
+			return plugin.getAbyssalDepth(loc) > 0;
+		}
+	}
 	
 	public CollisionGridUtil getGrid() {
 		return grid;
@@ -863,6 +884,17 @@ public class SlipstreamManager implements EveryFrameScript {
 				CustomStreamBlocker blocker = new CustomStreamBlocker(loc, size);
 				grid.addObject(blocker, loc, size * 2f, size * 2f);
 			}
+		}
+		
+		{
+			float w = Global.getSettings().getFloat("sectorWidth");
+			float h = Global.getSettings().getFloat("sectorHeight");
+//			Vector2f loc = new Vector2f(-w/2f, -h/2f);
+//			float size = 26000;
+//			CustomStreamBlocker orionPersusAbyssBlocker = new CustomStreamBlocker(loc, size);
+//			grid.addObject(orionPersusAbyssBlocker, loc, size * 2f, size * 2f);
+			AbyssStreamBlocker orionPersusAbyssBlocker = new AbyssStreamBlocker();
+			grid.addObject(orionPersusAbyssBlocker, new Vector2f(), w, h);
 		}
 		
 //		for (MarketAPI market : Global.getSector().getEconomy().getMarketsCopy()) {

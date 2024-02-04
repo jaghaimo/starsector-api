@@ -285,7 +285,12 @@ public class CargoPods extends BaseCommandPlugin {
 			if (stabilized && daysLeft > 20) {
 				text.addParagraph("The cargo pods are in a stabilized orbit, and your systems should be able to keep track of them for " + atLeastTime + ".");
 			} else {
-				text.addParagraph("The cargo pods are in an unstable orbit, but should not drift apart and be lost for " + atLeastTime + ".");
+				float depth = Misc.getAbyssalDepth(entity);
+				if (depth >= 1f) {
+					text.addParagraph("This deep in abyssal hyperspace, the cargo pods are likely to be lost forever as soon as they're out of sensor range.");
+				} else {
+					text.addParagraph("The cargo pods are in an unstable orbit, but should not drift apart and be lost for " + atLeastTime + ".");
+				}
 			}
 		}
 		

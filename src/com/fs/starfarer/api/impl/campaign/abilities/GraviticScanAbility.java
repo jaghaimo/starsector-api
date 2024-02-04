@@ -108,7 +108,7 @@ public class GraviticScanAbility extends BaseToggleAbility {
 		int maxRange = (int) Math.round(SLIPSTREAM_DETECTION_RANGE / Misc.getUnitsPerLightYear());
 		tooltip.addSectionHeading("Hyperspace", Alignment.MID, pad);
 		tooltip.addPara("Reliably detects the presence of slipstreams out to a range of %s light-years. "
-				+ "The background noise levels are such that it is unable to detect any other neutrino sources. "
+				+ "Except for abyssal areas, the background noise levels are such that it is unable to detect any other neutrino sources. "
 				+ "When the fleet is traversing a slipstream, the detector is overwhelmed and shuts down.",
 				pad, highlight, "" + maxRange);
 		if (Misc.isInsideSlipstream(getFleet())) {

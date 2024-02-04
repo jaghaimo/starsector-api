@@ -10,6 +10,7 @@ import org.lwjgl.util.vector.Vector2f;
 import com.fs.starfarer.api.EveryFrameScript;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.impl.campaign.procgen.Constellation;
+import com.fs.starfarer.api.util.ColorShifterAPI;
 
 /**
  * @author Alex Mosolov
@@ -295,6 +296,12 @@ public interface LocationAPI {
 	List<NascentGravityWellAPI> getGravityWells();
 
 	List<CustomCampaignEntityAPI> getCustomEntities();
+
+	ColorShifterAPI getBackgroundColorShifter();
+
+	ColorShifterAPI getBackgroundParticleColorShifter();
+
+	boolean isDeepSpace();
 
 }
 

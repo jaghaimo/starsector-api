@@ -1,5 +1,7 @@
 package com.fs.starfarer.api.impl.campaign.abilities;
 
+import org.lwjgl.util.vector.Vector2f;
+
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
@@ -188,7 +190,11 @@ public abstract class BaseDurationAbility extends BaseAbilityPlugin {
 			if (entity.isPlayerFleet()) {
 				String soundId = getOnSoundUI();
 				if (soundId != null) {
-					Global.getSoundPlayer().playUISound(soundId, 1f, 1f);
+					if (PLAY_UI_SOUNDS_IN_WORLD_SOURCES) {
+						Global.getSoundPlayer().playSound(soundId, 1f, 1f, Global.getSoundPlayer().getListenerPos(), new Vector2f());
+					} else {
+						Global.getSoundPlayer().playUISound(soundId, 1f, 1f);
+					}
 				}
 			}
 		}
@@ -229,7 +235,7 @@ public abstract class BaseDurationAbility extends BaseAbilityPlugin {
 			super.activate();
 		}
 	}
-
+	
 	public void deactivate() {
 		if (turnedOn) {
 			turnedOn = false;
@@ -244,7 +250,11 @@ public abstract class BaseDurationAbility extends BaseAbilityPlugin {
 			if (entity.isPlayerFleet()) {
 				String soundId = getOffSoundUI();
 				if (soundId != null) {
-					Global.getSoundPlayer().playUISound(soundId, 1f, 1f);
+					if (PLAY_UI_SOUNDS_IN_WORLD_SOURCES) {
+						Global.getSoundPlayer().playSound(soundId, 1f, 1f, Global.getSoundPlayer().getListenerPos(), new Vector2f());
+					} else {
+						Global.getSoundPlayer().playUISound(soundId, 1f, 1f);
+					}
 				}
 			}
 			cooldownLeft = getCooldownDays();

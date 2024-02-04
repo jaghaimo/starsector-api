@@ -16,7 +16,7 @@ import com.fs.starfarer.api.util.Misc.Token;
 public class AddAbility extends BaseCommandPlugin {
 
 	public boolean execute(String ruleId, InteractionDialogAPI dialog, List<Token> params, Map<String, MemoryAPI> memoryMap) {
-		if (dialog == null) return false;
+		//if (dialog == null) return false;
 		
 		// if the player already had the ability, calling this command ensures they don't lose it
 		// if they spec out of the skill that granted it, but this command will be "quiet"
@@ -48,17 +48,22 @@ public class AddAbility extends BaseCommandPlugin {
 		
 		if (!hadAbilityAlready) {
 			boolean assignedToSlot = false;
+			boolean doNotAssign = false;
 			if (params.size() >= 2) {
 				int slotIndex = (int) params.get(1).getFloat(memoryMap);
-				slots.setCurrBarIndex(0);
-				AbilitySlotAPI slot = slots.getCurrSlotsCopy().get(slotIndex);
-				if (slot.getAbilityId() == null) {
-					slot.setAbilityId(abilityId);
-					assignedToSlot = true;
+				if (slotIndex < 0) {
+					doNotAssign = true;
+				} else {
+					slots.setCurrBarIndex(0);
+					AbilitySlotAPI slot = slots.getCurrSlotsCopy().get(slotIndex);
+					if (slot.getAbilityId() == null) {
+						slot.setAbilityId(abilityId);
+						assignedToSlot = true;
+					}
 				}
 			}
 			
-			if (!assignedToSlot) {
+			if (!assignedToSlot && !doNotAssign) {
 				int currBarIndex = slots.getCurrBarIndex();
 				OUTER: for (int i = 0; i < 5; i++) {
 					slots.setCurrBarIndex(i);
@@ -75,7 +80,9 @@ public class AddAbility extends BaseCommandPlugin {
 			}
 			
 			Global.getSector().getCharacterData().getMemoryWithoutUpdate().set("$ability:" + abilityId, true, 0);
-			AddRemoveCommodity.addAbilityGainText(abilityId, dialog.getTextPanel());
+			if (dialog != null) {
+				AddRemoveCommodity.addAbilityGainText(abilityId, dialog.getTextPanel());
+			}
 		}
 		
 		return true;

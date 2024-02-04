@@ -5,7 +5,9 @@ import java.util.Random;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
+import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.impl.campaign.fleets.DisposableFleetManager;
+import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
 
@@ -43,17 +45,33 @@ public class DisposableHostileActivityFleetManager extends DisposableFleetManage
 		HostileActivityEventIntel intel = getIntel();
 		if (intel == null) return 0;
 		
+		float delay = 30f;
+		if (!Global.getSettings().isDevMode()) {
+			delay = 90f;
+		}
 		Long timestamp = intel.getPlayerVisibleTimestamp();
 		if (timestamp != null) {
 			float daysSince = Global.getSector().getClock().getElapsedDaysSince(timestamp);
-			if (daysSince < 30) return 0;
+			if (daysSince < delay) return 0;
+		}
+		
+		if (currSpawnLoc != null) {
+			boolean longEnough = false;
+			for (MarketAPI market : Misc.getMarketsInLocation(currSpawnLoc, Factions.PLAYER)) {
+				if (market.getDaysInExistence() >= delay) {
+					longEnough = true;
+				}
+			}
+			if (!longEnough) {
+				return 0;
+			}
 		}
 		
 		float mag = intel.getTotalActivityMagnitude(currSpawnLoc);
 
-		// about half the fleets before hostile activity picks up
-		float mag2 = intel.getProgressFraction();
-		mag = Misc.interpolate(mag, mag2, 0.5f);
+		// less than half the fleets when market presence is minimal
+		float mag2 = intel.getMarketPresenceFactor(currSpawnLoc);
+		mag = Misc.interpolate(mag, mag2, 0.6f);
 		
 		//float mag2 = intel.getTotalActivityMagnitude(true);
 		// about half the fleets when effect is fully suppressed
@@ -63,12 +81,15 @@ public class DisposableHostileActivityFleetManager extends DisposableFleetManage
 
 		if (mag <= 0f) return 0;
 		//if (mag > 2f) mag = 2f;
+		if (mag > 1f) mag = 1f;
 		
 		float desiredNumFleets = 1f;
 		
 		float max = Global.getSettings().getFloat("maxHostileActivityFleetsPerSystem");
 		
-		desiredNumFleets += (int)Math.round(mag * (max - 1f));
+		float mult = intel.getNumFleetsMultiplier(currSpawnLoc);
+		
+		desiredNumFleets += (int)Math.round(mag * (max - 1f) * mult);
 		
 		return (int) Math.round(desiredNumFleets);
 	}

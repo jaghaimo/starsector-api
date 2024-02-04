@@ -886,6 +886,13 @@ public class ContactIntel extends BaseIntelPlugin {
 		return null;
 	}
 	
+	public static void removeContact(PersonAPI person, InteractionDialogAPI dialog) {
+		if (person == null) return;
+		ContactIntel intel = getContactIntel(person);
+		if (intel != null) {
+			intel.loseContact(dialog);
+		}
+	}
 	
 	public static void addPotentialContact(PersonAPI contact, MarketAPI market, TextPanelAPI text) {
 		addPotentialContact(DEFAULT_POTENTIAL_CONTACT_PROB, contact, market, text);

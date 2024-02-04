@@ -7,10 +7,10 @@ import org.lwjgl.util.vector.Vector2f;
 import com.fs.starfarer.api.EveryFrameScript;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.BattleAPI;
+import com.fs.starfarer.api.campaign.CampaignEventListener.FleetDespawnReason;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.FleetAssignment;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
-import com.fs.starfarer.api.campaign.CampaignEventListener.FleetDespawnReason;
 import com.fs.starfarer.api.campaign.ai.CampaignFleetAIAPI.EncounterOption;
 import com.fs.starfarer.api.campaign.listeners.FleetEventListener;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
@@ -142,9 +142,11 @@ public class DeliveryFailureConsequences implements EveryFrameScript, FleetEvent
 		CampaignFleetAPI fleet = FleetFactoryV3.createFleet(params);
 		if (fleet.isEmpty()) fleet = null;
 		
-		EncounterOption option = fleet.getAI().pickEncounterOption(null, Global.getSector().getPlayerFleet());
-		if (option == EncounterOption.DISENGAGE) {
-			fleet = null;
+		if (fleet != null) {
+			EncounterOption option = fleet.getAI().pickEncounterOption(null, Global.getSector().getPlayerFleet());
+			if (option == EncounterOption.DISENGAGE) {
+				fleet = null;
+			}
 		}
 		
 		if (fleet != null) {

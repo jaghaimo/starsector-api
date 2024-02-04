@@ -183,6 +183,8 @@ public interface ShipVariantAPI {
 
 	LinkedHashSet<String> getSModdedBuiltIns();
 
+	boolean isMayAutoAssignWeapons();
+	void setMayAutoAssignWeapons(boolean mayAutoAssign);
 
 
 }

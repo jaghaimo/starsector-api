@@ -46,6 +46,7 @@ public class HegemonyInspectionManager implements EveryFrameScript {
 	protected int numAttempts = 0;
 	
 	public void advance(float amount) {
+		if (true) return; // replaced with colony crisis sending inspection
 		
 		float days = Misc.getDays(amount);
 		if (intel != null) {

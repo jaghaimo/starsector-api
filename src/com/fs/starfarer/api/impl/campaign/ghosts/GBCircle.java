@@ -46,6 +46,9 @@ public class GBCircle extends BaseGhostBehavior {
 				
 		
 		float useCircleDir = circleDir;
+		if (Misc.isReversePolarity(other)) {
+			useCircleDir = -useCircleDir;
+		}
 		if (useCircleDir == 0f) {
 			float velDir = Misc.getAngleInDegrees(ghost.getEntity().getVelocity());
 			float angleDiffCW = Misc.getAngleDiff(dirToOther + 90f, velDir);
@@ -56,6 +59,7 @@ public class GBCircle extends BaseGhostBehavior {
 				useCircleDir = -1f;
 			}
 		}
+		
 		
 		float moveDir = clockwiseDir;
 		if (useCircleDir > 0) {

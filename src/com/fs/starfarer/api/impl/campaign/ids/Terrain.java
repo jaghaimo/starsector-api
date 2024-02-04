@@ -17,6 +17,9 @@ public class Terrain {
 	 * Unused.
 	 */
 	public static final String CORONA_JET = "corona_jet";
+	
+	
+	
 	public static final String EVENT_HORIZON = "event_horizon";
 	
 	public static final String PULSAR_BEAM = "pulsar_beam";
@@ -25,6 +28,8 @@ public class Terrain {
 	
 	
 	public static final String RADIO_CHATTER = "radio_chatter";
+	
+	public static final String SLIPSTREAM = "slipstream";
 	
 	
 	/**
@@ -36,5 +41,4 @@ public class Terrain {
 	 * Not used.
 	 */
 	public static final String WAVEFRONT = "wavefront";
-	public static final String SLIPSTREAM = "slipstream";
 }

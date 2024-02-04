@@ -31,4 +31,11 @@ public class EchoGhostCreator extends BaseSensorGhostCreator {
 	public boolean canSpawnWhilePlayerInOrNearSlipstream() {
 		return true;
 	}
+
+	@Override
+	public boolean canSpawnWhilePlayerInAbyss() {
+		return true;
+	}
+	
+	
 }

@@ -320,6 +320,9 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 		visual = dialog.getVisualPanel();
 
 		playerFleet = Global.getSector().getPlayerFleet();
+		if (playerFleet != null) {
+			playerFleet.getFleetData().ensureHasFlagship();
+		}
 		otherFleet = (CampaignFleetAPI) (dialog.getInteractionTarget());
 
 //		playerFleet.getFleetData().takeSnapshot();
@@ -1316,7 +1319,7 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 				conversationDelegate.notifyActivePersonChanged();
 				inConversation = false;
 			}
-			if (inConversation) {
+			if (inConversation && !visual.isShowingPersonInfo(actualOther.getCommander())) {
 				visual.showPersonInfo(actualOther.getCommander());
 			}
 			break;
@@ -1969,7 +1972,7 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 		DataForEncounterSide playerData = context.getDataFor(playerFleet);
 		context.getDataFor(otherFleet).setDisengaged(true);
 		
-		if (!firedVictoryTriggers) {
+		if (!firedVictoryTriggers && context.getBattle() != null && context.getBattle().getNonPlayerSideSnapshot() != null) {
 			
 			SectorEntityToken prev = dialog.getInteractionTarget();
 			RuleBasedInteractionDialogPluginImpl plugin = new RuleBasedInteractionDialogPluginImpl();
@@ -1979,7 +1982,8 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 			BattleAPI battle = context.getBattle();
 			boolean firedAnyTriggers = false;
 			
-			for (CampaignFleetAPI other : battle.getNonPlayerSide()) {
+			//for (CampaignFleetAPI other : battle.getNonPlayerSide()) {
+			for (CampaignFleetAPI other : battle.getNonPlayerSideSnapshot()) {
 				dialog.setInteractionTarget(other);
 				plugin.init(dialog);
 				
@@ -2690,7 +2694,7 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 					//if (!playerFleet.getFaction().isHostileTo(otherFleet.getFaction()) && knows && !context.isEngagedInHostilities()) {
 					if (nonHostile != null && knows && !lowImpact && !context.isEngagedInHostilities() &&
 							config.showWarningDialogWhenNotHostile) {
-						options.addOptionConfirmation(OptionId.FORCE_ENGAGE, "The " + nonHostile.getDisplayNameLong() + " " + nonHostile.getDisplayNameIsOrAre() + " not currently hostile, and you have been positively identified. Are you sure you want to attack one of their fleets?", "Yes", "Never mind");
+						options.addOptionConfirmation(OptionId.FORCE_ENGAGE, "The " + nonHostile.getDisplayNameLong() + " " + nonHostile.getDisplayNameIsOrAre() + " not currently hostile, and you have been positively identified. Are you sure you want to engage one of their fleets?", "Yes", "Never mind");
 					}
 				} else {
 					options.addOption("Maneuver to force a pitched battle", OptionId.ENGAGE, getString("tooltipNoReadyShips"));
@@ -2781,7 +2785,7 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 					//if (!playerFleet.getFaction().isHostileTo(otherFleet.getFaction()) && knows && !context.isEngagedInHostilities()) {
 					if (nonHostile != null && knows && !lowImpact && !context.isEngagedInHostilities() &&
 							config.showWarningDialogWhenNotHostile) {
-						options.addOptionConfirmation(OptionId.ENGAGE, "The " + nonHostile.getDisplayNameLong() + " " + nonHostile.getDisplayNameIsOrAre() + " not currently hostile, and you have been positively identified. Are you sure you want to attack one of their fleets?", "Yes", "Never mind");
+						options.addOptionConfirmation(OptionId.ENGAGE, "The " + nonHostile.getDisplayNameLong() + " " + nonHostile.getDisplayNameIsOrAre() + " not currently hostile, and you have been positively identified. Are you sure you want to engage one of their fleets?", "Yes", "Never mind");
 					}
 				} else {
 					options.addOption(engageText, OptionId.ENGAGE, getString("tooltipNoReadyShips"));

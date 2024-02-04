@@ -76,6 +76,7 @@ public class SurplusShipHull extends HubMissionWithBarEvent {
 		MarketAPI market = person.getMarket();
 		if (market == null) return false;
 		
+		if (market.isPlayerOwned()) return false;
 		if (!Misc.isMilitary(market) && market.getSize() < 7) return false;
 		
 		if (!setPersonMissionRef(person, "$sShip_ref")) {

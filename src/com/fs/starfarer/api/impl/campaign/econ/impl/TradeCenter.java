@@ -105,7 +105,7 @@ public class TradeCenter extends BaseIndustry implements MarketImmigrationModifi
 	protected void addRightAfterDescriptionSection(TooltipMakerAPI tooltip, IndustryTooltipMode mode) {
 		if (market.isPlayerOwned() || currTooltipMode == IndustryTooltipMode.ADD_INDUSTRY) {
 			tooltip.addPara("Adds an independent \'Open Market\' that the colony's owner is able to trade with. "
-					+ "Depending on the level of hostile activity, a low-level semi-permanent bounty may be posted as well.", 10f);
+					+ "A low-level semi-permanent bounty on all hostile fleets may be posted as well.", 10f);
 		}
 	}
 	

@@ -95,7 +95,13 @@ public class NeuralInterface extends BaseHullMod {
 	}
 	
 	public String getDescriptionParam(int index, HullSize hullSize) {
-		if (index == 0) return "" + (int)NeuralLinkScript.INSTANT_TRANSFER_DP;
+		if (this instanceof NeuralIntegrator) {
+			if (index == 0) return "benefit from your combat skills";
+			if (index == 1) return "" + (int)NeuralLinkScript.INSTANT_TRANSFER_DP;
+			if (index == 2) return "" + (int) NeuralIntegrator.DP_INCREASE_PERCENT + "%";
+		}
+		if (index == 0) return "benefit from your combat skills";
+		if (index == 1) return "" + (int)NeuralLinkScript.INSTANT_TRANSFER_DP;
 		return null;
 	}
 	

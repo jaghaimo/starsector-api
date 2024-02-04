@@ -83,6 +83,9 @@ public class StarSystemGenerator {
 		TRINARY_1CLOSE_1FAR,
 		TRINARY_2FAR,
 		NEBULA,
+		DEEP_SPACE,
+		
+		@Deprecated DEEP_SPACE_GAS_GIANT,
 	}
 	
 	public static final float MIN_STAR_DIST = 2000f;
@@ -1664,6 +1667,13 @@ public class StarSystemGenerator {
 //			int numOrbits = (int) (min + Math.round((max - min) * r));
 			int numOrbits = (int) Math.round(getNormalRandom(min, max));
 			
+//			hasOrbits = true;
+//			numOrbits = 2;
+			
+//			if (numOrbits == 3) {
+//				System.out.println("efwefwefew");
+//			}
+			
 			if (hasOrbits && numOrbits > 0) {
 //				if (!planet.isGasGiant()) {
 //					System.out.println("sdfwefew " + star.getId());
@@ -1741,7 +1751,7 @@ public class StarSystemGenerator {
 		
 		
 		if (context.orbitIndex == 0 && context.parent == null && context.orbitIndex < context.starData.getHabZoneStart() &&
-				orbitRadius < 1500f + context.starData.getHabZoneStart() * 200f) {
+				orbitRadius < 2500f + context.starData.getHabZoneStart() * 200f) {
 				//&& radiusWithMoons <= planet.getRadius() + 500f) {
 			if (planet.getSpec().getAtmosphereThickness() > 0) {
 				WeightedRandomPicker<String> glowPicker = new WeightedRandomPicker<String>(random);
@@ -1867,7 +1877,7 @@ public class StarSystemGenerator {
 //		int fromParentOrbitIndex = context.orbitIndex;
 		String age = context.age;
 		//String starType = context.star.getTypeId();
-		String starType = star.getTypeId();
+		String starType = star != null ? star.getTypeId() : null;
 		if (context.center instanceof PlanetAPI) {
 			PlanetAPI star = (PlanetAPI) context.center;
 			if (star.isStar()) starType = star.getTypeId();
@@ -1964,7 +1974,7 @@ public class StarSystemGenerator {
 		int fromParentOrbitIndex = context.orbitIndex;
 		String age = context.age;
 		//String starType = context.star.getTypeId();
-		String starType = star.getTypeId();
+		String starType = star != null ? star.getTypeId() : null;
 		if (context.center instanceof PlanetAPI) {
 			PlanetAPI star = (PlanetAPI) context.center;
 			if (star.isStar()) starType = star.getTypeId();
@@ -2135,6 +2145,13 @@ public class StarSystemGenerator {
 	
 
 	
+	public void init(StarSystemAPI system, StarAge age) {
+		sector = Global.getSector();
+		hyper = Global.getSector().getHyperspace();
+		this.starAge = age;
+		this.system = system;
+		
+	}
 	protected boolean initSystem(String name, Vector2f loc) {
 		sector = Global.getSector();
 		system = sector.createStarSystem(name);

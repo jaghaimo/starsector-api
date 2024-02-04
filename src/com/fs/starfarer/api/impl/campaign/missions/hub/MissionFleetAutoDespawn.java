@@ -9,12 +9,14 @@ import com.fs.starfarer.api.campaign.ai.FleetAssignmentDataAPI;
 import com.fs.starfarer.api.campaign.comm.IntelInfoPlugin;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
+import com.fs.starfarer.api.impl.campaign.missions.DelayedFleetEncounter;
 import com.fs.starfarer.api.util.Misc;
 
 public class MissionFleetAutoDespawn implements EveryFrameScript {
 
 	protected CampaignFleetAPI fleet;
 	protected float elapsedWaitingForDespawn = 0f;
+	protected float elapsed = 0f;
 	protected HubMission mission;
 	
 	public MissionFleetAutoDespawn(HubMission mission, CampaignFleetAPI fleet) {
@@ -24,7 +26,7 @@ public class MissionFleetAutoDespawn implements EveryFrameScript {
 	
 	protected int framesWithNoAssignment = 0;
 	public void advance(float amount) {
-		
+		elapsed += amount;
 //		System.out.println("MFAD: " + fleet.getName());
 //		if (fleet.getName().equals("Courier")) {
 //			System.out.println("fwefwf23f");
@@ -40,7 +42,7 @@ public class MissionFleetAutoDespawn implements EveryFrameScript {
 		if (ad != null && 
 				(ad.getAssignment() == FleetAssignment.INTERCEPT || ad.getAssignment() == FleetAssignment.FOLLOW) &&
 				ad.getTarget() == Global.getSector().getPlayerFleet() &&
-				!missionImportant) {
+				!missionImportant && elapsed > 10f) {
 			CampaignFleetAPI pf = Global.getSector().getPlayerFleet();
 			if (!fleet.isInCurrentLocation()) { 
 				float dist = Misc.getDistanceLY(fleet, Global.getSector().getPlayerFleet());
@@ -52,7 +54,8 @@ public class MissionFleetAutoDespawn implements EveryFrameScript {
 				}
 			}
 			else if (fleet.isHostileTo(pf) && fleet.getFaction() != null && 
-					!fleet.getFaction().isHostileTo(Factions.PLAYER)) {
+					!fleet.getFaction().isHostileTo(Factions.PLAYER) && 
+					!(mission instanceof DelayedFleetEncounter)) {
 				fleet.removeFirstAssignment();
 				if (fleet.getCurrentAssignment() == null) {
 					Misc.giveStandardReturnToSourceAssignments(fleet);

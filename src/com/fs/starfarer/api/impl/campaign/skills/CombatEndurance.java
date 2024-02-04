@@ -25,7 +25,8 @@ public class CombatEndurance {
 	
 	//public static float OVERLOAD_REDUCTION = 30f;
 	
-	public static float MAX_REGEN_LEVEL = 0.5f;
+	//public static float MAX_REGEN_LEVEL = 0.5f;
+	public static float MAX_REGEN_LEVEL = 1f;
 	public static float REGEN_RATE = 0.005f;
 	public static float TOTAL_REGEN_MAX_POINTS = 2000f;
 	public static float TOTAL_REGEN_MAX_HULL_FRACTION = 0.5f;

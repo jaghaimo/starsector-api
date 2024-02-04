@@ -4,11 +4,13 @@ import com.fs.starfarer.api.characters.MutableCharacterStatsAPI;
 import com.fs.starfarer.api.characters.ShipSkillEffect;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
+import com.fs.starfarer.api.util.Misc;
 
 public class OrdnanceExpertise {
 	
 	public static float MAX_CR_BONUS = 15;
-	public static float FLUX_PER_OP = 2;
+	//public static float FLUX_PER_OP = 2;
+	public static float FLUX_PER_OP = 1.5f;
 	public static float CAP_PER_OP = 20;
 	
 	
@@ -91,6 +93,12 @@ public class OrdnanceExpertise {
 		}
 		
 		public String getEffectDescription(float level) {
+			if ((int)FLUX_PER_OP != FLUX_PER_OP) {
+//				if (FLUX_PER_OP == 1.5f) {
+//					return "+3 flux dissipation per every 2 ordnance points spent on weapons";
+//				}
+				return "+" + Misc.getRoundedValueMaxOneAfterDecimal(FLUX_PER_OP) + " flux dissipation per ordnance point spent on weapons";
+			}
 			return "+" + (int)(FLUX_PER_OP) + " flux dissipation per ordnance point spent on weapons";
 		}
 		

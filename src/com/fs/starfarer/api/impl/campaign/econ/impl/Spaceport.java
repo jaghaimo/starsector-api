@@ -27,8 +27,8 @@ public class Spaceport extends BaseIndustry implements MarketImmigrationModifier
 	
 	public static float UPKEEP_MULT_PER_DEFICIT = 0.1f;
 	
-	public static float BASE_ACCESSIBILITY = 0.6f;
-	public static float MEGAPORT_ACCESSIBILITY = 0.9f;
+	public static float BASE_ACCESSIBILITY = 0.5f;
+	public static float MEGAPORT_ACCESSIBILITY = 0.8f;
 	
 	public static float ALPHA_CORE_ACCESSIBILITY = 0.2f;
 	public static float IMPROVE_ACCESSIBILITY = 0.2f;

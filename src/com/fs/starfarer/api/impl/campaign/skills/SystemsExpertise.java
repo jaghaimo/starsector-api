@@ -17,6 +17,8 @@ public class SystemsExpertise {
 	public static float OVERLOAD_REDUCTION = 25f;
 	public static float MALFUNCTION_CHANCE_MULT = 0.5f;
 	
+	public static float ELITE_DAMAGE_REDUCTION = 10f;
+	
 
 	public static class Level1 implements ShipSkillEffect {
 		public void apply(MutableShipStatsAPI stats, HullSize hullSize, String id, float level) {
@@ -168,6 +170,33 @@ public class SystemsExpertise {
 		public String getEffectDescription(float level) {
 			String percent = "" + (int)Math.round((1f - MALFUNCTION_CHANCE_MULT) * 100f) + "%";
 			return "Chance of malfunctions when at low combat readiness reduced by " + percent;
+		}
+		
+		public String getEffectPerLevelDescription() {
+			return null;
+		}
+		
+		public ScopeDescription getScopeDescription() {
+			return ScopeDescription.PILOTED_SHIP;
+		}
+	}
+	
+	public static class Level8 implements ShipSkillEffect {
+		public void apply(MutableShipStatsAPI stats, HullSize hullSize, String id, float level) {
+			stats.getArmorDamageTakenMult().modifyMult(id, 1f - ELITE_DAMAGE_REDUCTION / 100f);
+			stats.getHullDamageTakenMult().modifyMult(id, 1f - ELITE_DAMAGE_REDUCTION / 100f);
+			stats.getShieldDamageTakenMult().modifyMult(id, 1f - ELITE_DAMAGE_REDUCTION / 100f);
+		}
+		
+		public void unapply(MutableShipStatsAPI stats, HullSize hullSize, String id) {
+			stats.getArmorDamageTakenMult().unmodifyMult(id);
+			stats.getHullDamageTakenMult().unmodifyMult(id);
+			stats.getShieldDamageTakenMult().unmodifyMult(id);	
+		}
+		
+		public String getEffectDescription(float level) {
+			String percent = "-" + (int)ELITE_DAMAGE_REDUCTION + "%";
+			return percent + " damage taken";
 		}
 		
 		public String getEffectPerLevelDescription() {

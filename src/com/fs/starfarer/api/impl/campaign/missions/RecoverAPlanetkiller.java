@@ -37,7 +37,7 @@ public class RecoverAPlanetkiller extends HubMissionWithSearch {
 	public static boolean gotDataFromMysteryAI() {
 		return Global.getSector().getMemoryWithoutUpdate().getBoolean("$pk_gotDataFromMysteryAI");
 	}
-	public CampaignFleetAPI getNexus() {
+	public static CampaignFleetAPI getNexus() {
 		return (CampaignFleetAPI) Global.getSector().getPersistentData().get(MiscellaneousThemeGenerator.PK_NEXUS_KEY);
 	}
 	public StarSystemAPI getNexusSystem() {

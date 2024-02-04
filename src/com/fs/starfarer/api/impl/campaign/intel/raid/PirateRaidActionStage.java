@@ -365,7 +365,7 @@ public class PirateRaidActionStage extends ActionStage implements FleetActionDel
 		}
 		
 		removeMilScripts();
-	}	
+	}
 	
 	public String getRaidActionText(CampaignFleetAPI fleet, MarketAPI market) {
 		return "raiding " + market.getName();

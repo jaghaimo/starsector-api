@@ -22,7 +22,7 @@ import com.fs.starfarer.api.ui.TooltipMakerAPI.TooltipCreator;
 	}
 
 	@Override
-	public TooltipCreator getMainRowTooltip() {
+	public TooltipCreator getMainRowTooltip(BaseEventIntel intel) {
 		return new BaseFactorTooltip() {
 			@Override
 			public void createTooltip(TooltipMakerAPI tooltip, boolean expanded, Object tooltipParam) {

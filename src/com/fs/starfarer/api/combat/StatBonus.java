@@ -124,7 +124,10 @@ public class StatBonus {
 	public void modifyFlat(String source, float value, String desc) {
 		StatMod mod = getFlatBonuses().get(source);
 		if (mod == null && value == 0) return;
-		if (mod != null && mod.value == value) return;
+		if (mod != null && mod.value == value) {
+			mod.desc = desc;
+			return;
+		}
 		
 		mod = new StatMod(source, StatModType.FLAT, value, desc);
 		getFlatBonuses().put(source, mod);
@@ -138,7 +141,10 @@ public class StatBonus {
 	public void modifyPercent(String source, float value, String desc) {
 		StatMod mod = getPercentBonuses().get(source);
 		if (mod == null && value == 0) return;
-		if (mod != null && mod.value == value) return;
+		if (mod != null && mod.value == value) {
+			mod.desc = desc;
+			return;
+		}
 		
 		mod = new StatMod(source, StatModType.PERCENT, value, desc);
 		getPercentBonuses().put(source, mod);
@@ -157,7 +163,10 @@ public class StatBonus {
 	public void modifyMult(String source, float value, String desc) {
 		StatMod mod = getMultBonuses().get(source);
 		if (mod == null && value == 1) return;
-		if (mod != null && mod.value == value) return;
+		if (mod != null && mod.value == value) {
+			mod.desc = desc;
+			return;
+		}
 		
 		mod = new StatMod(source, StatModType.MULT, value, desc);
 		getMultBonuses().put(source, mod);

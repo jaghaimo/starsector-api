@@ -71,6 +71,7 @@ public class EntropyAmplifierStats extends BaseShipSystemScript {
 		
 		final TargetData targetData = (TargetData) targetDataObj;
 		targetData.currDamMult = 1f + (DAM_MULT - 1f) * effectLevel;
+		//System.out.println("targetData.currDamMult: " + targetData.currDamMult);
 		if (targetData.targetEffectPlugin == null) {
 			targetData.targetEffectPlugin = new BaseEveryFrameCombatPlugin() {
 				@Override

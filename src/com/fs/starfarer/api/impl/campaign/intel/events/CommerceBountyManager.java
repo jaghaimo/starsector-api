@@ -8,7 +8,6 @@ import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Industries;
 import com.fs.starfarer.api.impl.campaign.intel.SystemBountyIntel;
-import com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel.Stage;
 import com.fs.starfarer.api.util.IntervalUtil;
 import com.fs.starfarer.api.util.Misc;
 
@@ -28,11 +27,11 @@ public class CommerceBountyManager implements EveryFrameScript {
 		float days = Global.getSector().getClock().convertToDays(amount);
 		tracker.advance(days);
 		if (tracker.intervalElapsed()) {
-			HostileActivityEventIntel ha = HostileActivityEventIntel.get();
-			if (ha == null) return;
+//			HostileActivityEventIntel ha = HostileActivityEventIntel.get();
+//			if (ha == null) return;
 			
-			boolean haLevelSufficient = ha.isStageActive(Stage.HA_1);
-			//haLevelSufficient = true;
+			//boolean haLevelSufficient = ha.isStageActive(Stage.HA_1);
+			boolean haLevelSufficient = true;
 			
 			for (StarSystemAPI system : Misc.getPlayerSystems(false)) {
 				SystemBountyIntel bounty = getCommerceBounty(system);
@@ -41,15 +40,18 @@ public class CommerceBountyManager implements EveryFrameScript {
 				boolean hasFunctionalCommerce = doesStarSystemHavePlayerCommerceIndustry(system, true);
 				boolean hasCommerce = doesStarSystemHavePlayerCommerceIndustry(system, false);
 			
+				if (bounty != null && (!hasCommerce || !haLevelSufficient)) {
+					bounty.endAfterDelay();
+					continue;
+				}
+				
 				MarketAPI market = getPlayerCommerceMarket(system);
 				if (market == null) continue;
 				
 				if (bounty == null && hasFunctionalCommerce && haLevelSufficient) {
 					float reward = Global.getSettings().getFloat("baseCommerceSystemBounty");
 					new SystemBountyIntel(market, (int) reward, true);
-				} else if (bounty != null && (!hasCommerce || !haLevelSufficient)) {
-					bounty.endAfterDelay();
-				}
+				} 
 			}
 		}
 	}

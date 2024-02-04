@@ -45,6 +45,7 @@ import com.fs.starfarer.api.impl.campaign.ids.Ranks;
 import com.fs.starfarer.api.impl.campaign.ids.ShipRoles;
 import com.fs.starfarer.api.impl.campaign.ids.Skills;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
+import com.fs.starfarer.api.impl.campaign.terrain.HyperspaceTerrainPlugin;
 import com.fs.starfarer.api.loading.AbilitySpecAPI;
 import com.fs.starfarer.api.loading.WeaponSlotAPI;
 import com.fs.starfarer.api.plugins.CreateFleetPlugin;
@@ -344,6 +345,14 @@ public class FleetFactoryV3 {
 		int phase = (int) (combatPts * dP / doctrineTotal);
 		
 		warships += (combatPts - warships - carriers - phase);
+		
+		if (params.addShips != null) {
+			for (String variantId : params.addShips) {
+				ShipRolePick pick = new ShipRolePick(variantId);
+				warships -= addToFleet(pick, fleet, random);
+			}
+			if (warships < 0) warships = 0;
+		}
 		
 		
 		if (params.treatCombatFreighterSettingAsFraction != null && params.treatCombatFreighterSettingAsFraction) {
@@ -1893,6 +1902,82 @@ public class FleetFactoryV3 {
 	
 	public static void addCommanderSkills(PersonAPI commander, CampaignFleetAPI fleet, Random random) {
 		addCommanderSkills(commander, fleet, null, random);
+	}
+	
+	
+	public static void applyDamageToFleet(CampaignFleetAPI fleet, float damage, 
+										  boolean damageRemainingShips, Random random) {
+		if (random == null) random = Misc.random;
+		WeightedRandomPicker<FleetMemberAPI> picker = new WeightedRandomPicker<FleetMemberAPI>();
+		
+		List<FleetMemberAPI> members = fleet.getFleetData().getMembersListCopy();
+		for (FleetMemberAPI member : members) {
+			float w = 1f;
+			if (member.isCivilian()) w *= 0.25f;
+			
+			picker.add(member, w);
+		}
+		
+		List<FleetMemberAPI> remove = new ArrayList<FleetMemberAPI>();
+		float removedFP = 0f;
+		float fpToRemove = fleet.getFleetPoints() * damage * 0.8f;
+		
+		while (removedFP < fpToRemove && remove.size() < members.size() - 1 && !picker.isEmpty()) {
+			FleetMemberAPI member = picker.pickAndRemove();
+			removedFP += member.getFleetPointCost();
+			remove.add(member);
+		}
+		
+		for (FleetMemberAPI member : remove) {
+			fleet.getFleetData().removeFleetMember(member);
+		}
+		
+		
+		if (damageRemainingShips) {
+			int numStrikes = (int) Math.round(picker.getItems().size() * damage);
+			
+			for (int i = 0; i < numStrikes; i++) {
+				FleetMemberAPI member = picker.pick();
+				if (member == null) return;
+				
+				if (random.nextFloat() > damage) continue;
+				
+				float crPerDep = member.getDeployCost();
+				//if (crPerDep <= 0) continue;			
+				float suppliesPerDep = member.getStats().getSuppliesToRecover().getModifiedValue();
+				if (suppliesPerDep <= 0 || crPerDep <= 0) return;
+				float suppliesPer100CR = suppliesPerDep * 1f / Math.max(0.01f, crPerDep);
+	
+				float strikeSupplies = suppliesPer100CR * damage * (0.25f + 0.75f * random.nextFloat());  
+				float strikeDamage = strikeSupplies / suppliesPer100CR * (0.75f + (float) Math.random() * 0.5f);
+				
+				if (strikeDamage > HyperspaceTerrainPlugin.STORM_MAX_STRIKE_DAMAGE) {
+					strikeDamage = HyperspaceTerrainPlugin.STORM_MAX_STRIKE_DAMAGE;
+				}
+				
+				if (strikeDamage > 0) {
+					float currCR = member.getRepairTracker().getBaseCR();
+					float crDamage = Math.min(currCR, strikeDamage);
+					
+					member.getRepairTracker().setCR(currCR - crDamage);
+					
+					float hitStrength = member.getStats().getArmorBonus().computeEffective(member.getHullSpec().getArmorRating());
+					int numHits = (int) (strikeDamage / 0.1f);
+					if (numHits < 1) numHits = 1;
+					for (int j = 0; j < numHits; j++) {
+						member.getStatus().applyDamage(hitStrength);
+					}
+					
+					if (member.getStatus().getHullFraction() < 0.01f) {
+						member.getStatus().setHullFraction(0.01f);
+						picker.remove(member);
+					} else {
+						float w = picker.getWeight(member);
+						picker.setWeight(picker.getItems().indexOf(member), w * 0.5f);
+					}
+				}
+			}
+		}
 	}
 }
 

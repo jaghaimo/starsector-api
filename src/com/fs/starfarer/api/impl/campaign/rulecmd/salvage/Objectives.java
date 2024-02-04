@@ -7,6 +7,8 @@ import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.CargoAPI;
 import com.fs.starfarer.api.campaign.CargoAPI.CargoItemType;
+import com.fs.starfarer.api.campaign.CargoPickerListener;
+import com.fs.starfarer.api.campaign.CargoStackAPI;
 import com.fs.starfarer.api.campaign.CoreInteractionListener;
 import com.fs.starfarer.api.campaign.CustomCampaignEntityPlugin;
 import com.fs.starfarer.api.campaign.CustomEntitySpecAPI;
@@ -27,6 +29,7 @@ import com.fs.starfarer.api.impl.campaign.DebugFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.Entities;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
+import com.fs.starfarer.api.impl.campaign.ids.Items;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.intel.events.ht.HTNeutrinoBurstFactor;
@@ -35,6 +38,8 @@ import com.fs.starfarer.api.impl.campaign.intel.events.ht.HyperspaceTopographyEv
 import com.fs.starfarer.api.impl.campaign.intel.misc.CommSnifferIntel;
 import com.fs.starfarer.api.impl.campaign.rulecmd.AddRemoveCommodity;
 import com.fs.starfarer.api.impl.campaign.rulecmd.BaseCommandPlugin;
+import com.fs.starfarer.api.impl.campaign.rulecmd.FireBest;
+import com.fs.starfarer.api.impl.campaign.shared.WormholeManager;
 import com.fs.starfarer.api.impl.campaign.velfield.SlipstreamVisibilityManager;
 import com.fs.starfarer.api.loading.Description;
 import com.fs.starfarer.api.loading.Description.Type;
@@ -50,6 +55,9 @@ import com.fs.starfarer.api.util.Misc.Token;
 public class Objectives extends BaseCommandPlugin {
 
 	public static String BURST_RANGE = "$COB_burstRange";
+	
+	public static int WORMHOLE_FUEL = 100;
+	public static String WORMHOLE_TYPE_STR = "wormhole";
 	
 	public static float BURST_RANGE_MAKESHIFT = 10;
 	public static float BURST_RANGE_DOMAIN = 15;
@@ -95,7 +103,8 @@ public class Objectives extends BaseCommandPlugin {
 			memory.set(BURST_RANGE, (int)BURST_RANGE_DOMAIN, 0);
 		}
 		
-		//DebugFlags.OBJECTIVES_DEBUG = false;
+//		DebugFlags.OBJECTIVES_DEBUG = false;
+//		DebugFlags.OBJECTIVES_DEBUG = true;
 	}
 
 	public boolean execute(String ruleId, InteractionDialogAPI dialog, List<Token> params, Map<String, MemoryAPI> memoryMap) {
@@ -119,6 +128,10 @@ public class Objectives extends BaseCommandPlugin {
 			printCost(type);
 		} else if (command.equals("showSalvage")) {
 			printSalvage();
+		} else if (command.equals("selectWormholeAnchor")) {
+			selectWormholeAnchor();
+		} else if (command.equals("hasWormholeAnchor")) {
+			return hasWormholeAnchor();
 		} else if (command.equals("hasRepImpact")) {
 			return hasRepImpact();
 		} else if (command.equals("showRepairCost")) {
@@ -326,7 +339,7 @@ public class Objectives extends BaseCommandPlugin {
 		}
 		// so that a false sensor reading doesn't spawn immediately after "introducing false readings"
 		Global.getSector().getPlayerFleet().getMemoryWithoutUpdate().set(MemFlags.FLEET_NOT_CHASING_GHOST, true,
-								0.5f +Misc.random.nextFloat() * 1f);
+								0.5f + Misc.random.nextFloat() * 1f);
 		updateMemory();
 	}
 	
@@ -340,6 +353,9 @@ public class Objectives extends BaseCommandPlugin {
 	}
 	
 	public void build(String type, String factionId) {
+		if (entity.hasTag(Tags.NON_CLICKABLE)) return;
+		if (entity.hasTag(Tags.FADING_OUT_AND_EXPIRING)) return;
+		
 		LocationAPI loc = entity.getContainingLocation();
 		SectorEntityToken built = loc.addCustomEntity(null,
 				 									 null,
@@ -366,9 +382,16 @@ public class Objectives extends BaseCommandPlugin {
 			return true;
 		}
 		
+		
 		CargoAPI cargo = playerCargo;
 		String [] res = getResources();
 		int [] quantities = getQuantities();
+		
+		if (type.equals(WORMHOLE_TYPE_STR)) {
+			res = getWormholeResources();
+			quantities = getWormholeQuantities();
+		}
+		
 		for (int i = 0; i < res.length; i++) {
 			String commodityId = res[i];
 			int quantity = quantities[i];
@@ -578,6 +601,10 @@ public class Objectives extends BaseCommandPlugin {
 	}
 	
 	public void printCost(String type) {
+		if (type.equals(WORMHOLE_TYPE_STR)) {
+			Misc.showCost(text, null, null, getWormholeResources(), getWormholeQuantities());
+			return;
+		}
 		printDescription(type);
 		
 		Misc.showCost(text, null, null, getResources(), getQuantities());
@@ -587,6 +614,14 @@ public class Objectives extends BaseCommandPlugin {
 		} else {
 			text.addPara("You do not have the necessary resources to build this structure.");
 		}
+	}
+	
+	public String [] getWormholeResources() {
+		return new String[] {Commodities.FUEL};
+	}
+	
+	public int [] getWormholeQuantities() {
+		return new int[] {WORMHOLE_FUEL};
 	}
 	
 	public String [] getResources() {
@@ -629,6 +664,68 @@ public class Objectives extends BaseCommandPlugin {
 	
 	public String [] getBurstResources() {
 		return new String[] {Commodities.VOLATILES};
+	}
+	
+	public boolean hasWormholeAnchor() {
+		return !getWormholeAnchors().isEmpty();
+	}
+	public CargoAPI getWormholeAnchors() {
+		CargoAPI copy = Global.getFactory().createCargo(false);
+		for (CargoStackAPI stack : playerCargo.getStacksCopy()) {
+			if (stack.isSpecialStack() && Items.WORMHOLE_ANCHOR.equals(stack.getSpecialDataIfSpecial().getId())) {
+				copy.addFromStack(stack);
+			}
+		}
+		copy.sort();
+		return copy;
+	}
+	
+	public void selectWormholeAnchor() {
+		CargoAPI copy = getWormholeAnchors();
+		
+		final float width = 310f;
+		dialog.showCargoPickerDialog("Select wormhole anchor to deploy", "Deploy", "Cancel", true, width, copy, 
+				new CargoPickerListener() {
+			public void pickedCargo(CargoAPI cargo) {
+				if (cargo.isEmpty()) {
+					cancelledCargoSelection();
+					return;
+				}
+				
+				cargo.sort();
+				for (CargoStackAPI stack : cargo.getStacksCopy()) {
+					if (stack.isSpecialStack()) {
+						WormholeManager.get().addWormhole(stack.getSpecialDataIfSpecial(), entity, dialog);
+						
+						if (!DebugFlags.OBJECTIVES_DEBUG) {
+							playerCargo.removeCommodity(Commodities.FUEL, WORMHOLE_FUEL);
+							AddRemoveCommodity.addCommodityLossText(Commodities.FUEL, WORMHOLE_FUEL, text);
+						}
+						
+						FireBest.fire(null, dialog, memoryMap, "WormholeDeploymentFinished");
+						break;
+					}
+				}
+			}
+			public void cancelledCargoSelection() {
+			}
+			public void recreateTextPanel(TooltipMakerAPI panel, CargoAPI cargo, CargoStackAPI pickedUp, boolean pickedUpFromSource, CargoAPI combined) {
+				panel.addPara("Deploying and activating a wormhole anchor, turning it into an active terminus, "
+						+ "will consume %s fuel. Your fleet is carrying %s fuel.",
+						0f, Misc.getHighlightColor(),
+						"" + WORMHOLE_FUEL,
+						"" + (int)playerCargo.getFuel());
+				
+				boolean makeUnstable = WormholeManager.willWormholeBecomeUnstable(entity);
+				if (makeUnstable) {
+					panel.addPara("Once the operation is completed, the wormhole will take about a cycle to stablize,"
+							+ "before it can be used.", 10f, Misc.getHighlightColor(), "cycle");
+				} else {
+					panel.addPara("Usually, the wormhole will take about a cycle to stablize, but you have "
+							+ "calibration data that will allow it to be used immediately.", 10f);
+				}
+			}
+		});
 	}
 }
 

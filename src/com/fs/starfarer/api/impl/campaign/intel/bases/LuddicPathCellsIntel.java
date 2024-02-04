@@ -220,7 +220,8 @@ public class LuddicPathCellsIntel extends BaseIntelPlugin implements RouteFleetS
 		if (isSleeper()) return;
 		
 		// incidents handled through HostileActivityEventIntel now
-		if (true) return;
+		// not anymore since the change from Hostile Activity -> Colony Crises
+		//if (market.isPlayerOwned()) return;
 		
 		if (DebugFlags.PATHER_BASE_DEBUG) {
 			days *= 200f;
@@ -574,7 +575,7 @@ public class LuddicPathCellsIntel extends BaseIntelPlugin implements RouteFleetS
 		Set<String> tags = super.getIntelTags(map);
 		tags.add(Factions.LUDDIC_PATH);
 		
-		if (market.isPlayerOwned()) {
+		if (market.isPlayerOwned() && !isSleeper()) {
 			tags.add(Tags.INTEL_COLONIES);
 		}
 		

@@ -145,6 +145,14 @@ public class PirateBaseIntel extends BaseIntelPlugin implements EveryFrameScript
 	protected IntervalUtil monthlyInterval = new IntervalUtil(20f, 40f);
 	protected int raidTimeoutMonths = 0;
 	
+	public static PirateBaseIntel getIntelFor(MarketAPI market) {
+		for (IntelInfoPlugin p : Global.getSector().getIntelManager().getIntel(PirateBaseIntel.class)) {
+			PirateBaseIntel intel = (PirateBaseIntel) p;
+			if (intel.getMarket() == market) return intel;
+		}
+		return null;
+	}
+	
 	
 	public boolean playerHasDealWithBaseCommander() {
 		return baseCommander != null && baseCommander.getMemoryWithoutUpdate().getBoolean(HAS_DEAL_WITH_BASE_COMMANDER);
@@ -308,6 +316,14 @@ public class PirateBaseIntel extends BaseIntelPlugin implements EveryFrameScript
 	}
 	
 	public void startRaid(StarSystemAPI target, float raidFP) {
+		// if piracy respite: no raids against systems with player colonies
+		//if (PiracyRespiteScript.get() != null && target != null &&
+		// actually just no raids against the player, period - that's handled by Colony Crises
+		if (target != null && 
+				!Misc.getMarketsInLocation(target, Factions.PLAYER).isEmpty()) {
+			return;
+		}
+		
 		boolean hasTargets = false;
 		for (MarketAPI curr : Misc.getMarketsInLocation(target)) {
 			if (curr.getFaction().isHostileTo(getFactionForUIColors())) {
@@ -971,6 +987,7 @@ public class PirateBaseIntel extends BaseIntelPlugin implements EveryFrameScript
 		
 		// old way, when pirate activity applied to player colonies
 		// not needed anymore but shouldn't hurt
+		// aaand, needed again since HA is now "Colony Crises" and works differently
 		if (target != null && !Misc.getMarketsInLocation(target, Factions.PLAYER).isEmpty()) {
 			tags.add(Tags.INTEL_COLONIES);
 		}
@@ -1200,6 +1217,8 @@ public class PirateBaseIntel extends BaseIntelPlugin implements EveryFrameScript
 		WeightedRandomPicker<FactionAPI> picker = new WeightedRandomPicker<FactionAPI>();
 		for (MarketAPI curr : Global.getSector().getEconomy().getMarkets(target)) {
 			if (curr.getFaction().isPlayerFaction()) continue;
+			if (curr.getFaction().getCustom().optBoolean(Factions.CUSTOM_POSTS_NO_BOUNTIES)) continue;
+			
 			if (affectsMarket(curr)) {
 				picker.add(curr.getFaction(), (float) Math.pow(2f, curr.getSize()));
 			}
@@ -1281,7 +1300,12 @@ public class PirateBaseIntel extends BaseIntelPlugin implements EveryFrameScript
 		if (market.getFaction() == this.market.getFaction()) return false;
 		
 		// player colonies affected by "Hostile Activity" instead
-		if (market.getFaction().isPlayerFaction()) return false;
+		// not anymore
+		//if (market.getFaction().isPlayerFaction()) return false;
+		
+		if (market.getFaction().isPlayerFaction() && playerHasDealWithBaseCommander()) {
+			return false;
+		}
 		
 		return true;
 	}

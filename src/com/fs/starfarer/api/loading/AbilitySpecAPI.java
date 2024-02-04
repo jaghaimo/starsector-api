@@ -38,4 +38,5 @@ public interface AbilitySpecAPI {
 	boolean hasOppositeTag(String tag);
 	String getOppositeTag(String tag);
 	boolean isPositiveTag(String tag);
+	boolean isNegativeTag(String tag);
 }

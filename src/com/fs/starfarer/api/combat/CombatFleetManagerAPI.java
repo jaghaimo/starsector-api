@@ -153,6 +153,16 @@ public interface CombatFleetManagerAPI {
 
 	AdmiralAIPlugin getAdmiralAI();
 	void setAdmiralAI(AdmiralAIPlugin admiralAI);
+
+	void removeDeployed(ShipAPI ship, boolean retreated);
+
+	void setMaxStrength(int maxStrength);
+	int getCurrStrength();
+	void modifyFlatMax(String source, int value);
+	void modifyPercentMax(String source, float percent);
+	void unmodifyMax();
+
+	void removeDeployed(FighterWingAPI wing, boolean retreated);
 }
 
 

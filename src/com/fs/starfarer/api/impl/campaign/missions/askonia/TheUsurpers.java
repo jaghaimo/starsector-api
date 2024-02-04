@@ -150,7 +150,6 @@ public class TheUsurpers extends HubMissionWithSearch {
 		makeImportant(macario, "$sdtu_didCadenMeeting", Stage.AGAIN_WTH_MACARIO);
 		// debris field is made important in Action
 		makeImportant(macario, "$sdtu_deliverNews", Stage.DELIVER_NEWS);
-		//setStageOnMemoryFlag(Stage.COMPLETED, baird.getMarket(), "$sdtu_completed");
 		
 		connectWithGlobalFlag(Stage.MEET_RAM, Stage.INTERCEPT_FLEET, "$sdtu_interceptFleet");
 		connectWithGlobalFlag(Stage.INTERCEPT_FLEET, Stage.MEET_HYDER, "$sdtu_meetHyder");
@@ -161,7 +160,6 @@ public class TheUsurpers extends HubMissionWithSearch {
 		connectWithGlobalFlag(Stage.AGAIN_WTH_MACARIO, Stage.EMERGENCY_INTERCEPT, "$sdtu_emergencyIntercept");
 		connectWithGlobalFlag(Stage.EMERGENCY_INTERCEPT, Stage.DELIVER_NEWS, "$sdtu_deliverNews");
 
-		
 		setStageOnGlobalFlag(Stage.COMPLETED, "$sdtu_completed");
 		
 		setRepFactionChangesNone();
@@ -412,7 +410,7 @@ public class TheUsurpers extends HubMissionWithSearch {
 				if (fleet.getMemoryWithoutUpdate().contains("$sdtu_merc")){
 					//Misc.makeUnimportant(fleet, "$sdtu_ref");
 					fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_ALLOW_LONG_PURSUIT, true);
-					fleet.getMemoryWithoutUpdate().set("$ignorePlayerCommRequests", true);
+					//fleet.getMemoryWithoutUpdate().set("$ignorePlayerCommRequests", true);
 					Misc.makeHostile(fleet);
 					
 					AbilityPlugin eb = fleet.getAbility(Abilities.EMERGENCY_BURN);

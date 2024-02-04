@@ -345,6 +345,10 @@ public interface FactionAPI extends HasMemory {
 	void initSpecIfNeeded();
 	JSONObject getCustomJSONObject(String key);
 	float getVariantWeightForRole(String roleId, ShipPickMode mode);
+	Color getSecondaryColorOverride();
+	void setSecondaryColorOverride(Color secondaryOverride);
+	int getSecondaryColorSegmentsOverride();
+	void setSecondaryColorSegmentsOverride(int secondaryColorSegmentsOverride);
 	
 	
 }

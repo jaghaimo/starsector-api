@@ -32,7 +32,7 @@ public class GAIntro2 extends GABaseMission {
 		
 		// if already accepted by the player, abort
 		if (!setGlobalReference("$gaIntro2_ref")) {
-			System.out.print("aborting because missions is already accepted");
+			//System.out.print("aborting because missions is already accepted");
 			return false;
 		}
 		
@@ -56,7 +56,6 @@ public class GAIntro2 extends GABaseMission {
 		addSuccessStages(Stage.COMPLETED);
 		
 		
-		setStoryMission();
 		makeImportant(baird.getMarket(), "$gaIntro2_returnHere", Stage.GO_TO_ACADEMY);
 		setStageOnGlobalFlag(Stage.GO_TO_ACADEMY, "$gaIntro2_started"); // so it isn't offered again
 		

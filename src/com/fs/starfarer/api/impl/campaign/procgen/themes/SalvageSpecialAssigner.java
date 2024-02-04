@@ -38,6 +38,8 @@ import com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator.Star
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BlueprintSpecial.BlueprintSpecialData;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BreadcrumbSpecial.BreadcrumbSpecialData;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.CargoManifestSpecial.CargoManifestSpecialData;
+import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.CryopodOfficerGen;
+import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.CryopodOfficerGen.CryopodOfficerTemplate;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.ShipRecoverySpecial.PerShipData;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.ShipRecoverySpecial.ShipCondition;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.ShipRecoverySpecial.ShipRecoverySpecialData;
@@ -53,14 +55,12 @@ import com.fs.starfarer.api.util.WeightedRandomPicker;
 
 public class SalvageSpecialAssigner {
 
-	@Deprecated public static int MIN_PODS_OFFICER_LEVEL = Global.getSettings().getInt("minSleeperPodsOfficerLevel");
-	@Deprecated public static int MAX_PODS_OFFICER_LEVEL = Global.getSettings().getInt("maxSleeperPodsOfficerLevel");
-	
 	public static int STANDARD_PODS_OFFICER_LEVEL = Global.getSettings().getInt("standardSleeperPodsOfficerLevel");
 	public static int EXCEPTIONAL_PODS_OFFICER_LEVEL = Global.getSettings().getInt("exceptionalSleeperPodsOfficerLevel");
 	public static int EXCEPTIONAL_PODS_OFFICER_ELITE_SKILLS = Global.getSettings().getInt("exceptionalSleeperPodsOfficerEliteSkills");
 	public static int MAX_EXCEPTIONAL_PODS_OFFICERS = Global.getSettings().getInt("maxExceptionalSleeperPodsOfficers");
 	public static float PROB_EXCEPTIONAL_PODS_OFFICER = Global.getSettings().getFloat("probSleeperPodsOfficerIsExceptional");
+	public static float PROB_UNEXCEPTIONAL_USE_TEMPLATE = Global.getSettings().getFloat("probSleeperPodsUnexceptionalOfficerUseTemplate");
 	
 	public static int MAX_NORMAL_OFFICER_LEVEL = Global.getSettings().getInt("officerMaxLevel");
 	
@@ -692,6 +692,18 @@ public class SalvageSpecialAssigner {
 				
 				PersonAPI officer = OfficerManagerEvent.createOfficer(faction, level, pref, true, null, true, 
 																	  true, eliteSkillNumOverride, random);
+				if (level == EXCEPTIONAL_PODS_OFFICER_LEVEL) {
+					CryopodOfficerTemplate template = CryopodOfficerGen.TEMPLATES_EXCEPTIONAL.pick(random);
+					if (template != null) {
+						officer = template.create(faction, random);
+					}
+				} else if (random.nextFloat() < PROB_UNEXCEPTIONAL_USE_TEMPLATE) {
+					CryopodOfficerTemplate template = CryopodOfficerGen.TEMPLATES_NORMAL.pick(random);
+					if (template != null) {
+						officer = template.create(faction, random);
+					}
+				}
+				
 				if (level == EXCEPTIONAL_PODS_OFFICER_LEVEL) {
 					officer.getMemoryWithoutUpdate().set(MemFlags.EXCEPTIONAL_SLEEPER_POD_OFFICER, true);
 				}

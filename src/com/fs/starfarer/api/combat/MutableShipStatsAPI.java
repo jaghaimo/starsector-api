@@ -242,6 +242,7 @@ public interface MutableShipStatsAPI {
 	public MutableStat getDamageToTargetEnginesMult();
 	public MutableStat getDamageToTargetWeaponsMult();
 	public MutableStat getDamageToTargetShieldsMult();
+	public MutableStat getDamageToTargetHullMult();
 	
 	/**
 	 * Clamped to a maximum of 1. Green crew at 0.

@@ -59,6 +59,8 @@ public interface FighterWingAPI {
 
 
 	void removeMember(ShipAPI member);
+
+	void setSourceBay(FighterLaunchBayAPI sourceBay);
 }
 
 

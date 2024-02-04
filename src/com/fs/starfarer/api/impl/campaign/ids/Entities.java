@@ -6,9 +6,13 @@ public class Entities {
 	public static final String DERELICT_SURVEY_PROBE = "derelict_probe";
 	public static final String DERELICT_SURVEY_SHIP = "derelict_survey_ship";
 	public static final String DERELICT_MOTHERSHIP = "derelict_mothership";
+	public static final String DERELICT_GATEHAULER = "derelict_gatehauler";
 	
 	public static final String DERELICT_CRYOSLEEPER = "derelict_cryosleeper";
 	public static final String CORONAL_TAP = "coronal_tap";
+	
+	public static final String SPEC_LIMBO_WORMHOLE_CACHE = "limbo_wormhole_cache";
+	public static final String LARGE_CACHE = "large_cache";
 	
 	
 	public static final String DEBRIS_FIELD_SHARED = "debris_field_shared";
@@ -75,6 +79,7 @@ public class Entities {
 	public static final String EXPLOSION = "explosion";
 	
 	public static final String SENSOR_GHOST = "sensor_ghost";
+	public static final String ABYSSAL_LIGHT = "abyssal_light";
 	
 	
 }

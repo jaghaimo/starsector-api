@@ -205,8 +205,6 @@ public class GAFindingCoureuse extends GABaseMission {
 	protected boolean callAction(String action, String ruleId, InteractionDialogAPI dialog, List<Token> params,
 								Map<String, MemoryAPI> memoryMap) {
 
-		// Clean up all the dialog vars used during Fikenhild sequence.
-		// TODO
 		if ("postFikenhildCleanup".equals(action)) {
 			// $global. is not needed here (and in fact will not work) since
 			// Global.getSector().getMemoryWithoutUpdate() returns the global memory already -Alex
@@ -438,6 +436,7 @@ public class GAFindingCoureuse extends GABaseMission {
 		triggerPickLocationTowardsPlayer(isirah.getHyperspaceAnchor(), 90f, getUnits(1.5f));
 		triggerSpawnFleetAtPickedLocation("$gaFC_isirahMerc", null);
 		triggerOrderFleetInterceptPlayer();
+		triggerSetFleetMissionRef("$gaFC_ref"); // so they can be made unimportant
 		triggerFleetMakeImportant(null, Stage.SEARCH_ISIRAH);
 		// ^ was CONFRONT_ARCHON - but should come a stage sooner to intercept player before reaching Isirah system
 		endTrigger();

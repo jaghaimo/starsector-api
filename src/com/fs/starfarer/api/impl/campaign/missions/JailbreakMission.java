@@ -120,7 +120,7 @@ public class JailbreakMission extends HubMissionWithBarEvent {
 		connectWithMarketDecivilized(Stage.JAILBREAK, Stage.FAILED_DECIV, market);
 		setStageOnMarketDecivilized(Stage.FAILED_DECIV, createdAt);
 		
-		setTimeLimit(Stage.FAILED, MISSION_DAYS, null);
+		setTimeLimit(Stage.FAILED, MISSION_DAYS, null, Stage.RETURN);
 		
 		//int size = market.getSize();
 		//setCreditReward(CreditReward.HIGH, size);

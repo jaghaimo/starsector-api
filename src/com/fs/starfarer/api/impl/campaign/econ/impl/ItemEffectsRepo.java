@@ -43,7 +43,7 @@ public class ItemEffectsRepo {
 	public static String COLD_OR_EXTREME_COLD = "cold or extreme cold";
 	
 	public static int CORONAL_TAP_LIGHT_YEARS = 10;
-	public static String CORONAL_TAP_RANGE = "coronal tap within " + CORONAL_TAP_LIGHT_YEARS + " light-years";
+	public static String CORONAL_TAP_RANGE = "coronal hypershunt within " + CORONAL_TAP_LIGHT_YEARS + " light-years";
 	
 	public static int CORONAL_TAP_TRANSPLUTONICS = 10;
 	public static int CORONAL_TAP_INDUSTRIES = 1;

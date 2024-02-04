@@ -65,6 +65,8 @@ public class SupportDoctrine {
 				new CombatEndurance.Level1().apply(stats, hullSize, id, level);
 				new CombatEndurance.Level2().apply(stats, hullSize, id, level);
 				new CombatEndurance.Level3().apply(stats, hullSize, id, level);
+				
+				new OrdnanceExpertise.Level1().apply(stats, hullSize, id, level);
 			} 
 		}
 		
@@ -79,10 +81,12 @@ public class SupportDoctrine {
 			new CombatEndurance.Level1().unapply(stats, hullSize, id);
 			new CombatEndurance.Level2().unapply(stats, hullSize, id);
 			new CombatEndurance.Level3().unapply(stats, hullSize, id);
+			
+			new OrdnanceExpertise.Level1().unapply(stats, hullSize, id);
 		}
 		
 		public String getEffectDescription(float level) {
-			return "Gain non-elite Helmsmanship, Damage Control, and Combat Endurance";
+			return "Gain non-elite Helmsmanship, Damage Control, Combat Endurance, and Ordnance Expertise";
 		}
 		
 		public String getEffectPerLevelDescription() {

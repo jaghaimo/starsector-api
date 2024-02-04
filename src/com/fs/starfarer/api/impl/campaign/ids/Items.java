@@ -62,6 +62,8 @@ public class Items {
 	public static final String JANUS = "janus";
 	
 	public static final String TOPOGRAPHIC_DATA = "topographic_data";
+	public static final String WORMHOLE_ANCHOR = "wormhole_anchor";
+	public static final String WORMHOLE_SCANNER = "wormhole_scanner";
 	
 }
 	

@@ -279,6 +279,7 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 //			System.out.println("wfweffewfew");
 //		}
 		
+		current.setMayAutoAssignWeapons(false);
 		current.getStationModules().putAll(target.getStationModules());
 
 		int index = 0;
@@ -350,6 +351,9 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 				}	
 			} else {
 				current.clearHullMods();
+			}
+			if (!fittingModule) {
+				delegate.syncUIWithVariant(current);
 			}
 		} else {
 			slotsToSkip.addAll(current.getFittedWeaponSlots()); 
@@ -526,6 +530,7 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 		
 		if (player) {
 			if (current.getWeaponGroups().isEmpty() || randomize || current.hasUnassignedWeapons()) {
+				current.setMayAutoAssignWeapons(true);
 				current.autoGenerateWeaponGroups();
 			}
 			//current.assignUnassignedWeapons();			

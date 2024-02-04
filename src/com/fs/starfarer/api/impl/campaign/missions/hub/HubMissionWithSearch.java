@@ -30,6 +30,8 @@ import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.MarketCMD;
+import com.fs.starfarer.api.impl.campaign.terrain.BaseRingTerrain;
+import com.fs.starfarer.api.impl.campaign.terrain.BaseTiledTerrain;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
 
@@ -2449,6 +2451,17 @@ public abstract class HubMissionWithSearch extends HubMissionWithTriggers {
 			List<CampaignTerrainAPI> terrainList = new ArrayList<CampaignTerrainAPI>(system.getTerrainCopy());
 			for (CampaignTerrainAPI terrain : terrainList) {
 				if (terrain.hasTag(Tags.EXPIRES)) continue;
+				
+				// exclude system-wide nebulas
+				if (terrain.getPlugin() instanceof BaseTiledTerrain) {
+					BaseTiledTerrain btt = (BaseTiledTerrain) terrain.getPlugin();
+					if (btt.getTiles() != null && btt.getTiles().length > 50) continue;
+				}
+				// exclude large rings
+				if (terrain.getPlugin() instanceof BaseRingTerrain) {
+					BaseRingTerrain rtp = (BaseRingTerrain) terrain.getPlugin();
+					if (rtp.getRingParams() != null && rtp.getRingParams().middleRadius > 5000f) continue;
+				}
 				inMatchingSystems.add(terrain);
 			}
 		}
@@ -2456,6 +2469,17 @@ public abstract class HubMissionWithSearch extends HubMissionWithTriggers {
 			List<CampaignTerrainAPI> terrainList = new ArrayList<CampaignTerrainAPI>(system.getTerrainCopy());
 			for (CampaignTerrainAPI terrain : terrainList) {
 				if (terrain.hasTag(Tags.EXPIRES)) continue;
+				
+				// exclude system-wide nebulas
+				if (terrain.getPlugin() instanceof BaseTiledTerrain) {
+					BaseTiledTerrain btt = (BaseTiledTerrain) terrain.getPlugin();
+					if (btt.getTiles() != null && btt.getTiles().length > 50) continue;
+				}
+				// exclude large rings
+				if (terrain.getPlugin() instanceof BaseRingTerrain) {
+					BaseRingTerrain rtp = (BaseRingTerrain) terrain.getPlugin();
+					if (rtp.getRingParams() != null && rtp.getRingParams().middleRadius > 5000f) continue;
+				}
 				inMatchingSystems.add(terrain);
 			}
 		}

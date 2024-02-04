@@ -120,4 +120,10 @@ public class RecentUnrest extends BaseMarketConditionPlugin {
 	public boolean isTransient() {
 		return false;
 	}
+	
+	public void setPenalty(int penalty) {
+		this.penalty = penalty;
+	}
+	
+	
 }

@@ -4,9 +4,10 @@ import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.EnumSet;
 import java.util.Iterator;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import com.fs.starfarer.api.Global;
@@ -17,6 +18,7 @@ import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.campaign.econ.EconomyAPI.EconomyUpdateListener;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.listeners.FleetEventListener;
+import com.fs.starfarer.api.combat.MutableStatWithTempMods;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.command.WarSimScript.LocationDanger;
 import com.fs.starfarer.api.impl.campaign.ids.Conditions;
@@ -33,25 +35,30 @@ import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI.TooltipCreator;
 import com.fs.starfarer.api.ui.TooltipMakerAPI.TooltipLocation;
 import com.fs.starfarer.api.util.Misc;
-import com.fs.starfarer.api.util.Pair;
-import com.fs.starfarer.api.util.Range;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
 
 public class HostileActivityEventIntel extends BaseEventIntel implements EconomyUpdateListener, FleetEventListener {
 
 	public static enum Stage {
 		START,
-		HA_1,
 		MINOR_EVENT,
-		HA_2,
-		INCREASED_DEFENSES,
-		HA_3,
-		HA_4,
 		HA_EVENT,
+		
+		// unused, left in for save compatibility between 0.96a and 0.96.1a, can remove for 0.97a
+		@Deprecated HA_1,
+		@Deprecated HA_2,
+		@Deprecated INCREASED_DEFENSES,
+		@Deprecated HA_3,
+		@Deprecated HA_4,
 	}
 	public static String KEY = "$hae_ref";
 	
 	public static float FP_PER_POINT = Global.getSettings().getFloat("HA_fleetPointsPerPoint");
+	
+	public static int MAX_PROGRESS = 500;
+	
+	public static int RESET_MIN = 0;
+	public static int RESET_MAX = 350;
 	
 	
 	public static class HAERandomEventData {
@@ -79,38 +86,42 @@ public class HostileActivityEventIntel extends BaseEventIntel implements Economy
 	}
 	
 	
-	protected float accessibilityPenalty;
-	protected float stabilityPenalty;
-	
 	public static HostileActivityEventIntel get() {
 		return (HostileActivityEventIntel) Global.getSector().getMemoryWithoutUpdate().get(KEY);
 	}
 	
+	protected int blowback;
+	protected Map<String, MutableStatWithTempMods> systemSpawnMults = new LinkedHashMap<String, MutableStatWithTempMods>();
+	
 	public HostileActivityEventIntel() {
 		super();
 		
-		Global.getSector().getEconomy().addUpdateListener(this);
+		//Global.getSector().getEconomy().addUpdateListener(this);
 		
 		Global.getSector().getMemoryWithoutUpdate().set(KEY, this);
 		
+		setup();
+		
+		// now that the event is fully constructed, add it and send notification
+		Global.getSector().getIntelManager().addIntel(this);
+	}
+	
+	protected void setup() {
+		factors.clear();
+		stages.clear();
+		
 		setMaxProgress(500);
 		addStage(Stage.START, 0);
-		addStage(Stage.HA_1, 50, StageIconSize.MEDIUM);
-		addStage(Stage.MINOR_EVENT, 100, StageIconSize.SMALL);
-		addStage(Stage.HA_2, 150, StageIconSize.MEDIUM);
-		addStage(Stage.INCREASED_DEFENSES, 200, true, StageIconSize.LARGE);
-		addStage(Stage.HA_3, 250, StageIconSize.MEDIUM);
-		addStage(Stage.HA_4, 350, StageIconSize.MEDIUM);
+		addStage(Stage.MINOR_EVENT, 250, StageIconSize.MEDIUM);
 		addStage(Stage.HA_EVENT, 500, true, StageIconSize.LARGE);
 		
-		setRandomized(Stage.MINOR_EVENT, RandomizedStageType.BAD, 50, 75, false, false);
-		setRandomized(Stage.HA_EVENT, RandomizedStageType.BAD, 400, 450, false);
+		setRandomized(Stage.MINOR_EVENT, RandomizedStageType.BAD, 150, 200, false, false);
+		setRandomized(Stage.HA_EVENT, RandomizedStageType.BAD, 350, 425, false);
 		
-		getDataFor(Stage.INCREASED_DEFENSES).sendIntelUpdateOnReaching = false;
-
-		
-		addFactor(new HADefensiveMeasuresFactor());
+		addFactor(new HAColonyDefensesFactor());
 		addFactor(new HAShipsDestroyedFactorHint());
+		
+		addFactor(new HABlowbackFactor());
 		
 		addActivity(new PirateHostileActivityFactor(this), new KantasProtectionPirateActivityCause2(this));
 		addActivity(new PirateHostileActivityFactor(this), new StandardPirateActivityCause2(this));
@@ -120,8 +131,22 @@ public class HostileActivityEventIntel extends BaseEventIntel implements Economy
 		addActivity(new LuddicPathHostileActivityFactor(this), new LuddicPathAgreementHostileActivityCause2(this));
 		addActivity(new LuddicPathHostileActivityFactor(this), new StandardLuddicPathActivityCause2(this));
 		
-		// now that the event is fully constructed, add it and send notification
-		Global.getSector().getIntelManager().addIntel(this);
+		addActivity(new PerseanLeagueHostileActivityFactor(this), new StandardPerseanLeagueActivityCause(this));
+		addActivity(new TriTachyonHostileActivityFactor(this), new TriTachyonStandardActivityCause(this));
+		addActivity(new LuddicChurchHostileActivityFactor(this), new LuddicChurchStandardActivityCause(this));
+		addActivity(new SindrianDiktatHostileActivityFactor(this), new SindrianDiktatStandardActivityCause(this));
+		addActivity(new HegemonyHostileActivityFactor(this), new HegemonyAICoresActivityCause(this));
+		addActivity(new RemnantHostileActivityFactor(this), new RemnantNexusActivityCause(this));
+	}
+	
+	protected Object readResolve() {
+		if (systemSpawnMults == null) {
+			systemSpawnMults = new LinkedHashMap<String, MutableStatWithTempMods>();
+		}
+		if (getDataFor(Stage.INCREASED_DEFENSES) != null) {// || Global.getSettings().isDevMode()) {
+			setup();
+		}
+		return this;
 	}
 	
 	
@@ -138,26 +163,6 @@ public class HostileActivityEventIntel extends BaseEventIntel implements Economy
 		Global.getSector().getMemoryWithoutUpdate().unset(KEY);
 	}
 	
-	public static Pair<String, Color> getImpactDisplayData(Stage id) {
-		Pair<String, Color> p = new Pair<String, Color>();
-		if (id == Stage.START) {
-			p.one = "minimal";
-			p.two = Misc.getPositiveHighlightColor();
-		} else if (id == Stage.HA_1) {
-			p.one = "low";
-			p.two = Misc.getPositiveHighlightColor();
-		} else if (id == Stage.HA_2) {
-			p.one = "moderate";
-			p.two = Misc.getHighlightColor();
-		} else if (id == Stage.HA_3) {
-			p.one = "high";
-			p.two = Misc.getNegativeHighlightColor();
-		} else if (id == Stage.HA_4) {
-			p.one = "extreme";
-			p.two = Misc.getNegativeHighlightColor();
-		}
-		return p;
-	}
 	
 	protected void addBulletPoints(TooltipMakerAPI info, ListInfoMode mode, boolean isUpdate, 
 			   						Color tc, float initPad) {
@@ -176,41 +181,38 @@ public class HostileActivityEventIntel extends BaseEventIntel implements Economy
 			return;
 		}
 		
-		// handled generically in BaseEventIntel class when the factor is added
-//		if (isUpdate && getListInfoParam() instanceof HAShipsDestroyedFactor) {
-//			HAShipsDestroyedFactor factor = (HAShipsDestroyedFactor) getListInfoParam();
-//			info.addPara("Hostile ships destroyed: %s points", initPad, tc, factor.getProgressColor(this), 
-//					factor.getProgressStr(this));
-//			return;
-//		}
-		
-		if (isUpdate && getListInfoParam() instanceof EventStageData) {
-			EventStageData esd = (EventStageData) getListInfoParam();
-			if (EnumSet.of(Stage.START, Stage.HA_1, Stage.HA_2, Stage.HA_3, Stage.HA_4).contains(esd.id)) {
-				String delta = "increased";
-				if (!prevProgressDeltaWasPositive) delta = "reduced";
-				
-				Pair<String, Color> p = getImpactDisplayData((Stage) esd.id);
-				String impact = p.one;
-				Color impactColor = p.two;
-				info.addPara("Impact " + delta + " to: %s", initPad, tc, impactColor, impact);
+		for (EventStageData stage : stages) {
+			if (stage.rollData instanceof HAERandomEventData) {
+				HAERandomEventData data = (HAERandomEventData) stage.rollData;
+				data.factor.addBulletPointForEvent(this, stage, info, mode, isUpdate, tc, initPad);
 				return;
 			}
 		}
 		
-		EventStageData esd = getLastActiveStage(false);
-		if (esd != null && EnumSet.of(Stage.START, Stage.HA_1, Stage.HA_2, Stage.HA_3, Stage.HA_4).contains(esd.id)) {
-			Pair<String, Color> p = getImpactDisplayData((Stage) esd.id);
-			String impact = p.one;
-			Color impactColor = p.two;
-//			if (p.one.equals("extreme")) {
-//				System.out.println("wefwefwe");
-//			}
-			info.addPara("Colony impact: %s", initPad, tc, impactColor, impact);
-			return;
-		}
+//		EventStageData esd = getLastActiveStage(false);
+//		if (esd != null && EnumSet.of(Stage.START, Stage.HA_1, Stage.HA_2, Stage.HA_3, Stage.HA_4).contains(esd.id)) {
+//			Pair<String, Color> p = getImpactDisplayData((Stage) esd.id);
+//			String impact = p.one;
+//			Color impactColor = p.two;
+////			if (p.one.equals("extreme")) {
+////				System.out.println("wefwefwe");
+////			}
+//			info.addPara("Colony impact: %s", initPad, tc, impactColor, impact);
+//			return;
+//		}
 		
 		//super.addBulletPoints(info, mode, isUpdate, tc, initPad);
+	}
+	
+	public HAERandomEventData getRollDataForEvent() {
+		EventStageData stage = getDataFor(Stage.HA_EVENT);
+		if (stage == null) return null;;
+		
+		if (stage.rollData instanceof HAERandomEventData) {
+			HAERandomEventData data = (HAERandomEventData) stage.rollData;
+			return data; 
+		}
+		return null;
 	}
 
 	@Override
@@ -223,10 +225,13 @@ public class HostileActivityEventIntel extends BaseEventIntel implements Economy
 		//setProgress(210);
 		//setProgress(600);
 		//setProgress(899);
-		//setProgress(499);
-		//setProgress(400);
-		
-		updatePenalties();
+//		setProgress(424);
+//		setProgress(480);
+//		setProgress(230);
+//		random = new Random();
+//		setProgress(260);
+//		random = new Random();
+//		setProgress(499);
 		
 		List<HAEStarSystemDangerData> systemData = computePlayerSystemDangerData();
 		
@@ -239,76 +244,23 @@ public class HostileActivityEventIntel extends BaseEventIntel implements Economy
 			return;
 		}
 		
-		//if (stageId == Stage.START) {
 		if (isStageActiveAndLast(stageId)) {
-//			if (stageId == Stage.START) {
-//				info.addTitle("Minimal impact");
-//			} else if (stage.id == Stage.HA_1) {
-//				info.addTitle("Low impact");
-//			} else if (stage.id == Stage.HA_2) {
-//				info.addTitle("Moderate impact");
-//			} else if (stage.id == Stage.HA_3) {
-//				info.addTitle("High impact");
-//			} else if (stage.id == Stage.HA_4) {
-//				info.addTitle("Extreme impact");
-//			}
-			
 			if (stageId == Stage.START) {
-				info.addPara("Various hostile forces are threatening your colonies. "
-					+ "If left unchecked, your hardest-hit colonies will have "
-					+ "to devote more resources to defensive measures, reducing their stability and accessibility.", small);
-			} else {
-				Range affects = new Range(((Stage)stageId).name() + "_affects");
-				int numSystems = (int) Math.max(Math.min(systemData.size(), affects.min), Math.round((float) systemData.size() * affects.max));
-				int numColonies = 0;
-				int num = 0;
-				List<String> systemsList = new ArrayList<String>();
-				for (HAEStarSystemDangerData curr : systemData) {
-					numColonies += Misc.getMarketsInLocation(curr.system, Factions.PLAYER).size();
-					num++;
-					if (num <= 3) {
-						systemsList.add(curr.system.getNameWithNoType());
-					}
-					if (num >= numSystems) break;
-				}
-				int extra = numSystems - systemsList.size();
-				if (extra > 0) {
-					systemsList.remove(systemsList.size() - 1);
-					systemsList.add("" + (extra + 1) + " other");
-				}
-				String isOrAre = "are";
-				String coloniesStr = "colonies";
-				if (numColonies == 1) {
-					isOrAre = "is";
-					coloniesStr = "colony";
-				}
-				String systemsStr = "systems";
-				if (numSystems == 1) systemsStr = "system";
+				float delta = getMonthlyProgress();
 				
-				String desc1 = "minor";
-				String desc2 = "some";
-				if (stageId == Stage.HA_2) {
-					desc1 = "moderate";
-					desc2 = "considerable";
-				} else if (stageId == Stage.HA_3) {
-					desc1 = "serious";
-					desc2 = "a lot of";
-				} else if (stageId == Stage.HA_4) {
-					desc1 = "extreme";
-					desc2 = "much of their";
+				if (delta <= 0) {
+					info.addPara("Low-level pirate activity continues, but aside from that, there are "
+							+ "no major crises on the horizon.", small);
+				} else {
+					info.addPara("A crisis is virtually inevitable at some point, "
+							+ "and hostile fleets continually probe your defenses, but where there is "
+							+ "danger, there is often opportunity.", small);
 				}
-				
-				String combined = "Your " + coloniesStr + " in the " + Misc.getAndJoined(systemsList) + " " + systemsStr + 
-						" " + isOrAre;
-				if (numSystems == systemData.size() && numColonies > 1) {
-					combined = "All of your colonies are";
-				}
-				info.addPara(combined + " forced to make " + desc1 + 
-						" concessions to security considerations and devote " + 
-						desc2 + " resources to defensive measures. " +
-						"Stability reduced by %s, accessibility reduced by %s.", small, h,
-						"" + (int) stabilityPenalty, 
-						"" + (int) Math.round(accessibilityPenalty * 100f) + "%");
+//				info.addPara("A crisis is virtually inevitable at some point, "
+//						+ "and hostile fleets continually probe your defenses, but where there is "
+//						+ "danger, there is often opportunity. A crisis may be averted or delayed by defeating "
+//						+ "hostile fleets and taking other actions to address the various contributing factors, "
+//						+ "but another crisis will always be just beyond the horizon.", small);
 			}
 			
 			float systemW = 230f;
@@ -366,10 +318,6 @@ public class HostileActivityEventIntel extends BaseEventIntel implements Economy
 				}
 				systemName += " - " + colStr + "";
 				
-//				LabelAPI systemLabel = info.createLabel(systemName, Misc.getBasePlayerColor(), systemW);
-//				systemLabel.setHighlightColors(Misc.getBasePlayerColor());
-//				systemLabel.setHighlight(colStr);
-				
 				info.addRowWithGlow(Alignment.LMID, Misc.getBasePlayerColor(), systemName,
 									Alignment.MID, getDangerColor(mag), danger,
 									Alignment.MID, null, label);
@@ -393,8 +341,7 @@ public class HostileActivityEventIntel extends BaseEventIntel implements Economy
 			}
 			info.addTable("None", -1, opad);
 			info.addSpacer(3f);
-			
-			
+
 		}
 	}
 	
@@ -418,58 +365,7 @@ public class HostileActivityEventIntel extends BaseEventIntel implements Economy
 			HAERandomEventData data = (HAERandomEventData) esd.rollData;
 			return data.factor.getStageTooltipImpl(this, esd);
 		}
-		
-		if (esd != null && EnumSet.of(Stage.HA_1, Stage.HA_2, Stage.HA_3, Stage.HA_4).contains(esd.id)) {
-			return new BaseFactorTooltip() {
-				@Override
-				public void createTooltip(TooltipMakerAPI tooltip, boolean expanded, Object tooltipParam) {
-					float opad = 10f;
-					Range affects = new Range(((Stage)esd.id).name() + "_affects");
-					Range impact = new Range(((Stage)esd.id).name() + "_impact");
-					float stability = impact.min;
-					float access = impact.max;
-					
-					if (esd.id == Stage.HA_1) {
-						tooltip.addTitle("Low impact");
-					} else if (esd.id == Stage.HA_2) {
-						tooltip.addTitle("Moderate impact");
-					} else if (esd.id == Stage.HA_3) {
-						tooltip.addTitle("High impact");
-					} else if (esd.id == Stage.HA_4) {
-						tooltip.addTitle("Extreme impact");
-					}
-					
-					tooltip.addPara("Colony stability reduced by %s, accessibility reduced by %s.", opad,
-							Misc.getHighlightColor(),
-							"" + (int) stability, 
-							"" + (int) Math.round(access * 100f) + "%");
-					
-					if (affects.max >= 1f) {
-						tooltip.addPara("All of your colonies are affected.", opad);
-					} else {
-						tooltip.addPara("Affects colonies in %s of your hardest-hit star systems, or "
-								+ "in at least %s of your star systems, whichever is higher.", opad,
-								Misc.getHighlightColor(),
-								"" + (int) affects.min, 
-								"" + (int) Math.round(affects.max * 100f) + "%");
-					}
-					
-					esd.addProgressReq(tooltip, opad);
-				}
-			};
-		}
-		if (esd != null && esd.id == Stage.INCREASED_DEFENSES) {
-			return new BaseFactorTooltip() {
-				@Override
-				public void createTooltip(TooltipMakerAPI tooltip, boolean expanded, Object tooltipParam) {
-					float opad = 10f;
-					tooltip.addTitle("Increased defenses");
-					tooltip.addPara("When this stage is reached, your colonies will implement additional "
-							+ "defensive measures, substantially reducing the event's rate of progress.", opad);
-					esd.addProgressReq(tooltip, opad);
-				}
-			};
-		}
+
 		return null;
 	}
 
@@ -504,11 +400,10 @@ public class HostileActivityEventIntel extends BaseEventIntel implements Economy
 				}
 				
 				public void createTooltip(TooltipMakerAPI tooltip, boolean expanded, Object tooltipParam) {
-					float opad = 10f;
 					Color h = Misc.getHighlightColor();
-					tooltip.addPara("Hostile activity waxes and wanes with time. When this stage is reached, "
+					tooltip.addPara("There's no crisis on the horizon right now. When this stage is reached, "
 							+ "event progress will be reset to a lower value.",
-							opad);
+							0f);
 				}
 			};
 		}
@@ -536,8 +431,7 @@ public class HostileActivityEventIntel extends BaseEventIntel implements Economy
 //		}
 		//if (stageId == Stage.START) return null;
 	
-		if (EnumSet.of(Stage.HA_1, Stage.HA_2, Stage.HA_3, Stage.HA_4, 
-				Stage.INCREASED_DEFENSES, Stage.START).contains(esd.id)) {
+		if (esd.id == Stage.START) {
 			return Global.getSettings().getSpriteName("events", "hostile_activity_" + ((Stage)esd.id).name());
 		}
 		// should not happen - the above cases should handle all possibilities - but just in case
@@ -561,12 +455,12 @@ public class HostileActivityEventIntel extends BaseEventIntel implements Economy
 
 	@Override
 	protected int getStageImportance(Object stageId) {
-		if (stageId == Stage.HA_EVENT) {
-			return 1;
-		}
-		if (stageId == Stage.MINOR_EVENT) {
-			return 1;
-		}
+//		if (stageId == Stage.HA_EVENT) {
+//			return 1;
+//		}
+//		if (stageId == Stage.MINOR_EVENT) {
+//			return 1;
+//		}
 		return super.getStageImportance(stageId);
 	}
 
@@ -574,7 +468,8 @@ public class HostileActivityEventIntel extends BaseEventIntel implements Economy
 
 	@Override
 	protected String getName() {
-		return "Hostile Activity";
+		//return "Hostile Activity";
+		return "Colony Crises";
 	}
 	
 
@@ -729,8 +624,30 @@ public class HostileActivityEventIntel extends BaseEventIntel implements Economy
 	
 	public float getVeryApproximateFPStrength(StarSystemAPI system) {
 		float mag = getTotalActivityMagnitude(system, true);
-		mag *= getProgressFraction();
+		//mag *= getProgressFraction();
+		mag *= 0.2f + getMarketPresenceFactor(system) * 0.8f;
 		return mag * 1000f;
+	}
+	
+	
+	/**
+	 * From 0 (at one size-3 market) to 1 (maxSize + count >= 7).
+	 * @param system
+	 * @return
+	 */
+	public float getMarketPresenceFactor(StarSystemAPI system) {
+		float maxSize = 0;
+		float count = 0;
+		for (MarketAPI market : Misc.getMarketsInLocation(system, Factions.PLAYER)) {
+			maxSize = Math.max(market.getSize(), maxSize);
+			count++;
+		}
+		
+		float f = (maxSize - 3f + count - 1f) / 3f;
+		if (f < 0f) f = 0f;
+		if (f > 1f) f = 1f;
+		
+		return f;
 	}
 	
 	public float getTotalActivityMagnitude(StarSystemAPI system) {
@@ -751,55 +668,44 @@ public class HostileActivityEventIntel extends BaseEventIntel implements Economy
 		
 		return total;
 	}
-
-	public void economyUpdated() {
-		syncHostileActivityConditionsWithEventProgress();
-	}
 	
-	
-	public void updatePenalties() {
-		EventStageData esd = getLastActiveStage(false);
-		if (esd == null || !EnumSet.of(Stage.HA_1, Stage.HA_2, Stage.HA_3, Stage.HA_4).contains(esd.id)) {
-			stabilityPenalty = 0;
-			accessibilityPenalty = 0;
-			return;
-		}
-		
-		Range impact = new Range(((Stage)esd.id).name() + "_impact");
-		stabilityPenalty = impact.min;
-		accessibilityPenalty = impact.max; 
-	}
-	
-	public void syncHostileActivityConditionsWithEventProgress() {
-		EventStageData esd = getLastActiveStage(false);
-		if (esd == null || !EnumSet.of(Stage.HA_1, Stage.HA_2, Stage.HA_3, Stage.HA_4).contains(esd.id)) {
-			cleanUpHostileActivityConditions();
-			return;
-		}
-		
-		updatePenalties();
-		
-		Range affects = new Range(((Stage)esd.id).name() + "_affects");
-		List<HAEStarSystemDangerData> sysData = computePlayerSystemDangerData();
-		//int numSystems = (int) Math.max(affects.min, Math.round((float) sysData.size() * affects.max));
-		int numSystems = (int) Math.max(Math.min(sysData.size(), affects.min), Math.round((float) sysData.size() * affects.max));
-		
-		
-		for (int i = 0; i < sysData.size(); i++) {
-			HAEStarSystemDangerData sys = sysData.get(i);
-			for (MarketAPI market : Misc.getMarketsInLocation(sys.system, Factions.PLAYER)) {
-				if (i < numSystems) {
-					if (!market.hasCondition(Conditions.HOSTILE_ACTIVITY)) {
-						market.addCondition(Conditions.HOSTILE_ACTIVITY, this);
-					}		
-				} else {
-					if (market.hasCondition(Conditions.HOSTILE_ACTIVITY)) {
-						market.removeCondition(Conditions.HOSTILE_ACTIVITY);
-					}
-				}
+	@Override
+	protected void advanceImpl(float amount) {
+		super.advanceImpl(amount);
+		//blowback = 55;
+		if (systemSpawnMults != null) {
+			float days = Misc.getDays(amount);
+			for (MutableStatWithTempMods stat : systemSpawnMults.values()) {
+				stat.advance(days);
 			}
 		}
 	}
+
+	public MutableStatWithTempMods getNumFleetsStat(StarSystemAPI system) {
+		if (system == null) {
+			return new MutableStatWithTempMods(1f);
+		}
+		if (systemSpawnMults == null) {
+			systemSpawnMults = new LinkedHashMap<String, MutableStatWithTempMods>();
+		}
+		
+		String id = system.getId();
+		MutableStatWithTempMods stat = systemSpawnMults.get(id);
+		if (stat == null) {
+			stat = new MutableStatWithTempMods(1f);
+			systemSpawnMults.put(id, stat);
+		}
+		return stat;
+	}
+	
+	public float getNumFleetsMultiplier(StarSystemAPI system) {
+		return getNumFleetsStat(system).getModifiedValue();
+	}
+
+	public void economyUpdated() {
+		cleanUpHostileActivityConditions();
+	}
+	
 	
 	public void cleanUpHostileActivityConditions() {
 		for (MarketAPI curr : Misc.getPlayerMarkets(false)) {
@@ -808,17 +714,9 @@ public class HostileActivityEventIntel extends BaseEventIntel implements Economy
 			}
 		}
 	}
-
-	public float getAccessibilityPenalty() {
-		return accessibilityPenalty;
-	}
-
-	public float getStabilityPenalty() {
-		return stabilityPenalty;
-	}
 	
 	public boolean isEconomyListenerExpired() {
-		return isEnding();
+		return isEnding() || isEnded();
 	}
 	
 	public void commodityUpdated(String commodityId) {
@@ -897,7 +795,7 @@ public class HostileActivityEventIntel extends BaseEventIntel implements Economy
 			}
 		}
 	
-		int points = computerProgressPoints(fpDestroyed);
+		int points = computeProgressPoints(fpDestroyed);
 		if (points > 0) {
 			//points = 700;
 			HAShipsDestroyedFactor factor = new HAShipsDestroyedFactor(-1 * points);
@@ -906,7 +804,7 @@ public class HostileActivityEventIntel extends BaseEventIntel implements Economy
 		}
 	}
 	
-	public static int computerProgressPoints(float fleetPointsDestroyed) {
+	public static int computeProgressPoints(float fleetPointsDestroyed) {
 		if (fleetPointsDestroyed <= 0) return 0;
 		
 		int points = Math.round(fleetPointsDestroyed / FP_PER_POINT);
@@ -923,30 +821,50 @@ public class HostileActivityEventIntel extends BaseEventIntel implements Economy
 			stage.rollData = null;
 			
 			if (stage.id == Stage.HA_EVENT) {
-				//int resetProgress = getDataFor(Stage.HA_1).progress + 10 + random.nextInt(100);
-				//int resetProgress = getDataFor(Stage.HA_2).progress + 10 + random.nextInt(30);
-				int resetProgress = getDataFor(Stage.INCREASED_DEFENSES).progress + 1 + random.nextInt(5);
-				if (!fired) {
-					resetProgress = getDataFor(Stage.HA_EVENT).progressToRollAt - random.nextInt(100);
-				}
+				int resetProgress = getResetProgress(fired);
 				setProgress(resetProgress);
 			}
 		} else if (stage.id == Stage.HA_EVENT &&
 				(stage.rollData == null || RANDOM_EVENT_NONE.equals(stage.rollData))) {
 			stage.rollData = null;
-			//int resetProgress = getDataFor(Stage.HA_1).progress + 10 + random.nextInt(100);
-			//int resetProgress = getDataFor(Stage.HA_2).progress + 10 + random.nextInt(30);
-			int resetProgress = getDataFor(Stage.INCREASED_DEFENSES).progress + 1 + random.nextInt(5);
-			//resetProgress = 199;
+			int resetProgress = getResetProgress(false);
 			setProgress(resetProgress);
 		}
 	}
 	
+	protected int getResetProgress(boolean fired) {
+		if (!HABlowbackFactor.ENABLED) {
+			blowback = 0;
+		}
+		int min = RESET_MIN;
+		if (!fired) min = RESET_MAX - 150;
+		
+		int resetAdd = random.nextInt(RESET_MAX - min + 1);
+		resetAdd = Math.min(resetAdd, random.nextInt(RESET_MAX - min + 1));
+		int resetProgress = min + resetAdd;
+		
+		int add = Math.min(blowback, RESET_MAX - resetProgress);
+		if (add > 0) {
+			resetProgress += add;
+			blowback -= add;
+		}
+		return resetProgress;
+	}
+	
 	public void resetHA_EVENT() {
 		EventStageData stage = getDataFor(Stage.HA_EVENT);
-		int resetProgress = stage.progressToRollAt - getRandom().nextInt(100);
+		//int resetProgress = stage.progressToRollAt - getRandom().nextInt(100);
+		int resetProgress = getResetProgress(false);
 		resetRandomizedStage(stage);
 		setProgress(resetProgress);
+	}
+	
+	public void resetHA_EVENTIfFromFactor(HostileActivityFactor factor) {
+		EventStageData stage = getDataFor(Stage.HA_EVENT);
+		if (stage != null && stage.rollData instanceof HAERandomEventData && 
+				((HAERandomEventData)stage.rollData).factor == factor) {
+			resetHA_EVENT();
+		}
 	}
 
 	@Override
@@ -959,6 +877,8 @@ public class HostileActivityEventIntel extends BaseEventIntel implements Economy
 		super.resetRandomizedStage(stage);
 	}
 
+	protected HostileActivityFactor prevMajorEventPick = null;
+	
 	@Override
 	public void rollRandomizedStage(EventStageData stage) {
 		if (stage.id == Stage.HA_EVENT || stage.id == Stage.MINOR_EVENT) {
@@ -969,6 +889,7 @@ public class HostileActivityEventIntel extends BaseEventIntel implements Economy
 				}
 			}
 			if (total < 1f) total = 1f;
+			//System.out.println("Random: " + random.nextLong());
 			WeightedRandomPicker<HostileActivityFactor> picker = new WeightedRandomPicker<HostileActivityFactor>(random);
 			for (EventFactor factor : factors) {
 				if (factor instanceof BaseHostileActivityFactor) {
@@ -977,15 +898,23 @@ public class HostileActivityEventIntel extends BaseEventIntel implements Economy
 					float f = curr.getEventFrequency(this, stage);
 					float w = factor.getProgress(this) / total;
 					if (w > 0) {
-						w = 0.5f + 0.5f * w;
+						w = 0.1f + 0.9f * w;
 					}
 					picker.add(curr, f * w);
 				}
 			}
 			
-			HostileActivityFactor pick = picker.pick();
+			HostileActivityFactor pick = picker.pickAndRemove();
+			if (stage.id == Stage.HA_EVENT) {
+				if (prevMajorEventPick == pick && !picker.isEmpty()) {
+					pick = picker.pickAndRemove();
+				}
+				prevMajorEventPick = pick;
+			}
+			
 			if (pick == null) return;
 			
+			stage.rollData = null;
 			pick.rollEvent(this, stage);
 		}
 	}
@@ -996,6 +925,68 @@ public class HostileActivityEventIntel extends BaseEventIntel implements Economy
 		tags.add(Tags.INTEL_COLONIES);
 		return tags;
 	}
+
+	
+	
+	@Override
+	public void addFactor(EventFactor factor) {
+		super.addFactor(factor);
+		if (factor.isOneTime()) {
+			int points = factor.getProgress(this);
+			if (points < 0) {
+				int p = Math.round(-1f * points * HABlowbackFactor.FRACTION);
+				if (p > 0) {
+					addBlowback(p);
+				}
+			}
+		}
+	}
+	
+	@Override
+	public void reportEconomyMonthEnd() {
+		super.reportEconomyMonthEnd();
+		
+		if (blowback > 0) {
+			int amt = Math.round(blowback * HABlowbackFactor.PER_MONTH);
+			if (amt < 1) amt = 1;
+			blowback -= amt;
+			if (blowback < 0) blowback = 0;
+		}
+	}
+
+	public void addBlowback(int points) {
+		if (!HABlowbackFactor.ENABLED) return;
+		blowback += points;
+	}
+	public int getBlowback() {
+		if (!HABlowbackFactor.ENABLED) {
+			blowback = 0;
+		}
+		return blowback;
+	}
+
+	public void setBlowback(int blowback) {
+		if (!HABlowbackFactor.ENABLED) return;
+		this.blowback = blowback;
+	}
+	
+	protected String getSoundForOtherUpdate(Object param) {
+		if (param instanceof HAERandomEventData) {
+			HAERandomEventData data = (HAERandomEventData) param;
+			if (data.isReset) return null;
+			if (data.factor == null) return null;
+			return data.factor.getEventStageSound(data);
+		}
+		return null;
+	}
+
+	
+	@Override
+	public int getMaxMonthlyProgress() {
+		return Global.getSettings().getInt("ha_maxMonthlyProgress");
+	}
+	
+	
 }
 
 

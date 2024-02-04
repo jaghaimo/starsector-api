@@ -32,5 +32,8 @@ public class ZigguratGhostCreator extends BaseSensorGhostCreator {
 		return 50f + manager.getRandom().nextFloat() * 50f;
 	}
 	
-	
+	@Override
+	public boolean canSpawnWhilePlayerInAbyss() {
+		return true;
+	}
 }

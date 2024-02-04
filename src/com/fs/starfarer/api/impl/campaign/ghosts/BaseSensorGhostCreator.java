@@ -138,6 +138,14 @@ public class BaseSensorGhostCreator implements SensorGhostCreator {
 	public boolean canSpawnWhilePlayerInOrNearSlipstream() {
 		return false;
 	}
+	
+	public boolean canSpawnWhilePlayerInAbyss() {
+		return false;
+	}
+
+	public boolean canSpawnWhilePlayerOutsideAbyss() {
+		return true;
+	}
 }
 
 

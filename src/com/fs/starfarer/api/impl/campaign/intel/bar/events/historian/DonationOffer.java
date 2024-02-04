@@ -79,6 +79,7 @@ public class DonationOffer extends BaseHistorianOffer {
 			hd.incrTier();
 			hd.setRecentlyDonated();
 			
+			Global.getSector().getPlayerFleet().getCargo().getCredits().subtract(credits);
 			AddRemoveCommodity.addCreditsLossText(credits, text);
 			
 			CustomRepImpact impact = new CustomRepImpact();

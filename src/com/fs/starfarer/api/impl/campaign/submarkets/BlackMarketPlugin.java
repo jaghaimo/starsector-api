@@ -171,7 +171,8 @@ public class BlackMarketPlugin extends BaseSubmarketPlugin {
 	public PlayerEconomyImpactMode getPlayerEconomyImpactMode() {
 		//return PlayerEconomyImpactMode.PLAYER_BUY_ONLY;
 		// if the player buying stuff can cause a shortage, it can result in profitable buy/sell cycles, so: don't do that
-		return PlayerEconomyImpactMode.NONE;
+		//return PlayerEconomyImpactMode.NONE;
+		return PlayerEconomyImpactMode.PLAYER_SELL_ONLY;
 	}
 
 

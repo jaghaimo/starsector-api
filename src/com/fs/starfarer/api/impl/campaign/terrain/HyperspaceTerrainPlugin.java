@@ -13,13 +13,18 @@ import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignEngineLayers;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
+import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.campaign.TerrainAIFlags;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.combat.ViewportAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
+import com.fs.starfarer.api.fleet.FleetMemberViewAPI;
 import com.fs.starfarer.api.graphics.SpriteAPI;
 import com.fs.starfarer.api.impl.campaign.abilities.EmergencyBurnAbility;
+import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
+import com.fs.starfarer.api.impl.campaign.ids.Tags;
+import com.fs.starfarer.api.impl.combat.BattleCreationPluginImpl;
 import com.fs.starfarer.api.loading.Description.Type;
 import com.fs.starfarer.api.ui.Alignment;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
@@ -28,27 +33,49 @@ import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
 
 public class HyperspaceTerrainPlugin extends BaseTiledTerrain { // implements NebulaTextureProvider {
+
+	public static float ABYSS_MUSIC_SUPPRESSION = 1f;
+	
+//	public static class AbyssalMusicDamper implements EveryFrameScript {
+//		public boolean isDone() {
+//			return false;
+//		}
+//		public boolean runWhilePaused() {
+//			return true;
+//		}
+//	
+//		public void advance(float amount) {
+//			
+//		}
+//	}
+	
+
+	public static float ABYSS_VISIBLITY_MULT = 0.25f;
+	public static float ABYSS_SENSOR_RANGE_MULT = 0.25f;
+	public static float ABYSS_BURN_MULT = 0.25f;
+	
+	public static float ABYSS_NAVIGATION_EFFECT = 0;
 	
 	
-//	public static float MIN_BURN_PENALTY = 0.1f;
-//	public static float BURN_PENALTY_RANGE = 0.4f;
-	public static final float VISIBLITY_MULT = 0.5f;
+	public static Color ABYSS_BACKGROUND_COLOR = new Color(0, 0, 0, 255);
+	public static Color ABYSS_PARTICLE_COLOR = new Color(0, 0, 0, 0);
+	public static Color ABYSS_LIGHT_COLOR = new Color(170, 170, 170, 255);
 	
 	
-	public static final float STORM_STRIKE_SOUND_RANGE = 1500f;
+	
+	public static String STORM_STRIKE_TIMEOUT_KEY = "$stormStrikeTimeout";
+	
+	public static float VISIBLITY_MULT = 0.5f;
+	
+	
+	public static float STORM_STRIKE_SOUND_RANGE = 1500f;
 	
 	public static float STORM_MIN_TIMEOUT = 0.4f;
 	public static float STORM_MAX_TIMEOUT = 0.6f;
-	//public static float STORM_STRIKE_CHANCE = 0.5f;
 	public static float STORM_DAMAGE_FRACTION = 0.3f;
 	public static float STORM_MIN_STRIKE_DAMAGE = 0.05f;
 	public static float STORM_MAX_STRIKE_DAMAGE = 0.95f;
 	
-	//public static final float STORM_CR_LOSS_MULT = 0.25f;
-	
-	//public static float FUEL_USE_FRACTION = 1f;
-	//public static final float SPEED_MULT = 1f;
-	//public static final float STORM_SPEED_MULT = 0.2f;
 	public static float STORM_SPEED_MULT = 1f;
 	public static float STORM_SENSOR_RANGE_MULT = 1f;
 	public static float STORM_VISIBILITY_FLAT = 0f;
@@ -190,14 +217,32 @@ public class HyperspaceTerrainPlugin extends BaseTiledTerrain { // implements Ne
 	protected HyperspaceAutomaton auto;
 	
 	protected transient String stormSoundId = null;
+	protected HyperspaceAbyssPlugin abyssPlugin;
+	
+	protected SectorEntityToken abyssDarkSource = null;
 	
 	public void init(String terrainId, SectorEntityToken entity, Object param) {
 		super.init(terrainId, entity, param);
 	}
 	
+	public HyperspaceAbyssPlugin getAbyssPlugin() {
+		if (abyssPlugin == null) {
+			abyssPlugin = new HyperspaceAbyssPluginImpl();
+		}
+		return abyssPlugin;
+	}
+
+	public void setAbyssPlugin(HyperspaceAbyssPlugin abyssChecker) {
+		this.abyssPlugin = abyssChecker;
+	}
+
 	protected Object readResolve() {
 		super.readResolve();
 		layers = EnumSet.of(BASE, FLASH, GLOW, SHIVER, BASE_OVER, FLASH_OVER);
+		
+		if (abyssPlugin == null) {
+			abyssPlugin = new HyperspaceAbyssPluginImpl();
+		}
 		
 		if (auto == null) {
 			//auto = new HyperspaceAutomaton(params.w, params.h, 0.75f, 1.25f);
@@ -245,9 +290,55 @@ public class HyperspaceTerrainPlugin extends BaseTiledTerrain { // implements Ne
 		return activeCells;
 	}
 	
-
+	protected static void clearCellsNotNearPlayer(HyperspaceTerrainPlugin plugin) {
+		CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();
+		if (playerFleet == null) return;
+		
+		Vector2f test = new Vector2f();
+		if (playerFleet != null) {
+			test = playerFleet.getLocationInHyperspace();
+		}
+		
+		float x = plugin.entity.getLocation().x;
+		float y = plugin.entity.getLocation().y;
+		float size = plugin.getTileSize();
+		
+		float w = plugin.tiles.length * size;
+		float h = plugin.tiles[0].length * size;
+		x -= w/2f;
+		y -= h/2f;
+		int xIndex = (int) ((test.x - x) / size);
+		int yIndex = (int) ((test.y - y) / size);
+		if (xIndex < 0) xIndex = 0;
+		if (yIndex < 0) yIndex = 0;
+		if (xIndex >= plugin.tiles.length) xIndex = plugin.tiles.length - 1;
+		if (yIndex >= plugin.tiles[0].length) yIndex = plugin.tiles[0].length - 1;
+		
+		int subgridSize = (int) ((10000 / size + 1) * 2f);
+		
+		int minX = Math.max(0, xIndex - subgridSize/2);
+		int maxX = xIndex + subgridSize/2 ;
+		int minY = Math.max(0, yIndex - subgridSize/2);
+		int maxY = yIndex + subgridSize/2;
+		
+		// clean up area around the "active" area so that as the player moves around,
+		// they don't leave frozen storm cells behind (which would then make it into the savefile)
+		int pad = Math.max(plugin.tiles.length, plugin.tiles[0].length) * 2;
+		for (int i = minX - pad; i <= maxX + pad && i < plugin.tiles.length; i++) {
+			for (int j = minY - pad; j <= maxY + pad && j < plugin.tiles[0].length; j++) {
+				if (i < minX || j < minY || i > maxX || j > maxY) {
+					if (i >= 0 && j >= 0) {
+						plugin.activeCells[i][j] = null;
+					}
+				}
+			}
+		}
+	}
+	
 	Object writeReplace() {
 		HyperspaceTerrainPlugin copy = (HyperspaceTerrainPlugin) super.writeReplace();
+		
+		clearCellsNotNearPlayer(copy);
 		
 		copy.savedActiveCells = new ArrayList<CellStateTracker>();
 		for (int i = 0; i < copy.activeCells.length; i++) {
@@ -369,6 +460,13 @@ public class HyperspaceTerrainPlugin extends BaseTiledTerrain { // implements Ne
 		angle = rand.nextFloat() * 360f;
 		
 		Color color = getRenderColor();
+		CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();
+		if (playerFleet != null) {
+			float depth = getAbyssalDepth(playerFleet);
+			if (depth > 0) {
+				color = Misc.scaleColorOnly(color, Math.max(0f, 1f - depth));
+			}
+		}
 		
 		float [] tr = getThetaAndRadius(rand, width, height);
 		float theta1 = tr[0];
@@ -577,9 +675,36 @@ public class HyperspaceTerrainPlugin extends BaseTiledTerrain { // implements Ne
 		return Global.getSettings().getSpriteName(params.cat, params.key);
 	}
 	
+	protected transient boolean clearedCellsPostLoad = false;
+	
+	protected transient float stormCellTimeMultOutsideBaseArea = 0f;
+	public float getStormCellTimeMultOutsideBaseArea() {
+		return stormCellTimeMultOutsideBaseArea;
+	}
+
+	public void setStormCellTimeMultOutsideBaseArea(float stormCellTimeMultOutsideBaseArea) {
+		this.stormCellTimeMultOutsideBaseArea = stormCellTimeMultOutsideBaseArea;
+	}
+	protected transient float extraDistanceAroundPlayerToAdvanceStormCells = 0f;
+	public float getExtraDistanceAroundPlayerToAdvanceStormCells() {
+		return extraDistanceAroundPlayerToAdvanceStormCells;
+	}
+
+	public void setExtraDistanceAroundPlayerToAdvanceStormCells(float extraDistanceAroundPlayerToAdvanceStormCells) {
+		this.extraDistanceAroundPlayerToAdvanceStormCells = extraDistanceAroundPlayerToAdvanceStormCells;
+	}
+	
+
 	public void advance(float amount) {
 		//if (true) return;
 		super.advance(amount);
+		
+		getAbyssPlugin().advance(amount);
+		
+		if (!clearedCellsPostLoad && Global.getSector().getPlayerFleet() != null) {
+			clearCellsNotNearPlayer(this);
+			clearedCellsPostLoad = true;
+		}
 
 		playStormStrikeSoundsIfNeeded();
 		
@@ -606,8 +731,33 @@ public class HyperspaceTerrainPlugin extends BaseTiledTerrain { // implements Ne
 		CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();
 		Vector2f test = new Vector2f();
 		if (playerFleet != null) {
-			test = playerFleet.getLocation();
+			test = playerFleet.getLocationInHyperspace();
 		}
+		
+		if (entity.getContainingLocation() != null &&
+				playerFleet.getContainingLocation() == entity.getContainingLocation() &&
+				isInAbyss(playerFleet)) {
+			
+			float depth = getAbyssalDepth(playerFleet);
+			entity.getContainingLocation().getBackgroundColorShifter().shift(
+					"abyss_color", ABYSS_BACKGROUND_COLOR, 1f, 1f, depth);
+			
+			entity.getContainingLocation().getBackgroundParticleColorShifter().shift(
+					"abyss_color", ABYSS_PARTICLE_COLOR, 1f, 1f, depth);
+			
+			float gain = (float) getSpec().getCustom().optDouble("gain", 0.75f);
+			float gainHF = (float) getSpec().getCustom().optDouble("gainHF", 0.1f);
+			if (gain < 1f || gainHF < 1f) {
+				Global.getSoundPlayer().applyLowPassFilter(
+									Math.max(0f, 1f - (1f - gain) * depth),
+									Math.max(0f, 1f - (1f - gainHF) * depth));
+			}
+			
+//			if (ABYSS_MUSIC_SUPPRESSION > 0f) {
+//				Global.getSector().getCampaignUI().suppressMusic(ABYSS_MUSIC_SUPPRESSION * depth);
+//			}
+		}
+		
 		
 		float x = this.entity.getLocation().x;
 		float y = this.entity.getLocation().y;
@@ -624,12 +774,22 @@ public class HyperspaceTerrainPlugin extends BaseTiledTerrain { // implements Ne
 		if (xIndex >= tiles.length) xIndex = tiles.length - 1;
 		if (yIndex >= tiles[0].length) yIndex = tiles[0].length - 1;
 		
-		int subgridSize = (int) ((10000 / size + 1) * 2f);
+		float subgridDist = 10000f + extraDistanceAroundPlayerToAdvanceStormCells;
+		float baseSubgridDist = 10000f;
+		
+		int subgridSize = (int) ((subgridDist / size + 1) * 2f);
 		
 		int minX = Math.max(0, xIndex - subgridSize/2);
 		int maxX = xIndex + subgridSize/2 ;
 		int minY = Math.max(0, yIndex - subgridSize/2);
 		int maxY = yIndex + subgridSize/2;
+		
+		int baseSubgridSize = (int) ((baseSubgridDist / size + 1) * 2f);
+		
+		int baseMinX = Math.max(0, xIndex - baseSubgridSize/2);
+		int baseMaxX = xIndex + baseSubgridSize/2 ;
+		int baseMinY = Math.max(0, yIndex - baseSubgridSize/2);
+		int baseMaxY = yIndex + baseSubgridSize/2;
 		
 		// clean up area around the "active" area so that as the player moves around,
 		// they don't leave frozen storm cells behind (which would then make it into the savefile)
@@ -669,8 +829,13 @@ public class HyperspaceTerrainPlugin extends BaseTiledTerrain { // implements Ne
 //						curr.wane(interval * 0.5f * (float) Math.random() + 
 //								  interval * 0.25f + interval * 0.25f * (float) Math.random());
 					}
-					
-					curr.advance(days);
+					float timeMult = 1f;
+					if (extraDistanceAroundPlayerToAdvanceStormCells > 0 && stormCellTimeMultOutsideBaseArea > 0) {
+						if (i < baseMinX || j < baseMinY || i > baseMaxX || j > baseMaxY) {
+							timeMult = stormCellTimeMultOutsideBaseArea;
+						}
+					}
+					curr.advance(days * timeMult);
 					if (curr.isOff()) {
 						activeCells[i][j] = null;
 					}
@@ -678,6 +843,8 @@ public class HyperspaceTerrainPlugin extends BaseTiledTerrain { // implements Ne
 			}
 		}
 		
+		stormCellTimeMultOutsideBaseArea = 0f;
+		extraDistanceAroundPlayerToAdvanceStormCells = 0f;
 	}
 	
 	
@@ -971,6 +1138,20 @@ public class HyperspaceTerrainPlugin extends BaseTiledTerrain { // implements Ne
 		return true;
 	}
 	
+	public float getAbyssalDepth(Vector2f loc) {
+		return getAbyssPlugin().getAbyssalDepth(loc);
+	}
+	public float getAbyssalDepth(SectorEntityToken other) {
+		return getAbyssPlugin().getAbyssalDepth(other);
+	}
+	public boolean isInAbyss(SectorEntityToken other) {
+		return getAbyssPlugin().isInAbyss(other);
+	}
+	
+	public List<StarSystemAPI> getAbyssalSystems() {
+		return getAbyssPlugin().getAbyssalSystems();
+	}
+	
 	public boolean isInClouds(SectorEntityToken other) {
 		if (other.getContainingLocation() != this.entity.getContainingLocation()) return false;
 		if (isPreventedFromAffecting(other)) return false;
@@ -1131,14 +1312,20 @@ public class HyperspaceTerrainPlugin extends BaseTiledTerrain { // implements Ne
 	@Override
 	protected boolean shouldPlayLoopThree() {
 		CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();
-		int [] tile = getTilePreferStorm(playerFleet.getLocation(), playerFleet.getRadius() + getExtraSoundRadius());
-		CellStateTracker cell = null; 
-		if (tile != null) {
-			cell = activeCells[tile[0]][tile[1]];
-		}
-		return super.shouldPlayLoopThree() && cell != null && cell.isSignaling();
+		return super.shouldPlayLoopThree() && isInAbyss(playerFleet);
 	}
 	
+	@Override
+	public float getProximitySoundFactor() {
+		CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();
+		float depth = getAbyssalDepth(playerFleet);
+		if (depth > 0f) {
+			return depth;
+		}
+		
+		return super.getProximitySoundFactor();
+	}
+
 	@Override
 	protected boolean shouldPlayLoopFour() {
 		LocationState state = getStateAt(Global.getSector().getPlayerFleet(), getExtraSoundRadius());
@@ -1149,9 +1336,35 @@ public class HyperspaceTerrainPlugin extends BaseTiledTerrain { // implements Ne
 
 	@Override
 	public void applyEffect(SectorEntityToken entity, float days) {
+		float depth = getAbyssalDepth(entity);
+		if (depth > 0) {
+			if (abyssDarkSource == null) {
+				abyssDarkSource = entity.getContainingLocation().createToken(0, 0);
+				abyssDarkSource.addTag(Tags.AMBIENT_LS);
+			}
+			
+			Color from = this.entity.getLightColor();
+			if (from == null) from = Color.white;
+			Color c = Misc.interpolateColor(from, ABYSS_LIGHT_COLOR, depth);
+			entity.getMemoryWithoutUpdate().set(MemFlags.LIGHT_SOURCE_OVERRIDE, abyssDarkSource, 0.1f);
+			entity.getMemoryWithoutUpdate().set(MemFlags.LIGHT_SOURCE_COLOR_OVERRIDE, c, 0.1f);
+			
+			if (entity instanceof CampaignFleetAPI) {
+				CampaignFleetAPI fleet = (CampaignFleetAPI) entity;
+				for (FleetMemberViewAPI view : fleet.getViews()) {
+					//view.getContrailColor().shift(getModId(), Misc.zeroColor, 1f, 1f, depth * 0.25f);
+					view.getContrailWidthMult().shift(getModId(), 0.5f, 1f, 1f, depth);
+					view.getContrailDurMult().shift(getModId(), 1f + depth * 1f, 1f, 1f, depth);
+					view.getEngineGlowSizeMult().shift(getModId(), 2f, 1f, 1f, 1f - depth * 0.5f);
+					view.getEngineGlowColor().shift(getModId(), Color.black, 1f, 1f, depth * 0.5f);
+				}
+			}
+		}
+		
 		if (entity instanceof CampaignFleetAPI) {
 			CampaignFleetAPI fleet = (CampaignFleetAPI) entity;
 			
+			boolean inAbyss = depth > 0;
 			boolean inCloud = isInClouds(fleet);
 			int [] tile = getTilePreferStorm(fleet.getLocation(), fleet.getRadius());
 			CellStateTracker cell = null; 
@@ -1167,11 +1380,28 @@ public class HyperspaceTerrainPlugin extends BaseTiledTerrain { // implements Ne
 //					"In hyperspace", FUEL_USE_FRACTION, 
 //					fleet.getStats().getFuelUseHyperMult());
 			
+			if (inAbyss) {
+				fleet.getStats().addTemporaryModMult(0.1f, getModId() + "_3",
+						"In abyssal hyperspace", 1f - (1f - ABYSS_VISIBLITY_MULT) * depth, 
+						fleet.getStats().getDetectedRangeMod());
+				fleet.getStats().addTemporaryModMult(0.1f, getModId() + "_4",
+						"In abyssal hyperspace", 1f - (1f - ABYSS_SENSOR_RANGE_MULT) * depth, 
+						fleet.getStats().getSensorRangeMod());
+				
+				//ABYSS_NAVIGATION_EFFECT = 0.25f;
+				float skillMod = fleet.getCommanderStats().getDynamic().getValue(Stats.NAVIGATION_PENALTY_MULT);
+				//skillMod = 1f;
+				skillMod = skillMod + (1f - skillMod) * (1f - ABYSS_NAVIGATION_EFFECT);
+				fleet.getStats().addTemporaryModMult(0.1f, getModId() + "_5",
+						"In abyssal hyperspace", 1f - (1f - ABYSS_BURN_MULT) * depth * skillMod, 
+						fleet.getStats().getFleetwideMaxBurnMod());
+			}
 			
-			if (!inCloud || fleet.isInHyperspaceTransition()) {
+			
+			if ((!inCloud && !inAbyss) || fleet.isInHyperspaceTransition()) {
 				// open, do nothing
 			//} else if (cell == null || !cell.isStorming()) {
-			} else {
+			} else if (inCloud) {
 				fleet.getStats().addTemporaryModMult(0.1f, getModId() + "_1",
 						"In deep hyperspace", VISIBLITY_MULT, 
 						fleet.getStats().getDetectedRangeMod());
@@ -1222,7 +1452,7 @@ public class HyperspaceTerrainPlugin extends BaseTiledTerrain { // implements Ne
 		
 		fleet.addScript(new HyperStormBoost(cell, fleet));
 		
-		String key = "$stormStrikeTimeout";
+		String key = STORM_STRIKE_TIMEOUT_KEY;
 		MemoryAPI mem = fleet.getMemoryWithoutUpdate();
 		if (mem.contains(key)) return;
 		//boolean canDamage = !mem.contains(key);
@@ -1341,6 +1571,8 @@ public class HyperspaceTerrainPlugin extends BaseTiledTerrain { // implements Ne
 		
 		CampaignFleetAPI player = Global.getSector().getPlayerFleet();
 		boolean inCloud = isInClouds(player);
+		float depth = getAbyssalDepth(player);
+		boolean inAbyss = depth > 0f;
 		int [] tile = getTilePreferStorm(player.getLocation(), player.getRadius());
 		CellStateTracker cell = null; 
 		if (tile != null) {
@@ -1351,7 +1583,10 @@ public class HyperspaceTerrainPlugin extends BaseTiledTerrain { // implements Ne
 //		}
 		
 		tooltip.addTitle(getTerrainName());
-		if (!inCloud) {
+		if (inAbyss) {
+			//abyssal
+			tooltip.addPara(Global.getSettings().getDescription(getTerrainId() + "_abyssal", Type.TERRAIN).getText1(), pad);
+		} else if (!inCloud) {
 			// open
 			tooltip.addPara(Global.getSettings().getDescription(getTerrainId() + "_normal", Type.TERRAIN).getText1(), pad);
 		} else if (cell == null || !cell.isStorming()) {
@@ -1373,23 +1608,43 @@ public class HyperspaceTerrainPlugin extends BaseTiledTerrain { // implements Ne
 				"Your fleet requires %s fuel per light-year.*", nextPad,
 				highlight, fuelCost);
 
-		if (inCloud) {
+		if (inAbyss) {
+			tooltip.addPara("Reduces the sensor range and sensor profile of fleets inside it by %s. "
+					+ "Also reduces the maximum burn level by %s. The reduction is gradual and based "
+					+ "on the \"depth\" the fleet has reached.",
+					pad,
+					highlight,
+					"" + (int) Math.round((1f - ABYSS_VISIBLITY_MULT) * 100f) + "%",
+					"" + (int) Math.round((1f - ABYSS_BURN_MULT) * 100f) + "%"
+			);
+			if (ABYSS_NAVIGATION_EFFECT <= 0) {
+				tooltip.addPara("Skill in navigation is of little use, and does not provide its "
+						+ "normal benefit in countering terrain-specific maximum burn penalties.", pad,
+						highlight,
+						"" + Math.round(ABYSS_NAVIGATION_EFFECT * 100f) + "%");				
+			} else {
+				tooltip.addPara("Skill in navigation is of limited use, and only provides %s of its "
+						+ "normal benefit in countering the maximum burn penalty.", pad,
+						highlight,
+						"" + Math.round(ABYSS_NAVIGATION_EFFECT * 100f) + "%");
+			}
+		} else if (inCloud) {
 			tooltip.addPara("Reduces the range at which fleets inside can be detected by %s.",
 					pad,
 					highlight,
-					"" + (int) ((1f - VISIBLITY_MULT) * 100) + "%"
+					"" + (int) Math.round((1f - VISIBLITY_MULT) * 100f) + "%"
 			);
 			
 			tooltip.addPara("Reduces the speed of fleets inside by up to %s. Larger fleets are slowed down more.", 
 					nextPad,
 					highlight, 
-					"" + (int) ((Misc.BURN_PENALTY_MULT) * 100f) + "%"
+					"" + (int) Math.round((Misc.BURN_PENALTY_MULT) * 100f) + "%"
 			);
 		
 			float penalty = Misc.getBurnMultForTerrain(Global.getSector().getPlayerFleet());
 			tooltip.addPara("Your fleet's speed is reduced by %s.", pad,
 					highlight,
-					"" + (int) Math.round((1f - penalty) * 100) + "%"
+					"" + (int) Math.round((1f - penalty) * 100f) + "%"
 					//Strings.X + penaltyStr
 			);
 			
@@ -1418,7 +1673,18 @@ public class HyperspaceTerrainPlugin extends BaseTiledTerrain { // implements Ne
 //			} else {
 //				tooltip.addPara("No effect.", small);
 //			}
-			tooltip.addPara("No combat effects.", nextPad);
+			if (inAbyss) {
+//				public static float ABYSS_SHIP_SPEED_PENALTY = 20f;
+//				public static float ABYSS_MISSILE_SPEED_PENALTY = 20f;
+				tooltip.addPara("Reduces top speed of ships by up to %s, and the top speed and range "
+						+ "of missiles by up to %s.", pad,
+						highlight,
+						"" + (int) Math.round(BattleCreationPluginImpl.ABYSS_SHIP_SPEED_PENALTY) + "%",
+						"" + (int) Math.round(BattleCreationPluginImpl.ABYSS_MISSILE_SPEED_PENALTY) + "%"
+				);
+			} else {
+				tooltip.addPara("No combat effects.", nextPad);
+			}
 		}
 		
 		tooltip.addPara("*1 light-year = 2000 units = 1 map grid cell", gray, pad);
@@ -1449,6 +1715,7 @@ public class HyperspaceTerrainPlugin extends BaseTiledTerrain { // implements Ne
 	public String getTerrainName() {
 		CampaignFleetAPI player = Global.getSector().getPlayerFleet();
 		boolean inCloud = isInClouds(player);
+		boolean inAbyss = isInAbyss(player);
 		int [] tile = getTilePreferStorm(player.getLocation(), player.getRadius());
 		int val = 0;
 		CellStateTracker cell = null;
@@ -1457,7 +1724,9 @@ public class HyperspaceTerrainPlugin extends BaseTiledTerrain { // implements Ne
 		}
 		
 		String name = "Hyperspace";
-		if (!inCloud) {
+		if (inAbyss) {
+			name = "Hyperspace (Abyssal)";
+		} else if (!inCloud) {
 		} else if (cell == null || !cell.isStorming()) {
 			name = "Hyperspace (Deep)";
 		} else if (cell.isStorming()) {

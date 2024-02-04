@@ -272,6 +272,7 @@ public interface WeaponAPI {
 	WeaponSpecAPI getOriginalSpec();
 	void setWeaponGlowWidthMult(float weaponGlowWidthMult);
 	void setWeaponGlowHeightMult(float weaponGlowHeightMult);
+	void stopFiring();
 }
 
 

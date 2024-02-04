@@ -124,7 +124,12 @@ public abstract class BaseAssignmentAI implements EveryFrameScript {
 	}
 	
 	protected void checkObjectiveAction(boolean build) {
+//		if (!fleet.isInCurrentLocation() && fleet.getName().contains("Tactistar")) {
+//			System.out.println("efwfe2534324");
+//		}
+		
 		if (!canTakeAction()) return;
+		
 		
 //		if (fleet.isInCurrentLocation()) {
 //			System.out.println("fwewefe");
@@ -134,6 +139,9 @@ public abstract class BaseAssignmentAI implements EveryFrameScript {
 		
 		if (build) {
 			for (SectorEntityToken objective : fleet.getContainingLocation().getEntitiesWithTag(Tags.STABLE_LOCATION)) {
+				if (objective.hasTag(Tags.NON_CLICKABLE)) continue;
+				if (objective.hasTag(Tags.FADING_OUT_AND_EXPIRING)) continue;
+				
 				// so that it's not continuously rebuilt if it keeps being salvaged by the player
 				if (objective.getMemoryWithoutUpdate().getBoolean(MemFlags.RECENTLY_SALVAGED)) continue;
 				
@@ -146,7 +154,8 @@ public abstract class BaseAssignmentAI implements EveryFrameScript {
 		} else {
 			for (SectorEntityToken objective : fleet.getContainingLocation().getEntitiesWithTag(Tags.OBJECTIVE)) {
 				if (objective.getFaction() == fleet.getFaction()) continue;
-				if (!objective.getFaction().isHostileTo(fleet.getFaction())) {
+				if (!objective.getFaction().isHostileTo(fleet.getFaction()) && 
+						!Misc.isFleetMadeHostileToFaction(fleet, objective.getFaction())) {
 					boolean ownerHasColonyInSystem = false;
 					for (MarketAPI curr : Misc.getMarketsInLocation(objective.getContainingLocation())) {
 						if (curr.getFaction() == objective.getFaction() && 
@@ -202,6 +211,10 @@ public abstract class BaseAssignmentAI implements EveryFrameScript {
 	
 	protected void giveCaptureOrder(final SectorEntityToken target) {
 		clearTempAssignments(fleet);
+		
+//		if (!fleet.isInCurrentLocation() && fleet.getName().contains("Tactistar")) {
+//			System.out.println("efwfe2534324");
+//		}
 		
 		Misc.setFlagWithReason(fleet.getMemoryWithoutUpdate(), 
 								MemFlags.FLEET_BUSY, TEMP_BUSY_REASON, true, (1.5f + (float) Math.random()));
@@ -365,11 +378,14 @@ public abstract class BaseAssignmentAI implements EveryFrameScript {
 	protected void checkColonyAction() {
 		if (!canTakeAction()) return;
 		
+		if (fleet.getMemoryWithoutUpdate().getBoolean(MemFlags.RECENTLY_PERFORMED_RAID)) {
+			return;
+		}
 		
 		MarketAPI closest = null;
 		float minDist = Float.MAX_VALUE;
 		
-//		if (fleet.getFaction().getId().equals(Factions.DIKTAT)) {
+//		if (fleet.getFaction().getId().equals(Factions.HEGEMONY)) {
 //			System.out.println("wefwefwe");
 //		}
 		
@@ -377,7 +393,8 @@ public abstract class BaseAssignmentAI implements EveryFrameScript {
 			if (delegate != null) {
 				if (!delegate.canRaid(fleet, market)) continue;
 			} else {
-				if (!market.getFaction().isHostileTo(fleet.getFaction())) continue;
+				if (!market.getFaction().isHostileTo(fleet.getFaction()) && 
+						!Misc.isFleetMadeHostileToFaction(fleet, market.getFaction())) continue;
 			}
 			
 			float dist = Misc.getDistance(fleet, market.getPrimaryEntity());
@@ -413,6 +430,11 @@ public abstract class BaseAssignmentAI implements EveryFrameScript {
 			}
 			
 			if (other.getFaction() == fleet.getFaction()) {
+				if (other.isStationMode()) continue;
+				
+				boolean otherFromSameRaid = delegate != null && delegate.canRaid(other, closest);
+				if (!(Misc.isRaider(other) && !Misc.isWarFleet(other) && !otherFromSameRaid)) continue;
+				
 				if (other.getFleetPoints() > fleet.getFleetPoints()) return;
 				if (other.getFleetPoints() == fleet.getFleetPoints()) {
 					float dist = Misc.getDistance(other, closest.getPrimaryEntity());
@@ -459,11 +481,20 @@ public abstract class BaseAssignmentAI implements EveryFrameScript {
 		fleet.addAssignmentAtStart(FleetAssignment.HOLD, holdLoc, 0.5f, capText, new Script() {
 			public void run() {
 				if (fpAtStart == fleet.getFleetPoints()) {
+					boolean raided = false;
 					if (delegate != null) {
-						delegate.performRaid(fleet, target);
+						if (delegate.canRaid(fleet, target)) {
+							delegate.performRaid(fleet, target);
+							raided = true;
+						}
 					} else {
 						new MarketCMD(target.getPrimaryEntity()).doGenericRaid(fleet.getFaction(),
 																			   MarketCMD.getRaidStr(fleet));
+						raided = true;
+					}
+					
+					if (raided) {
+						fleet.getMemoryWithoutUpdate().set(MemFlags.RECENTLY_PERFORMED_RAID, true, 3f);
 					}
 					clearTempAssignments(fleet);
 				}

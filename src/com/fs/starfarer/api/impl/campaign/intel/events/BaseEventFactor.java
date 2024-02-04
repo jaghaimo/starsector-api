@@ -15,6 +15,10 @@ public class BaseEventFactor implements EventFactor {
 		return 0;
 	}
 	
+	public float getAllProgressMult(BaseEventIntel intel) {
+		return 1f;
+	}
+	
 	public boolean shouldShow(BaseEventIntel intel) {
 		return getProgress(intel) != 0;
 	}
@@ -37,6 +41,11 @@ public class BaseEventFactor implements EventFactor {
 		return intel.getProgressColor(getProgress(intel));
 	}
 
+	public TooltipCreator getMainRowTooltip(BaseEventIntel intel) {
+		// to make mods that don't implement this method and only implement the older 
+		// getMainRowTooltip() with no parameter work
+		return getMainRowTooltip();
+	}
 	public TooltipCreator getMainRowTooltip() {
 		return null;
 	}
@@ -72,11 +81,21 @@ public class BaseEventFactor implements EventFactor {
 		float extra = 0f;
 		extra = 64f + 14f;
 		info.addCustomDoNotSetPosition(rect).getPosition().inTL(-small - extra, 0).setSize(
-				info.getWidthSoFar() + small * 2f + extra, Math.max(64f, info.getHeightSoFar() + 3f));
+				info.getWidthSoFar() + small * 2f + extra + 10f, Math.max(64f, info.getHeightSoFar() + 3f));
 	}
 
 	public void addBulletPointForOneTimeFactor(BaseEventIntel intel, TooltipMakerAPI info, Color tc, float initPad) {
 
 	}
+
+	public void notifyFactorRemoved() {
+		
+	}
+
+	public void advance(float amount) {
+		// TODO Auto-generated method stub
+		
+	}
+
 
 }

@@ -8,6 +8,8 @@ import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.campaign.ai.CampaignFleetAIAPI;
 import com.fs.starfarer.api.campaign.ai.CampaignFleetAIAPI.EncounterOption;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
+import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
+import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.tutorial.TutorialMissionIntel;
 import com.fs.starfarer.api.util.IntervalUtil;
 import com.fs.starfarer.api.util.Misc;
@@ -84,7 +86,7 @@ public abstract class DisposableFleetManager extends PlayerVisibleFleetManager {
 				EncounterOption option = ai.pickEncounterOption(null, player, true);
 				if (option == EncounterOption.DISENGAGE) return true;
 			} else {
-				return fleet.getFleetPoints() <= playerFP;
+				return fleet.getFleetPoints() <= playerFP * 0.5f;
 			}
 		}
 		
@@ -122,6 +124,25 @@ public abstract class DisposableFleetManager extends PlayerVisibleFleetManager {
 			if (closest != currSpawnLoc) {
 				currSpawnLoc = closest;
 			}
+			
+			//List<ManagedFleetData> remove = new ArrayList<ManagedFleetData>();
+			for (ManagedFleetData data : active) {
+				if (Misc.isFleetReturningToDespawn(data.fleet)) continue;
+				// if it's player-visible/in the currently active location,
+				// make it return to source when it's been beat up enough
+				// to be worth despawning
+				//if (isOkToDespawnAssumingNotPlayerVisible(data.fleet)) {
+				
+				float fp = data.fleet.getFleetPoints();
+				float spawnFP = data.fleet.getMemoryWithoutUpdate().getFloat(KEY_SPAWN_FP);
+				if (fp < spawnFP * 0.33f) {
+					Misc.giveStandardReturnToSourceAssignments(data.fleet);
+					//remove.add(data);
+				}
+			}
+			
+			//active.removeAll(remove);
+			
 			updateSpawnRateMult();
 		}
 	}
@@ -181,6 +202,7 @@ public abstract class DisposableFleetManager extends PlayerVisibleFleetManager {
 		float minDist = Float.MAX_VALUE;
 		for (MarketAPI market : Global.getSector().getEconomy().getMarketsCopy()) {
 			if (market.isHidden()) continue;
+			if (market.getStarSystem() != null && market.getStarSystem().hasTag(Tags.SYSTEM_ABYSSAL)) continue;
 			
 			if (market.isPlayerOwned() && market.getSize() <= 3) continue;
 			if (!market.hasSpaceport()) continue;
@@ -234,22 +256,29 @@ public abstract class DisposableFleetManager extends PlayerVisibleFleetManager {
 		return fleet;
 	}
 
-	protected String getTravelText(StarSystemAPI system) {
+	protected String getTravelText(StarSystemAPI system, CampaignFleetAPI fleet) {
 		return "traveling to the " + system.getBaseName() + " star system";
 	}
 	
-	protected String getActionInsideText(StarSystemAPI system) {
-		return "raiding the " + system.getBaseName() + " star system";
+	protected String getActionInsideText(StarSystemAPI system, CampaignFleetAPI fleet) {
+		boolean patrol = fleet.getMemoryWithoutUpdate().getBoolean(MemFlags.MEMORY_KEY_PATROL_FLEET);
+		String verb = "raiding";
+		if (patrol) verb = "patrolling";
+		return verb + " the " + system.getBaseName() + " star system";
 	}
 	
-	protected String getActionOutsideText(StarSystemAPI system) {
-		return "raiding around the " + system.getBaseName() + " star system";
+	protected String getActionOutsideText(StarSystemAPI system, CampaignFleetAPI fleet) {
+		boolean patrol = fleet.getMemoryWithoutUpdate().getBoolean(MemFlags.MEMORY_KEY_PATROL_FLEET);
+		String verb = "raiding";
+		if (patrol) verb = "patrolling";
+		return verb + " around the " + system.getBaseName() + " star system";
 	}
 
 	protected void setLocationAndOrders(CampaignFleetAPI fleet, float probStartInHyper, float probStayInHyper) {
 		StarSystemAPI system = getCurrSpawnLoc();
 		
-		if ((float) Math.random() < probStartInHyper) {
+		if ((float) Math.random() < probStartInHyper || 
+				(Global.getSector().getPlayerFleet() != null && Global.getSector().getPlayerFleet().isInHyperspace())) {
 			Global.getSector().getHyperspace().addEntity(fleet);
 		} else {
 			system.addEntity(fleet);

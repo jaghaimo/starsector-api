@@ -16,6 +16,7 @@ import com.fs.starfarer.api.impl.campaign.ids.FleetTypes;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.ids.Terrain;
 import com.fs.starfarer.api.impl.campaign.missions.hub.ReqMode;
+import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.BreadcrumbSpecial;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.Misc.Token;
@@ -76,6 +77,7 @@ public class GAProbePackage extends GABaseMission {
 		preferSystemUnexplored();
 		preferTerrainInDirectionOfOtherMissions();
 
+		//setGenRandom(new Random(99923667662341234L));
 		object = pickTerrain();
 
 		if (object == null) {
@@ -105,7 +107,7 @@ public class GAProbePackage extends GABaseMission {
 		addSuccessStages(Stage.COMPLETED);
 		addFailureStages(Stage.FAILED);
 
-		SectorEntityToken probe = spawnEntity(Entities.GENERIC_PROBE, new LocData(object));
+		probe = spawnEntity(Entities.GENERIC_PROBE, new LocData(object));
 		if (probe == null) return false;
 
 		probe.setId("gaProbe_probe");
@@ -206,8 +208,13 @@ public class GAProbePackage extends GABaseMission {
 		float opad = 10f;
 		Color h = Misc.getHighlightColor();
 		if (currentStage == Stage.GO_TO_PROBE) {
-			info.addPara("Recover an instrument package from a probe in the " +
+			if (probe != null) {
+				String loc = BreadcrumbSpecial.getLocatedString(probe, true);
+				info.addPara("Recover an instrument package from a probe " + loc + ".", opad);
+			} else {
+				info.addPara("Recover an instrument package from a probe in the " +
 						system.getNameWithLowercaseTypeShort() + ".", opad);
+			}
 		} else if (currentStage == Stage.FIND_SCAVENGER) {
 			info.addPara("Go to the nearest jump-point and retrieve the instrument package " + 
 					" from scavengers before they leave the system.", opad);

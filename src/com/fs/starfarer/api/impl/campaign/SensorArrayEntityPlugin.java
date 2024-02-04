@@ -221,10 +221,10 @@ public class SensorArrayEntityPlugin extends BaseCampaignObjectivePlugin {
 			mem.set(MemFlags.FLEET_CHASING_GHOST_RANDOM, random, 30f);
 		}
 		
-		boolean willRespond = random.nextFloat() < 0.5f;
+		boolean willRespond = random.nextFloat() < 0.75f;
 		//willRespond = true;
 		if (!willRespond) {
-			mem.set(MemFlags.FLEET_NOT_CHASING_GHOST, true, 2f + 2f * random.nextFloat());
+			mem.set(MemFlags.FLEET_NOT_CHASING_GHOST, true, 1f + 1f * random.nextFloat());
 			Misc.setFlagWithReason(fleet.getMemoryWithoutUpdate(), 
 					   MemFlags.FLEET_CHASING_GHOST, GHOST_RESPONSE, false, 0f);
 			for (FleetAssignmentDataAPI curr : fleet.getAI().getAssignmentsCopy()) {
@@ -235,7 +235,7 @@ public class SensorArrayEntityPlugin extends BaseCampaignObjectivePlugin {
 			return;
 		}
 		
-		float chaseDur = (1.5f + (float) Math.random()) * 1f;
+		float chaseDur = (2.5f + (float) Math.random()) * 2f;
 		Misc.setFlagWithReason(fleet.getMemoryWithoutUpdate(), 
 				MemFlags.FLEET_CHASING_GHOST, GHOST_RESPONSE, true, chaseDur);
 		mem.set(MemFlags.FLEET_BUSY, true, chaseDur);
@@ -244,7 +244,7 @@ public class SensorArrayEntityPlugin extends BaseCampaignObjectivePlugin {
 		float angle = Misc.getAngleInDegrees(fleet.getLocation()); // away from center of system;
 		float arc = 270f;
 		angle += arc/2f - arc * random.nextFloat();
-		float dist = 2000f + 2000f * random.nextFloat();
+		float dist = 3000f + 3000f * random.nextFloat();
 		Vector2f loc = Misc.getUnitVectorAtDegreeAngle(angle);
 		loc.scale(dist);
 		Vector2f.add(loc, fleet.getLocation(), loc);

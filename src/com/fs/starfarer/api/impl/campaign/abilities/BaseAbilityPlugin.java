@@ -21,6 +21,9 @@ import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 
 public abstract class BaseAbilityPlugin implements AbilityPlugin, EveryFrameScript{
+	
+	public static boolean PLAY_UI_SOUNDS_IN_WORLD_SOURCES = true;
+	
 	protected SectorEntityToken entity;
 	protected String id;
 	
@@ -82,8 +85,9 @@ public abstract class BaseAbilityPlugin implements AbilityPlugin, EveryFrameScri
 		}
 	}
 	
-	protected boolean isCompatible(AbilityPlugin other) {
+	public boolean isCompatible(AbilityPlugin other) {
 		for (String tag : spec.getTags()) {
+			if (!spec.isPositiveTag(tag) && !spec.isNegativeTag(tag)) continue;
 			if (spec.isPositiveTag(tag) && other.getSpec().hasTag(tag)) return false;
 			if (other.getSpec().hasOppositeTag(tag)) return false;
 		}
@@ -190,7 +194,7 @@ public abstract class BaseAbilityPlugin implements AbilityPlugin, EveryFrameScri
 	}
 	
 	public boolean hasTooltip() {
-		return false;
+		return true;
 	}
 	
 	public void createTooltip(TooltipMakerAPI tooltip, boolean expanded) {

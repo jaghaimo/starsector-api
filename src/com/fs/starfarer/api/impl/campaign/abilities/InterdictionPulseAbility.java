@@ -267,6 +267,7 @@ public class InterdictionPulseAbility extends BaseDurationAbility {
 				
 				for (AbilityPlugin ability : other.getAbilities().values()) {
 					if (!ability.getSpec().hasTag(Abilities.TAG_BURN + "+") &&
+							!ability.getSpec().hasTag(Abilities.TAG_DISABLED_BY_INTERDICT) &&
 							!ability.getId().equals(Abilities.INTERDICTION_PULSE)) continue;
 					
 					float origCooldown = ability.getCooldownLeft();

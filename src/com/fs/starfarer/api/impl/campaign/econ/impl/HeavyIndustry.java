@@ -173,6 +173,30 @@ public class HeavyIndustry extends BaseIndustry {
 		}
 	}
 
+	public boolean isPermaPollution() {
+		return permaPollution;
+	}
+
+	public void setPermaPollution(boolean permaPollution) {
+		this.permaPollution = permaPollution;
+	}
+
+	public boolean isAddedPollution() {
+		return addedPollution;
+	}
+
+	public void setAddedPollution(boolean addedPollution) {
+		this.addedPollution = addedPollution;
+	}
+
+	public float getDaysWithNanoforge() {
+		return daysWithNanoforge;
+	}
+
+	public void setDaysWithNanoforge(float daysWithNanoforge) {
+		this.daysWithNanoforge = daysWithNanoforge;
+	}
+
 	@Override
 	public void setSpecialItem(SpecialItemData special) {
 		super.setSpecialItem(special);

@@ -69,4 +69,6 @@ public interface ShipSystemAPI {
 
 	float getAmmoReloadProgress();
 	void setAmmoReloadProgress(float progress);
+
+	boolean canBeActivated();
 }

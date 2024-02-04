@@ -2006,7 +2006,9 @@ public abstract class BaseHubMission extends BaseIntelPlugin implements HubMissi
 		Set<String> tags = super.getIntelTags(map);
 		tags.add(Tags.INTEL_MISSIONS);
 		tags.add(Tags.INTEL_ACCEPTED);
-		tags.add(getFactionForUIColors().getId());
+		if (getFactionForUIColors() != null && !getFactionForUIColors().isPlayerFaction()) {
+			tags.add(getFactionForUIColors().getId());
+		}
 		if (addedTags != null) {
 			tags.addAll(addedTags);
 		}
@@ -3553,9 +3555,45 @@ public abstract class BaseHubMission extends BaseIntelPlugin implements HubMissi
 	}
 	
 	
-	public void addStandardMarketDesc(String prefix, MarketAPI market, TooltipMakerAPI info, float pad) {
+	public static void addStandardMarketDesc(String prefix, MarketAPI market, TooltipMakerAPI info, float pad) {
 		Color h = Misc.getHighlightColor();
 		FactionAPI f = market.getFaction();
+		
+		if (Misc.isHiddenBase(market)) {
+			String a = f.getPersonNamePrefixAOrAn();
+			if (prefix == null || prefix.isEmpty()) {
+				if (market.isInHyperspace()) {
+					LabelAPI label = info.addPara(market.getName() + "is " + a + " " + f.getPersonNamePrefix() + 
+							" base located in hyperspace.",
+							pad);
+					label.setHighlight(market.getName(), f.getPersonNamePrefix());
+					label.setHighlightColors(f.getBaseUIColor(), f.getBaseUIColor());
+				} else {
+					LabelAPI label = info.addPara(market.getName() + "is " + a + " " + f.getPersonNamePrefix() + 
+							" base in the " + market.getStarSystem().getNameWithLowercaseTypeShort() + ".",
+							pad);
+					label.setHighlight(market.getName(), f.getPersonNamePrefix());
+					label.setHighlightColors(f.getBaseUIColor(), f.getBaseUIColor());
+				}
+			} else {
+				if (market.isInHyperspace()) {
+					LabelAPI label = info.addPara(prefix + " " + market.getName() + ", " + a + " " + f.getPersonNamePrefix() + 
+							" base located in hyperspace.",
+							pad);
+					label.setHighlight(market.getName(), f.getDisplayNameWithArticleWithoutArticle());
+					label.setHighlightColors(f.getBaseUIColor(), f.getBaseUIColor());
+				} else {
+					LabelAPI label = info.addPara(prefix + " " + market.getName() + ", " + a + " " + f.getPersonNamePrefix() + 
+							" base in the " + market.getStarSystem().getNameWithLowercaseTypeShort() + ".",
+							pad);
+					label.setHighlight(market.getName(), f.getPersonNamePrefix());
+					label.setHighlightColors(f.getBaseUIColor(), f.getBaseUIColor());
+				}
+			}
+			
+			
+			return;
+		}
 
 		if (prefix == null || prefix.isEmpty()) {
 			if (market.isInHyperspace()) {

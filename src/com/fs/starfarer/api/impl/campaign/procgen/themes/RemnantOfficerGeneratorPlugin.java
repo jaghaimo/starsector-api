@@ -15,6 +15,9 @@ import com.fs.starfarer.api.campaign.FactionDoctrineAPI;
 import com.fs.starfarer.api.campaign.GenericPluginManagerAPI;
 import com.fs.starfarer.api.characters.MutableCharacterStatsAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
+import com.fs.starfarer.api.combat.WeaponAPI.AIHints;
+import com.fs.starfarer.api.combat.WeaponAPI.WeaponSize;
+import com.fs.starfarer.api.combat.WeaponAPI.WeaponType;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.events.OfficerManagerEvent.SkillPickPreference;
 import com.fs.starfarer.api.impl.campaign.fleets.BaseGenerateFleetOfficersPlugin;
@@ -25,6 +28,7 @@ import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Ranks;
 import com.fs.starfarer.api.impl.campaign.ids.Skills;
 import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.OfficerQuality;
+import com.fs.starfarer.api.loading.WeaponSpecAPI;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
 
@@ -97,7 +101,7 @@ public class RemnantOfficerGeneratorPlugin extends BaseGenerateFleetOfficersPlug
 		boolean integrate = params != null && !params.doNotIntegrateAICores;
 		integrate |= forceIntegrateCores;
 		
-		int numCommanderSkills = 1;
+		int numCommanderSkills = 0;
 		if (allowBetaAnywhere) numCommanderSkills++;
 		if (allowAlphaAnywhere) numCommanderSkills++;
 		if (params != null && params.noCommanderSkills != null && params.noCommanderSkills) numCommanderSkills = 0;
@@ -242,6 +246,44 @@ public class RemnantOfficerGeneratorPlugin extends BaseGenerateFleetOfficersPlug
 //				person.getStats().setSkillLevel(Skills.RELIABILITY_ENGINEERING, 0);
 //			}
 //		} else {
+		if (member.getVariant() != null && member.getVariant().getWeaponGroups() != null) {
+			float weight = 0f;
+			float pdWeight = 0f;
+			float missileWeight = 0f;
+			for (String slotId : member.getVariant().getFittedWeaponSlots()) {
+				WeaponSpecAPI spec = member.getVariant().getWeaponSpec(slotId);
+				if (spec == null) continue;
+				float w = 1f;
+				if (spec.getSize() == WeaponSize.MEDIUM) w = 2f;
+				if (spec.getSize() == WeaponSize.LARGE) w = 4f;
+				weight += w;
+				if (spec.getAIHints().contains(AIHints.PD)) {
+					pdWeight += w;
+				}
+				if (spec.getType() == WeaponType.MISSILE) {
+					missileWeight += w;
+				}
+				
+			}
+			
+			float decks = member.getNumFlightDecks();
+			if (decks > 0) {
+				weight += decks * 4f;
+				pdWeight += decks * 4f;
+			}
+
+			boolean hasUsefulPD = pdWeight > weight * 0.25f;
+			boolean hasEnoughMissiles = missileWeight > weight * 0.2f;
+			
+			
+			if (hasUsefulPD && !hasEnoughMissiles) {
+				person.getStats().setSkillLevel(Skills.POINT_DEFENSE, 2);
+				person.getStats().setSkipRefresh(false);
+				return;
+			}
+		}
+		
+		
 			if (member.getHullSpec() != null && member.getHullSpec().hasTag(Factions.DERELICT) &&
 					person.getStats().getSkillLevel(Skills.BALLISTIC_MASTERY) <= 0) {
 				person.getStats().setSkillLevel(Skills.BALLISTIC_MASTERY, 2);

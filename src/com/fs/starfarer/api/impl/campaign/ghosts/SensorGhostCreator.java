@@ -8,4 +8,6 @@ public interface SensorGhostCreator {
 	float getFrequency(SensorGhostManager manager);
 	float getTimeoutDaysOnSuccessfulCreate(SensorGhostManager manager);
 	boolean canSpawnWhilePlayerInOrNearSlipstream();
+	boolean canSpawnWhilePlayerInAbyss();
+	boolean canSpawnWhilePlayerOutsideAbyss();
 }

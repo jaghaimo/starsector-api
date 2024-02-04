@@ -243,4 +243,8 @@ public interface ShipHullSpecAPI {
 
 	void setDescriptionId(String descriptionId);
 
+	Color getHyperspaceJitterColor();
+
+	boolean isDHullOldMethod();
+
 }

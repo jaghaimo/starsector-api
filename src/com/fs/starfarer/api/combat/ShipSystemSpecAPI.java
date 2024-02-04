@@ -277,5 +277,12 @@ public interface ShipSystemSpecAPI {
 
 	boolean hasTag(String tag);
 
+	boolean isAllowFlameoutOnImpactWithFriendly();
+
+	void setAllowFlameoutOnImpactWithFriendly(boolean allowFlameoutOnImpactWithFriendly);
+
+	boolean isReloadBaseAmmoAmountOnly();
+	void setReloadBaseAmmoAmountOnly(boolean reloadBaseAmmoAmountOnly);
+
 
 }

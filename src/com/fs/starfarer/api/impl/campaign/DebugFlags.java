@@ -44,10 +44,13 @@ public class DebugFlags {
 	public static boolean SLIPSTREAM_DEBUG = false;
 	public static boolean USE_SLIPSTREAM_VISIBILITY_IN_DEBUG_MODE = true;
 	
+	public static boolean ABYSSAL_GHOST_SHIPS_DEBUG = false;
+	
 	
 	// not really a debug flag...
 	public static boolean SEND_UPDATES_WHEN_NO_COMM = false;
 	public static boolean WEAPONS_HAVE_COST = true; // weapons/fighters on custom-produced ships have a cost
+	
 	
 	
 	
@@ -105,6 +108,7 @@ public class DebugFlags {
 		PERSON_BOUNTY_DEBUG_INFO = dev;
 		
 		ALLOW_ALL_CONTACT_MISSIONS = dev;
+		
 	}
 	
 	public static void setPlaytestingConfig() {

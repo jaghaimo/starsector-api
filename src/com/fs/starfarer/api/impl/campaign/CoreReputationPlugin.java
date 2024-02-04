@@ -198,6 +198,7 @@ public class CoreReputationPlugin implements ReputationActionResponsePlugin {
 	public ReputationAdjustmentResult handlePlayerReputationAction(Object action, final String factionId) {
 		//final FactionAPI player = Global.getSector().getFaction(Factions.PLAYER);
 		final FactionAPI faction = Global.getSector().getFaction(factionId);
+		if (faction == null) return new ReputationAdjustmentResult(0);
 		return handlePlayerReputationActionInner(action, factionId, null, faction.getRelToPlayer());
 	}
 
@@ -881,12 +882,12 @@ public class CoreReputationPlugin implements ReputationActionResponsePlugin {
 		
 		Color deltaColor = Global.getSettings().getColor("textFriendColor");
 		String deltaString = "improved by " + deltaInt;
-		if (delta < 0) {
-			deltaColor = Misc.getNegativeHighlightColor();
-			deltaString = "reduced by " + deltaInt;
-		} else if (delta == 0) {
+		if (Math.abs(delta) <= 0.0049f || deltaInt == 0) {
 			deltaString = "not affected";
 			deltaColor = tc;
+		} else if (delta < 0) {
+			deltaColor = Misc.getNegativeHighlightColor();
+			deltaString = "reduced by " + deltaInt;
 		}
 		
 		text = "Relationship with " +  targetName + " " + deltaString + ", currently at " + standing + "";

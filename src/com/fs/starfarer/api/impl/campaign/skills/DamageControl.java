@@ -5,6 +5,7 @@ import java.awt.Color;
 import org.lwjgl.util.vector.Vector2f;
 
 import com.fs.starfarer.api.characters.AfterShipCreationSkillEffect;
+import com.fs.starfarer.api.characters.DescriptionSkillEffect;
 import com.fs.starfarer.api.characters.MutableCharacterStatsAPI;
 import com.fs.starfarer.api.characters.ShipSkillEffect;
 import com.fs.starfarer.api.characters.SkillSpecAPI;
@@ -17,6 +18,7 @@ import com.fs.starfarer.api.combat.listeners.AdvanceableListener;
 import com.fs.starfarer.api.combat.listeners.DamageTakenModifier;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
+import com.fs.starfarer.api.util.Misc;
 
 public class DamageControl {
 	
@@ -26,10 +28,12 @@ public class DamageControl {
 	public static float CREW_LOSS_REDUCTION = 50;
 	public static float MODULE_REPAIR_BONUS = 50;
 	public static float HULL_DAMAGE_REDUCTION = 25;
+	public static float EMP_DAMAGE_REDUCTION = 25;
 	
 	public static float ELITE_DAMAGE_THRESHOLD = 500;
 	public static float ELITE_DAMAGE_REDUCTION_PERCENT = 60;
-
+	
+	public static float ELITE_DAMAGE_TO_HULL_PERCENT = 15;
 	
 	public static class Level2 implements ShipSkillEffect {
 
@@ -212,6 +216,72 @@ public class DamageControl {
 			return null;
 		}
 	}
+
+	public static class Level7 implements ShipSkillEffect {
+
+		public void apply(MutableShipStatsAPI stats, HullSize hullSize, String id, float level) {
+			stats.getDamageToTargetHullMult().modifyPercent(id, ELITE_DAMAGE_TO_HULL_PERCENT);
+		}
+		
+		public void unapply(MutableShipStatsAPI stats, HullSize hullSize, String id) {
+			stats.getDamageToTargetHullMult().unmodifyPercent(id);
+		}
+		
+		public String getEffectDescription(float level) {
+			return "+" + (int)(ELITE_DAMAGE_TO_HULL_PERCENT) + "% damage dealt to hull";
+		}
+		
+		public String getEffectPerLevelDescription() {
+			return null;
+		}
+		
+		public ScopeDescription getScopeDescription() {
+			return ScopeDescription.PILOTED_SHIP;
+		}
+	}
+	
+	
+	
+	public static class Level8Desc implements DescriptionSkillEffect {
+		public String getString() {
+			return "\n\n*Normally, a damaged but functional module would not be repaired until 5 seconds have passed "
+					+ "without it taking damage.";
+		}
+		public Color[] getHighlightColors() {
+			Color h = Misc.getHighlightColor();
+			h = Misc.getDarkHighlightColor();
+			return new Color[] {h};
+		}
+		public String[] getHighlights() {
+			return new String [] {"5"};
+		}
+		public Color getTextColor() {
+			return null;
+		}
+	}
+	public static class Level8 implements ShipSkillEffect {
+
+		public void apply(MutableShipStatsAPI stats, HullSize hullSize, String id, float level) {
+			stats.getDynamic().getMod(Stats.CAN_REPAIR_MODULES_UNDER_FIRE).modifyFlat(id, 1f);
+		}
+		
+		public void unapply(MutableShipStatsAPI stats, HullSize hullSize, String id) {
+			stats.getDynamic().getMod(Stats.CAN_REPAIR_MODULES_UNDER_FIRE).unmodifyFlat(id);
+		}	
+		
+		public String getEffectDescription(float level) {
+			return "Repairs of damaged but functional weapons and engines can continue while they are under fire*";
+		}
+		
+		public String getEffectPerLevelDescription() {
+			return null;
+		}
+		
+		public ScopeDescription getScopeDescription() {
+			return ScopeDescription.PILOTED_SHIP;
+		}
+	}
+	
 	
 }
 

@@ -52,6 +52,12 @@ public class CargoPodsEntityPlugin extends BaseCustomEntityPlugin {
 	
 	public void advance(float amount) {
 		float days = Global.getSector().getClock().convertToDays(amount);
+		
+		float depth = Misc.getAbyssalDepth(entity);
+		if (depth >= 1f) {
+			days *= 5f;
+		}
+		
 		elapsed += days;
 		
 		if (!isNeverExpire()) {

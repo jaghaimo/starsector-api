@@ -44,10 +44,13 @@ public class GateExplosionScript implements EveryFrameScript {
 			interval.advance(days);
 			if (interval.intervalElapsed() && elapsed > 10f) { // make sure gate's already exploded
 				boolean allJPUsable = true;
+				boolean anyJPUsable = false;
 				for (SectorEntityToken jp : system.getJumpPoints()) {
 					allJPUsable &= !jp.getMemoryWithoutUpdate().getBoolean(JumpPointInteractionDialogPluginImpl.UNSTABLE_KEY);
+					anyJPUsable |= !jp.getMemoryWithoutUpdate().getBoolean(JumpPointInteractionDialogPluginImpl.UNSTABLE_KEY);
 				}
-				if (allJPUsable) {
+				//if (allJPUsable) {
+				if (anyJPUsable) {
 					system.removeTag(Tags.SYSTEM_CUT_OFF_FROM_HYPER);
 					done = true;
 				}

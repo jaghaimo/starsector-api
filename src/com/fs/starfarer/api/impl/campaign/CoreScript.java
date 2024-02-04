@@ -31,7 +31,6 @@ import com.fs.starfarer.api.campaign.LocationAPI;
 import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.PlayerMarketTransaction;
 import com.fs.starfarer.api.campaign.PlayerMarketTransaction.ShipSaleInfo;
-import com.fs.starfarer.api.campaign.RepLevel;
 import com.fs.starfarer.api.campaign.SectorAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.SpecialItemData;
@@ -367,6 +366,7 @@ public class CoreScript extends BaseCampaignEventListener implements EveryFrameS
 		
 		
 		for (final CampaignFleetAPI otherFleet : battle.getNonPlayerSideSnapshot()) {
+			if (otherFleet.hasScriptOfClass(TOffAlarm.class)) continue;
 			MemoryAPI memory = otherFleet.getMemoryWithoutUpdate();
 			//if (!playerFleet.isTransponderOn()) {
 			//if (!memory.getBoolean(MemFlags.MEMORY_KEY_LOW_REP_IMPACT)) {
@@ -374,7 +374,8 @@ public class CoreScript extends BaseCampaignEventListener implements EveryFrameS
 			//}
 			//}
 				
-			if (!otherFleet.getMemoryWithoutUpdate().getBoolean(MemFlags.MEMORY_KEY_LOW_REP_IMPACT)) {
+			if (!otherFleet.getMemoryWithoutUpdate().getBoolean(MemFlags.MEMORY_KEY_LOW_REP_IMPACT) ||
+					otherFleet.getMemoryWithoutUpdate().getBoolean(MemFlags.SPREAD_TOFF_HOSTILITY_IF_LOW_IMPACT)) {
 				otherFleet.addScript(new TOffAlarm(otherFleet));
 			}
 			
@@ -385,7 +386,8 @@ public class CoreScript extends BaseCampaignEventListener implements EveryFrameS
 					Global.getSettings().getFloat("sensorRangeMax") + 500f,
 				new MarketFilter() {
 					public boolean acceptMarket(MarketAPI market) {
-						return market.getFaction().isAtWorst(otherFleet.getFaction(), RepLevel.COOPERATIVE);
+						//return market.getFaction().isAtWorst(otherFleet.getFaction(), RepLevel.COOPERATIVE);
+						return market.getFaction() != null && market.getFaction() == otherFleet.getFaction();
 					}
 				});
 			
@@ -1102,11 +1104,11 @@ public class CoreScript extends BaseCampaignEventListener implements EveryFrameS
 		
 		report.computeTotals();
 		int total = (int) (report.getRoot().totalIncome - report.getRoot().totalUpkeep);
-		int credits = (int) playerFleet.getCargo().getCredits().get();
+		float credits = (int) playerFleet.getCargo().getCredits().get();
 		
-		int newCredits = credits + total;
+		float newCredits = credits + total;
 		if (newCredits < 0) {
-			report.setDebt(Math.abs(newCredits));
+			report.setDebt((int) Math.abs(newCredits));
 			newCredits = 0;
 		}
 		playerFleet.getCargo().getCredits().set(newCredits);

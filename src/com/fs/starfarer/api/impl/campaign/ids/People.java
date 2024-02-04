@@ -76,8 +76,16 @@ public class People {
 	// Persean League
 	public static String SIYAVONG = "siyavong";
 	public static String HORUS_YARIBAY = "horus_yaribay";
+	public static String REYNARD_HANNAN = "reynard_hannan";
+	//public static String IZEL_HANNAN = "izel_hannan";
 	public static String DARDAN_KATO = "dardan_kato";
 	public static String IMOINU_KATO = "imoinu_kato";
+	
+	// contacts for LOCR missions
+	public static String LOCR_PIRATE = "locr_pirate_contact"; // Pirate
+	public static String LOCR_LUDDIC = "locr_luddic_contact"; // Luddic
+	public static String LOCR_UTOPIAN = "locr_utopia_contact"; // Utopia
+	public static String LOCR_MINER = "locr_miners_contact"; // Miners
 	
 	// independent & misc
 	public static String ROBEDMAN = "robed_man";
@@ -324,7 +332,7 @@ public class People {
 			person.setId(HORUS_YARIBAY);
 			person.setFaction(Factions.PERSEAN);
 			person.setGender(Gender.MALE);
-			person.setRankId(Ranks.CITIZEN);
+			person.setRankId(Ranks.HOUSE_LEADER_MALE);
 			person.setPostId(Ranks.POST_ARISTOCRAT);
 			person.setImportance(PersonImportance.HIGH);
 			person.setVoice(Voices.ARISTO);
@@ -523,6 +531,52 @@ public class People {
 			
 		}
 		
+		
+		{
+			// Luddic splinter group leader
+			PersonAPI person = Global.getSector().getFaction(Factions.LUDDIC_CHURCH).createRandomPerson(StarSystemGenerator.random);
+			person.setId(LOCR_LUDDIC);
+			if( person.getGender() == Gender.FEMALE) person.setRankId(Ranks.SISTER);
+			else person.setRankId(Ranks.BROTHER);
+			person.setPostId(Ranks.POST_HERETIC);
+			person.setImportance(PersonImportance.LOW);
+			person.setVoice(Voices.FAITHFUL);
+			ip.addPerson(person);
+		}
+		
+		{
+			// Lost Miners leader
+			PersonAPI person = Global.getSector().getFaction(Factions.INDEPENDENT).createRandomPerson(StarSystemGenerator.random);
+			person.setId(LOCR_MINER);
+			person.setRankId(Ranks.CITIZEN);
+			person.setPostId(Ranks.POST_CREW_BOSS);
+			person.setImportance(PersonImportance.LOW);
+			person.setVoice(Voices.SPACER);
+			ip.addPerson(person);
+		}
+		
+		{
+			// Utopian leader
+			PersonAPI person = Global.getSector().getFaction(Factions.INDEPENDENT).createRandomPerson(StarSystemGenerator.random);
+			person.setId(LOCR_UTOPIAN);
+			person.setRankId(Ranks.CITIZEN);
+			person.setPostId(Ranks.POST_OUTPOST_COMMANDER);
+			person.setImportance(PersonImportance.LOW);
+			person.setVoice(Voices.ARISTO);
+			ip.addPerson(person);
+		}
+		
+		{
+			// Pirate leader
+			PersonAPI person = Global.getSector().getFaction(Factions.PIRATES).createRandomPerson(StarSystemGenerator.random);
+			person.setId(LOCR_PIRATE);
+			person.setRankId(Ranks.SPACE_CAPTAIN);
+			person.setPostId(Ranks.POST_CRIMINAL);
+			person.setImportance(PersonImportance.LOW);
+			person.setVoice(Voices.SPACER);
+			ip.addPerson(person);
+		}
+		
 		{
 			// Officer doing cleanup at GA during the tutorial
 			PersonAPI person = Global.getSector().getFaction(Factions.HEGEMONY).createRandomPerson();
@@ -650,13 +704,13 @@ public class People {
 		market =  Global.getSector().getEconomy().getMarket("sindria");
 		if (market != null) {
 			PersonAPI person = Global.getFactory().createPerson();
-			person.setId("andrada");
+			person.setId(ANDRADA);
 			person.setFaction(Factions.DIKTAT);
 			person.setGender(Gender.MALE);
 			person.setRankId(Ranks.FACTION_LEADER);
 			person.setPostId(Ranks.POST_FACTION_LEADER);
 			person.setImportance(PersonImportance.VERY_HIGH);
-			person.getName().setFirst("Phillip");
+			person.getName().setFirst("Philip");
 			person.getName().setLast("Andrada");
 			person.setPortraitSprite(Global.getSettings().getSpriteName("characters", "andrada"));
 			person.getStats().setSkillLevel(Skills.INDUSTRIAL_PLANNING, 1);
@@ -723,6 +777,7 @@ public class People {
 			person3.getStats().setSkillLevel(Skills.TACTICAL_DRILLS, 1);
 			person3.getStats().setSkillLevel(Skills.SUPPORT_DOCTRINE, 1);
 			person3.getStats().setSkillLevel(Skills.CREW_TRAINING, 1);
+			person3.getStats().setLevel(4);
 			person3.setPortraitSprite(Global.getSettings().getSpriteName("characters", "oxana_hyder"));
 
 			//market.getCommDirectory().addPerson(person3);
@@ -791,7 +846,7 @@ public class People {
 		market =  Global.getSector().getEconomy().getMarket("umbra");
 		if (market != null) {
 			PersonAPI person = Global.getFactory().createPerson();
-			person.setId("imoinu_kato");
+			person.setId(IMOINU_KATO);
 			person.setFaction(Factions.PIRATES);
 			person.setGender(Gender.FEMALE);
 			person.setPostId(Ranks.POST_SUPPLY_OFFICER);
@@ -807,10 +862,12 @@ public class People {
 			assignPost(market, Ranks.POST_SUPPLY_OFFICER , person);
 		}
 		
+		addReynardHannan();
+		
 		market =  Global.getSector().getEconomy().getMarket("mazalot");
 		if (market != null) {
 			PersonAPI person = Global.getFactory().createPerson();
-			person.setId("dardan_kato");
+			person.setId(DARDAN_KATO);
 			person.setFaction(Factions.PERSEAN);
 			person.setGender(Gender.MALE);
 			person.setVoice(Voices.ARISTO);
@@ -829,7 +886,7 @@ public class People {
 		market =  Global.getSector().getEconomy().getMarket("mazalot");
 		if (market != null) {
 			PersonAPI person = Global.getFactory().createPerson();
-			person.setId("virens");
+			person.setId(VIRENS);
 			person.setFaction(Factions.LUDDIC_PATH);
 			person.setGender(Gender.MALE);
 			person.setPostId(Ranks.POST_TERRORIST);
@@ -847,12 +904,13 @@ public class People {
 		market =  Global.getSector().getEconomy().getMarket("chalcedon");
 		if (market != null) {
 			PersonAPI person = Global.getFactory().createPerson();
-			person.setId("sedge");
+			person.setId(SEDGE);
 			person.setFaction(Factions.LUDDIC_PATH);
 			person.setGender(Gender.MALE);
 			person.setPostId(Ranks.POST_TERRORIST);
 			person.setRankId(Ranks.BROTHER);
 			person.setImportance(PersonImportance.MEDIUM);
+			person.addTag(Tags.CONTACT_MILITARY);
 			person.getName().setFirst("Wrestling");
 			person.getName().setLast("Sedge");
 			person.setPortraitSprite(Global.getSettings().getSpriteName("characters", "sedge"));
@@ -867,7 +925,7 @@ public class People {
 		market =  Global.getSector().getEconomy().getMarket("kantas_den");
 		if (market != null) {
 			PersonAPI person = Global.getFactory().createPerson();
-			person.setId("kanta");
+			person.setId(KANTA);
 			person.setFaction(Factions.PIRATES);
 			person.setGender(Gender.FEMALE);
 			//person.setPostId(Ranks.POST_ADMINISTRATOR);
@@ -900,7 +958,7 @@ public class People {
 		
 		if (market != null) {
 			PersonAPI person = Global.getFactory().createPerson();
-			person.setId("cydonia");
+			person.setId(CYDONIA);
 			person.setFaction(Factions.PIRATES);
 			person.setGender(Gender.MALE);
 			person.setPostId(Ranks.POST_DOCTOR);
@@ -920,7 +978,7 @@ public class People {
 		market =  Global.getSector().getEconomy().getMarket("eochu_bres");
 		if (market != null) {
 			PersonAPI person = Global.getFactory().createPerson();
-			person.setId("sun");
+			person.setId(SUN);
 			person.setFaction(Factions.TRITACHYON);
 			person.setGender(Gender.FEMALE);
 			person.setRankId(Ranks.FACTION_LEADER);
@@ -943,7 +1001,7 @@ public class People {
 		market =  Global.getSector().getEconomy().getMarket("chicomoztoc");
 		if (market != null) {
 			PersonAPI person = Global.getFactory().createPerson();
-			person.setId("daud");
+			person.setId(DAUD);
 			person.setFaction(Factions.HEGEMONY);
 			person.setGender(Gender.MALE);
 			person.setRankId(Ranks.FACTION_LEADER);
@@ -967,7 +1025,7 @@ public class People {
 		market =  Global.getSector().getEconomy().getMarket("ragnar_complex");
 		if (market != null) {
 			PersonAPI person = Global.getFactory().createPerson();
-			person.setId("rao");
+			person.setId(RAO);
 			person.setFaction(Factions.HEGEMONY);
 			person.setGender(Gender.MALE);
 			person.setRankId(Ranks.SPACE_ADMIRAL);
@@ -990,7 +1048,7 @@ public class People {
 		market =  Global.getSector().getEconomy().getMarket("eventide");
 		if (market != null) {
 			PersonAPI person = Global.getFactory().createPerson();
-			person.setId("neriene_rao");
+			person.setId(NERIENE_RAO);
 			person.setFaction(Factions.HEGEMONY);
 			person.setGender(Gender.FEMALE);
 			person.setRankId(Ranks.SPACE_COMMANDER);
@@ -1009,7 +1067,7 @@ public class People {
 		market =  Global.getSector().getEconomy().getMarket("eventide");
 		if (market != null) {
 			PersonAPI person = Global.getFactory().createPerson();
-			person.setId("augusta_rao");
+			person.setId(AUGUSTA_RAO);
 			person.setFaction(Factions.HEGEMONY);
 			person.setGender(Gender.FEMALE);
 			person.setRankId(Ranks.CITIZEN);
@@ -1028,7 +1086,7 @@ public class People {
 		market =  Global.getSector().getEconomy().getMarket("eventide");
 		if (market != null) {
 			PersonAPI person = Global.getFactory().createPerson();
-			person.setId("caspian");
+			person.setId(CASPIAN);
 			person.setFaction(Factions.HEGEMONY);
 			person.setGender(Gender.MALE);
 			person.setRankId(Ranks.SPACE_LIEUTENANT);
@@ -1047,7 +1105,7 @@ public class People {
 		market =  Global.getSector().getEconomy().getMarket("eventide");
 		if (market != null) {
 			PersonAPI person = Global.getFactory().createPerson();
-			person.setId("magnus_cardona");
+			person.setId(MAGNUS);
 			person.setFaction(Factions.HEGEMONY);
 			person.setGender(Gender.MALE);
 			person.setRankId(Ranks.SPACE_COMMANDER);
@@ -1066,7 +1124,7 @@ public class People {
 		market = RecoverAPlanetkiller.getTundraMarket(); //  Global.getSector().getEconomy().getMarket("sentinel");
 		if (market != null) {
 			PersonAPI person = Global.getFactory().createPerson();
-			person.setId("skiron");
+			person.setId(SKIRON);
 			person.setFaction(Factions.HEGEMONY);
 			person.setGender(Gender.FEMALE);
 			person.setRankId(Ranks.SPACE_COMMANDER);
@@ -1090,6 +1148,31 @@ public class People {
 	}
 	
 	
+	public static void addReynardHannan() {
+		MarketAPI market =  Global.getSector().getEconomy().getMarket("kazeron");
+		if (market != null) {
+			ImportantPeopleAPI ip = Global.getSector().getImportantPeople();
+			
+			PersonAPI person = Global.getFactory().createPerson();
+			person.setId(REYNARD_HANNAN);
+			person.setFaction(Factions.PERSEAN);
+			person.setGender(Gender.MALE);
+			person.setVoice(Voices.ARISTO);
+			person.setRankId(Ranks.HOUSE_LEADER_MALE);
+			person.setPostId(Ranks.FACTION_LEADER);
+			person.setImportance(PersonImportance.VERY_HIGH);
+			person.getName().setFirst("Reynard");
+			person.getName().setLast("Hannan");
+			person.addTag(Tags.CONTACT_TRADE);
+			person.addTag(Tags.CONTACT_MILITARY);
+			person.setPortraitSprite(Global.getSettings().getSpriteName("characters", "reynard_hannan"));
+			//market.setAdmin(person);
+			market.getCommDirectory().addPerson(person, 0);
+			market.addPerson(person);
+			ip.addPerson(person);
+		}		
+	}
+
 	/**
 	 * Removes any people with this same post from the market.
 	 * @param market

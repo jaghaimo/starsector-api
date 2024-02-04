@@ -121,6 +121,10 @@ public interface JumpPointAPI extends SectorEntityToken {
 	 */
 	void forceClose();
 
+	StarSystemAPI getDestinationStarSystem();
+
+	boolean isWormhole();
+
 
 }
 

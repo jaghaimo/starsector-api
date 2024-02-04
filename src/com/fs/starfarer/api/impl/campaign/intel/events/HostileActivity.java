@@ -21,8 +21,10 @@ public class HostileActivity extends BaseMarketConditionPlugin {
 
 
 	public void apply(String id) {
-		float accessibility = intel.getAccessibilityPenalty();
-		float stability = intel.getStabilityPenalty();
+//		float accessibility = intel.getAccessibilityPenalty();
+//		float stability = intel.getStabilityPenalty();
+		float accessibility = 0.1f;
+		float stability = 1f;
 		String name = "Hostile activity";
 		if (accessibility != 0) {
 			market.getAccessibilityMod().modifyFlat(id, -accessibility, name);
@@ -64,8 +66,10 @@ public class HostileActivity extends BaseMarketConditionPlugin {
 		float small = 5f;
 		float opad = 10f;
 		
-		float accessibility = intel.getAccessibilityPenalty();
-		float stability = intel.getStabilityPenalty();
+//		float accessibility = intel.getAccessibilityPenalty();
+//		float stability = intel.getStabilityPenalty();
+		float accessibility = 0.1f;
+		float stability = 1f;
 		
 		if (stability != 0 && accessibility != 0) {
 			tooltip.addPara("%s stability, %s accessibility.", 

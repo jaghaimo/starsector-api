@@ -22,6 +22,7 @@ import com.fs.starfarer.api.combat.WeaponGroupAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import com.fs.starfarer.api.impl.hullmods.NeuralInterface;
 import com.fs.starfarer.api.input.InputEventAPI;
+import com.fs.starfarer.api.loading.WeaponGroupSpec;
 import com.fs.starfarer.api.mission.FleetSide;
 
 public class NeuralLinkScript extends BaseEveryFrameCombatPlugin {
@@ -78,9 +79,34 @@ public class NeuralLinkScript extends BaseEveryFrameCombatPlugin {
 		savedState.selected = ship.getSelectedGroupAPI();
 	}
 	public void restoreControlState(ShipAPI ship) {
-		if (ship == null || prevState == null || prevState.ship != ship) {
+		if (ship == null) {
 			return;
 		}
+		
+		if (prevState == null || prevState.ship != ship) {
+			List<WeaponGroupAPI> groups = ship.getWeaponGroupsCopy();
+			int index = 0;
+			for (WeaponGroupSpec groupSpec : ship.getVariant().getWeaponGroups()) {
+				if (index >= groups.size()) break;
+				
+				boolean auto = groupSpec.isAutofireOnByDefault();
+				WeaponGroupAPI group = groups.get(index);
+				if (group != null) {
+					if (auto) {
+						group.toggleOn();
+					} else {
+						group.toggleOff();
+					}
+				}
+				index++;
+			}
+			if (groups.size() >= 1) {
+				ship.giveCommand(ShipCommand.SELECT_GROUP, null, 0);
+			}
+			return;
+		}
+		
+		
 		for (WeaponGroupAPI group : ship.getWeaponGroupsCopy()) {
 			Boolean auto = prevState.autofiring.get(group);
 			if (auto == null) auto = false;
@@ -214,7 +240,14 @@ public class NeuralLinkScript extends BaseEveryFrameCombatPlugin {
 				return false;
 			}
 		}
-		return ship.isAlive() && !ship.isShuttlePod() &&
+		
+		boolean aliveOrDisabledButNonPhysical = ship.isAlive();
+		ShipAPI physicalLocation = engine.getShipPlayerLastTransferredCommandTo();
+		if (ship == playerShip && ship != physicalLocation) {
+			aliveOrDisabledButNonPhysical = true;
+		}
+						
+		return aliveOrDisabledButNonPhysical && !ship.isShuttlePod() &&
 			   ship.getMutableStats().getDynamic().getMod(Stats.HAS_NEURAL_LINK).computeEffective(0f) > 0;
 			   //ship.getVariant().hasHullMod(HullMods.NEURAL_INTERFACE);
 	}
@@ -223,8 +256,13 @@ public class NeuralLinkScript extends BaseEveryFrameCombatPlugin {
 		ShipAPI playerShip = engine.getPlayerShip();
 		if (playerShip == null) return;
 		
+		ShipAPI physicalLocation = engine.getShipPlayerLastTransferredCommandTo();
 		for (ShipAPI ship : new ArrayList<ShipAPI>(linked)) {
 			if (!ship.isAlive()) {
+				if (ship == playerShip && ship != physicalLocation) {
+					continue;
+				}
+				
 				if (ship != playerShip) {
 					PersonAPI orig = ship.getOriginalCaptain();
 					if (orig.isPlayer()) {
@@ -239,7 +277,6 @@ public class NeuralLinkScript extends BaseEveryFrameCombatPlugin {
 			}
 		}
 		
-		ShipAPI physicalLocation = engine.getShipPlayerLastTransferredCommandTo();
 		boolean physicallyPresent = linked.contains(physicalLocation);
 		if (!linked.contains(playerShip) || !physicallyPresent ||
 				!canLink(playerShip)) {

@@ -64,8 +64,8 @@ public class SensorArrayEffect extends BaseBattleObjectiveEffect {
 		int maxPoints = (int)Math.round(total * (1f - min));
 		return String.format(
 				"+%d%% ECM rating\n" +
-				"reduces weapon range for\n" +
-				"side with lower ECM rating\n" +
+				"reduces enemy weapon range\n" +
+				"by half of the total ECM rating\n" +
 				//"%d%% base maximum reduction\n" + 
 				"%d%% maximum reduction\n\n" + 
 				//"can be improved by skills\n\n" +
@@ -73,7 +73,19 @@ public class SensorArrayEffect extends BaseBattleObjectiveEffect {
 				"up to a maximum of " + maxPoints + " points",
 				(int)ElectronicWarfareScript.PER_JAMMER,
 				(int)ElectronicWarfareScript.BASE_MAXIMUM,
-				getBonusDeploymentPoints());
+				getBonusDeploymentPoints());		
+//		return String.format(
+//				"+%d%% ECM rating\n" +
+//				"reduces weapon range for\n" +
+//				"side with lower ECM rating\n" +
+//				//"%d%% base maximum reduction\n" + 
+//				"%d%% maximum reduction\n\n" + 
+//				//"can be improved by skills\n\n" +
+//				"+%d bonus deployment points\n" + 
+//				"up to a maximum of " + maxPoints + " points",
+//				(int)ElectronicWarfareScript.PER_JAMMER,
+//				(int)ElectronicWarfareScript.BASE_MAXIMUM,
+//				getBonusDeploymentPoints());
 //		   return String.format(
 //				   "command points: +%s\n" +
 //				   "reveal area: %d\n" +

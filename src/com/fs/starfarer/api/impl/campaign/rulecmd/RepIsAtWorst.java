@@ -12,7 +12,7 @@ import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.util.Misc.Token;
 
 /**
- * RepIsAtBest <factionId> RepLevel
+ * RepIsAtWorst <factionId> RepLevel
  */
 public class RepIsAtWorst extends BaseCommandPlugin {
 

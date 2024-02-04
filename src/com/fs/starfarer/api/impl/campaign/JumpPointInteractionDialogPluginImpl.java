@@ -21,6 +21,7 @@ import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.TextPanelAPI;
 import com.fs.starfarer.api.campaign.VisualPanelAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
+import com.fs.starfarer.api.campaign.impl.items.WormholeScannerPlugin;
 import com.fs.starfarer.api.campaign.rules.MemKeys;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.characters.AbilityPlugin;
@@ -30,15 +31,19 @@ import com.fs.starfarer.api.impl.campaign.ids.Abilities;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.rulecmd.DumpMemory;
+import com.fs.starfarer.api.impl.campaign.shared.WormholeManager;
 import com.fs.starfarer.api.impl.campaign.tutorial.TutorialMissionIntel;
 import com.fs.starfarer.api.loading.Description;
 import com.fs.starfarer.api.loading.Description.Type;
+import com.fs.starfarer.api.ui.LabelAPI;
 import com.fs.starfarer.api.util.Misc;
 
 public class JumpPointInteractionDialogPluginImpl implements InteractionDialogPlugin {
 
 	public static final String UNSTABLE_KEY = "$unstable";
 	public static final String CAN_STABILIZE = "$canStabilize";
+	
+	public static float WORMHOLE_FUEL_USE_MULT = 5f;
 	
 	private static enum OptionId {
 		INIT,
@@ -54,6 +59,8 @@ public class JumpPointInteractionDialogPluginImpl implements InteractionDialogPl
 		JUMP_CONFIRM_TURN_TRANSPONDER_ON,
 		JUMP_CONFIRM,
 		STABILIZE,
+		RETRIEVE_ANCHOR,
+		RETRIEVE_ANCHOR_CONFIRM,
 		LEAVE,
 	}
 	
@@ -99,19 +106,27 @@ public class JumpPointInteractionDialogPluginImpl implements InteractionDialogPl
 		float rounded = Math.round(fuelCost);
 		if (fuelCost > 0 && rounded <= 0) rounded = 1;
 		fuelCost = rounded;
-		if (jumpPoint.isInHyperspace()) {
+		
+		if (isWormhole()) {
+			fuelCost *= WORMHOLE_FUEL_USE_MULT;
+		} else if (jumpPoint.isInHyperspace()) {
 			fuelCost = 0f;
 		}
+		
 		canAfford = fuelCost <= playerFleet.getCargo().getFuel();
 		
 		visual.setVisualFade(0.25f, 0.25f);
 		if (jumpPoint.getCustomInteractionDialogImageVisual() != null) {
 			visual.showImageVisual(jumpPoint.getCustomInteractionDialogImageVisual());
 		} else {
-			if (playerFleet.getContainingLocation().isHyperspace()) {
-				visual.showImagePortion("illustrations", "jump_point_hyper", 640, 400, 0, 0, 480, 300);
+			if (isWormhole()) {
+				visual.showImagePortion("illustrations", "jump_point_wormhole", 640, 400, 0, 0, 480, 300);
 			} else {
-				visual.showImagePortion("illustrations", "jump_point_normal", 640, 400, 0, 0, 480, 300);
+				if (playerFleet.getContainingLocation().isHyperspace()) {
+					visual.showImagePortion("illustrations", "jump_point_hyper", 640, 400, 0, 0, 480, 300);
+				} else {
+					visual.showImagePortion("illustrations", "jump_point_normal", 640, 400, 0, 0, 480, 300);
+				}
 			}
 		}
 		
@@ -202,38 +217,85 @@ public class JumpPointInteractionDialogPluginImpl implements InteractionDialogPl
 //				}
 //			});
 			
-			addText(getString("approach"));
+			if (isWormhole()) {
+				addText("Your fleet approaches the wormhole.");
+			} else {
+				addText(getString("approach"));
+			}
 			
 			Description desc = Global.getSettings().getDescription(jumpPoint.getCustomDescriptionId(), Type.CUSTOM);
 			if (desc != null && desc.hasText3()) {
 				addText(desc.getText3());
 			}
 			
+			String noun = "jump-point";
+			if (isWormhole()) noun = "wormhole";
+			
 			if (unstable) {
-				if (stabilizing && !canTransverseJump) {
-					if (tutorialInProgress) {
-						addText("This jump-point is stabilizing and should be usable within a day at the most.");
+				if (isWormhole() && stabilizing) {
+					float dur = jumpPoint.getMemoryWithoutUpdate().getExpire(UNSTABLE_KEY);
+					
+					if (true) {
+						String durStr = "" + (int) dur;
+						String days = "days";
+						if ((int)dur == 1) {
+							days = "day";
+						}
+						if ((int)dur <= 0) {
+							days = "day";
+							durStr = "1";
+						}
+						
+						textPanel.addPara("This wormhole is stabilizing and will become usable "
+								+ "within %s " + days + ".", Misc.getHighlightColor(), durStr);
 					} else {
-						addText("This jump-point is stabilizing but will not be usable for some time.");
+						String time = Misc.getStringForDays((int) dur);
+						LabelAPI label;
+						if (time.contains("many")) {
+							label = textPanel.addParagraph(
+									"This wormhole is gradually stabilizing, but will not be usable for " + time + ".");
+						} else {
+							label = textPanel.addParagraph(
+									"This wormhole is stabilizing, and should be usable within " + time + ".");
+						}
+						
+						label.setHighlightColor(HIGHLIGHT_COLOR);
+						label.setHighlight(time);
 					}
+					
 				} else {
-					addText("This jump-point is unstable and can not be used.");
+					if (stabilizing && !canTransverseJump) {
+						if (tutorialInProgress) {
+							addText("This jump-point is stabilizing and should be usable within a day at the most.");
+						} else {
+							addText("This jump-point is stabilizing but will not be usable for some time.");
+						}
+					} else {
+						addText("This jump-point is unstable and can not be used.");
+					}
+					
+					if (canTransverseJump && !tutorialInProgress ) {
+						addText("Until it restabilizes, hyperspace is only accessible via Transverse Jump.");
+					}	
 				}
-				
-				if (canTransverseJump && !tutorialInProgress ) {
-					addText("Until it restabilizes, hyperspace is only accessible via Transverse Jump.");
-				}	
 			} else {
 				if (!jumpPoint.isInHyperspace()) {
 					if (canAfford) {
-						textPanel.addParagraph("Activating this jump point to let your fleet pass through will cost " + (int)fuelCost + " fuel.");
+						if (!jumpPoint.getDestinations().isEmpty()) {
+							if (isWormhole()) {
+								addText("The nav computer pings the wormhole terminus, establishing a data connection through drive-field fluctuations. "
+										+ "In under a minute, and only a moment of unease as the agrav self-correction settles, the process is complete. "
+										+ "Your primary interface unveils a list of possible destinations.");
+							}
+						}
+						textPanel.addParagraph("Activating this " + noun + " to let your fleet pass through will cost " + (int)fuelCost + " fuel.");
 						textPanel.highlightInLastPara(Misc.getHighlightColor(), "" + (int)fuelCost);
 					} else {
 						int fuel = (int) playerFleet.getCargo().getFuel();
 						if (fuel == 0) {
-							textPanel.addParagraph("Activating this jump point to let your fleet pass through will cost " + (int)fuelCost + " fuel. You have no fuel.");
+							textPanel.addParagraph("Activating this " + noun + " to let your fleet pass through will cost " + (int)fuelCost + " fuel. You have no fuel.");
 						} else {
-							textPanel.addParagraph("Activating this jump point to let your fleet pass through will cost " + (int)fuelCost + " fuel. You only have " + fuel + " fuel.");
+							textPanel.addParagraph("Activating this " + noun + " to let your fleet pass through will cost " + (int)fuelCost + " fuel. You only have " + fuel + " fuel.");
 						}
 						textPanel.highlightInLastPara(Misc.getNegativeHighlightColor(), "" + (int)fuelCost, "" + fuel);
 					}
@@ -256,7 +318,6 @@ public class JumpPointInteractionDialogPluginImpl implements InteractionDialogPl
 			addText("The jump-point should be stable enough to use within a day or so.");
 			
 			createInitialOptions();
-			
 			break;
 		case JUMP_CONFIRM_TURN_TRANSPONDER_ON:
 			AbilityPlugin t = Global.getSector().getPlayerFleet().getAbility(Abilities.TRANSPONDER);
@@ -267,6 +328,23 @@ public class JumpPointInteractionDialogPluginImpl implements InteractionDialogPl
 			break;
 		case JUMP_CONFIRM:
 			optionSelected(null, beingConfirmed);
+			break;
+		case RETRIEVE_ANCHOR_CONFIRM:
+			dialog.getTextPanel().addPara(
+					"You give the order. Before long, your ops chief confirms that the wormhole anchor has been stowed in a secure hold on your flagship.");
+			WormholeManager.get().removeWormhole(jumpPoint, dialog);
+			options.clearOptions();
+			options.addOption("Leave", OptionId.LEAVE, null);
+			options.setShortcut(OptionId.LEAVE, Keyboard.KEY_ESCAPE, false, false, false, true);
+			break;
+		case RETRIEVE_ANCHOR:
+			dialog.getTextPanel().addPara(
+					"This will shut down the wormhole and free up the stable point for other uses.");
+			options.clearOptions();
+			options.addOption("Confirm your orders", OptionId.RETRIEVE_ANCHOR_CONFIRM, null);
+			
+			options.addOption("Abort the operation", OptionId.LEAVE, null);
+			options.setShortcut(OptionId.LEAVE, Keyboard.KEY_ESCAPE, false, false, false, true);
 			break;
 		case LEAVE:
 			Global.getSector().getCampaignUI().setFollowingDirectCommand(true);
@@ -375,6 +453,8 @@ public class JumpPointInteractionDialogPluginImpl implements InteractionDialogPl
 	}
 	
 	protected void showWarningIfNeeded() {
+		if (isWormhole()) return;
+		
 		if (jumpPoint.getDestinations().isEmpty()) return;
 		JumpDestination dest = jumpPoint.getDestinations().get(0);
 		SectorEntityToken target = dest.getDestination();
@@ -405,6 +485,8 @@ public class JumpPointInteractionDialogPluginImpl implements InteractionDialogPl
 		TextPanelAPI text = dialog.getTextPanel();
 		
 		if (maxDanger >= 2) {
+			String noun = "jump-point";
+			if (isWormhole()) noun = "wormhole";
 			text.addPara("Warning!", Misc.getNegativeHighlightColor());
 			Global.getSoundPlayer().playUISound("cr_playership_malfunction", 1f, 0.25f);
 			
@@ -422,58 +504,6 @@ public class JumpPointInteractionDialogPluginImpl implements InteractionDialogPl
 					"near the exit are assesed likely hostile and a possible threat to your fleet.",
 					 Misc.getNegativeHighlightColor(), "hostile", "threat");
 		}
-		
-//		if (!fleets.isEmpty()) {
-//			if (hostile) {
-//				text.addPara("Warning!", Misc.getNegativeHighlightColor());
-//				Global.getSoundPlayer().playUISound("cr_playership_malfunction", 1f, 0.25f);
-//			}
-//			
-//			text.addPara("The jump-point exhibits fluctuations " +
-//										  "characteristic of an active drive field on the other side.");
-//			String where = "a short distance away from the exit";
-//			String whereHL = "";
-//			if (minDist < 500) {
-//				where = "extremely close to the exit";
-//				whereHL = where;
-//			}
-//			if (fleets.size() == 1) {
-//				String size = "small";
-//				if (fleets.get(0).getFleetPoints() >= 150) size = "very large";
-//				else if (fleets.get(0).getFleetPoints() >= 100) size = "large";
-//				else if (fleets.get(0).getFleetPoints() >= 50) size = "medium-sized";
-//				
-//				
-//				text.addPara("A more detailed analysis indicates it's likely a " + size + " fleet is " + where + ".",
-//						Misc.getNegativeHighlightColor(), whereHL);
-//			} else {
-//				text.addPara("A more detailed analysis indicates it's likely multiple fleets are " + where + ".",
-//						Misc.getNegativeHighlightColor(), whereHL);
-//			}
-//			
-//			
-//			
-//			text.addPara("You order a disposable probe sent through, " +
-//					"and it's able to transmit a micro-burst of information " +
-//					"before being destroyed by the stresses of jump-space.");
-//			if (hostile) {
-//				if (fleets.size() == 1) {
-//					text.addPara("The probe's onboard algorithms estimate it's extremely likely " +
-//							 "the nearby fleet is hostile.",
-//							 Misc.getNegativeHighlightColor(), "hostile");
-//				} else {
-//					text.addPara("The probe's onboard algorithims estimate it's extremely likely " +
-//							 "the nearby fleets include hostiles.",
-//							 Misc.getNegativeHighlightColor(), "hostiles");
-//				}
-//			} else {
-//				if (fleets.size() == 1) {
-//					text.addPara("The probe's onboard algorithims estimate the nearby fleet is not a danger.");
-//				} else {
-//					text.addPara("The probe's onboard algorithims estimate the nearby fleets are not a danger.");
-//				}
-//			}
-//		}
 	}
 
 	private Map<OptionId, JumpDestination> destinationMap = new HashMap<OptionId, JumpDestination>();
@@ -491,6 +521,8 @@ public class JumpPointInteractionDialogPluginImpl implements InteractionDialogPl
 		}
 		okToUseIfAnchor |= dev;
 		
+		String noun = "jump-point";
+		if (isWormhole()) noun = "wormhole";
 		
 		boolean unstable = jumpPoint.getMemoryWithoutUpdate().getBoolean(UNSTABLE_KEY);
 		boolean canStabilize = jumpPoint.getMemoryWithoutUpdate().getBoolean(CAN_STABILIZE);
@@ -501,7 +533,11 @@ public class JumpPointInteractionDialogPluginImpl implements InteractionDialogPl
 			}
 		} else {
 			if (jumpPoint.getDestinations().isEmpty()) {
-				addText(getString("noExits"));
+				if (isWormhole()) {
+					addText("This wormhole is not connected to any other termini and is effectively unusable.");
+				} else {
+					addText(getString("noExits"));
+				}
 			} else if (playerFleet.getCargo().getFuel() <= 0 && !canAfford) {
 				//addText(getString("noFuel"));
 			} else if (isStarAnchor && !okToUseIfAnchor) {
@@ -513,11 +549,27 @@ public class JumpPointInteractionDialogPluginImpl implements InteractionDialogPl
 					OptionId option = jumpOptions.get(index);
 					index++;
 					
-					options.addOption("Order a jump to " + dest.getLabelInInteractionDialog(), option, null);
+					if (isWormhole()) {
+						options.addOption("Initiate a transit to " + dest.getLabelInInteractionDialog(), option, null);
+						
+						boolean canUse = WormholeScannerPlugin.canPlayerUseWormholes();
+						if (!canUse) {
+							options.setEnabled(option, false);
+							options.setTooltip(option, "Using a wormhole requires a wormhole scanner.");
+						}
+						
+					} else { 
+						options.addOption("Order a jump to " + dest.getLabelInInteractionDialog(), option, null);
+					}
 					destinationMap.put(option, dest);
 				}
 			}
 		}
+		
+		if (isWormhole()) {
+			options.addOption("Shut down the wormhole and retrieve the anchor", OptionId.RETRIEVE_ANCHOR, null);
+		}
+		
 		options.addOption("Leave", OptionId.LEAVE, null);
 		options.setShortcut(OptionId.LEAVE, Keyboard.KEY_ESCAPE, false, false, false, true);
 
@@ -572,6 +624,10 @@ public class JumpPointInteractionDialogPluginImpl implements InteractionDialogPl
 
 	public Object getContext() {
 		return null;
+	}
+	
+	public boolean isWormhole() {
+		return jumpPoint.isWormhole();
 	}
 }
 

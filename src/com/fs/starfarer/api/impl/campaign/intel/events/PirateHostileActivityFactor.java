@@ -11,38 +11,38 @@ import org.lwjgl.util.vector.Vector2f;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
-import com.fs.starfarer.api.campaign.FactionAPI;
-import com.fs.starfarer.api.campaign.JumpPointAPI;
-import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.campaign.comm.IntelInfoPlugin;
 import com.fs.starfarer.api.campaign.comm.IntelInfoPlugin.ListInfoMode;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
-import com.fs.starfarer.api.impl.campaign.fleets.RouteLocationCalculator;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.intel.bases.PirateBaseIntel;
 import com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.EventStageData;
 import com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel.HAERandomEventData;
 import com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel.Stage;
-import com.fs.starfarer.api.impl.campaign.intel.raid.PirateRaidActionStage;
-import com.fs.starfarer.api.impl.campaign.intel.raid.PirateRaidAssembleStage2;
-import com.fs.starfarer.api.impl.campaign.intel.raid.RaidIntel;
-import com.fs.starfarer.api.impl.campaign.intel.raid.RaidIntel.RaidStageStatus;
-import com.fs.starfarer.api.impl.campaign.intel.raid.ReturnStage;
-import com.fs.starfarer.api.impl.campaign.intel.raid.TravelStage;
+import com.fs.starfarer.api.impl.campaign.intel.group.FleetGroupIntel;
+import com.fs.starfarer.api.impl.campaign.intel.group.FleetGroupIntel.FGIEventListener;
+import com.fs.starfarer.api.impl.campaign.intel.group.GenericRaidFGI;
+import com.fs.starfarer.api.impl.campaign.intel.group.GenericRaidFGI.GenericRaidParams;
 import com.fs.starfarer.api.impl.campaign.missions.FleetCreatorMission;
+import com.fs.starfarer.api.impl.campaign.missions.FleetCreatorMission.FleetStyle;
+import com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator;
 import com.fs.starfarer.api.impl.campaign.rulecmd.KantaCMD;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI.TooltipCreator;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
 
-public class PirateHostileActivityFactor extends BaseHostileActivityFactor {
+public class PirateHostileActivityFactor extends BaseHostileActivityFactor implements FGIEventListener {
 
 //	public static class HARaidEventData {
 //		public SectorEntityToken source;
 //		public StarSystemAPI target;
 //	}
+	
+	public static String RAID_KEY = "$PirateRaid_ref";
+	public static String SMALL_RAID_KEY = "$SmallPirateRaid_ref";
+	
 	
 	public PirateHostileActivityFactor(HostileActivityEventIntel intel) {
 		super(intel);
@@ -52,6 +52,14 @@ public class PirateHostileActivityFactor extends BaseHostileActivityFactor {
 		return "";
 	}
 	
+	@Override
+	public int getProgress(BaseEventIntel intel) {
+		if (PiracyRespiteScript.get() != null) {
+			return 0;
+		}
+		return super.getProgress(intel);
+	}
+
 	public String getDesc(BaseEventIntel intel) {
 		return "Pirate activity";
 	}
@@ -69,7 +77,7 @@ public class PirateHostileActivityFactor extends BaseHostileActivityFactor {
 		return Global.getSector().getFaction(Factions.PIRATES).getBaseUIColor();
 	}
 
-	public TooltipCreator getMainRowTooltip() {
+	public TooltipCreator getMainRowTooltip(BaseEventIntel intel) {
 		return new BaseFactorTooltip() {
 			public void createTooltip(TooltipMakerAPI tooltip, boolean expanded, Object tooltipParam) {
 				float opad = 10f;
@@ -94,6 +102,10 @@ public class PirateHostileActivityFactor extends BaseHostileActivityFactor {
 		return getProgress(intel) > 0 || KantaCMD.playerHasProtection();
 	}
 
+	@Override
+	public Color getNameColorForThreatList() {
+		return Global.getSector().getFaction(Factions.PIRATES).getBaseUIColor();
+	}
 
 	public Color getNameColor(float mag) {
 		if (mag <= 0f) {
@@ -113,9 +125,15 @@ public class PirateHostileActivityFactor extends BaseHostileActivityFactor {
 		int difficulty = 0;
 		difficulty += (int) Math.round(f * 7f);
 		
+//		int size = 0;
+//		for (MarketAPI market : Misc.getMarketsInLocation(system, Factions.PLAYER)) {
+//			size = Math.max(market.getSize(), size);
+//		}
+//		int minDiff = Math.max(0, size - 2);
 		
-		int min = (int) Math.round(intel.getProgressFraction() * 6f);
-		if (difficulty < min) difficulty = min;
+		int minDiff = Math.round(intel.getMarketPresenceFactor(system) * 6f);
+		
+		if (difficulty < minDiff) difficulty = minDiff;
 		
 		difficulty += random.nextInt(4);
 		
@@ -154,10 +172,45 @@ public class PirateHostileActivityFactor extends BaseHostileActivityFactor {
 		float small = 0f;
 		float opad = 10f;
 		
-		small = 5f;
+		small = 8f;
+//		info.addPara("There are rumors that a pirate raid targeting your colonies "
+//				+ "may be organized in the near future.", opad);
+//		
+//		info.addPara(BaseIntelPlugin.BULLET + "If the raid is successful, the targeted colonies will suffer from reduced stability.", opad,
+//				Misc.getNegativeHighlightColor(), "reduced stability");
+//		
+//		info.addPara(BaseIntelPlugin.BULLET + "If the raid is defeated, your colonies will gain "
+//				+ "increased accessibility for several cycles.", 
+//				0f, Misc.getPositiveHighlightColor(), "increased accessibility");
+
 		info.addPara("There are rumors that a pirate raid targeting your colonies "
-				+ "may be organized at some point in the future.", small);
-		stage.addResetReq(info, false, opad);
+				+ "may be organized in the near future. If the raid is successful, the targeted colonies will "
+				+ "suffer from reduced stability.", small,
+				Misc.getNegativeHighlightColor(), "reduced stability");
+		
+		if (stage.id == Stage.HA_EVENT) {
+			if (PiracyRespiteScript.DURATION < 0) {
+				info.addPara("If the raid is defeated, your colonies will "
+						+ "permanently gain increased accessibility.", 
+						opad, Misc.getPositiveHighlightColor(), "increased accessibility");
+			} else {
+				info.addPara("If the raid is defeated, your colonies will gain "
+						+ "increased accessibility for several cycles.", 
+						opad, Misc.getPositiveHighlightColor(), "increased accessibility");
+			}
+		}
+		
+		//if (stage.id == Stage.MINOR_EVENT) {
+			stage.addResetReq(info, false, "crisis", -1, -1, opad);
+//		} else {
+//			stage.beginResetReqList(info, true, "crisis", opad);
+			// want to keep this less prominent, actually, so: just the above
+//			info.addPara("An agreement is reached with Kanta, the pirate queen", 
+//					0f, Global.getSector().getFaction(Factions.LUDDIC_PATH).getBaseUIColor(), "Luddic Path");
+//			stage.endResetReqList(info, false, "crisis", -1, -1);
+//		}
+		
+		
 		
 		addBorder(info, Global.getSector().getFaction(Factions.PIRATES).getBaseUIColor());
 		
@@ -175,16 +228,20 @@ public class PirateHostileActivityFactor extends BaseHostileActivityFactor {
 
 	public TooltipCreator getStageTooltipImpl(final HostileActivityEventIntel intel, final EventStageData stage) {
 		if (stage.id == Stage.HA_EVENT || stage.id == Stage.MINOR_EVENT) {
-			return new BaseFactorTooltip() {
-				@Override
-				public void createTooltip(TooltipMakerAPI tooltip, boolean expanded, Object tooltipParam) {
-					float opad = 10f;
-					tooltip.addTitle("Pirate raid");
-					tooltip.addPara("A pirate raid will be launched against one of your "
-							+ "star systems.", opad);
-					stage.addResetReq(tooltip, true, opad);
-				}
-			};
+			return getDefaultEventTooltip("Pirate raid", intel, stage);
+//			return new BaseFactorTooltip() {
+//				@Override
+//				public void createTooltip(TooltipMakerAPI tooltip, boolean expanded, Object tooltipParam) {
+//					float opad = 10f;
+//					tooltip.addTitle("Pirate raid");
+//					tooltip.addPara("A pirate raid will be launched against one of your "
+//							+ "star systems.", opad);
+////					tooltip.addPara("If the raid is defeated, your colonies will receive "
+////							+ "increased accessibility for several cycles.", 
+////							opad, Misc.getPositiveHighlightColor(), "increased accessibility");
+//					stage.addResetReq(tooltip, true, "crisis", HostileActivityEventIntel.RESET_MIN, HostileActivityEventIntel.RESET_MAX, opad);
+//				}
+//			};
 		}
 		return null;
 	}
@@ -193,6 +250,8 @@ public class PirateHostileActivityFactor extends BaseHostileActivityFactor {
 	public float getEventFrequency(HostileActivityEventIntel intel, EventStageData stage) {
 		if (KantaCMD.playerHasProtection()) return 0f;
 		
+		if (PiracyRespiteScript.get() != null) return 0f;
+		
 		if (stage.id == Stage.HA_EVENT || stage.id == Stage.MINOR_EVENT) {
 			StarSystemAPI target = findRaidTarget(intel, stage);
 			MarketAPI source = findRaidSource(intel, stage, target);
@@ -200,13 +259,13 @@ public class PirateHostileActivityFactor extends BaseHostileActivityFactor {
 				return 10f;
 			}
 		}
-		return 0;
+		return 0f;
 	}
 	
 
-	public void resetEvent(HostileActivityEventIntel intel, EventStageData stage) {
-		super.resetEvent(intel, stage);
-	}
+//	public void resetEvent(HostileActivityEventIntel intel, EventStageData stage) {
+//		super.resetEvent(intel, stage);
+//	}
 	
 	public void rollEvent(HostileActivityEventIntel intel, EventStageData stage) {
 //		if (true) return;
@@ -222,29 +281,16 @@ public class PirateHostileActivityFactor extends BaseHostileActivityFactor {
 			return false;
 		}
 	
-		float mag = getEffectMagnitude(target);
-		
-		float raidFP = 1000f * (0.5f + Math.min(1f, mag) * 0.5f);
-		raidFP *= 0.85f + 0.3f * intel.getRandom().nextFloat();
-		
-		if (stage.id == Stage.MINOR_EVENT) {
-			raidFP = 120 + 30f * intel.getRandom().nextFloat();
-		}
-		
 		stage.rollData = null;
-		return startRaid(source, target, raidFP);
-	}
-	
-	public void notifyRaidEnded(RaidIntel raid, RaidStageStatus status) {
-		
+		return startRaid(source, target, stage, getRandomizedStageRandom(5));
 	}
 	
 	public StarSystemAPI findRaidTarget(HostileActivityEventIntel intel, EventStageData stage) {
-		WeightedRandomPicker<StarSystemAPI> picker = new WeightedRandomPicker<StarSystemAPI>(intel.getRandom());
+		WeightedRandomPicker<StarSystemAPI> picker = new WeightedRandomPicker<StarSystemAPI>(getRandomizedStageRandom(3));
 		
 		for (StarSystemAPI system : Misc.getPlayerSystems(false)) {
 			float mag = getEffectMagnitude(system);
-			if (mag < 0.2f && stage.id != Stage.MINOR_EVENT) {
+			if (mag < 0.1f && stage.id != Stage.MINOR_EVENT) {
 			//if (mag < 0.2f) {
 				continue;
 			}
@@ -293,7 +339,7 @@ public class PirateHostileActivityFactor extends BaseHostileActivityFactor {
 			}
 		});
 		
-		WeightedRandomPicker<MarketAPI> picker = new WeightedRandomPicker<MarketAPI>(intel.getRandom());
+		WeightedRandomPicker<MarketAPI> picker = new WeightedRandomPicker<MarketAPI>(getRandomizedStageRandom());
 		for (int i = 0; i < list.size() && i < 4; i++) {
 			MarketAPI market = list.get(i);
 			float dist = Misc.getDistance(target.getLocation(), market.getLocationInHyperspace());
@@ -304,60 +350,121 @@ public class PirateHostileActivityFactor extends BaseHostileActivityFactor {
 		return picker.pick();
 	}
 	
+	public static void avertOrAbortRaid() {
+		if (GenericRaidFGI.get(SMALL_RAID_KEY) != null) {
+			GenericRaidFGI.get(SMALL_RAID_KEY).finish(false);
+		}
+		
+		if (GenericRaidFGI.get(RAID_KEY) != null) {
+			GenericRaidFGI.get(RAID_KEY).finish(false);
+		}
+		
+		HostileActivityEventIntel intel = HostileActivityEventIntel.get();
+		if (intel == null) return;
+		
+		HAERandomEventData data = intel.getRollDataForEvent();
+		if (data != null && data.factor instanceof PirateHostileActivityFactor) {
+			intel.resetHA_EVENT();
+		}
+	}
 
 	
-	public boolean startRaid(MarketAPI source, StarSystemAPI target, float raidFP) {
-		boolean hasTargets = false;
-		for (MarketAPI curr : Misc.getMarketsInLocation(target)) {
-			if (curr.getFaction().isHostileTo(source.getFaction())) {
-				hasTargets = true;
-				break;
+	public boolean startRaid(MarketAPI source, StarSystemAPI target, EventStageData stage, Random random) {
+		GenericRaidParams params = new GenericRaidParams(new Random(random.nextLong()), true);
+		params.factionId = source.getFactionId();
+		params.source = source;
+		
+		params.prepDays = 7f + random.nextFloat() * 14f;
+		params.payloadDays = 27f + 7f * random.nextFloat();
+		
+		params.raidParams.where = target;
+		for (MarketAPI market : Misc.getMarketsInLocation(target)) {
+			if (market.getFaction().isHostileTo(source.getFaction()) || market.getFaction().isPlayerFaction()) {
+				params.raidParams.allowedTargets.add(market);
+			}
+		}
+		if (params.raidParams.allowedTargets.isEmpty()) return false;
+		params.raidParams.allowNonHostileTargets = true;
+		
+		params.style = FleetStyle.STANDARD;
+		
+		if (stage.id == Stage.MINOR_EVENT) {
+			params.fleetSizes.add(5);
+			params.fleetSizes.add(3);
+			params.memoryKey = SMALL_RAID_KEY;
+		} else {
+			params.memoryKey = RAID_KEY;
+			
+			float mag1 = getEffectMagnitude(target);
+			if (mag1 > 1f) mag1 = 1f;
+			float mag2 = intel.getMarketPresenceFactor(target);
+			float totalDifficulty = (0.25f + mag1 * 0.25f + mag2 * 0.5f) * 100f;
+			
+			Random r = getRandomizedStageRandom(7);
+			if (r.nextFloat() < 0.33f) {
+				params.style = FleetStyle.QUANTITY;
+			}
+			
+			while (totalDifficulty > 0) {
+				float max = Math.min(10f, totalDifficulty * 0.5f);
+				float min = Math.max(2, max - 2);
+				if (max < min) max = min;
+				
+				int diff = Math.round(StarSystemGenerator.getNormalRandom(r, min, max));
+				
+				params.fleetSizes.add(diff);
+				totalDifficulty -= diff;
 			}
 		}
 		
-		if (!hasTargets) return false;
-		
-		FactionAPI faction = source.getFaction();
-		
-		RaidIntel raid = new RaidIntel(target, faction, this);
-		
-		float successMult = 0.5f;
-		
-		JumpPointAPI gather = null;
-		List<JumpPointAPI> points = source.getContainingLocation().getEntities(JumpPointAPI.class);
-		float min = Float.MAX_VALUE;
-		for (JumpPointAPI curr : points) {
-			float dist = Misc.getDistance(source.getPrimaryEntity().getLocation(), curr.getLocation());
-			if (dist < min) {
-				min = dist;
-				gather = curr;
+		PirateBaseIntel base = PirateBaseIntel.getIntelFor(source);
+		if (base != null) {
+			if (Misc.isHiddenBase(source) && !base.isPlayerVisible()) {
+				base.makeKnown();
+				base.sendUpdateIfPlayerHasIntel(PirateBaseIntel.DISCOVERED_PARAM, false);
 			}
 		}
 		
-		SectorEntityToken raidJump = RouteLocationCalculator.findJumpPointToUse(faction, target.getCenter());
-		if (gather == null || raidJump == null) return false;
-		
-		PirateRaidAssembleStage2 assemble = new PirateRaidAssembleStage2(raid, gather);
-		assemble.addSource(source);
-		assemble.setSpawnFP(raidFP);
-		assemble.setAbortFP(raidFP * successMult);
-		raid.addStage(assemble);
-		
-		TravelStage travel = new TravelStage(raid, gather, raidJump, false);
-		travel.setAbortFP(raidFP * successMult);
-		raid.addStage(travel);
-		
-		PirateRaidActionStage action = new PirateRaidActionStage(raid, target);
-		action.setAbortFP(raidFP * successMult);
-		raid.addStage(action);
-		
-		raid.addStage(new ReturnStage(raid));
-		
+		GenericRaidFGI raid = new GenericRaidFGI(params);
+		if (stage.id == Stage.HA_EVENT) { // don't want piracy respite from the minor raid
+			raid.setListener(this);
+		}
 		Global.getSector().getIntelManager().addIntel(raid);
 		
 		return true;
 	}
 	
+	public void reportFGIAborted(FleetGroupIntel intel) {
+		new PiracyRespiteScript();
+	}
+	
+	
+	
+	public static void main(String[] args) {
+		Random r = new Random();
+		int [] counts = new int[11];
+		for (int i = 0; i < 10000; i++) {
+			int x = Math.round(getNormalRandom(r, 7, 10));
+			counts[x]++;
+		}
+		for (int i = 0; i < counts.length; i++) {
+			System.out.println(i + ":	" + counts[i]);
+		}
+	}
+	
+	public static float getNormalRandom(Random random, float min, float max) {
+		double r = random.nextGaussian();
+		r *= 0.2f;
+		r += 0.5f;
+		if (r < 0) r = 0;
+		if (r > 1) r = 1;
+		
+		// 70% chance 0.3 < r < .7
+		// 95% chance 0.1 < r < .7
+		// 99% chance 0 < r < 1
+		return min + (float) r * (max - min);
+	}
+
 }
 
 

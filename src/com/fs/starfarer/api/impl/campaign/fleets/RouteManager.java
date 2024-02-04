@@ -55,6 +55,15 @@ public class RouteManager implements FleetEventListener {
 			quality = Misc.getShipQuality(market, factionId);
 			this.factionId = factionId;
 		}
+		
+		public float getStrengthModifiedByDamage() {
+			if (strength == null) return 0f;
+			float str = strength;
+			if (damage != null) {
+				str *= Math.max(0, 1f - damage);
+			}
+			return str;
+		}
 	}
 	
 	public static class RouteSegment {
@@ -240,6 +249,7 @@ public class RouteManager implements FleetEventListener {
 		protected List<RouteSegment> segments = new ArrayList<RouteSegment>();
 		protected CampaignFleetAPI activeFleet = null;
 		protected float daysSinceSeenByPlayer = 1000f;
+		protected float elapsed = 0f;
 		protected Object custom;
 		protected RouteSegment current;
 		protected RouteFleetSpawner spawner;
@@ -261,6 +271,9 @@ public class RouteManager implements FleetEventListener {
 		}
 		public OptionalFleetData getExtra() {
 			return extra;
+		}
+		public void setExtra(OptionalFleetData extra) {
+			this.extra = extra;
 		}
 		public MarketAPI getMarket() {
 			return market;
@@ -351,6 +364,9 @@ public class RouteManager implements FleetEventListener {
 		}
 		public float getDaysSinceSeenByPlayer() {
 			return daysSinceSeenByPlayer;
+		}
+		public float getElapsed() {
+			return elapsed;
 		}
 		public Object getCustom() {
 			return custom;
@@ -447,9 +463,11 @@ public class RouteManager implements FleetEventListener {
 		if (routesByLocation == null) {
 			routesByLocation = new LinkedHashMap<LocationAPI, List<RouteData>>();
 			for (RouteData route : routes) {
+//				if (route.getSource().startsWith("FGI")) {
+//					System.out.println("fewefwefw");
+//				}
 				RouteSegment current = route.current;
 				if (current == null) continue;
-				
 				
 				LocationAPI loc = null;
 				if (current.from != null && current.to == null) {
@@ -587,7 +605,7 @@ public class RouteManager implements FleetEventListener {
 		//System.out.println("Num routes: " + routes.size());
 		int add = 0;
 		int sub = 0;
-		for (RouteData data : routes) {
+		for (RouteData data : new ArrayList<RouteData>(routes)) {
 			if (data.activeFleet != null && data.activeFleet.getContainingLocation() == player.getContainingLocation()) {
 				VisibilityLevel level = data.activeFleet.getVisibilityLevelToPlayerFleet();
 				if ((level == VisibilityLevel.COMPOSITION_AND_FACTION_DETAILS ||
@@ -724,6 +742,7 @@ public class RouteManager implements FleetEventListener {
 			
 			route.current.elapsed += days;
 			route.daysSinceSeenByPlayer += days;
+			route.elapsed += days;
 			
 			if (route.getActiveFleet() != null) continue;
 			

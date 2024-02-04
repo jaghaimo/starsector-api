@@ -19,6 +19,7 @@ public class ImpactMitigation {
 	
 	public static float DAMAGE_TO_MODULES_REDUCTION = 50;
 	
+	public static float ELITE_HIT_STRENGTH_PERCENT = 10f;
 	
 	public static HullSize getHullSize(MutableShipStatsAPI stats) {
 		if (stats.getEntity() instanceof ShipAPI) {
@@ -174,6 +175,29 @@ public class ImpactMitigation {
 		public String getEffectDescription(float level) {
 			return "+" + (int)(MANEUVERABILITY_BONUS_LARGE) + "% maneuverability for capital ships and cruisers, "
 					+ "+" + (int)(MANEUVERABILITY_BONUS_SMALL) + "% for destroyers and frigates";
+		}
+		
+		public String getEffectPerLevelDescription() {
+			return null;
+		}
+		
+		public ScopeDescription getScopeDescription() {
+			return ScopeDescription.PILOTED_SHIP;
+		}
+	}
+	
+	public static class Level7 implements ShipSkillEffect {
+
+		public void apply(MutableShipStatsAPI stats, HullSize hullSize, String id, float level) {
+			stats.getHitStrengthBonus().modifyPercent(id, ELITE_HIT_STRENGTH_PERCENT);
+		}
+		
+		public void unapply(MutableShipStatsAPI stats, HullSize hullSize, String id) {
+			stats.getHitStrengthBonus().unmodifyPercent(id);
+		}
+		
+		public String getEffectDescription(float level) {
+			return "+" + (int)(ELITE_HIT_STRENGTH_PERCENT) + "% hit strength vs armor, for damage reduction calculation only";
 		}
 		
 		public String getEffectPerLevelDescription() {

@@ -29,7 +29,7 @@ public class ContainmentProcedures {
 	public static float FUEL_PROD_BONUS = 1f;
 	public static float CREW_LOSS_REDUCTION = 50f;
 	public static float FUEL_SALVAGE_BONUS = 25f;
-	public static float FUEL_USE_REDUCTION_MAX_PERCENT = 50;
+	public static float FUEL_USE_REDUCTION_MAX_PERCENT = 25;
 	public static float FUEL_USE_REDUCTION_MAX_FUEL = 25;
 	
 
@@ -178,6 +178,8 @@ public class ContainmentProcedures {
 		public void createCustomDescription(MutableCharacterStatsAPI stats, SkillSpecAPI skill, 
 											TooltipMakerAPI info, float width) {
 			init(stats, skill);
+//			FUEL_USE_REDUCTION_MAX_PERCENT = 25;
+//			FUEL_USE_REDUCTION_MAX_FUEL = 20;
 			
 			info.addSpacer(5f);
 			info.addPara("Reduces fuel consumption by %s or %s units, whichever is lower",

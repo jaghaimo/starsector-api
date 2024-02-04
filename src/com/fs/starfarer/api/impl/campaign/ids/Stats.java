@@ -17,7 +17,7 @@ public class Stats {
 	/**
 	 * Set for both character (from having Neural Link skill) and ship (from having Neural Interface hullmod.
 	 */
-	public static final String HAS_NEURAL_LINK = "custom_production_mod";
+	public static final String HAS_NEURAL_LINK = "has_neural_link";
 	
 	public static final String NUM_MAX_CONTACTS_MOD = "num_max_contacts_mod";
 	
@@ -140,17 +140,23 @@ public class Stats {
 	// ships
 	public static final String ACT_AS_COMBAT_SHIP = "act_as_combat_ship";
 	
+	public static final String CAN_REPAIR_MODULES_UNDER_FIRE = "can_repair_modules_under_fire";
+	
 	/**
 	 * Modifying suppliesToRecover does not affect deployment points.
 	 * But this modifies the base value of supplies to recover for deployment points purposes only.
 	 */
 	public static final String DEPLOYMENT_POINTS_MOD = "deployment_points_mod";
 	
+	public static final String FIGHTER_REARM_TIME_MULT = "fighter_rearm_time_mult";
 	public static final String FIGHTER_REARM_TIME_EXTRA_FLAT_MOD = "fighter_rearm_time_extra_flat_mod";
 	public static final String FIGHTER_REARM_TIME_EXTRA_PER_WING_MOD = "fighter_rearm_time_extra_per_wing_mod";
 	public static final String FIGHTER_REARM_TIME_EXTRA_FRACTION_OF_BASE_REFIT_TIME_MOD = "fighter_rearm_time_extra_fraction_of_base_refit_time_mod";
 	
 	//public static final String HAS_FORCE_CONCENTRATION_BONUS_MOD = "has_force_concentration_bonus";
+	public static final String ZERO_FLUX_BOOST_TURN_RATE_BONUS_MULT = "zero_flux_boost_turn_rate_bonus_mult";
+	
+	//public static final String ZERO_FLUX_BOOST_DELAY_MULT = "zero_flux_boost_delay_mult";
 	
 	
 	public static final String PHASE_CLOAK_FLUX_LEVEL_FOR_MIN_SPEED_MOD = "phase_cloak_flux_level_for_min_speed_mod";
@@ -175,6 +181,10 @@ public class Stats {
 	public static final String ELECTRONIC_WARFARE_FLAT = "electronic_warfare_flat";
 	public static final String ELECTRONIC_WARFARE_PENALTY_MULT = "electronic_warfare_penalty_mult";
 	public static final String ELECTRONIC_WARFARE_PENALTY_MOD = "electronic_warfare_penalty_mod";
+	
+	public static final String SHIP_BELONGS_TO_FLEET_THAT_CAN_COUNTER_EW = "ship_belongs_to_fleet_that_can_counter_ew";
+	public static final String SHIP_OBJECTIVE_CAP_RANGE_MOD = "ship_objective_cap_range_mod";
+	public static final String SHIP_OBJECTIVE_CAP_RATE_MULT = "ship_objective_cap_rate_mult";
 	
 	public static final String ELECTRONIC_WARFARE_PENALTY_MAX_FOR_SHIP_MOD = "electronic_warfare_penalty_max_for_ship_mod";
 	public static final String COMMAND_POINT_RATE_FLAT = "command_point_rate_flat";
@@ -257,6 +267,12 @@ public class Stats {
 	}
 	public static String getPlayerSellRepImpactMultId(String commodityId) {
 		return TRADE_IMPACT_MULT_PREFIX + commodityId + "_sell";
+	}
+
+	// player's dynamic stats
+	public static final String COMMODITY_EXPORT_CREDITS_MULT = "commodity_export_credits_mult";
+	public static String getCommodityExportCreditsMultId(String commodityId) {
+		return COMMODITY_EXPORT_CREDITS_MULT + commodityId;
 	}
 	
 

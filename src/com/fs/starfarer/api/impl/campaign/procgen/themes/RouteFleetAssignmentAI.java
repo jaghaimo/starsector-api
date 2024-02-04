@@ -8,7 +8,6 @@ import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.Script;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.FleetAssignment;
-import com.fs.starfarer.api.campaign.JumpPointAPI;
 import com.fs.starfarer.api.campaign.LocationAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
@@ -278,8 +277,8 @@ public class RouteFleetAssignmentAI extends BaseAssignmentAI {
 			TravelState state = getTravelState(current);
 			if (state == TravelState.LEAVING_SYSTEM) {
 				float p = current.getLeaveProgress();
-				JumpPointAPI jp = RouteLocationCalculator.findJumpPointToUse(fleet, current.from);
-				
+				SectorEntityToken jp = RouteLocationCalculator.findJumpPointToUse(fleet, current.from);
+				if (jp == null) jp = current.from;
 				RouteLocationCalculator.setLocation(fleet, p, 
 						current.from, jp);
 				
@@ -296,7 +295,8 @@ public class RouteFleetAssignmentAI extends BaseAssignmentAI {
 			}
 			else if (state == TravelState.ENTERING_SYSTEM) {
 				float p = current.getEnterProgress();
-				JumpPointAPI jp = RouteLocationCalculator.findJumpPointToUse(fleet, current.to);
+				SectorEntityToken jp = RouteLocationCalculator.findJumpPointToUse(fleet, current.to);
+				if (jp == null) jp = current.to;
 				RouteLocationCalculator.setLocation(fleet, p, 
 													jp, current.to);
 				

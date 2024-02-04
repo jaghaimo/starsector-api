@@ -24,6 +24,8 @@ public class HistorianBackstory {
 	}
 
 	public static void init(List<HistorianBackstoryInfo> backstory) {
+		// this now lives in rules.csv
+/*		
 		//final HistorianData hd = HistorianData.getInstance();
 		// 1 Historian personal
 		backstory.add(new BaseBackstory() {
@@ -45,7 +47,7 @@ public class HistorianBackstory {
 				return "\"Oh 'Infernium', yes yes. It's a bit of Luddic vernacular; refers to antimatter starship fuel, though what they mean, " +
 				"and here " + hd.getHeOrShe() + " stresses the word, \"is rather more. In certain texts the term encompasses all AM applications, " + 
 				"or even all high-energy processes. 'The get of Mammon and Belial', one inventive firebrand called it. I like that one. I've always " +
-				"enjoyed the dramatic rhetoric the Luddic folk-preachers practice.\"";
+				"enjoyed the dramatic rhetoric of Luddic folk-preachers.\"";
 			}
 		});
 		
@@ -54,7 +56,7 @@ public class HistorianBackstory {
 			@Override
 			public String getText() {
 				//HistorianData hd = HistorianData.getInstance();
-				return "\"Now I may be old, but there's older by far. If the records are to be believed - and I do, the Hegemony keeps very good records - " +
+				return "\"Now I may be old, but there's older by far. If the records are to be believed - and I do believe, the Hegemony keeps very good records - " +
 						"then the pirate Warlord Kanta was born well before the Collapse. Or shall we call her ex-Domain Armada officer Jorien Kanta? " +
 						"Oh yes, she had a name like anyone else once. One wonders if it's very expensive biomods or periodic cryosleep that keeps her going. " +
 						"I'd love to find out...\"";
@@ -181,7 +183,7 @@ public class HistorianBackstory {
 				return "\"With Baikal Daud in the office of High Hegemon, I can't help but wonder at what mark his administration will make on the " +
 						"Phoenix of the Persean Sector. The old guard still dominates the navy - that's the Eventide contingent. Those families go back " +
 						"to the arrival of the 14th in the Sector. It's not an old aristocracy by any historical standard, but the pattern is " +
-						"established quickly enough given the right conditions. Where was I- yes, Daud. Man of the people. Ruffles feathers. Like when he " +
+						"established quickly enough given the correct conditions. Where was I- yes, Daud. Man of the people. Ruffles feathers. Like when he " +
 						"intervened personally in the Sphinx ensigns scandal. Hegemons simply don't do that. But he's a born leader, none can deny it. That's " +
 						"what is really going to get him in trouble.\" " + hd.getUCHeOrShe() + " stares out at nothing, thoughtfully.";
 			}
@@ -242,7 +244,7 @@ public class HistorianBackstory {
 				return "\"Ah, like I was just telling those young folks over there,\" the historian waves " + hd.getHisOrHer() + " hand toward a small group " +
 						" which seems to be conspicuously avoiding eye contact, \"- after the trials of the Cold Passage, the 14th Battlegroup limped across " +
 						"the Persean frontiers to discover the Sector dominated by the Warlord Leonis. The joint command of the 14th struck down that cruel " +
-						"reign and were hailed as liberators, laying the groundwork for Captain Kali Molina to make a declaration of Hegemony over the former " +
+						"reign and were hailed as liberators, laying the groundwork for Admiral Kali Molina to make a declaration of Hegemony over the former " +
 						"Domain colonies of this Sector with the Eventide Diktat of c49.\n\n"
 						+ "The untarnished Hegemony of that time was too overshadowed by memories " +
 						"of the Domain to truly appreciate the political capital at the High Hegemon's command. Short-term thinking prevailed in anticipation " +
@@ -250,13 +252,8 @@ public class HistorianBackstory {
 								"a state of discontinuity would last so long?\"";
 			}
 		});
-		
-		
-		
-
-		
+		*/
 	}
-	
 }
 
 

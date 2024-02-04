@@ -113,6 +113,8 @@ public class HullMods {
 	
 	public static final String HIGH_FREQUENCY_ATTRACTOR = "high_frequency_attractor";
 	
+	public static final String FLUX_SHUNT = "fluxshunt";
+	
 	
 	
 	

@@ -79,7 +79,7 @@ public class SmoothMovementUtil {
 		Vector2f toDest = Vector2f.sub(dest, loc, new Vector2f());
 		Vector2f velDiff = Vector2f.sub(destVel, vel, new Vector2f());
 		
-		toDest.scale(3f);
+		//toDest.scale(3f);
 		
 		//Vector2f dir = Vector2f.sub(dest, loc, new Vector2f());
 		//Utils.normalise(dir);

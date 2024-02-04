@@ -25,5 +25,12 @@ public class EncounterPoint {
 		}
 		return loc;
 	}
+
+	@Override
+	public String toString() {
+		return "id:" + id + ", where:" + where + ", loc: " + loc + ", type: " + type; 
+	}
+	
+	
 	
 }

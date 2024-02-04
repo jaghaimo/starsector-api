@@ -10,6 +10,8 @@ public interface PersistentUIDataAPI {
 		int getSlotId();
 		String getAbilityId();
 		void setAbilityId(String abilityId);
+		String getInHyperAbilityId();
+		void setInHyperAbilityId(String inHyperAbilityId);
 		
 	}
 	public static interface AbilitySlotsAPI {

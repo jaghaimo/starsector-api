@@ -64,7 +64,7 @@ public class CarrierGroup {
 					"" + (int) rateBonus + "%",
 					"" + (int) REPLACEMENT_RATE_PERCENT + "%");
 			addFighterBayThresholdInfo(info, data);
-			info.addPara(indent + "Effect increased by %s for ships with offcers, including flagship",
+			info.addPara(indent + "Effect increased by %s for ships with officers, including flagship",
 					0f, tc, hc, 
 					"" + Misc.getRoundedValueMaxOneAfterDecimal(OFFICER_MULT) + Strings.X);
 		}

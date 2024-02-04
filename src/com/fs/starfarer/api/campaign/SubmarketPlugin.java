@@ -76,6 +76,7 @@ public interface SubmarketPlugin {
 	
 	boolean isBlackMarket();
 	boolean isOpenMarket();
+	boolean isMilitaryMarket();
 	
 	/**
 	 * Whether transactions with this submarket affect the market's supply/demand and
@@ -114,7 +115,6 @@ public interface SubmarketPlugin {
 	
 	public SubmarketAPI getSubmarket();
 	boolean okToUpdateShipsAndWeapons();
-	
 }
 
 

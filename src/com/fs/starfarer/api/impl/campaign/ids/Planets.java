@@ -35,12 +35,43 @@ public class Planets {
 	
 	
 	
+	public static final String FROZEN = "frozen";
+	public static final String FROZEN1 = "frozen1";
+	public static final String FROZEN2 = "frozen2";
+	public static final String FROZEN3 = "frozen3";
+	
+	
+	
 	public static final String BARREN = "barren";
 	public static final String BARREN_CASTIRON = "barren_castiron";
 	public static final String BARREN2 = "barren2";
 	public static final String BARREN3 = "barren3";
 	public static final String BARREN_VENUSLIKE = "barren_venuslike";
+	public static final String BARREN_BOMBARDED = "barren-bombarded";
+	public static final String BARREN_DESERT = "barren-desert";
+	
+	public static final String ROCKY_UNSTABLE = "rocky_unstable";
+	public static final String ROCKY_METALLIC = "rocky_metallic";
+	
+	public static final String CRYOVOLCANIC = "cryovolcanic";
+	public static final String ROCKY_ICE = "rocky_ice";
+	public static final String IRRADIATED = "irradiated";
+	
+	public static final String GAS_GIANT = "gas_giant";
+	public static final String ICE_GIANT = "ice_giant";
+	
+	
+	public static final String NEBULA_CENTER_OLD = "nebula_center_old";
+	public static final String NEBULA_CENTER_AVERAGE = "nebula_center_average";
+	public static final String NEBULA_CENTER_YOUNG = "nebula_center_young";
+	
 	
 	
 	
 }
+
+
+
+
+
+

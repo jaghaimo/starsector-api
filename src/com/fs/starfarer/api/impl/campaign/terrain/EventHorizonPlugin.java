@@ -2,6 +2,7 @@ package com.fs.starfarer.api.impl.campaign.terrain;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignEngineLayers;
+import com.fs.starfarer.api.campaign.TerrainAIFlags;
 import com.fs.starfarer.api.combat.ViewportAPI;
 import com.fs.starfarer.api.loading.Description.Type;
 import com.fs.starfarer.api.ui.Alignment;
@@ -45,6 +46,10 @@ public class EventHorizonPlugin extends StarCoronaTerrainPlugin {
 		viewport.setAlphaMult(alpha);
 	}
 
+	
+	public boolean hasAIFlag(Object flag) {
+		return super.hasAIFlag(flag) || flag == TerrainAIFlags.AVOID_VERY_CAREFULLY;
+	}
 	
 	
 	

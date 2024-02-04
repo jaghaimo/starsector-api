@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.fs.starfarer.api.Global;
-import com.fs.starfarer.api.MusicPlayerPlugin;
+import com.fs.starfarer.api.MusicPlayerPluginWithVolumeControl;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.RepLevel;
@@ -18,13 +18,20 @@ import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.util.Misc;
 
-public class MusicPlayerPluginImpl implements MusicPlayerPlugin {
+public class MusicPlayerPluginImpl implements MusicPlayerPluginWithVolumeControl {
 
 	public static String KEEP_PLAYING_LOCATION_MUSIC_DURING_ENCOUNTER_MEM_KEY = "$playLocationMusicDuringEnc";
 	public static String MUSIC_SET_MEM_KEY = "$musicSetId";
 	
+	
+	public static String MUSIC_ENCOUNTER_MYSTERIOUS_AGGRO = "music_encounter_mysterious";
+	public static String MUSIC_ENCOUNTER_MYSTERIOUS_NON_AGGRESSIVE = "music_encounter_mysterious_non_aggressive";
+	public static String MUSIC_ENCOUNTER_NEUTRAL = "music_encounter_neutral";
+	
+	
 	public static Object CAMPAIGN_SYSTEM = new Object();
 	public static Object CAMPAIGN_HYPERSPACE = new Object();
+	public static Object NO_MUSIC = new Object();
 	public static Object COMBAT = new Object();
 	public static Object TITLE = new Object();
 	public static Object MARKET = new Object();
@@ -34,6 +41,7 @@ public class MusicPlayerPluginImpl implements MusicPlayerPlugin {
 	public static Object CUSTOM = new Object();
 	
 	public static Map<String, String> stringTokens = new HashMap<String, String>();
+	
 	/**
 	 * Goal here is to return tokens for which an == comparison works.
 	 * @param str
@@ -69,6 +77,10 @@ public class MusicPlayerPluginImpl implements MusicPlayerPlugin {
 			}
 			return CAMPAIGN_SYSTEM;
 		}
+//		float depth = Misc.getAbyssalDepthOfPlayer();
+//		if (depth > 0.5f) {
+//			return NO_MUSIC;
+//		}
 		return CAMPAIGN_HYPERSPACE;
 	}
 	
@@ -80,6 +92,22 @@ public class MusicPlayerPluginImpl implements MusicPlayerPlugin {
 		return "music_title";
 	}
 	
+	
+	public float getMusicSetVolumeForCampaignStateToken(Object token, Object param) {
+		if (token == CAMPAIGN_HYPERSPACE) {
+			//float depth = Misc.getAbyssalDepthOfPlayer();
+			// need to check this way so that the hyperspace track doesn't fade back in
+			// right after transitiong to an abyssal system (as the track fades out)
+			CampaignFleetAPI pf = Global.getSector().getPlayerFleet();
+			float depth = 0f;
+			if (pf != null) depth = Misc.getAbyssalDepth(pf.getLocationInHyperspace());
+			float vol = 1f - depth;
+			if (vol > 1f) vol = 1f;
+			if (vol < 0f) vol = 0f;
+			return vol;
+		}
+		return 1f;
+	}
 	
 	public String getMusicSetIdForCampaignStateToken(Object token, Object param) {
 		if (token == MARKET) {
@@ -97,6 +125,9 @@ public class MusicPlayerPluginImpl implements MusicPlayerPlugin {
 		}
 		if (token == PLANET_SURVEY) {
 			return getPlanetSurveyMusicSetId(param);
+		}
+		if (token == NO_MUSIC) {
+			return null;
 		}
 		return null;
 	}
@@ -136,17 +167,37 @@ public class MusicPlayerPluginImpl implements MusicPlayerPlugin {
 			String musicSetId = token.getMemoryWithoutUpdate().getString(MUSIC_SET_MEM_KEY);
 			if (musicSetId != null) return musicSetId;
 			
-			//if (token.getFaction() != null && token.getFaction().isNeutralFaction()) {
-				if (Entities.DEBRIS_FIELD_SHARED.equals(token.getCustomEntityType())) {
-					return "music_survey_and_scavenge";
+			if (Entities.ABYSSAL_LIGHT.equals(token.getCustomEntityType())) {
+				return MUSIC_ENCOUNTER_NEUTRAL;
+			}
+			if (Entities.CORONAL_TAP.equals(token.getCustomEntityType())) {
+				return MUSIC_ENCOUNTER_MYSTERIOUS_AGGRO;
+			}
+			if (Entities.WRECK.equals(token.getCustomEntityType())) {
+				return MUSIC_ENCOUNTER_NEUTRAL;
+			}
+			
+			if (Entities.DEBRIS_FIELD_SHARED.equals(token.getCustomEntityType())) {
+				return "music_survey_and_scavenge";
+			}
+			if (token.hasTag(Tags.GATE)) {
+				return MUSIC_ENCOUNTER_NEUTRAL;
+			}
+			if (token.hasTag(Tags.SALVAGEABLE)) {
+				if (token.getMemoryWithoutUpdate() != null && token.getMemoryWithoutUpdate().getBoolean("$hasDefenders")) {
+					if (token.getMemoryWithoutUpdate().getBoolean("$limboMiningStation")) {
+						return MUSIC_ENCOUNTER_MYSTERIOUS_AGGRO;
+					}
+					if (token.getMemoryWithoutUpdate().getBoolean("$limboWormholeCache")) {
+						return MUSIC_ENCOUNTER_MYSTERIOUS_AGGRO;
+					}
+					return MUSIC_ENCOUNTER_NEUTRAL;
 				}
-				if (token.hasTag(Tags.SALVAGEABLE)) {
-					return "music_survey_and_scavenge";
-				}
-				if (token.hasTag(Tags.SALVAGE_MUSIC)) {
-					return "music_survey_and_scavenge";
-				}
-			//}
+				return "music_survey_and_scavenge";
+			}
+			if (token.hasTag(Tags.SALVAGE_MUSIC)) {
+				return "music_survey_and_scavenge";
+			}
 			
 			if (token.getFaction() != null) {
 				FactionAPI faction = (FactionAPI) token.getFaction();
