@@ -1131,6 +1131,7 @@ LPTithePay,DialogOptionSelected,$option == payTithe,"#AddText ""Lost $entity.LP_
 AddRemoveCommodity credits -$entity.LP_tithe true
 $entity.LP_tithePaid = true 30
 MakeOtherFleetNonHostile LP_tithe true 30
+$entity.makeNonHostileTakesPriority = true 30
 AddText ""The connection is cut before you have a chance to respond.""
 ShowDefaultVisual
 EndConversation","""Perhaps your soul is not yet lost to the machine.""
@@ -2299,7 +2300,8 @@ AdjustRepActivePerson TRANSPONDER_OFF
 AddText ""The comm link is cut before you have a chance to respond.""
 $entity.ignorePlayerCommRequests = true 0
 unset $entity.transponderOffConv
-MakeHostileWhileTOff tOff true 7",,"#0:tOff_notFirstTimeCont:Continue
+#MakeHostileWhileTOff tOff true 7
+MakeOtherFleetHostile tOff true 7",,"#0:tOff_notFirstTimeCont:Continue
 cutCommLinkNoText:Continue",
 scanTalkYourWayOut,DialogOptionSelected,$option == avoid_scan,"SetNearbyFleetsVariable 5000 $faction.id $patrolAllowTOff true 10
 $entity.patrolAllowTOff = true 10
@@ -2382,6 +2384,15 @@ unset $entity.transponderOffConv
 AdjustRep $faction.id TRANSPONDER_OFF_REFUSE
 AdjustRepActivePerson TRANSPONDER_OFF_REFUSE
 MakeHostileWhileTOff tOff true 7
+ShowDefaultVisual
+EndConversation
+$sourceMarket.smugglingScanTimeout = true 30",,,
+tOffRefuseTransponderIsOn,DialogOptionSelected,"$option == tOff_refuse
+$player.transponderOn","$entity.ignorePlayerCommRequests = true 0
+unset $entity.transponderOffConv
+AdjustRep $faction.id TRANSPONDER_OFF_REFUSE
+AdjustRepActivePerson TRANSPONDER_OFF_REFUSE
+MakeOtherFleetHostile tOff true 7
 ShowDefaultVisual
 EndConversation
 $sourceMarket.smugglingScanTimeout = true 30",,,
@@ -10002,7 +10013,7 @@ gaKAReturnToAcademy8b,DialogOptionSelected,$option == gaKA_return8b,,"Now Baird'
 It is a detailed progress report on Gargoyle's activities, including time-tables for decrypting the Kallichore Archive.
 
 ""Sebestyen is more capable than he appears. He is both persistent and meticulous, as you can see.""",gaKA_return9a:Continue,
-gaKAReturnToAcademy9a,DialogOptionSelected,$option == gaKA_return9a,,"She motions at the datapad, ""We should have the Archive decrypted in about a week. The value of this research data is enormous, of course, but we still require the means to put theory to practice. And that means is Coureuse. ""
+gaKAReturnToAcademy9a,DialogOptionSelected,$option == gaKA_return9a,,"She motions at the datapad, ""We should have the Archive decrypted in about a week. The value of this research data is enormous, of course, but we still require the means to put theory to practice. And what that means is Coureuse. ""
 
 ""Hers is not a unique genius, mind you,"" Baird says, with an almost uncharacteristic lack of certainty. ""We could find other candidates to lead the research team, but the study and training... no, my timescale is too short. We need Scylla Coureuse.""",gaKA_return10a:Continue,
 gaKAReturnToAcademy10a,DialogOptionSelected,$option == gaKA_return10a,"$global.gaKA_completed = true
@@ -13364,8 +13375,8 @@ gaATGgetScannerMoreOptionEnd,DialogOptionSelected,$option == gaATG_getScannerMor
 ,,,,,,
 # gaATG contact Horus Yaribay,,,,,,
 gaATGcontactYaribayStart,PickGreeting,"$id == horus_yaribay score:1000
-$global.gaATG_goTalkToYaribay score:1000
-!$player.gotYaribayCredentials","ShowPersonVisual
+#$global.gaATG_goTalkToYaribay score:1000
+!$player.gotYaribayCredentials score:1000","ShowPersonVisual
 unset $global.gaATG_goTalkToYaribay
 $player.metHorusYaribay = true","""Yes, do I know you?"" Horus Yaribay asks impatiently, his attention clearly elsewhere. ""Have we business?""",gaATG_contactYaribay1:Explain that you are acting as Provost Baird's representative,
 gaATGcontactYaribay1,DialogOptionSelected,$option == gaATG_contactYaribay1,,"""Provost... ah. Oh."" His face falls, ""This must be about... I mean, tell me, whatever is this about?"" 
@@ -16870,7 +16881,7 @@ FireBest ASEBMissionReturn",ShowPersonVisual,"Sebestyen looks twitchy. ""I um, h
 
 ""We um, there's a bit of a problem with your mission file. It seems like,"" his eyes focus on something- no, someone- just out of view of your display.
 
-He gives the smallest of nods to this other party, then turns his attention back to you, ""All of the data was irreparably erased. And I cannot emphasize enough that the Academy considers this matter highly confidential matter and,"" he starts reading off a datapad, ""-all intellectual property, novel methods, patented devices, and other means observed in the course carrying out this mission are deemed highly confidential.""",gaOp_returnedCont:Continue,
+He gives the smallest of nods to this other party, then turns his attention back to you, ""All of the data was irreparably erased. And I cannot emphasize enough that the Academy considers this matter highly sensitive and,"" he starts reading off a datapad, ""-all intellectual property, novel methods, patented devices, and other means observed in the course carrying out this mission are deemed highly confidential.""",gaOp_returnedCont:Continue,
 gaOpMissionReturnRogueAI1,DialogOptionSelected,$option == gaOp_returnedCont,"Call $global.gaOp_ref doubleReward
 $global.gaOp_completed = true
 Call $global.gaOp_ref updateStage","""However,"" he gives a little cough, ""the Academy recognizes your exceptional service, particularly your discretion in this matter. So the office of the bursar has seen fit to double your mission payment.""
@@ -19592,7 +19603,7 @@ CBDerelict,CBDerelictOfferDesc,,Highlight $bcb_dist $bcb_reward $bcb_days,"""Thi
 
 ""They're usually dormant, guarding some probe that fell off the records. Catches surveyors by surprise. This is different."" $HeOrShe looks grim. ""A fleet of these things wandering off on their own is, frankly, terrifying. They're not supposed to have independent hyperspace capability or much in the way of fuel capacity, for that matter.""
 
-""Whatever this swarm is up to, it needs to be stopped. The reward is $bcb_reward credits - higher than normal, both for the hazard and for your discretion."" $Rank $personLastName smiles with black humor, ""Wouldn't want to alarm the citizens, ha-ha.""
+""Whatever this swarm is up to, it needs to be stopped. The reward is $bcb_reward credits - higher than normal, both for the hazard and for your discretion."" $Post $personLastName smiles with black humor, ""Wouldn't want to alarm the citizens, ha-ha.""
 
 ""You'll take it, right? We need to conclude the matter within $bcb_days days.""",,
 CBRemnant,CBRemnantOfferDesc,,Highlight $bcb_dist $bcb_reward $bcb_days,"""This one requires some discretion."" You note the glow of REDACTED blocks peppered across the briefing as $personName scrolls through details. ""A fleet of Remnant drone warships was spotted in the $bcb_systemName, only $bcb_dist light-years from here.""
@@ -19902,7 +19913,7 @@ FireBest DialogOptionSelected",,,
 LOCRPcontact1,DialogOptionSelected,$option == locrp_contact1,"$metAlready = true
 FireAll LOCRPhubOptions","""-ta sky if you don't answer, and burn Fenius to the bone! Rads and..."" The $manOrWoman's face resolves mid-curse, and freezes in shock. 
 
-""It worked! I told ya,"" $heOrShe shouts to someone behind them, ""It's a $shipOrFleet burnin' above, a real one!""
+""It worked! I told ya,"" $heOrShe shouts to someone behind $himOrHer, ""It's a $shipOrFleet burnin' above, a real one!""
 
 $HeOrShe turns back, ""You gotta get us off this rock! We're running low on supplies, and before long we'll have to be growing our own food in the dirt like.. like mud-loving Luddies!""",,
 LOCRPcontact1again,DialogOptionSelected,"$option == locrp_contact1
@@ -22946,8 +22957,7 @@ sdBarRaidBeatingRevenge,DialogOptionSelected,$option == sdbr_beatingRevenge,$pla
 
 One day, you swear, he will receive justice.",sdbr_end2:Leave,
 sdBarRaidBeatingHadItComing,DialogOptionSelected,$option == sdbr_beatingHadItComing,$player.acceptedRamBeating = true,"You reflect that this is simply how power works. When challenged, it must prove itself or the illusion evaporates.",sdbr_end2:Leave,
-sdBarRaidEnd,DialogOptionSelected,$option == sdbr_end1,"EndConversation DO_NOT_FIRE
-ShowImageVisual volturn","The INTSEC officer gives a small nod to the guards, then moves on with arbitrary authority to the next spacer captain, who is given a similar treatment.
+sdBarRaidEnd,DialogOptionSelected,$option == sdbr_end1,EndConversation DO_NOT_FIRE,"The INTSEC officer gives a small nod to the guards, then moves on with arbitrary authority to the next spacer captain, who is given a similar treatment.
 
 Apparently this means you're free to go. There will be no more business to be done at this bar for the rest of the shift. Even the corridors outside are strangely quiet, the populace recognizing the tell of a crackdown.",sdbr_end2:Leave,
 sdBarRaidLeave,DialogOptionSelected,$option == sdbr_end2,"$global.didSDBarRaid = true
@@ -23997,7 +24007,7 @@ FireAll SDTUHyderTalk3Options","""I expect Macario told you that,"" she says, ey
 
 She looks aside for a moment, ""It is no wonder the so-called Resistance has lasted this long with the Chief High Inspector-General so committed to doing anything other than his duty."" 
 
-Settling her composure, she continues. ""Regardless, the Supreme Executor sits above the Grand Star Marsal and all ministry-level offices of the Sindrian Diktat. I would report to him, of course.""",,
+Settling her composure, she continues. ""Regardless, the Supreme Executor sits above the Grand Star Marshal and all ministry-level offices of the Sindrian Diktat. I would report to him, of course.""",,
 sdtuHyderTalkBossC,DialogOptionSelected,"$option == sdtu_hyderTalk3Boss
 $trust >= 2","$answersDone++
 $saidBoss = true 0
@@ -26507,19 +26517,19 @@ TTMACommandGreeting2,TTMACommandGreeting,!$attackReversible,,"""Tacticstar Opera
 $HeOrShe raises $hisOrHer eyebrows, ""Your profile is included within the scope of our contract. I am forbidden from discussing contract details with, ah, project success targets. But be advised that Tactistar will pursue hostile action against you and your $shipOrFleet for the duration of our private operational bond.""
 
 The Tactistar $post is all business, cold as the void; you're just a project goal to $himOrHer.",,
-TTMACommandOptions1,TTMACommandOptions,$attackReversible,DoCanAffordCheck 1000000 ttma_offerBribe1,,"ttma_offerBribe1:""How about I pay you a million credits to raid the $triTachSystem instead.""",
+TTMACommandOptions1,TTMACommandOptions,$attackReversible,DoCanAffordCheck 500000 ttma_offerBribe1,,"ttma_offerBribe1:""How about I pay you half a million credits to raid the $triTachSystem instead.""",
 TTMACommandOptions2,TTMACommandOptions,,,,cutCommLink:Cut the comm link,
-ttma_offerBribe1Sel,DialogOptionSelected,$option == ttma_offerBribe1,DoCanAffordCheck 2000000 ttma_offerBribe1,"""Captain, captain!"" $HeOrShe shakes $hisOrHer head in a pretense of shock, ""My word is my bond. Besides, Tactistar holds a contract! A contract which includes a generous signing payment.""
+ttma_offerBribe1Sel,DialogOptionSelected,$option == ttma_offerBribe1,DoCanAffordCheck 1000000 ttma_offerBribe2,"""Captain, captain!"" $HeOrShe shakes $hisOrHer head in a pretense of shock, ""My word is my bond. Besides, Tactistar holds a contract! A contract which includes a generous signing payment.""
 
 ""Where would we be if mercenaries could simply sell their services to the highest bidder, with no regard for such concepts as honor and, after a fashion, morality?"" $HeOrShe gestures vaguely, ""Just imagine the sort of world we would live in.""
 
-$HeOrShe looks off into space for a few seconds, as if lost in a daydream. $HeOrShe turns back to face you, expression perfectly earnest. ""No, your offer simply will not do.""","ttma_offerBribe2:""I understand. Two million, then?""
+$HeOrShe looks off into space for a few seconds, as if lost in a daydream. $HeOrShe turns back to face you, expression perfectly earnest. ""No, your offer simply will not do.""","ttma_offerBribe2:""I understand. A million, then?""
 cutCommLink:Cut the comm link",
 ttma_offerBribe2Sel,DialogOptionSelected,$option == ttma_offerBribe2,,"""I would be pleased to accept your offer on behalf of the Tactistar Space Security Corporation,"" the $post beams.
 
 $HeOrShe waves a hand, ""We have people who can sort out the details, but provisionally we'll substitute a few of the ident tokens in the standard form and proceed from there. In fact, we could begin shifting operational assets immediately... upon payment in full.""","ttma_bribeConfirm:Arrange the credits transfer
 cutCommLink:Cut the comm link",
-ttma_bribeConfirmSel,DialogOptionSelected,$option == ttma_bribeConfirm,"AddCredits -2000000
+ttma_bribeConfirmSel,DialogOptionSelected,$option == ttma_bribeConfirm,"AddCredits -1000000
 HA_CMD retargetTTMA
 $player.bribedTTMercAttack = true","""Pleasure doing business with you, Captain $playerName. Now, if you don't mind, I have orders to transmit.""
 
@@ -26556,7 +26566,7 @@ $HisOrHer eyes move in an odd half-arc, presumably disabling safety locks on com
 TTCRBountyHunterPhase,TTCRBountyHunterHail,$entity.ttcr_phase,"$entity.ignorePlayerCommRequests = true
 FireAll TTCR_BountyHunterOptions","The link flickers and stabilizes, mostly.
 
-$HeOrShe stares at you for a moment silent, expressionless. Then speaks. ""I'm afraid that conversation will serve no purpose here, $PlayerName.""
+$HeOrShe stares at you for a moment, expressionless. Then speaks. ""I'm afraid that conversation will serve no purpose here, $PlayerName.""
 
 An audio-visual warble lingers, never quite caught by the comms software. ",,
 ttcrBH_butSelPhase,DialogOptionSelected,"$option == ttcrBH_but
@@ -26744,7 +26754,8 @@ $id == arroyo
 !HA_CMD isTTCRInProgress
 HA_CMD isTTRaidingPlayerCommerce
 !$ttProblemsAsked","SetTooltip ttTriTachProblems ""Discuss possible solutions to Tri-Tachyon sending mercenaries to harass your colonies and fleets.""",,"ttTriTachProblems:""So I've attracted the, ah, 'attention' of Tri-Tachyon.""",
-ttArroyoProblemsSel0,DialogOptionSelected,$option == ttTriTachProblems,$ttProblemsAsked = true 90,"""I should charge you for this sort of thing,"" Arroyo says. ""Expert advice; consulting fee, executive rate. Hm,"" he ponders for a moment.
+ttArroyoProblemsSel0,DialogOptionSelected,"$option == ttTriTachProblems
+$id == arroyo",$ttProblemsAsked = true 90,"""I should charge you for this sort of thing,"" Arroyo says. ""Expert advice; consulting fee, executive rate. Hm,"" he ponders for a moment.
 
 ""Senior executive rate.""
 
@@ -27043,7 +27054,7 @@ lcMakeDealProposalAbrupt1,DialogOptionSelected,$option == lcMakeDealProposeAbrup
 lcMakeDealProposal0,DialogOptionSelected,$option == lcMakeDealPropose,,"""The Church proposes to cooperate with your organization in imposing certain... immigration controls. It need not be heavy-handed, it's simply a matter of implementing certain procedures and permissions. By ensuring that a correct process is followed, certain outcomes can be, ah, favored.""
 
 $HeOrShe speaks pleasantly and easily of this manipulation. Perhaps the Church is learning tricks from the Hegemony bureaucracy.",lcMakeDealPropose1:Continue,
-lcMakeDealProposal1,DialogOptionSelected,$option == lcMakeDealPropose1,,"""In this matter, the Church would ensure that only those who cannot be, hmm, persuaded from a secular will path find their way to your colonies."" 
+lcMakeDealProposal1,DialogOptionSelected,$option == lcMakeDealPropose1,,"""In this matter, the Church would ensure that only those who cannot be, hmm, persuaded from a secular path will find their way to your colonies."" 
 
 ""It would reduce gross numbers, yes, but there are those among the Faithful who become excitable about ideas which result in heretical thinking. For you, this could lead to problems. For the Church? Tending to our flock is a holy calling."" $HeOrShe smiles blandly.
 
@@ -27213,7 +27224,8 @@ sdPunExSayEconWar,DialogOptionSelected,$option == sdPunEx_sayEconWar,RemoveOptio
 
 ""I shall bomb your pitiable fuel production operation to dust. I shall bomb your population of vagabonds and criminals to dust. I shall destroy everything that stands against the authority of the Supreme Executor!""",,
 "# ... but officer, I have a commission",,# $player.fcm_faction == sindrian_diktat,,,,
-sdPunExCommsSDcom,OpenCommLink,$entity.SDPE_fleet score:1000,$entity.ignorePlayerCommRequests = true 7,"After a crackle, the comms stabilize. The Sindrian Diktat $Post looks upon you imperiously. 
+sdPunExCommsSDcom,OpenCommLink,"$entity.SDPE_fleet score:1000
+$player.fcm_faction == sindrian_diktat",$entity.ignorePlayerCommRequests = true 7,"After a crackle, the comms stabilize. The Sindrian Diktat $Post looks upon you imperiously. 
 
 ""Hailing independent fleet! We-"" $HeOrShe is interrupted by a subordinate leaning into view and whispering.
 
@@ -27926,7 +27938,7 @@ $pk_stage == GO_TO_NEXUS",,,0:pk_hackMenu:Attempt to remotely hack into the Nexu
 PKHackMenuSel,DialogOptionSelected,$option == pk_hackMenu,"SetStoryOption pk_hackStory technology ""Hacked into a remnant Nexus using a nearby comm relay""
 FireBest PKRelayCheckTTCommission","It is not unusual that the Remnant Nexus exchanges signals with the local comm relay. Wherever Tri-Tachyon's AI fleets linger, one finds clouds of tiny spy-sats, relays, and repeaters chirping squirts of data back and forth. Very quietly, almost enough to be lost in the background noise. But not quite.
 
-It is not a simple thing to tap into this self-evolved network to request a very specific piece of information. You assemble your senior officers and consider your options for hacking into the Nexus","pk_hack:Use Tri-Tachyon security codes to make the task possible
+It is not a simple thing to tap into this self-evolved network to request a very specific piece of information. You assemble your senior officers and consider your options for hacking into the Nexus","pk_hack:Use Tri-Tachyon command codes to make the task possible
 pk_hackStory:Open a comm-link into the network
 pk_commGoBack:Go back",
 PKRelayCheckTTCommission,PKRelayCheckTTCommission,$player.commissionFactionId != tritachyon,"SetEnabled pk_hack false
@@ -29750,9 +29762,10 @@ BarHREgoToNormalBar,DialogOptionSelected,$option == barHRE_goToNormalBar,BarCMD 
 barLRE",,,,,,
 BarLREstart,DialogOptionSelected,"$option == marketVisitBar
 !$faction.didLowRepBarEncounter
-RollProbability 0.2 score:10
 $hasMarket
-RepIsAtBest $faction.id INHOSPITABLE","FireBest BarShuttleDownPrintDesc
+RepIsAtBest $faction.id INHOSPITABLE
+$global.daysSinceStart > 365
+RollProbability 0.2 score:10","FireBest BarShuttleDownPrintDesc
 FireBest BarPrintDesc
 $option = barLREstart 0
 FireBest DialogOptionSelected",,,

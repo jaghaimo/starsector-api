@@ -8,6 +8,7 @@
 			"startingConditions":[
 				"hot",
 				"population_7",
+				"no_atmosphere",
 				#"urbanized_polity",
 				#"regional_capital",
 				"ore_rich",

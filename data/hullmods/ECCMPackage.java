@@ -54,7 +54,7 @@ public class ECCMPackage extends BaseHullMod {
 		
 		
 		if (sMod) {
-			stats.getDynamic().getMod(Stats.ELECTRONIC_WARFARE_PENALTY_MULT).modifyMult(id, SMOD_EW);
+			stats.getDynamic().getMod(Stats.ELECTRONIC_WARFARE_PENALTY_MOD).modifyMult(id, SMOD_EW);
 		} else {
 			stats.getDynamic().getMod(Stats.ELECTRONIC_WARFARE_PENALTY_MOD).modifyMult(id, EW_PENALTY_MULT);
 		}
