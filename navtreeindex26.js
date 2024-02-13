@@ -1,5 +1,6 @@
 var NAVTREEINDEX26 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1OrbitalStation.html":[1,0,0,0,0,0,5,0,2,0,19],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1OrbitalStation.html#a06e1cb890d04231000705380445e235e":[1,0,0,0,0,0,5,0,2,0,19,30],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1OrbitalStation.html#a06e99cd117dba6637c7f4f7d9facab02":[1,0,0,0,0,0,5,0,2,0,19,19],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1OrbitalStation.html#a0bcd4de7ecefef313ec6f9210c970144":[1,0,0,0,0,0,5,0,2,0,19,11],
@@ -248,6 +249,5 @@ var NAVTREEINDEX26 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1StrandedGiveTJScript.html#a32d1499b2aaa9cf246b42ace09975b86":[1,0,0,0,0,0,5,0,3,18,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1StrandedGiveTJScript.html#a49264773fbd94c2db8dc9da5557d5496":[1,0,0,0,0,0,5,0,3,18,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1StrandedGiveTJScript.html#a9832cd262653f2ad1c03bf3ff3f1fb7e":[1,0,0,0,0,0,5,0,3,18,6],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1StrandedGiveTJScript.html#ae343805641abca59beb3045d794b24b2":[1,0,0,0,0,0,5,0,3,18,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1StrandedGiveTJScript.html#af66b0330674ef6112749d095cea9d1cd":[1,0,0,0,0,0,5,0,3,18,3]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1StrandedGiveTJScript.html#ae343805641abca59beb3045d794b24b2":[1,0,0,0,0,0,5,0,3,18,1]
 };

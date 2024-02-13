@@ -1,5 +1,15 @@
 var NAVTREEINDEX106 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1input_1_1InputEventAPI.html#a0577c46aab6df82c2a8ab3c13d953149":[1,0,0,0,0,0,6,0,13],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1input_1_1InputEventAPI.html#a150744e6c05127c8f57cdabae024a352":[1,0,0,0,0,0,6,0,33],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1input_1_1InputEventAPI.html#a155b42c551072fd07291e6922de3086c":[1,0,0,0,0,0,6,0,20],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1input_1_1InputEventAPI.html#a1cb13c799862fbc879d4446f42959114":[1,0,0,0,0,0,6,0,5],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1input_1_1InputEventAPI.html#a2a78fc9113281c20758e2c064d71e605":[1,0,0,0,0,0,6,0,4],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1input_1_1InputEventAPI.html#a50f2023095de285e059db57a6301b23a":[1,0,0,0,0,0,6,0,14],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1input_1_1InputEventAPI.html#a6381a73d710843e271635043335e5009":[1,0,0,0,0,0,6,0,26],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1input_1_1InputEventAPI.html#a67bc371f7af9481b0536f18bcd7736fa":[1,0,0,0,0,0,6,0,31],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1input_1_1InputEventAPI.html#a6cd137d70e0aef5cb648d9c5ea7a4776":[1,0,0,0,0,0,6,0,27],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1input_1_1InputEventAPI.html#a722c7603e739503b57c7d00255d8b93f":[1,0,0,0,0,0,6,0,29],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1input_1_1InputEventAPI.html#a78d5c6056dafa98363e0bd063c2b81f7":[1,0,0,0,0,0,6,0,18],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1input_1_1InputEventAPI.html#a7ca3482046a04cc1b8d65eccb5765dfd":[1,0,0,0,0,0,6,0,2],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1input_1_1InputEventAPI.html#a86bd123840b02a4e9bad24a926755662":[1,0,0,0,0,0,6,0,21],
@@ -239,15 +249,5 @@ var NAVTREEINDEX106 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#a3162e5e48989b21cff9e631793deadf8":[1,0,0,0,0,0,7,11,24],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#a35709bb3bbc74182500952452fc80197":[1,0,0,0,0,0,7,11,17],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#a4d811083a2373fd68b511ab82d29e873":[1,0,0,0,0,0,7,11,15],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#a4da0c60e951b176a3550afc620943355":[1,0,0,0,0,0,7,11,6],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#a578f2feb435012f670565ffcc4355abe":[1,0,0,0,0,0,7,11,23],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#a5eaebd8f53d2d99a94e3ba7b1b47ad55":[1,0,0,0,0,0,7,11,2],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#a658a327932832f0a9da9653e1f6d8b74":[1,0,0,0,0,0,7,11,9],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#a69a72bf7676c6a2b74819d8b5c9253d0":[1,0,0,0,0,0,7,11,31],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#a7389291c79f088fb508e55e6bcc3c696":[1,0,0,0,0,0,7,11,22],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#a7ada50028ccfcea2cea8f0245c3b22e6":[1,0,0,0,0,0,7,11,5],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#a886a37705a7d15d936f0b79d78cc8273":[1,0,0,0,0,0,7,11,8],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#a995b43a61c706297bd9512bcada26de8":[1,0,0,0,0,0,7,11,14],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#aabb6053fad3af10876da7bf55a164536":[1,0,0,0,0,0,7,11,1],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#aac49a1d290558b6119540159f58c7ff9":[1,0,0,0,0,0,7,11,0]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#a4da0c60e951b176a3550afc620943355":[1,0,0,0,0,0,7,11,6]
 };

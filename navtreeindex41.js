@@ -1,5 +1,6 @@
 var NAVTREEINDEX41 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel.html#a826dcc5c69c630554a3c6a2bdc36aa51":[1,0,0,0,0,0,5,0,11,1,6,27],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel.html#a8a4a015fc1f04738f419edf97ddeac13":[1,0,0,0,0,0,5,0,11,1,6,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel.html#a8c83456528b0567ae47158ceaff11ece":[1,0,0,0,0,0,5,0,11,1,6,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel.html#a8e8eb61aeb9669ea9c7bd0f98772760f":[1,0,0,0,0,0,5,0,11,1,6,11],
@@ -248,6 +249,5 @@ var NAVTREEINDEX41 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aa6b97feefb5a4f931194eaf3b8846f77":[1,0,0,0,0,0,5,0,11,4,3,51],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aa783182bee089424e2afbf174fba19a2":[1,0,0,0,0,0,5,0,11,4,3,42],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aa8b5b6e5895655810fb3b1b4e6183a6c":[1,0,0,0,0,0,5,0,11,4,3,20],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aabb5537513d54b1dda9c4ae42c4a9b3c":[1,0,0,0,0,0,5,0,11,4,3,76],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aac8c7c9057059d8e4447e13cded05bfd":[1,0,0,0,0,0,5,0,11,4,3,70]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aabb5537513d54b1dda9c4ae42c4a9b3c":[1,0,0,0,0,0,5,0,11,4,3,76]
 };

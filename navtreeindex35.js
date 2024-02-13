@@ -1,5 +1,6 @@
 var NAVTREEINDEX35 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionCommissionIntel.html#a9f11cf31d564303e8e7819a0fdafdbca":[1,0,0,0,0,0,5,0,11,15,31],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionCommissionIntel.html#a9f160359f542419ec8ad0a6c1894f87c":[1,0,0,0,0,0,5,0,11,15,26],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionCommissionIntel.html#ab1a2a51a8c2e945fd4406b2583be8960":[1,0,0,0,0,0,5,0,11,15,12],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionCommissionIntel.html#ab4d1aae42f6c9668cd2f943bdc9a833f":[1,0,0,0,0,0,5,0,11,15,27],
@@ -248,6 +249,5 @@ var NAVTREEINDEX35 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1ProcurementMissionIntel.html#a70e76e9d44ee2ee0ade730cc085d507d":[1,0,0,0,0,0,5,0,11,28,35],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1ProcurementMissionIntel.html#a723d835fd3079b770a521968d36721b8":[1,0,0,0,0,0,5,0,11,28,7],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1ProcurementMissionIntel.html#a74cb358dfa2444d0bf6883ca60901c60":[1,0,0,0,0,0,5,0,11,28,33],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1ProcurementMissionIntel.html#a7894a66cd7cb92fb87bb251432356662":[1,0,0,0,0,0,5,0,11,28,29],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1ProcurementMissionIntel.html#a7e08804d4eed89b6fc1871c2e7e9d2ae":[1,0,0,0,0,0,5,0,11,28,13]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1ProcurementMissionIntel.html#a7894a66cd7cb92fb87bb251432356662":[1,0,0,0,0,0,5,0,11,28,29]
 };

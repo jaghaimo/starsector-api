@@ -1,5 +1,12 @@
 var NAVTREEINDEX72 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamTerrainPlugin2.html#a8eff02225fefed4d4bd8fc0165bdcd61":[1,0,0,0,0,0,5,0,22,5,50],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamTerrainPlugin2.html#a8f59ad85732e6363312d4b861d406c4d":[1,0,0,0,0,0,5,0,22,5,69],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamTerrainPlugin2.html#a8fa6a2eb8316d141ee5530e74fbce8d2":[1,0,0,0,0,0,5,0,22,5,21],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamTerrainPlugin2.html#a936cb2287bc3ef4e546b34bf394843c4":[1,0,0,0,0,0,5,0,22,5,45],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamTerrainPlugin2.html#a96fd24fc9fca56acbe6d326b3b58071d":[1,0,0,0,0,0,5,0,22,5,85],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamTerrainPlugin2.html#aa0735c7c844d3b9c0231ecf97c6821f8":[1,0,0,0,0,0,5,0,22,5,51],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamTerrainPlugin2.html#aa16bfdad7e873ba7dba215597f1e3a14":[1,0,0,0,0,0,5,0,22,5,52],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamTerrainPlugin2.html#aa2f270fdb6d8c96daa50f2ffaa64ae53":[1,0,0,0,0,0,5,0,22,5,48],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamTerrainPlugin2.html#aa7d5e521535b962990e4524bb0f41366":[1,0,0,0,0,0,5,0,22,5,75],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamTerrainPlugin2.html#aafa6cdc0fd8e83f7d054a81d9e833e35":[1,0,0,0,0,0,5,0,22,5,26],
@@ -242,12 +249,5 @@ var NAVTREEINDEX72 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1DamperFieldStats.html#a5587de94597b6b702e506c25d2b4f2a9":[1,0,0,0,0,0,5,1,16,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1DamperFieldStats.html#a7bdec85f29f67f25925d2e800d8874ad":[1,0,0,0,0,0,5,1,16,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1DisintegratorEffect.html":[1,0,0,0,0,0,5,1,17],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1DisintegratorEffect.html#a0153ef375c42d3779d089fe8ebd55932":[1,0,0,0,0,0,5,1,17,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1DisintegratorEffect.html#a01a279922505a2fb4c46b52bfb2fca0f":[1,0,0,0,0,0,5,1,17,4],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1DisintegratorEffect.html#a15923b2133fd9b487291c8280baada0b":[1,0,0,0,0,0,5,1,17,12],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1DisintegratorEffect.html#a564bbd8c2a42d2401374fb3d04fe795a":[1,0,0,0,0,0,5,1,17,7],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1DisintegratorEffect.html#a5b90d8037a85c3971708bb6093cf068b":[1,0,0,0,0,0,5,1,17,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1DisintegratorEffect.html#a6060f18b7c51955a44214e799485aec2":[1,0,0,0,0,0,5,1,17,6],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1DisintegratorEffect.html#a66833c0b7a957e5e4147f51405213bf2":[1,0,0,0,0,0,5,1,17,17],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1DisintegratorEffect.html#a70a6160d781eaf69f5ea179514c183ac":[1,0,0,0,0,0,5,1,17,5]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1DisintegratorEffect.html#a0153ef375c42d3779d089fe8ebd55932":[1,0,0,0,0,0,5,1,17,2]
 };

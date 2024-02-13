@@ -263,46 +263,47 @@ $(document).ready(function(){initNavTree('EncounterTricksterGhostCreator_8java_s
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>            m.createStandardFleet(difficulty, Factions.LUDDIC_PATH, loc);</div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>            m.triggerSetStandardAggroPirateFlags();</div>
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>            m.triggerFleetAllowLongPursuit();</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>            <span class="keywordflow">if</span> (intel2 != <span class="keyword">null</span> &amp;&amp; intel2.getMarket() != <span class="keyword">null</span>) {</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>                m.triggerSetFleetMemoryValue(MemFlags.MEMORY_KEY_SOURCE_MARKET, intel2.getMarket().getId());</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>            }</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>            </div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>            fleet = m.createFleet();</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == OtherFleetType.MERCENARY) {</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>            <span class="keywordtype">int</span> difficulty = 3;</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>            <span class="keywordtype">float</span> f = Math.max(f1, f2);</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>            difficulty += (int) Math.round(f * 3f);</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>            difficulty += random.nextInt(5);</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>            </div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>            Vector2f loc = locInHyper;</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>            m.createQualityFleet(difficulty, Factions.MERCENARY, loc);</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>            m.triggerFleetAllowLongPursuit();</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>            m.triggerSetFleetFaction(Factions.INDEPENDENT);</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>            m.triggerMakeNoRepImpact();</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>            m.triggerFleetSetAllWeapons();</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>            </div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>            fleet = m.createFleet();</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == OtherFleetType.NOTHING) {</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        }</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        </div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        <span class="keywordflow">if</span> (fleet == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        fleet.removeScriptsOfClass(MissionFleetAutoDespawn.class);</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        fleet.addScript(<span class="keyword">new</span> MissionFleetAutoDespawn(<span class="keyword">null</span>, fleet));</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        </div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        <span class="keywordflow">return</span> fleet;</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    }</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>            m.triggerFleetPatherNoDefaultTithe();</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>            <span class="keywordflow">if</span> (intel2 != <span class="keyword">null</span> &amp;&amp; intel2.getMarket() != <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>                m.triggerSetFleetMemoryValue(MemFlags.MEMORY_KEY_SOURCE_MARKET, intel2.getMarket().getId());</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>            }</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>            </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>            fleet = m.createFleet();</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == OtherFleetType.MERCENARY) {</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>            <span class="keywordtype">int</span> difficulty = 3;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>            <span class="keywordtype">float</span> f = Math.max(f1, f2);</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>            difficulty += (int) Math.round(f * 3f);</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>            difficulty += random.nextInt(5);</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>            </div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>            Vector2f loc = locInHyper;</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>            m.createQualityFleet(difficulty, Factions.MERCENARY, loc);</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>            m.triggerFleetAllowLongPursuit();</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>            m.triggerSetFleetFaction(Factions.INDEPENDENT);</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>            m.triggerMakeNoRepImpact();</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>            m.triggerFleetSetAllWeapons();</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>            </div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>            fleet = m.createFleet();</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (type == OtherFleetType.NOTHING) {</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>            <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        }</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        </div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        <span class="keywordflow">if</span> (fleet == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        fleet.removeScriptsOfClass(MissionFleetAutoDespawn.class);</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        fleet.addScript(<span class="keyword">new</span> MissionFleetAutoDespawn(<span class="keyword">null</span>, fleet));</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        <span class="keywordflow">return</span> fleet;</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    }</div>
 </div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    </div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    </div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>}</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    </div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>}</div>
 </div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
 <div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1Global_html"><div class="ttname"><a href="classcom_1_1fs_1_1starfarer_1_1api_1_1Global.html">com.fs.starfarer.api.Global</a></div><div class="ttdef"><b>Definition</b> <a href="Global_8java_source.html#l00013">Global.java:13</a></div></div>
 <div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1Global_html_afca8164b2446371c2d5415aa72a0a733"><div class="ttname"><a href="classcom_1_1fs_1_1starfarer_1_1api_1_1Global.html#afca8164b2446371c2d5415aa72a0a733">com.fs.starfarer.api.Global.getSector</a></div><div class="ttdeci">static SectorAPI getSector()</div><div class="ttdef"><b>Definition</b> <a href="Global_8java_source.html#l00059">Global.java:59</a></div></div>
 <div class="ttc" id="aclasscom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseSensorGhostCreator_html"><div class="ttname"><a href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseSensorGhostCreator.html">com.fs.starfarer.api.impl.campaign.ghosts.BaseSensorGhostCreator</a></div><div class="ttdef"><b>Definition</b> <a href="BaseSensorGhostCreator_8java_source.html#l00017">BaseSensorGhostCreator.java:17</a></div></div>

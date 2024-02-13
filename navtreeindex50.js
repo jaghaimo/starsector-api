@@ -1,5 +1,10 @@
 var NAVTREEINDEX50 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter.html#a1db06970ab4c7678e4ff2f9d23476e73":[1,0,0,0,0,0,5,0,12,13,30],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter.html#a1e6e896b07cef5bc33902c2221eb53e9":[1,0,0,0,0,0,5,0,12,13,53],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter.html#a2327cd16771b5d879176aad4ffeda8aa":[1,0,0,0,0,0,5,0,12,13,16],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter.html#a29890b8e64a8ab3b70b5a1a0f5b1a8ac":[1,0,0,0,0,0,5,0,12,13,5],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter.html#a2a873702650325b9fb953217d79f3ad7":[1,0,0,0,0,0,5,0,12,13,39],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter.html#a31c4beb7db6858c0ea1c7ea8f24283e8":[1,0,0,0,0,0,5,0,12,13,18],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter.html#a334046d22c4ddd57534b9045edc43ad3":[1,0,0,0,0,0,5,0,12,13,23],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter.html#a335fc94c84d8c4ddcbcc98eca34ccf71":[1,0,0,0,0,0,5,0,12,13,44],
@@ -244,10 +249,5 @@ var NAVTREEINDEX50 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SecurityCodes.html#a45d0617bfb70dee697b6539893648cd4":[1,0,0,0,0,0,5,0,12,28,7],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SecurityCodes.html#a52c3550c3fbc7c6994a80fc7c652e9ae":[1,0,0,0,0,0,5,0,12,28,15],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SecurityCodes.html#a5a25c44be67a88010085f5675bc42541":[1,0,0,0,0,0,5,0,12,28,16],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SecurityCodes.html#a7513dddbabedf46fb70780289f8e201d":[1,0,0,0,0,0,5,0,12,28,6],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SecurityCodes.html#a92351cd74e793864155836e1f48e60af":[1,0,0,0,0,0,5,0,12,28,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SecurityCodes.html#a9630a7f58728615e563adcdf35052a03":[1,0,0,0,0,0,5,0,12,28,12],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SecurityCodes.html#aa50cb378bd85cbe0c1939988fedb38a7":[1,0,0,0,0,0,5,0,12,28,17],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SecurityCodes.html#acb1825a7245ea1910c22bb034fb9287b":[1,0,0,0,0,0,5,0,12,28,10],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SmugglingMission.html":[1,0,0,0,0,0,5,0,12,29]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SecurityCodes.html#a7513dddbabedf46fb70780289f8e201d":[1,0,0,0,0,0,5,0,12,28,6]
 };

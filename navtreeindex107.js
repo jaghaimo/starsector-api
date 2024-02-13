@@ -1,5 +1,15 @@
 var NAVTREEINDEX107 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#a578f2feb435012f670565ffcc4355abe":[1,0,0,0,0,0,7,11,23],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#a5eaebd8f53d2d99a94e3ba7b1b47ad55":[1,0,0,0,0,0,7,11,2],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#a658a327932832f0a9da9653e1f6d8b74":[1,0,0,0,0,0,7,11,9],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#a69a72bf7676c6a2b74819d8b5c9253d0":[1,0,0,0,0,0,7,11,31],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#a7389291c79f088fb508e55e6bcc3c696":[1,0,0,0,0,0,7,11,22],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#a7ada50028ccfcea2cea8f0245c3b22e6":[1,0,0,0,0,0,7,11,5],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#a886a37705a7d15d936f0b79d78cc8273":[1,0,0,0,0,0,7,11,8],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#a995b43a61c706297bd9512bcada26de8":[1,0,0,0,0,0,7,11,14],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#aabb6053fad3af10876da7bf55a164536":[1,0,0,0,0,0,7,11,1],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#aac49a1d290558b6119540159f58c7ff9":[1,0,0,0,0,0,7,11,0],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#ab51628842acced1da8ed8577bb56d305":[1,0,0,0,0,0,7,11,20],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#ab7e29cd95a02ac50d3b942a1ca127adf":[1,0,0,0,0,0,7,11,21],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html#ab8c92416ad8602f78d4a905730a94ba8":[1,0,0,0,0,0,7,11,13],
@@ -239,15 +249,5 @@ var NAVTREEINDEX107 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI.html#a4e5587046bcdb6365803456a51d637e7":[1,0,0,0,0,0,7,24,1],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI.html#a543a3c5669a1fc690b98865957586ad3":[1,0,0,0,0,0,7,24,6],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI.html#a6e7071ee8b1b16eee2a76b72cd4e487a":[1,0,0,0,0,0,7,24,16],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI.html#a73ca3a5c2f2238c82cbfa260513f1313":[1,0,0,0,0,0,7,24,19],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI.html#a79f967b97177a53ce76fbfe0e3f82c15":[1,0,0,0,0,0,7,24,8],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI.html#a7a2662b3f4068da00515e75a83aec019":[1,0,0,0,0,0,7,24,11],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI.html#a877f181a8afd32febe27656980a9b088":[1,0,0,0,0,0,7,24,9],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI.html#a92d4287d558a37c3ae7d07428f21d38e":[1,0,0,0,0,0,7,24,14],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI.html#aa39d7f03385505e361fb4b791a3eac31":[1,0,0,0,0,0,7,24,12],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI.html#aa63b18af95539c6b6777d5af78a33c1d":[1,0,0,0,0,0,7,24,13],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI.html#ac00c64aa92e9ecd1a53d1ee0961eff67":[1,0,0,0,0,0,7,24,5],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI.html#ae3a366bf1d1d57d5f70b7fcf3fc611d1":[1,0,0,0,0,0,7,24,7],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI.html#ae527a3699db762cff4e7b71d5ca74876":[1,0,0,0,0,0,7,24,0],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI.html#af055a35cdc22b128079d6abb47dfa380":[1,0,0,0,0,0,7,24,4]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI.html#a73ca3a5c2f2238c82cbfa260513f1313":[1,0,0,0,0,0,7,24,19]
 };

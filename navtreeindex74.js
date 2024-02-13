@@ -1,5 +1,12 @@
 var NAVTREEINDEX74 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorChargeGlow.html#a3b9897c422450c29da5d8e96c4b18546":[1,0,0,0,0,0,5,1,48,13],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorChargeGlow.html#a4aaed80b6c39420c6146b42da894b140":[1,0,0,0,0,0,5,1,48,10],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorChargeGlow.html#a52864712506b5740d098f77fac08aae5":[1,0,0,0,0,0,5,1,48,16],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorChargeGlow.html#a5377725d4a22433d0130f71b25e70742":[1,0,0,0,0,0,5,1,48,2],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorChargeGlow.html#a5e15bbe126faf5d94849e8fe65785b9e":[1,0,0,0,0,0,5,1,48,12],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorChargeGlow.html#a6f113c7473a91cceeb17b83b16612ef2":[1,0,0,0,0,0,5,1,48,6],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorChargeGlow.html#a77d967965404c11956f6f701c3cd7445":[1,0,0,0,0,0,5,1,48,14],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorChargeGlow.html#a77ffc738a7e2bbdd0600b281657c9cbb":[1,0,0,0,0,0,5,1,48,7],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorChargeGlow.html#a88258c52c61575fccf5be0fc929517bc":[1,0,0,0,0,0,5,1,48,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorChargeGlow.html#a9a90a7cdfa65928aa662d9e638a6be9e":[1,0,0,0,0,0,5,1,48,8],
@@ -242,12 +249,5 @@ var NAVTREEINDEX74 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#a720767f7920627b3499d0f4fad104f43":[1,0,0,0,0,0,5,2,13,7],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#ab3a3ef7f42329b83a1196062f4ac0843":[1,0,0,0,0,0,5,2,13,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#ad4cc9678985f2bf7caf560eefc808576":[1,0,0,0,0,0,5,2,13,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#aec2b48361074102e50db9b8d2aa1631b":[1,0,0,0,0,0,5,2,13,5],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DamagedFlightDeck.html":[1,0,0,0,0,0,5,2,14],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DamagedFlightDeck.html#a993ac57c030cdd36f9900cd0d04d6873":[1,0,0,0,0,0,5,2,14,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DamagedFlightDeck.html#aef7c5636bf08b06b3dddd15a9a32fbd9":[1,0,0,0,0,0,5,2,14,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DamagedWeaponMounts.html":[1,0,0,0,0,0,5,2,15],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DamagedWeaponMounts.html#a7bd3fc3c46bb81f4d1f3cad8adec743e":[1,0,0,0,0,0,5,2,15,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DamagedWeaponMounts.html#ae6c11f619ecbf1fe12fde3b042309d8f":[1,0,0,0,0,0,5,2,15,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DefectiveManufactory.html":[1,0,0,0,0,0,5,2,16]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1ConvertedHangar.html#aec2b48361074102e50db9b8d2aa1631b":[1,0,0,0,0,0,5,2,13,5]
 };

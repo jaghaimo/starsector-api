@@ -1,5 +1,6 @@
 var NAVTREEINDEX34 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1People.html":[1,0,0,0,0,0,5,0,10,15],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Personalities.html":[1,0,0,0,0,0,5,0,10,16],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Pings.html":[1,0,0,0,0,0,5,0,10,17],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Planets.html":[1,0,0,0,0,0,5,0,10,18],
@@ -248,6 +249,5 @@ var NAVTREEINDEX34 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionCommissionIntel.html#a82a4630dea4bc9ecebfa955e85543dd5":[1,0,0,0,0,0,5,0,11,15,16],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionCommissionIntel.html#a83923f8cf57d60f8b7e1cd1edfb28775":[1,0,0,0,0,0,5,0,11,15,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionCommissionIntel.html#a8fcfe152b33112e888703224de7ef570":[1,0,0,0,0,0,5,0,11,15,29],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionCommissionIntel.html#a94c27a02b30bd48d585ec25b97a4e51b":[1,0,0,0,0,0,5,0,11,15,4],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionCommissionIntel.html#a9f11cf31d564303e8e7819a0fdafdbca":[1,0,0,0,0,0,5,0,11,15,31]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1FactionCommissionIntel.html#a94c27a02b30bd48d585ec25b97a4e51b":[1,0,0,0,0,0,5,0,11,15,4]
 };

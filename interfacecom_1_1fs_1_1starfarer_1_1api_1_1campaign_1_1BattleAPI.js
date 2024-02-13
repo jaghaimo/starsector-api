@@ -54,6 +54,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BattleAPI =
     [ "isStationInvolved", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BattleAPI.html#a8990e9ca775eff40d97768a730bafed2", null ],
     [ "isStationInvolvedOnPlayerSide", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BattleAPI.html#a584bc7ed1ccb1b1354f42b6a0951da86", null ],
     [ "join", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BattleAPI.html#a3dec1fdefa2a8c216cd05cd3328cbddd", null ],
+    [ "join", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BattleAPI.html#a7f55f2108aac22b5de6add66c29e4824", null ],
     [ "knowsWhoPlayerIs", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BattleAPI.html#aaf1b93dd37f7760ffccc83fe3b5bafc7", null ],
     [ "leave", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BattleAPI.html#a676b236ac5ad44c58a4c85ece9dd0ac2", null ],
     [ "onPlayerSide", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BattleAPI.html#a662084600b9bee9d13f8b3385a8326c5", null ],

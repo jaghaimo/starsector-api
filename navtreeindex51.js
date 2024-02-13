@@ -1,5 +1,10 @@
 var NAVTREEINDEX51 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SecurityCodes.html#a92351cd74e793864155836e1f48e60af":[1,0,0,0,0,0,5,0,12,28,2],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SecurityCodes.html#a9630a7f58728615e563adcdf35052a03":[1,0,0,0,0,0,5,0,12,28,12],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SecurityCodes.html#aa50cb378bd85cbe0c1939988fedb38a7":[1,0,0,0,0,0,5,0,12,28,17],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SecurityCodes.html#acb1825a7245ea1910c22bb034fb9287b":[1,0,0,0,0,0,5,0,12,28,10],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SmugglingMission.html":[1,0,0,0,0,0,5,0,12,29],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SmugglingMission.html#a10bf9bf5f8b88ec3f8c27e811327b55f":[1,0,0,0,0,0,5,0,12,29,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SmugglingMission.html#a4113dbd410f334e74afa53cfbdd0c3b7":[1,0,0,0,0,0,5,0,12,29,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SmugglingMission.html#a4aa54bb89fad744584e645740e436c53":[1,0,0,0,0,0,5,0,12,29,0],
@@ -244,10 +249,5 @@ var NAVTREEINDEX51 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAKallichore.html#a6c629cb9058ab246bc497d8908d68d7f":[1,0,0,0,0,0,5,0,12,0,13,8],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAKallichore.html#a769b7a498c517aff4479cae10519c4c5":[1,0,0,0,0,0,5,0,12,0,13,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAKallichore.html#a9791e49b93699d0da431e9ba643b7115":[1,0,0,0,0,0,5,0,12,0,13,6],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAKallichore.html#a9b60d954177ff70447cf77358c6cf284":[1,0,0,0,0,0,5,0,12,0,13,4],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAKallichore.html#aab9158e24cb1a2ef06620529451d0907":[1,0,0,0,0,0,5,0,12,0,13,7],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAKallichore.html#ac253480bfcb9eedac705ce585ff762d3":[1,0,0,0,0,0,5,0,12,0,13,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAKallichore.html#af236220b9f2c2b5a20b1292b07d2c7b2":[1,0,0,0,0,0,5,0,12,0,13,9],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAOutpost.html":[1,0,0,0,0,0,5,0,12,0,14],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAOutpost.html#a3c526a85e2c4d1f5f287c270f072613c":[1,0,0,0,0,0,5,0,12,0,14,7]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAKallichore.html#a9b60d954177ff70447cf77358c6cf284":[1,0,0,0,0,0,5,0,12,0,13,4]
 };

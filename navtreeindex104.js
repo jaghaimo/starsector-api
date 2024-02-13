@@ -1,5 +1,15 @@
 var NAVTREEINDEX104 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#ab19972bcb749dcfe489fb03b16007231":[1,0,0,0,0,0,3,4,25],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#ab9f779c6b7eaea3e2daaaa2bd0df432a":[1,0,0,0,0,0,3,4,56],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#abaabb043f69a159720bcc2c3aa32b3ec":[1,0,0,0,0,0,3,4,65],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#abb80a64884429b37aa0c3a845c295f56":[1,0,0,0,0,0,3,4,39],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#acb98205ff19291118e53c9794e0c1956":[1,0,0,0,0,0,3,4,60],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#ad30455c341e6475e0a0e03387ee5afaf":[1,0,0,0,0,0,3,4,41],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#ad70eba90ebbd5691b064ae9c2695a966":[1,0,0,0,0,0,3,4,33],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#adab050f320f828e498efcabad14587d1":[1,0,0,0,0,0,3,4,58],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#aed4840689dd62fda2062830118fabd8a":[1,0,0,0,0,0,3,4,29],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#aeffaa549a222848ff4129907f84404af":[1,0,0,0,0,0,3,4,67],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#af40216763809c23e0974bf1a63da0c2f":[1,0,0,0,0,0,3,4,34],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#af485a48c157fbe17d0968e14904341c2":[1,0,0,0,0,0,3,4,23],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#af5f062a0ac9b9ace548f342fe808ac51":[1,0,0,0,0,0,3,4,66],
@@ -239,15 +249,5 @@ var NAVTREEINDEX104 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1SensorGhostCreator.html#a8806111bffb88beda28303380ac5d0bd":[1,0,0,0,0,0,5,0,8,35,5],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1SensorGhostCreator.html#ada8dc6e04872e7990d8cb8d247f60a7c":[1,0,0,0,0,0,5,0,8,35,0],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1SensorGhostCreator.html#ae6b3071eea9941a7772a743470b8211b":[1,0,0,0,0,0,5,0,8,35,6],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1GroundRaidObjectivePlugin.html":[1,0,0,0,0,0,5,0,9,7],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1GroundRaidObjectivePlugin.html#a140cc5d32d263a73294705504280841d":[1,0,0,0,0,0,5,0,9,7,5],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1GroundRaidObjectivePlugin.html#a178301195d47417d3c4d49390862d316":[1,0,0,0,0,0,5,0,9,7,38],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1GroundRaidObjectivePlugin.html#a17ee0e42aba1f0f2a0e44cc09879d91b":[1,0,0,0,0,0,5,0,9,7,6],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1GroundRaidObjectivePlugin.html#a3659f4f0ae6937980967aac947c8ed09":[1,0,0,0,0,0,5,0,9,7,33],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1GroundRaidObjectivePlugin.html#a3e817f42d5e4d076d8da43c808803618":[1,0,0,0,0,0,5,0,9,7,20],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1GroundRaidObjectivePlugin.html#a4d2fbfcf1a73393cb482112053320a2e":[1,0,0,0,0,0,5,0,9,7,2],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1GroundRaidObjectivePlugin.html#a538d8ab5295737ee6c7a9806ba9d3515":[1,0,0,0,0,0,5,0,9,7,1],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1GroundRaidObjectivePlugin.html#a59d74b01b3cec4d558cb7a73b41da3c9":[1,0,0,0,0,0,5,0,9,7,4],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1GroundRaidObjectivePlugin.html#a59e16b80a58ece46f99be70291a1c7b4":[1,0,0,0,0,0,5,0,9,7,26],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1GroundRaidObjectivePlugin.html#a5a973715d2e4f92efa66f910e6a410de":[1,0,0,0,0,0,5,0,9,7,11]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1GroundRaidObjectivePlugin.html":[1,0,0,0,0,0,5,0,9,7]
 };

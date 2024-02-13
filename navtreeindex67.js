@@ -1,5 +1,12 @@
 var NAVTREEINDEX67 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidFieldTerrainPlugin.html#a4a35729108cd3233375d8c1eeb7a1acc":[1,0,0,0,0,0,5,0,20,1,5],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidFieldTerrainPlugin.html#a653ac0904db8a8a6fb9dd541b49e846c":[1,0,0,0,0,0,5,0,20,1,3],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidFieldTerrainPlugin.html#a788863d4bb160a3cfc96b3319c07a9be":[1,0,0,0,0,0,5,0,20,1,6],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidFieldTerrainPlugin.html#a78c1306f382a7a72ef8ff4f77fa93097":[1,0,0,0,0,0,5,0,20,1,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidFieldTerrainPlugin.html#a824b8875e7c80e4ba0e1a7f906fae9a2":[1,0,0,0,0,0,5,0,20,1,4],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidFieldTerrainPlugin.html#ac770126167af90c831c856fb4cda6a9d":[1,0,0,0,0,0,5,0,20,1,2],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidFieldTerrainPlugin.html#adb72c9f6a92548257eb0161b468d423c":[1,0,0,0,0,0,5,0,20,1,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidFieldTerrainPlugin.html#af3f4761f19c9431d82fba6de514bceb2":[1,0,0,0,0,0,5,0,20,1,7],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidImpact.html":[1,0,0,0,0,0,5,0,20,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidImpact.html#a1d62e1cdc7db91c3d05bc93a52e67a9d":[1,0,0,0,0,0,5,0,20,2,6],
@@ -242,12 +249,5 @@ var NAVTREEINDEX67 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1HyperStormBoost.html#a3c0b741e46646e32037b0ef66b744bd3":[1,0,0,0,0,0,5,0,20,19,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1HyperStormBoost.html#a69de67b658d25825ebc792fb532444c3":[1,0,0,0,0,0,5,0,20,19,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1HyperStormBoost.html#a6d06230642806f4311e593c4367cec79":[1,0,0,0,0,0,5,0,20,19,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1HyperStormBoost.html#a95885ec0b776d9dd45fa897b5e6cf5bc":[1,0,0,0,0,0,5,0,20,19,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1HyperStormBoost.html#a9bcdb9b58b6c5efb6cdb4fed3b0e9944":[1,0,0,0,0,0,5,0,20,19,5],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1HyperStormBoost.html#aa0d2daffa680bba7e7e58c1916957f8b":[1,0,0,0,0,0,5,0,20,19,6],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1HyperStormBoost.html#aa715c9e608db8d2d97627add300a6e2d":[1,0,0,0,0,0,5,0,20,19,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1HyperStormBoost.html#adf7f3f2c1de3e3927cc42b2a2d691952":[1,0,0,0,0,0,5,0,20,19,7],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1HyperspaceAbyssPluginImpl.html":[1,0,0,0,0,0,5,0,20,16],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1HyperspaceAbyssPluginImpl.html#a0e18bb91bca7eb6c54ec2d17b9243ba3":[1,0,0,0,0,0,5,0,20,16,7],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1HyperspaceAbyssPluginImpl.html#a428d0254fecaffefe0639853291966e6":[1,0,0,0,0,0,5,0,20,16,4]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1HyperStormBoost.html#a95885ec0b776d9dd45fa897b5e6cf5bc":[1,0,0,0,0,0,5,0,20,19,1]
 };

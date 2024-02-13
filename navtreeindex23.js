@@ -1,5 +1,6 @@
 var NAVTREEINDEX23 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin.html#a06536345c4ccb9cf0adf76ca9724dd65":[1,0,0,0,0,0,5,0,2,4,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin.html#a08b55671807f306accea232d2f898328":[1,0,0,0,0,0,5,0,2,4,16],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin.html#a0903daf7242c4a477f001b8934cd3572":[1,0,0,0,0,0,5,0,2,4,22],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin.html#a12742e0ea71ed34b77a7ed12300bcb49":[1,0,0,0,0,0,5,0,2,4,9],
@@ -248,6 +249,5 @@ var NAVTREEINDEX23 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1ShippingDisruption.html#af69d196553664666f835219cd88a726e":[1,0,0,0,0,0,5,0,2,43,10],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1Smuggling.html":[1,0,0,0,0,0,5,0,2,44],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1Smuggling.html#a04098700e31e5ee6f81e271c12b0deb8":[1,0,0,0,0,0,5,0,2,44,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1Smuggling.html#a18899d7600abc3c9c8961cc53b9a3e7e":[1,0,0,0,0,0,5,0,2,44,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1Smuggling.html#a1a51525a19c2571bd99f2d8927385637":[1,0,0,0,0,0,5,0,2,44,6]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1Smuggling.html#a18899d7600abc3c9c8961cc53b9a3e7e":[1,0,0,0,0,0,5,0,2,44,1]
 };

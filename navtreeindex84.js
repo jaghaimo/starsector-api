@@ -1,5 +1,13 @@
 var NAVTREEINDEX84 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignUIAPI.html#accf95bb6d588e0cd1c3267a6045a77fe":[1,0,0,0,0,0,0,34,32],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignUIAPI.html#ad69a9f13dc8ad2996503c2594e610c87":[1,0,0,0,0,0,0,34,22],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignUIAPI.html#ada64f26844bcbe09f02a579d710d10c1":[1,0,0,0,0,0,0,34,23],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignUIAPI.html#addb7931d581e8e7620d423d3660d456c":[1,0,0,0,0,0,0,34,37],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignUIAPI.html#ade6502392c16d8a29af3b01dd6d26b1d":[1,0,0,0,0,0,0,34,58],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignUIAPI.html#ae21f502656c0695afe4b190b93315d9d":[1,0,0,0,0,0,0,34,2],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignUIAPI.html#aee41879d19aacfd674563204f0543a10":[1,0,0,0,0,0,0,34,43],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignUIAPI.html#aee57e799e8b54cb556ca153a74de6a37":[1,0,0,0,0,0,0,34,39],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignUIAPI.html#aee855bd5284c299428168cf02479faca":[1,0,0,0,0,0,0,34,25],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignUIAPI.html#aeee66f0be542a03020cfd1408aeb6eef":[1,0,0,0,0,0,0,34,0],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignUIAPI.html#af7e8078a1e2f648f290eeb1190223178":[1,0,0,0,0,0,0,34,30],
@@ -241,13 +249,5 @@ var NAVTREEINDEX84 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomEntitySpecAPI.html#aeb368b7eb22c10fbc9e7dc3f29ca683d":[1,0,0,0,0,0,0,51,26],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomEntitySpecAPI.html#af516e5d4ab68cee730d7971e4681d6a4":[1,0,0,0,0,0,0,51,1],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomEntitySpecAPI.html#af60f8f8832b22de8ed8a87f698a4d98a":[1,0,0,0,0,0,0,51,11],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomEntitySpecAPI.html#af87f7516e7d0f7a1d3a02f236395d7ad":[1,0,0,0,0,0,0,51,8],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomEntitySpecAPI.html#af94afff0e635cd83e8d7b39fd61e8795":[1,0,0,0,0,0,0,51,4],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomEntitySpecAPI.html#afd215ddca99cb2015d9b14c5df62511b":[1,0,0,0,0,0,0,51,20],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomProductionPickerDelegate.html":[1,0,0,0,0,0,0,52],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomProductionPickerDelegate.html#a1706fff91ad60d0936da1553ed207fd0":[1,0,0,0,0,0,0,52,6],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomProductionPickerDelegate.html#a19926d035922a0c555f479e4c67fc446":[1,0,0,0,0,0,0,52,0],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomProductionPickerDelegate.html#a2f3f72e454aed48a1e9f5c844cb66d36":[1,0,0,0,0,0,0,52,5],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomProductionPickerDelegate.html#a5a2544508602549f3de2c3b2dc0ef645":[1,0,0,0,0,0,0,52,2],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomProductionPickerDelegate.html#a5a372abbc48db5513d1fb36c96c20044":[1,0,0,0,0,0,0,52,3]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomEntitySpecAPI.html#af87f7516e7d0f7a1d3a02f236395d7ad":[1,0,0,0,0,0,0,51,8]
 };

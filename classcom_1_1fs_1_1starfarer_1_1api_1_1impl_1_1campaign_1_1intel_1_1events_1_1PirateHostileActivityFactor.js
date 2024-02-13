@@ -13,6 +13,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_
     [ "getEventFrequency", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1PirateHostileActivityFactor.html#a0a563f32dc05a97cd416090d72ea8ba3", null ],
     [ "getEventStageIcon", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1PirateHostileActivityFactor.html#aa48bcccde8c01a5cfde51268ef603bb6", null ],
     [ "getMainRowTooltip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1PirateHostileActivityFactor.html#a3a96b49824effcbcd3c7cb347aeb54d3", null ],
+    [ "getMaxNumFleets", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1PirateHostileActivityFactor.html#a024cd7735ff0cb8af884c1eeb475e7c0", null ],
     [ "getNameColor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1PirateHostileActivityFactor.html#a663afdf977c28f811f5bb2464733dfdf", null ],
     [ "getNameColorForThreatList", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1PirateHostileActivityFactor.html#a745c7439808862066622bf551f31dffd", null ],
     [ "getNameForThreatList", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1PirateHostileActivityFactor.html#a76024d6bcd9f652e8da86d700c9f8370", null ],

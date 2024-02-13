@@ -1,5 +1,6 @@
 var NAVTREEINDEX37 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventCreator.html#aa52bb96f4402fecc1ec4fc19f0bc465b":[1,0,0,0,0,0,5,0,11,0,0,3,7],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventIntel.html":[1,0,0,0,0,0,5,0,11,0,0,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventIntel.html#a26e7e004d94b9519cf2e39de832eabcd":[1,0,0,0,0,0,5,0,11,0,0,4,6],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventIntel.html#a3b3c26f3661ee814e5931c5b4fbc74c6":[1,0,0,0,0,0,5,0,11,0,0,4,9],
@@ -248,6 +249,5 @@ var NAVTREEINDEX37 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicCraftBarEvent.html#a9158099394fa2f932ad97ef8bbfd923d":[1,0,0,0,0,0,5,0,11,0,0,15,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicCraftBarEvent.html#a92f1bd8563505ce5dd2807c74670391b":[1,0,0,0,0,0,5,0,11,0,0,15,7],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicCraftBarEvent.html#a94ca38e8a89aad59a0cc6e8b85208160":[1,0,0,0,0,0,5,0,11,0,0,15,12],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicCraftBarEvent.html#aa919ade85f243622e3fb7a2b446ded82":[1,0,0,0,0,0,5,0,11,0,0,15,19],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicCraftBarEvent.html#ab9386c4ac44520cfa5afb3ba05e1c5b2":[1,0,0,0,0,0,5,0,11,0,0,15,2]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicCraftBarEvent.html#aa919ade85f243622e3fb7a2b446ded82":[1,0,0,0,0,0,5,0,11,0,0,15,19]
 };

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['v_0',['v',['../enumcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1FormationType.html#a6364eda5b14cc9723796ed366cf0260d',1,'com.fs.starfarer.api.loading.FormationType.V'],['../enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1PriceVariability.html#aea1f496837ead4ddb979c29351ee6607',1,'com.fs.starfarer.api.campaign.econ.PriceVariability.v']]],
+  ['v_0',['v',['../enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1PriceVariability.html#aea1f496837ead4ddb979c29351ee6607',1,'com.fs.starfarer.api.campaign.econ.PriceVariability.v'],['../enumcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1FormationType.html#a6364eda5b14cc9723796ed366cf0260d',1,'com.fs.starfarer.api.loading.FormationType.V']]],
   ['v0_1',['V0',['../enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1PriceVariability.html#ad6597bf5c0550dd60c103bfbde377a8c',1,'com::fs::starfarer::api::campaign::econ::PriceVariability']]],
   ['v1_2',['V1',['../enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1PriceVariability.html#a89520ab05438ddd6eb776c448f3e0406',1,'com::fs::starfarer::api::campaign::econ::PriceVariability']]],
   ['v10_3',['V10',['../enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1PriceVariability.html#ac58dd9456d4658789b1e21c8bfce8a7b',1,'com::fs::starfarer::api::campaign::econ::PriceVariability']]],

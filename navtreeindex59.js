@@ -1,5 +1,11 @@
 var NAVTREEINDEX59 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1LocationGenDataSpec.html#a1d6771b01454130fb53789d739375b5d":[1,0,0,0,0,0,5,0,15,17,2],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1LocationGenDataSpec.html#a312044dffd4998b346a00d87a74c4341":[1,0,0,0,0,0,5,0,15,17,4],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1LocationGenDataSpec.html#a5514041f6817f2ab0eedf680620d67d3":[1,0,0,0,0,0,5,0,15,17,12],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1LocationGenDataSpec.html#a55287786d5d358386ff2f737c377a5fd":[1,0,0,0,0,0,5,0,15,17,6],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1LocationGenDataSpec.html#a58e269f7fde5e6d17fc05319c9bf212a":[1,0,0,0,0,0,5,0,15,17,9],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1LocationGenDataSpec.html#a7a47d901947c1ad6857219dfb82390b2":[1,0,0,0,0,0,5,0,15,17,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1LocationGenDataSpec.html#a9ad3ec99dc5793cb078ec86e8d71bc62":[1,0,0,0,0,0,5,0,15,17,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1LocationGenDataSpec.html#aaabfaaef91c48c094fc13c826c703804":[1,0,0,0,0,0,5,0,15,17,8],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1LocationGenDataSpec.html#ab1b3a0fdd4eb72c06f95364b85d87df9":[1,0,0,0,0,0,5,0,15,17,7],
@@ -243,11 +249,5 @@ var NAVTREEINDEX59 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarSystemGenerator.html#a020472849ce2541c736d5f95c94e315d":[1,0,0,0,0,0,5,0,15,36,10],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarSystemGenerator.html#a05ae1995ad28544aa9427f1c8c7d6b00":[1,0,0,0,0,0,5,0,15,36,44],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarSystemGenerator.html#a0b3efcedfcf4651a0f32dfdfb43dad55":[1,0,0,0,0,0,5,0,15,36,36],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarSystemGenerator.html#a0c8724545639e16556f602567135a3fd":[1,0,0,0,0,0,5,0,15,36,56],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarSystemGenerator.html#a23228fe02ad34f7766cfc113e57bb1c4":[1,0,0,0,0,0,5,0,15,36,40],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarSystemGenerator.html#a24231a04f6543860d30b6f4db418099e":[1,0,0,0,0,0,5,0,15,36,48],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarSystemGenerator.html#a269d5a6b8a5ec13ce5525f11fdfc40c6":[1,0,0,0,0,0,5,0,15,36,17],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarSystemGenerator.html#a28f011191588e2e2d43827924ec9bfcc":[1,0,0,0,0,0,5,0,15,36,31],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarSystemGenerator.html#a2f4aec729fad697d07139ff91966146e":[1,0,0,0,0,0,5,0,15,36,43],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarSystemGenerator.html#a3256d8ebce5a6f198d1fc5a96af3f7da":[1,0,0,0,0,0,5,0,15,36,12]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarSystemGenerator.html#a0c8724545639e16556f602567135a3fd":[1,0,0,0,0,0,5,0,15,36,56]
 };

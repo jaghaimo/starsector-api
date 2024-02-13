@@ -1,5 +1,8 @@
 var NAVTREEINDEX44 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1SindrianDiktatHostileActivityFactor.html#a2301084b61d684625e06e61382cc6528":[1,0,0,0,0,0,5,0,11,4,44,10],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1SindrianDiktatHostileActivityFactor.html#a2582ce4160521e266555b93f58b4f2ae":[1,0,0,0,0,0,5,0,11,4,44,5],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1SindrianDiktatHostileActivityFactor.html#a441909beeaa5187379b88feef0cb785f":[1,0,0,0,0,0,5,0,11,4,44,18],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1SindrianDiktatHostileActivityFactor.html#a466bcb0ad2c8ff57260459ce42759470":[1,0,0,0,0,0,5,0,11,4,44,7],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1SindrianDiktatHostileActivityFactor.html#a4c7779ce272b87de189ff91bfa2f4134":[1,0,0,0,0,0,5,0,11,4,44,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1SindrianDiktatHostileActivityFactor.html#a5a81f966520fc3f45d03a243d29cb805":[1,0,0,0,0,0,5,0,11,4,44,19],
@@ -246,8 +249,5 @@ var NAVTREEINDEX44 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ttcr_1_1TriTachyonCommerceRaiding.html#abbde90774f2d9c7de86297a90c4048bd":[1,0,0,0,0,0,5,0,11,4,1,0,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ttcr_1_1TriTachyonCommerceRaiding.html#ad57d629ed96b5cc9414a7c9a4754377c":[1,0,0,0,0,0,5,0,11,4,1,0,6],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ttcr_1_1TriTachyonCommerceRaiding.html#aedc32c482d033128a13a21de354f1013":[1,0,0,0,0,0,5,0,11,4,1,0,11],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ttcr_1_1TriTachyonCommerceRaiding.html#aeebaed6266b3b8fe3148cafd481a2592":[1,0,0,0,0,0,5,0,11,4,1,0,5],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ttcr_1_1TriTachyonCommerceRaiding.html#af2a32b492507b6f19164e982daaaebae":[1,0,0,0,0,0,5,0,11,4,1,0,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1BaseFGAction.html":[1,0,0,0,0,0,5,0,11,5,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1BaseFGAction.html#a04e28ef9728abc32b3ebf4b82a985db9":[1,0,0,0,0,0,5,0,11,5,0,3]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ttcr_1_1TriTachyonCommerceRaiding.html#aeebaed6266b3b8fe3148cafd481a2592":[1,0,0,0,0,0,5,0,11,4,1,0,5]
 };

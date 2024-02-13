@@ -1,5 +1,11 @@
 var NAVTREEINDEX57 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#af6fcab256b0b1624ab0d228d3ff2b5e4":[1,0,0,0,0,0,5,0,12,3,8,247],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#af73cad7ade5fea400b7923902a7f5c74":[1,0,0,0,0,0,5,0,12,3,8,104],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#afa1e1da92da031459868174133b9fa23":[1,0,0,0,0,0,5,0,12,3,8,177],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#afa3eee8933501a44473810034045d621":[1,0,0,0,0,0,5,0,12,3,8,228],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#afbee9fac175cd25790098fae1e21c73c":[1,0,0,0,0,0,5,0,12,3,8,245],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#affd3cbdd607ab60243efb61a67a5540f":[1,0,0,0,0,0,5,0,12,3,8,168],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1IntelMarkerIntel.html":[1,0,0,0,0,0,5,0,12,3,9],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1IntelMarkerIntel.html#a0b610147297f3fc39168c0dfb0ebd6c1":[1,0,0,0,0,0,5,0,12,3,9,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1IntelMarkerIntel.html#a1142982d8a1d746ef66ce0827855d5a6":[1,0,0,0,0,0,5,0,12,3,9,9],
@@ -243,11 +249,5 @@ var NAVTREEINDEX57 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLStatMarines.html#adf1a44688589606f7b1e66cfc95ff2e6":[1,0,0,0,0,0,5,0,13,15,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLStatMarines.html#af428af79337e02e3bd822f75c4b68f2c":[1,0,0,0,0,0,5,0,13,15,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLStatSupplies.html":[1,0,0,0,0,0,5,0,13,16],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLStatSupplies.html#a0b36a5e70abcff4ed9d962f7ee591adc":[1,0,0,0,0,0,5,0,13,16,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLStatSupplies.html#a12709fd21428231243c9745da9c8db8c":[1,0,0,0,0,0,5,0,13,16,5],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLStatSupplies.html#a3369448dc44afed91dc856b750b695ba":[1,0,0,0,0,0,5,0,13,16,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLStatSupplies.html#a688e28b2a8c504cc7e824759f981a138":[1,0,0,0,0,0,5,0,13,16,4],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLStatSupplies.html#acbae37ab7c0f1f9b7df89d78aa79e969":[1,0,0,0,0,0,5,0,13,16,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLStatSupplies.html#af1715b608401ce2eff43dfdd4d6c16c9":[1,0,0,0,0,0,5,0,13,16,3],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLTextEntry.html":[1,0,0,0,0,0,5,0,13,17]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PLStatSupplies.html#a0b36a5e70abcff4ed9d962f7ee591adc":[1,0,0,0,0,0,5,0,13,16,1]
 };

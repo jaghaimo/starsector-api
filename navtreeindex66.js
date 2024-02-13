@@ -1,5 +1,12 @@
 var NAVTREEINDEX66 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html#a7bf42320af541d740e2feaabda9ee6e3":[1,0,0,0,0,0,5,0,18,45,2],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html#a8b4b562d6248ceceebf99a421752a1cd":[1,0,0,0,0,0,5,0,18,45,15],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html#a9705d3cd7d296f35b7f12c0a8a3b5a36":[1,0,0,0,0,0,5,0,18,45,20],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html#aa323f0dff1a745a4ab67ac0732a88f06":[1,0,0,0,0,0,5,0,18,45,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html#abcc946f5e75f9a33933ddac4cb5c908f":[1,0,0,0,0,0,5,0,18,45,10],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html#abf039b2572fd5afdd5869a183ff62f49":[1,0,0,0,0,0,5,0,18,45,19],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html#ad1996381d1d5f554d2cf1e3469b7824e":[1,0,0,0,0,0,5,0,18,45,13],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html#ad2b208e317fe967f9f167a3a57e962d3":[1,0,0,0,0,0,5,0,18,45,21],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html#aff68902024fa694b2609e6992891f010":[1,0,0,0,0,0,5,0,18,45,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1OfficerManagement.html":[1,0,0,0,0,0,5,0,18,46],
@@ -242,12 +249,5 @@ var NAVTREEINDEX66 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidBeltTerrainPlugin.html#ae56495dfb8aa02fdb67395eeddccf264":[1,0,0,0,0,0,5,0,20,0,17],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidBeltTerrainPlugin.html#af3b333d6d8e0362d9fbe3670e0edb55d":[1,0,0,0,0,0,5,0,20,0,7],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidBeltTerrainPlugin.html#af803c834b8990d26bdcd758cda474042":[1,0,0,0,0,0,5,0,20,0,8],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidFieldTerrainPlugin.html":[1,0,0,0,0,0,5,0,20,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidFieldTerrainPlugin.html#a4a35729108cd3233375d8c1eeb7a1acc":[1,0,0,0,0,0,5,0,20,1,5],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidFieldTerrainPlugin.html#a653ac0904db8a8a6fb9dd541b49e846c":[1,0,0,0,0,0,5,0,20,1,3],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidFieldTerrainPlugin.html#a788863d4bb160a3cfc96b3319c07a9be":[1,0,0,0,0,0,5,0,20,1,6],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidFieldTerrainPlugin.html#a78c1306f382a7a72ef8ff4f77fa93097":[1,0,0,0,0,0,5,0,20,1,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidFieldTerrainPlugin.html#a824b8875e7c80e4ba0e1a7f906fae9a2":[1,0,0,0,0,0,5,0,20,1,4],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidFieldTerrainPlugin.html#ac770126167af90c831c856fb4cda6a9d":[1,0,0,0,0,0,5,0,20,1,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidFieldTerrainPlugin.html#adb72c9f6a92548257eb0161b468d423c":[1,0,0,0,0,0,5,0,20,1,1]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1AsteroidFieldTerrainPlugin.html":[1,0,0,0,0,0,5,0,20,1]
 };

@@ -1,5 +1,14 @@
 var NAVTREEINDEX93 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a111063a03ea1749ae12e4acf32d964c8":[1,0,0,0,0,0,0,2,10,152],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a11e1b046a01341e6394aaa6423d9214d":[1,0,0,0,0,0,0,2,10,85],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a12b6abba98638458d9e15e716da4c615":[1,0,0,0,0,0,0,2,10,28],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a137dcd5079befd8bdc68f13bb69fc62d":[1,0,0,0,0,0,0,2,10,149],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a13d0446fb18ba95ea267fb2980bb9dc5":[1,0,0,0,0,0,0,2,10,81],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a14bb858c07fce95211dd58d810f145bf":[1,0,0,0,0,0,0,2,10,67],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a14d5eece2643d5abb69b004a3087172b":[1,0,0,0,0,0,0,2,10,106],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a1600a12ff71770730afea6d2e9c7dded":[1,0,0,0,0,0,0,2,10,148],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a17380de7f1b5fb4891c626cfebd5c1cb":[1,0,0,0,0,0,0,2,10,115],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a18d1abd434129dbbb045f89d8be9e667":[1,0,0,0,0,0,0,2,10,110],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a19226129548405e035e1ac3b2b146e46":[1,0,0,0,0,0,0,2,10,113],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a19ccc20b955536f186c6b948269b916c":[1,0,0,0,0,0,0,2,10,151],
@@ -240,14 +249,5 @@ var NAVTREEINDEX93 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1TransferTotalAPI.html#afde4ecd5c9650cb37b2166c89e92141f":[1,0,0,0,0,0,0,2,25,2],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventManagerAPI.html":[1,0,0,0,0,0,0,3,0],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventManagerAPI.html#a01b851ff5850de5376b87fa7bc5b35e1":[1,0,0,0,0,0,0,3,0,3],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventManagerAPI.html#a086c4057efa0e088fa7919bd733a6b22":[1,0,0,0,0,0,0,3,0,0],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventManagerAPI.html#a26250faff6c3cb3cd7782fb99d59eea3":[1,0,0,0,0,0,0,3,0,5],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventManagerAPI.html#a4da01c26317abdb2dffc512136d8ccd7":[1,0,0,0,0,0,0,3,0,13],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventManagerAPI.html#a6c318f4c2b2d0bcdf73dff72462ec98a":[1,0,0,0,0,0,0,3,0,6],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventManagerAPI.html#a73c1a4317bfacb67b647d510cb123f23":[1,0,0,0,0,0,0,3,0,11],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventManagerAPI.html#a9936f78a80e943d1e9c636f97b619d12":[1,0,0,0,0,0,0,3,0,9],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventManagerAPI.html#a9b38cbfb72f6f6c2f99c48f29f29157e":[1,0,0,0,0,0,0,3,0,12],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventManagerAPI.html#ab065cb102b50e5e176a93d757f9732cb":[1,0,0,0,0,0,0,3,0,1],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventManagerAPI.html#ac09c8ebb510cd81c3822043cf82833cb":[1,0,0,0,0,0,0,3,0,7],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventManagerAPI.html#aca0793603594e956761ad94cd4c83be6":[1,0,0,0,0,0,0,3,0,8]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventManagerAPI.html#a086c4057efa0e088fa7919bd733a6b22":[1,0,0,0,0,0,0,3,0,0]
 };

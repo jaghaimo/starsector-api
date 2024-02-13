@@ -1,5 +1,14 @@
 var NAVTREEINDEX96 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#a9cbf6ad6b7f10d00ccaaf4965ce08424":[1,0,0,0,0,0,1,20,55],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#aa0333a135db2206fb108bad2d89b07bf":[1,0,0,0,0,0,1,20,50],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#aa6a272aa76a6440d90759b03ed1b3675":[1,0,0,0,0,0,1,20,25],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#aaa283975dbf785cf4951e7cb57ff6558":[1,0,0,0,0,0,1,20,37],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#aaa55a06543514e0bb149efbc1ed720f8":[1,0,0,0,0,0,1,20,13],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#aaca8aac21b786af807e5c4bb2ec28a00":[1,0,0,0,0,0,1,20,10],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#aad58bbad15a1cf74cd9203af72f9a2d6":[1,0,0,0,0,0,1,20,5],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#aad8f7fd7197f77548dbe06deb33ae6e6":[1,0,0,0,0,0,1,20,22],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#ab1dc0541432c8885b0e27cca0be945e8":[1,0,0,0,0,0,1,20,31],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#ab3d98b2743650d687698019620984bfe":[1,0,0,0,0,0,1,20,52],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#ab58408bab248af8bd316274802035944":[1,0,0,0,0,0,1,20,43],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#abb979f0f1418d66c9cda24ea40d07861":[1,0,0,0,0,0,1,20,40],
@@ -235,19 +244,10 @@ var NAVTREEINDEX96 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a57e009f27cba2ce407ce6e4d2b824dae":[1,0,0,0,0,0,2,21,114],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a58cc2c27bb4d9426d8d702864e2161a5":[1,0,0,0,0,0,2,21,1],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a5b91c369615df52cb4ba1022062f6deb":[1,0,0,0,0,0,2,21,12],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a5d150a153edd145cd978fa30809c9b80":[1,0,0,0,0,0,2,21,122],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a5d150a153edd145cd978fa30809c9b80":[1,0,0,0,0,0,2,21,123],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a5d5d39f0613358ae46c9a9d95300aebf":[1,0,0,0,0,0,2,21,51],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a5db3f3823a266a3ae9ce3cef953a99e4":[1,0,0,0,0,0,2,21,120],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a5dec6c93a6d58f61bf11421a3ac14151":[1,0,0,0,0,0,2,21,106],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a60649e050de9d51c76fb67a67af09ec4":[1,0,0,0,0,0,2,21,83],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a650938d5f3df263d9153efd9a0007495":[1,0,0,0,0,0,2,21,117],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a655a85a21afd6bbda5429f7f5ee7f8ed":[1,0,0,0,0,0,2,21,86],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a657fb527cfe423d41fbf3d1610371035":[1,0,0,0,0,0,2,21,73],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a65c9c2ad56f69182dae6a8f9ca5c9ae0":[1,0,0,0,0,0,2,21,37],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a6965250e8f607a78de4c3844e637fe4f":[1,0,0,0,0,0,2,21,98],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a6de6c46a1e2d445391c6e639ffe47822":[1,0,0,0,0,0,2,21,89],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a6e46f8407b2e3a3b6547356141376a03":[1,0,0,0,0,0,2,21,52],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a70c69a7158313918839ac469ede1ad29":[1,0,0,0,0,0,2,21,94],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a73835dad9784851765db1d471d60fc27":[1,0,0,0,0,0,2,21,62],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a73f55723716f0e2e33f8bab543bd2b63":[1,0,0,0,0,0,2,21,17],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a757e418d20ebc001bab228ea7ec935be":[1,0,0,0,0,0,2,21,64]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a650938d5f3df263d9153efd9a0007495":[1,0,0,0,0,0,2,21,117]
 };

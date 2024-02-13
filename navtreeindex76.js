@@ -1,5 +1,12 @@
 var NAVTREEINDEX76 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1BarEventSpec.html#a92d824796662cb494cf0ce6b6ed8e361":[1,0,0,0,0,0,7,1,8],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1BarEventSpec.html#aa305de55db52dc01b6a3808aa458614e":[1,0,0,0,0,0,7,1,24],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1BarEventSpec.html#aa7b333b5d47cc6b68e44ef813b522dea":[1,0,0,0,0,0,7,1,4],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1BarEventSpec.html#aadd9567f0be21455260eaf61264f190d":[1,0,0,0,0,0,7,1,15],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1BarEventSpec.html#ac2840500db5aa1a8bc37ec493ec217e1":[1,0,0,0,0,0,7,1,16],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1BarEventSpec.html#ac8471e169b055d46c14b586de39be726":[1,0,0,0,0,0,7,1,25],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1BarEventSpec.html#acc50e3b94dd1a9d0bf88c311cf0ac463":[1,0,0,0,0,0,7,1,23],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1BarEventSpec.html#ad57a7b64f5c03c5349348df59cbb54f7":[1,0,0,0,0,0,7,1,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1BarEventSpec.html#ad78ec04609f09a73e3258f10eb027218":[1,0,0,0,0,0,7,1,22],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1BarEventSpec.html#ad9a90fea57de150bf3cd50da44333faf":[1,0,0,0,0,0,7,1,14],
@@ -242,12 +249,5 @@ var NAVTREEINDEX76 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#a6c292022bfa0ce9f662c2a39e8dd42d9":[1,0,0,0,0,0,9,0,1,41],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#a6d263c82cca979ca71fb31340ace30fe":[1,0,0,0,0,0,9,0,1,47],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#a6d4d9eba62bdbeebeb95d20bac782714":[1,0,0,0,0,0,9,0,1,45],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#a717f75b3de306ba0f764b6249143740d":[1,0,0,0,0,0,9,0,1,15],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#a783a573825293dd98974485a9209e42c":[1,0,0,0,0,0,9,0,1,25],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#a7d376a4b4685cab6c5e41d51c0eb5174":[1,0,0,0,0,0,9,0,1,67],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#a8001284deb9c22980fde2fe436cb61fd":[1,0,0,0,0,0,9,0,1,66],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#a80887b1454204c4a944964ac27a7692c":[1,0,0,0,0,0,9,0,1,4],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#a83302cd5b3e5858b5958bcb05dd9c85a":[1,0,0,0,0,0,9,0,1,13],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#a85a1ed8ea9104a3df37e9baa4e45d7ef":[1,0,0,0,0,0,9,0,1,51],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#a8d1fe7c3f3a0c59ba2aecabc4d295a83":[1,0,0,0,0,0,9,0,1,19]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#a717f75b3de306ba0f764b6249143740d":[1,0,0,0,0,0,9,0,1,15]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX30 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParams.html#a2df13a2b4e9306ffc9b4b19d795acff3":[1,0,0,0,0,0,5,0,7,16,17],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParams.html#a34aea89c734fd8c20617f2f4c1132b99":[1,0,0,0,0,0,5,0,7,16,12],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParams.html#a3637f1add95f65c7320f8d553813bc34":[1,0,0,0,0,0,5,0,7,16,18],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParams.html#a54a83e45a742fef2baf1c93227f2ddab":[1,0,0,0,0,0,5,0,7,16,9],
@@ -248,6 +249,5 @@ var NAVTREEINDEX30 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1SeededFleetManager.html#a53ae6f211766d43337e07c111d0d4307":[1,0,0,0,0,0,5,0,7,36,7],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1SeededFleetManager.html#a76746093bc93716e3dc026e0c65636eb":[1,0,0,0,0,0,5,0,7,36,9],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1SeededFleetManager.html#a772d9ff1de116afe5068361fa6bf55e7":[1,0,0,0,0,0,5,0,7,36,5],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1SeededFleetManager.html#a82c8b797d110ee1c735e459fa1e1ea62":[1,0,0,0,0,0,5,0,7,36,3],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1SeededFleetManager.html#ab9750740b62b0ed3dca667a79aef1589":[1,0,0,0,0,0,5,0,7,36,0]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1SeededFleetManager.html#a82c8b797d110ee1c735e459fa1e1ea62":[1,0,0,0,0,0,5,0,7,36,3]
 };

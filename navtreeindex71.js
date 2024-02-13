@@ -1,5 +1,12 @@
 var NAVTREEINDEX71 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialRespawnDialogPluginImpl.html#ae23d7dfcd6e0deb56959ad7ad6380d06":[1,0,0,0,0,0,5,0,21,13,7],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialSustainedBurnDialogPluginImpl.html":[1,0,0,0,0,0,5,0,21,14],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialSustainedBurnDialogPluginImpl.html#a05771ab843edae40a21ca4a39cb53023":[1,0,0,0,0,0,5,0,21,14,13],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialSustainedBurnDialogPluginImpl.html#a0961b66192a0e6db439fcddc23e4435d":[1,0,0,0,0,0,5,0,21,14,9],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialSustainedBurnDialogPluginImpl.html#a099e43f33a146670e556e7ac5bddb438":[1,0,0,0,0,0,5,0,21,14,6],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialSustainedBurnDialogPluginImpl.html#a460abc0fd1a9afdb2de59cacca71a3b6":[1,0,0,0,0,0,5,0,21,14,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialSustainedBurnDialogPluginImpl.html#a48652714c54e8aee86d8d7be7ad52807":[1,0,0,0,0,0,5,0,21,14,7],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialSustainedBurnDialogPluginImpl.html#a4ef61068758da30501b54fdb9e86b6f1":[1,0,0,0,0,0,5,0,21,14,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialSustainedBurnDialogPluginImpl.html#a837ec619b9c1b61cdd5a5fd9f7e82fb8":[1,0,0,0,0,0,5,0,21,14,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialSustainedBurnDialogPluginImpl.html#a9e2d7f865d89457a409f6b2efc972a57":[1,0,0,0,0,0,5,0,21,14,11],
@@ -242,12 +249,5 @@ var NAVTREEINDEX71 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamTerrainPlugin2.html#a85976029aa4712975630c79c212e549f":[1,0,0,0,0,0,5,0,22,5,35],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamTerrainPlugin2.html#a889203b45dca75f7224341e9ffd9f883":[1,0,0,0,0,0,5,0,22,5,90],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamTerrainPlugin2.html#a8b15f927871ef6d9b4108c7061e1f155":[1,0,0,0,0,0,5,0,22,5,20],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamTerrainPlugin2.html#a8bcf7d15b6a36bcb9be8159cd13e8e83":[1,0,0,0,0,0,5,0,22,5,61],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamTerrainPlugin2.html#a8eff02225fefed4d4bd8fc0165bdcd61":[1,0,0,0,0,0,5,0,22,5,50],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamTerrainPlugin2.html#a8f59ad85732e6363312d4b861d406c4d":[1,0,0,0,0,0,5,0,22,5,69],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamTerrainPlugin2.html#a8fa6a2eb8316d141ee5530e74fbce8d2":[1,0,0,0,0,0,5,0,22,5,21],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamTerrainPlugin2.html#a936cb2287bc3ef4e546b34bf394843c4":[1,0,0,0,0,0,5,0,22,5,45],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamTerrainPlugin2.html#a96fd24fc9fca56acbe6d326b3b58071d":[1,0,0,0,0,0,5,0,22,5,85],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamTerrainPlugin2.html#aa0735c7c844d3b9c0231ecf97c6821f8":[1,0,0,0,0,0,5,0,22,5,51],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamTerrainPlugin2.html#aa16bfdad7e873ba7dba215597f1e3a14":[1,0,0,0,0,0,5,0,22,5,52]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamTerrainPlugin2.html#a8bcf7d15b6a36bcb9be8159cd13e8e83":[1,0,0,0,0,0,5,0,22,5,61]
 };

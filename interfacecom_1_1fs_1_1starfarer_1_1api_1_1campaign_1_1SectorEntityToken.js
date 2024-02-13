@@ -127,6 +127,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken =
     [ "setMemory", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a221bfcdbfd5bde395a308e23f6cd1ebe", null ],
     [ "setName", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a9059f0979785fd2dba5333236367f3e3", null ],
     [ "setOrbit", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a935dcc6387bfda0c16fc38d31b2cb545", null ],
+    [ "setOrbitFocus", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#af45f3bc14f2067b1439a62aa63b3fea9", null ],
     [ "setSalvageXP", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#abfd637f8dc7d6809283911fba4f0de6e", null ],
     [ "setSensorProfile", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a6546ea589af21b56e05edfd07e5583ba", null ],
     [ "setSensorStrength", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html#a86bfbb297b3fec3fa660ce7bf82cbb6d", null ],

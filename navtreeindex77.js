@@ -1,5 +1,12 @@
 var NAVTREEINDEX77 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#a783a573825293dd98974485a9209e42c":[1,0,0,0,0,0,9,0,1,25],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#a7d376a4b4685cab6c5e41d51c0eb5174":[1,0,0,0,0,0,9,0,1,67],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#a8001284deb9c22980fde2fe436cb61fd":[1,0,0,0,0,0,9,0,1,66],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#a80887b1454204c4a944964ac27a7692c":[1,0,0,0,0,0,9,0,1,4],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#a83302cd5b3e5858b5958bcb05dd9c85a":[1,0,0,0,0,0,9,0,1,13],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#a85a1ed8ea9104a3df37e9baa4e45d7ef":[1,0,0,0,0,0,9,0,1,51],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#a8d1fe7c3f3a0c59ba2aecabc4d295a83":[1,0,0,0,0,0,9,0,1,19],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#a942281998cf3a9d6efc33ae588e24ab8":[1,0,0,0,0,0,9,0,1,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#a962e8e16b22ada1107a75fb9d75c9e03":[1,0,0,0,0,0,9,0,1,31],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#a9a3ea03df4bbc087fb1599432b317aef":[1,0,0,0,0,0,9,0,1,23],
@@ -242,12 +249,5 @@ var NAVTREEINDEX77 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1ColorShifterUtil.html#aa40fc8ec42c17433a634f768fadabdd9":[1,0,0,0,0,0,11,6,9],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1ColorShifterUtil.html#aa6cf1da48ed12073f83fb7ced631eea0":[1,0,0,0,0,0,11,6,13],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1ColorShifterUtil.html#ac9b4fe9331739db389dad887088b817d":[1,0,0,0,0,0,11,6,5],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1ColorShifterUtil.html#ad289ded5914f10ea8c95dee9dd762811":[1,0,0,0,0,0,11,6,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1ColorShifterUtil.html#adc168eb6eda3db72a285018bb9a71dd2":[1,0,0,0,0,0,11,6,8],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1ColorShifterUtil.html#aec4e3e1cd6282e2ca864782f623c98d8":[1,0,0,0,0,0,11,6,12],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1ColorShifterUtil.html#afa056f34b0406a7763036d7fafe36f39":[1,0,0,0,0,0,11,6,11],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CountingMap.html":[1,0,0,0,0,0,11,7],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CountingMap.html#a3606e490b2ff592740335fffc7b9837d":[1,0,0,0,0,0,11,7,6],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CountingMap.html#a59142200b075da3aca674325f638833d":[1,0,0,0,0,0,11,7,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CountingMap.html#a792029273167f21b84b26713ccf73238":[1,0,0,0,0,0,11,7,5]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1ColorShifterUtil.html#ad289ded5914f10ea8c95dee9dd762811":[1,0,0,0,0,0,11,6,0]
 };

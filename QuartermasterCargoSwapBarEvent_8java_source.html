@@ -107,9 +107,9 @@ $(document).ready(function(){initNavTree('QuartermasterCargoSwapBarEvent_8java_s
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> com.fs.starfarer.api.Global;</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> com.fs.starfarer.api.campaign.CargoAPI;</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> com.fs.starfarer.api.campaign.PersonImportance;</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> com.fs.starfarer.api.campaign.TextPanelAPI;</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">import</span> com.fs.starfarer.api.campaign.CargoAPI.CargoItemType;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> com.fs.starfarer.api.campaign.CargoAPI.CargoItemType;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> com.fs.starfarer.api.campaign.PersonImportance;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">import</span> com.fs.starfarer.api.campaign.TextPanelAPI;</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">import</span> com.fs.starfarer.api.campaign.econ.CommoditySpecAPI;</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">import</span> com.fs.starfarer.api.campaign.econ.Industry;</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">import</span> com.fs.starfarer.api.campaign.econ.MarketAPI;</div>
@@ -148,7 +148,7 @@ $(document).ready(function(){initNavTree('QuartermasterCargoSwapBarEvent_8java_s
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        }</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keywordtype">boolean</span> hasMilitaryBase = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordflow">for</span> (Industry ind : <a class="code hl_variable" href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseGetCommodityBarEvent.html#a1931eabc2023e6ba13d6104f2302798a">market</a>.getIndustries()) {</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            <span class="keywordflow">if</span> (ind.getSpec().hasTag(Industries.TAG_MILITARY)) {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            <span class="keywordflow">if</span> (ind.getSpec().hasTag(Industries.TAG_MILITARY) || ind.getSpec().hasTag(Industries.TAG_COMMAND)) {</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                hasMilitaryBase = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            }</div>

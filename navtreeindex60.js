@@ -1,5 +1,11 @@
 var NAVTREEINDEX60 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarSystemGenerator.html#a23228fe02ad34f7766cfc113e57bb1c4":[1,0,0,0,0,0,5,0,15,36,40],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarSystemGenerator.html#a24231a04f6543860d30b6f4db418099e":[1,0,0,0,0,0,5,0,15,36,48],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarSystemGenerator.html#a269d5a6b8a5ec13ce5525f11fdfc40c6":[1,0,0,0,0,0,5,0,15,36,17],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarSystemGenerator.html#a28f011191588e2e2d43827924ec9bfcc":[1,0,0,0,0,0,5,0,15,36,31],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarSystemGenerator.html#a2f4aec729fad697d07139ff91966146e":[1,0,0,0,0,0,5,0,15,36,43],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarSystemGenerator.html#a3256d8ebce5a6f198d1fc5a96af3f7da":[1,0,0,0,0,0,5,0,15,36,12],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarSystemGenerator.html#a34e336e576b932dd8e593b2fbfe2212e":[1,0,0,0,0,0,5,0,15,36,38],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarSystemGenerator.html#a4413b776c73a1581561c3a5d857b095a":[1,0,0,0,0,0,5,0,15,36,53],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarSystemGenerator.html#a45bf0f97b7c306ba78b701e1de60c4be":[1,0,0,0,0,0,5,0,15,36,24],
@@ -243,11 +249,5 @@ var NAVTREEINDEX60 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RouteFleetAssignmentAI.html#aa82616b698530234868369ca601cd1e9":[1,0,0,0,0,0,5,0,15,0,11,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RouteFleetAssignmentAI.html#aaad82c5bb6d65f82dadd4a5372d5ecec":[1,0,0,0,0,0,5,0,15,0,11,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RouteFleetAssignmentAI.html#abcac6650fd0396e7e6d89e079d953ad2":[1,0,0,0,0,0,5,0,15,0,11,9],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RouteFleetAssignmentAI.html#abe2f2dd575e5a04719f49f674414f85a":[1,0,0,0,0,0,5,0,15,0,11,6],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RouteFleetAssignmentAI.html#abf653c704a3cbdc7e0f69c457bb57194":[1,0,0,0,0,0,5,0,15,0,11,7],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RouteFleetAssignmentAI.html#ad90c249d0fc70d1d5048dccbe32c51b2":[1,0,0,0,0,0,5,0,15,0,11,13],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RouteFleetAssignmentAI.html#ada0fc24dfd32c25562ef877ad862f6a2":[1,0,0,0,0,0,5,0,15,0,11,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RuinsFleetRouteManager.html":[1,0,0,0,0,0,5,0,15,0,12],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RuinsFleetRouteManager.html#a1e30fd69a0d56ac83bd17ada77d3fb47":[1,0,0,0,0,0,5,0,15,0,12,4],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RuinsFleetRouteManager.html#a32bbae24e1e48ef874ca4544352ef3bd":[1,0,0,0,0,0,5,0,15,0,12,1]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RouteFleetAssignmentAI.html#abe2f2dd575e5a04719f49f674414f85a":[1,0,0,0,0,0,5,0,15,0,11,6]
 };

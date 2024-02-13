@@ -31,6 +31,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetInteractionDi
     [ "getIntOrNo", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetInteractionDialogPluginImpl.html#a00a06c75faf890eeb0bd0f9e6e5f909e", null ],
     [ "getMemoryMap", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetInteractionDialogPluginImpl.html#ac0fca3929510ce6c402f72944978e77a", null ],
     [ "getNonHostileOtherFaction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetInteractionDialogPluginImpl.html#a524b177cae361f60981e56d79badef5b", null ],
+    [ "getNonHostileOtherFaction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetInteractionDialogPluginImpl.html#a6ee52da5be0c95ee7e6c901c12ea220e", null ],
     [ "getPursuitAvailability", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetInteractionDialogPluginImpl.html#ac91f6d2ea1cfea116e490a46ddc88aea", null ],
     [ "getPursuitCapablePlayerShips", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetInteractionDialogPluginImpl.html#abfba827a87145969a76743108326e6d4", null ],
     [ "getString", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetInteractionDialogPluginImpl.html#a4b317178f66b72b660fadfa1ed5983cb", null ],

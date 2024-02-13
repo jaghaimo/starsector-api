@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['x_0',['x',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1HitArea.html#aa1eae5f40f880881c7f98e02fc82fe1c',1,'com.fs.starfarer.api.impl.campaign.eventide.HitArea.x'],['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Strings.html#a7dbcea6f705beb204c471a13c9eb3914',1,'com.fs.starfarer.api.impl.campaign.ids.Strings.X']]],
+  ['x_0',['x',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Strings.html#a7dbcea6f705beb204c471a13c9eb3914',1,'com.fs.starfarer.api.impl.campaign.ids.Strings.X'],['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1HitArea.html#aa1eae5f40f880881c7f98e02fc82fe1c',1,'com.fs.starfarer.api.impl.campaign.eventide.HitArea.x']]],
   ['x_5fover_5fy_1',['X_OVER_Y',['../enumcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ValueDisplayMode.html#a10fe65153323633703fe6e6c81a93149',1,'com::fs::starfarer::api::ui::ValueDisplayMode']]],
   ['x_5fover_5fy_5fno_5fspaces_2',['X_OVER_Y_NO_SPACES',['../enumcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ValueDisplayMode.html#a7f715c097c84977e54b2815e7eb9bb5c',1,'com::fs::starfarer::api::ui::ValueDisplayMode']]],
   ['xiv_5fpackage_3',['XIV_PACKAGE',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Items.html#a2663e7eff6dc8768fcb480ef160681fa',1,'com::fs::starfarer::api::impl::campaign::ids::Items']]],

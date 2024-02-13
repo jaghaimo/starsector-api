@@ -1,5 +1,6 @@
 var NAVTREEINDEX28 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a1e63b0b9f60a876a974da87de0ddad82":[1,0,0,0,0,0,5,0,6,1,66],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a21aa4fa63dacdbea51db7f48c4461637":[1,0,0,0,0,0,5,0,6,1,53],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a25b301caa8708c6deaf79a365b64a6ae":[1,0,0,0,0,0,5,0,6,1,60],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a3020d01a879fc0b9d383e46f7d9c53bf":[1,0,0,0,0,0,5,0,6,1,13],
@@ -248,6 +249,5 @@ var NAVTREEINDEX28 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TestEvent.html#ab8b87629702a759ceed7ac0859d0032d":[1,0,0,0,0,0,5,0,6,15,9],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TestEvent.html#abaee4547d87e74fb3db876871e58485f":[1,0,0,0,0,0,5,0,6,15,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TestEvent.html#ae347395bcd5a17f76d2eb1cff651927b":[1,0,0,0,0,0,5,0,6,15,3],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TestEvent.html#afdf556761274f1e3b9eefcf4e24d3227":[1,0,0,0,0,0,5,0,6,15,12],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TestEvent.html#aff2a3ccf916a4d51182a7b61d153108e":[1,0,0,0,0,0,5,0,6,15,10]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TestEvent.html#afdf556761274f1e3b9eefcf4e24d3227":[1,0,0,0,0,0,5,0,6,15,12]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX33 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1ZigguratGhostCreator.html":[1,0,0,0,0,0,5,0,8,0,33],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1ZigguratGhostCreator.html#a7d4cd81f9e20da87a5cd62c0cf324601":[1,0,0,0,0,0,5,0,8,0,33,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1ZigguratGhostCreator.html#aba760d44d7891cca0d3d81d90882bd5e":[1,0,0,0,0,0,5,0,8,0,33,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1ZigguratGhostCreator.html#acca0edd73f98cff3cb37dee5208b8d12":[1,0,0,0,0,0,5,0,8,0,33,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX33 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Industries.html":[1,0,0,0,0,0,5,0,10,11],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Items.html":[1,0,0,0,0,0,5,0,10,12],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1MemFlags.html":[1,0,0,0,0,0,5,0,10,13],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Missions.html":[1,0,0,0,0,0,5,0,10,14],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1People.html":[1,0,0,0,0,0,5,0,10,15]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Missions.html":[1,0,0,0,0,0,5,0,10,14]
 };

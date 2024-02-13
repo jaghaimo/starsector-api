@@ -1,5 +1,13 @@
 var NAVTREEINDEX86 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionProductionAPI.html#a1287123a8748a9986d66926423be78e4":[1,0,0,0,0,0,0,58,16],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionProductionAPI.html#a16702a768fc905df53ecaa4469de7afc":[1,0,0,0,0,0,0,58,11],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionProductionAPI.html#a2a7568ff0d969425f94b3a6c4bf59deb":[1,0,0,0,0,0,0,58,4],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionProductionAPI.html#a3ee6ac9da18a2b8265ab226eaeccc65c":[1,0,0,0,0,0,0,58,20],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionProductionAPI.html#a53b9dfb21af5b8e92b034b8f9ceb8525":[1,0,0,0,0,0,0,58,2],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionProductionAPI.html#a64d38556093e1a5311f7e1d282efd8ad":[1,0,0,0,0,0,0,58,15],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionProductionAPI.html#a6d418888a0b6f4758986c38c4c56e13d":[1,0,0,0,0,0,0,58,13],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionProductionAPI.html#a8adc1a3d72ab3c2d9a34ca16f9805516":[1,0,0,0,0,0,0,58,21],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionProductionAPI.html#a8d8c70201976d43a799eaa96f8f9e85d":[1,0,0,0,0,0,0,58,10],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionProductionAPI.html#a8df71d39a3b294aacf1fa3ad0fd2da5f":[1,0,0,0,0,0,0,58,12],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionProductionAPI.html#a8f11c90f705e4b12f33cf28666604326":[1,0,0,0,0,0,0,58,6],
@@ -241,13 +249,5 @@ var NAVTREEINDEX86 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetStubAPI.html#adf6d6a4d48f1d873d988cddced98b0f5":[1,0,0,0,0,0,0,67,16],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetStubAPI.html#ae4be0162ad335e5ea68c00e8ccf3bf5c":[1,0,0,0,0,0,0,67,10],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetStubAPI.html#af8703cc921497222ff43edec6716b664":[1,0,0,0,0,0,0,67,20],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetStubAPI.html#afd8fea70ab6e3c80407a8ea0cd262bb5":[1,0,0,0,0,0,0,67,3],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetStubConverterPlugin.html":[1,0,0,0,0,0,0,68],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetStubConverterPlugin.html#a1ac1417099449774a28193569c3857ef":[1,0,0,0,0,0,0,68,0],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetStubConverterPlugin.html#a3976629ddcd619324d2b1b9bf7fcd501":[1,0,0,0,0,0,0,68,3],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetStubConverterPlugin.html#a429195dd2ff95f988a38867f9fecc71d":[1,0,0,0,0,0,0,68,1],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetStubConverterPlugin.html#aac2377c8b30074bc89e697bdfeca18a5":[1,0,0,0,0,0,0,68,2],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1GenericPluginManagerAPI.html":[1,0,0,0,0,0,0,69],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1GenericPluginManagerAPI.html#a482e669a7a8bcc48dfd26f34a7b0d525":[1,0,0,0,0,0,0,69,5],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1GenericPluginManagerAPI.html#a6030c3ab56f4c4e63228dc84de336475":[1,0,0,0,0,0,0,69,4]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetStubAPI.html#afd8fea70ab6e3c80407a8ea0cd262bb5":[1,0,0,0,0,0,0,67,3]
 };

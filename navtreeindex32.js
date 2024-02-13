@@ -1,5 +1,6 @@
 var NAVTREEINDEX32 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBGoInDirectionWithWobble.html#a62fba4b18aeeda852f420c5fc0900f49":[1,0,0,0,0,0,5,0,8,14,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBGoInDirectionWithWobble.html#a6616ce3d9c308a3728468fb5faee68ad":[1,0,0,0,0,0,5,0,8,14,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBGoInDirectionWithWobble.html#a73c42c85615b21bdf2f7a5827dc667a7":[1,0,0,0,0,0,5,0,8,14,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBGoInDirectionWithWobble.html#a8a97bb9396f3858d2251775f2668573b":[1,0,0,0,0,0,5,0,8,14,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX32 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1TestGhostCreator.html":[1,0,0,0,0,0,5,0,8,0,31],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1TestGhostCreator.html#a5736bde6cd11f00740ed04ea6d2e1f9f":[1,0,0,0,0,0,5,0,8,0,31,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1ZigguratGhost.html":[1,0,0,0,0,0,5,0,8,0,32],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1ZigguratGhost.html#af9fa574f0cf17165bb46b77947de3ff5":[1,0,0,0,0,0,5,0,8,0,32,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1ZigguratGhostCreator.html":[1,0,0,0,0,0,5,0,8,0,33]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1ZigguratGhost.html#af9fa574f0cf17165bb46b77947de3ff5":[1,0,0,0,0,0,5,0,8,0,32,0]
 };

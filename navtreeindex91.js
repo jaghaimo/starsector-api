@@ -1,5 +1,14 @@
 var NAVTREEINDEX91 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1FleetAssignmentDataAPI.html#a3207fac36252178bf33a5deef25961b9":[1,0,0,0,0,0,0,0,4,4],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1FleetAssignmentDataAPI.html#a375050769f57b5d617c461b3267c65ef":[1,0,0,0,0,0,0,0,4,3],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1FleetAssignmentDataAPI.html#a4a2fdceaa514459c0472c1d6f00e1d04":[1,0,0,0,0,0,0,0,4,9],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1FleetAssignmentDataAPI.html#a7141f63e71e4511d199d4d3e31b1efbc":[1,0,0,0,0,0,0,0,4,11],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1FleetAssignmentDataAPI.html#a77209f4c4ff051b924f142b6f94a7ae0":[1,0,0,0,0,0,0,0,4,1],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1FleetAssignmentDataAPI.html#a798cebe891e297ee2bf5164bc6232b7f":[1,0,0,0,0,0,0,0,4,5],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1FleetAssignmentDataAPI.html#a8a920739e994bd2bcecba7f6ce7c2fd1":[1,0,0,0,0,0,0,0,4,0],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1FleetAssignmentDataAPI.html#ad5d7b4e40a85b69877c41561e032e924":[1,0,0,0,0,0,0,0,4,10],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1FleetAssignmentDataAPI.html#ae04165c61d17fe1a9f73084574cab50d":[1,0,0,0,0,0,0,0,4,6],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1FleetAssignmentDataAPI.html#afa2a50aaf19e882892ddee5fcd437c59":[1,0,0,0,0,0,0,0,4,8],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1FleetStubAI.html":[1,0,0,0,0,0,0,0,5],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1FleetStubAI.html#a97e9ae1fbb8e53f1c16c32e1f4cc2abb":[1,0,0,0,0,0,0,0,5,0],
@@ -240,14 +249,5 @@ var NAVTREEINDEX91 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommodityMarketDataAPI.html":[1,0,0,0,0,0,0,2,2],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommodityMarketDataAPI.html#a00b49fe404d2018d4087796f52ddf469":[1,0,0,0,0,0,0,2,2,16],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommodityMarketDataAPI.html#a192c9ca8390216802c7e2054d86ce877":[1,0,0,0,0,0,0,2,2,3],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommodityMarketDataAPI.html#a2397eb4d406a511e6f2d95000de13297":[1,0,0,0,0,0,0,2,2,2],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommodityMarketDataAPI.html#a3633fcc3ad6c8d89e85aa6f51a5dd81f":[1,0,0,0,0,0,0,2,2,10],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommodityMarketDataAPI.html#a45f7bc3d9bc3e5c44b8aee443da116cc":[1,0,0,0,0,0,0,2,2,13],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommodityMarketDataAPI.html#a5be642d82de04c6be4b79e3c4e9356ca":[1,0,0,0,0,0,0,2,2,5],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommodityMarketDataAPI.html#a758dadda9976ce9ab60b8d0946880b4b":[1,0,0,0,0,0,0,2,2,9],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommodityMarketDataAPI.html#a7ac445f5416e51a43fba54f194fe6876":[1,0,0,0,0,0,0,2,2,1],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommodityMarketDataAPI.html#a88890017c900b0ec3df169e0cb07fae4":[1,0,0,0,0,0,0,2,2,8],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommodityMarketDataAPI.html#ab14457e7782e907faaafdd2fab608193":[1,0,0,0,0,0,0,2,2,6],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommodityMarketDataAPI.html#ab19af2d4111027380b61c2aa81b8cc55":[1,0,0,0,0,0,0,2,2,11],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommodityMarketDataAPI.html#ac0f2202d45f9cd084aed0f82d8c66dee":[1,0,0,0,0,0,0,2,2,17]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommodityMarketDataAPI.html#a2397eb4d406a511e6f2d95000de13297":[1,0,0,0,0,0,0,2,2,2]
 };

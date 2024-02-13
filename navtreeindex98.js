@@ -1,5 +1,15 @@
 var NAVTREEINDEX98 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamageAPI.html#a7241c9a9428bc073193aa9106c1fa8aa":[1,0,0,0,0,0,2,31,19],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamageAPI.html#a7b247cc8becb342983611fdd352e9fa9":[1,0,0,0,0,0,2,31,2],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamageAPI.html#a84584a8339b5417b1691159cba666e0e":[1,0,0,0,0,0,2,31,22],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamageAPI.html#a8a585e003ee5369fc8eedf1903d4f117":[1,0,0,0,0,0,2,31,5],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamageAPI.html#aa5bf01e8ef0a3df927add83a45fd49ec":[1,0,0,0,0,0,2,31,18],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamageAPI.html#abc27b6f74ec84094d5d9b1ebe03845a4":[1,0,0,0,0,0,2,31,6],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamageAPI.html#abcf434d5e92f3fa1a2ec30f5cb9087db":[1,0,0,0,0,0,2,31,10],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamageAPI.html#ac3150d4ac2d6e939ae2c8187a2f7cec1":[1,0,0,0,0,0,2,31,8],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamageAPI.html#ac35c77c70c597c3e065bb3ecc5fd631e":[1,0,0,0,0,0,2,31,15],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamageAPI.html#ac99d6c8d919e8b28cdce605f7bcc02a4":[1,0,0,0,0,0,2,31,7],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamageAPI.html#ad8c90c6220ea6b7c224f1cfdcfbf980d":[1,0,0,0,0,0,2,31,23],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamageAPI.html#ada7d57c648b671199f35ac4682c080a8":[1,0,0,0,0,0,2,31,12],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamageAPI.html#adfd7911c8b96f5564896a5ee72b1f7c5":[1,0,0,0,0,0,2,31,20],
@@ -239,15 +249,5 @@ var NAVTREEINDEX98 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#a30324607c3c149314a0169c2fbd531e1":[1,0,0,0,0,0,2,50,26],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#a309cc31e1667f214ae08417192235ec6":[1,0,0,0,0,0,2,50,13],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#a32856dd0ea5f95f874e2b71ad3ef6e4f":[1,0,0,0,0,0,2,50,42],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#a3383014de75d9fa0767a3b0f694e4307":[1,0,0,0,0,0,2,50,37],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#a35fffdb9b711701588a773e2f55382a0":[1,0,0,0,0,0,2,50,62],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#a3723968f18091fb1279396d6d7c6831d":[1,0,0,0,0,0,2,50,21],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#a39cb29af16335e379b04d9fcdd359a19":[1,0,0,0,0,0,2,50,63],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#a3b12ad325edd6d485de4ff107028e6dd":[1,0,0,0,0,0,2,50,52],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#a3e4273bccde2a4eb1bc6c07f72745abf":[1,0,0,0,0,0,2,50,81],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#a402497fed5ac060f07592b3b1b31b5f8":[1,0,0,0,0,0,2,50,57],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#a40a65560a3d75be4ee23822942ecb9b9":[1,0,0,0,0,0,2,50,6],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#a47f82fe7720a411c3ed8fd6c407bf793":[1,0,0,0,0,0,2,50,24],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#a4b06266849a29de52099154a615d48bf":[1,0,0,0,0,0,2,50,55],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#a4cf8f0019025022a924e11447397c81d":[1,0,0,0,0,0,2,50,87]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#a3383014de75d9fa0767a3b0f694e4307":[1,0,0,0,0,0,2,50,37]
 };

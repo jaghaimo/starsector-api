@@ -1,5 +1,12 @@
 var NAVTREEINDEX79 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1ValueShifterUtil.html#a5cc5474924f585d457305d065e0da0d3":[1,0,0,0,0,0,11,36,2],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1ValueShifterUtil.html#a6473be7491ac2a329250c8d75da9c941":[1,0,0,0,0,0,11,36,14],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1ValueShifterUtil.html#a6e9ac2064d94845a6a1abfa197a195f3":[1,0,0,0,0,0,11,36,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1ValueShifterUtil.html#a86f35ff8ac8a30a0f6d08fb43962a77c":[1,0,0,0,0,0,11,36,12],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1ValueShifterUtil.html#aa0636d2220a668f47752a30ec9e9493b":[1,0,0,0,0,0,11,36,11],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1ValueShifterUtil.html#aa0a0f171b1d35fd16751fc9929d4f872":[1,0,0,0,0,0,11,36,16],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1ValueShifterUtil.html#aad5f884f828ea1ea8176a233aed21263":[1,0,0,0,0,0,11,36,8],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1ValueShifterUtil.html#ab5fa4214acf8663538e8e2d2948ed67e":[1,0,0,0,0,0,11,36,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1ValueShifterUtil.html#ae4a7c4af13ad55759c29a6d3aba5a673":[1,0,0,0,0,0,11,36,13],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1ValueShifterUtil.html#afa5c32bd60b7b1314d8f5691993b15d6":[1,0,0,0,0,0,11,36,5],
@@ -242,12 +249,5 @@ var NAVTREEINDEX79 =
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1PriceVariability.html#a3584a7239b32d3ade8925f88d3e5cc41":[1,0,0,0,0,0,0,2,20,5],
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1PriceVariability.html#a714e4eb02fac0f976b00503dc1022646":[1,0,0,0,0,0,0,2,20,7],
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1PriceVariability.html#a715f848f9b8bd141456e2f8fdbb3e9ca":[1,0,0,0,0,0,0,2,20,9],
-"enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1PriceVariability.html#a89520ab05438ddd6eb776c448f3e0406":[1,0,0,0,0,0,0,2,20,2],
-"enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1PriceVariability.html#ab157f8c277deda4efcf710378f69f667":[1,0,0,0,0,0,0,2,20,6],
-"enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1PriceVariability.html#aba75132ce316442db710e03b481584ef":[1,0,0,0,0,0,0,2,20,8],
-"enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1PriceVariability.html#ac58dd9456d4658789b1e21c8bfce8a7b":[1,0,0,0,0,0,0,2,20,3],
-"enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1PriceVariability.html#ad6597bf5c0550dd60c103bfbde377a8c":[1,0,0,0,0,0,0,2,20,1],
-"enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1PriceVariability.html#ade687395d52a0c0738f83cdd906c5f80":[1,0,0,0,0,0,0,2,20,4],
-"enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1PriceVariability.html#aea1f496837ead4ddb979c29351ee6607":[1,0,0,0,0,0,0,2,20,0],
-"enumcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillEffectType.html":[1,0,0,0,0,0,1,23]
+"enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1PriceVariability.html#a89520ab05438ddd6eb776c448f3e0406":[1,0,0,0,0,0,0,2,20,2]
 };

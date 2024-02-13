@@ -1,5 +1,12 @@
 var NAVTREEINDEX69 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#ab9fd07f4b200751e1bab69ca6b2f679c":[1,0,0,0,0,0,5,0,20,24,7],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#abb906f271df0bdf63815df90e1c7505b":[1,0,0,0,0,0,5,0,20,24,4],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#ac835cf12b2d50d6a4a9b8179d4b1bcb2":[1,0,0,0,0,0,5,0,20,24,36],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#ac8457579f128c67774f5d2749d3b39c5":[1,0,0,0,0,0,5,0,20,24,43],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#ac870e775f6c263af776d345af2c3890f":[1,0,0,0,0,0,5,0,20,24,16],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#acb3b86c9eccd19679036da272169e07a":[1,0,0,0,0,0,5,0,20,24,18],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#ad0fe9d2243e4e0fbc6472d1dcca28fb8":[1,0,0,0,0,0,5,0,20,24,19],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#ad2bba42a6e122cabdda380bac44dffc8":[1,0,0,0,0,0,5,0,20,24,39],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#ad9ae09bb5a600712427e1f669d60416c":[1,0,0,0,0,0,5,0,20,24,17],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#ae5a99e98bf427aae7417e16479bebd98":[1,0,0,0,0,0,5,0,20,24,13],
@@ -242,12 +249,5 @@ var NAVTREEINDEX69 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1WavefrontTerrainPlugin.html#a5e8fe838f8dbfa8178be9b647bb28b56":[1,0,0,0,0,0,5,0,20,36,9],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1WavefrontTerrainPlugin.html#a6d012137b640c45d0198bf8d5b112ad3":[1,0,0,0,0,0,5,0,20,36,11],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1WavefrontTerrainPlugin.html#a701f9c06ef1ef7a5dd066764879a746e":[1,0,0,0,0,0,5,0,20,36,3],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1WavefrontTerrainPlugin.html#a7052d69e487e0f052c05695a08e898f0":[1,0,0,0,0,0,5,0,20,36,26],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1WavefrontTerrainPlugin.html#a71996f0f9303a6a1a9f78b48f830306d":[1,0,0,0,0,0,5,0,20,36,38],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1WavefrontTerrainPlugin.html#a831145caf20af382cc7dcbdb4c906739":[1,0,0,0,0,0,5,0,20,36,4],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1WavefrontTerrainPlugin.html#a84c33de72eecf7ddd489bd5e5115d383":[1,0,0,0,0,0,5,0,20,36,30],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1WavefrontTerrainPlugin.html#a8c798ec5b268d95ac85c8379b03ddafe":[1,0,0,0,0,0,5,0,20,36,39],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1WavefrontTerrainPlugin.html#a8d0934f51bbdda6512a04f2683c91b6a":[1,0,0,0,0,0,5,0,20,36,6],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1WavefrontTerrainPlugin.html#a8e6c1d5abcf88d4759351055888a481f":[1,0,0,0,0,0,5,0,20,36,7],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1WavefrontTerrainPlugin.html#a938a6cf9efa584da52007f5ca3e91804":[1,0,0,0,0,0,5,0,20,36,24]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1WavefrontTerrainPlugin.html#a7052d69e487e0f052c05695a08e898f0":[1,0,0,0,0,0,5,0,20,36,26]
 };

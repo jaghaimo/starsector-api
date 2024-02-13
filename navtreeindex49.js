@@ -1,5 +1,10 @@
 var NAVTREEINDEX49 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1PirateRaidAssembleStage2.html#aee9e3232bcb47debee2a40e01f7cd9d4":[1,0,0,0,0,0,5,0,11,9,6,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidAssignmentAI.html":[1,0,0,0,0,0,5,0,11,9,7],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidAssignmentAI.html#a174d5fdaf248b01278968a46d9920a07":[1,0,0,0,0,0,5,0,11,9,7,2],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidAssignmentAI.html#a660abc6acee748d24988e7126ed99840":[1,0,0,0,0,0,5,0,11,9,7,3],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidAssignmentAI.html#a7d1539fda765c08612253e1866357c87":[1,0,0,0,0,0,5,0,11,9,7,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidAssignmentAI.html#a9dadb868197b3efeb36c45fef7b22308":[1,0,0,0,0,0,5,0,11,9,7,6],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidAssignmentAI.html#aa736645411f2d32526909dc2ea147ea6":[1,0,0,0,0,0,5,0,11,9,7,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidAssignmentAI.html#ab826bf29a3d7432cfc8e4f13f9d1b9c0":[1,0,0,0,0,0,5,0,11,9,7,1],
@@ -244,10 +249,5 @@ var NAVTREEINDEX49 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter.html#a179ed1ae5592644d48bc21b6cd6d0d39":[1,0,0,0,0,0,5,0,12,13,31],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter.html#a19e597c90f2370cd5c3abdfa3b67e647":[1,0,0,0,0,0,5,0,12,13,33],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter.html#a1a38f917e89c9326289c5c08c8aef8c8":[1,0,0,0,0,0,5,0,12,13,56],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter.html#a1c1c5c6cbf53089669879903041d25e0":[1,0,0,0,0,0,5,0,12,13,59],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter.html#a1db06970ab4c7678e4ff2f9d23476e73":[1,0,0,0,0,0,5,0,12,13,30],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter.html#a1e6e896b07cef5bc33902c2221eb53e9":[1,0,0,0,0,0,5,0,12,13,53],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter.html#a2327cd16771b5d879176aad4ffeda8aa":[1,0,0,0,0,0,5,0,12,13,16],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter.html#a29890b8e64a8ab3b70b5a1a0f5b1a8ac":[1,0,0,0,0,0,5,0,12,13,5],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter.html#a2a873702650325b9fb953217d79f3ad7":[1,0,0,0,0,0,5,0,12,13,39]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter.html#a1c1c5c6cbf53089669879903041d25e0":[1,0,0,0,0,0,5,0,12,13,59]
 };

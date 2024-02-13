@@ -105,6 +105,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_
     [ "triggerMakeAllFleetFlagsPermanent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#a2fd25593bd1b6b05247d1dac5584f544", null ],
     [ "triggerMakeAlwaysSpreadTOffHostility", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#a12cc0d146896f7a641fd16743eda3a72", null ],
     [ "triggerMakeDiscoverable", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#af73cad7ade5fea400b7923902a7f5c74", null ],
+    [ "triggerMakeEveryoneJoinBattleAgainst", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#a17f0c0508dd4e915ad247131dfe7bb7d", null ],
     [ "triggerMakeFleetAllowDisengage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#a168b54f7ad6156b1d62cf5f7777b1578", null ],
     [ "triggerMakeFleetGoAwayAfterDefeat", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#a15a28c9273cbdd562589b71798fcb86d", null ],
     [ "triggerMakeFleetIgnoredByOtherFleets", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#a6071053da68adec55b3e2995bb7a1a97", null ],

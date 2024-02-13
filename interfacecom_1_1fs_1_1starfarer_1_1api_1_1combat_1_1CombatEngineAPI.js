@@ -120,6 +120,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI =
     [ "spawnEmpArcPierceShields", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a650938d5f3df263d9153efd9a0007495", null ],
     [ "spawnEmpArcVisual", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a07a363bfd1fb86aa1fb5eee4254c1e8b", null ],
     [ "spawnExplosion", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a2fcdcad4a42c4e55081481f992ed206b", null ],
+    [ "spawnMuzzleFlashOrSmoke", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a5db3f3823a266a3ae9ce3cef953a99e4", null ],
     [ "spawnMuzzleFlashOrSmoke", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a8f1e72c4e37454e500ccf742f97bdd21", null ],
     [ "spawnProjectile", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#aaa261c0547c9afe216d2e6cba85533f9", null ],
     [ "spawnProjectile", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a5d150a153edd145cd978fa30809c9b80", null ],

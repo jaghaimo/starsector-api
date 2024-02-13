@@ -1,5 +1,15 @@
 var NAVTREEINDEX109 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonAPI.html#a3645585d6056720bbdb2575d422c1333":[1,0,0,0,0,0,10,2,24],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonAPI.html#a3d2857b566d7add437135a6706a67406":[1,0,0,0,0,0,10,2,10],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonAPI.html#a4b71c19b11f8e55d1ccbf5bb242ddaa2":[1,0,0,0,0,0,10,2,20],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonAPI.html#a4cfbdf89d439ec3733bd6397f2969c37":[1,0,0,0,0,0,10,2,0],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonAPI.html#a4eb8d1da83020bc61b0839424014afc4":[1,0,0,0,0,0,10,2,11],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonAPI.html#a5f143951f72e1c2fbb7fc096dbd2c755":[1,0,0,0,0,0,10,2,16],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonAPI.html#a735d1ae2bbfca71b7b4314ed4bc38f30":[1,0,0,0,0,0,10,2,14],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonAPI.html#a79bb736bdbd08e69fb6306b992dd3a29":[1,0,0,0,0,0,10,2,8],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonAPI.html#a82cf7776883e83366b987a5ef31c0a94":[1,0,0,0,0,0,10,2,21],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonAPI.html#a8a47da8f3b89c775aa40d57b9fed3354":[1,0,0,0,0,0,10,2,30],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonAPI.html#a8d03a7d506dbc555f1feb9d5b9c48428":[1,0,0,0,0,0,10,2,13],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonAPI.html#a8e4ffde376dd898267b605f080dfbe80":[1,0,0,0,0,0,10,2,9],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonAPI.html#a8e7989b5e0aa6b63e98d31c4d94f2e69":[1,0,0,0,0,0,10,2,31],
@@ -239,15 +249,5 @@ var NAVTREEINDEX109 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI.html#a8dfe54caff0e10358eef9139110f2b82":[1,0,0,0,0,0,10,20,69],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI.html#a8e6a5b5c6e48e7490eda2d3df19a6a29":[1,0,0,0,0,0,10,20,84],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI.html#a8e756e7f84ffe52ac5e53e92bd010b73":[1,0,0,0,0,0,10,20,50],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI.html#a8e8933f24336d60d6588f183eedbf210":[1,0,0,0,0,0,10,20,30],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI.html#a8ef417f49a542ba31bd8e4777af5baae":[1,0,0,0,0,0,10,20,135],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI.html#a90d92483862ce0bff8e877563b17519d":[1,0,0,0,0,0,10,20,96],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI.html#a9686f42b10c9374f9f19dad56a7b958a":[1,0,0,0,0,0,10,20,129],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI.html#a9707289c050bee6f5aa570fc25e84d2b":[1,0,0,0,0,0,10,20,117],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI.html#a990a203dd9715c8bb231399f84a50d61":[1,0,0,0,0,0,10,20,108],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI.html#a99da985d5546fd8fbaf007d9dd9b8559":[1,0,0,0,0,0,10,20,85],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI.html#a9a8d0ea97c25efc4930f6315aaf3a6c5":[1,0,0,0,0,0,10,20,43],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI.html#a9aa7095653d9781deb95c4f5013fde2b":[1,0,0,0,0,0,10,20,91],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI.html#a9ca44f1bb32cba41f8d12a0aee256a40":[1,0,0,0,0,0,10,20,158],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI.html#a9d54c37adb912973d0224be5a1548a19":[1,0,0,0,0,0,10,20,44]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI.html#a8e8933f24336d60d6588f183eedbf210":[1,0,0,0,0,0,10,20,30]
 };

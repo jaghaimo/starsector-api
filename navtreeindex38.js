@@ -1,5 +1,6 @@
 var NAVTREEINDEX38 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicCraftBarEvent.html#ab9386c4ac44520cfa5afb3ba05e1c5b2":[1,0,0,0,0,0,5,0,11,0,0,15,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicCraftBarEvent.html#abb5fd3abb5b0fe3a13b1a0b5dc47c6d0":[1,0,0,0,0,0,5,0,11,0,0,15,9],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicCraftBarEvent.html#abddb7a5ad6f4ce62083844f32d72f28c":[1,0,0,0,0,0,5,0,11,0,0,15,14],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicCraftBarEvent.html#aec360988bcf5ddd7d01e346c08829b4d":[1,0,0,0,0,0,5,0,11,0,0,15,13],
@@ -248,6 +249,5 @@ var NAVTREEINDEX38 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#ad97e4cd1f7eba0b1067a7d1a64a45b49":[1,0,0,0,0,0,5,0,11,0,0,32,20],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#adc132a7719aae60085b11e1bcdd349a3":[1,0,0,0,0,0,5,0,11,0,0,32,17],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#aedfbcf0c3ee0d01691eca76897c03c13":[1,0,0,0,0,0,5,0,11,0,0,32,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#af4b32a5604f217d454b885a1360c7d5e":[1,0,0,0,0,0,5,0,11,0,0,32,13],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#afec7f9c41ebe3b6ee228cbadcb3e6aa9":[1,0,0,0,0,0,5,0,11,0,0,32,11]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanBarEvent.html#af4b32a5604f217d454b885a1360c7d5e":[1,0,0,0,0,0,5,0,11,0,0,32,13]
 };

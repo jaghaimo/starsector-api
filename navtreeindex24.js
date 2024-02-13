@@ -1,5 +1,6 @@
 var NAVTREEINDEX24 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1Smuggling.html#a1a51525a19c2571bd99f2d8927385637":[1,0,0,0,0,0,5,0,2,44,6],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1Smuggling.html#a3e2af201414befd1eab846d4565bbf0b":[1,0,0,0,0,0,5,0,2,44,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1Smuggling.html#a6a31e63d858b2be17d8f889247e41a8f":[1,0,0,0,0,0,5,0,2,44,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1Smuggling.html#adf6f4c18d9d2569f7a94d2f374d11703":[1,0,0,0,0,0,5,0,2,44,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX24 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#af9bdec48945d46f8aa36e04865a4a886":[1,0,0,0,0,0,5,0,2,0,0,29],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#afc875ccb2256ce4f0ec00a3d4c2aeead":[1,0,0,0,0,0,5,0,2,0,0,127],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#afed64248c57e6ca8cfe62dacea6336f7":[1,0,0,0,0,0,5,0,2,0,0,65],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#aff1ce3cec1dd926a3be852cd30198290":[1,0,0,0,0,0,5,0,2,0,0,4],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableIndustryItemPlugin.html":[1,0,0,0,0,0,5,0,2,0,1]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#aff1ce3cec1dd926a3be852cd30198290":[1,0,0,0,0,0,5,0,2,0,0,4]
 };

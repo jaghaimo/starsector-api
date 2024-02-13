@@ -1,5 +1,6 @@
 var NAVTREEINDEX22 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a9bcaba561b66f1ebdb2f4a061b2e477d":[1,0,0,0,0,0,5,0,0,9,9],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a9fef09b56f3d65902ca9aab5e8bcb14c":[1,0,0,0,0,0,5,0,0,9,19],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#aadb9d9b1f169c42f8e1becc4c777494c":[1,0,0,0,0,0,5,0,0,9,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#ab23334fb5a6ba37931df1020b522dbfe":[1,0,0,0,0,0,5,0,0,9,7],
@@ -248,6 +249,5 @@ var NAVTREEINDEX22 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseHazardCondition.html#afea021886ed9b7d9dc0faf3e0f027ba0":[1,0,0,0,0,0,5,0,2,3,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin.html":[1,0,0,0,0,0,5,0,2,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin.html#a03337f00657b4f77f368d172f37f6403":[1,0,0,0,0,0,5,0,2,4,13],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin.html#a052748b2937217f493b994ed255b50c7":[1,0,0,0,0,0,5,0,2,4,17],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin.html#a06536345c4ccb9cf0adf76ca9724dd65":[1,0,0,0,0,0,5,0,2,4,2]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin.html#a052748b2937217f493b994ed255b50c7":[1,0,0,0,0,0,5,0,2,4,17]
 };

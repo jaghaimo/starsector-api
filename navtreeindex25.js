@@ -1,5 +1,6 @@
 var NAVTREEINDEX25 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableIndustryItemPlugin.html":[1,0,0,0,0,0,5,0,2,0,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableIndustryItemPlugin.html#a09c39938fd27904cada6aded4f11f546":[1,0,0,0,0,0,5,0,2,0,1,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableIndustryItemPlugin.html#a0fada6b0282161554c819c719ed67d65":[1,0,0,0,0,0,5,0,2,0,1,17],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableIndustryItemPlugin.html#a1b927b664db5d2c9e676feca70fe10ad":[1,0,0,0,0,0,5,0,2,0,1,10],
@@ -248,6 +249,5 @@ var NAVTREEINDEX25 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Mining.html#ac55729990eb0c842d9523928f587010d":[1,0,0,0,0,0,5,0,2,0,18,11],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Mining.html#ac7662a3eae71519f7bdcd6277cb1f911":[1,0,0,0,0,0,5,0,2,0,18,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Mining.html#ae38318e516a87af1307abf6547f31f1e":[1,0,0,0,0,0,5,0,2,0,18,4],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Mining.html#af0d3813858d4715fbd64bc0cf7b1567d":[1,0,0,0,0,0,5,0,2,0,18,12],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1OrbitalStation.html":[1,0,0,0,0,0,5,0,2,0,19]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Mining.html#af0d3813858d4715fbd64bc0cf7b1567d":[1,0,0,0,0,0,5,0,2,0,18,12]
 };

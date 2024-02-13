@@ -1,5 +1,12 @@
 var NAVTREEINDEX68 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1HyperStormBoost.html#a9bcdb9b58b6c5efb6cdb4fed3b0e9944":[1,0,0,0,0,0,5,0,20,19,5],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1HyperStormBoost.html#aa0d2daffa680bba7e7e58c1916957f8b":[1,0,0,0,0,0,5,0,20,19,6],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1HyperStormBoost.html#aa715c9e608db8d2d97627add300a6e2d":[1,0,0,0,0,0,5,0,20,19,2],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1HyperStormBoost.html#adf7f3f2c1de3e3927cc42b2a2d691952":[1,0,0,0,0,0,5,0,20,19,7],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1HyperspaceAbyssPluginImpl.html":[1,0,0,0,0,0,5,0,20,16],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1HyperspaceAbyssPluginImpl.html#a0e18bb91bca7eb6c54ec2d17b9243ba3":[1,0,0,0,0,0,5,0,20,16,7],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1HyperspaceAbyssPluginImpl.html#a428d0254fecaffefe0639853291966e6":[1,0,0,0,0,0,5,0,20,16,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1HyperspaceAbyssPluginImpl.html#a51c6a2a40c43c7fe7ee2254e457ad626":[1,0,0,0,0,0,5,0,20,16,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1HyperspaceAbyssPluginImpl.html#a612db18b14a802ac734dfabb49bd5adf":[1,0,0,0,0,0,5,0,20,16,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1HyperspaceAbyssPluginImpl.html#a6f82b8b36c8718f680152e8a786d2b63":[1,0,0,0,0,0,5,0,20,16,8],
@@ -242,12 +249,5 @@ var NAVTREEINDEX68 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#a9f805e1ea944fe6b33f84e445825224b":[1,0,0,0,0,0,5,0,20,24,12],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#aaf58cf19c0d5bf3388414e9671de33dd":[1,0,0,0,0,0,5,0,20,24,9],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#ab1f75c1f520efa3de5f13c474cc8d22d":[1,0,0,0,0,0,5,0,20,24,15],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#ab60ec19f9d07867d0b25d2a4da74e5de":[1,0,0,0,0,0,5,0,20,24,14],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#ab9fd07f4b200751e1bab69ca6b2f679c":[1,0,0,0,0,0,5,0,20,24,7],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#abb906f271df0bdf63815df90e1c7505b":[1,0,0,0,0,0,5,0,20,24,4],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#ac835cf12b2d50d6a4a9b8179d4b1bcb2":[1,0,0,0,0,0,5,0,20,24,36],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#ac8457579f128c67774f5d2749d3b39c5":[1,0,0,0,0,0,5,0,20,24,43],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#ac870e775f6c263af776d345af2c3890f":[1,0,0,0,0,0,5,0,20,24,16],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#acb3b86c9eccd19679036da272169e07a":[1,0,0,0,0,0,5,0,20,24,18],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#ad0fe9d2243e4e0fbc6472d1dcca28fb8":[1,0,0,0,0,0,5,0,20,24,19]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1PulsarBeamTerrainPlugin.html#ab60ec19f9d07867d0b25d2a4da74e5de":[1,0,0,0,0,0,5,0,20,24,14]
 };

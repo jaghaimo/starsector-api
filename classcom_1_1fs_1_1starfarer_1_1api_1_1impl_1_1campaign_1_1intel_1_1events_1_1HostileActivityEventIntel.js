@@ -45,6 +45,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_
     [ "notifyEnding", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a2e029c82a9aa422ece700c702cb826a2", null ],
     [ "notifyStageReached", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a0fdf9ba7ce2fd731b1d730ca4b6b3e4d", null ],
     [ "readResolve", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#aba70f464171478b1583deba83538b1c3", null ],
+    [ "redoSetupIfNeeded", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a92674d900e850b1dcd53a9827ae7f90d", null ],
     [ "removeActivity", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a7557d2bbe380bfb630303062ca945ce2", null ],
     [ "removeActivityCause", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#aec8a04efd7dc43a392b427d499c20846", null ],
     [ "removeActivityOfClass", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#acdf7ce880e29bcbb8e6205299df94dc6", null ],

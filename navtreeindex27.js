@@ -1,5 +1,6 @@
 var NAVTREEINDEX27 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1StrandedGiveTJScript.html#af66b0330674ef6112749d095cea9d1cd":[1,0,0,0,0,0,5,0,3,18,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1entities_1_1GateHaulerEntityPlugin.html":[1,0,0,0,0,0,5,0,4,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1entities_1_1GateHaulerEntityPlugin.html#a076425ec1f97dbeb179bc704073eb2d5":[1,0,0,0,0,0,5,0,4,0,10],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1entities_1_1GateHaulerEntityPlugin.html#a110f154c98470f2b274feed026305acb":[1,0,0,0,0,0,5,0,4,0,12],
@@ -248,6 +249,5 @@ var NAVTREEINDEX27 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a126ff3cb90aa6aa816b02ff33a9b5269":[1,0,0,0,0,0,5,0,6,1,67],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a17a725700dda52c9cb101d1eeec8a272":[1,0,0,0,0,0,5,0,6,1,59],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a17b8f5cab51c8d3e2ab765b67b4eb391":[1,0,0,0,0,0,5,0,6,1,51],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a1b86b8f81ce7af04ac2e160765bd5bb3":[1,0,0,0,0,0,5,0,6,1,46],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a1e63b0b9f60a876a974da87de0ddad82":[1,0,0,0,0,0,5,0,6,1,66]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html#a1b86b8f81ce7af04ac2e160765bd5bb3":[1,0,0,0,0,0,5,0,6,1,46]
 };

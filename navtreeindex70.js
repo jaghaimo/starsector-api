@@ -1,5 +1,12 @@
 var NAVTREEINDEX70 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1WavefrontTerrainPlugin.html#a71996f0f9303a6a1a9f78b48f830306d":[1,0,0,0,0,0,5,0,20,36,38],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1WavefrontTerrainPlugin.html#a831145caf20af382cc7dcbdb4c906739":[1,0,0,0,0,0,5,0,20,36,4],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1WavefrontTerrainPlugin.html#a84c33de72eecf7ddd489bd5e5115d383":[1,0,0,0,0,0,5,0,20,36,30],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1WavefrontTerrainPlugin.html#a8c798ec5b268d95ac85c8379b03ddafe":[1,0,0,0,0,0,5,0,20,36,39],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1WavefrontTerrainPlugin.html#a8d0934f51bbdda6512a04f2683c91b6a":[1,0,0,0,0,0,5,0,20,36,6],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1WavefrontTerrainPlugin.html#a8e6c1d5abcf88d4759351055888a481f":[1,0,0,0,0,0,5,0,20,36,7],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1WavefrontTerrainPlugin.html#a938a6cf9efa584da52007f5ca3e91804":[1,0,0,0,0,0,5,0,20,36,24],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1WavefrontTerrainPlugin.html#a941c18924a465f1a4ebde6b7c85b8322":[1,0,0,0,0,0,5,0,20,36,18],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1WavefrontTerrainPlugin.html#a96c9e074f2684b68f81042db5ba6d4bb":[1,0,0,0,0,0,5,0,20,36,22],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1WavefrontTerrainPlugin.html#aa4708c08768ae2fc72a7b26d58e6f9fc":[1,0,0,0,0,0,5,0,20,36,16],
@@ -242,12 +249,5 @@ var NAVTREEINDEX70 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialRespawnDialogPluginImpl.html#ab33985a657adee53f3300ec776aba580":[1,0,0,0,0,0,5,0,21,13,8],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialRespawnDialogPluginImpl.html#ac1b325732dae3d9ffa8ab50c542e67d9":[1,0,0,0,0,0,5,0,21,13,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialRespawnDialogPluginImpl.html#ac4603afdaea0e1099ca02763bc669c2d":[1,0,0,0,0,0,5,0,21,13,11],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialRespawnDialogPluginImpl.html#ac695aff4fdbd1d6d6ad034541844d931":[1,0,0,0,0,0,5,0,21,13,10],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialRespawnDialogPluginImpl.html#ae23d7dfcd6e0deb56959ad7ad6380d06":[1,0,0,0,0,0,5,0,21,13,7],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialSustainedBurnDialogPluginImpl.html":[1,0,0,0,0,0,5,0,21,14],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialSustainedBurnDialogPluginImpl.html#a05771ab843edae40a21ca4a39cb53023":[1,0,0,0,0,0,5,0,21,14,13],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialSustainedBurnDialogPluginImpl.html#a0961b66192a0e6db439fcddc23e4435d":[1,0,0,0,0,0,5,0,21,14,9],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialSustainedBurnDialogPluginImpl.html#a099e43f33a146670e556e7ac5bddb438":[1,0,0,0,0,0,5,0,21,14,6],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialSustainedBurnDialogPluginImpl.html#a460abc0fd1a9afdb2de59cacca71a3b6":[1,0,0,0,0,0,5,0,21,14,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialSustainedBurnDialogPluginImpl.html#a48652714c54e8aee86d8d7be7ad52807":[1,0,0,0,0,0,5,0,21,14,7]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialRespawnDialogPluginImpl.html#ac695aff4fdbd1d6d6ad034541844d931":[1,0,0,0,0,0,5,0,21,13,10]
 };

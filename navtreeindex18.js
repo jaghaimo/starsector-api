@@ -248,6 +248,6 @@ var NAVTREEINDEX18 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetEncounterContext.html#afb855a39698e3241ac484a8f3df9a329":[1,0,0,0,0,0,5,0,54,84],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetEncounterContext.html#aff14e6983105183182def17e63e36282":[1,0,0,0,0,0,5,0,54,24],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetInteractionDialogPluginImpl.html":[1,0,0,0,0,0,5,0,55],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetInteractionDialogPluginImpl.html#a00682ba5d1b3222df1018c4e33ffea06":[1,0,0,0,0,0,5,0,55,91],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetInteractionDialogPluginImpl.html#a00682ba5d1b3222df1018c4e33ffea06":[1,0,0,0,0,0,5,0,55,92],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetInteractionDialogPluginImpl.html#a00a06c75faf890eeb0bd0f9e6e5f909e":[1,0,0,0,0,0,5,0,55,28]
 };

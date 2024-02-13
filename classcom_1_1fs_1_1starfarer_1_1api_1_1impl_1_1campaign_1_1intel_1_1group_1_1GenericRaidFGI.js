@@ -5,6 +5,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1
     [ "addBasicDescription", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1GenericRaidFGI.html#a59d0ae640a470c26da5462c94bf82566", null ],
     [ "addNonUpdateBulletPoints", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1GenericRaidFGI.html#a435297ffd15d64eb188380f57c42b304", null ],
     [ "addPayloadActionStatus", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1GenericRaidFGI.html#a3617a2ee9461c911ae8a8b668ffb7c0c", null ],
+    [ "addPostAssessmentSection", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1GenericRaidFGI.html#a59cb13f4d06c2a788fa763b92c331cb0", null ],
     [ "addStatusSection", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1GenericRaidFGI.html#a4cba4e73b1828c26718463d768884e9a", null ],
     [ "addTargetingBulletPoint", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1GenericRaidFGI.html#a5c6f340c01d4cc4c37c709c0ba700680", null ],
     [ "addUpdateBulletPoints", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1GenericRaidFGI.html#aa4fc7c756dbb0b5bfe78900402bf7452", null ],

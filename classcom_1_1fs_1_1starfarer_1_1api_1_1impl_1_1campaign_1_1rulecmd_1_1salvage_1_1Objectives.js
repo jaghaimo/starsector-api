@@ -39,6 +39,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage
     [ "selectWormholeAnchor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a4fa216ec4b253077843590047eef0aeb", null ],
     [ "unhack", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a9a59481cecae777e6b3fab31e946082e", null ],
     [ "updateMemory", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a09b0a0c4b35a5172f74030fa8ade3e61", null ],
+    [ "updateOrbitingEntities", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#a4c184c0fded042b0009a65ef204a16a3", null ],
     [ "dialog", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#ae668dbe3f09f57f41f5a91e79df381ad", null ],
     [ "entity", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#add0e483b32d0317d47548d43f3443b9e", null ],
     [ "entityFaction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1Objectives.html#ac08094c6993905a5e159f7acc5ecab22", null ],

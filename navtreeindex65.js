@@ -1,5 +1,12 @@
 var NAVTREEINDEX65 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1unset.html#aeb6936401143701379f7685ebfb7e4a7":[1,0,0,0,0,0,5,0,16,184,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1unsetAll.html":[1,0,0,0,0,0,5,0,16,185],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1unsetAll.html#af5ecd8c414f5705249ac81ec8029e6f8":[1,0,0,0,0,0,5,0,16,185,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1CommodityStatTracker.html":[1,0,0,0,0,0,5,0,17,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1CommodityStatTracker.html#a01da65281341491489543cb701a093c0":[1,0,0,0,0,0,5,0,17,0,7],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1CommodityStatTracker.html#a0335fc8ec6e07b21bf00183099f09eb6":[1,0,0,0,0,0,5,0,17,0,2],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1CommodityStatTracker.html#a459844f43af37eb17ec3f824c4eb9a47":[1,0,0,0,0,0,5,0,17,0,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1CommodityStatTracker.html#a661798acfa83623f270e0f641d7a37ef":[1,0,0,0,0,0,5,0,17,0,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1CommodityStatTracker.html#a6c322644e6b7dd71ce2f4f6af33d956c":[1,0,0,0,0,0,5,0,17,0,6],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1CommodityStatTracker.html#a816119b502fc806c4d37b5b8c0f78250":[1,0,0,0,0,0,5,0,17,0,4],
@@ -242,12 +249,5 @@ var NAVTREEINDEX65 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html#a52b2d6562d73a6898f9979712fb71378":[1,0,0,0,0,0,5,0,18,45,9],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html#a54bc0352dc8d92dcfc051a988c07a2fe":[1,0,0,0,0,0,5,0,18,45,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html#a6430ef9ce802a241d2da4e748d2e3df2":[1,0,0,0,0,0,5,0,18,45,8],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html#a69bbbbc2a71e7bbd13dd6d68db3dbe97":[1,0,0,0,0,0,5,0,18,45,4],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html#a7bf42320af541d740e2feaabda9ee6e3":[1,0,0,0,0,0,5,0,18,45,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html#a8b4b562d6248ceceebf99a421752a1cd":[1,0,0,0,0,0,5,0,18,45,15],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html#a9705d3cd7d296f35b7f12c0a8a3b5a36":[1,0,0,0,0,0,5,0,18,45,20],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html#aa323f0dff1a745a4ab67ac0732a88f06":[1,0,0,0,0,0,5,0,18,45,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html#abcc946f5e75f9a33933ddac4cb5c908f":[1,0,0,0,0,0,5,0,18,45,10],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html#abf039b2572fd5afdd5869a183ff62f49":[1,0,0,0,0,0,5,0,18,45,19],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html#ad1996381d1d5f554d2cf1e3469b7824e":[1,0,0,0,0,0,5,0,18,45,13]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html#a69bbbbc2a71e7bbd13dd6d68db3dbe97":[1,0,0,0,0,0,5,0,18,45,4]
 };

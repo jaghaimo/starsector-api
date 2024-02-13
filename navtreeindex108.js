@@ -1,5 +1,15 @@
 var NAVTREEINDEX108 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI.html#a79f967b97177a53ce76fbfe0e3f82c15":[1,0,0,0,0,0,7,24,8],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI.html#a7a2662b3f4068da00515e75a83aec019":[1,0,0,0,0,0,7,24,11],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI.html#a877f181a8afd32febe27656980a9b088":[1,0,0,0,0,0,7,24,9],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI.html#a92d4287d558a37c3ae7d07428f21d38e":[1,0,0,0,0,0,7,24,14],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI.html#aa39d7f03385505e361fb4b791a3eac31":[1,0,0,0,0,0,7,24,12],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI.html#aa63b18af95539c6b6777d5af78a33c1d":[1,0,0,0,0,0,7,24,13],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI.html#ac00c64aa92e9ecd1a53d1ee0961eff67":[1,0,0,0,0,0,7,24,5],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI.html#ae3a366bf1d1d57d5f70b7fcf3fc611d1":[1,0,0,0,0,0,7,24,7],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI.html#ae527a3699db762cff4e7b71d5ca74876":[1,0,0,0,0,0,7,24,0],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSlotAPI.html#af055a35cdc22b128079d6abb47dfa380":[1,0,0,0,0,0,7,24,4],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSpecAPI.html":[1,0,0,0,0,0,7,25],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSpecAPI.html#a002c8c4e42e973c53d1a90fd5af50e07":[1,0,0,0,0,0,7,25,56],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSpecAPI.html#a01ab8739ffae7d76cf04dc4e552351e7":[1,0,0,0,0,0,7,25,49],
@@ -239,15 +249,5 @@ var NAVTREEINDEX108 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonAPI.html#a28b6acf2d41afe7500b82b851dc71d3c":[1,0,0,0,0,0,10,2,5],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonAPI.html#a2993a699b7a45be5cb4f0793c86b6419":[1,0,0,0,0,0,10,2,26],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonAPI.html#a32967b5201ad6e68f2d46275c3a536ab":[1,0,0,0,0,0,10,2,12],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonAPI.html#a35080faa571012516fa1b6ad3556ec85":[1,0,0,0,0,0,10,2,2],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonAPI.html#a3645585d6056720bbdb2575d422c1333":[1,0,0,0,0,0,10,2,24],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonAPI.html#a3d2857b566d7add437135a6706a67406":[1,0,0,0,0,0,10,2,10],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonAPI.html#a4b71c19b11f8e55d1ccbf5bb242ddaa2":[1,0,0,0,0,0,10,2,20],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonAPI.html#a4cfbdf89d439ec3733bd6397f2969c37":[1,0,0,0,0,0,10,2,0],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonAPI.html#a4eb8d1da83020bc61b0839424014afc4":[1,0,0,0,0,0,10,2,11],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonAPI.html#a5f143951f72e1c2fbb7fc096dbd2c755":[1,0,0,0,0,0,10,2,16],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonAPI.html#a735d1ae2bbfca71b7b4314ed4bc38f30":[1,0,0,0,0,0,10,2,14],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonAPI.html#a79bb736bdbd08e69fb6306b992dd3a29":[1,0,0,0,0,0,10,2,8],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonAPI.html#a82cf7776883e83366b987a5ef31c0a94":[1,0,0,0,0,0,10,2,21],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonAPI.html#a8a47da8f3b89c775aa40d57b9fed3354":[1,0,0,0,0,0,10,2,30]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonAPI.html#a35080faa571012516fa1b6ad3556ec85":[1,0,0,0,0,0,10,2,2]
 };

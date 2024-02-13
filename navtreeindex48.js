@@ -1,5 +1,10 @@
 var NAVTREEINDEX48 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1TradeFleetDepartureIntel.html#ab64b7fb9e203c24d4040a7f3f5286b76":[1,0,0,0,0,0,5,0,11,7,9,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1TradeFleetDepartureIntel.html#ab701610e463b7d3f69885b37042ebf76":[1,0,0,0,0,0,5,0,11,7,9,11],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1TradeFleetDepartureIntel.html#ab87071bf0e913e42df4b5640083c2476":[1,0,0,0,0,0,5,0,11,7,9,6],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1TradeFleetDepartureIntel.html#ac606e721b39c4266edde59a4f6b2778c":[1,0,0,0,0,0,5,0,11,7,9,27],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1TradeFleetDepartureIntel.html#acc5931a37c289eb40216e7f68f02a3de":[1,0,0,0,0,0,5,0,11,7,9,23],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1TradeFleetDepartureIntel.html#ad748d62f5527413c8c1a28f41d4f4956":[1,0,0,0,0,0,5,0,11,7,9,17],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1TradeFleetDepartureIntel.html#ae031fa8aa66662d06a417d3ab627bad9":[1,0,0,0,0,0,5,0,11,7,9,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1TradeFleetDepartureIntel.html#ae2c73139a8b6a0d84e8b8a0d1001a6a9":[1,0,0,0,0,0,5,0,11,7,9,15],
@@ -244,10 +249,5 @@ var NAVTREEINDEX48 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1PirateRaidAssembleStage.html#ab3be518a39c07a02bce9c6ac1bf49b91":[1,0,0,0,0,0,5,0,11,9,5,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1PirateRaidAssembleStage.html#ac98b133084ada31fb8593436cd98e023":[1,0,0,0,0,0,5,0,11,9,5,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1PirateRaidAssembleStage2.html":[1,0,0,0,0,0,5,0,11,9,6],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1PirateRaidAssembleStage2.html#a98809b7c7b9492438d5ce79e0414ffd9":[1,0,0,0,0,0,5,0,11,9,6,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1PirateRaidAssembleStage2.html#aee9e3232bcb47debee2a40e01f7cd9d4":[1,0,0,0,0,0,5,0,11,9,6,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidAssignmentAI.html":[1,0,0,0,0,0,5,0,11,9,7],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidAssignmentAI.html#a174d5fdaf248b01278968a46d9920a07":[1,0,0,0,0,0,5,0,11,9,7,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidAssignmentAI.html#a660abc6acee748d24988e7126ed99840":[1,0,0,0,0,0,5,0,11,9,7,3],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidAssignmentAI.html#a7d1539fda765c08612253e1866357c87":[1,0,0,0,0,0,5,0,11,9,7,0]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1PirateRaidAssembleStage2.html#a98809b7c7b9492438d5ce79e0414ffd9":[1,0,0,0,0,0,5,0,11,9,6,1]
 };

@@ -1,5 +1,12 @@
 var NAVTREEINDEX75 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DamagedFlightDeck.html":[1,0,0,0,0,0,5,2,14],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DamagedFlightDeck.html#a993ac57c030cdd36f9900cd0d04d6873":[1,0,0,0,0,0,5,2,14,1],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DamagedFlightDeck.html#aef7c5636bf08b06b3dddd15a9a32fbd9":[1,0,0,0,0,0,5,2,14,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DamagedWeaponMounts.html":[1,0,0,0,0,0,5,2,15],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DamagedWeaponMounts.html#a7bd3fc3c46bb81f4d1f3cad8adec743e":[1,0,0,0,0,0,5,2,15,1],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DamagedWeaponMounts.html#ae6c11f619ecbf1fe12fde3b042309d8f":[1,0,0,0,0,0,5,2,15,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DefectiveManufactory.html":[1,0,0,0,0,0,5,2,16],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DefectiveManufactory.html#a2f454a09c439ca24a30505834bbf44a9":[1,0,0,0,0,0,5,2,16,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DefectiveManufactory.html#a53145612312aa3432cbef412fd9ce1f6":[1,0,0,0,0,0,5,2,16,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DefectiveManufactory.html#a8f40be02fb6a927db1c06079b1c3200e":[1,0,0,0,0,0,5,2,16,1],
@@ -242,12 +249,5 @@ var NAVTREEINDEX75 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1BarEventSpec.html#a86e79022f99b52b090de56fd4cf4a6d1":[1,0,0,0,0,0,7,1,34],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1BarEventSpec.html#a8c5effefbf982bcf15c6230b6880ef7d":[1,0,0,0,0,0,7,1,7],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1BarEventSpec.html#a8dd01b16c5753d385fea2ec9d879812f":[1,0,0,0,0,0,7,1,37],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1BarEventSpec.html#a90be0d3642efb57ae7a973d0c1e425c7":[1,0,0,0,0,0,7,1,27],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1BarEventSpec.html#a92d824796662cb494cf0ce6b6ed8e361":[1,0,0,0,0,0,7,1,8],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1BarEventSpec.html#aa305de55db52dc01b6a3808aa458614e":[1,0,0,0,0,0,7,1,24],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1BarEventSpec.html#aa7b333b5d47cc6b68e44ef813b522dea":[1,0,0,0,0,0,7,1,4],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1BarEventSpec.html#aadd9567f0be21455260eaf61264f190d":[1,0,0,0,0,0,7,1,15],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1BarEventSpec.html#ac2840500db5aa1a8bc37ec493ec217e1":[1,0,0,0,0,0,7,1,16],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1BarEventSpec.html#ac8471e169b055d46c14b586de39be726":[1,0,0,0,0,0,7,1,25],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1BarEventSpec.html#acc50e3b94dd1a9d0bf88c311cf0ac463":[1,0,0,0,0,0,7,1,23]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1BarEventSpec.html#a90be0d3642efb57ae7a973d0c1e425c7":[1,0,0,0,0,0,7,1,27]
 };

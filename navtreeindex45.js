@@ -1,5 +1,8 @@
 var NAVTREEINDEX45 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ttcr_1_1TriTachyonCommerceRaiding.html#af2a32b492507b6f19164e982daaaebae":[1,0,0,0,0,0,5,0,11,4,1,0,2],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1BaseFGAction.html":[1,0,0,0,0,0,5,0,11,5,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1BaseFGAction.html#a04e28ef9728abc32b3ebf4b82a985db9":[1,0,0,0,0,0,5,0,11,5,0,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1BaseFGAction.html#a1a61a0babf671833886b408707b7811e":[1,0,0,0,0,0,5,0,11,5,0,15],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1BaseFGAction.html#a1ab7529b74d8360221fdeffcca73afa5":[1,0,0,0,0,0,5,0,11,5,0,11],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1BaseFGAction.html#a1ca244d470d61a100a7b01693b2dddd2":[1,0,0,0,0,0,5,0,11,5,0,16],
@@ -246,8 +249,5 @@ var NAVTREEINDEX45 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1FleetGroupIntel.html#ab79c1eaba6a5ba951a7104aca387954e":[1,0,0,0,0,0,5,0,11,5,10,103],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1FleetGroupIntel.html#aba2f12f87f19713646d5c041232d6e1a":[1,0,0,0,0,0,5,0,11,5,10,113],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1FleetGroupIntel.html#aba79d9f9ad1a0af32b0078a6fdf1270e":[1,0,0,0,0,0,5,0,11,5,10,34],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1FleetGroupIntel.html#abeb071c9479655e02b400ad38f6c1332":[1,0,0,0,0,0,5,0,11,5,10,56],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1FleetGroupIntel.html#ac0c44acd6fc91c87c6c784f31dff8e67":[1,0,0,0,0,0,5,0,11,5,10,11],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1FleetGroupIntel.html#ac280560c5d990b492c94f68f8758c430":[1,0,0,0,0,0,5,0,11,5,10,66],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1FleetGroupIntel.html#ac59f271d666901b55e5268bc3d312897":[1,0,0,0,0,0,5,0,11,5,10,53]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1FleetGroupIntel.html#abeb071c9479655e02b400ad38f6c1332":[1,0,0,0,0,0,5,0,11,5,10,56]
 };

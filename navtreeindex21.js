@@ -1,5 +1,6 @@
 var NAVTREEINDEX21 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a0b2dce178d2bbe6f3a229da1568e74bc":[1,0,0,0,0,0,5,0,0,1,51],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a0b8db0148bbc08fab91904b1d9ec800f":[1,0,0,0,0,0,5,0,0,1,18],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a0f72446d839019d50feb583f4952cbb7":[1,0,0,0,0,0,5,0,0,1,42],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1BaseAbilityPlugin.html#a112bb05ba9c6b8a7b5ab921d0f809ec9":[1,0,0,0,0,0,5,0,0,1,50],
@@ -248,6 +249,5 @@ var NAVTREEINDEX21 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a88018eb5df48546e6515ce50e6e4ab95":[1,0,0,0,0,0,5,0,0,9,6],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a91e5a2b3cf2998a389836a4f8e87ca0a":[1,0,0,0,0,0,5,0,0,9,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a978436d9acd43c30712d5f972a8e9ca1":[1,0,0,0,0,0,5,0,0,9,15],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a9a5cb6be806d7730babcd13bd4370387":[1,0,0,0,0,0,5,0,0,9,8],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a9bcaba561b66f1ebdb2f4a061b2e477d":[1,0,0,0,0,0,5,0,0,9,9]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html#a9a5cb6be806d7730babcd13bd4370387":[1,0,0,0,0,0,5,0,0,9,8]
 };
