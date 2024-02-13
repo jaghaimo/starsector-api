@@ -1180,7 +1180,7 @@ OR
 greetingPirateHostileStronger,OpenCommLink,"$faction.id == pirates
 $entity.isHostile
 $entity.relativeStrength >= 0","$entity.ignorePlayerCommRequests = true 1
-FireAll PopulateOptions","""Attention, prey. You, and all your possessions are now my personal property. Any resisting ship will be disabled, boarded, your officers massacred, and your crew sold as slaves.""
+FireAll PopulateOptions","""Attention, prey. You, and all your possessions are now my personal property. Any resisting ship will be disabled, boarded, and your officers massacred!""
 OR
 ""Surrender yourself and your goods or you'll be taking a very long walk out the airlock once I've claimed your ship.""
 OR
@@ -3350,7 +3350,7 @@ lpp_ending2askWhy:""Why am I receiving this treatment?""",
 lppEnding2AskPilgrim,DialogOptionSelected,$option == lpp_ending2askPilgrim,RemoveOption lpp_ending2askPilgrim,"The Knight looks back at you, half-cape fluttering over carefully secured weaponry, with an expression that yours is a stupid question. The tone of the reply is firmly neutral, however.
 
 ""No, captain. The Reverend Archcurate requested a meeting with you specifically.""",,
-lppEnding2AskWhy,DialogOptionSelected,$option == lpp_ending2askWhy,RemoveOption lpp_ending2askWhy,"""I know not, captain, and could not say"" the Knight says crisply, eyes forward.",,
+lppEnding2AskWhy,DialogOptionSelected,$option == lpp_ending2askWhy,RemoveOption lpp_ending2askWhy,"""I know not, captain, and could not say,"" the Knight says crisply, eyes forward.",,
 lppEnding3,DialogOptionSelected,$option == lpp_ending3,,"You pass through wooden doors and halls carpeted in designs of foliage and fauna, presumably of Old Earth: a fawn, a whale; hawks and dragons circling in a blue sky wreathed with leaves of ivy, oak, and palm.
 
 The Archcurate's office appears relatively austere at first glance, but as your eyes adjust, hand-carved wooden paneling emerges, their faces packed with small plants and figures both human and animal. The room is situated to overlook a private atrium-garden. A shaft of sunlight illuminates flowers and catches the softly trickling drops of a fountain.",lpp_ending4:Continue,
@@ -5113,8 +5113,10 @@ lkeChalcedonGreetAlert,DialogOptionSelected,$option == lke_chalcedonGreetAlert,"
 FireAll LKEChalcedonVIPoptionsHostile","""Captain,"" the voice of your comms officer quietly speaks in your ear, ""They've sent some kind of signal out. Nearby Pather fleets will be alerted to our position.""
 
 You acknowledge the report and turn your attention back to the seething Pather on the comms link.",,
-lkeChalcedonVIPoptsHostile1,LKEChalcedonVIPoptionsHostile,!$madeDemand,,,"lke_chalcedonVIPoptHostileA:""I'm looking for a man named Jethro Bornanew.""",
-lkeChalcedonVIPoptsHostile2,LKEChalcedonVIPoptionsHostile,!$madeDemand,,,"lke_chalcedonVIPoptHostileB:""I'm looking for a Path recruiter.""",
+lkeChalcedonVIPoptsHostile1,LKEChalcedonVIPoptionsHostile,"!$madeDemand
+!$demandedBornanew",,,"lke_chalVIPdemandBornanew:""I'm looking for a man named Jethro Bornanew.""",
+lkeChalcedonVIPoptsHostile2,LKEChalcedonVIPoptionsHostile,"!$madeDemand
+!$demandedRecruiter",,,"lke_chalVIPdemandRecruiter:""I'm looking for a Path recruiter.""",
 lkeChalcedonVIPoptsHostile3,LKEChalcedonVIPoptionsHostile,$madeDemand,FireBest LKEChalcedonCheckThreatRaid,,"lke_chalcedonVIPoptHostileC:""And I shall send my marines to kill and burn if you don't give me what I want.""",
 lkeChalcedonVIPoptsHostile4,LKEChalcedonVIPoptionsHostile,$madeDemand,FireBest LKEChalcedonCheckThreat,,"lke_chalcedonVIPoptHostileD:""And I will bomb your pathetic cult from orbit if I don't get what I want.""",
 lkeChalcedonVIPoptsHostile5,LKEChalcedonVIPoptionsHostile,"!$madeDemand
@@ -8908,7 +8910,7 @@ $beingRepaired = true 5
 FireBest CTapRepairInitiatedText",,100:defaultLeave:Leave,
 cTapRepairInitText,CTapRepairInitiatedText,,,"Your crews finish offloading the raw materials and you send an activation signal to the structure's distributed repair nodes.
 
-There's barely any reaction at first, just a smattering of previous undetected relays pinging one another through the superstructure. Your science officer assures you that the repair rate will increase exponentially, pulling up a display showing the relay pings expanding outward and the energy transmission curve steadily rising. After only minutes, despite little visual change, the overall heat output on sensors has increased dramatically. Whatever is quickening in the heart of this celestial machine...  
+There's barely any reaction at first, just a smattering of previously undetected relays pinging one another through the superstructure. Your science officer assures you that the repair rate will increase exponentially, pulling up a display showing the relay pings expanding outward and the energy transmission curve steadily rising. After only minutes, despite little visual change, the overall heat output on sensors has increased dramatically. Whatever is quickening in the heart of this celestial machine...  
 
 ""Captain,"" your science officer interrupts your thoughts hesitantly, ""We may wish to pull the fleet back by a hundred klicks or so."" You nod and give the order.
 
@@ -10013,7 +10015,7 @@ gaKAReturnToAcademy8b,DialogOptionSelected,$option == gaKA_return8b,,"Now Baird'
 It is a detailed progress report on Gargoyle's activities, including time-tables for decrypting the Kallichore Archive.
 
 ""Sebestyen is more capable than he appears. He is both persistent and meticulous, as you can see.""",gaKA_return9a:Continue,
-gaKAReturnToAcademy9a,DialogOptionSelected,$option == gaKA_return9a,,"She motions at the datapad, ""We should have the Archive decrypted in about a week. The value of this research data is enormous, of course, but we still require the means to put theory to practice. And what that means is Coureuse. ""
+gaKAReturnToAcademy9a,DialogOptionSelected,$option == gaKA_return9a,,"She motions at the datapad, ""We should have the Archive decrypted in about a week. The value of this research data is enormous, of course, but we still require the means to put theory to practice. And that means is Coureuse. ""
 
 ""Hers is not a unique genius, mind you,"" Baird says, with an almost uncharacteristic lack of certainty. ""We could find other candidates to lead the research team, but the study and training... no, my timescale is too short. We need Scylla Coureuse.""",gaKA_return10a:Continue,
 gaKAReturnToAcademy10a,DialogOptionSelected,$option == gaKA_return10a,"$global.gaKA_completed = true
@@ -20978,7 +20980,7 @@ FireAll RDSMadjustOptions",,"mktRaidNonMarket:Consider a ground operation to ret
 rdsm_getAvoidCombat:Drop 10 units of supplies at a nearby location to distract the locals
 defaultLeave:Leave",
 rdsmFinishedRaid,rdsmraidFinished,,"$global.rdsm_gotData = true
-AddTextSmall ""Acquired $rdsm_megacorp datacore"" highlight
+AddTextSmall ""Acquired $rdsm_megacorpName datacore"" highlight
 Call $global.rdsm_ref updateStage
 ShowImageVisual salvor_ruins",Your marines provide security while a small salvage team carefully accesses the $rdsm_megacorpName $rdsm_target and swaps out the specified data core.,rdsm_gotTheCore:Continue,
 rdsmPlanetGetData,DialogOptionSelected,$option == rdsm_get,"$global.rdsm_gotData = true
@@ -21000,7 +21002,7 @@ The landing shuttles glitter with a burst of propulsion then drop in silent form
 
 Within minutes, shuttles report unimpeded landing. Salvor crews deploy immediately through the settling dust cloud, only lightly armed to ensure maximum operational speed.",rdsm_getAvoidCombat2:Continue,
 rdsmPlanetGetDataDistraction2,DialogOptionSelected,$option == rdsm_getAvoidCombat2,"$global.rdsm_gotData = true
-AddTextSmall ""Acquired $rdsm_megacorp datacore"" highlight
+AddTextSmall ""Acquired $rdsm_megacorpName datacore"" highlight
 Call $global.rdsm_ref updateStage","The small salvage team accesses the $rdsm_megacorpName $rdsm_target, cutting through sealed locks and blasting weak points as needed. Their work is sloppy, even crude, compared to your ops chief's usual standards - intentionally so. The physical evidence of your crews' intrusion is meant to appear to be the work of local decivs' random plundering rather than a targeted job.
 
 Objective found, your salvors swap out the specified data core and install the fake. They carefully create the appearance of random tampering, plundering a few obvious modular and interface components that would be of interest to cut-off decivs, then re-dust the scene.
@@ -21020,7 +21022,7 @@ AddTextSmall ""Transferred datacore"" highlight
 Call $global.rdsm_ref updateStage
 FireAll PopulateOptions","$PersonName's eyes light up. ""Excellent work, captain!""
 
-You gives orders for delivery of the core while $heOrShe transfers you your reward.",,
+You give orders for delivery of the core while $heOrShe transfers you your reward.",,
 ,,,,,,
 # RSOM - Raid Secret Outpost Mission,,,,,,# special underworld contact mission
 RSOMblurb,rsom_blurb,,,"""A rival has established a secret outpost to move a large quantity of $rsom_product. I'd like you to ruin their plans for me.""",,
@@ -24273,8 +24275,7 @@ FireAll SDTUPostHyderLies","""Hyder? Leading the Sindrian Diktat?"" He blurts ou
 ""Nonsense, of course. But if she believes there was not another choice that could fit within her peculiar sense of ethics and psychological need for order... placing herself in what she thinks is control... yes, the motive could fit.""
 
 He sighs, looking up. ""Ah, but what this would cost! The question then is how much of the navy will back her - a not insignificant number of that, let us be realistic, rather plebeian force even look up to her. She's 'strict but fair', they say."" He shakes his head, distracted; working out risk analyses for future schemes.",,
-sdtuPostHyderHegemonyOut,DialogOptionSelected,$option == sdtu_postHyderHegemonyOut,"
-","""Fascinating! And what did she say?"" He leans forward, attention focused. ""Did she accept?""","sdtu_postHyderHegemonyOut2:""She didn't really answer. Just something about treason and execution.""
+sdtuPostHyderHegemonyOut,DialogOptionSelected,$option == sdtu_postHyderHegemonyOut,$saidHegemonyOut = true 0,"""Fascinating! And what did she say?"" He leans forward, attention focused. ""Did she accept?""","sdtu_postHyderHegemonyOut2:""She didn't really answer. Just something about treason and execution.""
 sdtu_postHyderLieWantsToDefect:""Yes."" (lie)",
 sdtuPostHyderHegemonyOut2,DialogOptionSelected,$option == sdtu_postHyderHegemonyOut2,"$saidStuff++
 $global.sdtu_toldMacarioHyderWantsToDefect = true
@@ -24994,6 +24995,17 @@ Call $global.sdtu_ref makeMercHostile","Your technology officer nods at the impl
 You have backups of the files made.
 
 Whatever has Macario got his fingers into?",sdtu_debrisDataEnd:Leave,
+sdtuDebrisData4heg,DialogOptionSelected,"$option == sdtu_debrisData4
+$player.fcm_faction == hegemony","Call $global.sdtu_ref makeDerbisUnimportant
+$global.sdtu_deliverNews = true
+Call $global.sdtu_ref updateStage
+unset $global.sdtu_emergencyIntercept","Your technology officer nods at the implication.
+
+""I'll throw the standard breakers at the decrypt job, but it's theoretically impossible it'll crack before the end of the universe. If you want to read these files, we're going to need another way in.""
+
+You have backups of the files made.
+
+Whatever has Macario got his fingers into?",sdtu_debrisDataEnd:Leave,
 sdtuDebrisDataEnd,DialogOptionSelected,$option == sdtu_debrisDataEnd,"Call $global.sdtu_ref resumeMusic
 DismissDialog",,,
 "# SDTU merc fleet, pre-debris",,,,,,
@@ -25188,7 +25200,7 @@ $player.metANHRobedMan = true","The old man looks like a hermit who's been livin
 
 He smiles mysteriously as you approach, and you can see he is accompanied by a mop-haired kid, a youth of not yet 20 cycles.
 
-""I have a feeling that your're not the captain we're looking for,"" he says amiably. ""Your $shipOrFleet is far too large. We seek simple transport, not a warfleet.""
+""I have a feeling that you're not the captain we're looking for,"" he says amiably. ""Your $shipOrFleet is far too large. We seek simple transport, not a warfleet.""
 
 With that, he puts his hands together and gives a nod, almost a bow.",anh_cantinaReturn:Return to the bar,
 anhCantinaAskStart,DialogOptionSelected,$option == anh_cantinaAsk,"BeginConversation robed_man
@@ -26410,7 +26422,7 @@ $personFaction.id == persean
 Commission personCanGiveCommission
 HA_CMD canJoinLeague
 !$player.isLeagueMember",,,"notRH_joinLeague:""I'd like to talk to you about joining the Persean League.""",
-notRH_joinLeagueSel,DialogOptionSelected,$option == notRH_joinLeague,SetEnabled notRH_joinLeague false,"""I see, I see,"" $heOrShe puts his hands together, considering $hisOrHer next words.
+notRH_joinLeagueSel,DialogOptionSelected,$option == notRH_joinLeague,SetEnabled notRH_joinLeague false,"""I see, I see,"" $heOrShe puts $hisOrHer hands together, considering $hisOrHer next words.
 
 ""There's an official process. Find a sponsor, send a delegation to meet the League Council, a question period, a vote."" $HisOrHer eyes turn to you now, somehow meeting yours through the comms. ""But what you're going to want to do is talk to Reynard Hannan. Nothing will move through the League Council unless gens Hannan allows it."" $HisOrHer eyes turn away again, and $heOrShe gives a small shrug.
 
@@ -26495,8 +26507,15 @@ $entity.relativeStrength < 0",$entity.ignorePlayerCommRequests = true 7,"""Conta
 ""We're in the middle of a contract operation. Set to disengage from your $shipOrFleet in three, two...""",cutCommLink:Cut the comm link,
 ,,,,,,
 "# Tri-Tachyon mercenary (Tactistar) attack, fleet conversations",,,,,,
+ttma_commandHail,BeginFleetEncounter,"$TTMA_command score:1100
+HA_CMD updateTTMAData
+$attackReversible
+!$ttma_commandHailedPlayer","HailPlayer
+$ttma_commandHailedPlayer = true 7",,,
 ttma_detachmentCommsNotHostile,OpenCommLink,"$entity.TTMA_fleet score:1000
 !$entity.isHostile",$entity.ignorePlayerCommRequests = true 7,"""Greetings, independent $shipOrFleet,"" the $post says. ""Please be advised to keep course clear of this detachment as we may perform navigational maneuvers.""
+
+""If you have business matters to discuss, please contact Operations Command.""
 
 ""And on behalf of Tactistar,"" $heOrShe adds, ""I would like to wish you a very safe day.""",cutCommLink:Cut the comm link,
 ttma_detachmentCommsHostile,OpenCommLink,"$entity.TTMA_fleet score:1000
@@ -27178,7 +27197,11 @@ sdRaiderCommsAskHow,DialogOptionSelected,$option == sdRaider_askHow,RemoveOption
 ""Now."" $HeOrShe stands stiffly, ""By the authority of the Supreme Executor, I will bomb your pitiable fuel production operation and I will bomb the population of vagabonds, criminals, and degenerates you've gathered to run it; I will leave only ash. Glory to the Sindrian Diktat!""",cutCommLink:Cut the comm link,
 sdRaiderCommsAskCommission,DialogOptionSelected,$option == sdRaider_askCommission,"AdjustRepActivePerson SUSPICIOUS -1
 $option = sdPunEx_sdComReplies 0
-FireBest DialogOptionSelected","""We hear your demand,"" $hisOrHer face is impassive. ""We reject your accusations of piracy and insurrection. We are sworn by sacred oath to bring the Faithful into the protection of the Church of Galactic Redemption. Only death may release a Knight of Ludd from their sacred duty.""",cutCommLink:Cut the comm link,
+FireBest DialogOptionSelected","$HeOrShe looks conflicted, and leans in. ""Perhaps you are not without hope, captain. This demonstration of Diktat power is made because you have dared - however ignorantly, however inadvertently - to interfere with Sindrian exports. Fuel is the heart of Sindria's economy, and your attempts to compete in fuel production are a threat, a hostile act, however feeble."" $HeOrShe pauses to let you consider the depths of your betrayal. ""Now you see, captain.""
+
+$HeOrShe shakes $hisOrHer head, almost regretful. Then speaks loudly, ""I have my orders. And I have the clarity of vision to see my orders carried out to their end, no matter what the cost! If I die, the Sindrian Diktat will live on! Glory to the Supreme Executor!""
+
+The $post is standing and saluting the abstract gaze of Philip Andrada, putting on quite a show for $hisOrHer bridge officers.",cutCommLink:Cut the comm link,
 ,,,,,,
 "# Sindrian Diktat fleet, part of attack force sent to sat-bombard player's fuel production planet",,,,,,
 sdPunExComms,OpenCommLink,$entity.SDPE_fleet score:1000,$entity.ignorePlayerCommRequests = true 7,"After a crackle of static the comms come to shuddering stability. The Sindrian Diktat $post looks upon you imperiously. 
@@ -27207,7 +27230,7 @@ sdPunEx_sayDeal:""Let's talk about this, maybe work out some kind of deal.""
 cutCommLink:Cut the comm link",
 sdPunExSayProfits,DialogOptionSelected,$option == sdPunEx_sayProfits,,"""Of course not,"" $heOrShe says with a look of disgust. ""And of course that is what you'd think - spacers like you have no notion of the honor and glory of the Andradan Movement that gives meaning to history itself!""
 
-""Your scheming attempt to undermine the true expression of Philip Andrada's transcendent  vision will be met by the military might of the Sindrian Diktat.""",cutCommLink:Cut the comm link,
+""Your scheming attempt to undermine the true expression of Philip Andrada's transcendent vision will be met by the military might of the Sindrian Diktat.""",cutCommLink:Cut the comm link,
 sdPunExSayStopMe,DialogOptionSelected,$option == sdPunEx_sayStopMe,,"""I shall bomb your pitiable fuel production operation to dust. I shall bomb your population of vagabonds and criminals to dust. I shall destroy everything that stands against the glory of the Sindrian Diktat!""",cutCommLink:Cut the comm link,
 sdPunExSayDeal,DialogOptionSelected,$option == sdPunEx_sayDeal,,"The Diktat $Post looks appalled, and spits $hisOrHer words. ""There will be no... deal.""
 
@@ -27448,11 +27471,11 @@ hegInvestigatorRefuse,HegInvestigatorOptions,"$entity.relativeStrength >= 0
 !$failedToRefuse",,,"hegInvestigationRefuse:""This is absurd, you have no such authority in this volume!""",
 hegInvestigatorRefusePlayerStronger,HegInvestigatorOptions,$entity.relativeStrength < 0,,,"hegInvestigationStronger:""With that fleet? You're in no position to make demands.""",
 hegInvestigatorQstrongSel,DialogOptionSelected,$option == hegInvestigation_Qstrong,"$askedWhatAbout = true 0
-FireAll HegInvestigatorOptions","""The rogue AI menace, captain,"" $heOrShe says with utter self-assurance. ""Uncontrolled artificial intelligence led to the death of millions of human beings. We won't allow that to happen again.""
+FireAll HegInvestigatorOptions","""The rogue AI menace, captain,"" $heOrShe says with utter self-assurance. ""Uncontrolled artificial intelligence led to the death of billions of human beings. We won't allow that to happen again.""
 
 ""Now,"" $hisOrHer tone grows harsh, ""submit your $shipOrFleet to inspection.""",,
 hegInvestigatorQweakSel,DialogOptionSelected,$option == hegInvestigation_Qweak,"$askedWhatAbout = true 0
-FireAll HegInvestigatorOptions","""The rogue AI menace, captain,"" $heOrShe says, quite earnest and now self-assured. ""Uncontrolled artificial intelligence led to the death of millions of human beings. We cannot allow that to happen again.""
+FireAll HegInvestigatorOptions","""The rogue AI menace, captain,"" $heOrShe says, quite earnest and now self-assured. ""Uncontrolled artificial intelligence led to the death of billions of human beings. We cannot allow that to happen again.""
 
 ""Captain,"" $heOrShe says. ""I have orders to root out these... things. From every crack on every planetary body, from every niche in every ship. I've heard of captains who were paid to smuggle AI cores. And of those who were tricked, whether by an unscrupulous dealer or,"" $hisOrHer voice is almost a whisper, ""perhaps by the core itself, manipulating our comms and banking, somehow.""
 
