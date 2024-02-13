@@ -17,6 +17,7 @@ import com.fs.starfarer.api.impl.campaign.ids.Conditions;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.intel.bases.PirateBaseIntel.PirateBaseTier;
+import com.fs.starfarer.api.impl.campaign.intel.events.PiracyRespiteScript;
 import com.fs.starfarer.api.util.IntervalUtil;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
@@ -99,7 +100,7 @@ public class PlayerRelatedPirateBaseManager implements EveryFrameScript {
 			if (baseCreationTimeout > 0) {
 				baseCreationTimeout--;
 			} else {
-				if (random.nextFloat() > 0.5f) {
+				if (random.nextFloat() > 0.5f && PiracyRespiteScript.get() == null) {
 					addBasesAsNeeded();
 				}
 			}

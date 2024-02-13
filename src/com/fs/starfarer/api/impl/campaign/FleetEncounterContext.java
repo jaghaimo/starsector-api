@@ -2361,8 +2361,8 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 		
 		if (forCargoDrops != null) {
 			salvageRandom = forCargoDrops;
-			handleCargoLooting(recoveredShips, false);
 		}
+		handleCargoLooting(recoveredShips, false);
 		
 		if (resetSalvageRandomTo != null) {
 			salvageRandom = resetSalvageRandomTo;

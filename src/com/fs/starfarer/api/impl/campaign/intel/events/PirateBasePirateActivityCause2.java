@@ -206,6 +206,8 @@ public class PirateBasePirateActivityCause2 extends BaseHostileActivityCause2 {
 	}
 
 	public int getProgress() {
+		if (PirateHostileActivityFactor.isDefeatedLargePirateRaid()) return 0;
+		
 		int total = 0;
 		for (IntelInfoPlugin intel : Global.getSector().getIntelManager().getIntel(PirateBaseIntel.class)) {
 			PirateBaseIntel curr = (PirateBaseIntel) intel;

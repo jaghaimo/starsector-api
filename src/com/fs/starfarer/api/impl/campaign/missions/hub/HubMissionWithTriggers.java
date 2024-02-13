@@ -2640,6 +2640,12 @@ public abstract class HubMissionWithTriggers extends BaseHubMission {
 	public void triggerMakeLowRepImpact() {
 		triggerSetFleetFlagsWithReason(MemFlags.MEMORY_KEY_LOW_REP_IMPACT);
 	}
+	public void triggerMakeEveryoneJoinBattleAgainst() {
+		triggerSetFleetFlagsWithReason(MemFlags.MEMORY_KEY_EVERYONE_JOINS_BATTLE_AGAINST);
+	}
+//	public void triggerMakeNoOneJoinBattleToHelp() {
+//		triggerSetFleetFlagsWithReason(MemFlags.MEMORY_KEY_NO_ONE_JOINTS_BATTLE_TO_HELP);
+//	}
 	public void triggerMakeAlwaysSpreadTOffHostility() {
 		triggerSetFleetFlagsWithReason(MemFlags.SPREAD_TOFF_HOSTILITY_IF_LOW_IMPACT);
 	}

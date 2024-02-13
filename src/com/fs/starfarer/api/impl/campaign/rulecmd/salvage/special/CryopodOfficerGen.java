@@ -220,8 +220,8 @@ public class CryopodOfficerGen {
 		
 		// high-tech, take 1
 		t = new CryopodOfficerTemplate();
-		t.elite.add(Skills.TARGET_ANALYSIS);
 		t.elite.add(Skills.ENERGY_WEAPON_MASTERY);
+		t.base.add(Skills.TARGET_ANALYSIS);
 		t.base.add(Skills.MISSILE_SPECIALIZATION);
 		t.base.add(Skills.ORDNANCE_EXPERTISE);
 		t.base.add(Skills.COMBAT_ENDURANCE);
@@ -229,8 +229,8 @@ public class CryopodOfficerGen {
 		
 		// high-tech, take 2
 		t = new CryopodOfficerTemplate();
-		t.elite.add(Skills.TARGET_ANALYSIS);
 		t.elite.add(Skills.ENERGY_WEAPON_MASTERY);
+		t.base.add(Skills.TARGET_ANALYSIS);
 		t.base.add(Skills.HELMSMANSHIP);
 		t.base.add(Skills.ORDNANCE_EXPERTISE);
 		t.base.add(Skills.COMBAT_ENDURANCE);

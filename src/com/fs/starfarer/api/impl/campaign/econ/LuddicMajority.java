@@ -156,7 +156,7 @@ public class LuddicMajority extends BaseMarketConditionPlugin implements MarketI
 				if (heavy == null) heavy = ind.getCurrentName();
 				hasIndustrial = true;
 			}
-			if (ind.getSpec().hasTag(Industries.TAG_MILITARY)) {
+			if (ind.getSpec().hasTag(Industries.TAG_MILITARY) || ind.getSpec().hasTag(Industries.TAG_COMMAND)) {
 				if (military == null) military = ind.getCurrentName();
 				hasMilitary = true;
 			}
@@ -231,6 +231,7 @@ public class LuddicMajority extends BaseMarketConditionPlugin implements MarketI
 		for (Industry ind : market.getIndustries()) {
 			if (ind.getSpec().hasTag(Industries.TAG_INDUSTRIAL)) return false;
 			if (ind.getSpec().hasTag(Industries.TAG_MILITARY)) return false;
+			if (ind.getSpec().hasTag(Industries.TAG_COMMAND)) return false;
 			
 			hasRural |= ind.getSpec().hasTag(Industries.TAG_RURAL);
 		}

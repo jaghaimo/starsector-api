@@ -2,13 +2,16 @@ package com.fs.starfarer.api.impl.campaign.intel.group;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
+import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Ranks;
 import com.fs.starfarer.api.impl.campaign.ids.Skills;
+import com.fs.starfarer.api.impl.campaign.intel.events.TriTachyonHostileActivityFactor;
 import com.fs.starfarer.api.impl.campaign.missions.FleetCreatorMission;
 import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.FleetQuality;
+import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.IntervalUtil;
 import com.fs.starfarer.api.util.Misc;
 
@@ -191,8 +194,18 @@ public class TTMercenaryAttack extends GenericRaidFGI  {
 		}
 	}
 
-
-	
+	@Override
+	protected void addPostAssessmentSection(TooltipMakerAPI info, float width, float height, float opad) {
+		TTMercenaryAttack attack = TTMercenaryAttack.get();
+		StarSystemAPI target = TriTachyonHostileActivityFactor.getPrimaryTriTachyonSystem();
+		boolean reversible = attack != null && !attack.isSpawning() && !attack.isFailed() &&
+					!attack.isSucceeded() && !attack.isAborted() && !attack.isEnding() && !attack.isEnded() &&
+					target != null;
+		if (reversible) {
+			info.addPara("Mercenary companies are notoriously flexible in their allegiances.", opad, 
+					Misc.getHighlightColor(), "notoriously flexible");
+		}
+	}
 }
 
 

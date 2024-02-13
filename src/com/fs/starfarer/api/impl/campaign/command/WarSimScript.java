@@ -432,13 +432,21 @@ public class WarSimScript implements EveryFrameScript, ObjectiveEventListener {
 	}
 	
 	public static float getEnemyStrength(String factionId, StarSystemAPI system) {
-		return getEnemyStrength(Global.getSector().getFaction(factionId), system);
+		return getEnemyStrength(Global.getSector().getFaction(factionId), system, false);
 	}
 	public static float getEnemyStrength(FactionAPI faction, StarSystemAPI system) {
+		return getEnemyStrength(faction, system, false);
+	}
+	public static float getEnemyStrength(String factionId, StarSystemAPI system, boolean assumeHostileToPlayer) {
+		return getEnemyStrength(Global.getSector().getFaction(factionId), system, assumeHostileToPlayer);
+	}
+	public static float getEnemyStrength(FactionAPI faction, StarSystemAPI system, boolean assumeHostileToPlayer) {
 		float enemyStr = 0;
 		Set<String> seen = new HashSet<String>();
 		for (MarketAPI target : Misc.getMarketsInLocation(system)) {
-			if (!target.getFaction().isHostileTo(faction)) continue;
+			if (!(assumeHostileToPlayer && target.getFaction().isPlayerFaction())) {
+				if (!target.getFaction().isHostileTo(faction)) continue;
+			}
 			
 			if (seen.contains(target.getFactionId())) continue;
 			seen.add(target.getFactionId());

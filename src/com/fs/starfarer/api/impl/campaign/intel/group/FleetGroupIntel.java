@@ -1166,12 +1166,12 @@ public abstract class FleetGroupIntel extends BaseIntelPlugin implements RouteFl
 		addBulletPoints(info, ListInfoMode.IN_DESC);
 	}
 	
-	
 	protected void showMarketsInDanger(TooltipMakerAPI info, float opad, float width, StarSystemAPI system, 
 			List<MarketAPI> targets, String safeStr, String riskStr, String riskStrHighlight) {
+		
 		Color h = Misc.getHighlightColor();
 		float raidStr  = getRoute().getExtra().getStrengthModifiedByDamage();
-		float defenderStr = WarSimScript.getEnemyStrength(getFaction(), system);
+		float defenderStr = WarSimScript.getEnemyStrength(getFaction(), system, isPlayerTargeted());
 		
 		List<MarketAPI> safe = new ArrayList<MarketAPI>();
 		List<MarketAPI> unsafe = new ArrayList<MarketAPI>();
@@ -1206,7 +1206,7 @@ public abstract class FleetGroupIntel extends BaseIntelPlugin implements RouteFl
 	public int getRelativeFGStrength(StarSystemAPI target) {
 		float raidStr  = getRoute().getExtra().getStrengthModifiedByDamage();
 		float defenderStr = 0f;
-		if (target != null) defenderStr = WarSimScript.getEnemyStrength(getFaction(), target);
+		if (target != null) defenderStr = WarSimScript.getEnemyStrength(getFaction(), target, isPlayerTargeted());
 		
 		if (raidStr < defenderStr * 0.75f) {
 			return -1;
@@ -1227,7 +1227,7 @@ public abstract class FleetGroupIntel extends BaseIntelPlugin implements RouteFl
 		
 		float raidStr  = getRoute().getExtra().getStrengthModifiedByDamage();
 		float defenderStr = 0f;
-		if (system != null) defenderStr = WarSimScript.getEnemyStrength(getFaction(), system);
+		if (system != null) defenderStr = WarSimScript.getEnemyStrength(getFaction(), system, isPlayerTargeted());
 		
 		String strDesc = Misc.getStrengthDesc(raidStr);
 		int numFleets = (int) getApproximateNumberOfFleets();
@@ -1291,7 +1291,7 @@ public abstract class FleetGroupIntel extends BaseIntelPlugin implements RouteFl
 		float raidStr  = getRoute().getExtra().getStrengthModifiedByDamage();
 		float defenderStr = 0f;
 		StarSystemAPI system = target.getStarSystem();
-		if (system != null) defenderStr = WarSimScript.getEnemyStrength(getFaction(), system);
+		if (system != null) defenderStr = WarSimScript.getEnemyStrength(getFaction(), system, isPlayerTargeted());
 		
 		defenderStr += WarSimScript.getStationStrength(target.getFaction(), system, target.getPrimaryEntity());
 		

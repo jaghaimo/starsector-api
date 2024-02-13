@@ -345,6 +345,14 @@ public class SindrianDiktatHostileActivityFactor extends BaseHostileActivityFact
 //			Global.getSector().getListenerManager().addListener(this);
 //		}
 		
+//		String key = "$wdfwefwe";
+//		if (!Global.getSector().getMemoryWithoutUpdate().getBoolean(key)) {
+//			MarketAPI target = findExpeditionTarget(intel, null);
+//			MarketAPI source = getSindria(true);
+//			startAttack(source, target, target.getStarSystem(), null, new Random());
+//			Global.getSector().getMemoryWithoutUpdate().set(key, true);
+//		}
+		
 		EventStageData stage = intel.getDataFor(Stage.HA_EVENT);
 		if (stage != null && stage.rollData instanceof HAERandomEventData && 
 				((HAERandomEventData)stage.rollData).factor == this) {

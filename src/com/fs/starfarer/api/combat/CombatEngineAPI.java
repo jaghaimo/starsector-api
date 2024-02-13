@@ -454,6 +454,8 @@ public interface CombatEngineAPI {
 	void setRenderStarfield(boolean renderStarfield);
 
 	void setShipPlayerLastTransferredCommandTo(ShipAPI ship);
+
+	void spawnMuzzleFlashOrSmoke(ShipAPI ship, Vector2f point, WeaponSpecAPI spec, float targetAngle);
 	
 	//float getElapsedInCurrentFrame();
 

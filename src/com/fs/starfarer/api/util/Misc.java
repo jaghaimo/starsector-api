@@ -5192,7 +5192,12 @@ public class Misc {
 	public static int getNumStableLocations(StarSystemAPI system) {
 		int count = system.getEntitiesWithTag(Tags.STABLE_LOCATION).size();
 		count += system.getEntitiesWithTag(Tags.OBJECTIVE).size();
-		
+		for (SectorEntityToken e : system.getJumpPoints()) {
+			if (e instanceof JumpPointAPI) {
+				JumpPointAPI jp = (JumpPointAPI) e;
+				if (jp.isWormhole()) count++;
+			}
+		}
 		return count;
 	}
 

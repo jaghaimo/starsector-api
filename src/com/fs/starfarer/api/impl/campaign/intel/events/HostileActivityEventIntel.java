@@ -1024,6 +1024,9 @@ public class HostileActivityEventIntel extends BaseEventIntel implements Economy
 	
 	@Override
 	public int getMaxMonthlyProgress() {
+		if (Misc.isEasy()) {
+			return Global.getSettings().getInt("ha_maxMonthlyProgressEasy");
+		}
 		return Global.getSettings().getInt("ha_maxMonthlyProgress");
 	}
 	

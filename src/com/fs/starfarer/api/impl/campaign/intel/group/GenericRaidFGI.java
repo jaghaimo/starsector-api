@@ -437,7 +437,12 @@ public class GenericRaidFGI extends FleetGroupIntel {
 								safe, risk, highlight);
 				}
 			}
+			addPostAssessmentSection(info, width, height, opad);
 		}
+	}
+	
+	protected void addPostAssessmentSection(TooltipMakerAPI info, float width, float height, float opad) {
+	
 	}
 	
 	protected String getAssessmentRiskStringOverride() {

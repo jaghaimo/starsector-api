@@ -221,7 +221,7 @@ public class ShipRecoverySpecial extends BaseSalvageSpecial {
 	
 	protected void addStoryOptions() {
 		options.clearOptions();
-		options.addOption("Take a look the chief engineer's report and make a decision", RECOVER);
+		options.addOption("Take a look at the chief engineer's report and make a decision", RECOVER);
 		options.addOption("\"I'll need to consider my options.\"", NOT_NOW);
 		dialog.setOptionColor(RECOVER, Misc.getStoryOptionColor());
 	}

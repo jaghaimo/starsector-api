@@ -222,6 +222,8 @@ public class TriTachyonHostileActivityFactor extends BaseHostileActivityFactor
 		//m.triggerMakeHostile();
 		m.triggerMakeNonHostileToFaction(Factions.TRITACHYON);
 		m.triggerMakeHostileToAllTradeFleets();
+		m.triggerMakeEveryoneJoinBattleAgainst();
+		
 		m.triggerMakeNonHostileToFaction(Factions.PIRATES);
 		m.triggerMakeNoRepImpact();
 		m.triggerFleetAllowLongPursuit();

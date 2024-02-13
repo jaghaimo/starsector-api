@@ -289,6 +289,12 @@ public class HA_CMD extends BaseCommandPlugin {
 			if (!battle.isPlayerInvolved()) return;
 			
 			CampaignFleetAPI station = Misc.getStationFleet(intel.getEntity());
+			if (station == null) return;
+			if (intel.getEntity() == null) return;
+			if (intel.getEntity().getContainingLocation() != fleet.getContainingLocation()) {
+				return;
+			}
+			
 			for (CampaignFleetAPI curr : battle.getNonPlayerSideSnapshot()) {
 				if (!curr.knowsWhoPlayerIs() && curr != station) continue;
 				

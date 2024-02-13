@@ -602,7 +602,12 @@ public class FGRaidAction extends FGDurationAction implements FleetActionDelegat
 			if (data != null) str += data.getStrengthModifiedByDamage();
 		}
 
-		float enemyStr = WarSimScript.getEnemyStrength(intel.getFaction(), params.where);
+		boolean playerTargeted = false;
+		if (intel instanceof GenericRaidFGI) {
+			playerTargeted = ((GenericRaidFGI)intel).getParams().playerTargeted;
+		}
+		
+		float enemyStr = WarSimScript.getEnemyStrength(intel.getFaction(), params.where, playerTargeted);
 		float origStr = str;
 		float strMult = 1f;
 		for (MarketAPI target : Misc.getMarketsInLocation(params.where)) {

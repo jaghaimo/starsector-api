@@ -194,6 +194,9 @@ public class MemFlags {
 	public static final String MEMORY_KEY_LOW_REP_IMPACT = "$lowRepImpact";
 	public static final String MEMORY_KEY_NO_REP_IMPACT = "$noRepImpact";
 	
+	public static final String MEMORY_KEY_EVERYONE_JOINS_BATTLE_AGAINST = "$everyoneJoinsBattleAgainst";
+//	public static final String MEMORY_KEY_NO_ONE_JOINTS_BATTLE_TO_HELP = "noOneJoinsBattleToHelp";
+	
 	public static final String MEMORY_KEY_DO_NOT_SHOW_FLEET_DESC = "$shownFleetDescAlready";
 	public static final String MEMORY_KEY_FORCE_AUTOFIT_ON_NO_AUTOFIT_SHIPS = "$overrideNoAutofit";
 	

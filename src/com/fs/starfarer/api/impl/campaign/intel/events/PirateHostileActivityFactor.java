@@ -43,6 +43,16 @@ public class PirateHostileActivityFactor extends BaseHostileActivityFactor imple
 	public static String RAID_KEY = "$PirateRaid_ref";
 	public static String SMALL_RAID_KEY = "$SmallPirateRaid_ref";
 	
+	public static final String DEFEATED_LARGE_PIRATE_RAID = "$defeatedLargePirateRaid";
+	
+	public static boolean isDefeatedLargePirateRaid() {
+		//if (true) return true;
+		return Global.getSector().getPlayerMemoryWithoutUpdate().getBoolean(DEFEATED_LARGE_PIRATE_RAID);
+	}
+	public static void setDefeatedLargePirateRaid(boolean value) {
+		Global.getSector().getPlayerMemoryWithoutUpdate().set(DEFEATED_LARGE_PIRATE_RAID, value);
+	}
+	
 	
 	public PirateHostileActivityFactor(HostileActivityEventIntel intel) {
 		super(intel);
@@ -114,6 +124,13 @@ public class PirateHostileActivityFactor extends BaseHostileActivityFactor imple
 		return Global.getSector().getFaction(Factions.PIRATES).getBaseUIColor();
 	}
 	
+	@Override
+	public int getMaxNumFleets(StarSystemAPI system) {
+		if (getProgress(intel) <= 0) {
+			return 1;
+		}
+		return super.getMaxNumFleets(system);
+	}
 	
 	public CampaignFleetAPI createFleet(StarSystemAPI system, Random random) {
 		
@@ -131,7 +148,12 @@ public class PirateHostileActivityFactor extends BaseHostileActivityFactor imple
 //		}
 //		int minDiff = Math.max(0, size - 2);
 		
-		int minDiff = Math.round(intel.getMarketPresenceFactor(system) * 6f);
+		float mult = 1f;
+		if (getProgress(intel) <= 0) {
+			mult = 0.5f;
+		}
+		
+		int minDiff = Math.round(intel.getMarketPresenceFactor(system) * 6f * mult);
 		
 		if (difficulty < minDiff) difficulty = minDiff;
 		
@@ -446,6 +468,7 @@ public class PirateHostileActivityFactor extends BaseHostileActivityFactor imple
 	}
 	
 	public void reportFGIAborted(FleetGroupIntel intel) {
+		setDefeatedLargePirateRaid(true);
 		new PiracyRespiteScript();
 	}
 	

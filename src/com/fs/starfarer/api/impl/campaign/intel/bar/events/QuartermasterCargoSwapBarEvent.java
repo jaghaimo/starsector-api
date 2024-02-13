@@ -6,9 +6,9 @@ import java.util.List;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CargoAPI;
+import com.fs.starfarer.api.campaign.CargoAPI.CargoItemType;
 import com.fs.starfarer.api.campaign.PersonImportance;
 import com.fs.starfarer.api.campaign.TextPanelAPI;
-import com.fs.starfarer.api.campaign.CargoAPI.CargoItemType;
 import com.fs.starfarer.api.campaign.econ.CommoditySpecAPI;
 import com.fs.starfarer.api.campaign.econ.Industry;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
@@ -43,7 +43,7 @@ public class QuartermasterCargoSwapBarEvent extends BaseGetCommodityBarEvent {
 		}
 		boolean hasMilitaryBase = false;
 		for (Industry ind : market.getIndustries()) {
-			if (ind.getSpec().hasTag(Industries.TAG_MILITARY)) {
+			if (ind.getSpec().hasTag(Industries.TAG_MILITARY) || ind.getSpec().hasTag(Industries.TAG_COMMAND)) {
 				hasMilitaryBase = true;
 				break;
 			}

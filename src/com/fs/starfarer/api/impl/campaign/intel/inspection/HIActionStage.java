@@ -303,7 +303,7 @@ public class HIActionStage extends ActionStage implements FleetActionDelegate {
 	protected void autoresolve() {
 		float str = WarSimScript.getFactionStrength(intel.getFaction(), target.getStarSystem());
 
-		float enemyStr = WarSimScript.getEnemyStrength(intel.getFaction(), target.getStarSystem());
+		float enemyStr = WarSimScript.getEnemyStrength(intel.getFaction(), target.getStarSystem(), true);
 		
 		
 		boolean hostile = target.getFaction().isHostileTo(intel.getFaction());

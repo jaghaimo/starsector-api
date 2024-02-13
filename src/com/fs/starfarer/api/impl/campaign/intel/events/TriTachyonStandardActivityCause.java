@@ -30,6 +30,21 @@ public class TriTachyonStandardActivityCause extends BaseHostileActivityCause2 {
 	
 	public static float PROD_PROGRESS_MULT = Global.getSettings().getFloat("triTachyonProgressPerUnitProdMult");
 	
+	public static Set<String> COMPETING_COMMODITIES = new LinkedHashSet<String>();
+	static {
+		COMPETING_COMMODITIES.add(Commodities.LUXURY_GOODS);
+		COMPETING_COMMODITIES.add(Commodities.FUEL);
+		COMPETING_COMMODITIES.add(Commodities.DRUGS);
+		COMPETING_COMMODITIES.add(Commodities.ORGANS);
+		COMPETING_COMMODITIES.add(Commodities.HAND_WEAPONS);
+		COMPETING_COMMODITIES.add(Commodities.RARE_ORE);
+		COMPETING_COMMODITIES.add(Commodities.RARE_METALS);
+		COMPETING_COMMODITIES.add(Commodities.HEAVY_MACHINERY);
+		COMPETING_COMMODITIES.add(Commodities.SUPPLIES);
+		COMPETING_COMMODITIES.add(Commodities.VOLATILES);
+		COMPETING_COMMODITIES.add(Commodities.ORGANICS);
+	}
+	
 	public static class CompetitorData {
 		public String commodityId;
 		public CommoditySpecAPI spec;
@@ -92,6 +107,7 @@ public class TriTachyonStandardActivityCause extends BaseHostileActivityCause2 {
 				if (com.isPersonnel()) continue;
 				if (com.getId().equals(Commodities.SHIPS)) continue;
 				if (com.getId().equals(Commodities.SHIP_WEAPONS)) continue;
+				if (!COMPETING_COMMODITIES.contains(com.getId())) continue;
 				int prod = com.getMaxSupply();
 				
 				if (prod >= MIN_TRITACH_PRODUCTION) {

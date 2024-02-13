@@ -2483,7 +2483,12 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 					List<CampaignFleetAPI> otherSide = battle.getOtherSide(side);
 					if (otherSide != null) {
 						boolean knows = battle.knowsWhoPlayerIs(otherSide);
-						boolean lowImpact = context.isLowRepImpact() || context.isNoRepImpact();
+						boolean lowImpact = false;
+						CampaignFleetAPI otherPrimary = battle.getPrimary(otherSide);
+						if (otherPrimary != null) {
+							lowImpact |= otherPrimary.getMemoryWithoutUpdate().getBoolean(MemFlags.MEMORY_KEY_LOW_REP_IMPACT) == true;
+							lowImpact |= otherPrimary.getMemoryWithoutUpdate().getBoolean(MemFlags.MEMORY_KEY_NO_REP_IMPACT) == true;
+						}
 						FactionAPI nonHostile = getNonHostileOtherFaction(otherSide);
 						if (nonHostile != null && knows && !lowImpact && !context.isEngagedInHostilities() &&
 								config.showWarningDialogWhenNotHostile) {
