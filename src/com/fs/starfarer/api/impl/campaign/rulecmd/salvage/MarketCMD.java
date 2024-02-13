@@ -2884,6 +2884,9 @@ public class MarketCMD extends BaseCommandPlugin {
 		applyDefenderIncreaseFromRaid(market);
 		
 		String reason = faction.getDisplayName() + " raid";
+		if (faction.getPersonNamePrefix() != null) {
+			reason = Misc.ucFirst(faction.getPersonNamePrefix()) + " raid";
+		}
 		
 		applyRaidStabiltyPenalty(market, reason, temp.raidMult);
 		Misc.setFlagWithReason(market.getMemoryWithoutUpdate(), MemFlags.RECENTLY_RAIDED, 

@@ -245,7 +245,9 @@ public class GADeliverVIP extends GABaseMission {
 		addNoPenaltyFailureStages(Stage.FAILED_DECIV);
 		
 		// used for generic pirate reaction
-		setGlobalFlag("$gaVIP_workingForKanta", true, Stage.DELIVER_VIP);
+		if (variation == Variation.KANTA) {
+			setGlobalFlag("$gaVIP_workingForKanta", true, Stage.DELIVER_VIP);
+		}
 		
 		makeImportant(destination, "$gaVIP_target", Stage.DELIVER_VIP);
 		

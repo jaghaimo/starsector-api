@@ -93,14 +93,23 @@ public class StandardPerseanLeagueActivityCause extends BaseHostileActivityCause
 		int score = 0;
 		for (MarketAPI market : Misc.getPlayerMarkets(false)) {
 			int size = market.getSize();
+//			if (size <= 4) {
+//				score += size * 2;
+//			} else if (size == 5) {
+//				score += size * 2 + 2;
+//			} else if (size == 6) {
+//				score += size * 2 + 4;
+//			} else {
+//				score += size * 3;
+//			}
 			if (size <= 4) {
-				score += size * 2;
+				score += size;
 			} else if (size == 5) {
-				score += size * 2 + 2;
+				score += size + 2;
 			} else if (size == 6) {
-				score += size * 2 + 4;
+				score += size + 4;
 			} else {
-				score += size * 3;
+				score += size + 6;
 			}
 		}
 		

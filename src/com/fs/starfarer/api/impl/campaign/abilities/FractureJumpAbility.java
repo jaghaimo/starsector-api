@@ -27,11 +27,11 @@ import com.fs.starfarer.api.util.Misc.FleetMemberDamageLevel;
 
 public class FractureJumpAbility extends BaseDurationAbility {
 
-	public static final float CR_COST_MULT = 0.1f;
-	public static final float FUEL_USE_MULT = 1f;
+	public static float CR_COST_MULT = 0.1f;
+	public static float FUEL_USE_MULT = 1f;
 	
 	
-	public static final float NASCENT_JUMP_DIST = 50f;
+	public static float NASCENT_JUMP_DIST = 50f;
 
 	protected boolean canUseToJumpToHyper() {
 		return true;

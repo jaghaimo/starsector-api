@@ -245,6 +245,7 @@ public class Objectives extends BaseCommandPlugin {
 					built.setOrbit(entity.getOrbit().makeCopy());
 				}
 				loc.removeEntity(entity);
+				updateOrbitingEntities(loc, entity, built);
 				
 				built.getMemoryWithoutUpdate().set(MemFlags.RECENTLY_SALVAGED, true, 30f);
 				
@@ -266,6 +267,17 @@ public class Objectives extends BaseCommandPlugin {
 		options.clearOptions();
 		dialog.setPromptText("");
 		
+	}
+	
+	public void updateOrbitingEntities(LocationAPI loc, SectorEntityToken prev, SectorEntityToken built) {
+		if (loc == null) return;
+		for (SectorEntityToken other : loc.getAllEntities()) {
+			if (other == prev) continue;
+			if (other.getOrbit() == null) continue;
+			if (other.getOrbitFocus() == prev) {
+				other.setOrbitFocus(built);
+			}
+		}
 	}
 	
 	public boolean isNonFunctional() {
@@ -366,6 +378,7 @@ public class Objectives extends BaseCommandPlugin {
 		}
 		built.setLocation(entity.getLocation().x, entity.getLocation().y);
 		loc.removeEntity(entity);
+		updateOrbitingEntities(loc, entity, built);
 		
 		//entity.setContainingLocation(null);
 		built.getMemoryWithoutUpdate().set("$originalStableLocation", entity);

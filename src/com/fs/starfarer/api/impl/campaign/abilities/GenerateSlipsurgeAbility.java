@@ -519,7 +519,7 @@ public class GenerateSlipsurgeAbility extends DurationAbilityWithCost2 {
 			
 		// some of the other factors: it has "dwarf" or "giant" in the name
 		tooltip.addPara("Overload and modulate the fleet's drive field "
-				+ "to induce an extremly powerful, "
+				+ "to induce an extremely powerful, "
 				+ "short-duration slipstream flowing away from the nearest gravity well, its strength " + extra
 				+ "based on the stellar object's mass, density, and some other poorly-understood factors. "
 				+ "Largely ineffective inside abyssal hyperspace.", pad);

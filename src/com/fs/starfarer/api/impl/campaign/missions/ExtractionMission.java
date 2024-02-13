@@ -182,7 +182,7 @@ public class ExtractionMission extends HubMissionWithBarEvent {
 		connectWithMarketDecivilized(Stage.EXTRACT, Stage.FAILED_DECIV, market);
 		setStageOnMarketDecivilized(Stage.FAILED_DECIV, createdAt);
 		
-		setTimeLimit(Stage.FAILED, MISSION_DAYS, null);
+		setTimeLimit(Stage.FAILED, MISSION_DAYS, null, Stage.RETURN);
 		
 //		int sizeModifier = market.getSize() * 10000;
 //		if (variation == Variation.PIRATE_BASE || variation == Variation.LUDDIC_PATH_BASE) {

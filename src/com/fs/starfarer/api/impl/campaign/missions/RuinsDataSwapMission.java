@@ -3,14 +3,10 @@ package com.fs.starfarer.api.impl.campaign.missions;
 import java.awt.Color;
 
 import com.fs.starfarer.api.campaign.PlanetAPI;
-import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Conditions;
-import com.fs.starfarer.api.impl.campaign.ids.Factions;
-import com.fs.starfarer.api.impl.campaign.ids.FleetTypes;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
-import com.fs.starfarer.api.impl.campaign.missions.SmugglingMission.Stage;
 import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithBarEvent;
 import com.fs.starfarer.api.impl.campaign.missions.hub.ReqMode;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
@@ -95,7 +91,7 @@ public class RuinsDataSwapMission extends HubMissionWithBarEvent {
 		connectWithGlobalFlag(Stage.RETURN, Stage.COMPLETED, "$rdsm_returnedData");
 		
 		setNoAbandon();
-		setTimeLimit(Stage.FAILED, MISSION_DAYS, null);
+		setTimeLimit(Stage.FAILED, MISSION_DAYS, null, Stage.RETURN);
 		
 		setCreditReward(CreditReward.AVERAGE);
 

@@ -408,10 +408,19 @@ public class TriTachyonHostileActivityFactor extends BaseHostileActivityFactor
 		
 		float days = Misc.getDays(amount);
 		recentlyDisrupted.advance(days);
-		
+	
 //		if (!Global.getSector().getListenerManager().hasListener(this)) {
 //			Global.getSector().getListenerManager().addListener(this);
 //		}
+		
+//		System.out.println("LISTENERS:");
+//		for (Object o : Global.getSector().getListenerManager().getListeners(Object.class)) {
+//			System.out.println("Listener: " + o.getClass().getSimpleName() + " [" + o.hashCode() + "]");
+//		}
+//		System.out.println("-----");
+//		System.out.println("-----");
+//		System.out.println("-----");
+//		System.out.println("-----");
 		
 		EventStageData stage = intel.getDataFor(Stage.HA_EVENT);
 		if (stage != null && stage.rollData instanceof HAERandomEventData && 
@@ -453,7 +462,7 @@ public class TriTachyonHostileActivityFactor extends BaseHostileActivityFactor
 		params.makeFleetsHostile = false; // will be made hostile when they arrive, not before
 		params.source = source;
 		
-		params.prepDays = 7f + random.nextFloat() * 7f;
+		params.prepDays = 21f + random.nextFloat() * 7f;
 		params.payloadDays = 27f + 7f * random.nextFloat();
 		
 		params.raidParams.where = target;
@@ -489,7 +498,7 @@ public class TriTachyonHostileActivityFactor extends BaseHostileActivityFactor
 		
 		float f = intel.getMarketPresenceFactor(target);
 		
-		float totalDifficulty = fleetSizeMult * 60f * (0.5f + 0.5f * f);
+		float totalDifficulty = fleetSizeMult * 50f * (0.5f + 0.5f * f);
 
 		totalDifficulty -= 10;
 		params.fleetSizes.add(10); // first size 10 pick becomes the Operational Command

@@ -531,7 +531,7 @@ public class GAAtTheGates extends GABaseMission implements CurrentLocationChange
 		}
 		else if (currentStage == Stage.GO_TO_MAGEC_GATE)
 		{
-			info.addPara("Go to the Magec Gate.", opad);
+			info.addPara("Go to the Magec Gate and jump to Galatia.", opad);
 		}
 		else if (currentStage == Stage.ZAL_TO_GALATIA)
 		{

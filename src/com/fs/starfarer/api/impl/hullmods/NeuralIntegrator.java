@@ -4,17 +4,19 @@ import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.combat.ShipHullSpecAPI.ShipTypeHints;
+import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import com.fs.starfarer.api.util.Misc;
 
 public class NeuralIntegrator extends NeuralInterface {
 
-	public static float DP_INCREASE_PERCENT = 20f;
+	public static float DP_INCREASE_PERCENT = 10f;
 	
 	@Override
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 		super.applyEffectsBeforeShipCreation(hullSize, stats, id);
 		
 		stats.getSuppliesToRecover().modifyPercent(id, DP_INCREASE_PERCENT);
+		stats.getDynamic().getMod(Stats.DEPLOYMENT_POINTS_MOD).modifyPercent(id, DP_INCREASE_PERCENT);
 	}
 
 	public boolean isApplicableToShip(ShipAPI ship) {

@@ -367,7 +367,8 @@ public class GateHaulerIntel extends BaseIntelPlugin {
 					float test = 100f;
 					if (!gateHauler.isInCurrentLocation()) test = 400f;
 					boolean closeEnough = speed < 20f && dist < test + stableLocation.getRadius() + gateHauler.getRadius();
-					if (dist < 500f + stableLocation.getRadius() + gateHauler.getRadius() && elapsedDaysInAction > 50f) {
+					if (dist < 500f + stableLocation.getRadius() + gateHauler.getRadius() + 
+							(elapsedDaysInAction - 50f) * 50f && elapsedDaysInAction > 50f) {
 						closeEnough = true;
 					}
 					if (closeEnough) {

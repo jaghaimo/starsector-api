@@ -15,7 +15,7 @@ import com.fs.starfarer.api.util.Misc.Token;
 /**
  * @author Alex Mosolov
  *
- *	MakeOtherFleetHostile <reason> <true or false>
+ *	MakeOtherFleetHostile <reason> <true or false> <durDays>
  *
  * Copyright 2015 Fractal Softworks, LLC
  */

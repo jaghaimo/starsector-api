@@ -156,6 +156,7 @@ public class EncounterTricksterGhostCreator extends BaseSensorGhostCreator {
 			m.createStandardFleet(difficulty, Factions.LUDDIC_PATH, loc);
 			m.triggerSetStandardAggroPirateFlags();
 			m.triggerFleetAllowLongPursuit();
+			m.triggerFleetPatherNoDefaultTithe();
 			if (intel2 != null && intel2.getMarket() != null) {
 				m.triggerSetFleetMemoryValue(MemFlags.MEMORY_KEY_SOURCE_MARKET, intel2.getMarket().getId());
 			}

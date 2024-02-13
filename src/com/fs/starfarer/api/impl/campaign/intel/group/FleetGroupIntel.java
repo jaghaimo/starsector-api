@@ -285,7 +285,14 @@ public abstract class FleetGroupIntel extends BaseIntelPlugin implements RouteFl
 	
 	protected void pruneDestroyedOrDamagedFleetsAndAbortIfNeeded() {
 		if (isSucceeded()) {
-			return; // already returning at this point
+			List<CampaignFleetAPI> remove = new ArrayList<CampaignFleetAPI>();
+			for (CampaignFleetAPI fleet : fleets) {
+				if (!fleet.isAlive()) {
+					remove.add(fleet);
+				}
+			}
+			fleets.removeAll(remove);
+			return; // already returning at this point, still clean up destroyed fleets though
 		}
 		
 		checkStragglers();

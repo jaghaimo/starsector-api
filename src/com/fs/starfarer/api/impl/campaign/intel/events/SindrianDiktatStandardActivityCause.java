@@ -120,7 +120,7 @@ public class SindrianDiktatStandardActivityCause extends BaseHostileActivityCaus
 						+ "the Diktat's attention.", opad, 
 						h, "Reducing production levels ", "" + MIN_COMPETITOR_PRODUCTION);
 				
-				tooltip.addPara("Knocking the Dikat out of the fuel production game also an option. Much of "
+				tooltip.addPara("Knocking the Dikat out of the fuel production game is also an option. Much of "
 						+ "their fuel production depends on a Domain-era Synchrotron Core installed in "
 						+ "their production facilities on Sindria.", opad,
 						h, "Synchrotron Core");

@@ -219,7 +219,7 @@ public class GateHaulerCMD extends BaseCommandPlugin {
 					info.setParaSmallInsignia();
 					String daysStr = "days";
 					if (days == 1) daysStr = "day";
-					info.addPara("    Etimated gate hauler travel time: %s " + daysStr, 0f, Misc.getHighlightColor(), "" + days);
+					info.addPara("    Estimated gate hauler travel time: %s " + daysStr, 0f, Misc.getHighlightColor(), "" + days);
 				}
 
 				public boolean canConfirmSelection(SectorEntityToken entity) {

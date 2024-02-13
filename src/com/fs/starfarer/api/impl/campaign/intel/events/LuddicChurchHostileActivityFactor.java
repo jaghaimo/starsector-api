@@ -119,7 +119,7 @@ public class LuddicChurchHostileActivityFactor extends BaseHostileActivityFactor
 				tooltip.addPara("A large community of the faithful -"
 						+ " not under their direct control, and with potential to emerge as a major cultural center - "
 						+ "is a growing source of concern to the Church. "
-						+ "\"Protector\" fleets operated by the Knights of Ludd can be found your systems, "
+						+ "\"Protector\" fleets operated by the Knights of Ludd can be found in your systems, "
 						+ "ostensibly there to protect the "
 						+ "interests of the local Luddic population.", 0f);
 			}
@@ -214,12 +214,15 @@ public class LuddicChurchHostileActivityFactor extends BaseHostileActivityFactor
 		
 		small = 8f;
 
-		info.addPara("You've received intel that the Knights of Ludd, under the aegis of the Luddic Church, "
-				+ "are planning an operation to take over one of your colonies that has a substantial "
-				+ "population of the Luddic faithful.",
+		LabelAPI label = info.addPara("You've received intel that the Knights of Ludd, under the aegis of the Luddic Church, "
+				+ "are planning an operation to take over one of your colonies that has a Luddic Majority "
+				+ "population.",
 				small, Misc.getNegativeHighlightColor(), "take over one of your colonies");
+		label.setHighlight("take over one of your colonies", "Luddic Majority");
+		label.setHighlightColors(Misc.getNegativeHighlightColor(),
+				Global.getSector().getFaction(Factions.LUDDIC_CHURCH).getBaseUIColor());
 		
-		LabelAPI label = info.addPara("If the expedition is defeated, the Luddic faithful leaving the Church worlds "
+		label = info.addPara("If the expedition is defeated, the Luddic faithful leaving the Church worlds "
 				+ "will feel more secure, resulting in increased immigration, stability, and productivity, "
 				+ "and the Luddic Church will likely abandon further efforts of this sort.", 
 				opad);

@@ -157,7 +157,7 @@ public class FGTravelAction extends BaseFGAction {
 			
 			if (to.getContainingLocation() == conLoc) {
 				inTo++;
-			} else if (from.getContainingLocation() == conLoc) {
+			} else if (from.getContainingLocation() == conLoc && !conLoc.isHyperspace()) {
 				inFrom++;
 			} else {
 				inHyper++;

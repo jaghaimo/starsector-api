@@ -62,6 +62,7 @@ import com.fs.starfarer.api.impl.campaign.tutorial.TutorialMissionIntel;
 import com.fs.starfarer.api.loading.FighterWingSpecAPI;
 import com.fs.starfarer.api.loading.HullModSpecAPI;
 import com.fs.starfarer.api.loading.VariantSource;
+import com.fs.starfarer.api.loading.WeaponGroupSpec;
 import com.fs.starfarer.api.loading.WeaponSlotAPI;
 import com.fs.starfarer.api.loading.WeaponSpecAPI;
 import com.fs.starfarer.api.util.Misc;
@@ -2196,22 +2197,58 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 		float adjustedFPSalvage = 0;
 		float playerContribMult = computePlayerContribFraction();
 		
+		Random origSalvageRandom = salvageRandom;
+		long extraSeed = 1340234324325L;
+		if (origSalvageRandom != null) extraSeed = origSalvageRandom.nextLong();
+		
 		for (FleetMemberData data : winner.getEnemyCasualties()) {
 			if (data.getStatus() == Status.REPAIRED) {
 				continue;
 			}
+			
+			if (origSalvageRandom != null) {
+				String sig = data.getMember().getHullId();
+				if (data.getMember().getVariant() != null) {
+					for (WeaponGroupSpec spec : data.getMember().getVariant().getWeaponGroups()) {
+						for (String slotId : spec.getSlots()) {
+							String w = data.getMember().getVariant().getWeaponId(slotId);
+							if (w != null) sig += w;
+						}
+					}
+				}
+				if (loser != null && loser.getFleet() != null && loser.getFleet().getFleetData() != null) {
+					List<FleetMemberAPI> members = loser.getFleet().getFleetData().getMembersListCopy();
+					if (members != null) {
+						int index = members.indexOf(data.getMember());
+						if (index >= 0) {
+							sig += "" + index;
+						}
+					}
+				}
+				long seed = sig.hashCode() * 143234234234L * extraSeed;
+				salvageRandom = new Random(seed);
+				//System.out.println("Seed for " + data.getMember() + ": " + seed);
+			}
+			
 			float mult = getSalvageMult(data.getStatus()) * playerContribMult;
 			lootWeapons(data.getMember(), data.getMember().getVariant(), false, mult, false);
 			lootHullMods(data.getMember(), data.getMember().getVariant(), mult);
 			lootWings(data.getMember(), data.getMember().getVariant(), false, mult);
 			adjustedFPSalvage += (float) data.getMember().getFleetPointCost() * mult;
 		}
+		
 		for (FleetMemberData data : winner.getOwnCasualties()) {
 			if (data.getMember().isAlly()) continue;
 			
 			if (data.getStatus() == Status.CAPTURED || data.getStatus() == Status.REPAIRED) {
 				continue;
 			}
+			
+			// only care about salvageRandom for enemy casualties, not player
+//			if (origSalvageRandom != null) {
+//				salvageRandom = new Random(data.getMember().getId().hashCode() * 143234234234L * extraSeed);
+//			}
+			
 			float mult = getSalvageMult(data.getStatus());
 			lootWeapons(data.getMember(), data.getMember().getVariant(), true, mult, false);
 			lootWings(data.getMember(), data.getMember().getVariant(), true, mult);
@@ -2226,10 +2263,19 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 			}
 		}
 		
+		salvageRandom = origSalvageRandom;
+		
+		// don't want salvageRandom to be influenced by the number of losses on either side
+		Random resetSalvageRandomTo = null;
+		Random forRandomDrops = null;
+		Random forCargoDrops = null;
 
 		Random random = Misc.random;
 		if (salvageRandom != null) {
 			random = salvageRandom;
+			resetSalvageRandomTo = Misc.getRandom(random.nextLong(), 11);
+			forRandomDrops = Misc.getRandom(random.nextLong(), 17);
+			forCargoDrops = Misc.getRandom(random.nextLong(), 31);
 		} else {
 			if (getBattle() != null) {
 				MemoryAPI memory = getBattle().getNonPlayerCombined().getMemoryWithoutUpdate();
@@ -2305,12 +2351,22 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 			}
 		}
 		
+		if (forRandomDrops != null) {
+			random = forRandomDrops;
+		}
 		CargoAPI extra = SalvageEntity.generateSalvage(random, valueMultFleet + valueModShips, 1f, fuelMult, dropValue, dropRandom);
 		for (CargoStackAPI stack : extra.getStacksCopy()) {
 			loot.addFromStack(stack);
 		}
 		
-		handleCargoLooting(recoveredShips, false);
+		if (forCargoDrops != null) {
+			salvageRandom = forCargoDrops;
+			handleCargoLooting(recoveredShips, false);
+		}
+		
+		if (resetSalvageRandomTo != null) {
+			salvageRandom = resetSalvageRandomTo;
+		}
 	}
 	
 	public float getSalvageValueModPlayerShips() {

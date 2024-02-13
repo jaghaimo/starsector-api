@@ -581,7 +581,8 @@ public class FGRaidAction extends FGDurationAction implements FleetActionDelegat
 						   faction.getId(), true, 30f);
 				Misc.setRaidedTimestamp(market);
 			} else if (industry != null) {
-				new MarketCMD(market.getPrimaryEntity()).doIndustryRaid(faction, raidStr, industry, 1f);
+				float durMult = Global.getSettings().getFloat("punitiveExpeditionDisruptDurationMult");
+				new MarketCMD(market.getPrimaryEntity()).doIndustryRaid(faction, raidStr, industry, durMult);
 			} else {
 				new MarketCMD(market.getPrimaryEntity()).doGenericRaid(faction,
 						   		raidStr, params.maxStabilityLostPerRaid, params.raidsPerColony > 1);

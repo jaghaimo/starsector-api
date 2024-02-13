@@ -100,4 +100,5 @@ public interface BattleAPI {
 	boolean isStationInvolved(List<CampaignFleetAPI> side);
 	List<CampaignFleetAPI> getStationSide();
 	void genCombined(boolean withStation);
+	boolean join(CampaignFleetAPI fleet, BattleSide side);
 }

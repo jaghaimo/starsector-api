@@ -1788,11 +1788,28 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 			Global.getSector().getPlayerFleet().getFleetData().syncIfNeeded();
 		} else if (ongoingBattle) {
 			EngagementOutcome last = context.getLastEngagementOutcome();
-			if (last == EngagementOutcome.ESCAPE_ENEMY_SUCCESS || last == EngagementOutcome.ESCAPE_PLAYER_SUCCESS || harryEndedBattle || context.isOtherFleetHarriedPlayer() || allyEngagementChoiceNoBattle) {
-				b.finish(winner, true);
-			} else {
-				for (CampaignFleetAPI curr : pulledIn) {
-					b.leave(curr, context.isEngagedInHostilities() || context.isOtherFleetHarriedPlayer());
+			boolean finished = false;
+			if (last == EngagementOutcome.BATTLE_PLAYER_WIN_TOTAL) {
+				List<CampaignFleetAPI> other = b.getSide(otherSide);
+				if (other != null && other.size() == 1) {
+					CampaignFleetAPI f = other.get(0);
+					if (f != null && f.isStationMode()) {
+						b.finish(winner, true);
+						finished = true;
+					}
+				}
+			}
+			if (!finished) {
+				if (last == EngagementOutcome.ESCAPE_ENEMY_SUCCESS || 
+						last == EngagementOutcome.ESCAPE_PLAYER_SUCCESS ||
+						harryEndedBattle ||
+						context.isOtherFleetHarriedPlayer() ||
+						allyEngagementChoiceNoBattle) {
+					b.finish(winner, true);
+				} else {
+					for (CampaignFleetAPI curr : pulledIn) {
+						b.leave(curr, context.isEngagedInHostilities() || context.isOtherFleetHarriedPlayer());
+					}
 				}
 			}
 		}
@@ -2154,11 +2171,18 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 		}
 		
 		if (!lootedCredits && config.withSalvage) {
+			Random resetSalvageRandomTo = null;
+			
 			if (config.salvageRandom != null) {
 				context.setSalvageRandom(config.salvageRandom);
+				resetSalvageRandomTo = Misc.getRandom(config.salvageRandom.nextLong(), 11);
 			}
 			
 			context.generateLoot(recoveredShips, config.lootCredits);
+			
+			if (resetSalvageRandomTo != null) {
+				config.salvageRandom = resetSalvageRandomTo;
+			}
 			if (config.delegate != null) {
 				config.delegate.postPlayerSalvageGeneration(dialog, context, context.getLoot());
 			}
@@ -2453,6 +2477,21 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 			}
 			if (!joinedBattle && battle.canJoin(playerFleet)) {
 				options.addOption("Join the battle", OptionId.JOIN_ONGOING_BATTLE, null);
+				
+				BattleSide side = battle.pickSide(playerFleet);
+				if (side != null) {
+					List<CampaignFleetAPI> otherSide = battle.getOtherSide(side);
+					if (otherSide != null) {
+						boolean knows = battle.knowsWhoPlayerIs(otherSide);
+						boolean lowImpact = context.isLowRepImpact() || context.isNoRepImpact();
+						FactionAPI nonHostile = getNonHostileOtherFaction(otherSide);
+						if (nonHostile != null && knows && !lowImpact && !context.isEngagedInHostilities() &&
+								config.showWarningDialogWhenNotHostile) {
+							options.addOptionConfirmation(OptionId.JOIN_ONGOING_BATTLE, "The " + nonHostile.getDisplayNameLong() + " " + nonHostile.getDisplayNameIsOrAre() + " not currently hostile, and you have been positively identified. Are you sure you want to engage in hostilities with one of their fleets?", "Yes", "Never mind");
+						}
+					}
+				}
+				
 				if (!playerHasReadyShips) {
 					options.setEnabled(OptionId.JOIN_ONGOING_BATTLE, false);
 				}
@@ -3065,14 +3104,17 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 	public FactionAPI getNonHostileOtherFaction() {
 		if (context.getBattle() == null) return null;
 		
-		FactionAPI player = Global.getSector().getPlayerFaction();
-		int max = -1;
-		CampaignFleetAPI result = null;
-		
 		//BattleSide playerSide = context.getBattle().pickSide(Global.getSector().getPlayerFleet());
 		
 		//List<CampaignFleetAPI> otherSide = context.getBattle().getSideFor(otherFleet);
 		List<CampaignFleetAPI> otherSide = context.getBattle().getNonPlayerSide();
+		return getNonHostileOtherFaction(otherSide);
+	}
+	
+	public FactionAPI getNonHostileOtherFaction(List<CampaignFleetAPI> otherSide) {
+		FactionAPI player = Global.getSector().getPlayerFaction();
+		int max = -1;
+		CampaignFleetAPI result = null;		
 		
 		if (otherSide != null) {
 			for (CampaignFleetAPI other : otherSide) {

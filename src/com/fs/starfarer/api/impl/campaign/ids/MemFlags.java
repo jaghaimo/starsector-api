@@ -20,6 +20,8 @@ public class MemFlags {
 	public static final String WILL_HASSLE_PLAYER = "$willHasslePlayer";
 	public static final String HASSLE_TYPE = "$hassleType";
 	
+	public static final String NON_HOSTILE_OVERRIDES_MAKE_HOSTILE = "$makeNonHostileTakesPriority";
+	
 	public static final String NO_HIGH_BURN_TOPOGRAPHY_READINGS = "$noHighBurnTopographyReadings";
 	
 	public static final String DO_NOT_TRY_TO_AVOID_NEARBY_FLEETS= "$doNotTryToAvoidNearbyFleets";

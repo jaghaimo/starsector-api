@@ -228,6 +228,17 @@ public class PirateHostileActivityFactor extends BaseHostileActivityFactor imple
 
 	public TooltipCreator getStageTooltipImpl(final HostileActivityEventIntel intel, final EventStageData stage) {
 		if (stage.id == Stage.HA_EVENT || stage.id == Stage.MINOR_EVENT) {
+			if (stage.id == Stage.MINOR_EVENT) {
+				return new BaseFactorTooltip() {
+				@Override
+				public void createTooltip(TooltipMakerAPI tooltip, boolean expanded, Object tooltipParam) {
+					float opad = 10f;
+					tooltip.addTitle("Pirate raid");
+					tooltip.addPara("A pirate raid will be launched against one of your "
+							+ "star systems.", opad);
+				}
+			};
+			}
 			return getDefaultEventTooltip("Pirate raid", intel, stage);
 //			return new BaseFactorTooltip() {
 //				@Override

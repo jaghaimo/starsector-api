@@ -55,10 +55,10 @@ public class HostileActivityEventIntel extends BaseEventIntel implements Economy
 	
 	public static float FP_PER_POINT = Global.getSettings().getFloat("HA_fleetPointsPerPoint");
 	
-	public static int MAX_PROGRESS = 500;
+	public static int MAX_PROGRESS = 600;
 	
 	public static int RESET_MIN = 0;
-	public static int RESET_MAX = 350;
+	public static int RESET_MAX = 400;
 	
 	
 	public static class HAERandomEventData {
@@ -107,29 +107,51 @@ public class HostileActivityEventIntel extends BaseEventIntel implements Economy
 	}
 	
 	protected void setup() {
+		
+		boolean minorCompleted = false;
+		EventStageData minor = getDataFor(Stage.MINOR_EVENT);
+		if (minor != null) minorCompleted = minor.wasEverReached;
+		
 		factors.clear();
 		stages.clear();
 		
-		setMaxProgress(500);
+		setMaxProgress(600);
 		addStage(Stage.START, 0);
-		addStage(Stage.MINOR_EVENT, 250, StageIconSize.MEDIUM);
-		addStage(Stage.HA_EVENT, 500, true, StageIconSize.LARGE);
+		addStage(Stage.MINOR_EVENT, 300, StageIconSize.MEDIUM);
+		addStage(Stage.HA_EVENT, 600, true, StageIconSize.LARGE);
 		
-		setRandomized(Stage.MINOR_EVENT, RandomizedStageType.BAD, 150, 200, false, false);
-		setRandomized(Stage.HA_EVENT, RandomizedStageType.BAD, 350, 425, false);
+		setRandomized(Stage.MINOR_EVENT, RandomizedStageType.BAD, 200, 250, false, false);
+		setRandomized(Stage.HA_EVENT, RandomizedStageType.BAD, 425, 500, false);
+		
+		minor = getDataFor(Stage.MINOR_EVENT);
+		if (minor != null) {
+			minor.wasEverReached = minorCompleted;
+		}
+		
+		Global.getSector().getListenerManager().removeListenerOfClass(PirateHostileActivityFactor.class);
+		Global.getSector().getListenerManager().removeListenerOfClass(LuddicPathHostileActivityFactor.class);
+		Global.getSector().getListenerManager().removeListenerOfClass(PerseanLeagueHostileActivityFactor.class);
+		Global.getSector().getListenerManager().removeListenerOfClass(TriTachyonHostileActivityFactor.class);
+		Global.getSector().getListenerManager().removeListenerOfClass(LuddicChurchHostileActivityFactor.class);
+		Global.getSector().getListenerManager().removeListenerOfClass(SindrianDiktatHostileActivityFactor.class);
+		Global.getSector().getListenerManager().removeListenerOfClass(HegemonyHostileActivityFactor.class);
+		Global.getSector().getListenerManager().removeListenerOfClass(RemnantHostileActivityFactor.class);
+		
 		
 		addFactor(new HAColonyDefensesFactor());
 		addFactor(new HAShipsDestroyedFactorHint());
 		
 		addFactor(new HABlowbackFactor());
 		
-		addActivity(new PirateHostileActivityFactor(this), new KantasProtectionPirateActivityCause2(this));
-		addActivity(new PirateHostileActivityFactor(this), new StandardPirateActivityCause2(this));
-		addActivity(new PirateHostileActivityFactor(this), new PirateBasePirateActivityCause2(this));
-		addActivity(new PirateHostileActivityFactor(this), new KantasWrathPirateActivityCause2(this));
+		PirateHostileActivityFactor pirate = new PirateHostileActivityFactor(this);
+		addActivity(pirate, new KantasProtectionPirateActivityCause2(this));
+		addActivity(pirate, new StandardPirateActivityCause2(this));
+		addActivity(pirate, new PirateBasePirateActivityCause2(this));
+		addActivity(pirate, new KantasWrathPirateActivityCause2(this));
 		
-		addActivity(new LuddicPathHostileActivityFactor(this), new LuddicPathAgreementHostileActivityCause2(this));
-		addActivity(new LuddicPathHostileActivityFactor(this), new StandardLuddicPathActivityCause2(this));
+		LuddicPathHostileActivityFactor path = new LuddicPathHostileActivityFactor(this);
+		addActivity(path, new LuddicPathAgreementHostileActivityCause2(this));
+		addActivity(path, new StandardLuddicPathActivityCause2(this));
 		
 		addActivity(new PerseanLeagueHostileActivityFactor(this), new StandardPerseanLeagueActivityCause(this));
 		addActivity(new TriTachyonHostileActivityFactor(this), new TriTachyonStandardActivityCause(this));
@@ -143,10 +165,13 @@ public class HostileActivityEventIntel extends BaseEventIntel implements Economy
 		if (systemSpawnMults == null) {
 			systemSpawnMults = new LinkedHashMap<String, MutableStatWithTempMods>();
 		}
-		if (getDataFor(Stage.INCREASED_DEFENSES) != null) {// || Global.getSettings().isDevMode()) {
+		return this;
+	}
+	
+	public void redoSetupIfNeeded() {
+		if (getDataFor(Stage.INCREASED_DEFENSES) != null || getMaxProgress() == 500) {// || Global.getSettings().isDevMode()) {
 			setup();
 		}
-		return this;
 	}
 	
 	
@@ -631,7 +656,7 @@ public class HostileActivityEventIntel extends BaseEventIntel implements Economy
 	
 	
 	/**
-	 * From 0 (at one size-3 market) to 1 (maxSize + count >= 7).
+	 * From 0 (at one size-3 market) to 1 (maxSize + count >= 7). Also capped based on largest market.
 	 * @param system
 	 * @return
 	 */
@@ -644,8 +669,14 @@ public class HostileActivityEventIntel extends BaseEventIntel implements Economy
 		}
 		
 		float f = (maxSize - 3f + count - 1f) / 3f;
+		
+		float cap = 0.35f;
+		if (maxSize <= 4f) cap = 0.55f;
+		else if (maxSize <= 5f) cap = 0.75f;
+		else cap = 1f;
+		
 		if (f < 0f) f = 0f;
-		if (f > 1f) f = 1f;
+		if (f > cap) f = cap;
 		
 		return f;
 	}
@@ -837,7 +868,7 @@ public class HostileActivityEventIntel extends BaseEventIntel implements Economy
 			blowback = 0;
 		}
 		int min = RESET_MIN;
-		if (!fired) min = RESET_MAX - 150;
+		if (!fired) min = RESET_MAX - 200;
 		
 		int resetAdd = random.nextInt(RESET_MAX - min + 1);
 		resetAdd = Math.min(resetAdd, random.nextInt(RESET_MAX - min + 1));
@@ -930,16 +961,17 @@ public class HostileActivityEventIntel extends BaseEventIntel implements Economy
 	
 	@Override
 	public void addFactor(EventFactor factor) {
-		super.addFactor(factor);
 		if (factor.isOneTime()) {
 			int points = factor.getProgress(this);
 			if (points < 0) {
 				int p = Math.round(-1f * points * HABlowbackFactor.FRACTION);
+				p = Math.min(p, getProgress());
 				if (p > 0) {
 					addBlowback(p);
 				}
 			}
 		}
+		super.addFactor(factor);
 	}
 	
 	@Override
@@ -948,6 +980,15 @@ public class HostileActivityEventIntel extends BaseEventIntel implements Economy
 		
 		if (blowback > 0) {
 			int amt = Math.round(blowback * HABlowbackFactor.PER_MONTH);
+			
+			float mult = 1f;
+			for (EventFactor factor : factors) {
+				if (factor.isOneTime()) continue;
+				mult *= factor.getAllProgressMult(this);
+			}
+			
+			amt = Math.round(amt * mult);
+			
 			if (amt < 1) amt = 1;
 			blowback -= amt;
 			if (blowback < 0) blowback = 0;

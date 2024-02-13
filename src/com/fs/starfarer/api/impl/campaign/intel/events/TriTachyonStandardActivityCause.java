@@ -2,7 +2,9 @@ package com.fs.starfarer.api.impl.campaign.intel.events;
 
 import java.awt.Color;
 import java.util.ArrayList;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.FactionAPI;
@@ -82,7 +84,7 @@ public class TriTachyonStandardActivityCause extends BaseHostileActivityCause2 {
 	public static List<CompetitorData> computePlayerCompetitionData() {
 		String factionId = Factions.TRITACHYON;
 		
-		List<String> commodities = new ArrayList<String>();
+		Set<String> commodities = new LinkedHashSet<String>();
 		for (MarketAPI market : Global.getSector().getEconomy().getMarketsCopy()) {
 			if (!factionId.equals(market.getFactionId())) continue;
 			
@@ -149,9 +151,13 @@ public class TriTachyonStandardActivityCause extends BaseHostileActivityCause2 {
 				tooltip.addSpacer(5f);
 				
 				tooltip.addPara("Event progress is based on the maximum production of each commodity. "
-						+ "%s below %s per colony should be enough to divert "
+						+ "%s below %s per colony, or reducing the scope of the competition to a single commodity,"
+						+ " should be enough to divert "
 						+ "Tri-Tachyon's attention.", opad, 
-						h, "Reducing production levels", "" + MIN_COMPETITOR_PRODUCTION);
+						h,
+						"Reducing production levels",
+						"" + MIN_COMPETITOR_PRODUCTION,
+						"single commodity");
 				
 				tooltip.addPara("%s are also possible.", opad,
 						h, "Reciprocal solutions");
@@ -185,8 +191,9 @@ public class TriTachyonStandardActivityCause extends BaseHostileActivityCause2 {
 		}
 		
 		int total = 0;
-		
 		List<CompetitorData> comp = computePlayerCompetitionData();
+		if (comp.size() <= 1) return 0;
+		
 		for (CompetitorData data : comp) {
 			total += data.getProgress(PROD_PROGRESS_MULT);
 		}

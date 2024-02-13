@@ -19,6 +19,7 @@ import com.fs.starfarer.api.campaign.LocationAPI;
 import com.fs.starfarer.api.campaign.OptionPanelAPI;
 import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
+import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.campaign.TextPanelAPI;
 import com.fs.starfarer.api.campaign.VisualPanelAPI;
 import com.fs.starfarer.api.campaign.comm.IntelInfoPlugin;
@@ -253,9 +254,9 @@ public class EventTestPluginImpl implements InteractionDialogPlugin {
 				HostileActivityEventIntel intel = HostileActivityEventIntel.get();
 				intel.setRandom(new Random());
 				int p = intel.getProgress();
-				if (p < 400 || p == 499) p = 400;
-				else if (p < 450) p = 450;
-				else p = 499;
+				if (p < 500 || p == 599) p = 500;
+				else if (p < 550) p = 550;
+				else p = 599;
 				intel.setProgress(p);
 				textPanel.addPara("Progress set to " + p);
 			}
@@ -307,6 +308,9 @@ public class EventTestPluginImpl implements InteractionDialogPlugin {
 				tags += "    " + tag + "\n";
 			}
 			textPanel.addPara("\nTags for " + loc.getName() + ":\n" + tags);
+			if (loc instanceof StarSystemAPI) {
+				textPanel.addPara("\nSystem type: " + ((StarSystemAPI)loc).getType());
+			}
 			
 			break;
 		case ADD_LOG_INTEL:

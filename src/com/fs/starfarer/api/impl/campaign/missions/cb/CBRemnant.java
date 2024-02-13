@@ -101,7 +101,7 @@ public class CBRemnant extends BaseCustomBountyCreator {
 			mission.triggerSetRemnantConfigActive();
 			mission.triggerSetFleetNoCommanderSkills();
 			mission.triggerFleetAddCommanderSkill(Skills.FLUX_REGULATION, 1);
-			mission.triggerFleetAddCommanderSkill(Skills.ELECTRONIC_WARFARE, 1);
+			//mission.triggerFleetAddCommanderSkill(Skills.ELECTRONIC_WARFARE, 1);
 			mission.triggerFleetAddCommanderSkill(Skills.COORDINATED_MANEUVERS, 1);
 			
 			mission.triggerFleetSetAllWeapons();

@@ -255,6 +255,11 @@ public class HistorianBarEvent extends BaseBarEvent {
 			text.addPara("\"See you again soon, somewhere!\" " + hd.getHeOrShe() + " says. \"In my line of work, even I don't " +
 						 "know for sure where I'll end up in a couple of months.\"");
 			done = true;
+			
+			if (dialog.getInteractionTarget() != null) {
+				dialog.getInteractionTarget().setActivePerson(null);
+			}
+			
 			return;
 		}
 

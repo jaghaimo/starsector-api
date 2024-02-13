@@ -676,6 +676,8 @@ public class StarSystemGenerator {
 		
 		WeightedRandomPicker<StarSystemType> picker = new WeightedRandomPicker<StarSystemType>(random);
 		for (StarSystemType type : EnumSet.allOf(StarSystemType.class)) {
+			if (type == StarSystemType.DEEP_SPACE || type == StarSystemType.DEEP_SPACE_GAS_GIANT) continue;
+			
 			Object test = Global.getSettings().getSpec(LocationGenDataSpec.class, type.name(), true);
 			if (test == null) continue;
 			LocationGenDataSpec data = (LocationGenDataSpec) test;

@@ -176,6 +176,9 @@ public class MusicPlayerPluginImpl implements MusicPlayerPluginWithVolumeControl
 			if (Entities.WRECK.equals(token.getCustomEntityType())) {
 				return MUSIC_ENCOUNTER_NEUTRAL;
 			}
+			if (Entities.DERELICT_GATEHAULER.equals(token.getCustomEntityType())) {
+				return MUSIC_ENCOUNTER_MYSTERIOUS_NON_AGGRESSIVE;
+			}
 			
 			if (Entities.DEBRIS_FIELD_SHARED.equals(token.getCustomEntityType())) {
 				return "music_survey_and_scavenge";

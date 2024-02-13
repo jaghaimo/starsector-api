@@ -321,6 +321,8 @@ public interface SectorEntityToken extends HasMemory {
 
 	void forceOutIndicator();
 
+	void setOrbitFocus(SectorEntityToken focus);
+
 }
 	
 	
