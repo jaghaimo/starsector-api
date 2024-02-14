@@ -291,7 +291,10 @@ public class HA_CMD extends BaseCommandPlugin {
 			CampaignFleetAPI station = Misc.getStationFleet(intel.getEntity());
 			if (station == null) return;
 			if (intel.getEntity() == null) return;
-			if (intel.getEntity().getContainingLocation() != fleet.getContainingLocation()) {
+			LocationAPI cLoc = null;
+			if (fleet != null) cLoc = fleet.getContainingLocation();
+			if (cLoc == null && primaryWinner != null) cLoc = primaryWinner.getContainingLocation();
+			if (intel.getEntity().getContainingLocation() != cLoc) {
 				return;
 			}
 			
