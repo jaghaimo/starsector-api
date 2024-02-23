@@ -138,7 +138,7 @@ public class LuddicMajority extends BaseMarketConditionPlugin implements MarketI
 	}
 	
 	public static void addConditions(TooltipMakerAPI tooltip, MarketAPI market, float opad) {
-		boolean madeDeal = LuddicChurchHostileActivityFactor.isMadeDeal();
+		boolean madeDeal = LuddicChurchHostileActivityFactor.isMadeDeal() && market.isPlayerOwned();
 		boolean freePort = market.isFreePort();
 		freePort = false;
 		boolean habitable = market.hasCondition(Conditions.HABITABLE);

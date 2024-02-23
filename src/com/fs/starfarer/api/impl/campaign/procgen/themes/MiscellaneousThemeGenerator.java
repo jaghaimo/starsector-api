@@ -1256,7 +1256,7 @@ public class MiscellaneousThemeGenerator extends BaseThemeGenerator {
 					if (curr.getMarket().hasCondition(Conditions.WATER_SURFACE)) continue; // don't want to write around this.
 					if (curr.isGasGiant()) continue;
 					if (!( curr.getMarket().hasCondition(Conditions.VOLATILES_PLENTIFUL) || 
-							curr.getMarket().hasCondition(Conditions.ORGANICS_ABUNDANT) ||
+							curr.getMarket().hasCondition(Conditions.ORGANICS_PLENTIFUL) ||
 							curr.getMarket().hasCondition(Conditions.RARE_ORE_ULTRARICH) ) ) continue;	
 					//		curr.getMarket().hasCondition(Conditions.ORE_ULTRARICH) ) ) continue;	
 					

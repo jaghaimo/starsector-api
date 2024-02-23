@@ -115,7 +115,7 @@ public class HostileActivityEventIntel extends BaseEventIntel implements Economy
 		factors.clear();
 		stages.clear();
 		
-		setMaxProgress(600);
+		setMaxProgress(MAX_PROGRESS);
 		addStage(Stage.START, 0);
 		addStage(Stage.MINOR_EVENT, 300, StageIconSize.MEDIUM);
 		addStage(Stage.HA_EVENT, 600, true, StageIconSize.LARGE);

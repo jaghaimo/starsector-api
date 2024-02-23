@@ -611,7 +611,10 @@ public class HyperspaceTopographyEventIntel extends BaseEventIntel implements Fl
 		}
 		
 		float bonus = Math.min(countDomain, MAX_SENSOR_ARRAYS) * RANGE_PER_DOMAIN_SENSOR_ARRAY;
-		bonus += Math.min(Math.max(0, countMakeshift - countDomain), MAX_SENSOR_ARRAYS) * RANGE_PER_MAKESHIFT_SENSOR_ARRAY;
+		float useMakeshift = Math.min(MAX_SENSOR_ARRAYS - countDomain, countMakeshift);
+		if (useMakeshift < 0) useMakeshift = 0;
+		bonus += useMakeshift * RANGE_PER_MAKESHIFT_SENSOR_ARRAY;
+		//bonus += Math.min(Math.max(0, countMakeshift - countDomain), MAX_SENSOR_ARRAYS) * RANGE_PER_MAKESHIFT_SENSOR_ARRAY;
 
 		return bonus;
 	}

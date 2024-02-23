@@ -147,10 +147,11 @@ public class SindrianDiktatHostileActivityFactor extends BaseHostileActivityFact
 		m.triggerSetPirateFleet();
 		m.triggerMakeHostile();
 		m.triggerMakeNonHostileToFaction(Factions.DIKTAT);
-		m.triggerMakeHostileToAllTradeFleets();
 		m.triggerMakeNonHostileToFaction(Factions.PIRATES);
 		m.triggerMakeLowRepImpact();
 		m.triggerFleetAllowLongPursuit();
+		m.triggerMakeHostileToAllTradeFleets();
+		m.triggerMakeEveryoneJoinBattleAgainst();
 		
 		m.triggerSetFleetFlag(RAIDER_FLEET);
 		
