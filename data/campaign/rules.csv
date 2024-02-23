@@ -2707,7 +2707,6 @@ sal_demolishOptionSelected,DialogOptionSelected,$option == salDemolish,SetShortc
 100:defaultLeave:Leave",
 sal_demolishOptionConfirmed,DialogOptionSelected,$option == salDemolishConfirm,SalvageEntity demolish,,,
 ,,,,,,
-,,,,,,
 # CARGO PODS,,,,,,
 pods_start,OpenInteractionDialog,$customType == cargo_pods,"ShowDefaultVisual
 CargoPods printDesc
@@ -4459,7 +4458,8 @@ lppJangalaOutsideMaskOn2,DialogOptionSelected,$option == lpp_jangalaOutsideMaskO
 FireAll LPPShrineVisitXP","Beyond, you see the statue garden. The forms blister with growths, crawling with tendrils, sprouting fruiting bodies of xenolife. Among them are pilgrims, exposed in their light robes. Easily overtaken by the overgrowth. How long does it take- hours, days?
 
 At their feet, covered by a quilt of mosses and mycelium or alien equivalents, are bones. Or are they fallen branches, overgrown rocks? The final wish for terminally-devoted fanatics, or your imagination?",lpp_jangalaOutsideMaskOn3:Continue,
-lppJangalaOutsideMaskOn3,DialogOptionSelected,$option == lpp_jangalaOutsideMaskOn3,"AddTextSmall ""Jangala xenolife: light exposure"" highlight","The green churns not quite imperceptibly in the course of your stay, all-consuming, ferociously regenerative, a cycle of life that could be born of Earth or an alien world.",lpp_jangalaShrineExtLeave:Return to the complex interior,
+lppJangalaOutsideMaskOn3,DialogOptionSelected,$option == lpp_jangalaOutsideMaskOn3,"AddTextSmall ""Jangala xenolife: light exposure"" highlight
+$player.jangalaWentMaskOn = true","The green churns not quite imperceptibly in the course of your stay, all-consuming, ferociously regenerative, a cycle of life that could be born of Earth or an alien world.",lpp_jangalaShrineExtLeave:Return to the complex interior,
 lppJangalaShrineExteriorLeave,DialogOptionSelected,$option == lpp_jangalaShrineExtLeave,"ShowImageVisual luddic_shrine
 FireBest LPPJangalaOutsideReturnComment","You undergo a routine decontamination in a stained yet clean chamber built for that purpose. After an oddly-smelling shower, the flicker of lasers, and another round of antixenols, you are given back your clothing. Everything is abrasively dry and smells of disinfectant.",lpp_jangalaShrineLeave:Continue,
 lppJangalaShrineExteriorLeaveB,LPPJangalaOutsideReturnComment,$maskOff,,"Breathing feels strange, still. You have to think about each breath, filling your lungs, then emptying them.",,
@@ -27301,7 +27301,7 @@ Commission personCanGiveCommission
 !$player.makeDiktatDeal
 !$player.brokeDiktatDeal
 !$player.defeatedDiktatAttack
-HA_CMD diktatConcernedByFuelProd",,,"sdMakeDeal:""The Sindrian Diktat keeps sending attack fleets. Perhaps we could work out a deal?""",
+HA_CMD diktatConcernedByFuelProd",,,"sdMakeDeal:""The Diktat is sending attack fleets against me. Perhaps we could work out a deal?""",
 SDMakeDealOptCom,PopulateOptions,"$isPerson
 $personFaction.id == sindrian_diktat
 $player.fcm_faction == sindrian_diktat
