@@ -11,6 +11,7 @@ var dir_27757be126799ee81c2a809722e895cf =
     [ "FleetAdvanceScript.java", "FleetAdvanceScript_8java.html", "FleetAdvanceScript_8java" ],
     [ "HostileFleetNearbyAndAware.java", "HostileFleetNearbyAndAware_8java.html", "HostileFleetNearbyAndAware_8java" ],
     [ "MarketCMD.java", "MarketCMD_8java.html", "MarketCMD_8java" ],
+    [ "MiscCMD.java", "MiscCMD_8java.html", "MiscCMD_8java" ],
     [ "Objectives.java", "Objectives_8java.html", "Objectives_8java" ],
     [ "PrintWreckDescription.java", "PrintWreckDescription_8java.html", "PrintWreckDescription_8java" ],
     [ "RedPlanet.java", "RedPlanet_8java.html", "RedPlanet_8java" ],
@@ -19,5 +20,6 @@ var dir_27757be126799ee81c2a809722e895cf =
     [ "SalvageEntity.java", "SalvageEntity_8java.html", "SalvageEntity_8java" ],
     [ "SalvageGenFromSeed.java", "SalvageGenFromSeed_8java.html", "SalvageGenFromSeed_8java" ],
     [ "SalvageSpecialInteraction.java", "SalvageSpecialInteraction_8java.html", "SalvageSpecialInteraction_8java" ],
+    [ "ZGRTurnIn.java", "ZGRTurnIn_8java.html", "ZGRTurnIn_8java" ],
     [ "ZigguratCMD.java", "ZigguratCMD_8java.html", "ZigguratCMD_8java" ]
 ];

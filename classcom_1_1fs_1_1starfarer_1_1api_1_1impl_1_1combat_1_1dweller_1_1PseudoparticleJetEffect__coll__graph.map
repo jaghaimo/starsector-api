@@ -1,0 +1,31 @@
+<map id="com.fs.starfarer.api.impl.combat.dweller.PseudoparticleJetEffect" name="com.fs.starfarer.api.impl.combat.dweller.PseudoparticleJetEffect">
+<area shape="rect" id="Node000001" title=" " alt="" coords="938,467,1190,507"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerEffect.html" title=" " alt="" coords="638,279,845,319"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="793,325,1028,464,1026,468,790,330"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseCombatLayeredRenderingPlugin.html" title=" " alt="" coords="298,83,534,123"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="518,126,539,134,579,152,616,176,677,228,724,277,720,280,673,232,612,180,576,156,537,139,516,131"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatLayeredRenderingPlugin.html" title=" " alt="" coords="5,5,212,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="207,48,333,79,331,85,206,53"/>
+<area shape="rect" id="Node000005" href="$enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineLayers.html" title=" " alt="" coords="18,71,199,111"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="214,92,297,96,297,101,214,98"/>
+<area shape="rect" id="Node000006" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html" title=" " alt="" coords="18,148,199,189"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="214,143,316,121,317,127,215,149"/>
+<area shape="rect" id="Node000012" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamagingProjectileAPI.html" title=" " alt="" coords="326,148,506,189"/>
+<area shape="poly" id="edge12_Node000012_Node000006" title=" " alt="" coords="214,166,325,166,325,171,214,171"/>
+<area shape="rect" id="Node000007" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1OnFireEffectPlugin.html" title=" " alt="" coords="326,213,506,254"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="521,252,638,276,637,281,520,257"/>
+<area shape="rect" id="Node000008" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1OnHitEffectPlugin.html" title=" " alt="" coords="326,279,506,319"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="521,296,638,296,638,302,521,302"/>
+<area shape="rect" id="Node000009" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1EveryFrameWeaponEffectPlugin.html" title=" " alt="" coords="313,344,519,385"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="534,338,637,317,638,322,535,343"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="296,409,536,450"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="514,402,537,394,626,355,701,318,703,322,628,360,539,399,516,407"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="348,474,484,500"/>
+<area shape="poly" id="edge15_Node000001_Node000011" title=" " alt="" coords="499,484,938,484,938,490,499,490"/>
+<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="499,472,537,459,593,428,645,389,688,350,720,318,724,321,692,354,648,393,596,432,539,464,500,477"/>
+<area shape="poly" id="edge11_Node000002_Node000012" title=" " alt="" coords="516,191,539,199,628,238,703,276,701,280,626,243,537,204,514,196"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="294,17,538,58"/>
+<area shape="poly" id="edge13_Node000002_Node000013" title=" " alt="" coords="526,62,539,69,573,91,605,117,660,175,702,232,731,277,726,280,698,235,656,179,601,121,570,95,537,73,524,67"/>
+<area shape="rect" id="Node000014" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html" title=" " alt="" coords="664,535,819,575"/>
+<area shape="poly" id="edge14_Node000001_Node000014" title=" " alt="" coords="834,535,914,518,972,505,973,511,915,523,835,540"/>
+</map>

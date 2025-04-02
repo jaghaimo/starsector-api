@@ -1,5 +1,9 @@
 <map id="com.fs.starfarer.api.impl.campaign.intel.events.ht.HTFactorTracker" name="com.fs.starfarer.api.impl.campaign.intel.events.ht.HTFactorTracker">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,94,309,135"/>
-<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="74,5,240,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,62,160,94,154,94,154,62"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="273,71,576,111"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="6,5,172,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="188,42,317,67,316,73,187,47"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html" title=" " alt="" coords="12,71,166,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="182,88,272,88,272,94,182,94"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,136,173,161"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="183,130,301,109,302,115,184,135"/>
 </map>

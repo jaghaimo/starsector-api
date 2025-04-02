@@ -1,3 +1,9 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonalityAPI.html" title=" " alt="" coords="5,5,204,46"/>
+<area shape="rect" id="Node000000" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAIPlugin.html" title=" " alt="" coords="5,71,186,111"/>
+<area shape="rect" id="Node000001" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1ShroudedEjectaAI.html" title=" " alt="" coords="234,5,485,46"/>
+<area shape="poly" id="edge1194_Node000000_Node000001" title=" " alt="" coords="195,64,274,44,275,49,196,69"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1ShroudedVortexAI.html" title=" " alt="" coords="234,71,485,111"/>
+<area shape="poly" id="edge1195_Node000000_Node000002" title=" " alt="" coords="201,88,233,88,233,94,201,94"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1ThreatSwarmAI.html" title=" " alt="" coords="238,136,481,177"/>
+<area shape="poly" id="edge1196_Node000000_Node000003" title=" " alt="" coords="196,113,275,133,274,138,195,118"/>
 </map>

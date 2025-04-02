@@ -1,0 +1,14 @@
+var namespacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared =
+[
+    [ "CommodityStatTracker", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1CommodityStatTracker.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1CommodityStatTracker" ],
+    [ "MarketConnectionActivityDataOld", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1MarketConnectionActivityDataOld.html", null ],
+    [ "PersonBountyEventData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PersonBountyEventData.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PersonBountyEventData" ],
+    [ "PlayerActivityTracker", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerActivityTracker.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerActivityTracker" ],
+    [ "PlayerTradeDataForSubmarket", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeDataForSubmarket.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeDataForSubmarket" ],
+    [ "PlayerTradeProfitabilityData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeProfitabilityData.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeProfitabilityData" ],
+    [ "ReputationChangeTracker", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1ReputationChangeTracker.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1ReputationChangeTracker" ],
+    [ "SectorActivityTracker", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1SectorActivityTracker.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1SectorActivityTracker" ],
+    [ "SharedData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1SharedData.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1SharedData" ],
+    [ "StarSystemActivityTracker", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1StarSystemActivityTracker.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1StarSystemActivityTracker" ],
+    [ "WormholeManager", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1WormholeManager.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1WormholeManager" ]
+];

@@ -1,0 +1,4 @@
+var interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1SwarmLaunchingWeapon =
+[
+    [ "getPreferredNumFragmentsToFire", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1SwarmLaunchingWeapon.html#abeb3d013f9b8f3f3d886d584e0f81657", null ]
+];

@@ -11,5 +11,9 @@ var searchData=
   ['viewportapi_2ejava_8',['ViewportAPI.java',['../ViewportAPI_8java.html',1,'']]],
   ['visualpanelapi_2ejava_9',['VisualPanelAPI.java',['../VisualPanelAPI_8java.html',1,'']]],
   ['voices_2ejava_10',['Voices.java',['../Voices_8java.html',1,'']]],
-  ['vpdrivereffect_2ejava_11',['VPDriverEffect.java',['../VPDriverEffect_8java.html',1,'']]]
+  ['voidblastereffect_2ejava_11',['VoidblasterEffect.java',['../VoidblasterEffect_8java.html',1,'']]],
+  ['voltaiccannoneffect_2ejava_12',['VoltaicCannonEffect.java',['../VoltaicCannonEffect_8java.html',1,'']]],
+  ['voltaicdischargeonfireeffect_2ejava_13',['VoltaicDischargeOnFireEffect.java',['../VoltaicDischargeOnFireEffect_8java.html',1,'']]],
+  ['vortexlaunchereffect_2ejava_14',['VortexLauncherEffect.java',['../VortexLauncherEffect_8java.html',1,'']]],
+  ['vpdrivereffect_2ejava_15',['VPDriverEffect.java',['../VPDriverEffect_8java.html',1,'']]]
 ];

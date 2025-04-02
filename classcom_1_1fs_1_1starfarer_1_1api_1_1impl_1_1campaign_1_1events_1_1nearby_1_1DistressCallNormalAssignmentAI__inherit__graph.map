@@ -1,5 +1,7 @@
 <map id="com.fs.starfarer.api.impl.campaign.events.nearby.DistressCallNormalAssignmentAI" name="com.fs.starfarer.api.impl.campaign.events.nearby.DistressCallNormalAssignmentAI">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,79,309,120"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="90,5,224,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,46,160,79,154,79,154,46"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="11,183,315,223"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html" title=" " alt="" coords="5,94,321,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,150,166,182,160,182,160,150"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="80,5,246,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="166,62,166,94,160,94,160,62"/>
 </map>

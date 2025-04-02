@@ -1,5 +1,13 @@
 <map id="com.fs.starfarer.api.impl.campaign.CargoPodsResponse" name="com.fs.starfarer.api.impl.campaign.CargoPodsResponse">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,94,226,135"/>
-<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="32,5,199,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="118,62,118,94,113,94,113,62"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="806,71,1026,111"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="535,5,702,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="717,45,821,67,819,73,716,50"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html" title=" " alt="" coords="541,71,696,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="711,88,805,88,805,94,711,94"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomCampaignEntityAPI.html" title=" " alt="" coords="522,136,715,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="729,129,820,109,821,115,730,135"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="279,136,472,177"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="488,154,521,154,521,159,488,159"/>
+<area shape="rect" id="Node000006" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,136,230,177"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="245,154,279,154,279,159,245,159"/>
 </map>

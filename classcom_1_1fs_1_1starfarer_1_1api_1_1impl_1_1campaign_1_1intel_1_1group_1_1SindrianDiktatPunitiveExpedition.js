@@ -5,6 +5,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1
     [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1SindrianDiktatPunitiveExpedition.html#ae16d9202d4ef076e1d92568ab0e1955a", null ],
     [ "configureFleet", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1SindrianDiktatPunitiveExpedition.html#ad4ce5056326af661ae21acdab324058e", null ],
     [ "getBaseName", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1SindrianDiktatPunitiveExpedition.html#a5e17577d0f7e44fd06365e574ce8f61b", null ],
+    [ "getFleetCreationFactionOverride", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1SindrianDiktatPunitiveExpedition.html#aadf0b27215fc6cb0c2da90d2ccfd984f", null ],
     [ "getForcesNoun", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1SindrianDiktatPunitiveExpedition.html#a30cc0061ef7a5a0e561a75f1229973fe", null ],
     [ "getNoun", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1SindrianDiktatPunitiveExpedition.html#a4f03903b66c7a7457f432f7395c194b8", null ],
     [ "notifyEnded", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1SindrianDiktatPunitiveExpedition.html#a171eb855f2f9ed7768f4e13bbb82d2eb", null ],

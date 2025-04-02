@@ -1,5 +1,11 @@
 <map id="com.fs.starfarer.api.impl.campaign.eventide.CharAnimFrame" name="com.fs.starfarer.api.impl.campaign.eventide.CharAnimFrame">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,79,278,120"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="102,5,181,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="144,46,144,79,139,79,139,46"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="428,86,700,126"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="119,5,197,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="213,23,311,40,489,83,488,88,310,45,212,28"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="123,55,193,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="209,70,427,91,427,96,208,75"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,123,311,164"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="326,144,403,139,484,125,485,130,404,144,326,150"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="108,188,208,214"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="223,193,309,183,403,164,462,145,515,125,517,130,463,151,404,169,310,188,223,198"/>
 </map>

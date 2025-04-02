@@ -1,7 +1,9 @@
 <map id="com.fs.starfarer.api.impl.campaign.econ.impl.GenericInstallableItemPlugin" name="com.fs.starfarer.api.impl.campaign.econ.impl.GenericInstallableItemPlugin">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,168,284,208"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableIndustryItemPlugin.html" title=" " alt="" coords="5,79,284,120"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="147,135,147,167,142,167,142,135"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="50,5,239,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="147,46,147,79,142,79,142,46"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="653,53,932,94"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableIndustryItemPlugin.html" title=" " alt="" coords="279,5,557,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="573,43,654,53,653,59,573,48"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1InstallableIndustryItemPlugin.html" title=" " alt="" coords="5,5,230,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="245,23,278,23,278,28,245,28"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1Industry.html" title=" " alt="" coords="306,71,530,111"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="545,82,653,77,653,83,546,88"/>
 </map>

@@ -1,5 +1,15 @@
 <map id="com.fs.starfarer.api.impl.campaign.procgen.themes.ScavengerPiracyScript" name="com.fs.starfarer.api.impl.campaign.procgen.themes.ScavengerPiracyScript">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,94,321,135"/>
-<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="80,5,246,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,62,166,94,160,94,160,62"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="837,71,1152,111"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="535,5,702,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="717,40,874,67,873,73,716,45"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html" title=" " alt="" coords="541,71,696,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="711,88,836,88,836,94,711,94"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html" title=" " alt="" coords="522,136,715,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="730,134,873,109,874,115,731,140"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="279,87,472,127"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="488,127,522,134,521,139,487,132"/>
+<area shape="rect" id="Node000006" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,87,230,127"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="245,104,279,104,279,110,245,110"/>
+<area shape="rect" id="Node000007" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetOrStubAPI.html" title=" " alt="" coords="279,152,472,193"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="488,162,521,160,521,165,488,168"/>
 </map>

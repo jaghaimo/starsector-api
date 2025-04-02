@@ -1,5 +1,7 @@
 <map id="com.fs.starfarer.api.impl.campaign.eventide.DuelPanel" name="com.fs.starfarer.api.impl.campaign.eventide.DuelPanel">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,79,278,120"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="52,5,231,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="144,46,144,79,139,79,139,46"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,183,278,223"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCustomUIPanelPlugin.html" title=" " alt="" coords="45,94,238,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="144,150,144,182,139,182,139,150"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomUIPanelPlugin.html" title=" " alt="" coords="45,5,238,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="144,62,144,94,139,94,139,62"/>
 </map>

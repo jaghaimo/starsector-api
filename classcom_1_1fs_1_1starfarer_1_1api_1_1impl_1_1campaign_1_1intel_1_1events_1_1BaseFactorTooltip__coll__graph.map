@@ -1,5 +1,5 @@
 <map id="com.fs.starfarer.api.impl.campaign.intel.events.BaseFactorTooltip" name="com.fs.starfarer.api.impl.campaign.intel.events.BaseFactorTooltip">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,79,295,120"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="99,5,201,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="153,46,153,79,147,79,147,46"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,94,295,135"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI_1_1TooltipCreator.html" title=" " alt="" coords="49,5,251,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="153,62,153,94,147,94,147,62"/>
 </map>

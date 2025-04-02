@@ -1,9 +1,17 @@
 <map id="com.fs.starfarer.api.impl.campaign.econ.LuddicMajority" name="com.fs.starfarer.api.impl.campaign.econ.LuddicMajority">
-<area shape="rect" id="Node000001" title=" " alt="" coords="504,35,755,75"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin.html" title=" " alt="" coords="205,5,456,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="472,37,504,40,503,45,471,42"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="5,13,157,39"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="172,23,204,23,204,28,172,28"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="243,70,418,96"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="432,71,504,64,504,69,433,76"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="1079,136,1330,177"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin.html" title=" " alt="" coords="606,71,858,111"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="873,108,1079,136,1078,142,873,113"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketConditionPlugin.html" title=" " alt="" coords="279,5,503,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="516,47,623,67,622,73,515,52"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html" title=" " alt="" coords="279,71,503,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="519,88,606,88,606,94,519,94"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,71,230,111"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="245,88,278,88,278,94,245,94"/>
+<area shape="rect" id="Node000006" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketConditionAPI.html" title=" " alt="" coords="279,136,503,177"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="515,130,622,109,623,115,516,135"/>
+<area shape="rect" id="Node000007" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketImmigrationModifier.html" title=" " alt="" coords="620,136,844,177"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="860,154,1078,154,1078,159,860,159"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="657,201,807,226"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="821,201,1054,174,1078,171,1079,176,1055,179,822,207"/>
 </map>

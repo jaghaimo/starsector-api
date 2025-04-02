@@ -1,5 +1,7 @@
 <map id="com.fs.starfarer.api.impl.campaign.procgen.MagFieldGenPlugin" name="com.fs.starfarer.api.impl.campaign.procgen.MagFieldGenPlugin">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,94,275,135"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="97,124,367,165"/>
 <area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1TerrainGenPlugin.html" title=" " alt="" coords="5,5,275,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,62,143,94,137,94,137,62"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,56,219,122,214,125,162,59"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="298,13,350,38"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="307,53,249,125,245,122,303,49"/>
 </map>

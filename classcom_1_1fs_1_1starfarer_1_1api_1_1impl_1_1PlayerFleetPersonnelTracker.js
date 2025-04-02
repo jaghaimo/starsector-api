@@ -10,8 +10,6 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker =
     [ "getIconName", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a8b3b7e322f7426e576394a918afbc84c", null ],
     [ "getInteractionEntity", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a08b488f7c8636addc04d8052793d86fd", null ],
     [ "getMarineData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#ace5d5d103385c679be7d0f7b19bb48e8", null ],
-    [ "getMarineEffectBonus", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a5fdee7e7633074c1eb000b34ac9acf2d", null ],
-    [ "getMarineLossesReductionPercent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a4c591e8a288c00b334dc551fe357eb66", null ],
     [ "getPersonnelAtLocation", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a9e8d16facf79356e394a4426e012faa3", null ],
     [ "getRankIconName", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#aaae75063e455dfc3fb58b72aaa8e2c13", null ],
     [ "getSubmarketFor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1PlayerFleetPersonnelTracker.html#a732f4fb90f397f254fbadf09499ee005", null ],

@@ -1,11 +1,11 @@
 <map id="com.fs.starfarer.api.impl.campaign.rulecmd.RepIsAtWorst" name="com.fs.starfarer.api.impl.campaign.rulecmd.RepIsAtWorst">
-<area shape="rect" id="Node000001" title=" " alt="" coords="487,39,756,79"/>
-<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ImportanceAtLeast.html" title=" " alt="" coords="804,5,1074,46"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="772,41,804,37,804,42,772,46"/>
-<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RepGTE.html" title=" " alt="" coords="804,71,1074,111"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="772,71,804,75,804,80,772,77"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BaseCommandPlugin.html" title=" " alt="" coords="170,39,439,79"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="455,56,487,56,487,62,455,62"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="5,46,122,72"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="137,56,169,56,169,62,137,62"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="595,39,864,79"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ImportanceAtLeast.html" title=" " alt="" coords="912,5,1182,46"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="880,41,912,37,912,42,880,46"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RepGTE.html" title=" " alt="" coords="912,71,1182,111"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="880,71,912,75,912,80,880,77"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BaseCommandPlugin.html" title=" " alt="" coords="278,39,547,79"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="563,56,595,56,595,62,563,62"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1CommandPlugin.html" title=" " alt="" coords="5,39,230,79"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="245,56,277,56,277,62,245,62"/>
 </map>

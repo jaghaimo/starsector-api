@@ -2,6 +2,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleCreationContext =
 [
     [ "BattleCreationContext", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleCreationContext.html#aafa3c8a30e701db1289735b47af2cd5d", null ],
     [ "getEscapeDeploymentBurnDuration", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleCreationContext.html#ab80811521a0d6b3e0ede09a46b768925", null ],
+    [ "getExtraEnemyStandoffRange", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleCreationContext.html#a52df4149222f04ef2050ebc8532e1320", null ],
     [ "getFlankDeploymentDistance", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleCreationContext.html#acd76b3fb0c96dc134504ef55fff5cc65", null ],
     [ "getInitialDeploymentBurnDuration", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleCreationContext.html#a29048646438e742cedb7e2abf6ac1f27", null ],
     [ "getInitialEscapeRange", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleCreationContext.html#a0271fb4db41005d8bcc7cf0a4b9eab10", null ],
@@ -27,6 +28,8 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleCreationContext =
     [ "setStandoffRange", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleCreationContext.html#a9d39837aca3e0db7b38eb4c715be9799", null ],
     [ "aiRetreatAllowed", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleCreationContext.html#a3154d19b2e0037138608bbde407d4816", null ],
     [ "enemyDeployAll", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleCreationContext.html#aba642cc3adfd0bdd5f19d6ec93301c66", null ],
+    [ "extraEnemyStandoffRange", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleCreationContext.html#acf7562d19af76f938c45522d7bba8a15", null ],
     [ "fightToTheLast", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleCreationContext.html#a88e26ef21206ee1d24957403fb876a52", null ],
+    [ "forceObjectivesOnMap", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleCreationContext.html#a71ebe393034bfd9e19c0b6f9d43e05d5", null ],
     [ "objectivesAllowed", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BattleCreationContext.html#a5aae5fc8b699c95c9a2c5f34b3e84fda", null ]
 ];

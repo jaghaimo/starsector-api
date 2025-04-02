@@ -1,0 +1,22 @@
+<map id="com.fs.starfarer.api.impl.combat.dweller.DwellerCombatPlugin" name="com.fs.starfarer.api.impl.combat.dweller.DwellerCombatPlugin">
+<area shape="rect" id="Node000001" title=" " alt="" coords="790,285,1041,326"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseCombatLayeredRenderingPlugin.html" title=" " alt="" coords="318,84,554,125"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="570,107,669,124,720,139,767,159,810,187,848,221,902,283,898,287,844,224,807,191,765,164,718,144,668,129,569,112"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatLayeredRenderingPlugin.html" title=" " alt="" coords="5,5,212,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="212,48,349,81,348,86,210,53"/>
+<area shape="rect" id="Node000004" href="$enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineLayers.html" title=" " alt="" coords="18,71,199,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="214,93,318,97,317,102,214,98"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html" title=" " alt="" coords="18,148,199,189"/>
+<area shape="poly" id="edge7_Node000001_Node000005" title=" " alt="" coords="214,168,329,173,468,186,619,207,767,240,824,260,874,282,872,287,822,265,765,246,618,213,468,191,329,179,214,173"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="213,145,328,123,329,128,214,150"/>
+<area shape="rect" id="Node000006" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1HullDamageAboutToBeTakenListener.html" title=" " alt="" coords="316,228,556,269"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="572,249,668,256,766,267,840,282,838,287,766,272,667,261,572,254"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="410,293,462,318"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="477,303,790,303,790,308,477,308"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="294,343,578,383"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="593,344,766,323,789,320,790,326,766,329,594,349"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="310,408,562,449"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="576,405,670,386,765,362,867,324,869,329,767,367,671,391,577,410"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="314,473,558,514"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="573,475,669,454,718,439,765,420,803,398,838,373,893,324,896,328,841,377,805,403,767,424,720,444,671,459,574,481"/>
+</map>

@@ -11,6 +11,7 @@ var dir_fdf15121ba5edd62cdbc4363243ec9a4 =
     [ "CommerceBountyManager.java", "CommerceBountyManager_8java.html", "CommerceBountyManager_8java" ],
     [ "DiktatFuelBonusScript.java", "DiktatFuelBonusScript_8java.html", "DiktatFuelBonusScript_8java" ],
     [ "DisposableHostileActivityFleetManager.java", "DisposableHostileActivityFleetManager_8java.html", "DisposableHostileActivityFleetManager_8java" ],
+    [ "EstablishedPolityScript.java", "EstablishedPolityScript_8java.html", "EstablishedPolityScript_8java" ],
     [ "EventFactor.java", "EventFactor_8java.html", "EventFactor_8java" ],
     [ "HABlowbackFactor.java", "HABlowbackFactor_8java.html", "HABlowbackFactor_8java" ],
     [ "HAColonyDefensesFactor.java", "HAColonyDefensesFactor_8java.html", "HAColonyDefensesFactor_8java" ],

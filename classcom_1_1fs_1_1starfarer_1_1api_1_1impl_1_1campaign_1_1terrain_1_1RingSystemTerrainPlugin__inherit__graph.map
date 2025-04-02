@@ -1,9 +1,9 @@
 <map id="com.fs.starfarer.api.impl.campaign.terrain.RingSystemTerrainPlugin" name="com.fs.starfarer.api.impl.campaign.terrain.RingSystemTerrainPlugin">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,256,265,297"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseRingTerrain.html" title=" " alt="" coords="5,168,265,208"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,224,138,256,132,256,132,224"/>
-<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html" title=" " alt="" coords="5,79,265,120"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="138,135,138,167,132,167,132,135"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="57,5,213,31"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="138,46,138,79,132,79,132,46"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,271,265,312"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseRingTerrain.html" title=" " alt="" coords="5,183,265,223"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,239,138,271,132,271,132,239"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html" title=" " alt="" coords="5,94,265,135"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="138,150,138,182,132,182,132,150"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignTerrainPlugin.html" title=" " alt="" coords="38,5,232,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="138,62,138,94,132,94,132,62"/>
 </map>

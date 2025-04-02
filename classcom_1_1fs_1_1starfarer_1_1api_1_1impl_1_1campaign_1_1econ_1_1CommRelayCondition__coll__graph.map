@@ -1,7 +1,15 @@
 <map id="com.fs.starfarer.api.impl.campaign.econ.CommRelayCondition" name="com.fs.starfarer.api.impl.campaign.econ.CommRelayCondition">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,168,257,208"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin.html" title=" " alt="" coords="5,79,257,120"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="134,135,134,167,128,167,128,135"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="55,5,207,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="134,46,134,79,128,79,128,46"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="986,119,1237,159"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1BaseMarketConditionPlugin.html" title=" " alt="" coords="628,71,879,111"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="895,107,986,120,985,125,894,113"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketConditionPlugin.html" title=" " alt="" coords="279,5,503,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="519,46,637,67,637,73,518,51"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html" title=" " alt="" coords="279,71,503,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="519,88,628,88,628,94,519,94"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,71,230,111"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="245,88,278,88,278,94,245,94"/>
+<area shape="rect" id="Node000006" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketConditionAPI.html" title=" " alt="" coords="279,136,503,177"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="518,131,637,109,637,115,519,136"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="606,136,901,177"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="916,146,985,142,986,148,916,151"/>
 </map>

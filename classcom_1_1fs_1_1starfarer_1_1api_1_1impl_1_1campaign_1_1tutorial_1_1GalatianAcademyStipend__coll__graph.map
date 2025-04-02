@@ -1,7 +1,7 @@
 <map id="com.fs.starfarer.api.impl.campaign.tutorial.GalatianAcademyStipend" name="com.fs.starfarer.api.impl.campaign.tutorial.GalatianAcademyStipend">
-<area shape="rect" id="Node000001" title=" " alt="" coords="21,79,283,120"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,152,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="102,41,136,77,132,80,98,44"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="175,5,278,31"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="207,44,172,80,168,77,203,41"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="299,39,561,79"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1EconomyTickListener.html" title=" " alt="" coords="5,5,251,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="266,38,298,42,298,47,266,44"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI_1_1TooltipCreator.html" title=" " alt="" coords="27,71,229,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="245,76,298,70,298,76,245,81"/>
 </map>

@@ -1,0 +1,15 @@
+<map id="com.fs.starfarer.api.impl.combat.threat.FragmentWeapon" name="com.fs.starfarer.api.impl.combat.threat.FragmentWeapon">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,137,249,178"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1BaseFragmentMissileEffect.html" title=" " alt="" coords="297,104,540,145"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="264,139,296,136,297,141,264,145"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1VoltaicDischargeOnFireEffect.html" title=" " alt="" coords="297,169,540,210"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="264,170,297,174,296,179,264,175"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1DevouringSwarmMissileEffect.html" title=" " alt="" coords="588,5,831,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="483,95,587,56,628,44,629,49,589,62,484,100"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1KineticFragmentMissileEffect.html" title=" " alt="" coords="588,71,831,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="555,106,587,102,588,108,556,111"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1SeekerFragmentMissileEffect.html" title=" " alt="" coords="588,136,831,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="556,137,588,140,587,146,555,142"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1UnstableFragmentMissileEffect.html" title=" " alt="" coords="588,201,831,242"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="522,148,541,155,565,171,589,186,622,198,620,203,587,191,563,175,539,160,520,153"/>
+</map>

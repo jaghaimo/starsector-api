@@ -1,27 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" title=" " alt="" coords="5,308,207,333"/>
-<area shape="rect" id="Node000001" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CommRelayScript.html" title=" " alt="" coords="255,5,508,46"/>
-<area shape="poly" id="edge681_Node000000_Node000001" title=" " alt="" coords="113,292,130,241,159,178,199,112,224,83,253,57,274,44,276,49,256,61,228,86,204,116,163,180,135,243,118,293"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1CoordinatedManeuversScript.html" title=" " alt="" coords="255,71,508,111"/>
-<area shape="poly" id="edge682_Node000000_Node000002" title=" " alt="" coords="118,292,139,254,169,208,207,161,253,122,276,110,279,114,256,127,211,165,173,211,143,256,123,294"/>
-<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ElectronicWarfareScript.html" title=" " alt="" coords="255,136,508,177"/>
-<area shape="poly" id="edge683_Node000000_Node000003" title=" " alt="" coords="127,294,180,240,215,212,253,187,282,175,284,180,256,192,219,216,184,244,130,298"/>
-<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1NeuralLinkScript.html" title=" " alt="" coords="255,201,508,242"/>
-<area shape="poly" id="edge684_Node000000_Node000004" title=" " alt="" coords="147,298,254,252,293,240,295,245,256,258,149,303"/>
-<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1EscapeRevealPlugin.html" title=" " alt="" coords="278,267,485,307"/>
-<area shape="poly" id="edge685_Node000000_Node000005" title=" " alt="" coords="222,304,277,297,278,302,223,309"/>
-<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1GenericCombatPlugin.html" title=" " alt="" coords="278,332,485,373"/>
-<area shape="poly" id="edge686_Node000000_Node000006" title=" " alt="" coords="223,331,278,338,277,343,222,336"/>
-<area shape="rect" id="Node000007" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1GravityPullEffect.html" title=" " alt="" coords="278,397,485,438"/>
-<area shape="poly" id="edge687_Node000000_Node000007" title=" " alt="" coords="149,338,256,382,295,394,293,399,254,387,147,343"/>
-<area shape="rect" id="Node000008" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1LowCRShipDamageSequence.html" title=" " alt="" coords="278,463,485,503"/>
-<area shape="poly" id="edge688_Node000000_Node000008" title=" " alt="" coords="130,343,184,396,219,424,256,447,284,460,282,465,253,452,216,428,181,400,127,347"/>
-<area shape="rect" id="Node000009" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftTrailEffect.html" title=" " alt="" coords="278,528,485,569"/>
-<area shape="poly" id="edge689_Node000000_Node000009" title=" " alt="" coords="123,346,144,384,173,429,211,474,256,513,279,525,276,530,253,517,207,478,169,432,139,387,118,349"/>
-<area shape="rect" id="Node000010" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dem_1_1DEMScript.html" title=" " alt="" coords="264,593,499,634"/>
-<area shape="poly" id="edge690_Node000000_Node000010" title=" " alt="" coords="118,347,135,397,164,460,204,524,228,553,256,578,276,591,274,595,253,582,225,557,200,527,159,463,130,399,113,349"/>
-<area shape="rect" id="Node000011" title=" " alt="" coords="50,633,162,659"/>
-<area shape="poly" id="edge692_Node000011_Node000010" title=" " alt="" coords="176,635,263,625,263,630,177,640"/>
-<area shape="rect" id="Node000012" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteAIScript.html" title=" " alt="" coords="278,659,485,699"/>
-<area shape="poly" id="edge691_Node000011_Node000012" title=" " alt="" coords="177,652,277,664,277,669,176,657"/>
+<area shape="rect" id="Node000000" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BattleAutoresolverPlugin.html" title=" " alt="" coords="5,5,199,46"/>
+<area shape="rect" id="Node000001" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BattleAutoresolverPluginImpl.html" title=" " alt="" coords="247,5,467,46"/>
+<area shape="poly" id="edge13_Node000000_Node000001" title=" " alt="" coords="214,23,246,23,246,28,214,28"/>
 </map>

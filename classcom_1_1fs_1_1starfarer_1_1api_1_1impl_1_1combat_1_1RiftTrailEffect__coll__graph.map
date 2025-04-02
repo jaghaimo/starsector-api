@@ -1,5 +1,20 @@
 <map id="com.fs.starfarer.api.impl.combat.RiftTrailEffect" name="com.fs.starfarer.api.impl.combat.RiftTrailEffect">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,79,213,120"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="8,5,210,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="112,46,112,79,106,79,106,46"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="938,95,1145,135"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseEveryFrameCombatPlugin.html" title=" " alt="" coords="644,5,845,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="830,48,972,91,970,97,828,53"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1EveryFrameCombatPlugin.html" title=" " alt="" coords="235,5,415,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="431,23,643,23,643,28,431,28"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEnginePlugin.html" title=" " alt="" coords="5,5,186,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="201,23,235,23,235,28,201,28"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html" title=" " alt="" coords="667,71,822,111"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="837,96,938,104,938,109,837,101"/>
+<area shape="rect" id="Node000006" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html" title=" " alt="" coords="654,136,834,177"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="850,139,937,127,938,132,850,144"/>
+<area shape="rect" id="Node000007" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamagingProjectileAPI.html" title=" " alt="" coords="235,137,415,178"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="431,155,654,154,654,159,431,160"/>
+<area shape="rect" id="Node000008" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html" title=" " alt="" coords="5,172,186,213"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="200,174,234,169,235,174,201,179"/>
+<area shape="rect" id="Node000009" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html" title=" " alt="" coords="439,195,620,235"/>
+<area shape="poly" id="edge9_Node000009_Node000008" title=" " alt="" coords="201,195,439,208,439,213,201,200"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="635,218,737,216,792,210,844,201,889,187,932,170,1004,133,1007,138,934,175,891,192,846,206,792,216,738,221,635,224"/>
 </map>

@@ -7,6 +7,9 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1RuleBasedInteracti
     [ "fireAll", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1RuleBasedInteractionDialogPluginImpl.html#a989aee4320855b19285de9f466343dd1", null ],
     [ "fireBest", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1RuleBasedInteractionDialogPluginImpl.html#a82e4c3eface6eefe6a43215f565e9fd7", null ],
     [ "getContext", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1RuleBasedInteractionDialogPluginImpl.html#abc09b9fe8c23e9b4713f141926b72928", null ],
+    [ "getCustom1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1RuleBasedInteractionDialogPluginImpl.html#a0f0e53bb14f7e4d6997827dafe0ad268", null ],
+    [ "getCustom2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1RuleBasedInteractionDialogPluginImpl.html#a1f3d0de6dac200a60235b16c661f1fc0", null ],
+    [ "getCustom3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1RuleBasedInteractionDialogPluginImpl.html#a84e95f330eedc11e21f2c225fe7a9d41", null ],
     [ "getMemoryMap", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1RuleBasedInteractionDialogPluginImpl.html#a0a8f450fdb4e34646665756adf199ef0", null ],
     [ "init", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1RuleBasedInteractionDialogPluginImpl.html#ab6ea23a9a1f09523fe396dcf67f37a6d", null ],
     [ "notifyActivePersonChanged", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1RuleBasedInteractionDialogPluginImpl.html#ad2fb5415c2e7355fcdf4b255a9d4ac1c", null ],
@@ -14,6 +17,9 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1RuleBasedInteracti
     [ "optionSelected", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1RuleBasedInteractionDialogPluginImpl.html#a6982f0ef1d96ad3bbe576c892aedeace", null ],
     [ "reinit", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1RuleBasedInteractionDialogPluginImpl.html#a815696fd594d576818f1ddcbaad2bc30", null ],
     [ "setActiveMission", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1RuleBasedInteractionDialogPluginImpl.html#a74ccf1868f0a695adf9c650a4ac50dc2", null ],
+    [ "setCustom1", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1RuleBasedInteractionDialogPluginImpl.html#a723084d8e571774040f49e11a6d94c21", null ],
+    [ "setCustom2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1RuleBasedInteractionDialogPluginImpl.html#aac021348c0f82baee2231b5c697b56ac", null ],
+    [ "setCustom3", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1RuleBasedInteractionDialogPluginImpl.html#af7196adc94d617536f2e62f762ef773e", null ],
     [ "setEmbeddedMode", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1RuleBasedInteractionDialogPluginImpl.html#a3f540c6e11e7dbb25b07d808567a8494", null ],
     [ "updateMemory", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1RuleBasedInteractionDialogPluginImpl.html#ae1e7de592534e1aa438cfbed0d9445ba", null ]
 ];

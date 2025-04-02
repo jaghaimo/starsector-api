@@ -1,5 +1,9 @@
 <map id="com.fs.starfarer.api.impl.combat.LowCRShipDamageSequence" name="com.fs.starfarer.api.impl.combat.LowCRShipDamageSequence">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,79,213,120"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="8,5,210,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="112,46,112,79,106,79,106,46"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,271,213,312"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseEveryFrameCombatPlugin.html" title=" " alt="" coords="8,183,210,223"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="112,239,112,271,106,271,106,239"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1EveryFrameCombatPlugin.html" title=" " alt="" coords="19,94,199,135"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="112,150,112,182,106,182,106,150"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEnginePlugin.html" title=" " alt="" coords="19,5,199,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="112,62,112,94,106,94,106,62"/>
 </map>

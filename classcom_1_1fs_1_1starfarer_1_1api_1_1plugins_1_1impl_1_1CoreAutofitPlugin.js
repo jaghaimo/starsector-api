@@ -15,6 +15,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin =
     [ "addModsWithSpareOPIfAny", "classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#a29f670c3271198bf2256e7d08087216a", null ],
     [ "addRandomizedHullmodsPost", "classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#a83302cd5b3e5858b5958bcb05dd9c85a", null ],
     [ "addRandomizedHullmodsPre", "classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#a2347c43a69212ec50f3351ad273fba86", null ],
+    [ "addSMods", "classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#aec0707f9c33c9f58628391c48e805e5c", null ],
     [ "addVents", "classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#a717f75b3de306ba0f764b6249143740d", null ],
     [ "addVentsAndCaps", "classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#a17dd86678931340f20244b0153375127", null ],
     [ "autoAssignOfficers", "classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#ad12cba0ab711082169328beb1c734cda", null ],

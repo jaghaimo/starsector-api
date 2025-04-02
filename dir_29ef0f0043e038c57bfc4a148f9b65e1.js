@@ -36,6 +36,11 @@ var dir_29ef0f0043e038c57bfc4a148f9b65e1 =
     [ "PlayerVisibleFleetManager.java", "PlayerVisibleFleetManager_8java.html", "PlayerVisibleFleetManager_8java" ],
     [ "RouteLocationCalculator.java", "RouteLocationCalculator_8java.html", "RouteLocationCalculator_8java" ],
     [ "RouteManager.java", "RouteManager_8java.html", "RouteManager_8java" ],
+    [ "SDFBase.java", "SDFBase_8java.html", "SDFBase_8java" ],
+    [ "SDFHegemony.java", "SDFHegemony_8java.html", "SDFHegemony_8java" ],
+    [ "SDFLeague.java", "SDFLeague_8java.html", "SDFLeague_8java" ],
+    [ "SDFLuddicChurch.java", "SDFLuddicChurch_8java.html", "SDFLuddicChurch_8java" ],
+    [ "SDFTriTachyon.java", "SDFTriTachyon_8java.html", "SDFTriTachyon_8java" ],
     [ "SeededFleetManager.java", "SeededFleetManager_8java.html", "SeededFleetManager_8java" ],
     [ "SourceBasedFleetManager.java", "SourceBasedFleetManager_8java.html", "SourceBasedFleetManager_8java" ]
 ];

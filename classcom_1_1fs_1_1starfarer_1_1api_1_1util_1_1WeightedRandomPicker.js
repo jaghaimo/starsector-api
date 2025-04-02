@@ -10,6 +10,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker =
     [ "clear", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html#a5c46abc5a17513cfc2ba11abb6bdde4c", null ],
     [ "clone", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html#a1d7d76b56957fd53c5474db6e43fe705", null ],
     [ "getItems", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html#a80644bc192a44cee131215406b3a61c6", null ],
+    [ "getItemWithHighestWeight", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html#a1faa24af55b3e62ff97bf6cdbc15f09b", null ],
     [ "getRandom", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html#ac5cb273dc8e34771a748d03ae97f76c3", null ],
     [ "getTotal", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html#af4c7ee135efe1bc3cc3ae19b932ea92f", null ],
     [ "getWeight", "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html#ab3a6072025f01900a9583c18571a82e6", null ],

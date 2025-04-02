@@ -1,5 +1,9 @@
 <map id="com.fs.starfarer.api.impl.campaign.population.CoreImmigrationPluginImpl" name="com.fs.starfarer.api.impl.campaign.population.CoreImmigrationPluginImpl">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,79,288,120"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="84,5,209,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="149,46,149,79,144,79,144,46"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="594,37,877,78"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1ImmigrationPlugin.html" title=" " alt="" coords="279,5,503,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="519,35,594,42,594,47,519,40"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html" title=" " alt="" coords="279,71,503,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="519,76,594,69,594,74,519,81"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,71,230,111"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="245,88,278,88,278,94,245,94"/>
 </map>

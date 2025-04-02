@@ -1,17 +1,17 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" title=" " alt="" coords="5,177,111,203"/>
-<area shape="rect" id="Node000001" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1BaseAbilityAI.html" title=" " alt="" coords="159,169,439,210"/>
-<area shape="poly" id="edge18_Node000000_Node000001" title=" " alt="" coords="126,187,158,187,158,192,126,192"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1EmergencyBurnAbilityAI.html" title=" " alt="" coords="487,5,767,46"/>
-<area shape="poly" id="edge19_Node000001_Node000002" title=" " alt="" coords="334,157,402,105,443,79,486,57,519,44,521,49,488,61,445,84,405,110,337,161"/>
-<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1GoDarkAbilityAI.html" title=" " alt="" coords="487,71,767,111"/>
-<area shape="poly" id="edge20_Node000001_Node000003" title=" " alt="" coords="368,161,486,122,532,109,534,115,488,127,370,166"/>
-<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1InterdictionPulseAbilityAI.html" title=" " alt="" coords="487,136,767,177"/>
-<area shape="poly" id="edge21_Node000001_Node000004" title=" " alt="" coords="454,171,486,168,487,173,455,177"/>
-<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1SensorBurstAbilityAI.html" title=" " alt="" coords="487,201,767,242"/>
-<area shape="poly" id="edge22_Node000001_Node000005" title=" " alt="" coords="455,202,487,205,486,211,454,207"/>
-<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1SustainedBurnAbilityAI.html" title=" " alt="" coords="487,267,767,307"/>
-<area shape="poly" id="edge23_Node000001_Node000006" title=" " alt="" coords="372,213,488,251,534,263,533,269,486,256,370,218"/>
-<area shape="rect" id="Node000007" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1TransponderAbilityAI.html" title=" " alt="" coords="487,332,767,373"/>
-<area shape="poly" id="edge24_Node000001_Node000007" title=" " alt="" coords="337,218,405,269,446,295,488,317,521,329,519,334,486,321,443,299,402,273,334,222"/>
+<area shape="rect" id="Node000000" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1AbilityAIPlugin.html" title=" " alt="" coords="5,169,212,210"/>
+<area shape="rect" id="Node000001" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1BaseAbilityAI.html" title=" " alt="" coords="260,169,540,210"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="227,187,259,187,259,192,227,192"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1EmergencyBurnAbilityAI.html" title=" " alt="" coords="588,5,868,46"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="435,157,503,105,544,79,587,57,620,44,622,49,589,61,546,84,506,110,438,161"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1GoDarkAbilityAI.html" title=" " alt="" coords="588,71,868,111"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="469,161,587,122,633,109,635,115,589,127,471,166"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1InterdictionPulseAbilityAI.html" title=" " alt="" coords="588,136,868,177"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="555,171,587,168,588,173,556,177"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1SensorBurstAbilityAI.html" title=" " alt="" coords="588,201,868,242"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="556,202,588,205,587,211,555,207"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1SustainedBurnAbilityAI.html" title=" " alt="" coords="588,267,868,307"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="473,213,589,251,635,263,634,269,587,256,471,218"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1TransponderAbilityAI.html" title=" " alt="" coords="588,332,868,373"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="438,218,506,269,547,295,589,317,622,329,620,334,587,321,544,299,503,273,435,222"/>
 </map>

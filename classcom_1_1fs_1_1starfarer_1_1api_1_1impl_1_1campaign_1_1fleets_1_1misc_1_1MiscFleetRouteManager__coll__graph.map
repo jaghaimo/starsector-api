@@ -1,11 +1,23 @@
 <map id="com.fs.starfarer.api.impl.campaign.fleets.misc.MiscFleetRouteManager" name="com.fs.starfarer.api.impl.campaign.fleets.misc.MiscFleetRouteManager">
-<area shape="rect" id="Node000001" title=" " alt="" coords="522,63,807,103"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseRouteFleetManager.html" title=" " alt="" coords="220,33,474,74"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="490,64,522,67,521,72,490,70"/>
-<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="5,5,172,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="188,34,219,37,219,42,187,39"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="21,70,156,96"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="171,71,219,65,220,71,172,76"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="282,98,412,124"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="427,101,522,93,522,98,428,107"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="794,259,1079,299"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseRouteFleetManager.html" title=" " alt="" coords="385,71,639,111"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="647,113,672,122,741,153,807,190,908,256,905,260,804,194,739,158,670,127,646,118"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="49,5,216,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="231,40,390,67,389,73,230,45"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,71,260,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="275,88,384,88,384,94,275,94"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html" title=" " alt="" coords="55,136,210,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="225,138,389,109,390,115,225,143"/>
+<area shape="rect" id="Node000006" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1FleetEventListener.html" title=" " alt="" coords="389,136,634,177"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="636,178,672,187,784,222,881,256,879,261,782,227,670,192,635,183"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="353,201,671,242"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="683,242,794,257,793,262,682,247"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="481,266,542,292"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="558,276,794,276,794,282,558,282"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="396,316,628,357"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="643,316,793,296,794,301,644,321"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="477,381,546,406"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="561,385,670,366,784,332,881,297,883,302,785,337,672,371,562,391"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="454,430,570,456"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="585,433,670,416,739,392,805,360,862,327,905,298,908,302,865,331,807,365,741,397,672,422,586,438"/>
 </map>

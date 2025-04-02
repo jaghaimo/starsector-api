@@ -1,7 +1,7 @@
 <map id="com.fs.starfarer.api.impl.campaign.RuleBasedInteractionDialogPluginImpl" name="com.fs.starfarer.api.impl.campaign.RuleBasedInteractionDialogPluginImpl">
-<area shape="rect" id="Node000001" title=" " alt="" coords="41,79,284,120"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,160,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,40,145,77,141,81,104,44"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="184,5,304,31"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="222,44,184,81,181,77,219,40"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="247,39,489,79"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogPlugin.html" title=" " alt="" coords="5,5,199,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="214,37,246,41,246,46,214,42"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RuleBasedDialog.html" title=" " alt="" coords="5,71,199,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="214,75,246,71,246,76,215,80"/>
 </map>

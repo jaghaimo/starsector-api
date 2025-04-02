@@ -1,7 +1,19 @@
 <map id="com.fs.starfarer.api.impl.campaign.intel.inspection.HegemonyInspectionIntel" name="com.fs.starfarer.api.impl.campaign.intel.inspection.HegemonyInspectionIntel">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,79,315,120"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="69,5,142,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="124,42,149,77,144,80,120,45"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="166,5,264,31"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="200,45,176,80,171,77,196,42"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="991,169,1301,210"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidIntel.html" title=" " alt="" coords="672,136,943,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="959,169,991,172,990,177,958,174"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html" title=" " alt="" coords="373,104,620,145"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="636,136,672,140,671,145,635,141"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html" title=" " alt="" coords="47,5,280,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="289,48,322,56,447,101,445,106,321,62,288,53"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="29,71,298,111"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="314,103,373,109,372,115,313,109"/>
+<area shape="rect" id="Node000006" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="80,136,247,177"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="262,144,373,134,373,139,262,150"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="5,201,322,242"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="299,194,320,186,344,171,368,155,402,143,404,148,371,160,347,175,323,191,301,199"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="370,169,624,210"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="639,172,672,168,672,174,640,177"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="672,201,943,242"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="958,205,990,202,991,207,959,210"/>
 </map>

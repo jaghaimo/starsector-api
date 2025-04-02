@@ -28,5 +28,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignTerrainPlugin 
     [ "renderOnMap", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignTerrainPlugin.html#a60619381b1f22ca68fef8d59e296668f", null ],
     [ "renderOnMapAbove", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignTerrainPlugin.html#aef1a7fa3c00f21d4196ddbbe6599d02e", null ],
     [ "renderOnRadar", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignTerrainPlugin.html#aa26b8d1b8fb75e0077ce93ac1389e473", null ],
+    [ "setEntity", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignTerrainPlugin.html#a222d17971f560586d29a98ab609a75fe", null ],
+    [ "setTerrainId", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignTerrainPlugin.html#a9b374cd38ef830dfcc10db873e509591", null ],
     [ "setTerrainName", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignTerrainPlugin.html#afedf8bbb812663b755588e77ff253edf", null ]
 ];

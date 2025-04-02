@@ -1,7 +1,17 @@
 <map id="com.fs.starfarer.api.impl.campaign.terrain.SlipstreamTerrainPlugin" name="com.fs.starfarer.api.impl.campaign.terrain.SlipstreamTerrainPlugin">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,168,265,208"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html" title=" " alt="" coords="5,79,265,120"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,135,138,167,132,167,132,135"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="57,5,213,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="138,46,138,79,132,79,132,46"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="987,128,1246,169"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html" title=" " alt="" coords="572,29,832,70"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="811,71,850,80,963,107,1034,125,1033,130,962,112,849,86,810,77"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignTerrainPlugin.html" title=" " alt="" coords="279,5,472,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="488,31,572,37,572,43,488,37"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="279,71,472,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="487,74,572,63,572,69,488,80"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,71,230,111"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="245,88,279,88,279,94,245,94"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="587,95,817,135"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="832,123,986,135,986,141,832,128"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="587,160,817,201"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="832,168,986,156,986,161,832,173"/>
+<area shape="rect" id="Node000008" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html" title=" " alt="" coords="554,224,850,280"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="830,218,1031,167,1033,172,831,223"/>
 </map>

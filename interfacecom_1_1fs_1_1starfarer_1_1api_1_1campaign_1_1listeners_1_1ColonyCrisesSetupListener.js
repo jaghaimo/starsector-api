@@ -1,0 +1,4 @@
+var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1ColonyCrisesSetupListener =
+[
+    [ "finishedAddingCrisisFactors", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1ColonyCrisesSetupListener.html#a4d6bed21d9c1cb6a25e2f91adca6a083", null ]
+];

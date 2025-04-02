@@ -23,6 +23,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetPar
     [ "doNotIntegrateAICores", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html#ac29a103ce5077ed1272f819b83128e3b", null ],
     [ "doNotPrune", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html#a5df94c7c08d55496e740b802bb86b91d", null ],
     [ "factionId", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html#aeb02d916a36ee0bbd442d7103c5a25c9", null ],
+    [ "factionOverride", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html#a300419a1d408a64f941d43bb0a688c6d", null ],
     [ "flagshipVariant", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html#afdb03193da228bbe76eda9825ebe4aea", null ],
     [ "flagshipVariantId", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html#a863476b9ef459ff22d203c2f541e994b", null ],
     [ "fleetType", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html#a05f706ea12af67d28b8380a6a9277c04", null ],

@@ -1,15 +1,15 @@
 <map id="com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.BlueprintOfferCreator" name="com.fs.starfarer.api.impl.campaign.intel.bar.events.historian.BlueprintOfferCreator">
-<area shape="rect" id="Node000001" title=" " alt="" coords="607,104,969,145"/>
-<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1FighterBlueprintOfferCreator.html" title=" " alt="" coords="1017,5,1380,46"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="869,97,1017,56,1075,44,1076,49,1018,62,871,102"/>
-<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1ShipBlueprintOfferCreator.html" title=" " alt="" coords="1017,71,1380,111"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="984,106,1017,103,1017,108,985,111"/>
-<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1SpecialItemOfferCreator.html" title=" " alt="" coords="1017,136,1380,177"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="985,137,1017,140,1017,145,985,142"/>
-<area shape="rect" id="Node000007" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1WeaponBlueprintOfferCreator.html" title=" " alt="" coords="1017,201,1380,242"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="873,147,1018,186,1076,198,1075,203,1017,191,871,152"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1BaseHistorianOfferCreator.html" title=" " alt="" coords="197,104,559,145"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="574,122,607,122,607,127,574,127"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="5,112,149,137"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="164,122,196,122,196,127,164,127"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="826,104,1188,145"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1FighterBlueprintOfferCreator.html" title=" " alt="" coords="1236,5,1599,46"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="1088,97,1236,56,1294,44,1295,49,1237,62,1090,102"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1ShipBlueprintOfferCreator.html" title=" " alt="" coords="1236,71,1599,111"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="1203,106,1236,103,1236,108,1204,111"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1SpecialItemOfferCreator.html" title=" " alt="" coords="1236,136,1599,177"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="1204,137,1236,140,1236,145,1204,142"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1WeaponBlueprintOfferCreator.html" title=" " alt="" coords="1236,201,1599,242"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="1092,147,1237,186,1295,198,1294,203,1236,191,1090,152"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1BaseHistorianOfferCreator.html" title=" " alt="" coords="416,104,778,145"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="793,122,826,122,826,127,793,127"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,104,368,145"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="383,122,415,122,415,127,383,127"/>
 </map>

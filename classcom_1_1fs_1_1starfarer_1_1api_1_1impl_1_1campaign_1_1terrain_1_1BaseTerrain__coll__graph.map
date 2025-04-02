@@ -1,5 +1,9 @@
 <map id="com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain" name="com.fs.starfarer.api.impl.campaign.terrain.BaseTerrain">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,79,265,120"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="57,5,213,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,46,138,79,132,79,132,46"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="554,37,814,78"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignTerrainPlugin.html" title=" " alt="" coords="279,5,472,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="488,35,554,42,554,47,487,40"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="279,71,472,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="487,76,554,69,554,74,488,82"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,71,230,111"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="245,88,279,88,279,94,245,94"/>
 </map>

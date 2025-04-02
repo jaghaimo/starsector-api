@@ -1,0 +1,19 @@
+<map id="com.fs.starfarer.api.impl.combat.threat.ThreatShipConstructionScript" name="com.fs.starfarer.api.impl.combat.threat.ThreatShipConstructionScript">
+<area shape="rect" id="Node000001" title=" " alt="" coords="820,136,1063,177"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseEveryFrameCombatPlugin.html" title=" " alt="" coords="471,5,672,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="688,44,743,59,797,77,857,104,909,133,906,138,855,109,795,81,741,64,686,50"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1EveryFrameCombatPlugin.html" title=" " alt="" coords="235,5,415,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="431,23,470,23,470,28,431,28"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEnginePlugin.html" title=" " alt="" coords="5,5,186,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="201,23,235,23,235,28,201,28"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html" title=" " alt="" coords="481,71,662,111"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="678,107,823,133,822,138,677,112"/>
+<area shape="rect" id="Node000006" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html" title=" " alt="" coords="235,71,415,111"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="431,88,481,88,481,94,431,94"/>
+<area shape="rect" id="Node000007" href="$enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CollisionClass.html" title=" " alt="" coords="481,136,662,177"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="677,154,819,154,819,159,677,159"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="465,201,678,242"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="693,198,822,175,823,180,694,203"/>
+<area shape="rect" id="Node000009" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html" title=" " alt="" coords="494,267,648,307"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="663,260,795,217,895,175,897,180,797,222,664,265"/>
+</map>

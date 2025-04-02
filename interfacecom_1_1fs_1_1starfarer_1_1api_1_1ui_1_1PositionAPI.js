@@ -22,6 +22,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1PositionAPI =
     [ "inTL", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1PositionAPI.html#a2e8d9056648d9f94d794e873210800a8", null ],
     [ "inTMid", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1PositionAPI.html#a3edcdb7ca6db80521263bfcb115de677", null ],
     [ "inTR", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1PositionAPI.html#ad02d7210f2195b7de28e73a651ff31c9", null ],
+    [ "isSuspendRecompute", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1PositionAPI.html#a3a5c2c68a08414af94d6596b3b017335", null ],
     [ "leftOfBottom", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1PositionAPI.html#a2cadc70690977fb726cfe94a5287f35c", null ],
     [ "leftOfMid", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1PositionAPI.html#aa6c2fae5d2bf17b3076c2691b3251760", null ],
     [ "leftOfTop", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1PositionAPI.html#abb3d695e96a174e6ae48e7552065f4a7", null ],
@@ -30,6 +31,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1PositionAPI =
     [ "rightOfTop", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1PositionAPI.html#a8a87de7c816bec17dc310e993648765c", null ],
     [ "setLocation", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1PositionAPI.html#ad83be075d595b5828cab7c8e8f39f09f", null ],
     [ "setSize", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1PositionAPI.html#a50ad9c8a61458e4bedf3afda0c1aa99a", null ],
+    [ "setSuspendRecompute", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1PositionAPI.html#a82cf3ca82ff2f7e0661502a19eee8221", null ],
     [ "setXAlignOffset", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1PositionAPI.html#a737801acf720467557c61f2865381121", null ],
     [ "setYAlignOffset", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1PositionAPI.html#a0140bc099da573e716303492486aecc6", null ]
 ];

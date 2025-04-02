@@ -1,6 +1,7 @@
 var dir_e20b055f7d864bb97c3a1051b27f9ff4 =
 [
     [ "AbyssalFrequencies.java", "AbyssalFrequencies_8java.html", "AbyssalFrequencies_8java" ],
+    [ "AbyssalLightDwellerEPEC.java", "AbyssalLightDwellerEPEC_8java.html", "AbyssalLightDwellerEPEC_8java" ],
     [ "AbyssalLightEPEC.java", "AbyssalLightEPEC_8java.html", "AbyssalLightEPEC_8java" ],
     [ "AbyssalLocationDespawner.java", "AbyssalLocationDespawner_8java.html", "AbyssalLocationDespawner_8java" ],
     [ "AbyssalNoEPEC.java", "AbyssalNoEPEC_8java.html", "AbyssalNoEPEC_8java" ],

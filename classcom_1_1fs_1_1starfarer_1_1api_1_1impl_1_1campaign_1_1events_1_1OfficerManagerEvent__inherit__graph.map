@@ -1,15 +1,16 @@
 <map id="com.fs.starfarer.api.impl.campaign.events.OfficerManagerEvent" name="com.fs.starfarer.api.impl.campaign.events.OfficerManagerEvent">
-<area shape="rect" id="Node000001" title=" " alt="" coords="523,105,785,145"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html" title=" " alt="" coords="213,22,475,63"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="447,64,476,72,582,101,581,106,474,77,446,69"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="11,5,159,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="175,24,213,27,212,33,175,29"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="5,55,165,80"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="180,56,212,52,213,58,181,61"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="294,87,394,112"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="410,102,523,111,522,117,409,107"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="260,136,428,162"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="443,139,522,132,523,138,444,144"/>
-<area shape="rect" id="Node000007" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="261,186,427,227"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="441,180,474,172,579,143,580,148,476,177,443,185"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="916,75,1179,115"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html" title=" " alt="" coords="606,41,868,82"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="884,75,916,78,916,84,884,80"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventPlugin.html" title=" " alt="" coords="323,41,558,82"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="573,59,606,59,606,64,573,64"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,13,275,54"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="290,15,415,6,561,3,716,8,793,16,869,27,941,47,1004,72,1002,77,939,52,868,32,792,21,715,14,561,8,415,12,290,20"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="290,45,322,48,322,53,290,50"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEventListener.html" title=" " alt="" coords="344,107,537,147"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="550,100,641,80,642,85,551,105"/>
+<area shape="rect" id="Node000006" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1ColonyInteractionListener.html" title=" " alt="" coords="614,107,860,147"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="875,110,916,106,916,111,876,115"/>
+<area shape="rect" id="Node000007" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="654,172,820,213"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="835,166,868,156,991,113,993,118,869,161,836,171"/>
 </map>

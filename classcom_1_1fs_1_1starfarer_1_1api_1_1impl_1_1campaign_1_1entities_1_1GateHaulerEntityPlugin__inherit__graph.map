@@ -1,7 +1,7 @@
 <map id="com.fs.starfarer.api.impl.campaign.entities.GateHaulerEntityPlugin" name="com.fs.starfarer.api.impl.campaign.entities.GateHaulerEntityPlugin">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,168,271,208"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html" title=" " alt="" coords="28,79,248,120"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="141,135,141,167,135,167,135,135"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="42,5,234,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="141,46,141,79,135,79,135,46"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,183,271,223"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html" title=" " alt="" coords="28,94,248,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="141,150,141,182,135,182,135,150"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomCampaignEntityPlugin.html" title=" " alt="" coords="41,5,235,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="141,62,141,94,135,94,135,62"/>
 </map>

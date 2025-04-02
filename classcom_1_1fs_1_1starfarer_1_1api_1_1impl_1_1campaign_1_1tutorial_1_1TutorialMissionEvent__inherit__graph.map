@@ -1,5 +1,11 @@
 <map id="com.fs.starfarer.api.impl.campaign.tutorial.TutorialMissionEvent" name="com.fs.starfarer.api.impl.campaign.tutorial.TutorialMissionEvent">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,79,268,120"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="76,5,197,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="139,46,139,79,134,79,134,46"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="916,39,1179,79"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html" title=" " alt="" coords="606,39,868,79"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="884,56,916,56,916,62,884,62"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventPlugin.html" title=" " alt="" coords="323,5,558,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="574,38,606,42,605,47,573,43"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,5,275,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="290,23,322,23,322,28,290,28"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEventListener.html" title=" " alt="" coords="344,71,537,111"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="552,76,606,70,606,76,553,82"/>
 </map>

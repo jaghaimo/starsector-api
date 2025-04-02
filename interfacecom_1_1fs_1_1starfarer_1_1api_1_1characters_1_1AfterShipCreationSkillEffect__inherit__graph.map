@@ -1,7 +1,19 @@
 <map id="com.fs.starfarer.api.characters.AfterShipCreationSkillEffect" name="com.fs.starfarer.api.characters.AfterShipCreationSkillEffect">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,183,204,223"/>
-<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1ShipSkillEffect.html" title=" " alt="" coords="5,94,204,135"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,150,107,182,102,182,102,150"/>
-<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1LevelBasedEffect.html" title=" " alt="" coords="5,5,204,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="107,62,107,94,102,94,102,62"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="498,169,696,210"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="744,5,998,46"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="624,156,676,105,708,79,743,57,772,44,774,49,746,61,711,83,679,109,628,160"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="744,71,998,111"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="653,160,743,122,783,109,784,114,745,127,655,165"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="744,136,998,177"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="711,173,744,169,744,174,712,178"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="744,201,998,242"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="712,200,744,204,744,209,711,206"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="744,267,998,307"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="656,214,745,251,785,264,783,269,743,256,654,219"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="744,332,998,373"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="628,220,680,270,712,295,746,317,774,329,772,334,743,321,709,300,676,274,624,224"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1ShipSkillEffect.html" title=" " alt="" coords="252,169,450,210"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="466,187,497,187,497,192,466,192"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1LevelBasedEffect.html" title=" " alt="" coords="5,169,204,210"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="220,187,251,187,251,192,220,192"/>
 </map>

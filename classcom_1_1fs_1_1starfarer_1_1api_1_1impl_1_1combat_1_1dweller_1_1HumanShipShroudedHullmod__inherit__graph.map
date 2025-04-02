@@ -1,0 +1,15 @@
+<map id="com.fs.starfarer.api.impl.combat.dweller.HumanShipShroudedHullmod" name="com.fs.starfarer.api.impl.combat.dweller.HumanShipShroudedHullmod">
+<area shape="rect" id="Node000001" title=" " alt="" coords="761,71,1013,111"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1ShroudedLensHullmod.html" title=" " alt="" coords="1061,5,1312,46"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="997,64,1089,44,1091,49,999,69"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1ShroudedMantleHullmod.html" title=" " alt="" coords="1061,71,1312,111"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="1028,88,1060,88,1060,94,1028,94"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1ShroudedThunderheadHullmod.html" title=" " alt="" coords="1061,136,1312,177"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="999,113,1091,133,1089,138,997,118"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1DwellerHullmod.html" title=" " alt="" coords="462,71,713,111"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="729,88,761,88,761,94,729,94"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html" title=" " alt="" coords="234,71,414,111"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="430,88,462,88,462,94,430,94"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1HullModEffect.html" title=" " alt="" coords="5,71,186,111"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="201,88,233,88,233,94,201,94"/>
+</map>

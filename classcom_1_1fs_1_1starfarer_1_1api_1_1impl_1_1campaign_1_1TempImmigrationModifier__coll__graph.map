@@ -1,0 +1,11 @@
+<map id="com.fs.starfarer.api.impl.campaign.TempImmigrationModifier" name="com.fs.starfarer.api.impl.campaign.TempImmigrationModifier">
+<area shape="rect" id="Node000001" title=" " alt="" coords="615,71,836,111"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1EconomyTickListener.html" title=" " alt="" coords="279,5,524,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="521,47,622,67,621,73,520,52"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketImmigrationModifier.html" title=" " alt="" coords="290,71,514,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="530,88,615,88,615,94,530,94"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html" title=" " alt="" coords="290,136,514,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="520,130,621,109,622,115,521,135"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,136,230,177"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="245,154,289,154,289,159,245,159"/>
+</map>

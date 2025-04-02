@@ -1,5 +1,9 @@
 <map id="com.fs.starfarer.api.impl.campaign.ghosts.SpeedReduction" name="com.fs.starfarer.api.impl.campaign.ghosts.SpeedReduction">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,94,268,135"/>
-<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="53,5,220,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="139,62,139,94,134,94,134,62"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="556,37,819,78"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="292,5,459,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="475,33,556,42,556,47,474,38"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="279,71,472,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="487,76,555,69,556,74,488,82"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,71,230,111"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="245,88,279,88,279,94,245,94"/>
 </map>

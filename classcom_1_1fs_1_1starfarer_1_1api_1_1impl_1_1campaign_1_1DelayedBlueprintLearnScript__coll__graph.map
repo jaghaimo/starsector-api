@@ -1,5 +1,9 @@
 <map id="com.fs.starfarer.api.impl.campaign.DelayedBlueprintLearnScript" name="com.fs.starfarer.api.impl.campaign.DelayedBlueprintLearnScript">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,79,226,120"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="46,5,185,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="118,46,118,79,113,79,113,46"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="90,244,311,285"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1DelayedActionScript.html" title=" " alt="" coords="11,95,166,136"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,146,188,242,183,245,110,150"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="5,5,172,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="91,62,91,95,86,95,86,62"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="190,103,289,128"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="235,144,208,244,203,243,230,143"/>
 </map>

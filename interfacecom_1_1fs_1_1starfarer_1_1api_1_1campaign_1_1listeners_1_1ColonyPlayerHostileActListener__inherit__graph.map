@@ -1,0 +1,27 @@
+<map id="com.fs.starfarer.api.campaign.listeners.ColonyPlayerHostileActListener" name="com.fs.starfarer.api.campaign.listeners.ColonyPlayerHostileActListener">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,300,251,341"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1LuddicChurchHostileActivityFactor.html" title=" " alt="" coords="299,5,588,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="140,284,162,233,196,171,241,109,267,81,297,57,319,44,322,49,300,61,271,85,245,112,200,174,167,235,144,286"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1PerseanLeagueHostileActivityFactor.html" title=" " alt="" coords="299,71,588,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="147,285,172,247,207,202,249,159,297,122,323,109,325,114,300,127,252,163,211,206,177,250,151,288"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1TriTachyonHostileActivityFactor.html" title=" " alt="" coords="299,136,588,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="159,287,220,236,258,209,298,187,329,175,331,180,300,192,260,214,223,240,162,291"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1AFavorForKanta.html" title=" " alt="" coords="306,201,581,242"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="191,291,298,252,343,240,344,245,299,258,193,296"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1BaseDisruptIndustry.html" title=" " alt="" coords="306,267,581,307"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="266,303,305,299,306,304,267,308"/>
+<area shape="rect" id="Node000009" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1SecurityCodes.html" title=" " alt="" coords="306,332,581,373"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="267,332,306,336,305,341,266,337"/>
+<area shape="rect" id="Node000010" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1TacticallyBombardColony.html" title=" " alt="" coords="306,397,581,438"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="194,344,299,382,345,394,343,399,298,387,192,349"/>
+<area shape="rect" id="Node000011" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PlaythroughLog.html" title=" " alt="" coords="320,463,567,503"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="163,349,224,400,261,426,300,447,331,460,329,465,298,452,258,430,220,404,160,353"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="309,528,578,569"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="151,352,177,390,211,434,252,477,300,513,325,525,323,530,297,517,249,481,207,437,172,393,147,355"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="300,593,586,634"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="144,354,167,405,200,466,245,527,271,555,300,578,322,590,319,595,297,583,267,558,241,531,196,469,162,407,140,356"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DisruptHeavyIndustry.html" title=" " alt="" coords="636,235,911,275"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="596,270,635,266,636,271,597,275"/>
+<area shape="rect" id="Node000008" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DisruptSpaceport.html" title=" " alt="" coords="636,300,911,341"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="597,300,636,304,635,309,596,305"/>
+</map>

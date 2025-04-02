@@ -1,7 +1,11 @@
 <map id="com.fs.starfarer.api.impl.campaign.fleets.PatrolAssignmentAIV4" name="com.fs.starfarer.api.impl.campaign.fleets.PatrolAssignmentAIV4">
-<area shape="rect" id="Node000001" title=" " alt="" coords="55,79,309,120"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,172,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,39,161,77,157,81,113,43"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="196,5,357,31"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="252,43,207,81,203,77,249,39"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="946,39,1201,79"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RouteFleetAssignmentAI.html" title=" " alt="" coords="583,5,898,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="914,40,946,44,946,49,914,46"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html" title=" " alt="" coords="220,5,535,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="551,23,583,23,583,28,551,28"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="5,5,172,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="188,23,219,23,219,28,188,28"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetActionTextProvider.html" title=" " alt="" coords="644,71,837,111"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="853,78,946,69,946,74,853,83"/>
 </map>

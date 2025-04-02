@@ -5,6 +5,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1VisualPanelAPI =
     [ "finishFadeFast", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1VisualPanelAPI.html#a306035775dd1329b4f9ff42d864ae22a", null ],
     [ "hideCore", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1VisualPanelAPI.html#adcd77a9ea5ac6cc5a5cd1dfbdf2277f7", null ],
     [ "hideFirstPerson", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1VisualPanelAPI.html#a2692933625418197cb7dcc9c4dc423d9", null ],
+    [ "hideRankNamePost", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1VisualPanelAPI.html#a6721e7090076307bb335c5673be06755", null ],
     [ "hideSecondPerson", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1VisualPanelAPI.html#a4d4e9ba3a3053579c9a61cb8d5890002", null ],
     [ "hideThirdPerson", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1VisualPanelAPI.html#a0e60b9981c899ca5375a6f79506ca450", null ],
     [ "isShowingPersonInfo", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1VisualPanelAPI.html#a6a043aabece169808a2f8456c9f5889e", null ],

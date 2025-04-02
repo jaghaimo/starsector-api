@@ -1,7 +1,7 @@
 <map id="com.fs.starfarer.api.impl.campaign.JumpPointInteractionDialogPluginImpl" name="com.fs.starfarer.api.impl.campaign.JumpPointInteractionDialogPluginImpl">
-<area shape="rect" id="Node000001" title=" " alt="" coords="431,31,672,72"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="50,5,205,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="220,21,407,34,431,36,430,42,406,39,220,26"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="5,56,250,111"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="265,74,406,64,430,62,431,67,407,69,266,79"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="431,41,672,82"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogPlugin.html" title=" " alt="" coords="31,5,224,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="240,32,431,49,430,54,239,38"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,70,250,126"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="265,91,406,81,430,78,430,84,407,86,265,96"/>
 </map>

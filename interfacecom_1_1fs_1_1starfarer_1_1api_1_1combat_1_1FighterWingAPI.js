@@ -1,5 +1,7 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterWingAPI =
 [
+    [ "addMember", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterWingAPI.html#a226466e1dcd3f9b1c8eff1064d872664", null ],
+    [ "getCustomData", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterWingAPI.html#a4055c00a3dbcea9da8ce9ee957221deb", null ],
     [ "getFormation", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterWingAPI.html#ab56cf7a57db6d05a72d0c19595398a4c", null ],
     [ "getLeader", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterWingAPI.html#a463f5a50827be3a5aa7512ba59b95635", null ],
     [ "getRange", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterWingAPI.html#a05c3e5b8a315ef8a4fe0a7540f0a60c4", null ],
@@ -14,10 +16,13 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterWingAPI =
     [ "getWingOwner", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterWingAPI.html#a156c835e5e6dbe4798a0d99ad9906766", null ],
     [ "isAlly", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterWingAPI.html#aaa52029797cbcf617840cb4a580c6be0", null ],
     [ "isDestroyed", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterWingAPI.html#a0e0c235e2533a5054a1708b69513e849", null ],
+    [ "isLeader", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterWingAPI.html#a0bcf3fca2b7814eca64c657f20794c81", null ],
     [ "isReturning", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterWingAPI.html#ae6bf56de411ce987d473a8ad2c5e939c", null ],
     [ "orderReturn", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterWingAPI.html#ac4f1da5ee22a8825cd3bf61d7e6c59c3", null ],
     [ "removeMember", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterWingAPI.html#ab4658cb44d52dfeabaedee45d5359b75", null ],
+    [ "setLeader", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterWingAPI.html#aad27ac5df882584e741efea0c62b8fcb", null ],
     [ "setSourceBay", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterWingAPI.html#a335cd5a73df71e800802589d8b571412", null ],
+    [ "setSourceShip", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterWingAPI.html#a7269efe78034b783b97b1ff3a9b9cfd9", null ],
     [ "setWingOwner", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterWingAPI.html#a440ddfc286cffea10a1c56490686732d", null ],
     [ "stopReturning", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FighterWingAPI.html#ac804aadabd629e530f445feef99d0d8f", null ]
 ];

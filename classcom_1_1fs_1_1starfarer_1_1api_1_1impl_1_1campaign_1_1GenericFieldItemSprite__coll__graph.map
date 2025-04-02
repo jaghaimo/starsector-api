@@ -1,0 +1,13 @@
+<map id="com.fs.starfarer.api.impl.campaign.GenericFieldItemSprite" name="com.fs.starfarer.api.impl.campaign.GenericFieldItemSprite">
+<area shape="rect" id="Node000001" title=" " alt="" coords="597,99,818,139"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1graphics_1_1SpriteAPI.html" title=" " alt="" coords="282,5,469,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="466,48,633,96,632,101,465,53"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="279,71,472,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="488,98,597,107,597,112,487,103"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,71,230,111"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="245,88,279,88,279,94,245,94"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="340,137,411,162"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="426,147,496,145,573,140,597,137,597,142,574,145,496,151,426,152"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html" title=" " alt="" coords="298,187,453,227"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="468,190,573,166,655,137,657,142,574,171,469,195"/>
+</map>

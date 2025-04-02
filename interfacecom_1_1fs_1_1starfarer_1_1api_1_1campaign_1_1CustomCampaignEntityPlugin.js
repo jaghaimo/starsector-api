@@ -8,5 +8,6 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomCampaignEntityPl
     [ "hasCustomMapTooltip", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomCampaignEntityPlugin.html#a218a41fd38e584620475f3d76dbde437", null ],
     [ "init", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomCampaignEntityPlugin.html#abc783388b25321c73bed654f78304c47", null ],
     [ "isMapTooltipExpandable", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomCampaignEntityPlugin.html#a7f0035c6a5203ff20bdc900da2973ef3", null ],
+    [ "isRenderWhenViewportAlphaMultIsZero", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomCampaignEntityPlugin.html#aa05a55b9c714d89d19ec590e51e4fecd", null ],
     [ "render", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomCampaignEntityPlugin.html#a053927fcc8b8d3bbb47d263ba7a61d50", null ]
 ];

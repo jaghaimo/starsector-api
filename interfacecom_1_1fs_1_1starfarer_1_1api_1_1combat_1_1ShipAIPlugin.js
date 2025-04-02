@@ -6,5 +6,6 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAIPlugin =
     [ "getAIFlags", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAIPlugin.html#a3181bf79ea90e925ee81c9a6a27562f0", null ],
     [ "getConfig", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAIPlugin.html#a86f6b02410fd25a916dd55c6a670f6c3", null ],
     [ "needsRefit", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAIPlugin.html#a5bd1ec0252e3a2c46043f9bbf79a875c", null ],
-    [ "setDoNotFireDelay", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAIPlugin.html#a175cda4aee29920874ed2d53e0e1fcff", null ]
+    [ "setDoNotFireDelay", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAIPlugin.html#a175cda4aee29920874ed2d53e0e1fcff", null ],
+    [ "setTargetOverride", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAIPlugin.html#a1590cdb7ad2f7e4640b72cee06562508", null ]
 ];

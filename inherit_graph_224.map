@@ -1,3 +1,13 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1AdmiralAIPlugin.html" title=" " alt="" coords="5,5,186,46"/>
+<area shape="rect" id="Node000000" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAIScript.html" title=" " alt="" coords="5,136,186,177"/>
+<area shape="rect" id="Node000001" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1ConvulsiveLungeSystemAI.html" title=" " alt="" coords="234,5,485,46"/>
+<area shape="poly" id="edge1197_Node000000_Node000001" title=" " alt="" coords="130,124,177,89,233,57,264,44,266,49,235,61,180,93,134,128"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1DarkenedGazeSystemAI.html" title=" " alt="" coords="234,71,485,111"/>
+<area shape="poly" id="edge1198_Node000000_Node000002" title=" " alt="" coords="195,129,274,109,275,115,196,134"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1TenebrousExpulsionSystemAI.html" title=" " alt="" coords="234,136,485,177"/>
+<area shape="poly" id="edge1199_Node000000_Node000003" title=" " alt="" coords="201,154,233,154,233,159,201,159"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1ConstructionSwarmSystemAI.html" title=" " alt="" coords="238,201,481,242"/>
+<area shape="poly" id="edge1200_Node000000_Node000004" title=" " alt="" coords="196,178,275,198,274,203,195,184"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1EnergyLashSystemAI.html" title=" " alt="" coords="238,267,481,307"/>
+<area shape="poly" id="edge1201_Node000000_Node000005" title=" " alt="" coords="134,185,180,219,235,251,266,264,264,268,233,256,177,224,130,189"/>
 </map>

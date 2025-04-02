@@ -1,0 +1,25 @@
+var interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TagDisplayAPI =
+[
+    [ "addGroup", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TagDisplayAPI.html#a8f60f9b23deadcd893ae77657ab5f716", null ],
+    [ "addLineBreakToCurrentGroup", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TagDisplayAPI.html#a522ccc39c234dfef1b1df0da5c5ae65f", null ],
+    [ "addTag", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TagDisplayAPI.html#a563fa9cf9313984f81c5261c1bf54db8", null ],
+    [ "addTag", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TagDisplayAPI.html#a547f13d64bdebaa6aac38b262dad5d59", null ],
+    [ "addTag", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TagDisplayAPI.html#a49b157f9abe42121b434918180c301c7", null ],
+    [ "addTag", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TagDisplayAPI.html#a2bc4118dbe75076cc3d5ddb0870e43d2", null ],
+    [ "addTag", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TagDisplayAPI.html#a0394055ff30ec904d5bf4db19357b2d4", null ],
+    [ "beginGroup", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TagDisplayAPI.html#a5c4e14c8e719ab0cfc5a8e1c177789b1", null ],
+    [ "beginGroup", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TagDisplayAPI.html#a7ddfad0522e2e07caa35a6193d9ac266", null ],
+    [ "check", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TagDisplayAPI.html#ac697cb477aea2f344fb11afa4892ba6c", null ],
+    [ "check", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TagDisplayAPI.html#a5ad86476f0dcabe03eaeb61e71819222", null ],
+    [ "checkAll", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TagDisplayAPI.html#a930a531cd9444d103ef49bdea6e7511c", null ],
+    [ "getAllTags", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TagDisplayAPI.html#aa1f1882a5e0e1c905e98c9c5e0f6bfd9", null ],
+    [ "getMinTagWidth", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TagDisplayAPI.html#a115823fc815f0904a036bf8919349f32", null ],
+    [ "getTagPad", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TagDisplayAPI.html#a973d65ad361d47b25a1f77f5f50163e9", null ],
+    [ "reset", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TagDisplayAPI.html#a3a36cba32dc77cfd0d81f95e1b96cac4", null ],
+    [ "setGroupChecked", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TagDisplayAPI.html#ab556ceddd588eaf9e11c28a0b307fc44", null ],
+    [ "setMinTagWidth", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TagDisplayAPI.html#a23c983d765dfd3017e59bcb0cef9a02d", null ],
+    [ "setTagPad", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TagDisplayAPI.html#a77f77c6d4470e2cf932d419b6f12d8b5", null ],
+    [ "setTotalOverrideForCurrentGroup", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TagDisplayAPI.html#a18cc367e0706c593a7770fd94417fb4a", null ],
+    [ "uncheck", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TagDisplayAPI.html#a50bd6be5f096ce96e8a115e15c35d483", null ],
+    [ "uncheckAll", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TagDisplayAPI.html#aeba47f7b341b3fd6ad5393bacca67e2c", null ]
+];

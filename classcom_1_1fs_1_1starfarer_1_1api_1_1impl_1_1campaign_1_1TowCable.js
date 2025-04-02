@@ -2,6 +2,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TowCable =
 [
     [ "TowCable", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TowCable.html#a805a8e84f58985e835e4a119408659e5", null ],
     [ "addPostDescriptionSection", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TowCable.html#ac018a0d79f3cc58aa5e9ece7386263f9", null ],
+    [ "addRequiredItemSection", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TowCable.html#a15d9ca2a6adb12b1a397460001d367f1", null ],
     [ "addSModEffectSection", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TowCable.html#ad1ac28a3a7bc2845bba1dd1881c79ab1", null ],
     [ "addSModSection", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TowCable.html#a449ed3783a3ed28c64788811d46f5628", null ],
     [ "addSModSection", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1TowCable.html#ac97277708b9d3cc5aeed252be671aae9", null ],

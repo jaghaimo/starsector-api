@@ -1,7 +1,11 @@
 <map id="com.fs.starfarer.api.impl.campaign.intel.bar.events.SpecBarEventCreator" name="com.fs.starfarer.api.impl.campaign.intel.bar.events.SpecBarEventCreator">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,168,316,208"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventCreator.html" title=" " alt="" coords="5,79,316,120"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,135,163,167,158,167,158,135"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="80,5,241,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="163,46,163,79,158,79,158,46"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="781,39,1091,79"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventCreator.html" title=" " alt="" coords="392,5,702,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="718,38,781,43,780,48,718,43"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,5,316,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="331,23,391,23,391,28,331,28"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1BarEventSpec.html" title=" " alt="" coords="458,71,636,111"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="651,80,780,69,781,74,651,85"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="112,78,209,104"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="225,88,457,88,457,94,225,94"/>
 </map>

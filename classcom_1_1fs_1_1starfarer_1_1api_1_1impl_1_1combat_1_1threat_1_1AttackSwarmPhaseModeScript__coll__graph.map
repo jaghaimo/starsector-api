@@ -1,0 +1,15 @@
+<map id="com.fs.starfarer.api.impl.combat.threat.AttackSwarmPhaseModeScript" name="com.fs.starfarer.api.impl.combat.threat.AttackSwarmPhaseModeScript">
+<area shape="rect" id="Node000001" title=" " alt="" coords="768,71,1011,111"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseEveryFrameCombatPlugin.html" title=" " alt="" coords="465,5,666,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="682,46,786,67,785,73,681,52"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1EveryFrameCombatPlugin.html" title=" " alt="" coords="235,5,415,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="431,23,464,23,464,28,431,28"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEnginePlugin.html" title=" " alt="" coords="5,5,186,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="201,23,235,23,235,28,201,28"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html" title=" " alt="" coords="475,71,656,111"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="671,88,768,88,768,94,671,94"/>
+<area shape="rect" id="Node000006" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html" title=" " alt="" coords="235,71,415,111"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="431,88,475,88,475,94,431,94"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="540,136,591,161"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="606,139,770,109,771,115,607,144"/>
+</map>

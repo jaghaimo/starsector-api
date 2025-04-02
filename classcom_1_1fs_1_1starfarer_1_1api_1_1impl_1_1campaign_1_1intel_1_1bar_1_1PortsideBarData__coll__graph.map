@@ -1,5 +1,7 @@
 <map id="com.fs.starfarer.api.impl.campaign.intel.bar.PortsideBarData" name="com.fs.starfarer.api.impl.campaign.intel.bar.PortsideBarData">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,94,274,135"/>
-<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="56,5,223,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="142,62,142,94,137,94,137,62"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="393,39,661,79"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="73,5,239,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="255,32,393,44,392,50,254,37"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,71,307,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="322,74,392,68,393,73,322,79"/>
 </map>

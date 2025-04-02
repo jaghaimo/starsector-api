@@ -1,0 +1,17 @@
+<map id="com.fs.starfarer.api.campaign.ai.AbilityAIPlugin" name="com.fs.starfarer.api.campaign.ai.AbilityAIPlugin">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,169,212,210"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1BaseAbilityAI.html" title=" " alt="" coords="260,169,540,210"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="227,187,259,187,259,192,227,192"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1EmergencyBurnAbilityAI.html" title=" " alt="" coords="588,5,868,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="435,157,503,105,544,79,587,57,620,44,622,49,589,61,546,84,506,110,438,161"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1GoDarkAbilityAI.html" title=" " alt="" coords="588,71,868,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="469,161,587,122,633,109,635,115,589,127,471,166"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1InterdictionPulseAbilityAI.html" title=" " alt="" coords="588,136,868,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="555,171,587,168,588,173,556,177"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1SensorBurstAbilityAI.html" title=" " alt="" coords="588,201,868,242"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="556,202,588,205,587,211,555,207"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1SustainedBurnAbilityAI.html" title=" " alt="" coords="588,267,868,307"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="473,213,589,251,635,263,634,269,587,256,471,218"/>
+<area shape="rect" id="Node000008" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1ai_1_1TransponderAbilityAI.html" title=" " alt="" coords="588,332,868,373"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="438,218,506,269,547,295,589,317,622,329,620,334,587,321,544,299,503,273,435,222"/>
+</map>

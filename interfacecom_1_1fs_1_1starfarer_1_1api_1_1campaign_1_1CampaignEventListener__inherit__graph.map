@@ -1,7 +1,49 @@
 <map id="com.fs.starfarer.api.campaign.CampaignEventListener" name="com.fs.starfarer.api.campaign.CampaignEventListener">
-<area shape="rect" id="Node000001" title=" " alt="" coords="32,5,225,46"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignEventListener.html" title=" " alt="" coords="32,94,225,135"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="131,62,131,94,126,94,126,62"/>
-<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignEventListenerAndScript.html" title=" " alt="" coords="5,183,252,223"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="131,150,131,182,126,182,126,150"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,496,199,537"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignEventListener.html" title=" " alt="" coords="281,201,474,242"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="131,483,355,241,359,244,135,486"/>
+<area shape="rect" id="Node000009" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html" title=" " alt="" coords="247,789,509,830"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="135,546,359,787,355,790,131,550"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignEventListenerAndScript.html" title=" " alt="" coords="586,5,832,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="403,187,468,120,510,86,556,57,585,44,587,49,558,61,513,90,471,124,407,191"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreScript.html" title=" " alt="" coords="598,71,819,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="422,191,484,155,556,122,597,109,599,114,558,127,486,160,425,195"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CoreEventProbabilityManager.html" title=" " alt="" coords="578,136,840,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="489,197,602,175,603,180,490,202"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1PatrolFleetManager.html" title=" " alt="" coords="582,201,836,242"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="490,219,581,219,581,224,490,224"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1PatrolFleetManagerV2.html" title=" " alt="" coords="582,267,836,307"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="490,241,603,263,602,269,489,246"/>
+<area shape="rect" id="Node000008" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1StarSystemActivityTracker.html" title=" " alt="" coords="578,332,840,373"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="425,248,486,284,558,317,597,329,595,334,556,321,484,288,422,253"/>
+<area shape="rect" id="Node000010" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html" title=" " alt="" coords="578,397,840,438"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="384,773,402,704,435,616,458,570,485,525,518,484,555,449,576,436,579,441,559,453,521,488,489,528,462,572,440,618,407,705,389,775"/>
+<area shape="rect" id="Node000011" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FactionHostilityEvent.html" title=" " alt="" coords="578,463,840,503"/>
+<area shape="poly" id="edge10_Node000009_Node000011" title=" " alt="" coords="388,774,410,716,445,646,493,574,522,542,555,514,577,502,580,506,559,519,526,546,497,577,449,648,415,718,393,776"/>
+<area shape="rect" id="Node000012" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FleetLogEvent.html" title=" " alt="" coords="578,528,840,569"/>
+<area shape="poly" id="edge11_Node000009_Node000012" title=" " alt="" coords="394,774,419,729,455,676,501,624,527,600,556,579,580,567,582,572,558,584,531,604,505,627,460,680,424,732,398,777"/>
+<area shape="rect" id="Node000013" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1FoodShortageEvent.html" title=" " alt="" coords="578,593,840,634"/>
+<area shape="poly" id="edge12_Node000009_Node000013" title=" " alt="" coords="403,775,468,708,510,674,556,645,585,632,587,637,558,649,513,678,471,712,407,779"/>
+<area shape="rect" id="Node000014" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEvent.html" title=" " alt="" coords="578,659,840,699"/>
+<area shape="poly" id="edge13_Node000009_Node000014" title=" " alt="" coords="422,779,484,743,556,710,595,697,597,703,558,715,486,748,425,783"/>
+<area shape="rect" id="Node000016" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventGoodRepWithOther.html" title=" " alt="" coords="578,724,840,765"/>
+<area shape="poly" id="edge15_Node000009_Node000016" title=" " alt="" coords="499,783,602,763,603,768,500,788"/>
+<area shape="rect" id="Node000017" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventSmugglingV2.html" title=" " alt="" coords="578,789,840,830"/>
+<area shape="poly" id="edge16_Node000009_Node000017" title=" " alt="" coords="525,807,577,807,577,812,525,812"/>
+<area shape="rect" id="Node000018" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1OfficerManagerEvent.html" title=" " alt="" coords="578,855,840,895"/>
+<area shape="poly" id="edge17_Node000009_Node000018" title=" " alt="" coords="500,831,603,851,602,857,499,836"/>
+<area shape="rect" id="Node000019" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1RecentUnrestEvent.html" title=" " alt="" coords="578,920,840,961"/>
+<area shape="poly" id="edge18_Node000009_Node000019" title=" " alt="" coords="425,836,486,872,558,905,597,917,595,922,556,909,484,876,422,841"/>
+<area shape="rect" id="Node000020" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1RepTrackerEvent.html" title=" " alt="" coords="578,985,840,1026"/>
+<area shape="poly" id="edge19_Node000009_Node000020" title=" " alt="" coords="407,840,471,907,513,941,558,970,587,982,585,987,556,975,510,946,468,911,403,844"/>
+<area shape="rect" id="Node000021" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TestEvent.html" title=" " alt="" coords="578,1051,840,1091"/>
+<area shape="poly" id="edge20_Node000009_Node000021" title=" " alt="" coords="398,842,424,887,460,940,505,992,531,1015,558,1035,582,1048,580,1052,556,1040,527,1019,501,996,455,943,419,890,394,845"/>
+<area shape="rect" id="Node000022" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1TradeInfoUpdateEvent.html" title=" " alt="" coords="578,1116,840,1157"/>
+<area shape="poly" id="edge21_Node000009_Node000022" title=" " alt="" coords="393,844,415,901,449,971,497,1042,526,1074,559,1101,580,1113,577,1118,555,1105,522,1077,493,1045,445,974,410,903,388,846"/>
+<area shape="rect" id="Node000023" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1nearby_1_1NearbyEventsEvent.html" title=" " alt="" coords="557,1181,860,1222"/>
+<area shape="poly" id="edge22_Node000009_Node000023" title=" " alt="" coords="389,845,407,914,440,1002,462,1047,489,1091,521,1132,559,1166,578,1179,575,1183,555,1170,518,1135,485,1094,458,1050,435,1004,402,916,384,846"/>
+<area shape="rect" id="Node000024" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionEvent.html" title=" " alt="" coords="578,1247,840,1287"/>
+<area shape="poly" id="edge23_Node000009_Node000024" title=" " alt="" coords="386,845,400,926,431,1031,453,1086,482,1140,517,1189,559,1232,579,1245,576,1249,555,1236,513,1193,477,1143,448,1088,426,1033,395,927,381,846"/>
+<area shape="rect" id="Node000015" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1InvestigationEventCommSniffer.html" title=" " alt="" coords="908,659,1171,699"/>
+<area shape="poly" id="edge14_Node000014_Node000015" title=" " alt="" coords="855,676,908,676,908,682,855,682"/>
 </map>

@@ -1,5 +1,7 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ArmorGridAPI =
 [
+    [ "buildComponentMap", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ArmorGridAPI.html#ae7de65cec9e268a7186051ac88092967", null ],
+    [ "clearComponentMap", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ArmorGridAPI.html#a8ba7fb6a7fb88d5f5a3750da40c4875c", null ],
     [ "getAbove", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ArmorGridAPI.html#a5405c2f96d98f023e563c679533f1f94", null ],
     [ "getArmorFraction", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ArmorGridAPI.html#a2a0c2eb0a8138f08c46a3ba3fb25a6e9", null ],
     [ "getArmorRating", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ArmorGridAPI.html#a039a01d22f24369ed82bda2dac5fb11d", null ],

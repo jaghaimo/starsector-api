@@ -1,7 +1,7 @@
 <map id="com.fs.starfarer.api.impl.campaign.rulecmd.academy.GAReduceRandomRep" name="com.fs.starfarer.api.impl.campaign.rulecmd.academy.GAReduceRandomRep">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,168,330,208"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BaseCommandPlugin.html" title=" " alt="" coords="33,79,302,120"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="170,135,170,167,165,167,165,135"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="109,5,226,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="170,46,170,79,165,79,165,46"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,183,330,223"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BaseCommandPlugin.html" title=" " alt="" coords="33,94,302,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="170,150,170,182,165,182,165,150"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1CommandPlugin.html" title=" " alt="" coords="55,5,280,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="170,62,170,94,165,94,165,62"/>
 </map>

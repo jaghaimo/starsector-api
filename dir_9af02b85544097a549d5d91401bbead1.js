@@ -20,6 +20,7 @@ var dir_9af02b85544097a549d5d91401bbead1 =
     [ "DefensiveTargetingArray.java", "DefensiveTargetingArray_8java.html", "DefensiveTargetingArray_8java" ],
     [ "DegradedLifeSupport.java", "DegradedLifeSupport_8java.html", "DegradedLifeSupport_8java" ],
     [ "DegradedShields.java", "DegradedShields_8java.html", "DegradedShields_8java" ],
+    [ "DesignCompromises.java", "DesignCompromises_8java.html", "DesignCompromises_8java" ],
     [ "DistributedFireControl.java", "DistributedFireControl_8java.html", "DistributedFireControl_8java" ],
     [ "DoNotBackOff.java", "DoNotBackOff_8java.html", "DoNotBackOff_8java" ],
     [ "DriveFieldStabilizer.java", "DriveFieldStabilizer_8java.html", "DriveFieldStabilizer_8java" ],

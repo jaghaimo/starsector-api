@@ -1,0 +1,13 @@
+<map id="com.fs.starfarer.api.impl.combat.threat.ConstructionSwarmSystemScript" name="com.fs.starfarer.api.impl.combat.threat.ConstructionSwarmSystemScript">
+<area shape="rect" id="Node000001" title=" " alt="" coords="992,71,1235,111"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseShipSystemScript.html" title=" " alt="" coords="557,5,764,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="780,40,992,71,991,76,779,45"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1ShipSystemStatsScriptAdvanced.html" title=" " alt="" coords="233,5,447,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="463,23,557,23,557,28,463,28"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1ShipSystemStatsScript.html" title=" " alt="" coords="5,5,184,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="200,23,233,23,233,28,200,28"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="573,71,748,111"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="764,88,991,88,991,94,764,94"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html" title=" " alt="" coords="497,135,825,191"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="840,132,991,108,992,113,841,137"/>
+</map>

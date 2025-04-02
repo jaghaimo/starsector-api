@@ -1,0 +1,11 @@
+<map id="com.fs.starfarer.api.impl.combat.dweller.ShroudedVortexShipCreator" name="com.fs.starfarer.api.impl.combat.dweller.ShroudedVortexShipCreator">
+<area shape="rect" id="Node000001" title=" " alt="" coords="789,71,1041,111"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1BaseDwellerShipCreator.html" title=" " alt="" coords="306,5,557,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="573,42,789,71,789,77,572,47"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1DwellerShipCreator.html" title=" " alt="" coords="5,5,257,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="272,23,306,23,306,28,272,28"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="306,71,557,111"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="573,88,789,88,789,94,573,94"/>
+<area shape="rect" id="Node000005" href="$enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamageType.html" title=" " alt="" coords="342,136,522,177"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="537,140,765,109,789,105,789,111,766,114,537,145"/>
+</map>

@@ -1,5 +1,9 @@
 <map id="com.fs.starfarer.api.impl.campaign.enc.EncounterPointProvider" name="com.fs.starfarer.api.impl.campaign.enc.EncounterPointProvider">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,250,46"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager.html" title=" " alt="" coords="5,94,250,135"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="130,62,130,94,125,94,125,62"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,71,250,111"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager.html" title=" " alt="" coords="359,5,603,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="253,65,297,56,364,44,365,49,298,62,254,70"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RemnantStationFleb50e0f19d17c939fd288d2e6ebd345d6.html" title=" " alt="" coords="298,71,664,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="265,88,297,88,297,94,265,94"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1HyperspaceAbyssPluginImpl.html" title=" " alt="" coords="351,136,610,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="254,112,298,120,365,133,364,138,297,126,253,117"/>
 </map>

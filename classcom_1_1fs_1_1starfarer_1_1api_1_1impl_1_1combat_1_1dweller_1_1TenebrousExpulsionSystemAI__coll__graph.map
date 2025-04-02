@@ -1,0 +1,27 @@
+<map id="com.fs.starfarer.api.impl.combat.dweller.TenebrousExpulsionSystemAI" name="com.fs.starfarer.api.impl.combat.dweller.TenebrousExpulsionSystemAI">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1132,201,1384,242"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAIScript.html" title=" " alt="" coords="824,5,1004,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1019,48,1041,57,1100,90,1155,129,1237,199,1233,203,1151,134,1097,95,1038,61,1017,52"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html" title=" " alt="" coords="824,71,1004,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="1015,114,1040,122,1136,161,1217,198,1214,203,1134,165,1038,127,1014,119"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html" title=" " alt="" coords="510,71,690,111"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="706,88,823,88,823,94,706,94"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html" title=" " alt="" coords="824,136,1004,177"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="1019,174,1148,198,1147,203,1018,179"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipwideAIFlags.html" title=" " alt="" coords="824,201,1004,242"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="1019,219,1132,219,1132,224,1019,224"/>
+<area shape="rect" id="Node000007" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html" title=" " alt="" coords="824,267,1004,307"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="1018,264,1147,240,1148,245,1019,270"/>
+<area shape="rect" id="Node000008" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1TenebrousExpulsionSystemScript.html" title=" " alt="" coords="788,332,1039,373"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="1014,325,1038,316,1134,278,1214,240,1217,245,1136,283,1040,322,1015,330"/>
+<area shape="rect" id="Node000009" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseShipSystemScript.html" title=" " alt="" coords="497,297,704,338"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="720,328,788,336,787,341,719,333"/>
+<area shape="rect" id="Node000010" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1ShipSystemStatsScriptAdvanced.html" title=" " alt="" coords="233,297,447,338"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="463,315,496,315,496,320,463,320"/>
+<area shape="rect" id="Node000011" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1ShipSystemStatsScript.html" title=" " alt="" coords="5,297,184,338"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="200,315,233,315,233,320,200,320"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="565,362,636,388"/>
+<area shape="poly" id="edge11_Node000008_Node000012" title=" " alt="" coords="651,369,764,361,788,359,788,364,764,366,651,374"/>
+<area shape="rect" id="Node000013" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html" title=" " alt="" coords="836,397,991,438"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="1005,395,1038,382,1097,348,1151,310,1233,240,1237,244,1155,314,1100,353,1040,387,1007,400"/>
+</map>

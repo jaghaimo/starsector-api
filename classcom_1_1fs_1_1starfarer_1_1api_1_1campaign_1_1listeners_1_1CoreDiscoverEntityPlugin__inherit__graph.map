@@ -1,7 +1,16 @@
 <map id="com.fs.starfarer.api.campaign.listeners.CoreDiscoverEntityPlugin" name="com.fs.starfarer.api.campaign.listeners.CoreDiscoverEntityPlugin">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,168,251,208"/>
-<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1DiscoverEntityPlugin.html" title=" " alt="" coords="5,79,251,120"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="131,135,131,167,125,167,125,135"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="77,5,179,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="131,46,131,79,125,79,125,46"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="605,136,850,177"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1DiscoverEntityPlugin.html" title=" " alt="" coords="312,5,557,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="537,49,558,57,634,95,697,133,694,138,632,99,556,61,536,54"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,39,264,79"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="279,40,311,37,312,42,279,46"/>
+<area shape="rect" id="Node000006" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1DetectedEntityListener.html" title=" " alt="" coords="312,71,557,111"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="279,72,312,75,311,81,279,77"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1CurrentLocationChangedListener.html" title=" " alt="" coords="312,136,557,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="572,154,605,154,605,159,572,159"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1SurveyPlanetListener.html" title=" " alt="" coords="312,201,557,242"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="543,195,633,175,634,180,544,200"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="544,113,634,133,633,138,543,118"/>
+<area shape="rect" id="Node000007" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1ShowLootListener.html" title=" " alt="" coords="312,267,557,307"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="536,259,556,251,632,213,694,175,697,179,634,218,558,256,537,264"/>
 </map>

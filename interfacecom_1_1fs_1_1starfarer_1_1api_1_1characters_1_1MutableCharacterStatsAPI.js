@@ -61,6 +61,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1MutableCharacterStat
     [ "setSkillLevel", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1MutableCharacterStatsAPI.html#a6d5ba268010b95043a2221896f19b31b", null ],
     [ "setSkipRefresh", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1MutableCharacterStatsAPI.html#ad0ea69ff01483c4bd1e61a6adb39f83d", null ],
     [ "setStoryPoints", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1MutableCharacterStatsAPI.html#a3def02ca28c553b7f841c10795094980", null ],
+    [ "setXP", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1MutableCharacterStatsAPI.html#aa393b0933e4446e3358ea427f45057e8", null ],
     [ "spendStoryPoints", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1MutableCharacterStatsAPI.html#a855814a687c94972a7e1ff1906866717", null ],
     [ "spendStoryPoints", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1MutableCharacterStatsAPI.html#a8fb2a58d2330352b4e902597112c9446", null ]
 ];

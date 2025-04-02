@@ -28,6 +28,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugi
     [ "getSmallDescriptionTitle", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html#a27e3bc5341c65594251e418c928e8220", null ],
     [ "getSortString", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html#a59d7404c6f1b4206a570e55813e8b21a", null ],
     [ "getSortTier", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html#a7e21c05bf2846a09164909415caf0d12", null ],
+    [ "getTagsForSort", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html#ad2cda9446333249a08d7f0502e4a3565", null ],
     [ "getTimeRemainingFraction", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html#a56e0bfa61601582ea788f9ec74c3f3c8", null ],
     [ "hasImportantButton", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html#a7e17287f01141751a07ac4ee85e9affe", null ],
     [ "hasLargeDescription", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html#a62545eac5ddd81e41ce3292a37ac088e", null ],
@@ -46,6 +47,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugi
     [ "setImportant", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html#acb1d0c2343a3c5f58f3b72a3bb4e7455", null ],
     [ "setNew", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html#ae204aebab48fb82e339dd7d5d8ce7d13", null ],
     [ "setPlayerVisibleTimestamp", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html#a857fdf0ad9cd520348cada8613b7b1d3", null ],
+    [ "setTagsForSort", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html#af873a4ce2d37d6956c56c2192faa3ab7", null ],
     [ "shouldRemoveIntel", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html#a23a9f90b32e6b8b41e4e7473f0bb3637", null ],
     [ "storyActionConfirmed", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html#a2350cf73edbb5c079d35b0b2467062e2", null ],
     [ "tableRowClicked", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html#ae83ff2ab75100a2d112067c074369ef2", null ]

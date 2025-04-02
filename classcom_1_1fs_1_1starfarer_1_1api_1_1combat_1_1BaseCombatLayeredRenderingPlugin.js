@@ -5,6 +5,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseCombatLayeredRenderingPl
     [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseCombatLayeredRenderingPlugin.html#a2d2e8dfaee925e15a129d25bb2f62a5e", null ],
     [ "cleanup", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseCombatLayeredRenderingPlugin.html#a6dfed34e87d787d704e41b62ff5d4fce", null ],
     [ "getActiveLayers", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseCombatLayeredRenderingPlugin.html#a6fd9b30909bab79555989fe6803dec53", null ],
+    [ "getEntity", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseCombatLayeredRenderingPlugin.html#aaf590c56bf2fb84e7d9b5bd03189a9e4", null ],
     [ "getRenderRadius", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseCombatLayeredRenderingPlugin.html#a95cd97f2472068041da5922ab7ba4fd6", null ],
     [ "init", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseCombatLayeredRenderingPlugin.html#ad956008dacfa97f6a8ac9d8310d8f4fb", null ],
     [ "isExpired", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseCombatLayeredRenderingPlugin.html#a6bdd71c8dee8c82d374fd5dac2ec75f6", null ],

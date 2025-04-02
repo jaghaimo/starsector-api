@@ -1,0 +1,11 @@
+<map id="com.fs.starfarer.api.combat.BattleObjectiveEffect" name="com.fs.starfarer.api.combat.BattleObjectiveEffect">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,71,186,111"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseBattleObjectiveEffect.html" title=" " alt="" coords="234,71,441,111"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="201,88,233,88,233,94,201,94"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CommRelayEffect.html" title=" " alt="" coords="489,5,696,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="434,64,510,44,511,49,435,69"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1NavBuoyEffect.html" title=" " alt="" coords="489,71,696,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="457,88,489,88,489,94,457,94"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1SensorArrayEffect.html" title=" " alt="" coords="489,136,696,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="435,113,511,133,510,138,434,118"/>
+</map>

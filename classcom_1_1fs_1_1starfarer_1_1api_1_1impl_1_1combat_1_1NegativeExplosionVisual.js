@@ -3,6 +3,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1NegativeExplosionVis
     [ "NegativeExplosionVisual", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1NegativeExplosionVisual.html#a53d3f9afca4618ec8347f7a7a2ab33e5", null ],
     [ "advance", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1NegativeExplosionVisual.html#ada14615e9e1247e98f8e7798df5c6e1d", null ],
     [ "getActiveLayers", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1NegativeExplosionVisual.html#af6c39a45da77620e970021691adb91ca", null ],
+    [ "getFader", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1NegativeExplosionVisual.html#a07f00dd72db16982649b5c58d96d2ef8", null ],
     [ "getRenderRadius", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1NegativeExplosionVisual.html#aa9a9425a7502257f23616880bb680b8c", null ],
     [ "init", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1NegativeExplosionVisual.html#a1869c5cec0dbba3d35b9e5de63ce3bdf", null ],
     [ "isExpired", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1NegativeExplosionVisual.html#a7dfcf3a7027fc2964cb392624e5c2977", null ],

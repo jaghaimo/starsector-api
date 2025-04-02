@@ -1,5 +1,11 @@
 <map id="com.fs.starfarer.api.impl.combat.RiftCascadeEffect" name="com.fs.starfarer.api.impl.combat.RiftCascadeEffect">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,79,213,120"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="47,5,171,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="112,46,112,79,106,79,106,46"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="415,101,622,142"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BeamEffectPlugin.html" title=" " alt="" coords="5,5,186,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="202,21,295,27,344,35,392,47,446,71,490,99,488,103,443,76,390,52,343,40,294,33,201,26"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="70,78,121,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="136,91,414,111,414,117,136,97"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="60,140,131,165"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="146,152,258,153,390,145,425,140,426,145,391,150,258,158,146,157"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html" title=" " alt="" coords="18,189,173,230"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="188,203,286,193,390,173,434,158,475,140,477,145,436,163,391,178,287,198,188,208"/>
 </map>

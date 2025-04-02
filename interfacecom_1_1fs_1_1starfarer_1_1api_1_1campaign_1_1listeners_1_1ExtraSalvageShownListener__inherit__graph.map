@@ -1,0 +1,13 @@
+<map id="com.fs.starfarer.api.campaign.listeners.ExtraSalvageShownListener" name="com.fs.starfarer.api.campaign.listeners.ExtraSalvageShownListener">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,104,251,145"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1BaseHistorianOfferWithLocation.html" title=" " alt="" coords="299,104,661,145"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="266,122,298,122,298,127,266,127"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1FighterBlueprintOffer.html" title=" " alt="" coords="709,5,1071,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="561,97,708,56,767,44,768,49,710,62,562,102"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1ShipBlueprintOffer.html" title=" " alt="" coords="709,71,1071,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="676,106,708,103,709,108,677,111"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1SpecialItemOffer.html" title=" " alt="" coords="709,136,1071,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="677,137,709,140,708,145,676,142"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1WeaponBlueprintOffer.html" title=" " alt="" coords="709,201,1071,242"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="564,147,710,186,768,198,767,203,708,191,563,152"/>
+</map>

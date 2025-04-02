@@ -26,5 +26,6 @@ var dir_d48b5f679b0918c9a50e976f6a24181c =
     [ "WeaponGroupType.java", "WeaponGroupType_8java.html", "WeaponGroupType_8java" ],
     [ "WeaponSlotAPI.java", "WeaponSlotAPI_8java.html", "WeaponSlotAPI_8java" ],
     [ "WeaponSpecAPI.java", "WeaponSpecAPI_8java.html", "WeaponSpecAPI_8java" ],
-    [ "WingRole.java", "WingRole_8java.html", "WingRole_8java" ]
+    [ "WingRole.java", "WingRole_8java.html", "WingRole_8java" ],
+    [ "WithSourceMod.java", "WithSourceMod_8java.html", "WithSourceMod_8java" ]
 ];

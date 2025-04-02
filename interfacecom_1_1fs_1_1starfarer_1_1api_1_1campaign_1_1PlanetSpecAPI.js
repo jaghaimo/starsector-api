@@ -1,5 +1,6 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlanetSpecAPI =
 [
+    [ "addTag", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlanetSpecAPI.html#a41a80e9f35e8778c895232b2cf5191c2", null ],
     [ "getAOrAn", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlanetSpecAPI.html#ac383ac0d036c8dc8909da356bd7c2b88", null ],
     [ "getAtmosphereColor", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlanetSpecAPI.html#a5e174d0b95372026c09bf7a8d51b1627", null ],
     [ "getAtmosphereThickness", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlanetSpecAPI.html#a5dbf2cdb61354a8064ffafefe5d2bd15", null ],
@@ -30,8 +31,10 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlanetSpecAPI =
     [ "getShieldThickness", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlanetSpecAPI.html#a1d7d9c469dc0781368c7b100694f1941", null ],
     [ "getShieldThickness2", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlanetSpecAPI.html#a19fae99d88193039969a23a7b9b20819", null ],
     [ "getStarscapeIcon", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlanetSpecAPI.html#a66991bedc58dcd99c54f7a462e609c94", null ],
+    [ "getTags", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlanetSpecAPI.html#a6d18dd8937ad9af841d8281a99a4698c", null ],
     [ "getTexture", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlanetSpecAPI.html#a5532cb642b609b131b88d1c632ea171e", null ],
     [ "getTilt", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlanetSpecAPI.html#a3a2709b3b4a66a375a1eb2079e57122e", null ],
+    [ "hasTag", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlanetSpecAPI.html#adf895f84e9b8e7efa05a0945e4fcdb11", null ],
     [ "isBlackHole", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlanetSpecAPI.html#a4457e3280ad555313a23abde1e2f385c", null ],
     [ "isDoNotShowInCombat", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlanetSpecAPI.html#a1be112a3659acaaa1caa62b955fce116", null ],
     [ "isGasGiant", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlanetSpecAPI.html#ac146ed91bec154ef964c8bf4570f8fe1", null ],

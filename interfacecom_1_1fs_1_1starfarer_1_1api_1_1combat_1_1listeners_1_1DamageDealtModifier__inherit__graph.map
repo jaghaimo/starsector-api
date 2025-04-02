@@ -1,0 +1,19 @@
+<map id="com.fs.starfarer.api.combat.listeners.DamageDealtModifier" name="com.fs.starfarer.api.combat.listeners.DamageDealtModifier">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,248,238,289"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="307,5,597,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,233,161,192,194,144,235,96,284,57,309,44,311,49,287,61,239,100,198,147,165,194,142,236"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="289,71,614,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="148,234,207,176,244,146,284,122,315,109,317,114,287,127,247,151,210,180,152,238"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1SquallOnFireEffect.html" title=" " alt="" coords="348,136,556,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="171,238,225,210,285,186,347,169,349,174,287,191,227,215,173,242"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="286,200,618,256"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="252,250,285,246,285,251,253,255"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="319,280,584,336"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="253,282,319,290,319,295,252,287"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1VoidblasterEffect.html" title=" " alt="" coords="330,360,574,401"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="173,294,227,321,287,346,331,358,329,363,285,351,225,326,171,299"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="292,425,612,466"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="152,299,210,357,247,386,287,410,317,422,315,427,284,415,244,390,207,361,148,303"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="338,491,566,531"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="142,301,165,342,198,390,239,437,287,475,312,488,338,497,337,502,310,493,284,480,235,441,194,393,161,345,137,304"/>
+</map>

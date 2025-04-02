@@ -1,7 +1,11 @@
 <map id="com.fs.starfarer.api.impl.campaign.rulecmd.HA_CMD" name="com.fs.starfarer.api.impl.campaign.rulecmd.HA_CMD">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,168,275,208"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BaseCommandPlugin.html" title=" " alt="" coords="5,79,275,120"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,135,143,167,137,167,137,135"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="82,5,198,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="143,46,143,79,137,79,137,46"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="628,39,898,79"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BaseCommandPlugin.html" title=" " alt="" coords="279,5,548,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="564,37,628,44,628,49,563,43"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1CommandPlugin.html" title=" " alt="" coords="5,5,230,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="245,23,278,23,278,28,245,28"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="317,71,510,111"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="526,78,628,69,628,74,526,83"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,71,230,111"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="245,88,316,88,316,94,245,94"/>
 </map>

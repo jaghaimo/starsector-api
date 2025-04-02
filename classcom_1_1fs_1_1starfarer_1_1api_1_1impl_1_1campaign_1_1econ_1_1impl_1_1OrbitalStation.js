@@ -20,6 +20,8 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Or
     [ "getCR", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1OrbitalStation.html#a804872beaf61b6c73e414a285a33aa40", null ],
     [ "getHumanCommanderLevel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1OrbitalStation.html#afbf994d97fbdd50da500aa4294595bb1", null ],
     [ "getStabilityAffectingDeficit", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1OrbitalStation.html#a06e99cd117dba6637c7f4f7d9facab02", null ],
+    [ "getStationEntity", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1OrbitalStation.html#aa0b53f2bc1b03cf292712cdfa2ac57ae", null ],
+    [ "getStationFleet", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1OrbitalStation.html#adba31b914a0965ae698e3fab02a8caa2", null ],
     [ "getUnavailableReason", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1OrbitalStation.html#a91c6529fc8e70056321108feb72b880a", null ],
     [ "hasPostDemandSection", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1OrbitalStation.html#a260d349c4135ca69a1c6331c29d0cbcb", null ],
     [ "isAvailableToBuild", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1OrbitalStation.html#ab8b7fefc1b0cc8ace05bdee500730f1b", null ],

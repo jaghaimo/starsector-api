@@ -1,7 +1,27 @@
 <map id="com.fs.starfarer.api.impl.campaign.rulecmd.missions.MissionHubCMD" name="com.fs.starfarer.api.impl.campaign.rulecmd.missions.MissionHubCMD">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,168,330,208"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BaseCommandPlugin.html" title=" " alt="" coords="33,79,302,120"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="170,135,170,167,165,167,165,135"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="109,5,226,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="170,46,170,79,165,79,165,46"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="708,267,1033,307"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BaseCommandPlugin.html" title=" " alt="" coords="295,5,564,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="556,48,581,57,636,79,686,111,736,151,783,193,853,265,849,268,779,197,732,155,683,116,634,84,579,61,554,53"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1CommandPlugin.html" title=" " alt="" coords="5,5,230,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="245,23,295,23,295,28,245,28"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="333,71,526,111"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="543,110,581,122,657,155,730,194,841,264,838,268,727,198,655,160,579,127,541,115"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,136,230,177"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="232,130,332,109,333,114,233,135"/>
+<area shape="rect" id="Node000009" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html" title=" " alt="" coords="330,136,529,177"/>
+<area shape="poly" id="edge9_Node000009_Node000005" title=" " alt="" coords="245,154,330,154,330,159,245,159"/>
+<area shape="rect" id="Node000011" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html" title=" " alt="" coords="318,201,542,242"/>
+<area shape="poly" id="edge12_Node000011_Node000005" title=" " alt="" coords="233,178,330,198,329,203,232,183"/>
+<area shape="rect" id="Node000006" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogPlugin.html" title=" " alt="" coords="333,267,526,307"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="542,284,708,284,708,290,542,290"/>
+<area shape="rect" id="Node000007" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html" title=" " alt="" coords="333,332,526,373"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="541,333,728,305,729,311,542,338"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="279,397,580,438"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="546,391,580,382,705,343,812,305,814,311,706,348,581,387,547,396"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="545,178,581,187,706,226,814,263,812,269,705,231,580,192,544,183"/>
+<area shape="rect" id="Node000010" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1MissionHub.html" title=" " alt="" coords="280,463,579,503"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="554,455,579,447,655,414,728,376,839,305,841,310,731,380,658,419,581,452,556,460"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="557,238,729,263,728,269,557,243"/>
+<area shape="rect" id="Node000012" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html" title=" " alt="" coords="333,528,526,569"/>
+<area shape="poly" id="edge13_Node000001_Node000012" title=" " alt="" coords="541,525,579,512,634,490,683,458,732,419,779,377,849,306,853,310,783,381,736,424,686,463,636,495,581,518,543,530"/>
 </map>

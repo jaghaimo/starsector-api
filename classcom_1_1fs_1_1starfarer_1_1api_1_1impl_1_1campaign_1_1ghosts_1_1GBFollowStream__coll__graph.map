@@ -1,7 +1,43 @@
 <map id="com.fs.starfarer.api.impl.campaign.ghosts.GBFollowStream" name="com.fs.starfarer.api.impl.campaign.ghosts.GBFollowStream">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,183,268,223"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseGhostBehavior.html" title=" " alt="" coords="5,94,268,135"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="139,150,139,182,134,182,134,150"/>
-<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostBehavior.html" title=" " alt="" coords="5,5,268,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="139,62,139,94,134,94,134,62"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="1412,133,1675,174"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseGhostBehavior.html" title=" " alt="" coords="1049,71,1312,111"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1318,112,1422,130,1421,135,1317,117"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostBehavior.html" title=" " alt="" coords="624,5,887,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="902,45,1049,68,1048,73,901,51"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="608,71,903,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="918,88,1049,88,1049,94,918,94"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamTerrainPlugin2.html" title=" " alt="" coords="1049,256,1312,297"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="1257,248,1480,172,1482,177,1258,253"/>
+<area shape="rect" id="Node000016" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamBuilder.html" title=" " alt="" coords="1412,316,1675,357"/>
+<area shape="poly" id="edge18_Node000016_Node000005" title=" " alt="" coords="1323,297,1417,313,1416,318,1322,302"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html" title=" " alt="" coords="626,201,885,242"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="901,238,1049,257,1048,262,900,243"/>
+<area shape="rect" id="Node000007" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignTerrainPlugin.html" title=" " alt="" coords="279,197,472,238"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="488,216,626,218,625,223,488,222"/>
+<area shape="rect" id="Node000008" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="279,263,472,303"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="487,262,625,240,626,245,488,268"/>
+<area shape="rect" id="Node000009" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,263,230,303"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="245,280,279,280,279,286,245,286"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="614,136,897,177"/>
+<area shape="poly" id="edge9_Node000005_Node000010" title=" " alt="" coords="870,178,904,187,1118,253,1117,258,903,192,868,183"/>
+<area shape="poly" id="edge17_Node000016_Node000010" title=" " alt="" coords="913,149,1042,148,1179,152,1302,163,1351,173,1389,185,1435,212,1475,247,1508,283,1531,314,1527,317,1504,287,1472,251,1432,216,1387,189,1350,178,1301,169,1179,158,1042,154,913,154"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="350,144,401,169"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="417,154,614,154,614,159,417,159"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="666,266,845,292"/>
+<area shape="poly" id="edge11_Node000005_Node000012" title=" " alt="" coords="861,276,1048,274,1048,280,861,281"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="698,316,813,341"/>
+<area shape="poly" id="edge12_Node000005_Node000013" title=" " alt="" coords="828,318,1024,295,1048,292,1048,298,1025,301,829,323"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="670,365,841,390"/>
+<area shape="poly" id="edge13_Node000005_Node000014" title=" " alt="" coords="856,371,940,357,983,344,1023,328,1035,317,1047,306,1073,295,1075,300,1050,311,1039,321,1026,332,985,349,941,362,857,376"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="607,415,904,455"/>
+<area shape="poly" id="edge14_Node000005_Node000015" title=" " alt="" coords="918,428,974,411,1000,397,1023,380,1033,363,1034,345,1035,326,1047,307,1062,295,1065,299,1051,310,1040,327,1040,346,1038,365,1027,384,1003,402,976,416,920,433"/>
+<area shape="poly" id="edge15_Node000005_Node000016" title=" " alt="" coords="1488,312,1440,292,1388,278,1312,270,1313,265,1388,272,1441,287,1490,307"/>
+<area shape="rect" id="Node000017" title=" " alt="" coords="1146,321,1215,346"/>
+<area shape="poly" id="edge16_Node000016_Node000017" title=" " alt="" coords="1230,332,1336,333,1411,333,1411,338,1336,338,1230,337"/>
+<area shape="rect" id="Node000018" title=" " alt="" coords="1095,370,1266,396"/>
+<area shape="poly" id="edge19_Node000016_Node000018" title=" " alt="" coords="1281,368,1388,354,1411,351,1412,356,1388,359,1282,373"/>
+<area shape="rect" id="Node000019" title=" " alt="" coords="1145,420,1216,445"/>
+<area shape="poly" id="edge20_Node000016_Node000019" title=" " alt="" coords="1230,422,1311,406,1401,381,1481,355,1483,360,1403,386,1313,411,1231,427"/>
+<area shape="rect" id="Node000020" title=" " alt="" coords="1049,469,1312,510"/>
+<area shape="poly" id="edge21_Node000016_Node000020" title=" " alt="" coords="1290,462,1311,455,1367,432,1422,405,1509,355,1511,359,1424,410,1369,437,1313,460,1292,467"/>
 </map>

@@ -1,0 +1,23 @@
+var namespacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc =
+[
+    [ "AbyssalFrequencies", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1AbyssalFrequencies.html", null ],
+    [ "AbyssalLightDwellerEPEC", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1AbyssalLightDwellerEPEC.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1AbyssalLightDwellerEPEC" ],
+    [ "AbyssalLightEPEC", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1AbyssalLightEPEC.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1AbyssalLightEPEC" ],
+    [ "AbyssalLocationDespawner", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1AbyssalLocationDespawner.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1AbyssalLocationDespawner" ],
+    [ "AbyssalNoEPEC", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1AbyssalNoEPEC.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1AbyssalNoEPEC" ],
+    [ "AbyssalRogueStellarObjectDireHintsEPEC", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1AbyssalRogueStellarObjectDireHintsEPEC.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1AbyssalRogueStellarObjectDireHintsEPEC" ],
+    [ "AbyssalRogueStellarObjectEPEC", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1AbyssalRogueStellarObjectEPEC.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1AbyssalRogueStellarObjectEPEC" ],
+    [ "BaseEPEncounterCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator" ],
+    [ "EncounterManager", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager" ],
+    [ "EncounterPoint", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterPoint.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterPoint" ],
+    [ "EncounterPointProvider", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterPointProvider.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterPointProvider" ],
+    [ "EPEncounterCreator", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EPEncounterCreator.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EPEncounterCreator" ],
+    [ "OutsideSystemNoEPEC", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1OutsideSystemNoEPEC.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1OutsideSystemNoEPEC" ],
+    [ "OutsideSystemRemnantEPEC", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1OutsideSystemRemnantEPEC.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1OutsideSystemRemnantEPEC" ],
+    [ "SlipstreamLuddicPathEPEC", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1SlipstreamLuddicPathEPEC.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1SlipstreamLuddicPathEPEC" ],
+    [ "SlipstreamMercenaryEPEC", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1SlipstreamMercenaryEPEC.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1SlipstreamMercenaryEPEC" ],
+    [ "SlipstreamNoEPEC", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1SlipstreamNoEPEC.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1SlipstreamNoEPEC" ],
+    [ "SlipstreamPirateEPEC", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1SlipstreamPirateEPEC.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1SlipstreamPirateEPEC" ],
+    [ "SlipstreamScavengerEPEC", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1SlipstreamScavengerEPEC.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1SlipstreamScavengerEPEC" ],
+    [ "StrandedGiveTJScript", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1StrandedGiveTJScript.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1StrandedGiveTJScript" ]
+];

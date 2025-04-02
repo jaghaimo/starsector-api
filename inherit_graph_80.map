@@ -1,3 +1,35 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommodityOnMarketAPI.html" title=" " alt="" coords="5,5,230,46"/>
+<area shape="rect" id="Node000000" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetOrStubAPI.html" title=" " alt="" coords="293,39,486,79"/>
+<area shape="rect" id="Node000001" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html" title=" " alt="" coords="555,71,748,111"/>
+<area shape="poly" id="edge29_Node000000_Node000001" title=" " alt="" coords="502,70,555,77,554,82,502,75"/>
+<area shape="rect" id="Node000016" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetStubAPI.html" title=" " alt="" coords="555,5,748,46"/>
+<area shape="poly" id="edge30_Node000000_Node000016" title=" " alt="" coords="502,42,554,35,555,41,502,47"/>
+<area shape="rect" id="Node000012" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,399,230,439"/>
+<area shape="rect" id="Node000013" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html" title=" " alt="" coords="293,300,486,341"/>
+<area shape="poly" id="edge31_Node000012_Node000013" title=" " alt="" coords="179,390,277,351,315,339,316,344,279,356,181,395"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="293,365,486,406"/>
+<area shape="poly" id="edge32_Node000012_Node000002" title=" " alt="" coords="245,401,292,395,293,400,246,406"/>
+<area shape="rect" id="Node000014" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html" title=" " alt="" coords="278,431,502,471"/>
+<area shape="poly" id="edge43_Node000012_Node000014" title=" " alt="" coords="245,431,277,435,277,440,245,437"/>
+<area shape="rect" id="Node000015" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html" title=" " alt="" coords="291,496,489,537"/>
+<area shape="poly" id="edge44_Node000012_Node000015" title=" " alt="" coords="183,443,279,480,316,493,315,498,277,486,181,448"/>
+<area shape="poly" id="edge34_Node000002_Node000001" title=" " alt="" coords="497,354,500,351,519,323,527,295,527,267,524,239,520,210,521,181,529,152,548,123,563,110,566,114,552,126,533,154,526,182,526,210,529,238,532,267,532,296,524,325,504,354,500,358"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1AsteroidAPI.html" title=" " alt="" coords="555,136,748,177"/>
+<area shape="poly" id="edge33_Node000002_Node000003" title=" " alt="" coords="496,354,500,351,515,331,522,311,524,271,525,230,533,209,548,188,564,175,568,179,552,192,537,211,530,231,529,271,527,313,520,333,504,354,500,358"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignProgressIndicatorAPI.html" title=" " alt="" coords="550,201,753,242"/>
+<area shape="poly" id="edge35_Node000002_Node000004" title=" " alt="" coords="494,355,500,350,511,339,517,327,524,303,530,278,537,265,548,253,567,240,570,245,552,257,541,269,535,280,529,305,522,329,515,342,504,354,498,359"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignTerrainAPI.html" title=" " alt="" coords="555,267,748,307"/>
+<area shape="poly" id="edge36_Node000002_Node000005" title=" " alt="" coords="484,357,501,350,525,334,549,318,578,306,580,310,551,323,528,339,503,355,486,362"/>
+<area shape="rect" id="Node000006" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomCampaignEntityAPI.html" title=" " alt="" coords="555,332,748,373"/>
+<area shape="poly" id="edge37_Node000002_Node000006" title=" " alt="" coords="502,369,554,362,555,367,502,374"/>
+<area shape="rect" id="Node000007" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1JumpPointAPI.html" title=" " alt="" coords="555,397,748,438"/>
+<area shape="poly" id="edge38_Node000002_Node000007" title=" " alt="" coords="502,397,555,403,554,408,502,402"/>
+<area shape="rect" id="Node000008" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1NascentGravityWellAPI.html" title=" " alt="" coords="555,463,748,503"/>
+<area shape="poly" id="edge39_Node000002_Node000008" title=" " alt="" coords="485,409,503,417,527,432,551,447,581,460,579,465,549,452,525,436,501,421,483,414"/>
+<area shape="rect" id="Node000009" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OrbitalStationAPI.html" title=" " alt="" coords="555,528,748,569"/>
+<area shape="poly" id="edge40_Node000002_Node000009" title=" " alt="" coords="498,412,504,417,522,441,529,466,535,490,552,513,570,525,567,530,548,517,530,492,524,467,517,444,500,421,494,416"/>
+<area shape="rect" id="Node000010" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlanetAPI.html" title=" " alt="" coords="555,593,748,634"/>
+<area shape="poly" id="edge41_Node000002_Node000010" title=" " alt="" coords="500,413,504,417,519,438,527,458,529,499,531,539,538,559,552,578,568,591,564,595,548,582,533,561,525,540,524,500,522,460,515,440,500,421,496,417"/>
+<area shape="rect" id="Node000011" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RingBandAPI.html" title=" " alt="" coords="555,659,748,699"/>
+<area shape="poly" id="edge42_Node000002_Node000011" title=" " alt="" coords="500,414,504,417,524,446,532,475,532,504,529,532,526,560,526,588,534,616,552,644,566,656,563,660,548,647,529,618,521,589,520,560,524,532,527,504,527,476,519,448,500,421,497,417"/>
 </map>

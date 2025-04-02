@@ -24,6 +24,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI =
     [ "getDisplayName", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#ad505ad31ad20ca6ba2c4fd256dd2a81a", null ],
     [ "getFittedWeaponSlots", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#a7f0b1010200dea46bed62b0b20d46a0a", null ],
     [ "getFittedWings", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#a254d590296a7d84aaaef8d3ac339335d", null ],
+    [ "getFullDesignationForShip", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#a0fb68cd72a455c7509415df1a735ba63", null ],
     [ "getFullDesignationWithHullName", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#a82874a6af29eca1398ad0d4423c946ee", null ],
     [ "getFullDesignationWithHullNameForShip", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#afdc7f37868a04471a0526db893fcb685", null ],
     [ "getGroup", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#adacf4eab61a801aecec8e2262f23d57f", null ],
@@ -92,5 +93,6 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI =
     [ "setOriginalVariant", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#a7e52bf51523e9cc8d016f3c7ef49d346", null ],
     [ "setSource", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#aa93cf815bf895b9f465f9fe30fbe692e", null ],
     [ "setVariantDisplayName", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#a00935b4490ce1444703152e5165e6b0f", null ],
-    [ "setWingId", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#a6da38c12f692081e9843981fe9625c89", null ]
+    [ "setWingId", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#a6da38c12f692081e9843981fe9625c89", null ],
+    [ "toJSONObject", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#a85f5c83db93350224364842f9036547f", null ]
 ];

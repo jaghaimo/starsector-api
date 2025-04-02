@@ -1,5 +1,15 @@
 <map id="com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMissionCreator" name="com.fs.starfarer.api.impl.campaign.missions.hub.BaseHubMissionCreator">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,94,305,135"/>
-<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionCreator.html" title=" " alt="" coords="5,5,305,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="158,62,158,94,152,94,152,62"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="760,79,1059,119"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionCreator.html" title=" " alt="" coords="341,21,640,62"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="656,61,760,76,759,81,655,67"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="456,86,525,112"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="541,96,759,96,759,102,541,102"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1PersonMissionSpec.html" title=" " alt="" coords="401,136,580,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="595,139,759,117,760,122,595,145"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="53,82,151,108"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="167,100,317,122,401,136,400,142,316,127,166,105"/>
+<area shape="rect" id="Node000006" href="$enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RepLevel.html" title=" " alt="" coords="5,136,199,177"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="214,154,401,154,401,159,214,159"/>
+<area shape="rect" id="Node000007" href="$enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PersonImportance.html" title=" " alt="" coords="5,201,199,242"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="214,200,400,168,401,174,214,205"/>
 </map>

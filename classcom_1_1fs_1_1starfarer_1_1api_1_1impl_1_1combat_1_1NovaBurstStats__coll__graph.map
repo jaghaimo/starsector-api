@@ -1,13 +1,20 @@
 <map id="com.fs.starfarer.api.impl.combat.NovaBurstStats" name="com.fs.starfarer.api.impl.combat.NovaBurstStats">
-<area shape="rect" id="Node000001" title=" " alt="" coords="889,71,1096,111"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html" title=" " alt="" coords="632,71,840,111"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="855,88,889,88,889,94,855,94"/>
-<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseShipSystemScript.html" title=" " alt="" coords="287,5,494,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="510,46,632,69,631,74,509,51"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="5,13,220,39"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="236,23,286,23,286,28,236,28"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="269,71,511,111"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="527,88,632,88,632,94,527,94"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="276,136,504,177"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="516,130,631,108,632,113,517,135"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="1242,84,1450,125"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1OrionDeviceStats.html" title=" " alt="" coords="986,84,1193,125"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1209,102,1242,102,1242,107,1209,107"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseShipSystemScript.html" title=" " alt="" coords="640,5,847,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="863,43,962,64,1023,81,1021,86,961,70,861,48"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1ShipSystemStatsScriptAdvanced.html" title=" " alt="" coords="233,5,447,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="463,23,640,23,640,28,463,28"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1ShipSystemStatsScript.html" title=" " alt="" coords="5,5,184,46"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="200,23,233,23,233,28,200,28"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="622,133,865,174"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="879,132,985,116,986,122,880,137"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="314,106,366,132"/>
+<area shape="poly" id="edge9_Node000002_Node000007" title=" " alt="" coords="381,111,471,102,611,96,750,95,985,98,985,103,750,100,611,102,472,107,382,116"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="382,122,472,132,622,144,622,149,471,137,381,127"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="629,199,858,239"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="836,191,864,183,1034,123,1036,128,865,188,838,196"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="249,206,431,232"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="447,216,629,216,629,222,447,222"/>
 </map>

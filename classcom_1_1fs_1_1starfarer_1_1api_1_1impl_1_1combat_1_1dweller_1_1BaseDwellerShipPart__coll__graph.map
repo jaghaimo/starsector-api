@@ -1,0 +1,19 @@
+<map id="com.fs.starfarer.api.impl.combat.dweller.BaseDwellerShipPart" name="com.fs.starfarer.api.impl.combat.dweller.BaseDwellerShipPart">
+<area shape="rect" id="Node000001" title=" " alt="" coords="618,136,869,177"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1DwellerShipPart.html" title=" " alt="" coords="256,5,507,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="484,48,508,55,612,94,700,133,698,138,610,99,506,60,483,53"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="333,70,430,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="446,92,595,120,652,133,651,138,593,126,445,97"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="346,120,416,145"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="432,133,618,145,617,151,432,138"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1ValueShifterUtil.html" title=" " alt="" coords="304,169,458,210"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="474,179,617,165,618,171,474,184"/>
+<area shape="rect" id="Node000006" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1util_1_1ValueShifterAPI.html" title=" " alt="" coords="15,141,170,182"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="185,168,304,180,304,185,185,173"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="5,206,180,232"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="195,206,303,195,304,200,195,211"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="356,234,407,260"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="422,237,506,219,671,175,673,180,508,224,423,242"/>
+<area shape="rect" id="Node000009" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html" title=" " alt="" coords="304,284,458,325"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="473,280,506,270,562,248,617,223,706,175,709,180,619,227,564,253,508,275,474,285"/>
+</map>

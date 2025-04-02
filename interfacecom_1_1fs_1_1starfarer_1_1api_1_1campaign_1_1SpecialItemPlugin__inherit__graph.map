@@ -1,25 +1,29 @@
 <map id="com.fs.starfarer.api.campaign.SpecialItemPlugin" name="com.fs.starfarer.api.campaign.SpecialItemPlugin">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,300,199,341"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html" title=" " alt="" coords="247,300,502,341"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="214,318,246,318,246,323,214,323"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,365,199,406"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html" title=" " alt="" coords="247,365,502,406"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="214,383,246,383,246,388,214,388"/>
 <area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1FighterBlueprintItemPlugin.html" title=" " alt="" coords="550,5,805,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="387,284,410,233,445,172,491,110,519,81,548,57,571,44,573,49,552,61,522,85,495,113,450,175,415,236,392,287"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="382,349,402,286,435,207,457,166,484,126,514,89,548,57,568,44,571,49,552,61,518,93,488,129,462,168,440,209,407,288,387,351"/>
 <area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1GenericSpecialItemPlugin.html" title=" " alt="" coords="550,71,805,111"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="394,285,421,247,456,203,499,159,549,122,574,109,577,114,551,127,503,163,460,207,425,251,398,289"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="387,350,410,299,445,237,491,175,519,147,548,122,571,109,573,114,552,127,522,151,495,178,450,240,415,301,392,352"/>
 <area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1IndustryBlueprintItemPlugin.html" title=" " alt="" coords="550,136,805,177"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="407,287,470,236,508,210,549,187,580,175,582,180,551,192,511,214,473,240,410,291"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="394,351,421,313,456,268,499,225,549,187,574,175,577,179,551,192,503,229,460,272,425,316,398,354"/>
 <area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1JanusDevicePlugin.html" title=" " alt="" coords="550,201,805,242"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="440,291,549,252,591,240,593,245,551,258,442,296"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="407,353,470,301,508,275,549,253,580,240,582,245,551,257,511,280,473,306,410,357"/>
 <area shape="rect" id="Node000007" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1ModSpecItemPlugin.html" title=" " alt="" coords="550,267,805,307"/>
-<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="517,302,549,298,550,304,518,307"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="440,357,549,318,591,305,593,311,551,323,442,362"/>
 <area shape="rect" id="Node000008" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1MultiBlueprintItemPlugin.html" title=" " alt="" coords="550,332,805,373"/>
-<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="518,333,550,336,549,341,517,338"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="517,367,549,364,550,369,518,373"/>
 <area shape="rect" id="Node000009" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1ShipBlueprintItemPlugin.html" title=" " alt="" coords="550,397,805,438"/>
-<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="444,344,551,382,593,394,592,399,549,387,442,349"/>
-<area shape="rect" id="Node000010" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1WeaponBlueprintItemPlugin.html" title=" " alt="" coords="550,463,805,503"/>
-<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="410,349,473,399,511,425,551,447,582,460,580,465,549,452,509,430,470,404,407,353"/>
-<area shape="rect" id="Node000011" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1WormholeAnchorPlugin.html" title=" " alt="" coords="550,528,805,569"/>
-<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="398,352,425,390,460,433,503,476,551,513,577,525,574,530,549,517,500,480,456,437,421,393,394,355"/>
-<area shape="rect" id="Node000012" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1WormholeScannerPlugin.html" title=" " alt="" coords="550,593,805,634"/>
-<area shape="poly" id="edge11_Node000002_Node000012" title=" " alt="" coords="392,354,415,405,450,466,496,527,522,554,552,578,573,591,571,595,548,583,519,558,492,530,446,468,411,407,387,356"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="518,398,550,402,549,407,517,403"/>
+<area shape="rect" id="Node000010" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1ShroudedHullmodItemPlugin.html" title=" " alt="" coords="550,463,805,503"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="444,410,551,447,593,459,592,465,549,452,442,415"/>
+<area shape="rect" id="Node000011" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1ShroudedSubstratePlugin.html" title=" " alt="" coords="550,528,805,569"/>
+<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="410,414,473,465,511,491,551,513,582,525,580,530,549,517,509,495,470,469,407,418"/>
+<area shape="rect" id="Node000012" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1WeaponBlueprintItemPlugin.html" title=" " alt="" coords="550,593,805,634"/>
+<area shape="poly" id="edge11_Node000002_Node000012" title=" " alt="" coords="398,417,425,455,460,499,503,542,551,578,577,591,574,595,549,583,500,546,456,502,421,458,394,420"/>
+<area shape="rect" id="Node000013" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1WormholeAnchorPlugin.html" title=" " alt="" coords="550,659,805,699"/>
+<area shape="poly" id="edge12_Node000002_Node000013" title=" " alt="" coords="392,420,415,470,450,531,496,592,522,620,552,643,573,656,571,661,548,648,519,623,492,595,446,534,411,473,387,422"/>
+<area shape="rect" id="Node000014" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1WormholeScannerPlugin.html" title=" " alt="" coords="550,724,805,765"/>
+<area shape="poly" id="edge13_Node000002_Node000014" title=" " alt="" coords="387,420,407,483,440,561,462,602,488,641,518,677,552,709,571,721,568,726,548,713,514,681,484,644,458,605,435,564,402,485,382,422"/>
 </map>

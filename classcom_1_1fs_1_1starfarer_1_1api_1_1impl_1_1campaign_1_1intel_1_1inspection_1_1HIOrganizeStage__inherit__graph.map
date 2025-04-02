@@ -1,5 +1,9 @@
 <map id="com.fs.starfarer.api.impl.campaign.intel.inspection.HIOrganizeStage" name="com.fs.starfarer.api.impl.campaign.intel.inspection.HIOrganizeStage">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,79,315,120"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="107,5,213,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,46,163,79,157,79,157,46"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,271,315,312"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1OrganizeStage.html" title=" " alt="" coords="24,183,296,223"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,239,163,271,157,271,157,239"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html" title=" " alt="" coords="24,94,296,135"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="163,150,163,182,157,182,157,150"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="24,5,296,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="163,62,163,94,157,94,157,62"/>
 </map>

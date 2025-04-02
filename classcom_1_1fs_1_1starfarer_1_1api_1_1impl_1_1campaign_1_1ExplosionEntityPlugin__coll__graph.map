@@ -1,11 +1,27 @@
 <map id="com.fs.starfarer.api.impl.campaign.ExplosionEntityPlugin" name="com.fs.starfarer.api.impl.campaign.ExplosionEntityPlugin">
-<area shape="rect" id="Node000001" title=" " alt="" coords="723,39,943,79"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html" title=" " alt="" coords="395,5,616,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="631,36,723,45,722,50,631,41"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="49,13,241,39"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="257,23,395,23,395,28,257,28"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="382,71,629,111"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="645,75,722,67,723,72,645,80"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="5,71,285,111"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="300,88,381,88,381,94,300,94"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="1050,243,1270,283"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html" title=" " alt="" coords="669,71,889,111"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="841,116,1114,240,1112,245,839,121"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomCampaignEntityPlugin.html" title=" " alt="" coords="322,5,515,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="531,43,669,68,668,74,530,48"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="322,71,515,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="531,88,668,88,668,94,531,94"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,71,230,111"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="245,88,322,88,322,94,245,94"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="655,185,903,226"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="919,224,1049,244,1049,249,918,229"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="393,136,444,161"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="460,152,655,183,655,189,459,157"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="279,185,558,226"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="574,203,655,203,655,208,574,208"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="384,250,454,276"/>
+<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="469,252,654,223,655,228,470,258"/>
+<area shape="rect" id="Node000010" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html" title=" " alt="" coords="322,300,515,341"/>
+<area shape="poly" id="edge9_Node000006_Node000010" title=" " alt="" coords="530,294,558,286,595,273,630,254,641,245,654,235,681,224,683,229,657,240,645,249,633,259,597,278,559,291,531,299"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="711,250,847,276"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="863,260,1049,260,1049,266,863,266"/>
+<area shape="rect" id="Node000012" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1graphics_1_1SpriteAPI.html" title=" " alt="" coords="686,300,872,341"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="887,302,1025,281,1049,277,1049,282,1026,286,888,307"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="695,365,863,390"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="864,359,902,350,964,335,1025,315,1111,282,1113,286,1027,321,965,340,903,355,865,364"/>
 </map>

@@ -1,0 +1,39 @@
+<map id="com.fs.starfarer.api.combat.OnHitEffectPlugin" name="com.fs.starfarer.api.combat.OnHitEffectPlugin">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,528,186,569"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BreachOnHitEffect.html" title=" " alt="" coords="256,5,463,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="93,513,96,422,102,363,114,299,131,234,155,170,189,110,232,57,254,41,257,46,235,61,193,113,160,172,136,236,119,300,108,364,101,422,98,513"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryoblasterEffect.html" title=" " alt="" coords="256,71,463,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="95,512,102,432,122,327,140,272,163,217,194,167,232,122,254,107,257,111,235,126,198,170,168,220,145,274,127,329,107,433,100,513"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CryofluxTransducerEffect.html" title=" " alt="" coords="256,136,463,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="97,512,108,443,131,356,148,310,171,266,198,224,232,188,254,173,257,177,235,192,203,227,175,268,153,312,136,358,113,445,103,513"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1DisintegratorEffect.html" title=" " alt="" coords="256,201,463,242"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="101,512,115,455,140,385,179,314,203,281,232,253,254,239,257,243,235,257,207,285,183,317,145,387,120,457,106,513"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1IonCannonOnHitEffect.html" title=" " alt="" coords="256,267,463,307"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="106,512,124,468,151,415,187,363,208,339,232,318,254,305,257,310,235,322,212,343,191,366,155,418,129,470,111,514"/>
+<area shape="rect" id="Node000008" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MiningBlasterOnHitEffect.html" title=" " alt="" coords="256,332,463,373"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="114,513,162,447,195,413,232,383,257,371,259,376,235,388,198,417,166,450,118,516"/>
+<area shape="rect" id="Node000009" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1MoteOnHitEffect.html" title=" " alt="" coords="256,397,463,438"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="130,516,177,481,233,449,264,436,266,441,235,453,180,485,134,520"/>
+<area shape="rect" id="Node000010" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1PilumOnHitEffect.html" title=" " alt="" coords="256,463,463,503"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="195,521,274,501,275,507,196,526"/>
+<area shape="rect" id="Node000011" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorEffect.html" title=" " alt="" coords="256,528,463,569"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="201,546,255,546,255,551,201,551"/>
+<area shape="rect" id="Node000012" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftTorpedoEffect.html" title=" " alt="" coords="256,593,463,634"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="196,570,275,590,274,595,195,576"/>
+<area shape="rect" id="Node000013" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1SabotOnHitEffect.html" title=" " alt="" coords="256,659,463,699"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="134,577,180,611,235,643,266,656,264,660,233,648,177,616,130,581"/>
+<area shape="rect" id="Node000014" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TestOnHitEffect.html" title=" " alt="" coords="256,724,463,765"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="118,580,166,646,198,680,235,709,259,721,257,726,232,713,195,684,162,650,114,583"/>
+<area shape="rect" id="Node000015" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1AssayingRiftEffect.html" title=" " alt="" coords="234,789,485,830"/>
+<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="111,583,129,627,155,679,191,731,212,754,235,774,256,787,253,791,232,778,208,758,187,734,151,681,124,629,106,585"/>
+<area shape="rect" id="Node000016" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1RiftLightningEffect.html" title=" " alt="" coords="234,855,485,895"/>
+<area shape="poly" id="edge15_Node000001_Node000016" title=" " alt="" coords="106,583,120,640,145,709,183,780,207,812,235,840,254,852,251,857,232,844,203,815,179,783,140,712,115,642,101,585"/>
+<area shape="rect" id="Node000017" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1DevouringSwarmMissileEffect.html" title=" " alt="" coords="238,920,481,961"/>
+<area shape="poly" id="edge16_Node000001_Node000017" title=" " alt="" coords="103,584,113,652,136,739,153,784,175,828,203,869,235,905,253,917,250,922,232,909,198,873,171,831,148,786,131,741,108,653,97,584"/>
+<area shape="rect" id="Node000018" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1VoidblasterEffect.html" title=" " alt="" coords="238,985,481,1026"/>
+<area shape="poly" id="edge17_Node000001_Node000018" title=" " alt="" coords="100,584,107,664,127,768,145,823,168,877,198,927,235,970,252,983,249,987,232,974,194,930,163,879,140,825,122,769,102,664,95,584"/>
+<area shape="rect" id="Node000019" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1VoltaicCannonEffect.html" title=" " alt="" coords="238,1051,481,1091"/>
+<area shape="poly" id="edge18_Node000001_Node000019" title=" " alt="" coords="98,584,101,675,108,733,119,796,136,861,160,925,193,984,236,1036,252,1048,248,1052,232,1040,189,987,155,927,131,863,114,797,102,734,96,675,93,584"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1PseudoparticleJetEffect.html" title=" " alt="" coords="533,136,784,177"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="479,154,533,154,533,159,479,159"/>
+</map>

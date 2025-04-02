@@ -9,6 +9,7 @@ var dir_76be33bb2034575c8cfe43af0f12e0fc =
     [ "GADeliverVIP.java", "GADeliverVIP_8java.html", "GADeliverVIP_8java" ],
     [ "GADepartments.java", "GADepartments_8java.html", "GADepartments_8java" ],
     [ "GADerelictArtifact.java", "GADerelictArtifact_8java.html", "GADerelictArtifact_8java" ],
+    [ "GADetectHyperspaceOddity.java", "GADetectHyperspaceOddity_8java.html", "GADetectHyperspaceOddity_8java" ],
     [ "GAFCReplaceArchon.java", "GAFCReplaceArchon_8java.html", "GAFCReplaceArchon_8java" ],
     [ "GAFindingCoureuse.java", "GAFindingCoureuse_8java.html", "GAFindingCoureuse_8java" ],
     [ "GAIntro.java", "GAIntro_8java.html", "GAIntro_8java" ],

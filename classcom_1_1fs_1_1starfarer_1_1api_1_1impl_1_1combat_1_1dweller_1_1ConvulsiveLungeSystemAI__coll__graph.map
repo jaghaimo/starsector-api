@@ -1,0 +1,27 @@
+<map id="com.fs.starfarer.api.impl.combat.dweller.ConvulsiveLungeSystemAI" name="com.fs.starfarer.api.impl.combat.dweller.ConvulsiveLungeSystemAI">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1124,201,1376,242"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAIScript.html" title=" " alt="" coords="816,5,996,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1011,48,1033,57,1092,90,1147,129,1229,199,1225,203,1143,134,1089,95,1030,61,1009,52"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html" title=" " alt="" coords="816,71,996,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="1007,114,1032,122,1128,161,1209,198,1206,203,1126,165,1030,127,1006,119"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html" title=" " alt="" coords="510,71,690,111"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="706,88,815,88,815,94,706,94"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html" title=" " alt="" coords="816,136,996,177"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="1011,174,1140,198,1139,203,1010,179"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipwideAIFlags.html" title=" " alt="" coords="816,201,996,242"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="1011,219,1124,219,1124,224,1011,224"/>
+<area shape="rect" id="Node000007" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html" title=" " alt="" coords="816,267,996,307"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="1010,264,1139,240,1140,245,1011,270"/>
+<area shape="rect" id="Node000008" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1ConvulsiveLungeSystemScript.html" title=" " alt="" coords="780,332,1031,373"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="1006,325,1030,316,1126,278,1206,240,1209,245,1128,283,1032,322,1007,330"/>
+<area shape="rect" id="Node000009" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseShipSystemScript.html" title=" " alt="" coords="497,297,704,338"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="720,329,780,335,779,341,719,334"/>
+<area shape="rect" id="Node000010" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1ShipSystemStatsScriptAdvanced.html" title=" " alt="" coords="233,297,447,338"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="463,315,496,315,496,320,463,320"/>
+<area shape="rect" id="Node000011" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1ShipSystemStatsScript.html" title=" " alt="" coords="5,297,184,338"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="200,315,233,315,233,320,200,320"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="565,362,636,388"/>
+<area shape="poly" id="edge11_Node000008_Node000012" title=" " alt="" coords="651,369,779,359,780,364,651,374"/>
+<area shape="rect" id="Node000013" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html" title=" " alt="" coords="828,397,983,438"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="997,395,1030,382,1089,348,1143,310,1225,240,1229,244,1147,314,1092,353,1032,387,999,400"/>
+</map>

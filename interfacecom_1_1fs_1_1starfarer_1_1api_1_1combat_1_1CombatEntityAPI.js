@@ -16,6 +16,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI =
     [ "getShield", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html#a40d2959e71e9a788e7a75e5c5b146501", null ],
     [ "getVelocity", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html#a7ca6afdc56ef599c0a70ce1b4cf95a60", null ],
     [ "isExpired", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html#ad8b5e7ed8adefe0b69281915fa56efce", null ],
+    [ "isPointInBounds", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html#a66475c85ac6d10107adf5503884cab6f", null ],
     [ "removeCustomData", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html#ab6092f1660b7f4df3ae0f6c8b10bbda6", null ],
     [ "setAngularVelocity", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html#a364c148eb047c0a01939e77cbeda1a06", null ],
     [ "setCollisionClass", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html#a0c8136ed320c6c4cf6ee3aa919704874", null ],
@@ -24,5 +25,6 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI =
     [ "setFacing", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html#af8ae2bfa4a5d242dd1279993693adc7d", null ],
     [ "setHitpoints", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html#add256d5ba85c2b281ed44e87e673228d", null ],
     [ "setMass", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html#a457c45a40499552b0d4bc0e14bc19d30", null ],
-    [ "setOwner", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html#aadda1d7818b49fcfa673b6e0e731ccf0", null ]
+    [ "setOwner", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html#aadda1d7818b49fcfa673b6e0e731ccf0", null ],
+    [ "wasRemoved", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html#a1426a3cdafb071c5f1f55b2ebb511d3f", null ]
 ];

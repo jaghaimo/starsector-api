@@ -1,7 +1,17 @@
 <map id="com.fs.starfarer.api.impl.campaign.procgen.Constellation" name="com.fs.starfarer.api.impl.campaign.procgen.Constellation">
-<area shape="rect" id="Node000001" title=" " alt="" coords="350,39,619,79"/>
-<area shape="rect" id="Node000002" href="$enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarAge.html" title=" " alt="" coords="5,5,275,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="290,38,350,43,349,49,290,43"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="5,71,275,111"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="290,74,349,69,350,74,290,80"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="856,180,1125,221"/>
+<area shape="rect" id="Node000002" href="$enumcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1StarAge.html" title=" " alt="" coords="389,5,658,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="669,48,694,55,769,83,841,117,955,177,953,182,839,121,767,88,692,60,667,53"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="370,70,676,126"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="669,127,895,177,894,182,667,132"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="354,150,693,206"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="708,184,856,191,856,196,708,189"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="389,229,658,270"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="673,231,855,212,856,217,674,237"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameGenData.html" title=" " alt="" coords="5,229,275,270"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="290,247,388,247,388,252,290,252"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="410,295,636,335"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="650,288,831,246,924,219,925,224,833,251,651,294"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="389,360,658,401"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="657,353,692,344,763,323,831,293,900,255,958,219,960,223,902,260,833,298,765,328,694,350,658,359"/>
 </map>

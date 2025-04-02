@@ -1,6 +1,7 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod =
 [
     [ "addPostDescriptionSection", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a33c67bf29e82daaad9e6a6ffcf0ee0b2", null ],
+    [ "addRequiredItemSection", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#ac76d2dd95267f6764af1a95937934745", null ],
     [ "addSModEffectSection", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a63190e3b817c2b30ea95a934cbf1ee25", null ],
     [ "addSModSection", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a8fd4922f014ca3dbabafd5f621319a6d", null ],
     [ "advanceInCampaign", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html#a587534a7f579777d5fc60c320fa6a900", null ],

@@ -12,6 +12,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1PromoteOf
     [ "getIntelTags", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1PromoteOfficerIntel.html#adf7b159536d7334e3bcd379ce3ad92b1", null ],
     [ "getName", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1PromoteOfficerIntel.html#a0f86086909ad0b982ca21e721a58f250", null ],
     [ "getSmallDescriptionTitle", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1PromoteOfficerIntel.html#a7b5176ca72abcac2bffb7f777b5d11a9", null ],
+    [ "getSortString", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1PromoteOfficerIntel.html#a86f64dec2b787fd3bb6d57b0503f70f1", null ],
     [ "shouldRemoveIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1PromoteOfficerIntel.html#ad72f91812bc226a98c85ee58073752b8", null ],
     [ "storyActionConfirmed", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1PromoteOfficerIntel.html#a22d676ace063ff1942bd7891eff302ec", null ],
     [ "person", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1PromoteOfficerIntel.html#a5f95f1449fcf4bfd5e8632c0cb5e5600", null ]

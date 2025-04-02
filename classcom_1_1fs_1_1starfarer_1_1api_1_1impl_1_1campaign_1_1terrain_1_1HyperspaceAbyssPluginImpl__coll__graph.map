@@ -1,9 +1,15 @@
 <map id="com.fs.starfarer.api.impl.campaign.terrain.HyperspaceAbyssPluginImpl" name="com.fs.starfarer.api.impl.campaign.terrain.HyperspaceAbyssPluginImpl">
-<area shape="rect" id="Node000001" title=" " alt="" coords="620,35,879,75"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseHyperspaceAbyssPlugin.html" title=" " alt="" coords="313,5,572,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="588,37,620,40,619,45,587,42"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="818,128,1078,169"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseHyperspaceAbyssPlugin.html" title=" " alt="" coords="323,5,582,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="580,47,795,96,887,125,886,130,794,102,579,52"/>
 <area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1HyperspaceAbyssPlugin.html" title=" " alt="" coords="5,5,265,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="280,23,312,23,312,28,280,28"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="364,70,521,96"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="536,72,620,64,620,69,537,77"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="280,23,323,23,323,28,280,28"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterPointProvider.html" title=" " alt="" coords="330,71,575,111"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="591,103,795,126,818,129,818,134,794,131,590,108"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="418,136,488,161"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="503,146,818,146,818,151,503,151"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="314,185,591,226"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="607,187,794,166,818,163,818,168,795,171,607,192"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="418,250,487,276"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="502,256,635,239,715,225,794,206,850,188,901,167,903,172,852,193,795,211,716,230,636,244,503,261"/>
 </map>

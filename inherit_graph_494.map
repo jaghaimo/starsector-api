@@ -1,3 +1,21 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1PolarizedArmor.html" title=" " alt="" coords="5,5,259,46"/>
+<area shape="rect" id="Node000000" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1DwellerShipCreator.html" title=" " alt="" coords="5,235,257,275"/>
+<area shape="rect" id="Node000001" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1BaseDwellerShipCreator.html" title=" " alt="" coords="305,235,556,275"/>
+<area shape="poly" id="edge1433_Node000000_Node000001" title=" " alt="" coords="272,252,304,252,304,258,272,258"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1HumanShipShroudCreator.html" title=" " alt="" coords="604,5,855,46"/>
+<area shape="poly" id="edge1434_Node000001_Node000002" title=" " alt="" coords="450,220,476,182,511,138,554,94,603,57,628,44,630,49,605,61,557,98,515,141,480,185,454,223"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1ShroudedEjectaShipCreator.html" title=" " alt="" coords="604,71,855,111"/>
+<area shape="poly" id="edge1435_Node000001_Node000003" title=" " alt="" coords="463,222,525,171,563,145,603,122,634,109,636,114,605,127,566,149,528,175,466,226"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1ShroudedEyeShipCreator.html" title=" " alt="" coords="604,136,855,177"/>
+<area shape="poly" id="edge1436_Node000001_Node000004" title=" " alt="" coords="496,226,603,187,645,175,646,180,605,192,498,231"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1ShroudedMaelstromShipCreator.html" title=" " alt="" coords="604,201,855,242"/>
+<area shape="poly" id="edge1437_Node000001_Node000005" title=" " alt="" coords="571,237,603,233,604,238,572,242"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1ShroudedMawShipCreator.html" title=" " alt="" coords="604,267,855,307"/>
+<area shape="poly" id="edge1438_Node000001_Node000006" title=" " alt="" coords="572,267,604,271,603,276,571,273"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1ShroudedTendrilShipCreator.html" title=" " alt="" coords="604,332,855,373"/>
+<area shape="poly" id="edge1439_Node000001_Node000007" title=" " alt="" coords="499,279,605,316,647,329,645,334,603,322,497,284"/>
+<area shape="rect" id="Node000008" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1ShroudedVortexShipCreator.html" title=" " alt="" coords="604,397,855,438"/>
+<area shape="poly" id="edge1440_Node000001_Node000008" title=" " alt="" coords="466,284,528,334,566,360,605,382,636,394,634,399,603,387,563,364,525,338,463,288"/>
+<area shape="rect" id="Node000009" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1TestDwellerShipCreator.html" title=" " alt="" coords="604,463,855,503"/>
+<area shape="poly" id="edge1441_Node000001_Node000009" title=" " alt="" coords="454,287,480,324,515,368,558,411,605,447,630,460,628,465,603,452,554,415,511,371,476,327,450,290"/>
 </map>

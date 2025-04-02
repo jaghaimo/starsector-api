@@ -1,0 +1,17 @@
+<map id="com.fs.starfarer.api.impl.campaign.fleets.SDFBase" name="com.fs.starfarer.api.impl.campaign.fleets.SDFBase">
+<area shape="rect" id="Node000001" title=" " alt="" coords="601,104,855,145"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1SDFHegemony.html" title=" " alt="" coords="903,5,1158,46"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="794,95,903,56,944,44,946,49,904,62,796,100"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1SDFLeague.html" title=" " alt="" coords="903,71,1158,111"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="871,106,903,102,903,108,871,111"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1SDFLuddicChurch.html" title=" " alt="" coords="903,136,1158,177"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="871,137,903,140,903,146,871,142"/>
+<area shape="rect" id="Node000008" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1SDFTriTachyon.html" title=" " alt="" coords="903,201,1158,242"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="797,148,904,186,946,198,945,203,903,191,796,153"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1PersonalFleetScript.html" title=" " alt="" coords="299,104,553,145"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="569,122,601,122,601,127,569,127"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="45,71,211,111"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="227,99,299,107,298,113,226,105"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1FleetEventListener.html" title=" " alt="" coords="5,136,251,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="266,139,298,135,299,141,266,144"/>
+</map>

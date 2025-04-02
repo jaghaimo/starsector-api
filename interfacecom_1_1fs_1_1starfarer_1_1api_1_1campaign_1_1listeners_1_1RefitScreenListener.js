@@ -1,0 +1,4 @@
+var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1RefitScreenListener =
+[
+    [ "reportFleetMemberVariantSaved", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1RefitScreenListener.html#a6a00cc992eaba92091d44f9579798c02", null ]
+];

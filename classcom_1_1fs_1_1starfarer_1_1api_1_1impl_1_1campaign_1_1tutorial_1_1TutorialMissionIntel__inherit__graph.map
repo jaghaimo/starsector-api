@@ -1,7 +1,14 @@
 <map id="com.fs.starfarer.api.impl.campaign.tutorial.TutorialMissionIntel" name="com.fs.starfarer.api.impl.campaign.tutorial.TutorialMissionIntel">
-<area shape="rect" id="Node000001" title=" " alt="" coords="12,94,274,135"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,13,118,39"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="85,48,127,92,123,96,81,52"/>
-<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="142,5,309,46"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="198,59,163,95,160,92,194,56"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="665,167,927,207"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html" title=" " alt="" coords="370,136,617,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="633,168,665,171,664,176,632,173"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html" title=" " alt="" coords="47,5,280,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="295,47,323,57,400,94,463,133,461,138,398,99,321,61,294,52"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="29,71,298,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="285,112,388,133,387,138,284,118"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="80,201,247,242"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="262,214,665,191,665,197,262,219"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="261,200,386,175,387,180,262,205"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="5,136,322,177"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="337,154,369,154,369,159,337,159"/>
 </map>

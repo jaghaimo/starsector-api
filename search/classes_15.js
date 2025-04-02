@@ -11,5 +11,9 @@ var searchData=
   ['viewportapi_8',['ViewportAPI',['../interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ViewportAPI.html',1,'com::fs::starfarer::api::combat']]],
   ['visualpanelapi_9',['VisualPanelAPI',['../interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1VisualPanelAPI.html',1,'com::fs::starfarer::api::campaign']]],
   ['voices_10',['Voices',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ids_1_1Voices.html',1,'com::fs::starfarer::api::impl::campaign::ids']]],
-  ['vpdrivereffect_11',['VPDriverEffect',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1VPDriverEffect.html',1,'com::fs::starfarer::api::impl::combat']]]
+  ['voidblastereffect_11',['VoidblasterEffect',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1VoidblasterEffect.html',1,'com::fs::starfarer::api::impl::combat::threat']]],
+  ['voltaiccannoneffect_12',['VoltaicCannonEffect',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1VoltaicCannonEffect.html',1,'com::fs::starfarer::api::impl::combat::threat']]],
+  ['voltaicdischargeonfireeffect_13',['VoltaicDischargeOnFireEffect',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1VoltaicDischargeOnFireEffect.html',1,'com::fs::starfarer::api::impl::combat::threat']]],
+  ['vortexlaunchereffect_14',['VortexLauncherEffect',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1VortexLauncherEffect.html',1,'com::fs::starfarer::api::impl::combat::dweller']]],
+  ['vpdrivereffect_15',['VPDriverEffect',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1VPDriverEffect.html',1,'com::fs::starfarer::api::impl::combat']]]
 ];

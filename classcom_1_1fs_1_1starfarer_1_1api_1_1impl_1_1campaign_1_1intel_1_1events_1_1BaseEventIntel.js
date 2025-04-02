@@ -11,6 +11,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_
     [ "addStageDescriptionText", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a044f95e28bad28ac90cddfab894295ac", null ],
     [ "addStageDescriptionWithImage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a551dc5e02d7b14f32906250c18817ea6", null ],
     [ "advanceImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a735360399cc204b9856f04af9794303c", null ],
+    [ "afterStageDescriptions", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a0ae83ca6bd8daddeaa649b1d8de66760", null ],
     [ "createDisplayData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#aedd64fdd835409a2cf9dfee80df650b9", null ],
     [ "createIntelInfo", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a577f6e4c870cc21fa18112c6abe514d8", null ],
     [ "createLargeDescription", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#a4454636b0c5e1e87d25a4e1b7890daee", null ],

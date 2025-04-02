@@ -49,6 +49,8 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTer
     [ "renderOnMap", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a5e708440d7c411bb073d389791b49bde", null ],
     [ "renderOnMapAbove", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#acc0e8338363368d57420129e6795b520", null ],
     [ "renderOnRadar", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#abd92122fd963162c11cdf2ed4c242aff", null ],
+    [ "setEntity", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a9daa048dab3a4873e83b544b3f975527", null ],
+    [ "setTerrainId", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#add16145a08db02e6769869791044d909", null ],
     [ "setTerrainName", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a8bbe0186d5438b360004342eb800e212", null ],
     [ "shouldCheckFleetsToApplyEffect", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#aa491c82b2211f9aa015fb660c113bce0", null ],
     [ "shouldPlayLoopFour", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#aa1204a01ebff84e98da9d0be6aca757c", null ],

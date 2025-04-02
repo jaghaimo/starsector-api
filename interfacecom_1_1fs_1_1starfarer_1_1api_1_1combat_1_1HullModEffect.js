@@ -1,11 +1,13 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1HullModEffect =
 [
     [ "addPostDescriptionSection", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1HullModEffect.html#ac10bc5f3762f7dc8a2f037dea4178566", null ],
+    [ "addRequiredItemSection", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1HullModEffect.html#a276e8037452564fdc17722d9abf2df87", null ],
     [ "addSModEffectSection", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1HullModEffect.html#abdfba2df46ed1f6bc5cc4465b6df179a", null ],
     [ "addSModSection", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1HullModEffect.html#af9361b241304412c77f547aecf626202", null ],
     [ "advanceInCampaign", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1HullModEffect.html#aff2c91d806f5763c7ddb5661348ca269", null ],
     [ "advanceInCombat", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1HullModEffect.html#acce25f43c276d1d5f7c948554bb73123", null ],
     [ "affectsOPCosts", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1HullModEffect.html#a4b2617dc482a0695b9b40debe1c5bab2", null ],
+    [ "applyEffectsAfterShipAddedToCombatEngine", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1HullModEffect.html#ae5f97637f0d52d1176cdc8ed3dfad6af", null ],
     [ "applyEffectsAfterShipCreation", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1HullModEffect.html#ae85fa7e67fd719cfbbff746aff1ae9c2", null ],
     [ "applyEffectsBeforeShipCreation", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1HullModEffect.html#a4a4c136bed42c8f29252fa224aa9645c", null ],
     [ "applyEffectsToFighterSpawnedByShip", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1HullModEffect.html#a5b8143eee407ea7d5c5b17290d8420ec", null ],
@@ -17,6 +19,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1HullModEffect =
     [ "getDisplayCategoryIndex", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1HullModEffect.html#aba881a94d1b1afc03ccc7c52498ae6ae", null ],
     [ "getDisplaySortOrder", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1HullModEffect.html#ade71a59c15c3b9ea278d17e1fa3c48f7", null ],
     [ "getNameColor", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1HullModEffect.html#a6b463d13ba712be677f3b58fff42b986", null ],
+    [ "getRequiredItem", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1HullModEffect.html#a5669810bb9a7e336db57dffc2f809e68", null ],
     [ "getSModDescriptionParam", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1HullModEffect.html#a662204402f63a21534f3fdc1a8bb1eeb", null ],
     [ "getSModDescriptionParam", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1HullModEffect.html#aa19c6afa1a439394d7dbae2fb1a335d9", null ],
     [ "getTooltipWidth", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1HullModEffect.html#a1160c3cdf641a4e8a73c45ec6b6c819c", null ],

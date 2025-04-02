@@ -1,0 +1,4 @@
+var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1CoreAutoresolveListener =
+[
+    [ "modifyDataForFleet", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1CoreAutoresolveListener.html#a40ada577b526576b89a04aa8cf6f75ab", null ]
+];

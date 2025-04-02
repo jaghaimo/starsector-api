@@ -1,11 +1,16 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillSpecAPI =
 [
+    [ "SkillEffectSpecAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillSpecAPI_1_1SkillEffectSpecAPI.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillSpecAPI_1_1SkillEffectSpecAPI" ],
     [ "addTag", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillSpecAPI.html#aa95efd407d12efe8e292bda9ac182bf9", null ],
+    [ "getAllAbilityUnlocks", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillSpecAPI.html#a72e4bd3bda182747f0dcaa5853a4aa54", null ],
+    [ "getAllHullmodUnlocks", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillSpecAPI.html#a805e9b56ad2f8c3373a3df8c101a5025", null ],
     [ "getAuthor", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillSpecAPI.html#a54d00e2854c481da27215e66db7b4e13", null ],
     [ "getDescription", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillSpecAPI.html#a59057506a2a29b08b75b1bd142f370d4", null ],
+    [ "getEffectsAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillSpecAPI.html#a6aa62f11f5b61c53054c111016769b51", null ],
     [ "getGoverningAptitudeColor", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillSpecAPI.html#ac90869c5fb171b6850f8d4fd271b8be7", null ],
     [ "getGoverningAptitudeId", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillSpecAPI.html#a52dbc8c92da7d20939c48af49ec797cb", null ],
     [ "getGoverningAptitudeName", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillSpecAPI.html#a22b36c209ee61de10e41c196fe85fd3c", null ],
+    [ "getGoverningAptitudeOrder", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillSpecAPI.html#ae234870259c43a5396ed3263271ba0b8", null ],
     [ "getId", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillSpecAPI.html#acb983269ddf7c8426b9ca9a7a58cc161", null ],
     [ "getName", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillSpecAPI.html#acec71d47d1af188226aee4c2c0972b2e", null ],
     [ "getOrder", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillSpecAPI.html#a2a6a349020c0e8ffaea4c05ea77c73f9", null ],

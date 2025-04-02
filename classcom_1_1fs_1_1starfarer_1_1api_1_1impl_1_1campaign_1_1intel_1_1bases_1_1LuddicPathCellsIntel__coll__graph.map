@@ -1,19 +1,48 @@
 <map id="com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCellsIntel" name="com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCellsIntel">
-<area shape="rect" id="Node000001" title=" " alt="" coords="639,158,925,199"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html" title=" " alt="" coords="249,75,496,116"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="492,117,678,155,677,160,491,122"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="41,5,145,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="158,33,181,40,297,72,296,77,180,45,156,38"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="43,55,143,80"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="159,71,249,80,248,86,158,77"/>
-<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="10,105,176,145"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="192,112,249,106,249,111,192,117"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="5,169,181,195"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="162,161,179,154,204,140,229,125,262,114,263,119,231,130,207,144,182,159,164,166"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="305,140,440,166"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="456,155,639,167,639,172,456,161"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="308,189,438,215"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="453,195,639,184,639,189,454,200"/>
-<area shape="rect" id="Node000009" title=" " alt="" coords="230,239,515,280"/>
-<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="530,239,615,224,717,197,718,202,616,229,531,244"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="1533,344,1818,385"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html" title=" " alt="" coords="742,132,989,173"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1004,140,1118,141,1249,154,1316,165,1383,182,1448,204,1510,233,1553,259,1593,288,1655,342,1651,346,1590,292,1550,263,1508,237,1446,209,1382,187,1315,171,1248,159,1118,147,1004,146"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html" title=" " alt="" coords="321,185,553,226"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="568,187,741,165,742,170,569,192"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="302,251,572,291"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="561,244,595,235,666,210,737,183,780,171,782,176,739,188,668,215,596,240,563,249"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="354,5,520,46"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="536,42,596,56,712,93,811,129,809,134,710,98,595,62,535,47"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="279,71,595,111"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="605,111,715,127,742,131,741,136,714,132,605,117"/>
+<area shape="rect" id="Node000007" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="340,321,534,362"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="548,315,595,300,660,283,685,271,712,248,721,233,723,217,725,200,736,184,755,171,758,175,740,188,730,202,728,218,726,234,716,252,688,276,661,288,596,306,549,320"/>
+<area shape="rect" id="Node000019" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html" title=" " alt="" coords="769,377,962,418"/>
+<area shape="poly" id="edge21_Node000019_Node000007" title=" " alt="" coords="549,354,769,382,768,388,549,359"/>
+<area shape="rect" id="Node000021" title=" " alt="" coords="738,312,993,353"/>
+<area shape="poly" id="edge24_Node000021_Node000007" title=" " alt="" coords="549,337,714,333,738,332,738,338,714,338,550,342"/>
+<area shape="rect" id="Node000008" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,463,230,503"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="157,451,213,415,278,381,339,359,341,365,280,385,215,419,160,456"/>
+<area shape="rect" id="Node000012" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html" title=" " alt="" coords="753,508,978,549"/>
+<area shape="poly" id="edge12_Node000012_Node000008" title=" " alt="" coords="245,488,753,519,753,524,245,493"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="388,136,486,161"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="501,146,741,149,741,154,501,152"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="738,197,993,238"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="1008,202,1095,199,1193,201,1294,209,1394,227,1466,250,1536,281,1644,341,1641,346,1534,286,1465,255,1392,232,1294,215,1193,206,1095,205,1008,208"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="1123,307,1378,347"/>
+<area shape="poly" id="edge25_Node000016_Node000010" title=" " alt="" coords="966,240,993,247,1040,258,1085,274,1109,291,1141,304,1139,308,1106,296,1082,279,1038,263,992,252,965,245"/>
+<area shape="rect" id="Node000011" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1FleetEventListener.html" title=" " alt="" coords="1128,241,1373,282"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="1359,283,1510,319,1595,341,1594,346,1508,324,1358,289"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="974,549,1065,563,1170,572,1283,570,1338,563,1392,551,1434,538,1474,519,1548,472,1609,423,1652,383,1656,387,1613,428,1551,477,1476,524,1436,542,1394,557,1339,568,1283,575,1170,577,1064,569,973,555"/>
+<area shape="poly" id="edge18_Node000016_Node000012" title=" " alt="" coords="991,501,1041,477,1063,460,1081,441,1091,420,1091,400,1093,379,1106,359,1123,346,1126,350,1110,362,1098,381,1097,400,1096,421,1086,443,1066,464,1044,481,993,506"/>
+<area shape="rect" id="Node000013" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html" title=" " alt="" coords="1173,372,1328,413"/>
+<area shape="poly" id="edge13_Node000001_Node000013" title=" " alt="" coords="1342,387,1509,378,1533,376,1533,381,1509,383,1343,392"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="1216,437,1285,462"/>
+<area shape="poly" id="edge14_Node000001_Node000014" title=" " alt="" coords="1300,440,1508,403,1596,383,1597,388,1510,409,1301,445"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="1108,487,1393,527"/>
+<area shape="poly" id="edge15_Node000001_Node000015" title=" " alt="" coords="1408,483,1459,471,1508,456,1583,421,1643,383,1646,387,1585,425,1510,461,1460,476,1409,488"/>
+<area shape="poly" id="edge16_Node000001_Node000016" title=" " alt="" coords="1393,337,1533,349,1532,354,1393,342"/>
+<area shape="rect" id="Node000017" title=" " alt="" coords="738,443,993,483"/>
+<area shape="poly" id="edge17_Node000016_Node000017" title=" " alt="" coords="967,435,992,427,1040,411,1059,402,1082,387,1093,372,1106,358,1132,345,1134,350,1109,362,1097,376,1085,391,1062,407,1042,416,994,432,969,440"/>
+<area shape="rect" id="Node000018" title=" " alt="" coords="790,262,941,288"/>
+<area shape="poly" id="edge19_Node000016_Node000018" title=" " alt="" coords="957,285,1123,307,1122,312,956,290"/>
+<area shape="poly" id="edge20_Node000016_Node000019" title=" " alt="" coords="977,375,1135,345,1136,351,978,380"/>
+<area shape="rect" id="Node000020" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetOrStubAPI.html" title=" " alt="" coords="340,395,534,435"/>
+<area shape="poly" id="edge22_Node000019_Node000020" title=" " alt="" coords="549,408,768,399,768,404,549,413"/>
+<area shape="poly" id="edge23_Node000016_Node000021" title=" " alt="" coords="1008,328,1123,326,1123,331,1008,333"/>
 </map>

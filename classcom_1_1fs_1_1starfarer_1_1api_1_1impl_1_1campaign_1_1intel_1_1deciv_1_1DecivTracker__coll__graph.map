@@ -1,5 +1,13 @@
 <map id="com.fs.starfarer.api.impl.campaign.intel.deciv.DecivTracker" name="com.fs.starfarer.api.impl.campaign.intel.deciv.DecivTracker">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,94,287,135"/>
-<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="63,5,229,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="149,62,149,94,143,94,143,62"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="459,136,740,177"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="87,5,254,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="270,41,336,56,436,87,551,133,549,138,434,92,335,62,269,46"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,71,336,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="352,106,435,118,512,133,511,138,434,123,351,111"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html" title=" " alt="" coords="93,136,248,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="263,154,458,154,458,159,263,159"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html" title=" " alt="" coords="86,201,255,242"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="269,204,461,175,462,180,270,209"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="136,266,205,292"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="220,271,276,263,335,251,452,214,550,175,552,180,454,219,336,256,277,269,221,277"/>
 </map>

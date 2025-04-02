@@ -1,7 +1,9 @@
 <map id="com.fs.starfarer.api.impl.MusicPlayerPluginImpl" name="com.fs.starfarer.api.impl.MusicPlayerPluginImpl">
-<area shape="rect" id="Node000001" title=" " alt="" coords="27,183,188,223"/>
-<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1MusicPlayerPluginWithVolumeControl.html" title=" " alt="" coords="5,94,210,135"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="110,150,110,182,105,182,105,150"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="175,199,336,240"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1MusicPlayerPluginWithVolumeControl.html" title=" " alt="" coords="5,95,210,136"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,143,229,196,226,201,147,147"/>
 <area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1MusicPlayerPlugin.html" title=" " alt="" coords="23,5,192,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="110,62,110,94,105,94,105,62"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="110,62,110,95,105,95,105,62"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="233,103,376,128"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="295,144,267,200,263,197,290,141"/>
 </map>

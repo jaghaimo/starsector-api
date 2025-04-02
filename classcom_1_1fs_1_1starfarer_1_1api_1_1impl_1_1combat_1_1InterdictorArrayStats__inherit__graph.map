@@ -1,7 +1,9 @@
 <map id="com.fs.starfarer.api.impl.combat.InterdictorArrayStats" name="com.fs.starfarer.api.impl.combat.InterdictorArrayStats">
-<area shape="rect" id="Node000001" title=" " alt="" coords="9,168,216,208"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseShipSystemScript.html" title=" " alt="" coords="9,79,216,120"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,135,115,167,110,167,110,135"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="5,5,220,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="115,46,115,79,110,79,110,46"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="9,271,216,312"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseShipSystemScript.html" title=" " alt="" coords="9,183,216,223"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,239,115,271,110,271,110,239"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1ShipSystemStatsScriptAdvanced.html" title=" " alt="" coords="5,94,220,135"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="115,150,115,182,110,182,110,150"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1ShipSystemStatsScript.html" title=" " alt="" coords="23,5,202,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="115,62,115,94,110,94,110,62"/>
 </map>

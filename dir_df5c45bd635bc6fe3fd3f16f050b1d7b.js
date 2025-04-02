@@ -10,5 +10,6 @@ var dir_df5c45bd635bc6fe3fd3f16f050b1d7b =
     [ "OfficerLevelupPlugin.java", "OfficerLevelupPlugin_8java.html", "OfficerLevelupPlugin_8java" ],
     [ "ShipSystemStatsScript.java", "ShipSystemStatsScript_8java.html", "ShipSystemStatsScript_8java" ],
     [ "ShipSystemStatsScriptAdvanced.java", "ShipSystemStatsScriptAdvanced_8java.html", "ShipSystemStatsScriptAdvanced_8java" ],
+    [ "SimulatorPlugin.java", "SimulatorPlugin_8java.html", "SimulatorPlugin_8java" ],
     [ "SurveyPlugin.java", "SurveyPlugin_8java.html", "SurveyPlugin_8java" ]
 ];

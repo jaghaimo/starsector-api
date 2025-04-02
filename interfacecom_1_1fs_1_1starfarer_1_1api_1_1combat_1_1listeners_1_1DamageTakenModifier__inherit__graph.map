@@ -1,0 +1,13 @@
+<map id="com.fs.starfarer.api.combat.listeners.DamageTakenModifier" name="com.fs.starfarer.api.combat.listeners.DamageTakenModifier">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,136,238,177"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="305,5,578,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="162,125,219,89,285,57,322,44,324,49,287,61,221,94,165,129"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="286,71,597,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="239,130,338,109,339,115,240,135"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="312,136,570,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="254,154,312,154,312,159,254,159"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TriadShieldStats.html" title=" " alt="" coords="338,201,545,242"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="240,178,339,198,338,203,239,183"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1TriadShieldStatsBackup.html" title=" " alt="" coords="338,267,545,307"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="165,184,221,219,287,251,338,267,337,272,285,256,219,224,162,188"/>
+</map>

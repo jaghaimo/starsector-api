@@ -1,9 +1,24 @@
 <map id="com.fs.starfarer.api.impl.combat.CryoblasterEffect" name="com.fs.starfarer.api.impl.combat.CryoblasterEffect">
-<area shape="rect" id="Node000001" title=" " alt="" coords="191,94,399,135"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,206,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,50,253,91,251,96,161,55"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="230,13,360,39"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="298,54,298,94,292,94,292,54"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="383,13,508,39"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="413,49,330,96,328,91,410,44"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="638,284,845,325"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseCombatLayeredRenderingPlugin.html" title=" " alt="" coords="298,76,534,117"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="498,120,539,139,594,174,645,213,722,281,718,285,642,217,591,178,537,144,495,125"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatLayeredRenderingPlugin.html" title=" " alt="" coords="5,5,212,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="215,47,325,73,323,78,214,53"/>
+<area shape="rect" id="Node000004" href="$enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineLayers.html" title=" " alt="" coords="18,71,199,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="214,90,297,92,297,97,214,95"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html" title=" " alt="" coords="18,148,199,189"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="213,141,325,115,326,120,214,146"/>
+<area shape="rect" id="Node000009" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamagingProjectileAPI.html" title=" " alt="" coords="326,153,506,194"/>
+<area shape="poly" id="edge9_Node000009_Node000005" title=" " alt="" coords="214,167,325,169,325,175,214,173"/>
+<area shape="rect" id="Node000006" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1OnFireEffectPlugin.html" title=" " alt="" coords="326,219,506,259"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="521,257,638,281,637,286,520,263"/>
+<area shape="rect" id="Node000007" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1OnHitEffectPlugin.html" title=" " alt="" coords="326,284,506,325"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="521,302,638,302,638,307,521,307"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="348,349,484,374"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="499,344,637,320,638,325,500,350"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="516,196,539,205,628,243,703,281,701,286,626,248,537,209,514,201"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="381,398,451,424"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="466,399,538,384,576,378,613,368,662,346,705,323,708,327,664,351,615,373,577,383,538,390,467,404"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="294,448,538,489"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="516,441,537,434,576,420,613,401,670,362,716,323,719,327,673,366,615,406,578,425,539,439,518,446"/>
 </map>

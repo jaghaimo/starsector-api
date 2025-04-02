@@ -1,5 +1,21 @@
 <map id="com.fs.starfarer.api.impl.campaign.tutorial.TutorialLevelUpDialogPluginImpl" name="com.fs.starfarer.api.impl.campaign.tutorial.TutorialLevelUpDialogPluginImpl">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,79,268,120"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="59,5,214,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="139,46,139,79,134,79,134,46"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="829,169,1091,210"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogPlugin.html" title=" " alt="" coords="522,5,715,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="699,49,716,57,832,114,926,166,923,171,830,118,714,61,697,54"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html" title=" " alt="" coords="522,71,715,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="707,114,888,166,886,171,705,119"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html" title=" " alt="" coords="522,136,715,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="731,165,829,174,828,180,730,170"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html" title=" " alt="" coords="522,201,715,242"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="730,209,828,199,829,205,731,214"/>
+<area shape="rect" id="Node000006" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1VisualPanelAPI.html" title=" " alt="" coords="522,267,715,307"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="706,259,885,208,887,213,708,265"/>
+<area shape="rect" id="Node000007" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html" title=" " alt="" coords="522,332,715,373"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="696,324,714,317,830,260,922,208,925,213,832,265,716,321,698,329"/>
+<area shape="rect" id="Node000008" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="279,283,472,323"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="488,323,522,330,521,335,487,328"/>
+<area shape="rect" id="Node000009" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,283,230,323"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="245,300,279,300,279,306,245,306"/>
+<area shape="rect" id="Node000010" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetOrStubAPI.html" title=" " alt="" coords="279,348,472,389"/>
+<area shape="poly" id="edge9_Node000007_Node000010" title=" " alt="" coords="488,358,521,356,521,361,488,364"/>
 </map>

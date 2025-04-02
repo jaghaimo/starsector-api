@@ -1,7 +1,11 @@
 <map id="com.fs.starfarer.api.impl.campaign.SupplyCacheEntityPlugin" name="com.fs.starfarer.api.impl.campaign.SupplyCacheEntityPlugin">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,168,226,208"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html" title=" " alt="" coords="5,79,226,120"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="118,135,118,167,113,167,113,135"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="19,5,212,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="118,46,118,79,113,79,113,46"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="824,37,1044,78"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html" title=" " alt="" coords="554,37,775,78"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="790,55,824,55,824,60,790,60"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomCampaignEntityPlugin.html" title=" " alt="" coords="279,5,472,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="488,35,554,43,553,48,487,41"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="279,71,472,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="487,75,553,68,554,73,488,81"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,71,230,111"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="245,88,279,88,279,94,245,94"/>
 </map>

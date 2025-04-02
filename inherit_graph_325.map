@@ -1,3 +1,15 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1DModManager.html" title=" " alt="" coords="5,5,226,46"/>
+<area shape="rect" id="Node000000" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1BaseHistorianOfferCreator.html" title=" " alt="" coords="5,137,368,178"/>
+<area shape="rect" id="Node000001" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1BlueprintOfferCreator.html" title=" " alt="" coords="416,104,778,145"/>
+<area shape="poly" id="edge1307_Node000000_Node000001" title=" " alt="" coords="383,139,415,136,416,142,383,144"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1DonationOfferCreator.html" title=" " alt="" coords="416,169,778,210"/>
+<area shape="poly" id="edge1312_Node000000_Node000006" title=" " alt="" coords="383,170,416,173,415,178,383,176"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1FighterBlueprintOfferCreator.html" title=" " alt="" coords="826,5,1188,46"/>
+<area shape="poly" id="edge1308_Node000001_Node000002" title=" " alt="" coords="678,97,825,56,884,44,885,49,827,62,679,102"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1ShipBlueprintOfferCreator.html" title=" " alt="" coords="826,71,1188,111"/>
+<area shape="poly" id="edge1309_Node000001_Node000003" title=" " alt="" coords="793,106,825,103,826,108,794,111"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1SpecialItemOfferCreator.html" title=" " alt="" coords="826,136,1188,177"/>
+<area shape="poly" id="edge1310_Node000001_Node000004" title=" " alt="" coords="794,137,826,140,825,145,793,142"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1WeaponBlueprintOfferCreator.html" title=" " alt="" coords="826,201,1188,242"/>
+<area shape="poly" id="edge1311_Node000001_Node000005" title=" " alt="" coords="755,147,779,155,803,171,827,186,865,198,863,203,825,191,801,175,777,160,754,152"/>
 </map>

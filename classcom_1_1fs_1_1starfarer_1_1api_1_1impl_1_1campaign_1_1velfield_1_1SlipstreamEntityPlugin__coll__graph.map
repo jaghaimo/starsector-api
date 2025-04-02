@@ -1,9 +1,19 @@
 <map id="com.fs.starfarer.api.impl.campaign.velfield.SlipstreamEntityPlugin" name="com.fs.starfarer.api.impl.campaign.velfield.SlipstreamEntityPlugin">
-<area shape="rect" id="Node000001" title=" " alt="" coords="604,53,868,94"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html" title=" " alt="" coords="269,5,489,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="505,40,604,53,604,59,504,45"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="5,13,198,39"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="213,23,268,23,268,28,213,28"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="247,71,510,111"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="526,81,604,77,604,83,526,87"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="953,167,1216,207"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html" title=" " alt="" coords="611,61,831,102"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="809,104,1012,164,1011,169,808,109"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomCampaignEntityPlugin.html" title=" " alt="" coords="279,5,472,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="488,41,611,61,610,66,487,46"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="279,71,472,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="488,85,610,82,611,87,488,91"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,71,230,111"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="245,88,279,88,279,94,245,94"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="589,132,853,173"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="869,164,952,172,952,177,868,169"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="350,145,401,170"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="417,155,565,153,589,153,589,158,565,159,417,160"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="635,197,807,222"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="822,205,929,201,952,199,952,204,929,206,823,211"/>
+<area shape="rect" id="Node000009" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html" title=" " alt="" coords="644,247,798,287"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="813,247,928,223,1003,205,1004,211,929,229,814,253"/>
 </map>

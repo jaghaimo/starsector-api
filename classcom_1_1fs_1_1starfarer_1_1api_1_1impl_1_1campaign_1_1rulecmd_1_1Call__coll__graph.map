@@ -1,9 +1,9 @@
 <map id="com.fs.starfarer.api.impl.campaign.rulecmd.Call" name="com.fs.starfarer.api.impl.campaign.rulecmd.Call">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,256,297,282"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CallEvent.html" title=" " alt="" coords="16,168,286,208"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="154,224,154,256,148,256,148,224"/>
-<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BaseCommandPlugin.html" title=" " alt="" coords="16,79,286,120"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="154,135,154,167,148,167,148,135"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="93,5,209,31"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="154,46,154,79,148,79,148,46"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,271,297,297"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CallEvent.html" title=" " alt="" coords="16,183,286,223"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="154,239,154,271,148,271,148,239"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BaseCommandPlugin.html" title=" " alt="" coords="16,94,286,135"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="154,150,154,182,148,182,148,150"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1CommandPlugin.html" title=" " alt="" coords="39,5,263,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="154,62,154,94,148,94,148,62"/>
 </map>

@@ -1,7 +1,15 @@
 <map id="com.fs.starfarer.api.impl.campaign.ghosts.GBFollowClosely" name="com.fs.starfarer.api.impl.campaign.ghosts.GBFollowClosely">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,183,268,223"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseGhostBehavior.html" title=" " alt="" coords="5,94,268,135"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="139,150,139,182,134,182,134,150"/>
-<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostBehavior.html" title=" " alt="" coords="5,5,268,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="139,62,139,94,134,94,134,62"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="761,136,1023,177"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseGhostBehavior.html" title=" " alt="" coords="406,71,668,111"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="667,112,778,133,777,138,666,117"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GhostBehavior.html" title=" " alt="" coords="22,5,284,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="292,47,414,67,413,73,291,52"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,71,301,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="316,88,406,88,406,94,316,94"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="440,136,634,177"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="649,154,761,154,761,159,649,159"/>
+<area shape="rect" id="Node000006" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="41,136,265,177"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="281,154,440,154,440,159,281,159"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html" title=" " alt="" coords="460,201,614,242"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="629,202,777,175,778,180,630,207"/>
 </map>

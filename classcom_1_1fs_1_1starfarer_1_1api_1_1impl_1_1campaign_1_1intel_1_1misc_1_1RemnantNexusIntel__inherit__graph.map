@@ -1,0 +1,17 @@
+<map id="com.fs.starfarer.api.impl.campaign.intel.misc.RemnantNexusIntel" name="com.fs.starfarer.api.impl.campaign.intel.misc.RemnantNexusIntel">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1318,104,1596,145"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1MapMarkerIntel.html" title=" " alt="" coords="991,104,1270,145"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1285,122,1317,122,1317,127,1285,127"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1FleetLogIntel.html" title=" " alt="" coords="665,104,943,145"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="959,122,991,122,991,127,959,127"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseIntelPlugin.html" title=" " alt="" coords="370,104,617,145"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="633,122,664,122,664,127,633,127"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1comm_1_1IntelInfoPlugin.html" title=" " alt="" coords="47,5,280,46"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="290,48,322,56,387,78,444,101,443,106,385,83,321,62,288,53"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="29,71,298,111"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="314,103,370,109,369,114,313,109"/>
+<area shape="rect" id="Node000007" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="80,136,247,177"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="262,144,369,134,370,139,262,149"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="5,201,322,242"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="288,195,321,186,441,143,443,148,322,191,289,200"/>
+</map>

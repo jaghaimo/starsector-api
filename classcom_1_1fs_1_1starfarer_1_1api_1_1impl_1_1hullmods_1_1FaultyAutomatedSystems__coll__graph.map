@@ -1,5 +1,11 @@
 <map id="com.fs.starfarer.api.impl.hullmods.FaultyAutomatedSystems" name="com.fs.starfarer.api.impl.hullmods.FaultyAutomatedSystems">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,79,222,120"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="64,5,163,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,46,116,79,111,79,111,46"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="722,37,938,78"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html" title=" " alt="" coords="492,37,673,78"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="689,55,722,55,722,60,689,60"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1HullModEffect.html" title=" " alt="" coords="233,5,413,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="429,36,492,44,492,49,429,41"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1HullModSpecAPI.html" title=" " alt="" coords="234,71,412,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="428,75,491,67,492,72,428,80"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WithSourceMod.html" title=" " alt="" coords="5,71,184,111"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="199,88,234,88,234,94,199,94"/>
 </map>

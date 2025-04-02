@@ -1,9 +1,13 @@
 <map id="com.fs.starfarer.api.impl.campaign.intel.raid.ActionStage" name="com.fs.starfarer.api.impl.campaign.intel.raid.ActionStage">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,168,277,208"/>
-<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1PirateRaidActionStage.html" title=" " alt="" coords="5,256,277,297"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="144,224,144,256,138,256,138,224"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html" title=" " alt="" coords="5,79,277,120"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="144,135,144,167,138,167,138,135"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="100,5,182,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="144,46,144,79,138,79,138,46"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="644,71,915,111"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HIActionStage.html" title=" " alt="" coords="963,5,1273,46"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="903,65,1009,44,1010,49,904,70"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PEActionStage.html" title=" " alt="" coords="970,71,1266,111"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="931,88,970,88,970,94,931,94"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1PirateRaidActionStage.html" title=" " alt="" coords="982,136,1254,177"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="904,112,1010,133,1009,138,903,117"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html" title=" " alt="" coords="325,71,596,111"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="612,88,644,88,644,94,612,94"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,71,277,111"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="292,88,324,88,324,94,292,94"/>
 </map>

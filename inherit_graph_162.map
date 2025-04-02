@@ -1,3 +1,13 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1SubmarketUpdateListener.html" title=" " alt="" coords="5,5,251,46"/>
+<area shape="rect" id="Node000000" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeEffect.html" title=" " alt="" coords="5,104,204,145"/>
+<area shape="rect" id="Node000001" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html" title=" " alt="" coords="252,104,450,145"/>
+<area shape="poly" id="edge946_Node000000_Node000001" title=" " alt="" coords="220,122,251,122,251,127,220,127"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeOfficerEffect.html" title=" " alt="" coords="520,5,718,46"/>
+<area shape="poly" id="edge947_Node000001_Node000002" title=" " alt="" coords="407,94,497,57,535,44,537,49,499,61,409,99"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveExcessOPEffect.html" title=" " alt="" coords="500,71,739,111"/>
+<area shape="poly" id="edge948_Node000001_Node000003" title=" " alt="" coords="465,107,499,103,499,109,466,113"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveSmodsEffect.html" title=" " alt="" coords="510,136,729,177"/>
+<area shape="poly" id="edge949_Node000001_Node000004" title=" " alt="" coords="466,135,509,141,509,146,465,141"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeRemoveVentsCapsEffect.html" title=" " alt="" coords="498,201,740,242"/>
+<area shape="poly" id="edge950_Node000001_Node000005" title=" " alt="" coords="410,149,499,186,538,198,536,203,497,191,408,154"/>
 </map>

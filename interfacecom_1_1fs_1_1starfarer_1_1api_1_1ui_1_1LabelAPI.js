@@ -5,6 +5,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1LabelAPI =
     [ "computeTextHeight", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1LabelAPI.html#af63d2d435215b9094f7b7a95b7b494ed", null ],
     [ "computeTextWidth", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1LabelAPI.html#afab63b93a23b7108d581eea5b33ea621", null ],
     [ "flash", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1LabelAPI.html#a047036031814b203b517ab845dc1aa1d", null ],
+    [ "getColor", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1LabelAPI.html#a370f0f47d03d5a4dea36ff30ed1abcaa", null ],
     [ "getOpacity", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1LabelAPI.html#a7c3b28a4895ca241f355bde0b56e91af", null ],
     [ "getPosition", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1LabelAPI.html#a01966cef71eea2c118f6f0ff226f4a7d", null ],
     [ "getText", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1LabelAPI.html#a5a96d6cf8cc8682154cccef49a37e487", null ],

@@ -9,6 +9,7 @@ var searchData=
   ['uniqueencounter_6',['UniqueEncounter',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1UniqueEncounter.html',1,'com::fs::starfarer::api::impl::campaign::rulecmd']]],
   ['unset_7',['unset',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1unset.html',1,'com::fs::starfarer::api::impl::campaign::rulecmd']]],
   ['unsetall_8',['unsetAll',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1unsetAll.html',1,'com::fs::starfarer::api::impl::campaign::rulecmd']]],
-  ['updatememory_9',['UpdateMemory',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1UpdateMemory.html',1,'com::fs::starfarer::api::impl::campaign::rulecmd']]],
-  ['urbanizedpolity_10',['UrbanizedPolity',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1UrbanizedPolity.html',1,'com::fs::starfarer::api::impl::campaign::econ']]]
+  ['unstablefragmentmissileeffect_9',['UnstableFragmentMissileEffect',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1UnstableFragmentMissileEffect.html',1,'com::fs::starfarer::api::impl::combat::threat']]],
+  ['updatememory_10',['UpdateMemory',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1UpdateMemory.html',1,'com::fs::starfarer::api::impl::campaign::rulecmd']]],
+  ['urbanizedpolity_11',['UrbanizedPolity',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1UrbanizedPolity.html',1,'com::fs::starfarer::api::impl::campaign::econ']]]
 ];

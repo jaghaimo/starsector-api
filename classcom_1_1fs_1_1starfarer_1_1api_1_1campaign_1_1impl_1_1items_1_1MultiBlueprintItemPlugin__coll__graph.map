@@ -1,13 +1,19 @@
 <map id="com.fs.starfarer.api.campaign.impl.items.MultiBlueprintItemPlugin" name="com.fs.starfarer.api.campaign.impl.items.MultiBlueprintItemPlugin">
-<area shape="rect" id="Node000001" title=" " alt="" coords="586,120,842,161"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html" title=" " alt="" coords="282,71,537,111"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="553,112,586,117,585,122,552,117"/>
-<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemPlugin.html" title=" " alt="" coords="5,5,199,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="215,47,311,67,310,73,214,52"/>
-<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemSpecAPI.html" title=" " alt="" coords="5,71,199,111"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="214,88,281,88,281,94,214,94"/>
-<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoStackAPI.html" title=" " alt="" coords="5,136,199,177"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="214,130,310,109,311,115,215,135"/>
-<area shape="rect" id="Node000006" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BlueprintProviderItem.html" title=" " alt="" coords="282,136,537,177"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="552,146,586,144,586,150,553,151"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="909,164,1164,205"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html" title=" " alt="" coords="509,71,765,111"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="743,113,947,161,945,166,742,118"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemPlugin.html" title=" " alt="" coords="233,5,426,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="442,47,539,67,538,73,441,52"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemSpecAPI.html" title=" " alt="" coords="233,71,426,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="442,88,509,88,509,94,442,94"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WithSourceMod.html" title=" " alt="" coords="5,71,184,111"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="199,88,233,88,233,94,199,94"/>
+<area shape="rect" id="Node000006" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoStackAPI.html" title=" " alt="" coords="233,136,426,177"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="441,130,538,109,539,115,442,135"/>
+<area shape="rect" id="Node000007" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BlueprintProviderItem.html" title=" " alt="" coords="509,136,765,177"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="780,164,908,173,908,178,780,169"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="588,201,686,226"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="701,206,908,191,909,196,702,212"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="587,265,687,290"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="702,274,789,268,884,251,945,229,997,203,1000,208,947,234,885,256,790,273,702,280"/>
 </map>

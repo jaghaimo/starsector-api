@@ -139,5 +139,6 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemSpecAPI =
     [ "setTurningAllowed", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemSpecAPI.html#af1429e42286999f8ddb997005ee4ce40", null ],
     [ "setUseSound", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemSpecAPI.html#a86813ab3103a923764fd961ac71b82f8", null ],
     [ "setVentingAllowed", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemSpecAPI.html#a7856c17a4c94b61e1cfce03d67ee2e06", null ],
-    [ "setWeaponId", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemSpecAPI.html#aeebf1e193b27e217457d075b7ec9aadd", null ]
+    [ "setWeaponId", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemSpecAPI.html#aeebf1e193b27e217457d075b7ec9aadd", null ],
+    [ "usesAmmo", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemSpecAPI.html#ab8a7791e718f695e3ecff3b2c5587dda", null ]
 ];

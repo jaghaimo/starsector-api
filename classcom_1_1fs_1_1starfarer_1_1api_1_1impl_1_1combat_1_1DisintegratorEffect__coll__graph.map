@@ -1,7 +1,29 @@
 <map id="com.fs.starfarer.api.impl.combat.DisintegratorEffect" name="com.fs.starfarer.api.impl.combat.DisintegratorEffect">
-<area shape="rect" id="Node000001" title=" " alt="" coords="95,94,303,135"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,206,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="140,55,180,92,176,96,136,59"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="230,13,354,39"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="270,51,222,96,218,92,266,47"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="638,324,845,365"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseCombatLayeredRenderingPlugin.html" title=" " alt="" coords="298,71,534,111"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="523,115,539,122,573,142,605,166,660,222,703,278,731,322,726,325,698,281,656,226,601,170,570,146,537,127,521,120"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatLayeredRenderingPlugin.html" title=" " alt="" coords="5,5,212,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="223,47,317,67,316,73,222,52"/>
+<area shape="rect" id="Node000004" href="$enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineLayers.html" title=" " alt="" coords="18,71,199,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="214,88,297,88,297,94,214,94"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html" title=" " alt="" coords="18,160,199,201"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="190,152,293,122,337,109,338,114,294,127,192,158"/>
+<area shape="rect" id="Node000008" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamagingProjectileAPI.html" title=" " alt="" coords="326,136,506,177"/>
+<area shape="poly" id="edge8_Node000008_Node000005" title=" " alt="" coords="214,169,325,161,325,166,215,175"/>
+<area shape="rect" id="Node000009" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html" title=" " alt="" coords="326,201,506,242"/>
+<area shape="poly" id="edge10_Node000009_Node000005" title=" " alt="" coords="215,192,326,207,325,212,214,197"/>
+<area shape="rect" id="Node000006" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1OnHitEffectPlugin.html" title=" " alt="" coords="326,267,506,307"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="522,303,638,324,637,329,521,308"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="348,332,484,357"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="500,342,637,342,637,347,500,347"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="522,180,539,187,594,219,645,255,721,321,718,326,642,260,591,223,537,192,519,184"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="515,245,539,252,625,287,699,321,697,326,623,292,537,258,513,250"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="381,381,451,406"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="466,384,614,362,637,358,638,364,614,367,467,389"/>
+<area shape="rect" id="Node000011" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html" title=" " alt="" coords="339,431,493,471"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="507,425,537,416,688,363,690,368,539,422,509,430"/>
+<area shape="rect" id="Node000012" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html" title=" " alt="" coords="339,496,493,537"/>
+<area shape="poly" id="edge13_Node000001_Node000012" title=" " alt="" coords="507,492,537,481,589,453,638,421,714,363,717,367,641,425,591,457,539,485,509,497"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="294,561,538,602"/>
+<area shape="poly" id="edge14_Node000001_Node000013" title=" " alt="" coords="521,553,537,546,569,527,599,505,653,454,696,403,725,363,729,366,700,407,657,458,602,509,572,532,539,551,524,558"/>
 </map>

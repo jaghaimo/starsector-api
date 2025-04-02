@@ -1,7 +1,9 @@
 <map id="com.fs.starfarer.api.loading.WeaponSpecAPI" name="com.fs.starfarer.api.loading.WeaponSpecAPI">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,39,184,79"/>
-<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1BeamWeaponSpecAPI.html" title=" " alt="" coords="232,5,410,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="199,41,231,36,231,41,200,46"/>
-<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1ProjectileWeaponSpecAPI.html" title=" " alt="" coords="232,71,410,111"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="200,71,231,76,231,81,199,76"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="232,39,410,79"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1BeamWeaponSpecAPI.html" title=" " alt="" coords="458,5,636,46"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="425,41,457,36,458,41,426,46"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1ProjectileWeaponSpecAPI.html" title=" " alt="" coords="458,71,636,111"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="426,71,458,76,457,81,425,76"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WithSourceMod.html" title=" " alt="" coords="5,39,184,79"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,56,231,56,231,62,200,62"/>
 </map>

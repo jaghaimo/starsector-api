@@ -10,6 +10,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_
     [ "fireEvent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HegemonyHostileActivityFactor.html#a357a906595288419e466a999c2d31ec4", null ],
     [ "getDesc", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HegemonyHostileActivityFactor.html#ae0cd87317d13946f59be39ab230fdcbe", null ],
     [ "getDescColor", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HegemonyHostileActivityFactor.html#a32af71836dc64140267fe2e4a524124c", null ],
+    [ "getEffectMagnitude", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HegemonyHostileActivityFactor.html#a18aa9675db702a370e7ddcf5465d482c", null ],
     [ "getEventFrequency", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HegemonyHostileActivityFactor.html#aa9fae1752e29b075099521091695e0a1", null ],
     [ "getEventStageIcon", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HegemonyHostileActivityFactor.html#aec4eba404af9638b98adf53139fd5b6c", null ],
     [ "getMainRowTooltip", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HegemonyHostileActivityFactor.html#a3bc4037a5309df529c8b13ad87a1da9a", null ],

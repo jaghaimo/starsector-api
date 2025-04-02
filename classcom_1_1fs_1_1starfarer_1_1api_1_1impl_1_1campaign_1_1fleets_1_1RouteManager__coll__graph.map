@@ -1,5 +1,11 @@
 <map id="com.fs.starfarer.api.impl.campaign.fleets.RouteManager" name="com.fs.starfarer.api.impl.campaign.fleets.RouteManager">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,79,260,120"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="67,5,198,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="135,46,135,79,130,79,130,46"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="403,92,657,133"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1FleetEventListener.html" title=" " alt="" coords="5,5,251,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="262,47,379,71,452,89,450,94,378,76,261,52"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="65,70,191,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="207,86,402,100,402,106,207,91"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="64,120,192,161"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="207,135,378,125,402,123,402,128,379,130,207,140"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="13,185,243,226"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="252,179,378,151,456,131,458,136,379,157,253,184"/>
 </map>

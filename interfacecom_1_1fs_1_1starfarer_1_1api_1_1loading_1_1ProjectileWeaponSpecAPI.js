@@ -10,6 +10,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1ProjectileWeaponSpecAPI
     [ "getHardpointGunSpriteName", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1ProjectileWeaponSpecAPI.html#a8e696369a5aa4480139650e31e85bfd5", null ],
     [ "getMaxSpread", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1ProjectileWeaponSpecAPI.html#a3fea3806188e6cd36973e94aeed591b5", null ],
     [ "getMinSpread", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1ProjectileWeaponSpecAPI.html#a2635d2949baca5b3e81899ef46414c4b", null ],
+    [ "getMuzzleFlashSpec", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1ProjectileWeaponSpecAPI.html#a9054bf449ee4a96cf9500ef19251bf88", null ],
     [ "getProjectileSpec", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1ProjectileWeaponSpecAPI.html#a37bae38e8d35f42130347f266277436c", null ],
     [ "getProjectileSpeed", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1ProjectileWeaponSpecAPI.html#a679cb6be9964a86442ef9f6614063a1c", null ],
     [ "getRefireDelay", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1ProjectileWeaponSpecAPI.html#ab075bd0df0fac1ecd0970326551923d3", null ],

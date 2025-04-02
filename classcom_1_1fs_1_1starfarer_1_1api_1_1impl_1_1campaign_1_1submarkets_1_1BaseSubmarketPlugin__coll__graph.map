@@ -1,5 +1,15 @@
 <map id="com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin" name="com.fs.starfarer.api.impl.campaign.submarkets.BaseSubmarketPlugin">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,79,297,120"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="91,5,211,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="154,46,154,79,148,79,148,46"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="651,136,943,177"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SubmarketPlugin.html" title=" " alt="" coords="294,5,488,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="485,48,628,91,743,133,742,138,626,96,484,53"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html" title=" " alt="" coords="279,71,503,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="519,109,667,133,666,138,518,114"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,71,230,111"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="245,88,278,88,278,94,245,94"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1SubmarketAPI.html" title=" " alt="" coords="279,136,503,177"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="519,154,651,154,651,159,519,159"/>
+<area shape="rect" id="Node000006" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html" title=" " alt="" coords="294,201,488,242"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="502,201,666,175,667,180,503,206"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="356,266,426,292"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="440,266,503,251,627,217,742,175,744,180,628,222,504,256,441,271"/>
 </map>

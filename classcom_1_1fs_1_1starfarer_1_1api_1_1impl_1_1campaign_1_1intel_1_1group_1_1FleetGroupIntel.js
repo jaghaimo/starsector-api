@@ -19,6 +19,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1
     [ "checkStragglers", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1FleetGroupIntel.html#aa6a1987d3f7c2cd686c64d3867a326d4", null ],
     [ "createIntelInfo", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1FleetGroupIntel.html#a38581c78e441437ff5f3098c3ed48315", null ],
     [ "createRoute", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1FleetGroupIntel.html#a24eee1fbb3b84e0bc9e43a443622691f", null ],
+    [ "createRoute", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1FleetGroupIntel.html#a4ac34f87cce70f6b9edc2d22f870a9cf", null ],
     [ "createSmallDescription", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1FleetGroupIntel.html#ac915794cf1c1899f58a67dec297e1fc3", null ],
     [ "finish", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1FleetGroupIntel.html#a123e88fac5d6afa33e0333f6611ba069", null ],
     [ "getAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1FleetGroupIntel.html#a9cdfd15c4f7a2630fbfd773ceaac8384", null ],

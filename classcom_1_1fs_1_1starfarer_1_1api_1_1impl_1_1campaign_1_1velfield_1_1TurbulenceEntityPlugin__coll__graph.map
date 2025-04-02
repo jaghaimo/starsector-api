@@ -1,9 +1,19 @@
 <map id="com.fs.starfarer.api.impl.campaign.velfield.TurbulenceEntityPlugin" name="com.fs.starfarer.api.impl.campaign.velfield.TurbulenceEntityPlugin">
-<area shape="rect" id="Node000001" title=" " alt="" coords="584,53,848,94"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html" title=" " alt="" coords="269,5,489,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="505,41,584,52,584,58,504,46"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="5,13,198,39"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="213,23,268,23,268,28,213,28"/>
-<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1VelocityField.html" title=" " alt="" coords="247,71,510,111"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="526,81,584,78,584,83,526,86"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="945,123,1208,163"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html" title=" " alt="" coords="576,41,796,82"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="812,72,921,91,1019,120,1017,125,920,96,811,77"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomCampaignEntityPlugin.html" title=" " alt="" coords="279,5,472,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="488,36,576,46,575,52,488,41"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="279,71,472,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="488,78,575,69,576,75,488,83"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,71,230,111"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="245,88,279,88,279,94,245,94"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="618,106,754,132"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="770,121,944,132,944,138,769,127"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1VelocityField.html" title=" " alt="" coords="554,156,818,197"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="833,161,944,152,944,157,833,166"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="340,164,411,189"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="426,174,554,174,554,179,426,179"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="616,221,756,246"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="770,215,817,206,998,161,999,167,818,211,771,221"/>
 </map>

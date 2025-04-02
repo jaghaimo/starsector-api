@@ -1,5 +1,9 @@
 <map id="com.fs.starfarer.api.impl.campaign.skills.BaseSkillEffectDescription" name="com.fs.starfarer.api.impl.campaign.skills.BaseSkillEffectDescription">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,79,259,120"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="54,5,210,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="135,46,135,79,129,79,129,46"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="52,244,306,285"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1CustomSkillDescription.html" title=" " alt="" coords="5,95,204,136"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="123,148,172,242,167,245,119,151"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1LevelBasedEffect.html" title=" " alt="" coords="5,5,204,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="107,62,107,95,102,95,102,62"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="228,103,280,128"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="243,144,191,245,187,242,238,141"/>
 </map>

@@ -8,6 +8,7 @@ var enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatAssignmentType =
     [ "ENGAGE", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatAssignmentType.html#acca9eb170ca6f7e1ac53a076aeb16597", null ],
     [ "HARASS", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatAssignmentType.html#a4b37399765d3a1375ba8f717997cf099", null ],
     [ "HEAVY_ESCORT", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatAssignmentType.html#adf868f8b9c2d9ab4fcade9f3f7bd85f6", null ],
+    [ "IGNORE", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatAssignmentType.html#a0e693bcfb16b350cd58d15109674daa8", null ],
     [ "INTERCEPT", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatAssignmentType.html#adfa09fc974172d8db8bafa7c789e4b88", null ],
     [ "LIGHT_ESCORT", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatAssignmentType.html#a65a03ed257927ed17ae16e8567d2b28f", null ],
     [ "MEDIUM_ESCORT", "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatAssignmentType.html#a8e15d85863d66bdba52493cf9e57b3fa", null ],

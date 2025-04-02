@@ -39,6 +39,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1
     [ "isSucceeded", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1GenericRaidFGI.html#ace6241d0eedc2086d4c440206a42ca86", null ],
     [ "notifyEnding", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1GenericRaidFGI.html#a7c7043a192cd97566a45a9d98a668cfd", null ],
     [ "preConfigureFleet", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1GenericRaidFGI.html#a998f48550e5828dac127d63848a22b7f", null ],
+    [ "setFleetCreatorQualityFromRoute", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1GenericRaidFGI.html#a19c977584184d5a6210f65455d95f7f0", null ],
     [ "setOrigin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1GenericRaidFGI.html#aa7fe5d354e0ea8888dc3a03a79f983c8", null ],
     [ "shouldSendIntelUpdateWhenActionFinished", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1GenericRaidFGI.html#a18be13aa02783df4ea493f2f13a67ae2", null ],
     [ "spawnFleets", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1GenericRaidFGI.html#a8f150de5b3ebc884590d9ca8c1749a55", null ],

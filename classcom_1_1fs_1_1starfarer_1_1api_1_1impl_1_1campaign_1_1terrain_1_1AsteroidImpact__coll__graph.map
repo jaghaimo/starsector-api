@@ -1,5 +1,15 @@
 <map id="com.fs.starfarer.api.impl.campaign.terrain.AsteroidImpact" name="com.fs.starfarer.api.impl.campaign.terrain.AsteroidImpact">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,94,265,135"/>
-<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="52,5,218,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,62,138,94,132,94,132,62"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="790,71,1049,111"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="535,5,702,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="717,44,823,67,822,73,716,50"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html" title=" " alt="" coords="522,71,715,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="731,88,789,88,789,94,731,94"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="279,31,472,71"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="488,67,522,72,521,78,488,72"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,31,230,71"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="245,48,279,48,279,54,245,54"/>
+<area shape="rect" id="Node000006" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetOrStubAPI.html" title=" " alt="" coords="279,96,472,137"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="488,102,521,98,522,104,488,107"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="583,136,654,161"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="668,136,809,109,810,115,669,142"/>
 </map>

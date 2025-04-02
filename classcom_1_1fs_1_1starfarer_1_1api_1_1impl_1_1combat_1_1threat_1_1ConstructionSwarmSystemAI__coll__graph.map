@@ -1,0 +1,17 @@
+<map id="com.fs.starfarer.api.impl.combat.threat.ConstructionSwarmSystemAI" name="com.fs.starfarer.api.impl.combat.threat.ConstructionSwarmSystemAI">
+<area shape="rect" id="Node000001" title=" " alt="" coords="508,169,752,210"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAIScript.html" title=" " alt="" coords="235,5,415,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="402,50,417,57,519,114,600,166,597,171,516,118,414,61,400,55"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html" title=" " alt="" coords="235,71,415,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="406,114,566,166,564,171,404,119"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html" title=" " alt="" coords="5,71,186,111"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="201,88,235,88,235,94,201,94"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html" title=" " alt="" coords="235,136,415,177"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="431,165,508,174,508,179,431,171"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipwideAIFlags.html" title=" " alt="" coords="235,201,415,242"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="431,208,508,200,508,205,431,213"/>
+<area shape="rect" id="Node000007" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html" title=" " alt="" coords="235,267,415,307"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="405,259,563,208,565,213,406,264"/>
+<area shape="rect" id="Node000008" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html" title=" " alt="" coords="248,332,402,373"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="400,323,414,317,516,260,597,208,600,213,518,265,417,321,402,328"/>
+</map>

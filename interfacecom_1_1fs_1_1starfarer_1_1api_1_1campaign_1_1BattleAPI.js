@@ -65,5 +65,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BattleAPI =
     [ "setPlayerInvolvedAtStart", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BattleAPI.html#a68655ec71cea8c2c943793a2ae28f353", null ],
     [ "setPlayerInvolvementFraction", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BattleAPI.html#a6c6a8bb5399dde80dcf32cc8438d132c", null ],
     [ "takeSnapshots", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BattleAPI.html#a998e6ac86416d973cddfb2abe27665f9", null ],
-    [ "uncombine", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BattleAPI.html#a9a1934a45208ec21eb73b804e7543877", null ]
+    [ "uncombine", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BattleAPI.html#a9a1934a45208ec21eb73b804e7543877", null ],
+    [ "wasFleetDefeated", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BattleAPI.html#ab5e489dcad0505d323ba7b3fc0c96c5a", null ],
+    [ "wasFleetVictorious", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BattleAPI.html#a3ec2ef5aaff9ec0cd5efe18dadf467b1", null ]
 ];

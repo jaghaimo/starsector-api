@@ -1,7 +1,17 @@
 <map id="com.fs.starfarer.api.impl.campaign.HassleNPCScript" name="com.fs.starfarer.api.impl.campaign.HassleNPCScript">
-<area shape="rect" id="Node000001" title=" " alt="" coords="320,39,540,79"/>
-<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="32,5,199,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="214,33,320,45,319,50,214,39"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="5,71,226,111"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="241,76,319,68,320,73,242,81"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="836,99,1056,139"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="549,5,715,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="731,44,813,66,896,96,894,101,811,71,729,49"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html" title=" " alt="" coords="535,71,728,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="744,98,836,107,836,112,743,104"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="279,31,472,71"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="488,66,535,73,534,78,487,71"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,31,230,71"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="245,48,279,48,279,54,245,54"/>
+<area shape="rect" id="Node000006" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetOrStubAPI.html" title=" " alt="" coords="279,96,472,137"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="487,103,534,98,535,103,488,108"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="597,137,667,162"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="682,147,812,140,835,137,836,142,812,145,683,152"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="522,187,742,227"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="748,180,811,163,890,137,891,142,813,169,749,185"/>
 </map>

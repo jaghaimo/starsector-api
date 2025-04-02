@@ -4,6 +4,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Ba
     [ "addItemDescription", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableItemEffect.html#a36a7e1644fc9f0e07c7e6da16f2aa01e", null ],
     [ "addItemDescriptionImpl", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableItemEffect.html#a1a834ab39086af0e70f503510589a6c7", null ],
     [ "addRequirements", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableItemEffect.html#a0e024321a6c9458af7d39eb33bffad1b", null ],
+    [ "getConditionsRelatedToRequirements", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableItemEffect.html#af6deed35e75d10a76649787ae2508fb5", null ],
     [ "getItemDescPad", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableItemEffect.html#ab8e0045fd6713d29b6c36e18d2a94444", null ],
     [ "getItemInstalledText", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableItemEffect.html#a9258b1326448e3f3187857929c4decf0", null ],
     [ "getRequirements", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableItemEffect.html#a2b868bf8995ab8b0179ea99322871ea3", null ],

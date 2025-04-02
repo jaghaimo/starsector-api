@@ -1,7 +1,13 @@
 <map id="com.fs.starfarer.api.impl.campaign.intel.PersonBountyManager" name="com.fs.starfarer.api.impl.campaign.intel.PersonBountyManager">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,183,253,223"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseEventManager.html" title=" " alt="" coords="5,94,253,135"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,150,132,182,126,182,126,150"/>
-<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="46,5,212,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="132,62,132,94,126,94,126,62"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="593,104,841,145"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseEventManager.html" title=" " alt="" coords="297,104,544,145"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="560,122,593,122,593,127,560,127"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="6,5,172,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="175,48,350,101,349,106,174,53"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,71,173,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="189,98,297,109,296,115,188,104"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html" title=" " alt="" coords="12,136,166,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="182,153,272,148,311,143,311,148,273,153,182,159"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="54,201,124,226"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="139,203,272,173,363,143,365,148,273,178,140,208"/>
 </map>

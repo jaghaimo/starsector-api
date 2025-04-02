@@ -1,0 +1,16 @@
+var namespacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners =
+[
+    [ "AdvanceableListener", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1AdvanceableListener.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1AdvanceableListener" ],
+    [ "ApplyDamageResultAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1ApplyDamageResultAPI.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1ApplyDamageResultAPI" ],
+    [ "CombatListenerManagerAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1CombatListenerManagerAPI.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1CombatListenerManagerAPI" ],
+    [ "CombatListenerUtil", "classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1CombatListenerUtil.html", null ],
+    [ "DamageDealtModifier", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1DamageDealtModifier.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1DamageDealtModifier" ],
+    [ "DamageListener", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1DamageListener.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1DamageListener" ],
+    [ "DamageTakenModifier", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1DamageTakenModifier.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1DamageTakenModifier" ],
+    [ "FighterOPCostModifier", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1FighterOPCostModifier.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1FighterOPCostModifier" ],
+    [ "FleetMemberDeploymentListener", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1FleetMemberDeploymentListener.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1FleetMemberDeploymentListener" ],
+    [ "HullDamageAboutToBeTakenListener", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1HullDamageAboutToBeTakenListener.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1HullDamageAboutToBeTakenListener" ],
+    [ "WeaponBaseRangeModifier", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1WeaponBaseRangeModifier.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1WeaponBaseRangeModifier" ],
+    [ "WeaponOPCostModifier", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1WeaponOPCostModifier.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1WeaponOPCostModifier" ],
+    [ "WeaponRangeModifier", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1WeaponRangeModifier.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1listeners_1_1WeaponRangeModifier" ]
+];

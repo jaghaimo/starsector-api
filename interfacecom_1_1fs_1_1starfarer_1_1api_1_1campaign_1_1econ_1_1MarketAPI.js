@@ -126,6 +126,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI =
     [ "removeTag", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ac6a33dc87e7a21fb7e842b674fce9c36", null ],
     [ "removeTransientImmigrationModifier", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#ae11863b334ee44d1f28dfb76b73598b8", null ],
     [ "setAdmin", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a7b939914f8e44f124637e6dc95405db1", null ],
+    [ "setCachedFaction", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a6a782b5b9b1c8db6b87eea30a7385f65", null ],
     [ "setDaysInExistence", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a3712be783dc45101beb87162ff30ff2a", null ],
     [ "setEconGroup", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a319a127bc1a562668deea5bfbe8815e3", null ],
     [ "setFactionId", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a37ab97f76ae1a21e9220397831a26c01", null ],

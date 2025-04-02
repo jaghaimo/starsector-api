@@ -7,6 +7,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1IntelUIAPI =
     [ "selectItem", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1IntelUIAPI.html#a9286ef9ea87b0463fa003cdcb57fea94", null ],
     [ "showDialog", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1IntelUIAPI.html#ae1548375d932b8f7feb11d3a81d875a6", null ],
     [ "showDialog", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1IntelUIAPI.html#a3678778de66c341050ed5643c8e11399", null ],
+    [ "showEditIntelMarkerDialog", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1IntelUIAPI.html#a5398deb1e7fcdde9220e4b0e5d9f3177", null ],
     [ "showOnMap", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1IntelUIAPI.html#ab1c6140a742a4626ef14bc6eb5596a40", null ],
     [ "updateIntelList", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1IntelUIAPI.html#a17a4205d5f208f27b98ffef487bd826c", null ],
     [ "updateIntelList", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1IntelUIAPI.html#a4341d14f4e31064ccd0fdc25ba0b0273", null ],

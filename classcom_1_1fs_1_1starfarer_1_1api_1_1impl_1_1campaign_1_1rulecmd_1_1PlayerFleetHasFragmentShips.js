@@ -1,0 +1,4 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PlayerFleetHasFragmentShips =
+[
+    [ "execute", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PlayerFleetHasFragmentShips.html#a995c7cfb8b09555f52e151bcff681ffb", null ]
+];

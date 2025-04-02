@@ -1,0 +1,50 @@
+<map id="com.fs.starfarer.api.impl.combat.threat.KineticFragmentMissileEffect" name="com.fs.starfarer.api.impl.combat.threat.KineticFragmentMissileEffect">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1609,660,1853,701"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1BaseFragmentMissileEffect.html" title=" " alt="" coords="1317,297,1560,338"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1467,348,1715,658,1711,661,1463,351"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1OnFireEffectPlugin.html" title=" " alt="" coords="974,5,1154,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="1168,49,1187,57,1244,85,1294,125,1337,169,1374,216,1427,295,1423,298,1370,220,1333,173,1291,129,1242,90,1185,61,1166,54"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1EveryFrameWeaponEffectPlugin.html" title=" " alt="" coords="961,71,1167,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="1183,114,1240,134,1294,163,1335,195,1371,231,1424,295,1420,298,1367,235,1331,199,1291,168,1238,139,1181,119"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1FragmentWeapon.html" title=" " alt="" coords="942,136,1186,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="1202,167,1249,178,1294,195,1332,217,1367,244,1421,295,1417,299,1364,248,1329,222,1292,200,1247,183,1201,172"/>
+<area shape="rect" id="Node000006" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamagingProjectileAPI.html" title=" " alt="" coords="493,411,673,451"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="686,452,791,470,917,482,984,484,1052,481,1120,473,1185,459,1252,435,1315,402,1369,366,1410,336,1413,341,1372,371,1318,406,1254,440,1186,465,1121,478,1053,486,984,489,917,487,791,475,685,458"/>
+<area shape="rect" id="Node000021" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html" title=" " alt="" coords="974,395,1154,435"/>
+<area shape="poly" id="edge23_Node000021_Node000006" title=" " alt="" coords="688,425,973,415,973,421,689,430"/>
+<area shape="rect" id="Node000007" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html" title=" " alt="" coords="68,448,248,489"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="263,456,492,436,492,442,264,462"/>
+<area shape="rect" id="Node000010" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1RoilingSwarmEffect.html" title=" " alt="" coords="942,577,1186,618"/>
+<area shape="poly" id="edge19_Node000010_Node000007" title=" " alt="" coords="264,472,396,482,560,499,740,523,919,555,994,574,993,579,918,560,739,528,559,504,395,487,263,477"/>
+<area shape="rect" id="Node000011" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseCombatLayeredRenderingPlugin.html" title=" " alt="" coords="465,539,701,579"/>
+<area shape="poly" id="edge13_Node000011_Node000007" title=" " alt="" coords="231,492,335,522,465,544,464,550,334,527,230,497"/>
+<area shape="rect" id="Node000022" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html" title=" " alt="" coords="738,240,918,281"/>
+<area shape="poly" id="edge25_Node000022_Node000007" title=" " alt="" coords="240,440,759,279,761,284,242,445"/>
+<area shape="rect" id="Node000008" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponAPI.html" title=" " alt="" coords="974,264,1154,305"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="1170,291,1317,304,1316,309,1170,296"/>
+<area shape="rect" id="Node000009" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html" title=" " alt="" coords="974,329,1154,370"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="1170,338,1316,325,1317,331,1170,343"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="1163,570,1229,543,1261,526,1291,507,1336,465,1373,418,1403,373,1424,337,1429,340,1408,376,1378,422,1339,469,1294,511,1264,531,1231,548,1165,575"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="717,565,919,580,942,582,942,588,918,586,716,570"/>
+<area shape="rect" id="Node000012" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatLayeredRenderingPlugin.html" title=" " alt="" coords="55,549,261,590"/>
+<area shape="poly" id="edge11_Node000011_Node000012" title=" " alt="" coords="276,564,464,559,464,565,277,569"/>
+<area shape="rect" id="Node000013" href="$enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineLayers.html" title=" " alt="" coords="68,615,248,655"/>
+<area shape="poly" id="edge12_Node000011_Node000013" title=" " alt="" coords="263,614,464,577,465,583,264,619"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="452,864,714,905"/>
+<area shape="poly" id="edge14_Node000010_Node000014" title=" " alt="" coords="684,857,800,816,860,788,917,754,958,721,994,684,1047,617,1051,620,998,687,961,725,920,759,863,793,802,821,686,862"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="132,810,184,836"/>
+<area shape="poly" id="edge26_Node000001_Node000015" title=" " alt="" coords="199,816,365,802,473,796,581,794,1440,794,1478,791,1515,784,1588,759,1651,728,1699,699,1701,703,1653,732,1590,764,1517,789,1478,796,1440,799,582,799,473,801,366,807,199,821"/>
+<area shape="poly" id="edge15_Node000014_Node000015" title=" " alt="" coords="200,830,335,857,451,872,451,877,334,863,199,835"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="5,887,311,927"/>
+<area shape="poly" id="edge16_Node000014_Node000016" title=" " alt="" coords="326,907,427,903,451,901,451,907,428,909,327,913"/>
+<area shape="rect" id="Node000017" title=" " alt="" coords="109,952,207,977"/>
+<area shape="poly" id="edge17_Node000014_Node000017" title=" " alt="" coords="222,957,319,946,427,927,519,903,520,908,428,933,320,951,223,962"/>
+<area shape="rect" id="Node000018" title=" " alt="" coords="506,604,660,629"/>
+<area shape="poly" id="edge18_Node000010_Node000018" title=" " alt="" coords="675,610,942,600,942,605,675,615"/>
+<area shape="rect" id="Node000019" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html" title=" " alt="" coords="506,653,660,694"/>
+<area shape="poly" id="edge20_Node000010_Node000019" title=" " alt="" coords="675,676,792,674,856,668,918,657,974,639,1024,616,1026,621,976,644,919,663,856,674,792,680,675,682"/>
+<area shape="rect" id="Node000020" title=" " alt="" coords="461,719,705,759"/>
+<area shape="poly" id="edge21_Node000010_Node000020" title=" " alt="" coords="720,735,819,723,869,712,917,697,953,680,986,659,1039,616,1042,621,989,663,955,685,919,702,871,717,820,729,721,741"/>
+<area shape="poly" id="edge22_Node000002_Node000021" title=" " alt="" coords="1162,388,1292,354,1360,336,1361,341,1293,359,1163,393"/>
+<area shape="poly" id="edge24_Node000002_Node000022" title=" " alt="" coords="934,250,942,250,1064,244,1118,244,1186,250,1240,260,1293,275,1364,294,1363,299,1292,280,1239,265,1185,255,1117,249,1064,249,942,255,934,255"/>
+</map>

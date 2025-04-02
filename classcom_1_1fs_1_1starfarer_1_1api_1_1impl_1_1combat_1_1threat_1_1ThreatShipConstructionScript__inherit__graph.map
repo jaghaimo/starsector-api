@@ -1,0 +1,9 @@
+<map id="com.fs.starfarer.api.impl.combat.threat.ThreatShipConstructionScript" name="com.fs.starfarer.api.impl.combat.threat.ThreatShipConstructionScript">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,271,249,312"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseEveryFrameCombatPlugin.html" title=" " alt="" coords="26,183,228,223"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="130,239,130,271,124,271,124,239"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1EveryFrameCombatPlugin.html" title=" " alt="" coords="37,94,217,135"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="130,150,130,182,124,182,124,150"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEnginePlugin.html" title=" " alt="" coords="37,5,217,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="130,62,130,94,124,94,124,62"/>
+</map>

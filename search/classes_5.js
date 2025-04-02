@@ -98,9 +98,13 @@ var searchData=
   ['formationtype_95',['FormationType',['../enumcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1FormationType.html',1,'com::fs::starfarer::api::loading']]],
   ['fracturejumpability_96',['FractureJumpAbility',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1abilities_1_1FractureJumpAbility.html',1,'com::fs::starfarer::api::impl::campaign::abilities']]],
   ['fragilesubsystems_97',['FragileSubsystems',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1FragileSubsystems.html',1,'com::fs::starfarer::api::impl::hullmods']]],
-  ['freemarket_98',['FreeMarket',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1FreeMarket.html',1,'com::fs::starfarer::api::impl::campaign::econ']]],
-  ['frontier_99',['Frontier',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1Frontier.html',1,'com::fs::starfarer::api::impl::campaign::econ']]],
-  ['fuelproduction_100',['FuelProduction',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1FuelProduction.html',1,'com::fs::starfarer::api::impl::campaign::econ::impl']]],
-  ['fullname_101',['FullName',['../classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1FullName.html',1,'com::fs::starfarer::api::characters']]],
-  ['fusionlampentityplugin_102',['FusionLampEntityPlugin',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FusionLampEntityPlugin.html',1,'com::fs::starfarer::api::impl::campaign']]]
+  ['fragmentcoordinatorhullmod_98',['FragmentCoordinatorHullmod',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1FragmentCoordinatorHullmod.html',1,'com::fs::starfarer::api::impl::combat::threat']]],
+  ['fragmentswarmhullmod_99',['FragmentSwarmHullmod',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1FragmentSwarmHullmod.html',1,'com::fs::starfarer::api::impl::combat::threat']]],
+  ['fragmentvolleysystemscript_100',['FragmentVolleySystemScript',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1FragmentVolleySystemScript.html',1,'com::fs::starfarer::api::impl::combat::threat']]],
+  ['fragmentweapon_101',['FragmentWeapon',['../interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1FragmentWeapon.html',1,'com::fs::starfarer::api::impl::combat::threat']]],
+  ['freemarket_102',['FreeMarket',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1FreeMarket.html',1,'com::fs::starfarer::api::impl::campaign::econ']]],
+  ['frontier_103',['Frontier',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1Frontier.html',1,'com::fs::starfarer::api::impl::campaign::econ']]],
+  ['fuelproduction_104',['FuelProduction',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1FuelProduction.html',1,'com::fs::starfarer::api::impl::campaign::econ::impl']]],
+  ['fullname_105',['FullName',['../classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1FullName.html',1,'com::fs::starfarer::api::characters']]],
+  ['fusionlampentityplugin_106',['FusionLampEntityPlugin',['../classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FusionLampEntityPlugin.html',1,'com::fs::starfarer::api::impl::campaign']]]
 ];

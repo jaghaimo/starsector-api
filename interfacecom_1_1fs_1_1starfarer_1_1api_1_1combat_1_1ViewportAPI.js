@@ -17,11 +17,13 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ViewportAPI =
     [ "getVisibleWidth", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ViewportAPI.html#ae8d72be7ca5d43a36479c85694f74135", null ],
     [ "getWorldXtoScreenX", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ViewportAPI.html#a926263b8eb27f0093d66620e07e67de8", null ],
     [ "getWorldYtoScreenY", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ViewportAPI.html#ab1c2832fcf706d2854db6b406a33b53d", null ],
+    [ "isEverythingNearViewport", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ViewportAPI.html#a7216cc54f32b1c299d452d04ba4fe681", null ],
     [ "isExternalControl", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ViewportAPI.html#af37806db585eb51d3acdab4c4f5f38ef", null ],
     [ "isNearViewport", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ViewportAPI.html#a33bfe93cf2a371f0d44a5cd37baf166e", null ],
     [ "set", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ViewportAPI.html#a2191e69520bea28cd1d98387a143dd50", null ],
     [ "setAlphaMult", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ViewportAPI.html#ae0a0688025dc0c1ca89a02509c7efd4a", null ],
     [ "setCenter", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ViewportAPI.html#a3f895617e83fe3222c140448035ac140", null ],
+    [ "setEverythingNearViewport", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ViewportAPI.html#add366185b20e08362b23885683d92a5a", null ],
     [ "setExternalControl", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ViewportAPI.html#a2310037a675e434295bdf19da2fada68", null ],
     [ "setViewMult", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ViewportAPI.html#a81b81f76fdbc0536cd251bd796f57bd6", null ]
 ];

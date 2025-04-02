@@ -1,5 +1,27 @@
 <map id="com.fs.starfarer.api.characters.MarketSkillEffect" name="com.fs.starfarer.api.characters.MarketSkillEffect">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,94,204,135"/>
-<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1LevelBasedEffect.html" title=" " alt="" coords="5,5,204,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,62,107,94,102,94,102,62"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="252,332,450,373"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="498,5,751,46"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="357,316,373,259,401,189,441,118,467,85,496,57,516,44,519,49,500,61,471,89,445,121,406,192,378,261,362,318"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="498,71,751,111"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="362,316,382,272,411,219,449,167,496,122,518,110,521,114,500,126,453,170,416,222,387,274,367,319"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="498,136,751,177"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="371,318,423,251,457,217,497,187,522,175,524,180,499,192,461,221,427,255,375,321"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="498,201,751,242"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="388,320,438,285,497,253,530,240,532,245,499,257,441,290,391,324"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="498,267,751,307"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="453,325,536,305,537,311,455,330"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="498,332,751,373"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="466,350,498,350,498,355,466,355"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="498,397,751,438"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="455,374,537,394,536,399,453,379"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="498,463,751,503"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="391,380,441,415,499,447,532,460,530,465,497,452,438,420,388,385"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="498,528,751,569"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="375,384,427,450,461,484,499,513,524,525,522,530,497,517,457,488,423,453,371,387"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="498,593,751,634"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="367,386,387,430,416,483,453,534,500,578,521,590,518,595,496,582,449,538,411,485,382,433,362,388"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="498,659,751,699"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="362,387,378,444,406,513,445,584,471,616,500,644,519,656,516,660,496,648,467,619,441,587,401,515,373,445,357,388"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1LevelBasedEffect.html" title=" " alt="" coords="5,332,204,373"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="220,350,251,350,251,355,220,355"/>
 </map>

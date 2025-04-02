@@ -1,5 +1,6 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShieldAPI =
 [
+    [ "applyShieldEffects", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShieldAPI.html#adab4ea070173b7e38fed3d4f1295311b", null ],
     [ "forceFacing", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShieldAPI.html#aa98789fdcec75502ddce387ca8188c63", null ],
     [ "getActiveArc", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShieldAPI.html#ac7d508716c3becf8ae31ec8f945d809d", null ],
     [ "getArc", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShieldAPI.html#aff9bbaff2255f6d587a03ffa2d0207de", null ],

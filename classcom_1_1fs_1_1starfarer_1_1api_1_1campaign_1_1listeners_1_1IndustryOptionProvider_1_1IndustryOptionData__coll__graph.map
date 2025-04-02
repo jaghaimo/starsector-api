@@ -1,5 +1,9 @@
 <map id="com.fs.starfarer.api.campaign.listeners.IndustryOptionProvider.IndustryOptionData" name="com.fs.starfarer.api.campaign.listeners.IndustryOptionProvider.IndustryOptionData">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,109,273,150"/>
-<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1IndustryOptionProvider.html" title=" " alt="" coords="16,5,262,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="142,62,142,109,136,109,136,62"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="348,55,615,96"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="102,5,154,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="169,22,352,52,352,57,168,27"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1Industry.html" title=" " alt="" coords="16,55,240,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="256,73,347,73,347,78,256,78"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1IndustryOptionProvider.html" title=" " alt="" coords="5,120,251,161"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="256,115,367,94,368,99,257,120"/>
 </map>

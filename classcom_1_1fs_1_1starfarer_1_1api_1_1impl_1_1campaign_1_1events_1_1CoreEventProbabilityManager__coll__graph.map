@@ -1,7 +1,13 @@
 <map id="com.fs.starfarer.api.impl.campaign.events.CoreEventProbabilityManager" name="com.fs.starfarer.api.impl.campaign.events.CoreEventProbabilityManager">
-<area shape="rect" id="Node000001" title=" " alt="" coords="69,94,331,135"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,13,195,39"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="127,47,179,92,176,96,123,51"/>
-<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="218,5,385,46"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="268,58,225,96,221,92,265,54"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="616,100,879,141"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignEventListener.html" title=" " alt="" coords="269,5,462,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="466,48,663,97,662,102,465,53"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEventListener.html" title=" " alt="" coords="5,5,199,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="214,23,269,23,269,28,214,28"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="282,71,449,111"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="465,96,616,108,616,113,464,101"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="335,136,396,161"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="412,142,616,127,616,133,412,148"/>
+<area shape="rect" id="Node000006" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventManagerAPI.html" title=" " alt="" coords="248,185,483,226"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="483,179,592,155,662,139,663,144,593,161,485,184"/>
 </map>

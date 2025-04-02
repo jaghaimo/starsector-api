@@ -15,6 +15,7 @@ var dir_31278b3db873553737ded3e971e477d1 =
     [ "Decivilized.java", "Decivilized_8java.html", "Decivilized_8java" ],
     [ "DecivilizedSubpop.java", "DecivilizedSubpop_8java.html", "DecivilizedSubpop_8java" ],
     [ "Dissident.java", "Dissident_8java.html", "Dissident_8java" ],
+    [ "EstablishedPolity.java", "EstablishedPolity_8java.html", "EstablishedPolity_8java" ],
     [ "FoodShortage.java", "FoodShortage_8java.html", "FoodShortage_8java" ],
     [ "FreeMarket.java", "FreeMarket_8java.html", "FreeMarket_8java" ],
     [ "Frontier.java", "Frontier_8java.html", "Frontier_8java" ],

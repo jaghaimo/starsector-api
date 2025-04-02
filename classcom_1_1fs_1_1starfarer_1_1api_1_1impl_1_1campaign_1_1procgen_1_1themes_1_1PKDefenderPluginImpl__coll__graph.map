@@ -1,9 +1,10 @@
 <map id="com.fs.starfarer.api.impl.campaign.procgen.themes.PKDefenderPluginImpl" name="com.fs.starfarer.api.impl.campaign.procgen.themes.PKDefenderPluginImpl">
-<area shape="rect" id="Node000001" title=" " alt="" coords="424,39,739,79"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseGenericPlugin.html" title=" " alt="" coords="156,5,376,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="391,36,424,40,423,45,391,42"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="5,13,108,39"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="123,23,155,23,155,28,123,28"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="171,71,361,111"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="376,77,424,72,424,78,377,83"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="719,39,1034,79"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseGenericPlugin.html" title=" " alt="" coords="381,5,602,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="617,34,719,43,718,48,617,39"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,39,264,79"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="279,43,381,33,381,39,279,48"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="312,71,671,111"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="279,69,312,72,311,78,279,75"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="686,72,718,69,719,75,687,77"/>
 </map>

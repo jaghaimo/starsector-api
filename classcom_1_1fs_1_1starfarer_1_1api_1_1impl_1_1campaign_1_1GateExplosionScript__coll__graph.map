@@ -1,5 +1,9 @@
 <map id="com.fs.starfarer.api.impl.campaign.GateExplosionScript" name="com.fs.starfarer.api.impl.campaign.GateExplosionScript">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,94,226,135"/>
-<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="32,5,199,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="118,62,118,94,113,94,113,62"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="577,37,798,78"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="292,5,459,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="475,33,577,44,577,49,474,38"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="279,71,472,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="487,82,553,76,576,73,577,78,554,81,488,87"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,71,230,111"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="245,88,279,88,279,94,245,94"/>
 </map>

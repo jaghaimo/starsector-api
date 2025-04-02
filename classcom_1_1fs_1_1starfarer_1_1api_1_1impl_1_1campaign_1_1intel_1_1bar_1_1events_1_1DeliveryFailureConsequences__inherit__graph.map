@@ -1,7 +1,7 @@
 <map id="com.fs.starfarer.api.impl.campaign.intel.bar.events.DeliveryFailureConsequences" name="com.fs.starfarer.api.impl.campaign.intel.bar.events.DeliveryFailureConsequences">
-<area shape="rect" id="Node000001" title=" " alt="" coords="19,94,329,135"/>
-<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="5,5,172,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="120,55,156,92,153,95,116,59"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="195,13,326,39"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="240,51,195,96,191,92,236,48"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="299,39,609,79"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="45,5,211,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="227,33,299,40,298,46,226,38"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1FleetEventListener.html" title=" " alt="" coords="5,71,251,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="266,75,298,72,298,77,266,80"/>
 </map>

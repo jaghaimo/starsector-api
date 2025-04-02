@@ -17,6 +17,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI =
     [ "getFluxPerUse", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#aeebd2ea713bd2bc0c0df3c73d4b9ad77", null ],
     [ "getId", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#ab5c8a1e6b048961b676b53e456df4df8", null ],
     [ "getMaxAmmo", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#ab7723910936429a3aabdc83ad0150008", null ],
+    [ "getScript", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#a62b2dedd600decc37c1289af9f1e3ce2", null ],
     [ "getSpecAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#aeb717179a1b209d7127bfc5d0b55e9e9", null ],
     [ "getState", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#adda34ff0809ef0cc2bfdd95cadd85994", null ],
     [ "getTargetLoc", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemAPI.html#abdbc1dfb7c1f804df3dafd829d942627", null ],

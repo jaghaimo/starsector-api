@@ -1,5 +1,11 @@
 <map id="com.fs.starfarer.api.impl.campaign.intel.bar.events.TriTachLoanIncentiveScript" name="com.fs.starfarer.api.impl.campaign.intel.bar.events.TriTachLoanIncentiveScript">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,94,316,135"/>
-<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="77,5,244,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,62,163,94,158,94,158,62"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="597,71,908,111"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="264,5,430,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="446,39,622,67,622,73,445,44"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="248,71,446,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="462,88,597,88,597,94,462,94"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1StarSystemAPI.html" title=" " alt="" coords="250,136,444,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="459,136,622,109,623,115,460,141"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html" title=" " alt="" coords="5,136,199,177"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="214,154,250,154,250,159,214,159"/>
 </map>

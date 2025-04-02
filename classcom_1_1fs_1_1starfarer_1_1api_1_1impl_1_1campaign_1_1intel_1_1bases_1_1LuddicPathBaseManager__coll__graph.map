@@ -1,7 +1,17 @@
 <map id="com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathBaseManager" name="com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathBaseManager">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,183,291,223"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseEventManager.html" title=" " alt="" coords="24,94,272,135"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="151,150,151,182,145,182,145,150"/>
-<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="65,5,231,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="151,62,151,94,145,94,145,62"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="729,197,1014,238"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseEventManager.html" title=" " alt="" coords="350,89,598,130"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="613,127,706,148,770,170,827,194,825,199,768,175,704,154,612,132"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="6,71,172,111"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="188,93,350,101,349,106,188,98"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,5,173,46"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="189,45,378,86,377,91,187,50"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html" title=" " alt="" coords="12,215,166,255"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="182,230,728,218,729,223,182,236"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="181,216,227,201,271,178,282,163,287,155,295,147,321,134,349,124,350,129,323,139,298,152,291,158,287,166,274,182,230,205,182,221"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="54,146,124,172"/>
+<area shape="poly" id="edge8_Node000001_Node000006" title=" " alt="" coords="139,160,705,200,729,202,729,208,705,206,139,165"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="139,150,349,123,350,128,140,155"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="297,312,651,368"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="665,307,704,295,774,267,834,236,836,241,776,272,706,301,667,312"/>
 </map>

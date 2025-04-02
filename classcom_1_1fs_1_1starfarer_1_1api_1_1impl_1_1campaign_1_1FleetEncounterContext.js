@@ -106,6 +106,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetEncounterCont
     [ "loot", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetEncounterContext.html#a81b33f41e79f3c37f8959b793ed77c66", null ],
     [ "noHarryBecauseOfStation", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetEncounterContext.html#abd1761f41cd1c8d9c9d9e16dcd77fe2e", null ],
     [ "ongoingBattle", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetEncounterContext.html#a16949991b9097d37f0b3601cf6560082", null ],
+    [ "origSourceForRecoveredShips", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetEncounterContext.html#a349be3fe402337467f44a20e1b2bfe9b", null ],
     [ "otherFleetHarriedPlayer", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetEncounterContext.html#a622f25000d780d58fb5af7ef355a428d", null ],
     [ "playerDidSeriousDamage", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetEncounterContext.html#a5c6cd59a17ae1851086701391fd5367d", null ],
     [ "playerFPHullDamageToAllies", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1FleetEncounterContext.html#ab120d5e23f478d181afc180072afab8a", null ],

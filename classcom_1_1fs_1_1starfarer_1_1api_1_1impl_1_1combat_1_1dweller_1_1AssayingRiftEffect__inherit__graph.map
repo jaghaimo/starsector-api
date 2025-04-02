@@ -1,0 +1,9 @@
+<map id="com.fs.starfarer.api.impl.combat.dweller.AssayingRiftEffect" name="com.fs.starfarer.api.impl.combat.dweller.AssayingRiftEffect">
+<area shape="rect" id="Node000001" title=" " alt="" coords="260,71,511,111"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1OnFireEffectPlugin.html" title=" " alt="" coords="18,5,199,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="213,48,297,67,296,73,212,53"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1OnHitEffectPlugin.html" title=" " alt="" coords="18,71,199,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="214,88,259,88,259,94,214,94"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1EveryFrameWeaponEffectPlugin.html" title=" " alt="" coords="5,136,212,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="212,129,296,109,297,115,213,134"/>
+</map>

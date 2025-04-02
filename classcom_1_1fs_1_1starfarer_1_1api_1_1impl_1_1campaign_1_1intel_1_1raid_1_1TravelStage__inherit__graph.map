@@ -1,7 +1,11 @@
 <map id="com.fs.starfarer.api.impl.campaign.intel.raid.TravelStage" name="com.fs.starfarer.api.impl.campaign.intel.raid.TravelStage">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,168,277,208"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html" title=" " alt="" coords="5,79,277,120"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="144,135,144,167,138,167,138,135"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="100,5,182,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="144,46,144,79,138,79,138,46"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="644,39,915,79"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HITravelStage.html" title=" " alt="" coords="963,5,1273,46"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="930,41,962,38,963,44,931,47"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PETravelStage.html" title=" " alt="" coords="970,71,1266,111"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="931,71,970,74,970,80,931,76"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html" title=" " alt="" coords="325,39,596,79"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="612,56,644,56,644,62,612,62"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,39,277,79"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="292,56,324,56,324,62,292,62"/>
 </map>

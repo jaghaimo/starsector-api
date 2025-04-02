@@ -1,3 +1,35 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1Tuning.html" title=" " alt="" coords="5,5,226,46"/>
+<area shape="rect" id="Node000000" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WithSourceMod.html" title=" " alt="" coords="5,431,184,471"/>
+<area shape="rect" id="Node000001" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlanetSpecAPI.html" title=" " alt="" coords="247,5,440,46"/>
+<area shape="poly" id="edge1443_Node000000_Node000001" title=" " alt="" coords="95,415,104,340,126,244,143,194,166,144,194,98,230,57,247,44,250,49,233,61,199,101,171,147,148,196,131,246,109,341,100,415"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemSpecAPI.html" title=" " alt="" coords="247,71,440,111"/>
+<area shape="poly" id="edge1444_Node000000_Node000002" title=" " alt="" coords="98,415,111,352,135,274,152,232,173,192,199,155,230,122,248,110,251,114,233,126,203,159,178,195,157,235,140,275,116,354,103,416"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1CommoditySpecAPI.html" title=" " alt="" coords="232,136,456,177"/>
+<area shape="poly" id="edge1445_Node000000_Node000003" title=" " alt="" coords="102,415,118,364,144,303,181,241,204,213,230,188,250,175,253,179,233,192,208,216,186,244,149,305,123,366,107,416"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1MarketConditionSpecAPI.html" title=" " alt="" coords="245,201,443,242"/>
+<area shape="poly" id="edge1446_Node000000_Node000004" title=" " alt="" coords="108,416,128,378,155,334,189,290,230,253,252,240,255,245,233,257,193,294,159,337,132,380,113,418"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillSpecAPI.html" title=" " alt="" coords="245,267,443,307"/>
+<area shape="poly" id="edge1447_Node000000_Node000005" title=" " alt="" coords="120,417,168,366,198,340,230,318,257,305,259,310,233,323,201,344,171,370,124,420"/>
+<area shape="rect" id="Node000006" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipHullSpecAPI.html" title=" " alt="" coords="254,332,434,373"/>
+<area shape="poly" id="edge1448_Node000000_Node000006" title=" " alt="" coords="147,421,231,383,267,371,268,376,233,388,150,426"/>
+<area shape="rect" id="Node000007" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipSystemSpecAPI.html" title=" " alt="" coords="254,397,434,438"/>
+<area shape="poly" id="edge1449_Node000000_Node000007" title=" " alt="" coords="199,434,253,427,253,432,199,440"/>
+<area shape="rect" id="Node000008" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1AbilitySpecAPI.html" title=" " alt="" coords="255,463,433,503"/>
+<area shape="poly" id="edge1450_Node000000_Node000008" title=" " alt="" coords="200,462,255,469,254,474,199,467"/>
+<area shape="rect" id="Node000009" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html" title=" " alt="" coords="255,528,433,569"/>
+<area shape="poly" id="edge1451_Node000000_Node000009" title=" " alt="" coords="151,476,233,513,268,525,267,530,231,517,149,481"/>
+<area shape="rect" id="Node000010" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1FighterWingSpecAPI.html" title=" " alt="" coords="255,593,433,634"/>
+<area shape="poly" id="edge1452_Node000000_Node000010" title=" " alt="" coords="124,481,172,531,201,556,233,578,259,590,257,595,230,583,198,561,168,535,120,485"/>
+<area shape="rect" id="Node000011" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1HullModSpecAPI.html" title=" " alt="" coords="255,659,433,699"/>
+<area shape="poly" id="edge1453_Node000000_Node000011" title=" " alt="" coords="113,484,133,521,159,564,193,607,233,644,256,656,253,661,230,648,189,611,155,567,128,524,108,486"/>
+<area shape="rect" id="Node000012" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1IndustrySpecAPI.html" title=" " alt="" coords="255,724,433,765"/>
+<area shape="poly" id="edge1454_Node000000_Node000012" title=" " alt="" coords="107,485,124,536,149,596,186,657,208,685,233,709,256,723,253,727,230,713,204,688,181,660,145,598,119,538,102,487"/>
+<area shape="rect" id="Node000013" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1TerrainSpecAPI.html" title=" " alt="" coords="255,789,433,830"/>
+<area shape="poly" id="edge1455_Node000000_Node000013" title=" " alt="" coords="103,486,116,548,140,626,157,666,178,706,203,742,233,774,256,789,253,794,230,778,199,746,173,708,152,669,135,628,111,549,98,487"/>
+<area shape="rect" id="Node000014" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WeaponSpecAPI.html" title=" " alt="" coords="255,855,433,895"/>
+<area shape="poly" id="edge1456_Node000000_Node000014" title=" " alt="" coords="100,487,109,560,131,655,148,705,171,754,199,800,233,840,256,855,253,859,230,844,195,803,166,757,143,707,126,657,104,561,95,487"/>
+<area shape="rect" id="Node000015" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1BeamWeaponSpecAPI.html" title=" " alt="" coords="504,821,682,862"/>
+<area shape="poly" id="edge1457_Node000014_Node000015" title=" " alt="" coords="448,858,503,851,504,856,449,864"/>
+<area shape="rect" id="Node000016" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1ProjectileWeaponSpecAPI.html" title=" " alt="" coords="504,887,682,927"/>
+<area shape="poly" id="edge1458_Node000014_Node000016" title=" " alt="" coords="449,886,504,893,503,898,448,891"/>
 </map>

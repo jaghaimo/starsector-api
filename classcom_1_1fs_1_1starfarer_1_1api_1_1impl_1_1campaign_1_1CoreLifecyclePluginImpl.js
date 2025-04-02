@@ -3,7 +3,6 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreLifecyclePlugi
     [ "addBarEvents", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreLifecyclePluginImpl.html#af9ff0e6858ef11085e88d0cba31bb099", null ],
     [ "addJunk", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreLifecyclePluginImpl.html#a2aa45ddb3483b23830b6b384208d6731", null ],
     [ "addScriptsIfNeeded", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreLifecyclePluginImpl.html#ab1a90e1f4ee155d3aba5e5546362b392", null ],
-    [ "addSkillsAndAssignAdmin", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreLifecyclePluginImpl.html#aeb14ae636eecb2442737229ee1d06f02", null ],
     [ "afterGameSave", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreLifecyclePluginImpl.html#a2c3ba9a509ec626d47df7ab90a9991c4", null ],
     [ "assignCustomAdmins", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreLifecyclePluginImpl.html#a88caad6047342e215cc41b385d42deb9", null ],
     [ "beforeGameSave", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1CoreLifecyclePluginImpl.html#ae613ad3f9315bcdde4448e2091f73a0a", null ],

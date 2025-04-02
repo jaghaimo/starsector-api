@@ -1,11 +1,13 @@
 <map id="com.fs.starfarer.api.campaign.impl.items.WormholeScannerPlugin" name="com.fs.starfarer.api.campaign.impl.items.WormholeScannerPlugin">
-<area shape="rect" id="Node000001" title=" " alt="" coords="586,71,842,111"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html" title=" " alt="" coords="282,71,537,111"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="552,88,586,88,586,94,552,94"/>
-<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemPlugin.html" title=" " alt="" coords="5,5,199,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="215,47,311,67,310,73,214,52"/>
-<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemSpecAPI.html" title=" " alt="" coords="5,71,199,111"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="214,88,281,88,281,94,214,94"/>
-<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoStackAPI.html" title=" " alt="" coords="5,136,199,177"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="214,130,310,109,311,115,215,135"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="814,71,1069,111"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html" title=" " alt="" coords="509,71,765,111"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="780,88,813,88,813,94,780,94"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemPlugin.html" title=" " alt="" coords="233,5,426,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="442,47,539,67,538,73,441,52"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemSpecAPI.html" title=" " alt="" coords="233,71,426,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="442,88,509,88,509,94,442,94"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WithSourceMod.html" title=" " alt="" coords="5,71,184,111"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="199,88,233,88,233,94,199,94"/>
+<area shape="rect" id="Node000006" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoStackAPI.html" title=" " alt="" coords="233,136,426,177"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="441,130,538,109,539,115,442,135"/>
 </map>

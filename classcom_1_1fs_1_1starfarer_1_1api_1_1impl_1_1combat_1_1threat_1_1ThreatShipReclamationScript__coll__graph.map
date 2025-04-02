@@ -1,0 +1,17 @@
+<map id="com.fs.starfarer.api.impl.combat.threat.ThreatShipReclamationScript" name="com.fs.starfarer.api.impl.combat.threat.ThreatShipReclamationScript">
+<area shape="rect" id="Node000001" title=" " alt="" coords="775,105,1018,146"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseEveryFrameCombatPlugin.html" title=" " alt="" coords="471,5,672,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="656,49,829,102,827,107,654,54"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1EveryFrameCombatPlugin.html" title=" " alt="" coords="235,5,415,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="431,23,470,23,470,28,431,28"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEnginePlugin.html" title=" " alt="" coords="5,5,186,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="201,23,235,23,235,28,201,28"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html" title=" " alt="" coords="481,71,662,111"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="677,100,775,110,775,115,677,105"/>
+<area shape="rect" id="Node000006" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html" title=" " alt="" coords="235,71,415,111"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="431,88,481,88,481,94,431,94"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="465,136,678,177"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="694,154,751,150,796,144,797,149,751,156,694,159"/>
+<area shape="rect" id="Node000008" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html" title=" " alt="" coords="494,201,648,242"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="663,208,750,189,806,168,856,144,858,149,808,173,752,194,664,214"/>
+</map>

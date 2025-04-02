@@ -1,0 +1,17 @@
+<map id="com.fs.starfarer.api.impl.combat.dweller.ShroudedVortexAI" name="com.fs.starfarer.api.impl.combat.dweller.ShroudedVortexAI">
+<area shape="rect" id="Node000001" title=" " alt="" coords="554,163,806,203"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAIPlugin.html" title=" " alt="" coords="235,5,415,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="425,48,479,66,531,87,597,124,652,160,649,164,595,128,529,92,477,71,424,53"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipwideAIFlags.html" title=" " alt="" coords="235,71,415,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="432,105,531,127,628,160,626,165,530,132,430,110"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html" title=" " alt="" coords="235,136,415,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="431,162,554,171,554,176,431,167"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html" title=" " alt="" coords="5,136,186,177"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="201,154,235,154,235,159,201,159"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="290,201,360,226"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="376,207,554,191,554,197,376,212"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html" title=" " alt="" coords="248,251,402,291"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="417,259,530,237,583,220,631,201,633,206,584,225,531,242,418,264"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="254,316,396,341"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="410,311,470,297,529,276,596,239,651,202,654,206,599,244,531,280,471,302,411,317"/>
+</map>

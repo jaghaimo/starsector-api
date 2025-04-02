@@ -1,5 +1,11 @@
 <map id="com.fs.starfarer.api.campaign.BaseCustomUIPanelPlugin" name="com.fs.starfarer.api.campaign.BaseCustomUIPanelPlugin">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,94,199,135"/>
-<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomUIPanelPlugin.html" title=" " alt="" coords="5,5,199,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,62,105,94,99,94,99,62"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="247,71,440,111"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ExampleCustomUIPanel.html" title=" " alt="" coords="514,5,734,46"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="448,64,533,44,534,49,449,69"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelPanel.html" title=" " alt="" coords="488,71,760,111"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="456,88,488,88,488,94,456,94"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelTutorialPanel.html" title=" " alt="" coords="488,136,760,177"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="449,113,534,133,533,138,448,118"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomUIPanelPlugin.html" title=" " alt="" coords="5,71,199,111"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="214,88,246,88,246,94,214,94"/>
 </map>

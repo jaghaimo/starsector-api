@@ -1,5 +1,8 @@
 <map id="com.fs.starfarer.api.util.CollisionGridUtil.BucketIterator" name="com.fs.starfarer.api.util.CollisionGridUtil.BucketIterator">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,79,205,120"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="44,5,166,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,46,108,79,102,79,102,46"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="11,94,210,135"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,128,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="78,44,88,69,100,92,96,95,83,71,73,46"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="81,44,104,92,99,95,76,46"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="152,5,253,31"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="182,44,132,95,128,92,178,40"/>
 </map>

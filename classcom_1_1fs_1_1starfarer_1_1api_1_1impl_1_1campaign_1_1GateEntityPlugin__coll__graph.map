@@ -1,7 +1,23 @@
 <map id="com.fs.starfarer.api.impl.campaign.GateEntityPlugin" name="com.fs.starfarer.api.impl.campaign.GateEntityPlugin">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,168,226,208"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html" title=" " alt="" coords="5,79,226,120"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="118,135,118,167,113,167,113,135"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="19,5,212,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="118,46,118,79,113,79,113,46"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="921,300,1141,341"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1BaseCustomEntityPlugin.html" title=" " alt="" coords="554,29,775,70"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="790,43,846,54,873,64,898,78,926,101,951,129,988,191,1013,252,1027,299,1022,300,1008,254,984,194,946,132,923,105,895,83,871,69,845,59,789,48"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomCampaignEntityPlugin.html" title=" " alt="" coords="279,5,472,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="488,32,554,38,554,43,487,38"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="279,71,472,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="487,72,553,63,554,68,488,78"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,71,230,111"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="245,88,279,88,279,94,245,94"/>
+<area shape="rect" id="Node000006" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1graphics_1_1SpriteAPI.html" title=" " alt="" coords="571,159,758,199"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="774,196,836,212,898,234,956,265,1004,297,1001,302,953,269,896,239,834,217,772,201"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WarpingSpriteRendererUtil.html" title=" " alt="" coords="577,224,752,265"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="768,250,832,258,897,271,979,297,977,302,896,276,831,264,767,255"/>
+<area shape="rect" id="Node000008" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html" title=" " alt="" coords="587,289,742,330"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="757,314,799,316,920,318,920,324,799,321,757,319"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="639,354,690,380"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="705,360,896,338,920,335,920,340,897,343,706,366"/>
+<area shape="rect" id="Node000010" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1JitterUtil.html" title=" " alt="" coords="587,404,742,445"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="756,405,896,370,981,339,982,344,897,375,757,410"/>
+<area shape="rect" id="Node000011" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html" title=" " alt="" coords="587,469,742,510"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="748,462,774,454,836,438,863,430,895,416,956,378,1004,339,1008,343,959,382,898,420,865,435,838,443,775,459,750,467"/>
 </map>

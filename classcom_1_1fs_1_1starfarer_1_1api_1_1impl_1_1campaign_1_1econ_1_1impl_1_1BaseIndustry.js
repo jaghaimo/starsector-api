@@ -142,6 +142,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Ba
     [ "setDisrupted", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a77ba6689e788b206a0b07af2f3ea16f3", null ],
     [ "setHidden", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#aaff23899e2efb6bc8e4f588a90482de3", null ],
     [ "setImproved", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#ac46f8a3acfae8a7e957f3a405dd13fdf", null ],
+    [ "setMarket", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a1c447f3c4e39fbc6b7109bfbf577f22c", null ],
     [ "setSpecialItem", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a9f33bb9acb33ccdd2e47a02356c6d255", null ],
     [ "showShutDown", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#a64979daf52db8da011cb29a665be2fe3", null ],
     [ "showWhenUnavailable", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseIndustry.html#ada878c79f769abea9b20a68ce2a7a263", null ],

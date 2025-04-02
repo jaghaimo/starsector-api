@@ -1,0 +1,13 @@
+<map id="com.fs.starfarer.api.impl.combat.threat.IncursionModeSystemScript" name="com.fs.starfarer.api.impl.combat.threat.IncursionModeSystemScript">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1077,39,1320,79"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1BaseEnergyLashActivatedSystem.html" title=" " alt="" coords="785,39,1029,79"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1044,56,1076,56,1076,62,1044,62"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1BaseShipSystemScript.html" title=" " alt="" coords="512,5,719,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="735,37,785,42,785,48,735,42"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1ShipSystemStatsScriptAdvanced.html" title=" " alt="" coords="232,5,446,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="462,23,512,23,512,28,462,28"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1ShipSystemStatsScript.html" title=" " alt="" coords="5,5,184,46"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="199,23,231,23,231,28,199,28"/>
+<area shape="rect" id="Node000006" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1EnergyLashActivatedSystem.html" title=" " alt="" coords="494,71,737,111"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="753,73,785,70,785,75,753,79"/>
+</map>

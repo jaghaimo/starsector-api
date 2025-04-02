@@ -19,6 +19,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academ
     [ "kapteynBarBribeCost", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAFindingCoureuse.html#a368966719af3ba152807fb83b24687e4", null ],
     [ "kapteynBribeCost", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAFindingCoureuse.html#a4182fdf976c3282294ebc270f532ef69", null ],
     [ "laicailleArchon", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAFindingCoureuse.html#a9beac0764b6ba4d7f0df63da48c0ca9e", null ],
+    [ "probeEmpty", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAFindingCoureuse.html#aebb36b0f298f8891304c6495ee77a188", null ],
     [ "probeSystem", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAFindingCoureuse.html#a4f82b134d3a9c9bfc0f06c59e3754e03", null ],
     [ "scavengerFleet", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAFindingCoureuse.html#a97b356155deba57bca2dcbba253804a5", null ],
     [ "sellOutPrice", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAFindingCoureuse.html#a54ffd61ae5ad0b97ecfcdcd7b038cbdd", null ],

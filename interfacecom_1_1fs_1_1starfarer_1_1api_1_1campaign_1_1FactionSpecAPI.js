@@ -2,6 +2,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionSpecAPI =
 [
     [ "addCaptainPersonality", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionSpecAPI.html#a4d5d90f584cb87a15e623424a8caccb8", null ],
     [ "getAllPortraits", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionSpecAPI.html#aeeb6609fb3873abd016b3d1645f1a04c", null ],
+    [ "getAllVariantsForRole", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionSpecAPI.html#a2ab690aa04a9cfcc6c622a0a0721ec6c", null ],
     [ "getBarSound", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionSpecAPI.html#a3324fc20eca83dc9b75d52556601e37b", null ],
     [ "getBaseUIColor", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionSpecAPI.html#ad1e351488b6e613e1ca09aeac3ea10ce", null ],
     [ "getBrightUIColor", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionSpecAPI.html#a904aa543be44c838696f9e7fc2a37b81", null ],

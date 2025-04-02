@@ -1,5 +1,9 @@
 <map id="com.fs.starfarer.api.impl.campaign.procgen.themes.RemnantOfficerGeneratorPlugin" name="com.fs.starfarer.api.impl.campaign.procgen.themes.RemnantOfficerGeneratorPlugin">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,94,321,135"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="74,5,252,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,62,166,94,160,94,160,62"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,271,321,312"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseGenerateFleetOfficersPlugin.html" title=" " alt="" coords="36,183,290,223"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,239,166,271,160,271,160,239"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1GenerateFleetOfficersPlugin.html" title=" " alt="" coords="36,94,290,135"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="166,150,166,182,160,182,160,150"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="34,5,292,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="166,62,166,94,160,94,160,62"/>
 </map>

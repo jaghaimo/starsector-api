@@ -1,31 +1,3 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BlueprintProviderItem.html" title=" " alt="" coords="247,136,502,177"/>
-<area shape="rect" id="Node000001" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1FighterBlueprintItemPlugin.html" title=" " alt="" coords="550,71,805,111"/>
-<area shape="poly" id="edge806_Node000000_Node000001" title=" " alt="" coords="486,130,579,109,581,115,487,135"/>
-<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1IndustryBlueprintItemPlugin.html" title=" " alt="" coords="550,136,805,177"/>
-<area shape="poly" id="edge807_Node000000_Node000004" title=" " alt="" coords="517,154,549,154,549,159,517,159"/>
-<area shape="rect" id="Node000007" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1MultiBlueprintItemPlugin.html" title=" " alt="" coords="550,201,805,242"/>
-<area shape="poly" id="edge808_Node000000_Node000007" title=" " alt="" coords="487,178,581,198,579,203,486,183"/>
-<area shape="rect" id="Node000008" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1ShipBlueprintItemPlugin.html" title=" " alt="" coords="550,267,805,307"/>
-<area shape="poly" id="edge809_Node000000_Node000008" title=" " alt="" coords="421,183,482,218,551,251,587,264,585,269,549,256,479,223,419,188"/>
-<area shape="rect" id="Node000009" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1WeaponBlueprintItemPlugin.html" title=" " alt="" coords="550,5,805,46"/>
-<area shape="poly" id="edge810_Node000000_Node000009" title=" " alt="" coords="419,125,479,90,549,57,585,44,587,49,551,61,482,95,421,130"/>
-<area shape="rect" id="Node000012" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemPlugin.html" title=" " alt="" coords="5,299,199,339"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1BaseSpecialItemPlugin.html" title=" " alt="" coords="247,299,502,339"/>
-<area shape="poly" id="edge811_Node000012_Node000002" title=" " alt="" coords="214,316,246,316,246,322,214,322"/>
-<area shape="poly" id="edge812_Node000002_Node000001" title=" " alt="" coords="406,286,500,187,521,152,531,137,548,122,572,110,574,114,552,127,535,141,526,155,504,190,410,289"/>
-<area shape="poly" id="edge814_Node000002_Node000004" title=" " alt="" coords="407,286,470,236,509,210,549,187,580,175,582,180,551,192,511,214,473,240,410,290"/>
-<area shape="poly" id="edge817_Node000002_Node000007" title=" " alt="" coords="442,290,549,252,592,240,593,245,551,258,444,295"/>
-<area shape="poly" id="edge818_Node000002_Node000008" title=" " alt="" coords="517,301,549,298,550,303,518,307"/>
-<area shape="poly" id="edge819_Node000002_Node000009" title=" " alt="" coords="411,287,456,242,500,187,514,151,519,119,525,88,534,73,548,57,566,44,569,49,552,61,538,76,530,90,524,120,519,153,504,190,460,246,414,290"/>
-<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1GenericSpecialItemPlugin.html" title=" " alt="" coords="550,332,805,373"/>
-<area shape="poly" id="edge813_Node000002_Node000003" title=" " alt="" coords="518,332,550,336,549,341,517,337"/>
-<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1JanusDevicePlugin.html" title=" " alt="" coords="550,397,805,438"/>
-<area shape="poly" id="edge815_Node000002_Node000005" title=" " alt="" coords="442,343,551,382,593,394,591,399,549,387,440,348"/>
-<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1ModSpecItemPlugin.html" title=" " alt="" coords="550,463,805,503"/>
-<area shape="poly" id="edge816_Node000002_Node000006" title=" " alt="" coords="410,348,473,399,511,425,551,447,582,460,580,464,549,452,508,430,470,403,407,352"/>
-<area shape="rect" id="Node000010" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1WormholeAnchorPlugin.html" title=" " alt="" coords="550,528,805,569"/>
-<area shape="poly" id="edge820_Node000002_Node000010" title=" " alt="" coords="398,351,425,389,460,433,503,476,551,513,577,525,574,530,549,517,499,480,456,436,421,392,394,354"/>
-<area shape="rect" id="Node000011" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1impl_1_1items_1_1WormholeScannerPlugin.html" title=" " alt="" coords="550,593,805,634"/>
-<area shape="poly" id="edge821_Node000002_Node000011" title=" " alt="" coords="392,353,415,403,450,465,495,526,522,554,552,578,573,591,571,595,548,583,519,558,491,530,445,468,410,406,387,355"/>
+<area shape="rect" id="Node000000" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PlayerMarketTransaction.html" title=" " alt="" coords="5,5,199,46"/>
 </map>

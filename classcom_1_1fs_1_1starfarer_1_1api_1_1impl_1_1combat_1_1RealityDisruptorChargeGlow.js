@@ -11,7 +11,6 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorChar
     [ "pickNoTargetDest", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorChargeGlow.html#a9a90a7cdfa65928aa662d9e638a6be9e", null ],
     [ "render", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorChargeGlow.html#aacd04111f213bec402d6f54dd335835f", null ],
     [ "spawnArc", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorChargeGlow.html#a4aaed80b6c39420c6146b42da894b140", null ],
-    [ "spawnEMPParticles", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorChargeGlow.html#abeaa6d23741c7b4471645ffda4b4327a", null ],
     [ "arcInterval", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorChargeGlow.html#a5e15bbe126faf5d94849e8fe65785b9e", null ],
     [ "delay", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorChargeGlow.html#a3b9897c422450c29da5d8e96c4b18546", null ],
     [ "interval", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RealityDisruptorChargeGlow.html#a77d967965404c11956f6f701c3cd7445", null ],

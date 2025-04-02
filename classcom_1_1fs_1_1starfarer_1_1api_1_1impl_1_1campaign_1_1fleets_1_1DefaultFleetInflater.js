@@ -11,6 +11,8 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DefaultF
     [ "getAvailableWeapons", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DefaultFleetInflater.html#ae50e2f0b952b36818047669091bc7a74", null ],
     [ "getAverageNumSMods", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DefaultFleetInflater.html#aff4edac6af77e58aa4d146e66210585e", null ],
     [ "getFaction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DefaultFleetInflater.html#a56b52f46a70a4fc26428bbe9cad9c78a", null ],
+    [ "getFleetMember", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DefaultFleetInflater.html#a4288ce40ac8c0511a8cd180666feba78", null ],
+    [ "getMarket", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DefaultFleetInflater.html#ae88488c63404e4f79482283f272aac09", null ],
     [ "getMember", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DefaultFleetInflater.html#aa2a32fa59a026b120d0086ee848af8b4", null ],
     [ "getParams", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DefaultFleetInflater.html#a2f234bfb23dec3498ac21733a6646960", null ],
     [ "getPersistent", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DefaultFleetInflater.html#a44d449a23a3cd1e8172f85c1deeca9dd", null ],

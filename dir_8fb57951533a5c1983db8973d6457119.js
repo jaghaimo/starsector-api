@@ -1,6 +1,8 @@
 var dir_8fb57951533a5c1983db8973d6457119 =
 [
     [ "dem", "dir_11c7188b26f8c91a85963344449eb232.html", "dir_11c7188b26f8c91a85963344449eb232" ],
+    [ "dweller", "dir_726310eb9569dffbf6928730c25815b6.html", "dir_726310eb9569dffbf6928730c25815b6" ],
+    [ "threat", "dir_6de87677ff454de89123d90fcc6bea0d.html", "dir_6de87677ff454de89123d90fcc6bea0d" ],
     [ "AcausalDisruptorStats.java", "AcausalDisruptorStats_8java.html", "AcausalDisruptorStats_8java" ],
     [ "BaseBattleObjectiveEffect.java", "BaseBattleObjectiveEffect_8java.html", "BaseBattleObjectiveEffect_8java" ],
     [ "BaseShipSystemScript.java", "BaseShipSystemScript_8java.html", "BaseShipSystemScript_8java" ],
@@ -25,6 +27,7 @@ var dir_8fb57951533a5c1983db8973d6457119 =
     [ "GenericCombatPlugin.java", "GenericCombatPlugin_8java.html", "GenericCombatPlugin_8java" ],
     [ "GravitonBeamEffect.java", "GravitonBeamEffect_8java.html", "GravitonBeamEffect_8java" ],
     [ "GravityPullEffect.java", "GravityPullEffect_8java.html", "GravityPullEffect_8java" ],
+    [ "HeavyAdjudicatorEffect.java", "HeavyAdjudicatorEffect_8java.html", "HeavyAdjudicatorEffect_8java" ],
     [ "InterdictorArrayStats.java", "InterdictorArrayStats_8java.html", "InterdictorArrayStats_8java" ],
     [ "IonBeamEffect.java", "IonBeamEffect_8java.html", "IonBeamEffect_8java" ],
     [ "IonCannonOnHitEffect.java", "IonCannonOnHitEffect_8java.html", "IonCannonOnHitEffect_8java" ],

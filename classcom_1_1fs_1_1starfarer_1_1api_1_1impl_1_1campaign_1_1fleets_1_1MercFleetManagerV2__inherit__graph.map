@@ -1,9 +1,9 @@
 <map id="com.fs.starfarer.api.impl.campaign.fleets.MercFleetManagerV2" name="com.fs.starfarer.api.impl.campaign.fleets.MercFleetManagerV2">
-<area shape="rect" id="Node000001" title=" " alt="" coords="48,183,302,223"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseRouteFleetManager.html" title=" " alt="" coords="48,94,302,135"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="178,150,178,182,173,182,173,150"/>
-<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="5,5,172,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="121,55,157,92,154,95,117,59"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="196,13,331,39"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="242,51,197,96,193,92,238,48"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="610,39,864,79"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseRouteFleetManager.html" title=" " alt="" coords="308,39,562,79"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="578,56,610,56,610,62,578,62"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="49,5,216,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="232,34,308,42,307,48,231,39"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,71,260,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="275,73,307,70,308,75,275,79"/>
 </map>

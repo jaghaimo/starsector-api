@@ -1,9 +1,13 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatTaskManagerAPI =
 [
     [ "clearEmptyWaypoints", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatTaskManagerAPI.html#ad8bd17e12ee9141615fb7654e59be14c", null ],
+    [ "clearTasks", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatTaskManagerAPI.html#a5bb1b64df68f01605616c445477b0186", null ],
     [ "createAssignment", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatTaskManagerAPI.html#a7116ab9bae7660710cc51b4a5cb7fefa", null ],
+    [ "createWaypoint2", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatTaskManagerAPI.html#a139306f50cf95ab402f04a2e3255fdd4", null ],
     [ "getAllAssignments", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatTaskManagerAPI.html#a3edc8b4128887b67e4016d2c046d91a6", null ],
     [ "getAssignmentFor", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatTaskManagerAPI.html#a7a8ef56ea31f73bf40841286938c7fad", null ],
+    [ "getAssignmentInfoForTarget", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatTaskManagerAPI.html#a53ebd2ed9133b5f29731c69662cf2eb0", null ],
+    [ "getAssignmentTargetFor", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatTaskManagerAPI.html#a90d9424e3c144ef91896fb63fe897e12", null ],
     [ "getCommandPointsLeft", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatTaskManagerAPI.html#ad7d232adfb356cfbc0a428ca0ccee052", null ],
     [ "getCommandPointsStat", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatTaskManagerAPI.html#a6bdf7ac410e456cb5a8718884efa397f", null ],
     [ "getCPInterval", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatTaskManagerAPI.html#ac4dcbe8e9be32b6a7364223914279031", null ],
@@ -18,7 +22,9 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatTaskManagerAPI =
     [ "orderRetreat", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatTaskManagerAPI.html#ac74f756406db2b54f69abb52fa81af3d", null ],
     [ "orderSearchAndDestroy", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatTaskManagerAPI.html#a82e4930dcc7ef6172fdd51006b2763dd", null ],
     [ "orderSearchAndDestroy", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatTaskManagerAPI.html#abc174a13b07719805584c232f9515bb9", null ],
+    [ "reassign", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatTaskManagerAPI.html#a2ac781263f828d6b7feee1d9fec764c6", null ],
     [ "removeAssignment", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatTaskManagerAPI.html#a508ba37e0272765fe0f66c6af07a946d", null ],
+    [ "setAssignmentWeight", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatTaskManagerAPI.html#a8c35ee5295bedaa4ca24c546029162b9", null ],
     [ "setFullAssault", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatTaskManagerAPI.html#a1659905e846cbfebfe749dcc8c884fcb", null ],
     [ "setPreventFullRetreat", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatTaskManagerAPI.html#ad24e11588fd9359d1cc316df9538dec6", null ]
 ];

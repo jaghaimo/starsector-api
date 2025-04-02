@@ -9,6 +9,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1G
     [ "createIntelInfo", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1GateHaulerIntel.html#a11accd4dc967b7ce2daa393ff55313db", null ],
     [ "createSmallDescription", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1GateHaulerIntel.html#a5ad3456169b9b0544069253ee7f4443c", null ],
     [ "findParkingOrbit", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1GateHaulerIntel.html#a1ece4013f6febf28d6986aa29bd080fe", null ],
+    [ "getAction", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1GateHaulerIntel.html#a36788a142031b5f2150bf037b943f2a9", null ],
     [ "getArrowData", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1GateHaulerIntel.html#a56e3a6d8f0d53f58261cf879a685b4a7", null ],
     [ "getCommMessageSound", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1GateHaulerIntel.html#a3d40c09bab3ec5872a722234dce38180", null ],
     [ "getFactionForUIColors", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1GateHaulerIntel.html#a40243d41e84320b9120b598f22329369", null ],

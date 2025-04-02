@@ -1,7 +1,13 @@
 <map id="com.fs.starfarer.api.impl.campaign.CoreScript" name="com.fs.starfarer.api.impl.campaign.CoreScript">
-<area shape="rect" id="Node000001" title=" " alt="" coords="90,94,310,135"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,13,195,39"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="127,47,179,92,176,96,123,51"/>
-<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="218,5,385,46"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="268,58,225,96,221,92,265,54"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="565,100,786,141"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1BaseCampaignEventListener.html" title=" " alt="" coords="248,5,441,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="434,48,603,97,601,102,432,53"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEventListener.html" title=" " alt="" coords="5,5,199,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="214,23,248,23,248,28,214,28"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="262,71,428,111"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="444,97,565,108,565,113,443,102"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="314,136,375,161"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="391,142,565,127,565,132,391,147"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="310,185,379,210"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="394,186,541,155,603,139,605,144,542,161,395,191"/>
 </map>

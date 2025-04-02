@@ -1,0 +1,26 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1BreadcrumbIntelV2 =
+[
+    [ "BreadcrumbIntelV2", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1BreadcrumbIntelV2.html#ae15c8420709e50114850ef45b015bcc4", null ],
+    [ "createIntelInfo", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1BreadcrumbIntelV2.html#aebec5a091a3af224af80e7abd2c24273", null ],
+    [ "createSmallDescription", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1BreadcrumbIntelV2.html#ab071c3abc44279abb111056e78bcc3bb", null ],
+    [ "getCommMessageSound", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1BreadcrumbIntelV2.html#acf4cc3068934e1e1319a18026c635b2e", null ],
+    [ "getFactionForUIColors", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1BreadcrumbIntelV2.html#a039b5a7d3289c7e133ee4002591a1e6f", null ],
+    [ "getIcon", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1BreadcrumbIntelV2.html#a58c1a97d04aaf025d87ac76f8c212af5", null ],
+    [ "getIntelTags", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1BreadcrumbIntelV2.html#a087348cdcfbc9416bf9a9114292019e7", null ],
+    [ "getMapLocation", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1BreadcrumbIntelV2.html#abd322dfbe5c1c5631d001f880b0ab5fa", null ],
+    [ "getName", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1BreadcrumbIntelV2.html#ae3836d4ffa164b4ed03bc0ec42e62f7b", null ],
+    [ "getShowSpecificEntity", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1BreadcrumbIntelV2.html#a5a96b56be61c51f6f1f764bb9104242f", null ],
+    [ "getSmallDescriptionTitle", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1BreadcrumbIntelV2.html#af3f3fdf6afc2a73a98e8257fd7d49891", null ],
+    [ "getSortString", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1BreadcrumbIntelV2.html#a740b21510a5b3db4b35dee11ec371724", null ],
+    [ "getText", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1BreadcrumbIntelV2.html#abb28814bbc0e587add73440ee722cc18", null ],
+    [ "getTitle", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1BreadcrumbIntelV2.html#aa8629934ee85203f5d6e2538d281b304", null ],
+    [ "reportRemovedIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1BreadcrumbIntelV2.html#a3ffc4e22c82db961a27f84cf28be2c2e", null ],
+    [ "setShowSpecificEntity", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1BreadcrumbIntelV2.html#a71bca0e5ffb8f8fc7b95fda0c018fd01", null ],
+    [ "setText", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1BreadcrumbIntelV2.html#a76e97ed57376ea1350795914bb7356b6", null ],
+    [ "setTitle", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1BreadcrumbIntelV2.html#abe988816b8b7f0106d2f1df3e218c51a", null ],
+    [ "shouldRemoveIntel", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1BreadcrumbIntelV2.html#a81cacbe26b43fc901dee6602b45c007d", null ],
+    [ "showSpecificEntity", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1BreadcrumbIntelV2.html#a675bdf42ab93cf1b13cfa7caf943beec", null ],
+    [ "target", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1BreadcrumbIntelV2.html#a9b9818b932580202062da611fc0d2fec", null ],
+    [ "text", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1BreadcrumbIntelV2.html#a2b0971a42a62472473ad665ff26af711", null ],
+    [ "title", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1BreadcrumbIntelV2.html#a811e1a30deb829d856bef20504dd228e", null ]
+];

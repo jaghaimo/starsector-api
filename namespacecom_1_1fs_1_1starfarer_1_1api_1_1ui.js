@@ -1,0 +1,28 @@
+var namespacecom_1_1fs_1_1starfarer_1_1api_1_1ui =
+[
+    [ "Alignment", "enumcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1Alignment.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1Alignment" ],
+    [ "BaseTooltipCreator", "classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1BaseTooltipCreator.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1BaseTooltipCreator" ],
+    [ "ButtonAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonAPI.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonAPI" ],
+    [ "ButtonDelegate", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ButtonDelegate.html", null ],
+    [ "CustomPanelAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1CustomPanelAPI.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1CustomPanelAPI" ],
+    [ "CutStyle", "enumcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1CutStyle.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1CutStyle" ],
+    [ "EventProgressBarAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1EventProgressBarAPI.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1EventProgressBarAPI" ],
+    [ "Fonts", "classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1Fonts.html", null ],
+    [ "HintPanelAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1HintPanelAPI.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1HintPanelAPI" ],
+    [ "IconGroupAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1IconGroupAPI.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1IconGroupAPI" ],
+    [ "IconRenderMode", "enumcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1IconRenderMode.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1IconRenderMode" ],
+    [ "IntelUIAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1IntelUIAPI.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1IntelUIAPI" ],
+    [ "LabelAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1LabelAPI.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1LabelAPI" ],
+    [ "MapFilterData", "classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapFilterData.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapFilterData" ],
+    [ "MapParams", "classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MapParams" ],
+    [ "MarkerData", "classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MarkerData.html", "classcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1MarkerData" ],
+    [ "PositionAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1PositionAPI.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1PositionAPI" ],
+    [ "ScrollPanelAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ScrollPanelAPI.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ScrollPanelAPI" ],
+    [ "SectorMapAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1SectorMapAPI.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1SectorMapAPI" ],
+    [ "TagDisplayAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TagDisplayAPI.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TagDisplayAPI" ],
+    [ "TextFieldAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TextFieldAPI.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TextFieldAPI" ],
+    [ "TooltipMakerAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1TooltipMakerAPI" ],
+    [ "UIComponentAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1UIComponentAPI.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1UIComponentAPI" ],
+    [ "UIPanelAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1UIPanelAPI.html", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1UIPanelAPI" ],
+    [ "ValueDisplayMode", "enumcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ValueDisplayMode.html", "enumcom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1ValueDisplayMode" ]
+];

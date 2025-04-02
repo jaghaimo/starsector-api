@@ -1,6 +1,7 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI =
 [
     [ "clone", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI.html#ac4fda2046e7c9fc3ae9b811435b8d1b1", null ],
+    [ "copyToDoctrine", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI.html#a0de873704f95a8ca59a588dadbf6fd64", null ],
     [ "getAggression", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI.html#adad4cd4d8ebaf04269d97736d91148c9", null ],
     [ "getAutofitRandomizeProbability", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI.html#a8a5dcc8245b785d5b99720ee5b72ad2c", null ],
     [ "getCarriers", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionDoctrineAPI.html#aeac71daf84f2b03a3d292b62a4ab6618", null ],

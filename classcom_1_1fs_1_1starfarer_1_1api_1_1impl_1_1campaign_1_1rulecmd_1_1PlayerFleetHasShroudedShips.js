@@ -1,0 +1,4 @@
+var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PlayerFleetHasShroudedShips =
+[
+    [ "execute", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1PlayerFleetHasShroudedShips.html#a2588378fb45adef5aeee915e050ffa2c", null ]
+];

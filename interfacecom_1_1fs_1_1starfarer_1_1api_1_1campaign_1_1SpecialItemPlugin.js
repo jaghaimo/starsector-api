@@ -11,6 +11,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemPlugin =
     [ "init", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemPlugin.html#a39b7305d1e5c645c4ab59e43ea562360", null ],
     [ "isTooltipExpandable", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemPlugin.html#a40d6f5b895c4d79023701788d4d54b5f", null ],
     [ "performRightClickAction", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemPlugin.html#ab9ebc8507ad1fd6eda46e90f55527819", null ],
+    [ "performRightClickAction", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemPlugin.html#a122bd759ba82f72c91712cac9db517a3", null ],
     [ "render", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemPlugin.html#a088542b8ca1bf1d49401a523958cf047", null ],
     [ "resolveDropParamsToSpecificItemData", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemPlugin.html#af41cbfd62f3e1358cef79f7085175143", null ],
     [ "setId", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SpecialItemPlugin.html#ac13fb84d2255dd5eaaee784a63a081b1", null ],

@@ -1,0 +1,15 @@
+<map id="com.fs.starfarer.api.impl.combat.threat.DisposableThreatFleetManager" name="com.fs.starfarer.api.impl.combat.threat.DisposableThreatFleetManager">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1206,72,1449,113"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DisposableFleetManager.html" title=" " alt="" coords="903,39,1158,79"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1174,72,1206,76,1205,81,1173,78"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1PlayerVisibleFleetManager.html" title=" " alt="" coords="601,39,855,79"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="871,56,903,56,903,62,871,62"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseLimitedFleetManager.html" title=" " alt="" coords="299,39,553,79"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="569,56,601,56,601,62,569,62"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="45,5,211,46"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="227,34,299,42,298,47,226,39"/>
+<area shape="rect" id="Node000006" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1FleetEventListener.html" title=" " alt="" coords="5,71,251,111"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="266,74,298,70,299,75,266,79"/>
+<area shape="rect" id="Node000007" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1listeners_1_1CurrentLocationChangedListener.html" title=" " alt="" coords="908,104,1153,145"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="1168,107,1205,103,1206,108,1169,112"/>
+</map>

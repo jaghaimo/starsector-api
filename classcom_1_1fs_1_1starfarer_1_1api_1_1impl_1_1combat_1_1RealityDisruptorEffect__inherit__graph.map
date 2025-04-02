@@ -1,9 +1,9 @@
 <map id="com.fs.starfarer.api.impl.combat.RealityDisruptorEffect" name="com.fs.starfarer.api.impl.combat.RealityDisruptorEffect">
-<area shape="rect" id="Node000001" title=" " alt="" coords="117,79,324,120"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,135,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,36,185,76,182,81,105,41"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="159,5,283,31"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="223,46,223,79,218,79,218,46"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="307,5,513,31"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="368,40,269,81,267,76,366,35"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="260,71,467,111"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1OnFireEffectPlugin.html" title=" " alt="" coords="18,5,199,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="206,48,282,67,281,73,205,53"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1OnHitEffectPlugin.html" title=" " alt="" coords="18,71,199,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="214,88,259,88,259,94,214,94"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1EveryFrameWeaponEffectPlugin.html" title=" " alt="" coords="5,136,212,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="205,129,281,109,282,115,206,134"/>
 </map>

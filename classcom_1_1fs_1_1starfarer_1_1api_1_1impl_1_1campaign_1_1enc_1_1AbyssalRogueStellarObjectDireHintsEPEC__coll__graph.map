@@ -1,9 +1,15 @@
 <map id="com.fs.starfarer.api.impl.campaign.enc.AbyssalRogueStellarObjectDireHintsEPEC" name="com.fs.starfarer.api.impl.campaign.enc.AbyssalRogueStellarObjectDireHintsEPEC">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,271,273,312"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1AbyssalRogueStellarObjectEPEC.html" title=" " alt="" coords="17,183,261,223"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="142,239,142,271,136,271,136,239"/>
-<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html" title=" " alt="" coords="17,94,261,135"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="142,150,142,182,136,182,136,150"/>
-<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EPEncounterCreator.html" title=" " alt="" coords="17,5,261,46"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="142,62,142,94,136,94,136,62"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="1177,132,1444,173"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1AbyssalRogueStellarObjectEPEC.html" title=" " alt="" coords="762,77,1007,118"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1023,113,1177,133,1176,138,1022,118"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1BaseEPEncounterCreator.html" title=" " alt="" coords="300,5,544,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="559,44,762,76,761,81,558,50"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EPEncounterCreator.html" title=" " alt="" coords="5,5,250,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="265,23,299,23,299,28,265,28"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html" title=" " alt="" coords="299,70,544,126"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="560,95,762,95,762,100,560,100"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html" title=" " alt="" coords="314,153,530,194"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="545,177,641,170,690,160,737,146,749,137,761,127,788,116,790,121,764,132,752,141,740,150,692,165,642,175,546,182"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1WeightedRandomPicker.html" title=" " alt="" coords="764,142,1005,198"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="1020,162,1176,155,1176,160,1020,167"/>
 </map>

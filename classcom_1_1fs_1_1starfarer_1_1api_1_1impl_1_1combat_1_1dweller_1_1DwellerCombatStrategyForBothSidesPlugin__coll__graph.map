@@ -1,0 +1,21 @@
+<map id="com.fs.starfarer.api.impl.combat.dweller.DwellerCombatStrategyForBothSidesPlugin" name="com.fs.starfarer.api.impl.combat.dweller.DwellerCombatStrategyForBothSidesPlugin">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1031,137,1303,178"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseEveryFrameCombatPlugin.html" title=" " alt="" coords="689,71,891,111"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="907,109,1048,134,1047,139,906,114"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1EveryFrameCombatPlugin.html" title=" " alt="" coords="276,5,456,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="472,39,689,73,689,78,471,45"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEnginePlugin.html" title=" " alt="" coords="5,5,186,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="202,23,275,23,275,28,202,28"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1DwellerCombatStrategyAI.html" title=" " alt="" coords="664,169,916,210"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="931,180,1006,174,1030,172,1031,177,1007,180,931,185"/>
+<area shape="rect" id="Node000006" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatTaskManagerAPI.html" title=" " alt="" coords="276,71,456,111"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="471,99,555,112,641,131,694,148,742,166,740,171,692,153,640,136,554,118,470,105"/>
+<area shape="rect" id="Node000007" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatFleetManagerAPI.html" title=" " alt="" coords="276,136,456,177"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="472,162,664,177,664,182,471,167"/>
+<area shape="rect" id="Node000008" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html" title=" " alt="" coords="288,201,443,242"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="458,212,664,196,664,202,459,217"/>
+<area shape="rect" id="Node000009" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html" title=" " alt="" coords="276,267,456,307"/>
+<area shape="poly" id="edge8_Node000005_Node000009" title=" " alt="" coords="470,264,640,227,714,208,716,213,641,233,471,269"/>
+<area shape="rect" id="Node000010" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatFleetManagerAPI_1_1AssignmentInfo.html" title=" " alt="" coords="235,332,496,373"/>
+<area shape="poly" id="edge9_Node000005_Node000010" title=" " alt="" coords="511,328,576,312,639,289,675,271,708,250,763,208,766,213,711,254,677,276,641,294,578,317,512,334"/>
+</map>

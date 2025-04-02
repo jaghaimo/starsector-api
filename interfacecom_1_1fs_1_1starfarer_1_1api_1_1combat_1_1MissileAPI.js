@@ -1,5 +1,6 @@
 var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI =
 [
+    [ "addTag", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#a5e92d1a9d28be249e966748a73326f6f", null ],
     [ "decrEMPResistance", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#a8801f2a1e8662d2df4df86bc7d7923b5", null ],
     [ "didDamage", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#a788251b7887cf8274d874e90def2a64e", null ],
     [ "explode", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#ac14dec4c645912737a83e7317cba1957", null ],
@@ -37,12 +38,14 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI =
     [ "getSpriteAlphaOverride", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#ae99c7eb4b65290730c9a525f3eb2695b", null ],
     [ "getSpriteAPI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#aa8f2b7ed85587c2aff996e9c11645b9f", null ],
     [ "getStart", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#a90f5549da9ec959db9e470dfa46409c5", null ],
+    [ "getTags", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#a3b63bb66dd9277c530656144f3acb7fe", null ],
     [ "getTimeSinceFizzling", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#a3383014de75d9fa0767a3b0f694e4307", null ],
     [ "getTurnAcceleration", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#ae4166bb5edb36ecee75f7ca9c8a2ecd7", null ],
     [ "getUntilMineExplosion", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#af2a2b1fa997d6c3225a1e5cf4d504635", null ],
     [ "getUnwrappedMissileAI", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#a529cd76bb634dd32502d8258d10ef20e", null ],
     [ "getWeaponSpec", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#afa60b95f97e5a4e2b4507dee979b0842", null ],
     [ "giveCommand", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#a32856dd0ea5f95f874e2b71ad3ef6e4f", null ],
+    [ "hasTag", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#a5a03b5d4a14b8c52da37737edc7038a3", null ],
     [ "interruptContrail", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#af56ffd0121c43edbd6db696d27ac046f", null ],
     [ "isArmed", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#a98ceeb2f8a2102bbaa8502b1957a01cf", null ],
     [ "isArmedWhileFizzling", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#aa193a6b33671ebefecf024bbafb4f9c1", null ],
@@ -58,10 +61,12 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI =
     [ "isNoFlameoutOnFizzling", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#a4b06266849a29de52099154a615d48bf", null ],
     [ "isNoMineFFConcerns", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#a7ee0b9da657893cace0d859f9ca1c5eb", null ],
     [ "isRenderGlowAbove", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#a402497fed5ac060f07592b3b1b31b5f8", null ],
+    [ "removeTag", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#a43766cc647378f8265268f81ec1e31c7", null ],
     [ "resetEngineGlowBrightness", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#aa9d99999578b117256490814f77668b7", null ],
     [ "setArmedWhileFizzling", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#ae371e026f6aba0cf138569c35f533b69", null ],
     [ "setArmingTime", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#ab7c4cffac34a7c8797c89346c4a2e06b", null ],
     [ "setDestroyedExplosionColorOverride", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#ae5f9bac0b3f844e0e04318ff3ae0acfa", null ],
+    [ "setDidDamage", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#a161fe742647b3106be41e6bf1a812e1a", null ],
     [ "setDoNotFlareEnginesWhenStrafingOrDecelerating", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#a35fffdb9b711701588a773e2f55382a0", null ],
     [ "setEccmChanceBonus", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#a39cb29af16335e379b04d9fcdd359a19", null ],
     [ "setEccmChanceOverride", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#a67dc59d2714a62a56fe25fbd2a83fc86", null ],
@@ -91,5 +96,6 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI =
     [ "setStart", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#abd6cbc8d21dc666b547677321bf1c5d6", null ],
     [ "setTimeSinceFizzling", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#a9b4a7edadcfbad716bb500cf04ec7d6d", null ],
     [ "setUntilMineExplosion", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#a046475f46e9f34165b1c8634ba24909d", null ],
-    [ "setWeaponSpec", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#a912d3de9821b2c13cb86fa89770dc53f", null ]
+    [ "setWeaponSpec", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#a912d3de9821b2c13cb86fa89770dc53f", null ],
+    [ "updateMaxSpeed", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1MissileAPI.html#acb1a4507cce6db71f92543c2241e4cfe", null ]
 ];

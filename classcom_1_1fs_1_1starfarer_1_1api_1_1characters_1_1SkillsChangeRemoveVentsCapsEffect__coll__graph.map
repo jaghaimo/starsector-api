@@ -1,7 +1,9 @@
 <map id="com.fs.starfarer.api.characters.SkillsChangeRemoveVentsCapsEffect" name="com.fs.starfarer.api.characters.SkillsChangeRemoveVentsCapsEffect">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,183,248,223"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html" title=" " alt="" coords="27,94,226,135"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="129,150,129,182,124,182,124,150"/>
-<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeEffect.html" title=" " alt="" coords="27,5,226,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="129,62,129,94,124,94,124,62"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="58,274,300,315"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1BaseSkillsChangeEffect.html" title=" " alt="" coords="80,184,278,225"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="182,240,182,274,176,274,176,240"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillsChangeEffect.html" title=" " alt="" coords="5,5,204,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="121,59,173,182,168,184,116,61"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="228,13,280,38"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="245,54,190,185,185,183,240,52"/>
 </map>

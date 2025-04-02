@@ -1,7 +1,26 @@
 <map id="com.fs.starfarer.api.impl.campaign.rulecmd.salvage.ZigguratCMD" name="com.fs.starfarer.api.impl.campaign.rulecmd.salvage.ZigguratCMD">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,168,323,208"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BaseCommandPlugin.html" title=" " alt="" coords="29,79,299,120"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="167,135,167,167,161,167,161,135"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="106,5,222,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="167,46,167,79,161,79,161,46"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="976,233,1293,274"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1BaseCommandPlugin.html" title=" " alt="" coords="569,5,838,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="854,33,905,46,953,66,1009,103,1057,149,1095,195,1122,231,1118,234,1091,198,1053,153,1005,108,951,71,903,51,853,39"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1CommandPlugin.html" title=" " alt="" coords="279,5,503,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="519,23,568,23,568,28,519,28"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html" title=" " alt="" coords="607,135,800,175"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="814,177,855,186,1045,230,1044,235,853,191,813,182"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="294,71,488,111"/>
+<area shape="poly" id="edge7_Node000001_Node000005" title=" " alt="" coords="503,85,581,86,670,91,763,102,855,120,926,144,994,173,1101,230,1098,235,992,178,924,149,853,126,763,107,670,96,581,91,503,90"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="504,111,607,133,606,138,503,116"/>
+<area shape="rect" id="Node000006" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,71,230,111"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="245,88,294,88,294,94,245,94"/>
+<area shape="rect" id="Node000007" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetOrStubAPI.html" title=" " alt="" coords="294,136,488,177"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="503,153,606,153,606,158,504,159"/>
+<area shape="rect" id="Node000008" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html" title=" " alt="" coords="607,200,800,241"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="815,226,976,239,975,244,815,232"/>
+<area shape="rect" id="Node000009" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1OptionPanelAPI.html" title=" " alt="" coords="607,265,800,306"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="815,275,975,263,976,268,815,280"/>
+<area shape="rect" id="Node000010" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1MemoryAPI.html" title=" " alt="" coords="591,331,816,371"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="813,324,853,315,1042,272,1043,277,855,320,814,329"/>
+<area shape="rect" id="Node000011" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1InteractionDialogAPI.html" title=" " alt="" coords="607,396,800,437"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="814,392,853,380,921,355,987,326,1094,272,1096,277,989,330,923,360,855,386,816,397"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="553,461,854,502"/>
+<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="830,454,853,446,932,407,1005,359,1066,311,1110,272,1113,276,1070,315,1008,363,935,412,855,451,831,459"/>
 </map>

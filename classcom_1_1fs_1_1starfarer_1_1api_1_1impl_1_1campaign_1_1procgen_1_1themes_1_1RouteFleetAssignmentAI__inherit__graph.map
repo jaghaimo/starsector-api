@@ -1,9 +1,21 @@
 <map id="com.fs.starfarer.api.impl.campaign.procgen.themes.RouteFleetAssignmentAI" name="com.fs.starfarer.api.impl.campaign.procgen.themes.RouteFleetAssignmentAI">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,183,321,223"/>
-<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1ScavengerFleetAssignmentAI.html" title=" " alt="" coords="5,271,321,312"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="166,239,166,271,160,271,160,239"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html" title=" " alt="" coords="5,94,321,135"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,150,166,182,160,182,160,150"/>
-<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="80,5,246,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="166,62,166,94,160,94,160,62"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="583,201,898,242"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1EconomyFleetAssignmentAI.html" title=" " alt="" coords="977,5,1231,46"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="770,188,845,121,893,86,945,57,977,44,979,49,947,61,896,90,849,125,774,192"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1MercAssignmentAIV2.html" title=" " alt="" coords="977,71,1231,111"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="791,191,863,155,945,122,988,109,990,114,947,127,865,160,793,196"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1PatrolAssignmentAIV4.html" title=" " alt="" coords="977,136,1231,177"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="872,195,987,175,988,180,873,201"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1PilgrimageFleetAssignmentAI.html" title=" " alt="" coords="977,201,1231,242"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="914,219,977,219,977,224,914,224"/>
+<area shape="rect" id="Node000008" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1MiscFleetAssignmentAI.html" title=" " alt="" coords="961,267,1247,307"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="873,243,988,263,987,269,872,248"/>
+<area shape="rect" id="Node000009" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1RaidAssignmentAI.html" title=" " alt="" coords="968,332,1240,373"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="793,247,865,283,947,316,990,329,988,334,945,322,863,288,791,252"/>
+<area shape="rect" id="Node000010" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1ScavengerFleetAssignmentAI.html" title=" " alt="" coords="946,397,1262,438"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="774,251,849,318,896,353,947,382,979,394,977,399,945,387,893,357,845,322,770,255"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1BaseAssignmentAI.html" title=" " alt="" coords="220,201,535,242"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="551,219,583,219,583,224,551,224"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="5,201,172,242"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="188,219,219,219,219,224,188,224"/>
 </map>

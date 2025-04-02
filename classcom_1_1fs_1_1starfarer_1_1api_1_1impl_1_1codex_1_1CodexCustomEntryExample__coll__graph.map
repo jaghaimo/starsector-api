@@ -1,0 +1,23 @@
+<map id="com.fs.starfarer.api.impl.codex.CodexCustomEntryExample" name="com.fs.starfarer.api.impl.codex.CodexCustomEntryExample">
+<area shape="rect" id="Node000001" title=" " alt="" coords="813,189,1011,230"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1codex_1_1CodexEntryV2.html" title=" " alt="" coords="529,49,728,90"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="712,93,729,101,812,144,881,187,878,191,810,149,727,105,710,98"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1codex_1_1CodexEntryPlugin.html" title=" " alt="" coords="218,5,417,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="433,26,506,34,561,46,560,51,505,39,432,31"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="430,47,458,51,529,60,529,65,457,57,429,52"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="202,77,433,118"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="449,98,505,94,543,88,544,93,506,99,449,103"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="269,146,366,172"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="382,161,444,155,475,147,504,133,511,127,515,119,519,110,528,101,549,88,552,93,531,105,524,113,520,121,516,130,507,138,477,152,444,160,382,166"/>
+<area shape="rect" id="Node000006" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomUIPanelPlugin.html" title=" " alt="" coords="532,115,725,155"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="724,157,832,186,831,191,723,162"/>
+<area shape="rect" id="Node000007" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1CustomPanelAPI.html" title=" " alt="" coords="555,257,702,298"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="717,257,788,241,837,228,838,233,789,246,718,262"/>
+<area shape="rect" id="Node000008" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1UIPanelAPI.html" title=" " alt="" coords="244,217,391,258"/>
+<area shape="poly" id="edge10_Node000001_Node000008" title=" " alt="" coords="406,231,812,212,812,217,406,236"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="407,246,555,266,554,271,406,252"/>
+<area shape="rect" id="Node000009" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1ui_1_1UIComponentAPI.html" title=" " alt="" coords="5,217,153,258"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="168,235,243,235,243,240,168,240"/>
+<area shape="rect" id="Node000010" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1codex_1_1CodexDialogAPI.html" title=" " alt="" coords="529,323,728,363"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="709,314,727,307,808,267,876,228,878,233,810,272,729,312,711,319"/>
+</map>

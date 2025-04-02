@@ -1,5 +1,13 @@
 <map id="com.fs.starfarer.api.impl.campaign.ghosts.SensorGhostManager" name="com.fs.starfarer.api.impl.campaign.ghosts.SensorGhostManager">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,94,268,135"/>
-<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="53,5,220,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="139,62,139,94,134,94,134,62"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="466,136,728,177"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="70,5,236,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="252,45,301,56,372,74,443,95,545,133,543,138,441,100,371,79,300,62,251,50"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,71,301,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="311,112,466,134,465,140,310,117"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTracker.html" title=" " alt="" coords="69,136,237,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="253,154,465,154,465,159,253,159"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="118,201,188,226"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="203,205,441,174,465,171,466,176,442,179,203,210"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="5,251,301,291"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="288,245,441,209,542,175,544,180,442,214,289,250"/>
 </map>

@@ -1,7 +1,9 @@
 <map id="com.fs.starfarer.api.impl.hullmods.PhaseField" name="com.fs.starfarer.api.impl.hullmods.PhaseField">
-<area shape="rect" id="Node000001" title=" " alt="" coords="16,79,233,120"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,105,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="78,41,109,77,105,80,74,44"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="129,5,261,31"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="176,45,144,80,140,77,172,41"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="462,39,678,79"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseHullMod.html" title=" " alt="" coords="234,5,414,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="430,37,462,42,461,47,429,43"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1HullModEffect.html" title=" " alt="" coords="5,5,186,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="201,23,233,23,233,28,201,28"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1HullModFleetEffect.html" title=" " alt="" coords="234,71,414,111"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="429,75,461,70,462,76,430,80"/>
 </map>

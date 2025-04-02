@@ -19,6 +19,7 @@ var dir_13289159c5a0fbf67f84e93d06e97f80 =
     [ "PositionAPI.java", "PositionAPI_8java.html", "PositionAPI_8java" ],
     [ "ScrollPanelAPI.java", "ScrollPanelAPI_8java.html", "ScrollPanelAPI_8java" ],
     [ "SectorMapAPI.java", "SectorMapAPI_8java.html", "SectorMapAPI_8java" ],
+    [ "TagDisplayAPI.java", "TagDisplayAPI_8java.html", "TagDisplayAPI_8java" ],
     [ "TextFieldAPI.java", "TextFieldAPI_8java.html", "TextFieldAPI_8java" ],
     [ "TooltipMakerAPI.java", "TooltipMakerAPI_8java.html", "TooltipMakerAPI_8java" ],
     [ "UIComponentAPI.java", "UIComponentAPI_8java.html", "UIComponentAPI_8java" ],

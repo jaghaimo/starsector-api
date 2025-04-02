@@ -1,19 +1,29 @@
 var classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description =
 [
     [ "Description", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#a189aec5de878f10fcec3eacee1cf9ee2", null ],
+    [ "getParas", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#ac2f837edd5321dcf68a5e56f23f3add5", null ],
+    [ "getSourceMod", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#a835b758d4832fe782ed41648f338b5f8", null ],
     [ "getText1", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#ab5b58b295e427a65cc701fe723717faf", null ],
     [ "getText1FirstPara", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#a92d30cc3cf6fe63879f61c119558008e", null ],
     [ "getText1Paras", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#a30d435b1975dfd495b83bd76a86815ed", null ],
     [ "getText2", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#aee850e0f1e4d7ba0b0cb1fcf5d863104", null ],
+    [ "getText2Paras", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#a597e9adaf9c42f51fffe1af01ec92dd0", null ],
     [ "getText3", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#a88c8784146f945b8fdcf527857d67caa", null ],
+    [ "getText3Paras", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#a591ccdea9a785e915314487cc222edf6", null ],
     [ "getText4", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#a99b0cd615f3c9bae0bcf6317efbc2031", null ],
+    [ "getText4Paras", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#a4f13a2c227bce5db8eddfad5ad192abb", null ],
+    [ "getText5", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#abc1268de4eb4745ac5f9fc7e8900020c", null ],
+    [ "getText5Paras", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#a4eb5062ee311374f248fc9dbbff582b1", null ],
     [ "getUID", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#a78afe1176dd35aa737b07207ef33ca04", null ],
     [ "hasText1", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#a8f292888330307c6f18ef5c391136acd", null ],
     [ "hasText2", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#a8a77da30a6893651159ed4f4300567b7", null ],
     [ "hasText3", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#ab74f3e96dfe3d009d3a67eb07335b4d9", null ],
     [ "hasText4", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#a347d5e5a5ad8f75a4788652fe72e12e2", null ],
+    [ "hasText5", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#af0b2f8c72332c3b0026c45db275caf8c", null ],
+    [ "setSourceMod", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#ac6f410b4ae47c7726762ee84da6cb5d9", null ],
     [ "setText1", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#a9b231319c156e0b2e13acd54187e470b", null ],
     [ "setText2", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#ad5940a0d41e2ce6b68c180fba58177c5", null ],
     [ "setText3", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#a72e51896619c47593293a4da85246500", null ],
-    [ "setText4", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#adb6caf3b7fa4b66401bd8612411a7b03", null ]
+    [ "setText4", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#adb6caf3b7fa4b66401bd8612411a7b03", null ],
+    [ "setText5", "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#ab9a869db7496b9513e22d641913fc26a", null ]
 ];

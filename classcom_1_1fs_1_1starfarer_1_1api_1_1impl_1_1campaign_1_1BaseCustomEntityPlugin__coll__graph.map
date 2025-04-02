@@ -1,5 +1,9 @@
 <map id="com.fs.starfarer.api.impl.campaign.BaseCustomEntityPlugin" name="com.fs.starfarer.api.impl.campaign.BaseCustomEntityPlugin">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,79,226,120"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="19,5,212,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="118,46,118,79,113,79,113,46"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="554,37,775,78"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomCampaignEntityPlugin.html" title=" " alt="" coords="279,5,472,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="488,35,554,43,553,48,487,41"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="279,71,472,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="487,75,553,68,554,73,488,81"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,71,230,111"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="245,88,279,88,279,94,245,94"/>
 </map>

@@ -1,11 +1,13 @@
 <map id="com.fs.starfarer.api.impl.campaign.events.nearby.NearbyEventsEvent" name="com.fs.starfarer.api.impl.campaign.events.nearby.NearbyEventsEvent">
-<area shape="rect" id="Node000001" title=" " alt="" coords="127,168,430,208"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html" title=" " alt="" coords="36,79,299,120"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="206,127,255,165,252,169,203,131"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="5,5,154,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="106,40,148,77,144,81,103,44"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="177,5,337,31"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="234,43,191,81,188,77,230,39"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="323,87,458,112"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="364,124,305,169,302,165,361,120"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="916,71,1220,111"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1BaseEventPlugin.html" title=" " alt="" coords="606,37,868,78"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="884,70,916,73,916,78,883,75"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1events_1_1CampaignEventPlugin.html" title=" " alt="" coords="323,5,558,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="574,37,606,41,605,46,573,43"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,5,275,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="290,23,322,23,322,28,290,28"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEventListener.html" title=" " alt="" coords="344,71,537,111"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="552,76,606,70,606,75,553,81"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="610,103,864,143"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="880,107,916,103,916,108,880,112"/>
 </map>

@@ -1,5 +1,9 @@
 <map id="com.fs.starfarer.api.impl.campaign.skills.CommRelayScript" name="com.fs.starfarer.api.impl.campaign.skills.CommRelayScript">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,79,259,120"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="31,5,233,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="135,46,135,79,129,79,129,46"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,271,259,312"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseEveryFrameCombatPlugin.html" title=" " alt="" coords="31,183,233,223"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="135,239,135,271,129,271,129,239"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1EveryFrameCombatPlugin.html" title=" " alt="" coords="42,94,222,135"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="135,150,135,182,129,182,129,150"/>
+<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEnginePlugin.html" title=" " alt="" coords="42,5,222,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="135,62,135,94,129,94,129,62"/>
 </map>

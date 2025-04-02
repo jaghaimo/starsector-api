@@ -21,6 +21,7 @@ var dir_34de85de80cdc252256f5aeed6fe2690 =
     [ "Planets.java", "Planets_8java.html", "Planets_8java" ],
     [ "Ranks.java", "Ranks_8java.html", "Ranks_8java" ],
     [ "ShipRoles.java", "ShipRoles_8java.html", "ShipRoles_8java" ],
+    [ "ShipSystems.java", "ShipSystems_8java.html", "ShipSystems_8java" ],
     [ "Skills.java", "Skills_8java.html", "Skills_8java" ],
     [ "Sounds.java", "Sounds_8java.html", "Sounds_8java" ],
     [ "StarTypes.java", "StarTypes_8java.html", "StarTypes_8java" ],

@@ -1,7 +1,23 @@
 <map id="com.fs.starfarer.api.impl.campaign.velfield.SlipstreamManager" name="com.fs.starfarer.api.impl.campaign.velfield.SlipstreamManager">
-<area shape="rect" id="Node000001" title=" " alt="" coords="354,39,617,79"/>
-<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="54,5,220,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="236,32,354,44,353,49,236,38"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="5,71,269,111"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="284,75,353,68,353,74,284,80"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="719,185,982,226"/>
+<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="332,5,498,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="514,37,604,58,651,73,696,91,735,112,771,136,828,183,825,187,768,141,732,117,694,96,649,78,603,63,513,42"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="346,70,484,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="500,96,548,106,622,121,696,142,803,182,801,187,694,147,621,127,546,111,499,101"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CollisionGridUtil.html" title=" " alt="" coords="338,120,492,161"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="509,152,719,183,718,189,508,157"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CollisionGridAPI.html" title=" " alt="" coords="5,92,186,133"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="201,119,338,131,338,136,201,124"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="44,157,147,182"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="163,161,337,145,338,150,163,166"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html" title=" " alt="" coords="338,185,492,226"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="508,203,719,203,719,208,508,208"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="381,250,450,276"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="465,254,718,220,719,226,466,259"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="343,300,488,325"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="502,298,595,282,694,259,798,224,800,229,696,265,596,287,503,303"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="284,349,547,390"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="562,346,629,329,694,306,731,288,766,266,823,224,826,228,769,271,733,292,696,311,630,334,563,351"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="28,357,163,382"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="179,367,284,367,284,372,179,372"/>
 </map>

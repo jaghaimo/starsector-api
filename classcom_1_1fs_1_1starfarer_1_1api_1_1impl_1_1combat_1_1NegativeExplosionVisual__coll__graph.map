@@ -1,9 +1,21 @@
 <map id="com.fs.starfarer.api.impl.combat.NegativeExplosionVisual" name="com.fs.starfarer.api.impl.combat.NegativeExplosionVisual">
-<area shape="rect" id="Node000001" title=" " alt="" coords="421,37,629,78"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="148,5,348,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="364,36,421,43,421,48,364,42"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="133,71,363,111"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="379,73,421,68,421,73,379,78"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="5,78,84,104"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="99,88,132,88,132,94,99,94"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="745,169,952,210"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseCombatLayeredRenderingPlugin.html" title=" " alt="" coords="369,71,605,111"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="592,113,722,147,785,166,783,171,720,152,590,118"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatLayeredRenderingPlugin.html" title=" " alt="" coords="5,5,212,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="227,43,369,68,368,73,227,49"/>
+<area shape="rect" id="Node000004" href="$enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineLayers.html" title=" " alt="" coords="18,71,199,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="214,88,368,88,368,94,214,94"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html" title=" " alt="" coords="18,136,199,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="213,136,368,109,369,114,214,141"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1FaderUtil.html" title=" " alt="" coords="410,136,564,177"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="580,162,745,177,744,183,579,167"/>
+<area shape="rect" id="Node000007" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1graphics_1_1SpriteAPI.html" title=" " alt="" coords="394,201,580,242"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="595,209,744,196,745,201,596,215"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="372,267,602,307"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="590,260,720,226,781,208,783,213,722,231,592,265"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="69,237,148,262"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="164,250,345,266,371,269,371,274,344,271,163,256"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="83,317,134,342"/>
+<area shape="poly" id="edge9_Node000008_Node000010" title=" " alt="" coords="150,332,240,337,292,336,344,331,391,320,435,305,436,310,393,325,345,336,292,342,239,343,150,337"/>
 </map>

@@ -11,6 +11,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamagingProjectileAPI =
     [ "getDamageType", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamagingProjectileAPI.html#a8fdabbf8c6c95399ec7dbe7e1939d78f", null ],
     [ "getElapsed", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamagingProjectileAPI.html#a345d8a865b01ebbb79d6ffc16111122b", null ],
     [ "getEmpAmount", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamagingProjectileAPI.html#a68a12ec3c6becdadab856e2b757d7115", null ],
+    [ "getExplosionSpecIfExplosion", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamagingProjectileAPI.html#a001d3a3723fb1effdd2adea9dc4dcdbc", null ],
     [ "getMoveSpeed", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamagingProjectileAPI.html#af1af3382d16ddd7bd8da259bce26986b", null ],
     [ "getProjectileSpec", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamagingProjectileAPI.html#ad13588a7ca86a0fcd3cd9ad706a4db7e", null ],
     [ "getProjectileSpecId", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DamagingProjectileAPI.html#ab1b911cee8265399ebd0bb0bd9b4ddfc", null ],

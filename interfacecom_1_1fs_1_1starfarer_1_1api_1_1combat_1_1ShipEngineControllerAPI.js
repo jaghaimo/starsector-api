@@ -22,6 +22,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI 
     [ "isDisabled", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI.html#aedffd3867170075c43a7aec38d9e1ead", null ],
     [ "isFlamedOut", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI.html#aae756eeee4ebcf1ddabf07e672044986", null ],
     [ "isFlamingOut", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI.html#acec89a9242d726f02317a0f8142ff88d", null ],
+    [ "isIdle", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI.html#a3d4f51241114e1a46fa16dfe708c2006", null ],
     [ "isStrafingLeft", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI.html#aa6e1a5d417717f1fe82ce9fdd5a0fac7", null ],
     [ "isStrafingRight", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI.html#ad49ed50b792133ead750cb54dfdb9719", null ],
     [ "isTurningLeft", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipEngineControllerAPI.html#a792da11c6b6aff1a6798351c8dddbff3", null ],

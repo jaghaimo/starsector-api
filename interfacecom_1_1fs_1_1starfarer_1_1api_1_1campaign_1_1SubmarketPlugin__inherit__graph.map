@@ -1,0 +1,15 @@
+<map id="com.fs.starfarer.api.campaign.SubmarketPlugin" name="com.fs.starfarer.api.campaign.SubmarketPlugin">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,136,199,177"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html" title=" " alt="" coords="247,136,538,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="214,154,246,154,246,159,214,159"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BlackMarketPlugin.html" title=" " alt="" coords="586,5,877,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="441,125,508,90,585,56,625,44,627,49,587,62,510,95,443,130"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1LocalResourcesSubmarketPlugin.html" title=" " alt="" coords="586,71,877,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="516,130,622,109,623,115,517,135"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html" title=" " alt="" coords="586,136,877,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="554,154,586,154,586,159,554,159"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1OpenMarketPlugin.html" title=" " alt="" coords="586,201,877,242"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="517,178,623,198,622,203,516,183"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1StoragePlugin.html" title=" " alt="" coords="586,267,877,307"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="443,182,510,218,587,251,627,263,625,269,585,256,508,223,441,187"/>
+</map>

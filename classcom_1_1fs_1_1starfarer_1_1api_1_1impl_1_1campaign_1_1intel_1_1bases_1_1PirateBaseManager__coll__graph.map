@@ -1,7 +1,14 @@
 <map id="com.fs.starfarer.api.impl.campaign.intel.bases.PirateBaseManager" name="com.fs.starfarer.api.impl.campaign.intel.bases.PirateBaseManager">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,183,291,223"/>
-<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseEventManager.html" title=" " alt="" coords="24,94,272,135"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="151,150,151,182,145,182,145,150"/>
-<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="65,5,231,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="151,62,151,94,145,94,145,62"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="593,192,879,233"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1BaseEventManager.html" title=" " alt="" coords="297,133,544,174"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="549,175,624,189,623,194,548,180"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="6,5,172,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="173,49,274,85,378,131,376,135,272,89,171,54"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,71,173,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="189,103,273,118,332,130,331,135,272,123,188,108"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html" title=" " alt="" coords="12,136,166,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="182,153,296,152,296,157,182,158"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="54,214,124,240"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="139,223,593,213,593,218,139,229"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="139,214,325,172,326,177,140,219"/>
 </map>

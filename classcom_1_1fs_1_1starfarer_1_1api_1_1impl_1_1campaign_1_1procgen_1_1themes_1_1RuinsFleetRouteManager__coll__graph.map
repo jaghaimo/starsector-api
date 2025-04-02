@@ -1,5 +1,15 @@
 <map id="com.fs.starfarer.api.impl.campaign.procgen.themes.RuinsFleetRouteManager" name="com.fs.starfarer.api.impl.campaign.procgen.themes.RuinsFleetRouteManager">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,79,321,120"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="81,5,245,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,46,166,79,160,79,160,46"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="700,137,1015,178"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseRouteFleetManager.html" title=" " alt="" coords="353,88,607,129"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="623,124,700,134,699,140,622,130"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScript.html" title=" " alt="" coords="49,5,216,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="231,46,392,85,390,90,230,51"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,71,260,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="276,95,352,99,352,105,275,101"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1IntervalUtil.html" title=" " alt="" coords="55,136,210,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="225,141,352,123,352,129,226,146"/>
+<area shape="rect" id="Node000006" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1StarSystemAPI.html" title=" " alt="" coords="383,169,576,210"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="592,178,699,168,700,174,592,183"/>
+<area shape="rect" id="Node000007" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html" title=" " alt="" coords="36,201,229,242"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="244,209,383,196,383,201,244,214"/>
 </map>

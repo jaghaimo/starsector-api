@@ -1,9 +1,19 @@
 <map id="com.fs.starfarer.api.impl.combat.ShockwaveVisual" name="com.fs.starfarer.api.impl.combat.ShockwaveVisual">
-<area shape="rect" id="Node000001" title=" " alt="" coords="432,37,640,78"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="154,5,354,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="370,36,432,43,432,49,369,41"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="133,71,374,111"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="390,72,432,67,432,73,390,78"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="5,78,84,104"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="99,88,133,88,133,94,99,94"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="593,176,800,217"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1BaseCombatLayeredRenderingPlugin.html" title=" " alt="" coords="296,123,532,163"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="541,164,593,174,592,179,540,169"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatLayeredRenderingPlugin.html" title=" " alt="" coords="5,5,212,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="192,49,213,57,367,120,365,125,211,61,190,54"/>
+<area shape="rect" id="Node000004" href="$enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineLayers.html" title=" " alt="" coords="18,71,199,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="214,106,296,120,295,125,214,111"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEntityAPI.html" title=" " alt="" coords="18,136,199,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="214,149,296,145,296,151,214,154"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="294,208,535,249"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="550,210,592,205,593,211,551,216"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="69,201,148,226"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="163,214,293,220,293,225,163,219"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="83,250,134,276"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="149,256,293,239,293,245,150,261"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="73,300,144,325"/>
+<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="158,299,211,286,345,247,347,252,212,291,159,304"/>
 </map>
