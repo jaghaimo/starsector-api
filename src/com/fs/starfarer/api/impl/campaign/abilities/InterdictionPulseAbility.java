@@ -406,7 +406,11 @@ public class InterdictionPulseAbility extends BaseDurationAbility {
 		Color fuel = Global.getSettings().getColor("progressBarFuelColor");
 		Color bad = Misc.getNegativeHighlightColor();
 		
-		LabelAPI title = tooltip.addTitle("Interdiction Pulse");
+		if (!Global.CODEX_TOOLTIP_MODE) {
+			LabelAPI title = tooltip.addTitle("Interdiction Pulse");
+		} else {
+			tooltip.addSpacer(-10f);
+		}
 
 		float pad = 10f;
 		
@@ -417,9 +421,11 @@ public class InterdictionPulseAbility extends BaseDurationAbility {
 				"can disrupt the drive fields of nearby fleets.", pad);
 		
 		Color c = Misc.getTooltipTitleAndLightHighlightColor();
-		tooltip.addPara("The disruption interrupts any movement-related abilities (such as %s) " +
+		Color hc = highlight;
+		if (Global.CODEX_TOOLTIP_MODE) hc = Misc.getBasePlayerColor();
+		tooltip.addPara("The disruption interrupts any movement-related abilities (such as %s or %s) " +
 				"and prevents their use for some time afterwards. Also interrupts charging interdiction pulses.", pad,
-				highlight, "Sustained Burn");
+				hc, "Sustained Burn", "Emergency Burn");
 
 		tooltip.addPara("The disruption lasts for %s seconds, modified by %s second for " +
 				"every %s points of difference in the fleets' sensor strengths.", pad, highlight,

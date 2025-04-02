@@ -6,6 +6,7 @@ import java.util.Random;
 import org.lwjgl.util.vector.Vector2f;
 
 import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.FactionAPI.ShipPickMode;
 import com.fs.starfarer.api.campaign.FactionDoctrineAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
@@ -43,6 +44,8 @@ public class FleetParamsV3 {
 	public float transportPts; 	
 	public float linerPts;
 	public float utilityPts;
+	
+	public FactionAPI factionOverride = null;
 	
 	
 	/**

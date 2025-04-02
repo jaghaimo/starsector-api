@@ -20,6 +20,7 @@ import com.fs.starfarer.api.campaign.LocationAPI;
 import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.PlayerMarketTransaction;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
+import com.fs.starfarer.api.campaign.SectorEntityToken.VisibilityLevel;
 import com.fs.starfarer.api.campaign.econ.Industry;
 import com.fs.starfarer.api.campaign.econ.Industry.IndustryTooltipMode;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
@@ -32,11 +33,13 @@ import com.fs.starfarer.api.combat.CollisionGridAPI;
 import com.fs.starfarer.api.combat.MutableStat;
 import com.fs.starfarer.api.combat.ViewportAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
+import com.fs.starfarer.api.impl.campaign.BattleAutoresolverPluginImpl.FleetAutoresolveData;
 import com.fs.starfarer.api.impl.campaign.enc.EncounterPoint;
 import com.fs.starfarer.api.impl.campaign.enc.EncounterPointProvider;
 import com.fs.starfarer.api.impl.campaign.graid.GroundRaidObjectivePlugin;
 import com.fs.starfarer.api.impl.campaign.intel.FactionCommissionIntel;
 import com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCellsIntel;
+import com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.MarketCMD.RaidType;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.MarketCMD.TempData;
 import com.fs.starfarer.api.impl.campaign.velfield.SlipstreamManager;
@@ -432,6 +435,44 @@ public class ListenerUtil {
 	public static void reportColonySizeChanged(MarketAPI market, int prevSize) {
 		for (ColonySizeChangeListener x : Global.getSector().getListenerManager().getListeners(ColonySizeChangeListener.class)) {
 			x.reportColonySizeChanged(market, prevSize);
+		}
+	}
+	
+	public static void reportDetectedEntity(SectorEntityToken entity, VisibilityLevel level) {
+		for (DetectedEntityListener x : Global.getSector().getListenerManager().getListeners(DetectedEntityListener.class)) {
+			x.reportDetectedEntity(entity, level);
+		}
+	}
+	
+	
+	public static void finishedAddingCrisisFactors(HostileActivityEventIntel intel) {
+		for (ColonyCrisesSetupListener x : Global.getSector().getListenerManager().getListeners(ColonyCrisesSetupListener.class)) {
+			x.finishedAddingCrisisFactors(intel);
+		}
+	}
+	
+
+	public static void reportAboutToOpenCodex() {
+		for (CodexEventListener x : Global.getSector().getListenerManager().getListeners(CodexEventListener.class)) {
+			x.reportAboutToOpenCodex();
+		}
+	}
+	public static void reportClosedCodex() {
+		for (CodexEventListener x : Global.getSector().getListenerManager().getListeners(CodexEventListener.class)) {
+			x.reportClosedCodex();
+		}
+	}
+	
+	public static void reportFleetMemberVariantSaved(FleetMemberAPI member, MarketAPI dockedAt) {
+		for (RefitScreenListener x : Global.getSector().getListenerManager().getListeners(RefitScreenListener.class)) {
+			x.reportFleetMemberVariantSaved(member, dockedAt);
+		}
+	}
+	
+	
+	public static void modifyDataForFleet(FleetAutoresolveData data) {
+		for (CoreAutoresolveListener x : Global.getSector().getListenerManager().getListeners(CoreAutoresolveListener.class)) {
+			x.modifyDataForFleet(data);
 		}
 	}
 	

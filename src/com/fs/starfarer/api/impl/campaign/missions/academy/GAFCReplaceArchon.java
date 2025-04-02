@@ -27,17 +27,19 @@ public class GAFCReplaceArchon implements Script {
 		laicaille.getCommDirectory().addPerson(laicailleArchon, 1000); // back of the comm directory for you, buddy
 	
 	
-		PersonAPI newArchon = Global.getSector().getFaction(Factions.PERSEAN).createRandomPerson();
-		newArchon.setRankId(Ranks.GROUND_COLONEL);
-		newArchon.setPostId(Ranks.POST_BASE_COMMANDER);
+		PersonAPI newArchon = Global.getSector().getImportantPeople().getPerson(People.DAMOS_HANNAN);
+		//PersonAPI newArchon = Global.getSector().getFaction(Factions.PERSEAN).createRandomPerson();
+		//newArchon.setRankId(Ranks.GROUND_COLONEL);
+		//newArchon.setPostId(Ranks.POST_BASE_COMMANDER);
 		
 		// gens Hannan; Kazeronian imperialists, basically.
-		newArchon.getName().setLast("Hannan"); 
-		newArchon.setImportance(PersonImportance.HIGH);
+		//newArchon.getName().setLast("Hannan"); 
+		//newArchon.setImportance(PersonImportance.HIGH);
 		newArchon.addTag(Tags.REPLACEMENT_ARCHON);
+		laicaille.getCommDirectory().getEntryForPerson(newArchon).setHidden(false);
 		
 		// an aristocratic git
-		newArchon.setVoice(Voices.ARISTO); 
+		//newArchon.setVoice(Voices.ARISTO); 
 		
 		laicaille.getCommDirectory().addPerson(newArchon, 0);
 		laicaille.addPerson(newArchon);

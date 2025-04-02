@@ -1,10 +1,11 @@
 package com.fs.starfarer.api.impl.combat;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.EnumSet;
 import java.util.Iterator;
 import java.util.List;
+
+import java.awt.Color;
 
 import org.lwjgl.util.vector.Vector2f;
 
@@ -37,6 +38,39 @@ public class CryofluxTransducerEffect extends BaseCombatLayeredRenderingPlugin i
 																					EveryFrameWeaponEffectPlugin {
 
 	public CryofluxTransducerEffect() {
+	}
+	
+	protected String getLoopId() {
+		return "cryoflamer_loop";
+	}
+	
+	protected void playImpactSound(ApplyDamageResultAPI damageResult, Vector2f point, Vector2f vel) {
+		Misc.playSound(damageResult, point, vel,
+				"cryoflamer_hit_shield_light",
+				"cryoflamer_hit_shield_solid",
+				"cryoflamer_hit_shield_heavy",
+				"cryoflamer_hit_light",
+				"cryoflamer_hit_solid",
+				"cryoflamer_hit_heavy");
+	}
+	
+	protected String getParticleSpriteCat() {
+		return "misc";
+	}
+	protected String getParticleSpriteKey() {
+		return "nebula_particles";
+	}
+	protected float getParticleScale() {
+		return 1f;
+	}
+	protected float getParticleScaleIncreaseRateMult() {
+		return 1f;
+	}
+	protected int getNumParticles() {
+		return 7;
+	}
+	protected float getThresholdDist() {
+		return 20f;
 	}
 	
 	protected List<CryofluxTransducerEffect> trails;
@@ -75,7 +109,7 @@ public class CryofluxTransducerEffect extends BaseCombatLayeredRenderingPlugin i
 					mult = (float) Math.sqrt(mult);
 					volume *= mult;
 				}
-				Global.getSoundPlayer().playLoop("cryoflamer_loop", ship, 1f, volume, com, ship.getVelocity());
+				Global.getSoundPlayer().playLoop(getLoopId(), ship, 1f, volume, com, ship.getVelocity());
 			}
 		}
 		
@@ -83,6 +117,8 @@ public class CryofluxTransducerEffect extends BaseCombatLayeredRenderingPlugin i
 		//System.out.println("Trails: " + trails.size());
 		float numIter = 1f; // more doesn't actually change anything
 		amount /= numIter;
+		float thresholdDist = getThresholdDist();
+		//thresholdDist = 50f;
 		// drag along the previous projectile, starting with the most recently launched; new ones are added at the start
 		// note: prev is fired before and so is in front of proj
 		for (int i = 0; i < numIter; i++) { 
@@ -98,8 +134,8 @@ public class CryofluxTransducerEffect extends BaseCombatLayeredRenderingPlugin i
 						if (e > t) {
 							maxSpeed *= Math.max(0.25f, 1f - (e - t) * 0.5f);
 						}
-						if (dist1 < 20f && e > t) {
-							maxSpeed *= dist1 / 20f;
+						if (dist1 < thresholdDist && e > t) {
+							maxSpeed *= dist1 / thresholdDist;
 						}
 						
 						Vector2f driftTo = Misc.closestPointOnLineToPoint(trail.proj.getLocation(), trail.proj.getTailEnd(), trail.prev.getLocation());
@@ -142,21 +178,14 @@ public class CryofluxTransducerEffect extends BaseCombatLayeredRenderingPlugin i
 //		engine.addNegativeParticle(point, vel, size,
 //								   rampUp, dur, inverted);
 		
-		Misc.playSound(damageResult, point, vel,
-				"cryoflamer_hit_shield_light",
-				"cryoflamer_hit_shield_solid",
-				"cryoflamer_hit_shield_heavy",
-				"cryoflamer_hit_light",
-				"cryoflamer_hit_solid",
-				"cryoflamer_hit_heavy");
-		
+		playImpactSound(damageResult, point, vel);
 	}
 	
 	public void onFire(DamagingProjectileAPI projectile, WeaponAPI weapon, CombatEngineAPI engine) {
 		String prevKey = "cryo_prev_" + weapon.getShip().getId() + "_" + weapon.getSlot().getId();
 		DamagingProjectileAPI prev = (DamagingProjectileAPI) engine.getCustomData().get(prevKey);
 		
-		CryofluxTransducerEffect trail = new CryofluxTransducerEffect(projectile, prev);
+		CryofluxTransducerEffect trail = createTrail(projectile, prev);
 		CombatEntityAPI e = engine.addLayeredRenderingPlugin(trail);
 		e.getLocation().set(projectile.getLocation());
 		
@@ -168,6 +197,9 @@ public class CryofluxTransducerEffect extends BaseCombatLayeredRenderingPlugin i
 		trails.add(0, trail);
 	}
 	
+	protected CryofluxTransducerEffect createTrail(DamagingProjectileAPI projectile, DamagingProjectileAPI prev) {
+		return new CryofluxTransducerEffect(projectile, prev);
+	}
 	
 	
 	public static class ParticleData {
@@ -181,9 +213,9 @@ public class CryofluxTransducerEffect extends BaseCombatLayeredRenderingPlugin i
 		public float angle = 1f;
 		public FaderUtil fader;
 		
-		public ParticleData(DamagingProjectileAPI proj) {
+		public ParticleData(DamagingProjectileAPI proj, CryofluxTransducerEffect effect) {
 			this.proj = proj;
-			sprite = Global.getSettings().getSprite("misc", "nebula_particles");
+			sprite = Global.getSettings().getSprite(effect.getParticleSpriteCat(), effect.getParticleSpriteKey());
 			//sprite = Global.getSettings().getSprite("misc", "dust_particles");
 			float i = Misc.random.nextInt(4);
 			float j = Misc.random.nextInt(4);
@@ -197,7 +229,9 @@ public class CryofluxTransducerEffect extends BaseCombatLayeredRenderingPlugin i
 			
 			float maxDur = proj.getWeapon().getRange() / proj.getWeapon().getProjectileSpeed();
 			scaleIncreaseRate = 2f / maxDur;
-			scale = 1f;
+			scaleIncreaseRate *= effect.getParticleScaleIncreaseRateMult();
+			scale = effect.getParticleScale();
+			//scale = 2f;
 //			scale = 0.1f;
 //			scaleIncreaseRate = 2.9f / maxDur;
 //			scale = 0.1f;
@@ -243,9 +277,9 @@ public class CryofluxTransducerEffect extends BaseCombatLayeredRenderingPlugin i
 		
 		baseFacing = proj.getFacing();
 		
-		int num = 7;
+		int num = getNumParticles();
 		for (int i = 0; i < num; i++) {
-			particles.add(new ParticleData(proj));
+			particles.add(new ParticleData(proj, this));
 		}
 		
 		float length = proj.getProjectileSpec().getLength();
@@ -295,14 +329,19 @@ public class CryofluxTransducerEffect extends BaseCombatLayeredRenderingPlugin i
 	public boolean isExpired() {
 		return proj.isExpired() || !Global.getCombatEngine().isEntityInPlay(proj);
 	}
+	
+	public Color getParticleColor() {
+		Color color = proj.getProjectileSpec().getFringeColor();
+		color = Misc.setAlpha(color, 50);
+		return color;
+	}
 
 	public void render(CombatEngineLayers layer, ViewportAPI viewport) {
 		float x = entity.getLocation().x;
 		float y = entity.getLocation().y;
 	
 		//Color color = new Color(100,150,255,50);
-		Color color = proj.getProjectileSpec().getFringeColor();
-		color = Misc.setAlpha(color, 50);
+		Color color = getParticleColor();
 		float b = proj.getBrightness();
 		b *= viewport.getAlphaMult();
 		

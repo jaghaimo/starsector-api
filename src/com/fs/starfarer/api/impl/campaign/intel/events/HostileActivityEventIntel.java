@@ -1,6 +1,5 @@
 package com.fs.starfarer.api.impl.campaign.intel.events;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -10,24 +9,32 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import java.awt.Color;
+
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.BattleAPI;
 import com.fs.starfarer.api.campaign.CampaignEventListener.FleetDespawnReason;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
+import com.fs.starfarer.api.campaign.StoryPointActionDelegate;
 import com.fs.starfarer.api.campaign.econ.EconomyAPI.EconomyUpdateListener;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.listeners.FleetEventListener;
+import com.fs.starfarer.api.campaign.listeners.ListenerUtil;
 import com.fs.starfarer.api.combat.MutableStatWithTempMods;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.command.WarSimScript.LocationDanger;
 import com.fs.starfarer.api.impl.campaign.ids.Conditions;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
+import com.fs.starfarer.api.impl.campaign.ids.Sounds;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathBaseIntel;
 import com.fs.starfarer.api.impl.campaign.intel.bases.PirateBaseIntel;
 import com.fs.starfarer.api.impl.campaign.rulecmd.HA_CMD;
+import com.fs.starfarer.api.impl.campaign.rulecmd.SetStoryOption.BaseOptionStoryPointActionDelegate;
+import com.fs.starfarer.api.impl.campaign.rulecmd.SetStoryOption.StoryOptionParams;
 import com.fs.starfarer.api.ui.Alignment;
+import com.fs.starfarer.api.ui.ButtonAPI;
 import com.fs.starfarer.api.ui.IntelUIAPI;
 import com.fs.starfarer.api.ui.LabelAPI;
 import com.fs.starfarer.api.ui.SectorMapAPI;
@@ -53,9 +60,12 @@ public class HostileActivityEventIntel extends BaseEventIntel implements Economy
 	}
 	public static String KEY = "$hae_ref";
 	
+	public static String BUTTON_ESCALATE = "button_escalate";
+	
 	public static float FP_PER_POINT = Global.getSettings().getFloat("HA_fleetPointsPerPoint");
 	
 	public static int MAX_PROGRESS = 600;
+	public static int ESCALATE_PROGRESS = 550;
 	
 	public static int RESET_MIN = 0;
 	public static int RESET_MAX = 400;
@@ -159,7 +169,10 @@ public class HostileActivityEventIntel extends BaseEventIntel implements Economy
 		addActivity(new SindrianDiktatHostileActivityFactor(this), new SindrianDiktatStandardActivityCause(this));
 		addActivity(new HegemonyHostileActivityFactor(this), new HegemonyAICoresActivityCause(this));
 		addActivity(new RemnantHostileActivityFactor(this), new RemnantNexusActivityCause(this));
+		
+		ListenerUtil.finishedAddingCrisisFactors(this);
 	}
+	
 	
 	protected Object readResolve() {
 		if (systemSpawnMults == null) {
@@ -191,7 +204,7 @@ public class HostileActivityEventIntel extends BaseEventIntel implements Economy
 	
 	protected void addBulletPoints(TooltipMakerAPI info, ListInfoMode mode, boolean isUpdate, 
 			   						Color tc, float initPad) {
-		
+
 		if (addEventFactorBulletPoints(info, mode, isUpdate, tc, initPad)) {
 			return;
 		}
@@ -366,10 +379,45 @@ public class HostileActivityEventIntel extends BaseEventIntel implements Economy
 			}
 			info.addTable("None", -1, opad);
 			info.addSpacer(3f);
-
 		}
 	}
 	
+	
+	
+	@Override
+	public void afterStageDescriptions(TooltipMakerAPI main) {
+		int progress = getProgress();
+		if (progress < ESCALATE_PROGRESS) {
+			float width = getBarWidth();
+			Color color = Misc.getStoryOptionColor();
+			Color dark = Misc.getStoryDarkColor();
+			float bw = 300f;
+			ButtonAPI button = addGenericButton(main, bw, color, dark, "Escalate crisis", BUTTON_ESCALATE);
+			float inset = width - bw;
+			//inset = 0f;
+			button.getPosition().setXAlignOffset(inset);
+			main.addSpacer(0f).getPosition().setXAlignOffset(-inset);
+			if (progress >= ESCALATE_PROGRESS) {
+				button.setEnabled(false);
+				main.addTooltipTo(new TooltipCreator() {
+					@Override
+					public boolean isTooltipExpandable(Object tooltipParam) {
+						return false;
+					}
+					@Override
+					public float getTooltipWidth(Object tooltipParam) {
+						return 450;
+					}
+					@Override
+					public void createTooltip(TooltipMakerAPI tooltip, boolean expanded, Object tooltipParam) {
+						tooltip.addPara("Only available when event progress is below %s points.", 0f,
+								Misc.getHighlightColor(), "" + (int) ESCALATE_PROGRESS);
+					}
+				}, button, TooltipLocation.BELOW);
+			}
+		}
+	}
+
 	public void tableRowClicked(IntelUIAPI ui, TableRowClickData data) {
 		if (data.rowId instanceof HAEStarSystemDangerData) {
 			HAEStarSystemDangerData d = (HAEStarSystemDangerData) data.rowId;
@@ -766,7 +814,7 @@ public class HostileActivityEventIntel extends BaseEventIntel implements Economy
 				battle.getPlayerSide().contains(primaryWinner)) {
 			StarSystemAPI system = (StarSystemAPI) Global.getSector().getCurrentLocation(); 
 			for (CampaignFleetAPI otherFleet : battle.getNonPlayerSideSnapshot()) {
-				if (otherFleet.isStationMode()) {
+				if (otherFleet.isStationMode() && otherFleet.getFleetData().getMembersListCopy().isEmpty()) {
 					{
 						PirateBaseIntel intel = PirateBaseIntel.getIntelFor(system);
 						if (intel != null && Misc.getStationFleet(intel.getMarket()) == otherFleet && 
@@ -874,7 +922,7 @@ public class HostileActivityEventIntel extends BaseEventIntel implements Economy
 		resetAdd = Math.min(resetAdd, random.nextInt(RESET_MAX - min + 1));
 		int resetProgress = min + resetAdd;
 		
-		int add = Math.min(blowback, RESET_MAX - resetProgress);
+		int add = Math.min(blowback, (int)((RESET_MAX - resetProgress) * 0.5f));
 		if (add > 0) {
 			resetProgress += add;
 			blowback -= add;
@@ -1030,6 +1078,40 @@ public class HostileActivityEventIntel extends BaseEventIntel implements Economy
 		return Global.getSettings().getInt("ha_maxMonthlyProgress");
 	}
 	
+	public void storyActionConfirmed(Object buttonId, IntelUIAPI ui) {
+		if (buttonId == BUTTON_ESCALATE) {
+			ui.recreateIntelUI();
+		}
+	}
+	
+	public StoryPointActionDelegate getButtonStoryPointActionDelegate(Object buttonId) {
+		if (buttonId == BUTTON_ESCALATE) {
+			StoryOptionParams params = new StoryOptionParams(null, 1, "escalateCrisis", 
+											Sounds.STORY_POINT_SPEND_INDUSTRY, 
+											"Escalated colony crisis");
+			return new BaseOptionStoryPointActionDelegate(null, params) {
+				@Override
+				public void confirm() {
+					setProgress(ESCALATE_PROGRESS);
+				}
+				
+				@Override
+				public String getTitle() {
+					return null;
+				}
+
+				@Override
+				public void createDescription(TooltipMakerAPI info) {
+					info.setParaInsigniaLarge();
+					info.addPara("Take certain actions to precipitate a crisis more quickly. Sets event progress "
+							+ "to %s points.", -10f, Misc.getHighlightColor(), "" + (int) ESCALATE_PROGRESS);
+					info.addSpacer(20f);
+					super.createDescription(info);
+				}
+			};
+		}
+		return null;
+	}
 	
 }
 

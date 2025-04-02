@@ -1,5 +1,11 @@
 package com.fs.starfarer.api.impl.campaign.enc;
 
+/**
+ * Implementations should generally avoid using member variables since instances will be shared across
+ * saves.
+ * @author Alex
+ *
+ */
 public interface EPEncounterCreator {
 
 	String getId();

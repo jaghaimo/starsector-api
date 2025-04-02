@@ -13,8 +13,8 @@ import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.OptionPanelAPI;
 import com.fs.starfarer.api.campaign.RepLevel;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
-import com.fs.starfarer.api.campaign.TextPanelAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken.VisibilityLevel;
+import com.fs.starfarer.api.campaign.TextPanelAPI;
 import com.fs.starfarer.api.campaign.econ.CommoditySpecAPI;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.characters.AbilityPlugin;
@@ -185,11 +185,15 @@ public class DistressResponse extends BaseCommandPlugin {
 	}
 	
 	protected int getNeededFuel() {
+		return getNeededFuel(playerFleet);
+	}
+	
+	public static int getNeededFuel(CampaignFleetAPI playerFleet) {
 		float returnDistLY = Misc.getDistanceLY(new Vector2f(), playerFleet.getLocationInHyperspace());
 		int fuel = (int) (returnDistLY * Math.max(1, playerFleet.getLogistics().getFuelCostPerLightYear()));
 		fuel *= 0.75f;
 		if (fuel < 10) fuel = 10;
-		fuel -= playerCargo.getFuel();
+		fuel -= playerFleet.getCargo().getFuel();
 		if (fuel < 0) fuel = 0;
 		
 		return fuel;

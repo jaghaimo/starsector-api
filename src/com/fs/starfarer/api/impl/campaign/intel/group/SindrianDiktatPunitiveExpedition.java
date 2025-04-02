@@ -2,6 +2,7 @@ package com.fs.starfarer.api.impl.campaign.intel.group;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
+import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.FleetTypes;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.missions.FleetCreatorMission;
@@ -29,6 +30,11 @@ public class SindrianDiktatPunitiveExpedition extends GenericRaidFGI  {
 		Global.getSector().getMemoryWithoutUpdate().set(KEY, this);
 	}
 	
+	@Override
+	protected String getFleetCreationFactionOverride(int size) {
+		return Factions.LIONS_GUARD;
+	}
+
 	@Override
 	protected void notifyEnding() {
 		super.notifyEnding();

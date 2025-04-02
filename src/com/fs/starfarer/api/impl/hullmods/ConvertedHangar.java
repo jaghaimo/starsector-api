@@ -1,10 +1,11 @@
 package com.fs.starfarer.api.impl.hullmods;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
+
+import java.awt.Color;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BaseHullMod;
@@ -66,7 +67,20 @@ public class ConvertedHangar extends BaseHullMod {
 	
 	public static List<String> getFighterWings(MutableShipStatsAPI stats) {
 		if (stats.getVariant() != null) {
-			return stats.getVariant().getFittedWings();
+			int baseBays = (int) Math.round(stats.getNumFighterBays().getBaseValue());
+			if (baseBays <= 0) {
+				return stats.getVariant().getFittedWings();
+			} else {
+				List<String> result = new ArrayList<>();
+				for (String wingId : stats.getVariant().getFittedWings()) {
+					if (baseBays > 0) {
+						baseBays--;
+						continue;
+					}
+					result.add(wingId);
+				}
+				return result;
+			}
 		}
 		return new ArrayList<String>();
 //		if (stats.getEntity() instanceof ShipAPI) {
@@ -146,6 +160,9 @@ public class ConvertedHangar extends BaseHullMod {
 	}
 	
 	public boolean isApplicableToShip(ShipAPI ship) {
+		if (ship != null && ship.getMutableStats().getDynamic().getValue(Stats.FORCE_ALLOW_CONVERTED_HANGAR, 0f) > 0f) {
+			return true;
+		}
 		//if (ship.getMutableStats().getCargoMod().computeEffective(ship.getHullSpec().getCargo()) < CARGO_REQ) return false;
 		if (ship != null && ship.getHullSpec().getCRToDeploy() > CR_THRESHOLD_UNINSTALLABLE) {
 			return false;

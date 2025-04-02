@@ -12,6 +12,7 @@ import com.fs.starfarer.api.campaign.CombatDamageData;
 import com.fs.starfarer.api.campaign.EngagementResultForFleetAPI;
 import com.fs.starfarer.api.campaign.FleetEncounterContextPlugin;
 import com.fs.starfarer.api.campaign.ai.CampaignFleetAIAPI.EncounterOption;
+import com.fs.starfarer.api.campaign.listeners.ListenerUtil;
 import com.fs.starfarer.api.combat.DeployedFleetMemberAPI;
 import com.fs.starfarer.api.combat.EngagementResultAPI;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
@@ -457,6 +458,28 @@ public class BattleAutoresolverPluginImpl implements BattleAutoresolverPlugin {
 
 		float num = member.getStatus().getNumStatuses();
 		boolean someActiveRemaining = false;
+		
+		if (num - 1f > member.getVariant().getModuleSlots().size() && num > 1f) {
+            String fleetName = "Unknown";
+            String fleetLoc = "unknown";
+            if (member.getFleetData() != null && member.getFleetData().getFleet() != null) {
+                fleetName = member.getFleetData().getFleet().getNameWithFaction();
+                if (member.getFleetData().getFleet().getContainingLocation() != null) {
+                	fleetLoc = member.getFleetData().getFleet().getContainingLocation().getName();
+                }
+            }
+            String info = String.format("Fleet member [%s] from fleet [%s] with hull id [%s] and variant id [%s]"
+                            + " in location [%s] has [%s] module statuses but only [%s] modules",
+                    member.getShipName(),
+                    fleetName,
+                    member.getHullSpec().getHullId(),
+                    member.getVariant(),
+                    fleetLoc,
+                    "" + (int)Math.round(num - 1f),
+                    "" + member.getVariant().getModuleSlots().size());
+            throw new RuntimeException(info);
+        }
+		
 		for (int i = 0; i < num; i++) {
 			ShipVariantAPI variant = member.getVariant();
 			if (i > 0) {
@@ -710,6 +733,8 @@ public class BattleAutoresolverPluginImpl implements BattleAutoresolverPlugin {
 			}
 		}
 
+		ListenerUtil.modifyDataForFleet(fleetData);
+		
 		return fleetData;
 	}
 

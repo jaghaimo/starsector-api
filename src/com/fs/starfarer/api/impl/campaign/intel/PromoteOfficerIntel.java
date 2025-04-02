@@ -1,7 +1,8 @@
 package com.fs.starfarer.api.impl.campaign.intel;
 
-import java.awt.Color;
 import java.util.Set;
+
+import java.awt.Color;
 
 import org.lwjgl.input.Keyboard;
 
@@ -132,18 +133,22 @@ public class PromoteOfficerIntel extends BaseIntelPlugin {
 		addBulletPoints(info, ListInfoMode.IN_DESC);
 		info.addPara(person.getPersonalityAPI().getDescription(), opad);
 		
-		float days = DURATION - getDaysSincePlayerVisible();
-		info.addPara("This opportunity will be available for %s more " + getDaysString(days) + ".", 
-				opad, tc, h, getDays(days));
 		
 		int max = Misc.getMaxOfficers(Global.getSector().getPlayerFleet());
 		int curr = Misc.getNumNonMercOfficers(Global.getSector().getPlayerFleet());
 		
+		float days = DURATION - getDaysSincePlayerVisible();
+		info.addPara("This opportunity will be available for %s more " + getDaysString(days) + ".", 
+				opad, tc, h, getDays(days));
+		addLogTimestamp(info, tc, opad);
+		
+		
 		Color hNum = h;
-		if (curr > max) hNum = Misc.getNegativeHighlightColor();
+		if (curr >= max) hNum = Misc.getNegativeHighlightColor();
 		LabelAPI label = info.addPara("Officers already under your command: %s %s %s", opad, tc, h, 
 				"" + curr, "/", "" + max);
 		label.setHighlightColors(hNum, h, h);
+		
 		
 		
 		Color color = Misc.getStoryOptionColor();
@@ -247,6 +252,11 @@ public class PromoteOfficerIntel extends BaseIntelPlugin {
 		Set<String> tags = super.getIntelTags(map);
 		tags.add(Tags.INTEL_FLEET_LOG);
 		return tags;
+	}
+	
+	@Override
+	public String getSortString() {
+		return getSortStringNewestFirst();
 	}
 
 	@Override

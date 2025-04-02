@@ -1,5 +1,9 @@
 package com.fs.starfarer.api.impl.campaign.ids;
 
+/**
+ * @author Alex
+ *
+ */
 public class Tags {
 	
 	/**
@@ -11,6 +15,42 @@ public class Tags {
 	//public static final String NO_RESTORATION = "no_restoration";
 	
 	public static final String TAG_NO_AUTOFIT_UNLESS_PLAYER = "no_autofit_unless_player";
+	
+	public static final String NO_SIM = "no_sim";
+	
+	public static final String INDUSTRY_DO_NOT_SHOW_IN_BUILD_DIALOG = "do_not_show_in_build_dialog";
+	
+	
+	/**
+	 * Put on a hullmod that it's apply() methods don't get called when the player is using autofit from the
+	 * refit screen.
+	 */
+	public static final String DO_NOT_APPLY_HULLMOD_DURING_AUTOFIT = "do_not_apply_hullmod_during_autofit"; 
+	
+	
+	
+	/**
+	 * For weapon tooltip. 
+	 */
+	public static final String NO_STANDARD_DATA = "no_standard_data";
+	
+	
+	/**
+	 * On hull specs and variants. Not required - just an extra way to signal the ship is automated.
+	 */
+	public static final String AUTOMATED = "automated";
+	
+	/**
+	 * Does not generate supplies/machinery/fuel/weapons/hullmods/etc - anything at all - when destroyed in battle.
+	 */
+	public static final String NO_BATTLE_SALVAGE= "no_battle_salvage";
+	
+	/**
+	 * On ship hulls.
+	 */
+	public static final String MONSTER = "monster";
+	
+	public static final String CENTER_DIAMOND_ON_HULL_CENTER = "center_diamond_on_hull_center";
 	
 	/**
 	 * In ship_systems.csv, NOT on ships
@@ -32,6 +72,12 @@ public class Tags {
 	public static final String VARIANT_DO_NOT_DROP_AI_CORE_FROM_CAPTAIN = "no_ai_core_drop";
 	public static final String VARIANT_ALWAYS_RECOVERABLE = "always_recoverable";
 	public static final String VARIANT_UNBOARDABLE = "unboardable";
+	
+	
+	/**
+	 * Will not be used to initialize a modular ship's/station's default _Hull variant with a set of empty modules. 
+	 */
+	public static final String SKIP_FOR_DEFAULT_HULL_MODULES = "skip_for_default_hull_modules";
 	
 	
 	public static final String HULL_UNRESTORABLE = "unrestorable";
@@ -73,6 +119,7 @@ public class Tags {
 	public static final String ONLY_ALLOW_AUTOMATED_FIGHTERS = "only_allow_automated_fighters";
 	
 	
+	
 	public static final String NO_ENTITY_TOOLTIP = "no_entity_tooltip";  
 	
 	public static final String NO_TOPOGRAPHY_SCANS = "no_topography_scans";
@@ -80,6 +127,8 @@ public class Tags {
 	public static final String PK_SYSTEM = "pk_system";
 	public static final String SYSTEM_CUT_OFF_FROM_HYPER = "system_cut_off_from_hyper";
 	public static final String SYSTEM_ABYSSAL = "system_abyssal";
+	
+	public static final String SYSTEM_CAN_SPAWN_THREAT = "system_can_spawn_threat";
 	
 	public static final String THEME_HIDDEN = "theme_hidden";
 	
@@ -146,6 +195,7 @@ public class Tags {
 	
 	public static final String SHIP_RECOVERABLE = "ship_recoverable";
 	public static final String SHIP_LIMITED_TOOLTIP = "ship_limited_tooltip";
+	public static final String LIMITED_TOOLTIP_IF_LOCKED = "limited_tooltip_if_locked";
 	//public static final String SHIP_DESC_ID = "ship_desc_id";
 	
 	public static final String DO_NOT_RESPAWN_PLAYER_IN = "do_not_respawn_player_in";
@@ -195,10 +245,59 @@ public class Tags {
 	public static final String WING_RAPID_REFORM = "rapid_reform";
 	public static final String WING_LEADER_NO_SWARM = "leader_no_swarm";
 	public static final String WING_WINGMEN_NO_SWARM = "wingmen_no_swarm";
+	//public static final String WING_WINGMEN_ALWAYS_SWARM = "wingmen_always_swarm";
 	public static final String WING_MATCH_LEADER_FACING = "match_leader_facing";
 	public static final String WING_ATTACK_AT_AN_ANGLE = "attack_at_an_angle";
+	public static final String WING_KEEP_AT_RANGE = "keep_at_range";
 	public static final String WING_INDEPENDENT_OF_CARRIER = "independent_of_carrier";
 	public static final String WING_TARGET_ESCORT_TARGET = "target_escort_target";
+	
+	
+	/**
+	 * On fighter hull.
+	 */
+	public static final String THREAT_SWARM_AI = "threat_swarm_ai";
+	public static final String SWARM_FIGHTER = "swarm_fighter";
+	
+	
+	public static final String THREAT = "threat";
+	public static final String THREAT_TIMID = "threat_timid";
+	public static final String THREAT_CAUTIOUS = "threat_cautious";
+	public static final String THREAT_AGGRESSIVE = "threat_aggressive";
+	public static final String THREAT_RECKLESS = "threat_reckless";
+	
+	public static final String THREAT_HIVE = "threat_hive";
+	public static final String THREAT_OVERSEER = "threat_overseer";
+	public static final String THREAT_FABRICATOR = "threat_fabricator";
+	public static final String THREAT_COMBAT = "threat_combat";
+	public static final String THREAT_SKIRMISH = "threat_skirmish";
+	
+	public static final String FRAGMENT = "fragment";
+	public static final String FRAGMENT_GLOW = "fragment_glow";
+	
+	public static final String DWELLER = "dweller";
+	public static final String DWELLER_TIMID = "dweller_timid";
+	public static final String DWELLER_CAUTIOUS = "dweller_cautious";
+	public static final String DWELLER_AGGRESSIVE = "dweller_aggressive";
+	public static final String DWELLER_RECKLESS = "dweller_reckless";
+	public static final String DWELLER_VORTEX = "dweller_vortex";
+	public static final String DWELLER_EJECTA = "dweller_ejecta";
+	
+	/**
+	 * On human-ship shrouded hullmods.
+	 */
+	public static final String SHROUDED = "shrouded";
+	
+	
+	public static final String NO_ARMOR_SCHEMATIC = "no_armor_schematic";
+	
+	//public static final String FRAGMENT_SWARM_START_WITH_ZERO_FRAGMENTS = "fragment_swarm_start_with_zero_fragments";
+	
+	/**
+	 * Unused/unimplemented.
+	 */
+	public static final String OVERSEER_CHARGE = "overseer_charge";
+	public static final String OVERSEER_CHARGE_FIGHTER = "overseer_charge_fighter";
 	
 	/**
 	 * Can apply to wing or to fighter's hull variant. 
@@ -211,6 +310,13 @@ public class Tags {
 	public static final String NO_SELL = "no_sell"; // not for sale at markets
 	
 	public static final String MISSION_ITEM = "mission_item";
+	
+	/**
+	 * Included in the planet search filter, if known about
+	 */
+	public static final String PLANET_SEARCH = "planet_search";
+	public static final String SHOW_IN_PLANET_LIST = "show_in_planet_list";
+	public static final String COLONY_ITEM = "colony_item";
 	
 	
 	/**
@@ -268,6 +374,7 @@ public class Tags {
 	
 	
 	public static final String PROTECTS_FROM_CORONA_IN_BATTLE  = "protects_from_corona_in_battle";
+	public static final String FLEET_IGNORES_CORONA = "fleet_ignores_corona";
 	
 	public static final String SALVAGE_MUSIC= "salvage_music";
 	
@@ -314,7 +421,9 @@ public class Tags {
 	public static final String INTEL_FLEET_DEPARTURES = "Fleet departures";
 	public static final String INTEL_SMUGGLING = "Smuggling";
 	public static final String INTEL_EXPLORATION = "Exploration";
+	public static final String INTEL_MARKER = "Marker";
 	public static final String INTEL_FLEET_LOG = "Fleet log";
+	public static final String INTEL_SALVAGE = "Salvage";
 	public static final String INTEL_LOCAL = "Local";
 	public static final String INTEL_TRADE = "Trade";
 	public static final String INTEL_MISSIONS = "Missions";
@@ -379,6 +488,39 @@ public class Tags {
 	public static final String RELOAD_5PT = "reload_5pt";
 	public static final String RELOAD_6PT = "reload_6pt";
 	public static final String NO_RELOAD = "no_reload";
+	
+	// ship systems
+	public static final String SHIP_SYSTEM_DEFENSIVE = "defensive";
+	public static final String SHIP_SYSTEM_OFFENSIVE = "offensive";
+	public static final String SHIP_SYSTEM_MOVEMENT = "movement";
+	
+	// general - inclusion in codex
+	
+	public static final String HIDE_IN_CODEX = "hide_in_codex";
+	
+	
+	/**
+	 * For fighters that need a ship entry instead of a fighter wing entry. 
+	 */
+	public static final String SHOW_IN_CODEX_AS_SHIP = "show_in_codex_as_ship";
+
+	/**
+	 * Difference from "hide" is that invisible can be seen if selected with code, i.e.
+	 *  the entry actually exists. 
+	 */
+	public static final String INVISIBLE_IN_CODEX = "invisible_in_codex";
+	public static final String CODEX_UNLOCKABLE = "codex_unlockable";
+	public static final String CODEX_REQUIRE_RELATED = "codex_require_related";
+	public static final String SHOW_IN_CODEX = "show_in_codex";
+	
+	public static final String DWELLER_LIGHT = "dweller_light";
+	
+	/**
+	 * Just #league things
+	 */
+	public static final String GENS_YARIBAY = "gens_yaribay";
+	public static final String GENS_HANNAN = "gens_hannan";
+	public static final String GENS_KATO = "gens_kato";
 	
 	
 }

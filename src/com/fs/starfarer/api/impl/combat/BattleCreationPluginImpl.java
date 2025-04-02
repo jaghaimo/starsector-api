@@ -1,10 +1,11 @@
 package com.fs.starfarer.api.impl.combat;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
+
+import java.awt.Color;
 
 import org.lwjgl.util.vector.Vector2f;
 
@@ -100,8 +101,11 @@ public class BattleCreationPluginImpl implements BattleCreationPlugin {
 		int smaller = Math.min(fpOne, fpTwo);
 		
 		boolean withObjectives = smaller > maxFP;
+		//withObjectives = true;
 		if (!context.objectivesAllowed) {
 			withObjectives = false;
+		} else if (context.forceObjectivesOnMap) {
+			withObjectives = true;
 		}
 		
 		int numObjectives = 0;
@@ -388,21 +392,23 @@ public class BattleCreationPluginImpl implements BattleCreationPlugin {
 			loader.addNebula(x, y, radius);
 		}
 		
-		float numAsteroidsWithinRange = countNearbyAsteroids(playerFleet);
-		
-		int numAsteroids = Math.min(400, (int)((numAsteroidsWithinRange + 1f) * 20f));
-		
-		loader.addAsteroidField(0, 0, random.nextFloat() * 360f, width,
-								20f, 70f, numAsteroids);
-		
-		if (numRings > 0) {
-			int numRingAsteroids = (int) (numRings * 300 + (numRings * 600f) * random.nextFloat());
-			//int numRingAsteroids = (int) (numRings * 1600 + (numRings * 600f) * (float) Math.random());
-			if (numRingAsteroids > 1500) {
-				numRingAsteroids = 1500;
+		if (!playerFleet.isInHyperspace()) {
+			float numAsteroidsWithinRange = countNearbyAsteroids(playerFleet);
+			
+			int numAsteroids = Math.min(400, (int)((numAsteroidsWithinRange + 1f) * 20f));
+			
+			loader.addAsteroidField(0, 0, random.nextFloat() * 360f, width,
+									20f, 70f, numAsteroids);
+			
+			if (numRings > 0) {
+				int numRingAsteroids = (int) (numRings * 300 + (numRings * 600f) * random.nextFloat());
+				//int numRingAsteroids = (int) (numRings * 1600 + (numRings * 600f) * (float) Math.random());
+				if (numRingAsteroids > 1500) {
+					numRingAsteroids = 1500;
+				}
+				loader.addRingAsteroids(0, 0, random.nextFloat() * 360f, width,
+						100f, 200f, numRingAsteroids);
 			}
-			loader.addRingAsteroids(0, 0, random.nextFloat() * 360f, width,
-					100f, 200f, numRingAsteroids);
 		}
 		
 		//setRandomBackground(loader);

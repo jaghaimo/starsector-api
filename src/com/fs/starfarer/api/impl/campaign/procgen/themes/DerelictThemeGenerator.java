@@ -18,6 +18,7 @@ import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI.SurveyLevel;
 import com.fs.starfarer.api.campaign.econ.MarketConditionAPI;
+import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.Conditions;
 import com.fs.starfarer.api.impl.campaign.ids.Entities;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
@@ -31,6 +32,7 @@ import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.DomainSurveyDe
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.SurveyDataSpecial.SurveyDataSpecialData;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.SurveyDataSpecial.SurveyDataSpecialType;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.special.TopographicDataSpecial.TopographicDataSpecialData;
+import com.fs.starfarer.api.plugins.SurveyPlugin;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
 
@@ -39,7 +41,7 @@ public class DerelictThemeGenerator extends BaseThemeGenerator {
 
 	public static final float BASE_LINK_FRACTION = 0.25f;
 	public static final float SALVAGE_SPECIAL_FRACTION = 0.5f;
-	public static final float TOPOGRAPHIC_DATA_FRACTION = 0.1f;
+	public static final float TOPOGRAPHIC_DATA_FRACTION = 0.2f;
 	
 	public static final int BRANCHES_PER_MOTHERSHIP_MIN = 3;
 	public static final int BRANCHES_PER_MOTHERSHIP_MAX = 4;
@@ -333,9 +335,9 @@ public class DerelictThemeGenerator extends BaseThemeGenerator {
 		//interestingConditions.add(Conditions.VOLATILES_ABUNDANT);
 		interestingConditions.add(Conditions.VOLATILES_PLENTIFUL);
 		//interestingConditions.add(Conditions.ORE_RICH);
-		interestingConditions.add(Conditions.ORE_ULTRARICH);
 		interestingConditions.add(Conditions.RARE_ORE_RICH);
 		interestingConditions.add(Conditions.RARE_ORE_ULTRARICH);
+		interestingConditions.add(Conditions.ORE_ULTRARICH);
 		interestingConditions.add(Conditions.FARMLAND_BOUNTIFUL);
 		interestingConditions.add(Conditions.FARMLAND_ADEQUATE);
 		//interestingConditions.add(Conditions.ORGANICS_ABUNDANT);
@@ -382,54 +384,24 @@ public class DerelictThemeGenerator extends BaseThemeGenerator {
 				}
 			}
 			if (StarSystemGenerator.random.nextFloat() < SALVAGE_SPECIAL_FRACTION) {
-				float p1 = 0.33f, p2 = 0.67f;
+				float pNothing = 0.1f;
 				if (Entities.DERELICT_SURVEY_PROBE.equals(e.entityType)) {
-					p1 = 0.75f;
-					p2 = 1f;
+					pNothing = 0.5f;
 				} else if (Entities.DERELICT_SURVEY_SHIP.equals(e.entityType)) {
-					p1 = 0.25f;
-					p2 = 0.8f;
+					pNothing = 0.25f;
 				} else if (Entities.DERELICT_MOTHERSHIP.equals(e.entityType)) {
-					p1 = 0.1f;
-					p2 = 0.6f;
+					pNothing = 0f;
 				}
 				
 				float r = StarSystemGenerator.random.nextFloat();
-				if (r < p1) {
-					type = SurveyDataSpecialType.PLANET_INTERESTING_PROPERTY;
-				} else if (r < p2) {
+				if (r >= pNothing) {
 					type = SurveyDataSpecialType.PLANET_SURVEY_DATA;
-				} else {
-					type = SurveyDataSpecialType.SYSTEM_PRELIMINARY_SURVEY;
 				}
 			}
 			
 			//type = SpecialType.PLANET_SURVEY_DATA;
 				
-			if (type == SurveyDataSpecialType.PLANET_INTERESTING_PROPERTY) {
-				PlanetAPI planet = findInterestingPlanet(e.entity.getConstellation().getSystems(), usedPlanets);
-				if (planet != null) {
-					String conditionId = getInterestingCondition(planet, false);
-					if (conditionId != null) {
-						SurveyDataSpecialData data = new SurveyDataSpecialData(SurveyDataSpecialType.PLANET_INTERESTING_PROPERTY);
-						data.entityId = planet.getId();
-						data.secondaryId = conditionId;
-						data.includeRuins = false;
-						Misc.setSalvageSpecial(e.entity, data);
-						usedPlanets.add(planet);
-					}
-					
-//					DomainSurveyDerelictSpecialData special = new DomainSurveyDerelictSpecialData(type);
-//					special.entityId = planet.getId();
-//					for (MarketConditionAPI mc : planet.getMarket().getConditions()) {
-//						if (interestingConditions.contains(mc.getId())) {
-//							special.secondaryId = mc.getId();
-//						}
-//					}
-//					usedPlanets.add(planet);
-//					e.entity.getMemoryWithoutUpdate().set(MemFlags.SALVAGE_SPECIAL_DATA, special);
-				}
-			} else if (type == SurveyDataSpecialType.PLANET_SURVEY_DATA) {
+			if (type == SurveyDataSpecialType.PLANET_SURVEY_DATA) {
 				PlanetAPI planet = findInterestingPlanet(e.entity.getConstellation().getSystems(), usedPlanets);
 				if (planet != null) {
 					SurveyDataSpecialData data = new SurveyDataSpecialData(SurveyDataSpecialType.PLANET_SURVEY_DATA);
@@ -441,18 +413,6 @@ public class DerelictThemeGenerator extends BaseThemeGenerator {
 //					DomainSurveyDerelictSpecialData special = new DomainSurveyDerelictSpecialData(type);
 //					special.entityId = planet.getId();
 //					usedPlanets.add(planet);
-//					e.entity.getMemoryWithoutUpdate().set(MemFlags.SALVAGE_SPECIAL_DATA, special);
-				}
-			} else if (type == SurveyDataSpecialType.SYSTEM_PRELIMINARY_SURVEY) {
-				StarSystemAPI system = findNearbySystem(e.entity, usedSystems);
-				if (system != null) {
-					SurveyDataSpecialData data = new SurveyDataSpecialData(SurveyDataSpecialType.SYSTEM_PRELIMINARY_SURVEY);
-					data.entityId = system.getId();
-					Misc.setSalvageSpecial(e.entity, data);
-					
-//					DomainSurveyDerelictSpecialData special = new DomainSurveyDerelictSpecialData(type);
-//					special.entityId = system.getId();
-//					usedSystems.add(system);
 //					e.entity.getMemoryWithoutUpdate().set(MemFlags.SALVAGE_SPECIAL_DATA, special);
 				}
 			}
@@ -508,7 +468,11 @@ public class DerelictThemeGenerator extends BaseThemeGenerator {
 		Set<String> conditions = interestingConditions;
 		if (includeRuins) conditions = interestingConditionsWithRuins;
 		
+		SurveyPlugin plugin = (SurveyPlugin) Global.getSettings().getNewPluginInstance("surveyPlugin");
+		
 		for (StarSystemAPI system : systems) {
+			if (system.hasTag(Tags.THEME_HIDDEN)) continue;
+			
 			for (PlanetAPI planet : system.getPlanets()) {
 				if (planet.isStar()) continue;
 				if (exclude != null && exclude.contains(planet)) continue;
@@ -517,15 +481,22 @@ public class DerelictThemeGenerator extends BaseThemeGenerator {
 					continue;
 				}
 				//if (planet.getMarket().getSurveyLevel() == SurveyLevel.FULL) continue;
+				
+				String type = plugin.getSurveyDataType(planet);
+				boolean classIV = Commodities.SURVEY_DATA_4.equals(type);
+				boolean classV = Commodities.SURVEY_DATA_5.equals(type);
+				
+				if (!(classIV || classV || planet.getMarket().getHazardValue() <= 1f)) continue;
+				
+				float w = 1f;
 				for (MarketConditionAPI mc : planet.getMarket().getConditions()) {
 					if (conditions.contains(mc.getId())) {
-						if (mc.getId().equals(Conditions.HABITABLE) && planet.getMarket().getHazardValue() > 1.25f) {
-							continue;
-						}
-						planets.add(planet);
-						break;
+						w += 1f;
 					}
 				}
+				if (classIV) w *= 0.5f;
+				if (classV) w *= 4f; 
+				planets.add(planet, w);
 			}
 		}
 		return planets.pick();

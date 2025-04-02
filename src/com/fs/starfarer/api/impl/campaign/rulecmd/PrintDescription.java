@@ -5,6 +5,7 @@ import java.util.Map;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
+import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.loading.Description;
@@ -19,6 +20,15 @@ public class PrintDescription extends BaseCommandPlugin {
 		int index = Integer.parseInt(params.get(0).string);
 		
 		Description desc = Global.getSettings().getDescription(target.getCustomDescriptionId(), Type.CUSTOM);
+		if ((desc == null || 
+				(!desc.hasText1() && !desc.hasText2() && !desc.hasText3() && !desc.hasText4() && !desc.hasText5())) &&
+				target instanceof PlanetAPI) {
+			PlanetAPI planet = (PlanetAPI) target;
+			String id = planet.getDescriptionIdOverride();
+			if (id == null) id = planet.getTypeId();
+			desc = Global.getSettings().getDescription(id, Type.PLANET);
+		}
+		
 		if (desc != null) {
 			if (index == 1 && desc.hasText1()) {
 				dialog.getTextPanel().addParagraph(desc.getText1());

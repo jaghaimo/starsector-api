@@ -17,10 +17,12 @@ import com.fs.starfarer.api.impl.campaign.DerelictShipEntityPlugin;
 import com.fs.starfarer.api.impl.campaign.ids.Entities;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.ids.Terrain;
-import com.fs.starfarer.api.impl.campaign.intel.misc.BreadcrumbIntel;
+import com.fs.starfarer.api.impl.campaign.intel.misc.BreadcrumbIntelV2;
+import com.fs.starfarer.api.impl.campaign.intel.misc.SalvorsTallyIntel;
 import com.fs.starfarer.api.impl.campaign.procgen.Constellation;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.SalvageSpecialInteraction.SalvageSpecialData;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.SalvageSpecialInteraction.SalvageSpecialPlugin;
+import com.fs.starfarer.api.impl.campaign.terrain.DebrisFieldTerrainPlugin;
 import com.fs.starfarer.api.util.CountingMap;
 import com.fs.starfarer.api.util.Misc;
 
@@ -35,6 +37,9 @@ public class BreadcrumbSpecial extends BaseSalvageSpecial {
 		}
 		
 		public SalvageSpecialPlugin createSpecialPlugin() {
+//			if (Global.getSector().getEntityById(targetId) instanceof PlanetAPI) {
+//				return new SurveyDataSpecial();
+//			}
 			return new BreadcrumbSpecial();
 		}
 	}
@@ -67,7 +72,12 @@ public class BreadcrumbSpecial extends BaseSalvageSpecial {
 		}
 		
 		// already discovered
-		if (!target.hasSensorProfile() && !target.isDiscoverable()) {
+		if (!target.hasSensorProfile() && !target.isDiscoverable() && !(target instanceof PlanetAPI)) {
+			initNothing();
+			return;
+		}
+		
+		if (target instanceof PlanetAPI && !Misc.hasUnexploredRuins(target.getMarket())) {
 			initNothing();
 			return;
 		}
@@ -81,6 +91,10 @@ public class BreadcrumbSpecial extends BaseSalvageSpecial {
 		String nameForTitle = targetNameUC.substring(targetNameUC.indexOf(" ") + 1);
 		//if (target.getCu)
 		String subject = getString("Location: " + nameForTitle);
+		if (target instanceof PlanetAPI && target.getMarket() != null) {
+			subject = "Location: " + Misc.getRuinsSpec(target.getMarket()).getName();
+			//subject += " Ruins";
+		}
 		
 		
 		String text1 = "The $shortName's memory banks are partially accessible, and ";
@@ -121,9 +135,34 @@ public class BreadcrumbSpecial extends BaseSalvageSpecial {
 		
 		addText(text1);
 		
-		BreadcrumbIntel intel = new BreadcrumbIntel(entity, target);
+		BreadcrumbIntelV2 intel = new BreadcrumbIntelV2(target);
 		intel.setTitle(getString(subject));
 		intel.setText(getString(text1ForIntel));
+		
+		
+		String iconId = null;
+		if (target instanceof CampaignTerrainAPI &&
+				((CampaignTerrainAPI)target).getPlugin() instanceof DebrisFieldTerrainPlugin) {
+			iconId = "link_to_debris_field";
+		}
+		if (iconId == null) {
+			boolean wreck = SalvorsTallyIntel.isDerelictShip(target);
+			boolean station = SalvorsTallyIntel.isOrbitalInstallation(target);
+			if (target instanceof PlanetAPI) {
+				iconId = "link_to_ruins";
+			} else if (wreck) {
+				iconId = "link_to_derelict_ship";
+			} else if (station) {
+				iconId = "link_to_orbital_installation";
+			} else {
+				iconId = "link_to_other";
+			}
+		}
+		
+		if (iconId != null) {
+			//intel.setIcon(Global.getSettings().getSpriteName("intel", iconId));
+			intel.setIconId(iconId);
+		}
 		Global.getSector().getIntelManager().addIntel(intel, false, text);
 		
 //		CommMessageAPI message = FleetLog.beginEntry(subject, target);
@@ -147,6 +186,7 @@ public class BreadcrumbSpecial extends BaseSalvageSpecial {
 			} else if (target instanceof PlanetAPI) {
 				PlanetAPI planet = (PlanetAPI) target;
 				targetName = planet.getTypeNameWithLowerCaseWorld().toLowerCase();
+				targetName += " with unexplored ruins";
 				if (forTitle) targetName = planet.getTypeNameWithWorld();
 				targetAOrAn = planet.getSpec().getAOrAn();
 			} else {

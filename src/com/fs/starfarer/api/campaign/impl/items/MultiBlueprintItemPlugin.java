@@ -1,6 +1,5 @@
 package com.fs.starfarer.api.campaign.impl.items;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -8,6 +7,8 @@ import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
+
+import java.awt.Color;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CargoStackAPI;
@@ -199,13 +200,16 @@ public class MultiBlueprintItemPlugin extends BaseSpecialItemPlugin implements B
 		}
 		
 		
-		addCostLabel(tooltip, opad, transferHandler, stackSource);
 
-		boolean known = areAllKnown(ships, weapons, fighters);
-		if (known) {
-			tooltip.addPara("All blueprints in package already known", g, opad);
-		} else {
-			tooltip.addPara("Right-click to learn", b, opad);
+		addCostLabel(tooltip, opad, transferHandler, stackSource);
+		
+		if (!Global.CODEX_TOOLTIP_MODE) {
+			boolean known = areAllKnown(ships, weapons, fighters);
+			if (known) {
+				tooltip.addPara("All blueprints in package already known", g, opad);
+			} else {
+				tooltip.addPara("Right-click to learn", b, opad);
+			}
 		}
 	}
 	

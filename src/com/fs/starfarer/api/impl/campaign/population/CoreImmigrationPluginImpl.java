@@ -127,7 +127,7 @@ public class CoreImmigrationPluginImpl implements ImmigrationPlugin {
 	}
 	
 	public void increaseMarketSize() {
-		if (market.getSize() >= Misc.MAX_COLONY_SIZE || !market.isPlayerOwned()) {
+		if (market.getSize() >= Misc.getMaxMarketSize(market) || !market.isPlayerOwned()) {
 			market.getPopulation().setWeight(getWeightForMarketSizeStatic(market.getSize()));
 			market.getPopulation().normalize();
 			return;
@@ -149,7 +149,7 @@ public class CoreImmigrationPluginImpl implements ImmigrationPlugin {
 	}
 	
 	public static void increaseMarketSize(MarketAPI market) {
-		if (market.getSize() >= Misc.MAX_COLONY_SIZE) return;
+		if (market.getSize() >= Misc.getMaxMarketSize(market)) return;
 		
 		for (int i = 0; i <= 10; i++) {
 			market.removeCondition("population_" + i);
@@ -161,7 +161,7 @@ public class CoreImmigrationPluginImpl implements ImmigrationPlugin {
 		market.reapplyConditions();
 		market.reapplyIndustries();
 		
-		if (market.getSize() >= Misc.MAX_COLONY_SIZE) {
+		if (market.getSize() >= Misc.getMaxMarketSize(market)) {
 			market.setImmigrationIncentivesOn(false);
 		}
 	}
@@ -334,7 +334,7 @@ public class CoreImmigrationPluginImpl implements ImmigrationPlugin {
 //			System.out.println("ewfwfew");
 //		}
 		if (!market.isImmigrationIncentivesOn()) return;
-		if (market.getSize() >= Misc.MAX_COLONY_SIZE) {
+		if (market.getSize() >= Misc.getMaxMarketSize(market)) {
 			market.setImmigrationIncentivesOn(false);
 			return;
 		}

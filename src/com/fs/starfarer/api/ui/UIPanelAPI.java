@@ -5,4 +5,5 @@ public interface UIPanelAPI extends UIComponentAPI {
 	PositionAPI addComponent(UIComponentAPI custom);
 	void removeComponent(UIComponentAPI component);
 	void bringComponentToTop(UIComponentAPI c);
+	void sendToBottom(UIComponentAPI c);
 }

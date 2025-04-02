@@ -1,28 +1,35 @@
 package com.fs.starfarer.api;
 
-import java.awt.Color;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Collection;
 import java.util.List;
+import java.util.Set;
+
+import java.awt.Color;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.lwjgl.util.vector.Vector2f;
 
+import com.fs.starfarer.api.campaign.CargoAPI;
+import com.fs.starfarer.api.campaign.CargoAPI.CargoItemType;
+import com.fs.starfarer.api.campaign.CargoStackAPI;
 import com.fs.starfarer.api.campaign.CustomEntitySpecAPI;
 import com.fs.starfarer.api.campaign.CustomUIPanelPlugin;
 import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.FactionSpecAPI;
 import com.fs.starfarer.api.campaign.LocationAPI;
 import com.fs.starfarer.api.campaign.PlanetSpecAPI;
+import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.SpecialItemSpecAPI;
 import com.fs.starfarer.api.campaign.econ.CommoditySpecAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.econ.SubmarketSpecAPI;
 import com.fs.starfarer.api.characters.MarketConditionSpecAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
+import com.fs.starfarer.api.characters.PersonalityAPI;
 import com.fs.starfarer.api.characters.SkillSpecAPI;
 import com.fs.starfarer.api.combat.CombatEntityAPI;
 import com.fs.starfarer.api.combat.CombatReadinessPlugin;
@@ -35,7 +42,9 @@ import com.fs.starfarer.api.combat.ShipVariantAPI;
 import com.fs.starfarer.api.combat.WeaponAPI.WeaponSize;
 import com.fs.starfarer.api.combat.WeaponAPI.WeaponType;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
+import com.fs.starfarer.api.fleet.FleetMemberType;
 import com.fs.starfarer.api.graphics.SpriteAPI;
+import com.fs.starfarer.api.impl.codex.CodexEntryPlugin;
 import com.fs.starfarer.api.loading.AbilitySpecAPI;
 import com.fs.starfarer.api.loading.BarEventSpec;
 import com.fs.starfarer.api.loading.Description;
@@ -72,12 +81,15 @@ public interface SettingsAPI {
 	 */
 	PersonAPI createPerson();
 	
+	CargoStackAPI createCargoStack(CargoItemType type, Object data, CargoAPI cargo);
+	
 	LabelAPI createLabel(String text, String font);
 	
 	float getBonusXP(String key);
 	
 	float getFloat(String key);
 	boolean getBoolean(String key);
+	boolean optBoolean(String key, boolean defaultValue);
 	ClassLoader getScriptClassLoader();
 	
 	boolean isCampaignSensorsOn();
@@ -315,6 +327,11 @@ public interface SettingsAPI {
 	List<FighterWingSpecAPI> getAllFighterWingSpecs();
 
 	List<WeaponSpecAPI> getAllWeaponSpecs();
+	/**
+	 * Includes SYSTEM weapons and, well, everything.
+	 * @return
+	 */
+	List<WeaponSpecAPI> getActuallyAllWeaponSpecs();
 
 	boolean isSoundEnabled();
 
@@ -382,7 +399,7 @@ public interface SettingsAPI {
 	String readTextFileFromCommon(String filename) throws IOException;
 	
 	/**
-	 * Max size 10k.
+	 * Max size 1mb.
 	 * @param filename
 	 * @param data
 	 * @throws IOException
@@ -512,6 +529,7 @@ public interface SettingsAPI {
 	List<WeaponSpecAPI> getSystemWeaponSpecs();
 
 	List<String> getSpriteKeys(String category);
+	List<String> getSpriteKeys(String category, String listId);
 
 	JSONObject loadJSON(String filename, boolean withMods) throws IOException, JSONException;
 	JSONArray loadCSV(String filename, boolean withMods) throws IOException, JSONException;
@@ -523,4 +541,63 @@ public interface SettingsAPI {
 
 	boolean isStrafeKeyAToggle();
 
+	List<FactionSpecAPI> getAllFactionSpecs();
+
+	PersonalityAPI getPersonaltySpec(String id);
+
+	/**
+	 * @param onlyIfChanged should be used sparingly, for something where the file size
+	 * is fairly small and the writes are common/time sensitive. If true, the write will
+	 * also happen on a new thread.
+	 * Can cause increased memory use if overused for large files.
+	 */
+	void writeJSONToCommon(String filename, JSONObject json, boolean onlyIfChanged) throws IOException, JSONException;
+	
+	/**
+	 * @param putInWriteCache should only be set to true for files you intend to call writeJSONToCommon() for
+	 * with onlyIfChanged == true. Otherwise, causes unnecessary memory use.
+	 */
+	JSONObject readJSONFromCommon(String filename, boolean putInWriteCache) throws IOException, JSONException;
+
+	List<String> getSimOpponents();
+	List<String> getSimOpponentsDev();
+	
+	/**
+	 * @return Set of commodity ids, no quantity information.
+	 */
+	Set<String> getIndustrySupply(String industryId);
+	
+	/**
+	 * @return Set of commodity ids, no quantity information.
+	 */
+	Set<String> getIndustryDemand(String industryId);
+	
+	
+	/**
+	 * Can be called from anywhere. Will do nothing if the Codex is already open.
+	 * @param entryId
+	 */
+	void showCodex(String entryId);
+	void showCodex(CodexEntryPlugin tempEntry);
+	
+	/**
+	 * Will show the first entry, but will add all of the entries temporarily, until the Codex is closed.
+	 * @param tempEntries
+	 */
+	void showCodex(List<CodexEntryPlugin> tempEntries);
+	void showCodex(FleetMemberAPI member); 
+	
+	FleetMemberAPI createFleetMember(FleetMemberType type, String variantOrWingId);
+	FleetMemberAPI createFleetMember(FleetMemberType type, ShipVariantAPI variant);
+	
+	List<TerrainSpecAPI> getAllTerrainSpecs();
+	SectorEntityToken createLocationToken(float x, float y);
+	boolean hasDesignTypeColor(String designType);
+	
+	public float getFriendlyFireDanger(ShipAPI shooter, CombatEntityAPI target,
+			  Vector2f from, Vector2f to,
+			  float weaponSpeed, float burstFireDuration, float weaponRange);
+	public float getSafeMovementDir(ShipAPI ship);
 }
+
+	

@@ -10,15 +10,15 @@ public class WarpingSpriteRendererUtil  {
 	
 	public static class MutatingValue {
 
-		protected float value;
+		public float value;
 		
-		protected float min;
-		protected float max;
+		public float min;
+		public float max;
 		
-		protected float rate;
-		protected float rateSign;
+		public float rate;
+		public float rateSign;
 		
-		protected float sign = 0;
+		public float sign = 0;
 
 		public MutatingValue() {
 			

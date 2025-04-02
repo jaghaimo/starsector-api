@@ -47,5 +47,6 @@ public interface ProjectileWeaponSpecAPI extends WeaponSpecAPI {
 	float getVisualRecoil();
 	void setVisualRecoil(float visualRecoil);
 	String getAccuracyDisplayName();
+	MuzzleFlashSpec getMuzzleFlashSpec();
 
 }

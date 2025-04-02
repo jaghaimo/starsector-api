@@ -1,7 +1,8 @@
 package com.fs.starfarer.api.impl.campaign.intel.group;
 
-import java.awt.Color;
 import java.util.Random;
+
+import java.awt.Color;
 
 import org.lwjgl.util.vector.Vector2f;
 
@@ -106,6 +107,7 @@ public class KnightsOfLuddTakeoverExpedition extends BlockadeFGI implements Econ
 		m.triggerSetFleetFlag(KOLT_FLEET);
 		
 		m.setFleetSource(params.source);
+		setFleetCreatorQualityFromRoute(m);
 		m.setFleetDamageTaken(damage);
 	
 		m.triggerSetWarFleet();
@@ -439,6 +441,9 @@ public class KnightsOfLuddTakeoverExpedition extends BlockadeFGI implements Econ
 		target.setFactionId(Factions.LUDDIC_CHURCH);
 		target.setPlayerOwned(false);
 		target.setAdmin(null);
+		target.setFreePort(false);
+		target.setUseStockpilesForShortages(false);
+		
 		for (SectorEntityToken curr : target.getConnectedEntities()) {
 			curr.setFaction(Factions.LUDDIC_CHURCH);
 		}

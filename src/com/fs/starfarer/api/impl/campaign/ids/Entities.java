@@ -70,6 +70,12 @@ public class Entities {
 	public static final String ALPHA_SITE_WEAPONS_CACHE = "alpha_site_weapons_cache";
 	
 	
+	/**
+	 * Not fully implemented. 
+	 */
+	public static final String GENERIC_PROBE_ACTIVE = "generic_probe_active";
+	
+	
 	public static final String WRECK = "wreck";
 	
 	

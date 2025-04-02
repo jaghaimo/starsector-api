@@ -120,6 +120,21 @@ public class AddRemoveCommodity extends BaseCommandPlugin {
 		text.setFontInsignia();
 	}
 	
+	public static void addStackLossText(CargoStackAPI stack, TextPanelAPI text) {
+		addStackLossText(stack, text, false);
+	}
+	public static void addStackLossText(CargoStackAPI stack, TextPanelAPI text, boolean lowerCase) {
+		if (stack.getSize() < 1) return;
+		text.setFontSmallInsignia();
+		String name = stack.getDisplayName();
+		if (lowerCase) {
+			name = name.toLowerCase();
+		}
+		int quantity = (int) stack.getSize();
+		text.addParagraph("Lost " + Misc.getWithDGS(quantity) + Strings.X + " " + name + "", Misc.getNegativeHighlightColor());
+		text.highlightInLastPara(Misc.getHighlightColor(), Misc.getWithDGS(quantity) + Strings.X);
+		text.setFontInsignia();
+	}
 	
 	public static void addFighterGainText(String wingId, int quantity, TextPanelAPI text) {
 		FighterWingSpecAPI spec = Global.getSettings().getFighterWingSpec(wingId);

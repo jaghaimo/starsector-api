@@ -1,10 +1,11 @@
 package com.fs.starfarer.api.impl.campaign.intel.group;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.Set;
+
+import java.awt.Color;
 
 import org.lwjgl.util.vector.Vector2f;
 
@@ -30,6 +31,7 @@ import com.fs.starfarer.api.impl.campaign.ids.Industries;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin;
+import com.fs.starfarer.api.impl.campaign.intel.group.GenericRaidFGI.GenericRaidParams;
 import com.fs.starfarer.api.impl.campaign.missions.FleetCreatorMission;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.RouteFleetAssignmentAI.TravelState;
 import com.fs.starfarer.api.ui.LabelAPI;
@@ -466,10 +468,17 @@ public abstract class FleetGroupIntel extends BaseIntelPlugin implements RouteFl
 	
 	
 	protected void createRoute(String factionId, int approximateTotalDifficultyPoints,
-								int approximateNumberOfFleets, Object custom) {
+			int approximateNumberOfFleets, Object custom) {
+		createRoute(factionId, approximateTotalDifficultyPoints, approximateNumberOfFleets, custom, null);
+	}
+	protected void createRoute(String factionId, int approximateTotalDifficultyPoints,
+								int approximateNumberOfFleets, Object custom, GenericRaidParams params) {
 		OptionalFleetData extra = new OptionalFleetData();
 		extra.strength = getApproximateStrengthForTotalDifficultyPoints(factionId, approximateTotalDifficultyPoints);
 		extra.factionId = faction.getId(); // needed for WarSimScript etc
+		if (params != null && params.source != null) {
+			extra.quality = Misc.getShipQuality(params.source, extra.factionId);
+		}
 		route = RouteManager.getInstance().addRoute("FGI_" + getClass().getSimpleName(), null, 
 							Misc.genRandomSeed(), extra, this, custom);
 		

@@ -14,6 +14,8 @@ public class Factions {
 	public static final String TRITACHYON = "tritachyon"; 
 	public static final String HEGEMONY = "hegemony";
 	public static final String OMEGA = "omega";
+	public static final String THREAT = "threat";
+	public static final String DWELLER = "dweller";
 	
 	public static final String LIONS_GUARD = "lions_guard";
 	public static final String DIKTAT = "sindrian_diktat";

@@ -5,7 +5,7 @@ import java.util.Set;
 import com.fs.starfarer.api.campaign.ai.AbilityAIPlugin;
 import com.fs.starfarer.api.characters.AbilityPlugin;
 
-public interface AbilitySpecAPI {
+public interface AbilitySpecAPI extends WithSourceMod {
 
 	String getId();
 	boolean isUnlockedAtStart();

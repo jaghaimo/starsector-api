@@ -57,6 +57,7 @@ public class BaseHistorianOfferCreator implements HistorianOfferCreator {
 					if (entity.hasTag(Tags.EXPIRES)) continue;
 					if (entity.hasTag(Tags.NOT_RANDOM_MISSION_TARGET)) continue;
 					if (entity.getCircularOrbitRadius() > 10000f) continue;
+					if (!entity.isDiscoverable()) continue; // don't pick already discovered
 					picker.add(entity, w);
 				}
 			}
@@ -76,7 +77,8 @@ public class BaseHistorianOfferCreator implements HistorianOfferCreator {
 			for (PlanetAPI planet : system.getPlanets()) {
 				if (planet.isStar()) continue;
 				
-				if (Misc.hasUnexploredRuins(planet.getMarket())) {
+				if (Misc.hasUnexploredRuins(planet.getMarket()) && 
+						planet.getStarSystem() != null && !planet.getStarSystem().isEnteredByPlayer()) {
 					float w = 1f;
 					picker.add(planet, w);
 				}

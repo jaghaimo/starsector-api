@@ -1,9 +1,10 @@
 package com.fs.starfarer.api.combat;
 
-import java.awt.Color;
 import java.util.EnumSet;
 import java.util.List;
 import java.util.Set;
+
+import java.awt.Color;
 
 import org.lwjgl.util.vector.Vector2f;
 
@@ -731,6 +732,100 @@ public interface ShipAPI extends CombatEntityAPI {
 
 	PersonAPI getFleetCommander();
 
+
+	boolean isDoNotRender();
+	void setDoNotRender(boolean doNotRender);
+	float getHulkChanceOverride();
+	void setHulkChanceOverride(float hulkChanceOverride);
+	float getImpactVolumeMult();
+	void setImpactVolumeMult(float impactVolumeMult);
+
+
+	/**
+	 * Potentially quite slow.
+	 * @param from
+	 * @param to
+	 * @return
+	 */
+	Vector2f checkCollisionVsRay(Vector2f from, Vector2f to);
+
+
+	/**
+	 * Also potentially quite slow.
+	 * @param p
+	 * @return
+	 */
+	boolean isPointInBounds(Vector2f p);
+
+
+	boolean isSpawnDebris();
+	void setSpawnDebris(boolean spawnDebris);
+
+	float getDHullOverlayAngleOffset();
+	void setDHullOverlayAngleOffset(float dHullOverlayAngleOffset);
+
+	float getExtraOverlayAngleOffset();
+	void setExtraOverlayAngleOffset(float extraOverlayAngleOffset);
+	void setExtraOverlay(String spriteName);
+	float getExtraOverlayShadowOpacity();
+	void setExtraOverlayShadowOpacity(float extraOverlayOpacity);
+	boolean isExtraOverlayMatchHullColor();
+	void setExtraOverlayMatchHullColor(boolean extraOverlayMatchHullColor);
+
+
+	void resetSelectedGroup();
+	void removeTag(String tag);
+
+
+	boolean isSkipNextDamagedExplosion();
+	void setSkipNextDamagedExplosion(boolean skipNextDamagedExplosion);
+	void setDefaultAI(FleetMemberAPI member);
+	boolean isNoDamagedExplosions();
+	void setNoDamagedExplosions(boolean noDamagedExplosions);
+
+	boolean isDoNotRenderSprite();
+	void setDoNotRenderSprite(boolean doNotRenderSprite);
+	boolean isDoNotRenderShield();
+	void setDoNotRenderShield(boolean doNotRenderShield);
+	boolean isDoNotRenderWeapons();
+	void setDoNotRenderWeapons(boolean doNotRenderWeapons);
+	void setDoNotRenderVentingAnimation(boolean doNotRenderVentingAnimation);
+	boolean isDoNotRenderVentingAnimation();
+	String getShipCollisionSoundOverride();
+	void setShipCollisionSoundOverride(String shipCollisionSoundOverride);
+	String getAsteroidCollisionSoundOverride();
+	void setAsteroidCollisionSoundOverride(String asteroidCollisionSoundOverride);
+	
+	String getParentPieceId();
+	void setParentPieceId(String parentPieceId);
+
+
+	void applyEffectsAfterShipAddedToCombatEngine();
+
+
+	float getSinceLastDamageTaken();
+
+	boolean isNoMuzzleFlash();
+	void setNoMuzzleFlash(boolean noMuzzleFlash);
+
+
+	/**
+	 * Being mostly ignored by enemy ships due to the IGNORE order.
+	 * @return
+	 */
+	boolean isBeingIgnored();
+	
+	/**
+	 * Being mostly ignored by enemy ships due to the IGNORE order.
+	 * @return
+	 */
+	void setBeingIgnored(boolean beingIgnored);
+
+
+	void setLowestHullLevelReached(float lowestHullLevelReached);
+
+
+	void setFleetMember(FleetMemberAPI member);
 }
 
 

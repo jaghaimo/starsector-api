@@ -9,4 +9,6 @@ public class Missions {
 	public static final String THE_USURPERS = "sdtu";
 	public static final String PILGRIMS_PATH = "lpp";
 	public static final String KNIGHT_ERRANT = "lke";
+	public static final String FALSE_IDOLS = "bffi";
+	public static final String ABYSSAL_SPACE_ODDITY = "gaDHO";
 }

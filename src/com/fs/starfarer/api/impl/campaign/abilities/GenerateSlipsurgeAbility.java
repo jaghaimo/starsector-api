@@ -1,9 +1,10 @@
 package com.fs.starfarer.api.impl.campaign.abilities;
 
-import java.awt.Color;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Random;
+
+import java.awt.Color;
 
 import org.lwjgl.util.vector.Vector2f;
 
@@ -531,7 +532,13 @@ public class GenerateSlipsurgeAbility extends DurationAbilityWithCost2 {
 
 		FactionAPI player = Global.getSector().getFaction(Factions.PLAYER);
 		Color starColor = Misc.getBasePlayerColor();
-		tooltip.beginTable(player, 20f, "Stellar object type", getTooltipWidth() - 150f, "Surge strength", 150f);
+		float tw = getTooltipWidth();
+		float strW = 150f;
+		if (Global.CODEX_TOOLTIP_MODE) {
+			tw = 500f;
+			strW = 220f;
+		}
+		tooltip.beginTable(player, 20f, "Stellar object type", tw - strW, "Surge strength", strW);
 		if (REQUIRE_GIANT_STARS_OR_STRONGER) {
 			tooltip.addRow(Alignment.LMID, starColor, "Black holes, neutron stars",
 						   Alignment.MID, highlight, "Extreme");
@@ -557,6 +564,14 @@ public class GenerateSlipsurgeAbility extends DurationAbilityWithCost2 {
 		}
 		
 		tooltip.addTable("", 0, pad);
+		
+		if (Global.CODEX_TOOLTIP_MODE) {
+			float tw2 = tooltip.getWidthSoFar();
+			float xOff = (int)((tw2 - tw) / 2f);
+			tooltip.getPrev().getPosition().setXAlignOffset(xOff);
+			tooltip.addSpacer(0f).getPosition().setXAlignOffset(-xOff);
+		}
+		
 		tooltip.addSpacer(5f);
 		
 		tooltip.addPara("A stronger surge can allow the fleet to rapidly travel up to %s light-years. "
@@ -645,10 +660,10 @@ public class GenerateSlipsurgeAbility extends DurationAbilityWithCost2 {
 			key = StarTypes.NEUTRON_STAR;
 		} else if (name.contains("dwarf")) {
 			key = StarTypes.WHITE_DWARF;
-		} else if (name.contains("giant")) {
-			key = StarTypes.BLUE_GIANT;
 		} else if (name.contains("supergiant")) {
 			key = StarTypes.BLUE_SUPERGIANT;
+		} else if (name.contains("giant")) {
+			key = StarTypes.BLUE_GIANT;
 		} else  if (name.contains(" hole")) {
 			key = StarTypes.BLACK_HOLE;
 		} else if (name.contains("brown")) {

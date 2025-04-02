@@ -130,7 +130,10 @@ public interface ModPlugin {
 	
 	
 	void configureXStream(XStream x);
-	
+
+	void onAboutToStartGeneratingCodex();
+	void onAboutToLinkCodexEntries();
+	void onCodexDataGenerated();
 }
 
 

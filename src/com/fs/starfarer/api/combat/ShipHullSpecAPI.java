@@ -1,10 +1,11 @@
 package com.fs.starfarer.api.combat;
 
-import java.awt.Color;
 import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
+
+import java.awt.Color;
 
 import org.lwjgl.util.vector.Vector2f;
 
@@ -12,8 +13,9 @@ import com.fs.starfarer.api.characters.MutableCharacterStatsAPI;
 import com.fs.starfarer.api.combat.ShieldAPI.ShieldType;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.loading.WeaponSlotAPI;
+import com.fs.starfarer.api.loading.WithSourceMod;
 
-public interface ShipHullSpecAPI {
+public interface ShipHullSpecAPI extends WithSourceMod {
 	
 	public interface ShieldSpecAPI {
 		float getPhaseCost();
@@ -58,6 +60,7 @@ public interface ShipHullSpecAPI {
 		UNBOARDABLE,
 		STATION,
 		SHIP_WITH_MODULES,
+		MODULE,
 		HIDE_IN_CODEX,
 		UNDER_PARENT,
 		INDEPENDENT_ROTATION,
@@ -247,4 +250,19 @@ public interface ShipHullSpecAPI {
 
 	boolean isDHullOldMethod();
 
+	boolean isCarrier();
+
+	String getLogisticsNAReason();
+	void setLogisticsNAReason(String logisticsNAReason);
+
+	float getCollisionRadius();
+
+	String getCodexVariantId();
+	void setCodexVariantId(String codexVariantId);
+
+	String getRestoredToHullId();
+	
+
 }
+
+

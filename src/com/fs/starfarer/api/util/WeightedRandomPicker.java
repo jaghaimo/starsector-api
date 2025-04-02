@@ -112,6 +112,7 @@ public class WeightedRandomPicker<T> implements Cloneable {
 	}
 	
 	public void remove(T item) {
+		if (item == null) return;
 		int index = items.indexOf(item);
 		if (index != -1) {
 			items.remove(index);
@@ -141,6 +142,24 @@ public class WeightedRandomPicker<T> implements Cloneable {
 		float w = getWeight(index);
 		weights.set(index, weight);
 		total += weight - w;
+	}
+	
+	public T getItemWithHighestWeight() {
+		float maxW = 0;
+		for (int i = 0; i < items.size(); i++) {
+			float w = getWeight(i);
+			if (w > maxW) maxW = w;
+		}
+		if (maxW <= 0) return null;
+		
+		WeightedRandomPicker<T> other = new WeightedRandomPicker<>();
+		for (int i = 0; i < items.size(); i++) {
+			float w = getWeight(i);
+			if (w >= maxW) {
+				other.add(items.get(i));
+			}
+		}
+		return other.pick();
 	}
 
 	public T pickAndRemove() {

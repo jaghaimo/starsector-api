@@ -1,7 +1,8 @@
 package com.fs.starfarer.api.impl.campaign.intel;
 
-import java.awt.Color;
 import java.util.Set;
+
+import java.awt.Color;
 
 import org.lwjgl.input.Keyboard;
 
@@ -17,10 +18,12 @@ import com.fs.starfarer.api.campaign.econ.MonthlyReport.FDNode;
 import com.fs.starfarer.api.campaign.listeners.CommissionEndedListener;
 import com.fs.starfarer.api.campaign.listeners.EconomyTickListener;
 import com.fs.starfarer.api.characters.PersonAPI;
+import com.fs.starfarer.api.impl.campaign.econ.EstablishedPolity;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.People;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.intel.contacts.ContactIntel;
+import com.fs.starfarer.api.impl.campaign.intel.events.EstablishedPolityScript;
 import com.fs.starfarer.api.impl.campaign.rulecmd.HA_CMD;
 import com.fs.starfarer.api.impl.campaign.shared.SharedData;
 import com.fs.starfarer.api.ui.ButtonAPI;
@@ -124,6 +127,7 @@ public class PerseanLeagueMembership extends BaseIntelPlugin implements EconomyT
 		
 		setImportant(true);
 		setLeagueMember(true);
+		new EstablishedPolityScript();
 		
 		Global.getSector().getPlayerFaction().setSecondaryColorOverride(getFaction().getBaseUIColor());
 		Global.getSector().getPlayerFaction().setSecondaryColorSegmentsOverride(8);
@@ -296,6 +300,11 @@ public class PerseanLeagueMembership extends BaseIntelPlugin implements EconomyT
 					+ "for example makes it untenable for the Hegemony to insist on AI inspections "
 					+ "in your space.", opad, c, "Persean League");
 		}
+		
+		info.addPara("Due to being new members of the League, your colonies enjoy an "
+				+ "increased flow of trade, resulting in a %s accessibility bonus.",
+				opad, h,
+				"+" + (int)Math.round(EstablishedPolity.ACCESSIBILITY_BONUS * 100f) + "%");
 		
 		info.addPara("Your League membership is contingent on maintaining an active Persean League commission. If "
 				+ "you resign it, or if it is annulled for any reason, your membership will end as well.", opad);

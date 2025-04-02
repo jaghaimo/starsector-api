@@ -107,6 +107,7 @@ public class EscortPackage extends BaseHullMod {
 		super.advanceInCombat(ship, amount);
 
 		if (!ship.isAlive()) return;
+		if (amount <= 0f) return;
 		
 		CombatEngineAPI engine = Global.getCombatEngine();
 		

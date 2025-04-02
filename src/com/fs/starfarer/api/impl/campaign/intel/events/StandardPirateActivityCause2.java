@@ -1,10 +1,12 @@
 package com.fs.starfarer.api.impl.campaign.intel.events;
 
-import java.awt.Color;
 import java.util.List;
+
+import java.awt.Color;
 
 import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
+import com.fs.starfarer.api.impl.campaign.fleets.EconomyFleetRouteManager;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.rulecmd.KantaCMD;
 import com.fs.starfarer.api.ui.MapParams;
@@ -110,6 +112,10 @@ public class StandardPirateActivityCause2 extends BaseHostileActivityCause2 {
 	}
 	
 	public float getMagnitudeContribution(StarSystemAPI system) {
+		if (EconomyFleetRouteManager.ENEMY_STRENGTH_CHECK_EXCLUDE_PIRATES) {
+			return 0f;
+		}
+		
 		if (KantaCMD.playerHasProtection()) return 0f;
 		
 		if (getProgress() <= 0) return 0f;

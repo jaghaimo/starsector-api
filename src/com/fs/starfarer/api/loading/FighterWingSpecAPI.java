@@ -6,7 +6,7 @@ import java.util.Set;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipVariantAPI;
 
-public interface FighterWingSpecAPI {
+public interface FighterWingSpecAPI extends WithSourceMod {
 
 	boolean isBomber();
 	boolean isAssault();

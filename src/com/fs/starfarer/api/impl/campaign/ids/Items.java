@@ -20,10 +20,12 @@ public class Items {
 	public static final String TAG_NO_DEALER = "no_dealer";
 	
 	public static final String TAG_BLUEPRINT_PACKAGE = "package_bp";
+	public static final String TAG_SINGLE_BP = "single_bp";
+	public static final String TAG_COLONY_ITEM = "colony_item";
 	
 	//public static final String TAG_NO_AUTOFIT = "no_autofit";
 	
-	public static final String MODSPEC = "modspec";
+	public static final String TAG_MODSPEC = "modspec";
 	
 	public static final String LOW_TECH_PACKAGE = "low_tech_package";
 	public static final String MIDLINE_PACKAGE = "midline_package";
@@ -64,6 +66,14 @@ public class Items {
 	public static final String TOPOGRAPHIC_DATA = "topographic_data";
 	public static final String WORMHOLE_ANCHOR = "wormhole_anchor";
 	public static final String WORMHOLE_SCANNER = "wormhole_scanner";
+	
+	public static final String FRAGMENT_FABRICATOR = "fragment_fabricator";
+	public static final String THREAT_PROCESSING_UNIT = "threat_processing_unit";
+	
+	public static final String SHROUDED_SUBSTRATE = "shrouded_substrate";
+	public static final String SHROUDED_THUNDERHEAD = "shrouded_thunderhead";
+	public static final String SHROUDED_MANTLE = "shrouded_mantle";
+	public static final String SHROUDED_LENS = "shrouded_lens";
 	
 }
 	

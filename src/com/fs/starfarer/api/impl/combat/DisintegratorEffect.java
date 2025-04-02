@@ -1,9 +1,10 @@
 package com.fs.starfarer.api.impl.combat;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.EnumSet;
 import java.util.List;
+
+import java.awt.Color;
 
 import org.lwjgl.opengl.GL14;
 import org.lwjgl.util.vector.Vector2f;
@@ -14,6 +15,7 @@ import com.fs.starfarer.api.combat.BaseCombatLayeredRenderingPlugin;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.combat.CombatEngineLayers;
 import com.fs.starfarer.api.combat.CombatEntityAPI;
+import com.fs.starfarer.api.combat.DamageType;
 import com.fs.starfarer.api.combat.DamagingProjectileAPI;
 import com.fs.starfarer.api.combat.OnHitEffectPlugin;
 import com.fs.starfarer.api.combat.ShipAPI;
@@ -28,10 +30,21 @@ public class DisintegratorEffect extends BaseCombatLayeredRenderingPlugin implem
 
 	// each tick is on average .9 seconds
 	// ticks can't be longer than a second or floating damage numbers separate
-	public static int NUM_TICKS = 22;
-	public static float TOTAL_DAMAGE = 500;
+	//public static int NUM_TICKS = 22;
+	public static int NUM_TICKS = 11;
+	public static float TOTAL_DAMAGE = 1000;
 	
 	public DisintegratorEffect() {
+	}
+	
+	protected float getTotalDamage() {
+		return TOTAL_DAMAGE;
+	}
+	protected int getNumTicks() {
+		return NUM_TICKS;
+	}
+	protected boolean canDamageHull() {
+		return false;
 	}
 	
 	public void onHit(DamagingProjectileAPI projectile, CombatEntityAPI target, Vector2f point, boolean shieldHit, ApplyDamageResultAPI damageResult, CombatEngineAPI engine) {
@@ -60,6 +73,8 @@ public class DisintegratorEffect extends BaseCombatLayeredRenderingPlugin implem
 		public FaderUtil fader;
 		public float elapsed = 0f;
 		public float baseSize;
+		
+		public Color color = new Color(100,150,255,35);
 		
 		public ParticleData(float baseSize, float maxDur, float endSizeMult) {
 			sprite = Global.getSettings().getSprite("misc", "nebula_particles");
@@ -161,30 +176,45 @@ public class DisintegratorEffect extends BaseCombatLayeredRenderingPlugin implem
 		particles.removeAll(remove);
 		
 		float volume = 1f;
-		if (ticks >= NUM_TICKS || !target.isAlive() || !Global.getCombatEngine().isEntityInPlay(target)) {
+		if (ticks >= getNumTicks() || !target.isAlive() || !Global.getCombatEngine().isEntityInPlay(target)) {
 			fader.fadeOut();
 			fader.advance(amount);
 			volume = fader.getBrightness();
 		}
-		Global.getSoundPlayer().playLoop("disintegrator_loop", target, 1f, volume, loc, target.getVelocity());
+		Global.getSoundPlayer().playLoop(getSoundLoopId(), target, 1f, volume, loc, target.getVelocity());
 		
 		
 		interval.advance(amount);
-		if (interval.intervalElapsed() && ticks < NUM_TICKS) {
+		if (interval.intervalElapsed() && ticks < getNumTicks()) {
 			dealDamage();
 			ticks++;
 		}
 	}
+	
+	protected String getSoundLoopId() {
+		return "disintegrator_loop";
+	}
 
+	protected int getNumParticlesPerTick() {
+		return 3;
+	}
 
+	protected void addParticle() {
+		ParticleData p = new ParticleData(30f, 3f + (float) Math.random() * 2f, 2f);
+		particles.add(p);
+		p.offset = Misc.getPointWithinRadius(p.offset, 20f);
+	}
+	
+	protected void damageDealt(Vector2f loc, float hullDamage, float armorDamage) {
+		
+	}
+	
 	protected void dealDamage() {
 		CombatEngineAPI engine = Global.getCombatEngine();
 		
-		int num = 3;
+		int num = getNumParticlesPerTick();
 		for (int i = 0; i < num; i++) {
-			ParticleData p = new ParticleData(30f, 3f + (float) Math.random() * 2f, 2f);
-			particles.add(p);
-			p.offset = Misc.getPointWithinRadius(p.offset, 20f);
+			addParticle();
 		}
 		
 		
@@ -201,8 +231,9 @@ public class DisintegratorEffect extends BaseCombatLayeredRenderingPlugin implem
 		
 		float damageTypeMult = getDamageTypeMult(proj.getSource(), target);
 		
-		float damagePerTick = (float) TOTAL_DAMAGE / (float) NUM_TICKS;
+		float damagePerTick = (float) getTotalDamage() / (float) getNumTicks();
 		float damageDealt = 0f;
+		float hullDamage = 0f;
 		for (int i = -2; i <= 2; i++) {
 			for (int j = -2; j <= 2; j++) {
 				if ((i == 2 || i == -2) && (j == 2 || j == -2)) continue; // skip corners
@@ -223,6 +254,9 @@ public class DisintegratorEffect extends BaseCombatLayeredRenderingPlugin implem
 				
 				float armorInCell = grid.getArmorValue(cx, cy);
 				float damage = damagePerTick * damMult * damageTypeMult;
+				if (damage > armorInCell && canDamageHull()) {
+					hullDamage += damage - armorInCell;
+				}
 				damage = Math.min(damage, armorInCell);
 				if (damage <= 0) continue;
 				
@@ -233,23 +267,47 @@ public class DisintegratorEffect extends BaseCombatLayeredRenderingPlugin implem
 		
 		if (damageDealt > 0) {
 			if (Misc.shouldShowDamageFloaty(proj.getSource(), target)) {
-				engine.addFloatingDamageText(point, damageDealt, Misc.FLOATY_ARMOR_DAMAGE_COLOR, target, proj.getSource());
+				engine.addFloatingDamageText(point, damageDealt, 0f, Misc.FLOATY_ARMOR_DAMAGE_COLOR, target, proj.getSource());
 			}
 			target.syncWithArmorGridState();
 		}
+		
+		if (hullDamage > 1f) {
+			float showHullDamage = Math.min(hullDamage, target.getHitpoints());
+			if (showHullDamage >= 0) {
+				target.setHitpoints(target.getHitpoints() - hullDamage);
+				if (target.getHitpoints() <= 0f && !target.isHulk()) {
+					target.setSpawnDebris(false);
+					engine.applyDamage(target, point, 100f, DamageType.ENERGY, 0f, true, false, proj.getSource(), false);
+				}
+				if (Misc.shouldShowDamageFloaty(proj.getSource(), target)) {
+					Vector2f p2 = new Vector2f(point);
+					p2.y += 20f;
+					engine.addFloatingDamageText(p2, hullDamage, 0f, Misc.FLOATY_HULL_DAMAGE_COLOR, target, proj.getSource());
+				}
+//				String key = "wfewfewf";
+//				Float total = (Float) engine.getCustomData().get(key);
+//				if (total == null) total = 0f;
+//				total += hullDamage;
+//				engine.getCustomData().put(key, total);
+//				System.out.println("Total hull damage dealt: " + total);
+			}
+		}
+		
+		damageDealt(point, hullDamage, damageDealt);
 		
 	}
 
 	public boolean isExpired() {
 		return particles.isEmpty() && 
-					(ticks >= NUM_TICKS || !target.isAlive() || !Global.getCombatEngine().isEntityInPlay(target));
+					(ticks >= getNumTicks() || !target.isAlive() || !Global.getCombatEngine().isEntityInPlay(target));
 	}
 
 	public void render(CombatEngineLayers layer, ViewportAPI viewport) {
 		float x = entity.getLocation().x;
 		float y = entity.getLocation().y;
 		
-		Color color = new Color(100,150,255,35);
+		//Color color = new Color(100,150,255,35);
 		float b = viewport.getAlphaMult();
 
 		GL14.glBlendEquation(GL14.GL_FUNC_REVERSE_SUBTRACT);
@@ -265,7 +323,7 @@ public class DisintegratorEffect extends BaseCombatLayeredRenderingPlugin implem
 			p.sprite.setAngle(p.angle);
 			p.sprite.setSize(size, size);
 			p.sprite.setAlphaMult(b * alphaMult * p.fader.getBrightness());
-			p.sprite.setColor(color);
+			p.sprite.setColor(p.color);
 			p.sprite.renderAtCenter(loc.x, loc.y);
 		}
 		
@@ -295,6 +353,14 @@ public class DisintegratorEffect extends BaseCombatLayeredRenderingPlugin implem
 			break;
 		}
 		return damageTypeMult;
+	}
+
+	public Vector2f getOffset() {
+		return offset;
+	}
+
+	public void setOffset(Vector2f offset) {
+		this.offset = offset;
 	}
 
 }

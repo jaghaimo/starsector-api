@@ -90,7 +90,7 @@ public class RuinsDataSwapMission extends HubMissionWithBarEvent {
 		connectWithGlobalFlag(Stage.GO_TO_RUINS, Stage.RETURN, "$rdsm_gotData");
 		connectWithGlobalFlag(Stage.RETURN, Stage.COMPLETED, "$rdsm_returnedData");
 		
-		setNoAbandon();
+		//setNoAbandon();
 		setTimeLimit(Stage.FAILED, MISSION_DAYS, null, Stage.RETURN);
 		
 		setCreditReward(CreditReward.AVERAGE);

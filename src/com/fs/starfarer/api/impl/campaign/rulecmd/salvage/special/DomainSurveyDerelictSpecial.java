@@ -7,7 +7,7 @@ import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.impl.campaign.ids.StarTypes;
-import com.fs.starfarer.api.impl.campaign.intel.misc.BreadcrumbIntel;
+import com.fs.starfarer.api.impl.campaign.intel.misc.BreadcrumbIntelV2;
 import com.fs.starfarer.api.impl.campaign.procgen.Constellation;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.SalvageSpecialInteraction.SalvageSpecialData;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.SalvageSpecialInteraction.SalvageSpecialPlugin;
@@ -130,7 +130,8 @@ public class DomainSurveyDerelictSpecial extends BaseSalvageSpecial {
 		String nameForTitle = parent.getCustomEntitySpec().getDefaultName();
 		//String loc = BreadcrumbSpecial.getLocatedString(parent);
 		
-		String subject = getString("Derelict " + nameForTitle + " Location");
+		//String subject = getString("Derelict " + nameForTitle + " Location");
+		String subject = getString("Location: " + nameForTitle);
 		
 		text1 += "contain information pointing to the location of a " + name + ". ";
 		text1ForIntel += "contain information pointing to the location of a " + name + ". ";
@@ -145,9 +146,11 @@ public class DomainSurveyDerelictSpecial extends BaseSalvageSpecial {
 		
 		addText(text1);
 		
-		BreadcrumbIntel intel = new BreadcrumbIntel(entity, parent);
+		BreadcrumbIntelV2 intel = new BreadcrumbIntelV2(parent);
 		intel.setTitle(getString(subject));
 		intel.setText(getString(text1ForIntel));
+		//intel.setIcon(Global.getSettings().getSpriteName("intel", "leading_to_larger_domain_derelict"));
+		intel.setIconId("leading_to_larger_domain_derelict");
 		Global.getSector().getIntelManager().addIntel(intel, false, text);
 		
 //		CommMessageAPI message = FleetLog.beginEntry(subject, parent);

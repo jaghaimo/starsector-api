@@ -184,6 +184,13 @@ public interface FleetMemberAPI {
 	float getUnmodifiedDeploymentPointsCost();
 
 
+	void setFlagship(boolean isFlagship, boolean withCaptainSet);
+
+
+	String getPersonalityOverride();
+	void setPersonalityOverride(String personalityOverride);
+
+
 }
 
 

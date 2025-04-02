@@ -18,6 +18,7 @@ public class Stats {
 	 * Set for both character (from having Neural Link skill) and ship (from having Neural Interface hullmod.
 	 */
 	public static final String HAS_NEURAL_LINK = "has_neural_link";
+	public static final String INSTANT_NEURAL_TRANSFER_FROM = "instant_neural_transfer_from";
 	
 	public static final String NUM_MAX_CONTACTS_MOD = "num_max_contacts_mod";
 	
@@ -56,6 +57,8 @@ public class Stats {
 	 */
 	public static final String MAX_INDUSTRIES = "max_industries";
 	
+	public static final String MAX_MARKET_SIZE = "max_market_size";
+	
 	// fleets
 	public static final String FUEL_USE_NOT_SHOWN_ON_MAP_MULT = "fuel_use_not_shown_on_map_mult";
 	
@@ -79,6 +82,8 @@ public class Stats {
 	public static final String SALVAGE_VALUE_MULT_FLEET_INCLUDES_RARE = "salvage_value_bonus_fleet";
 	public static final String SALVAGE_VALUE_MULT_FLEET_NOT_RARE = "salvage_value_bonus_fleet_not_rare";
 	public static final String BATTLE_SALVAGE_MULT_FLEET = "battle_salvage_value_bonus_fleet";
+	
+	public static final String DETECTED_BY_PLAYER_RANGE_MULT = "detected_by_player_range_mult";
 	
 	/**
 	 * This one is on the commander, not the fleet.
@@ -141,6 +146,10 @@ public class Stats {
 	public static final String ACT_AS_COMBAT_SHIP = "act_as_combat_ship";
 	
 	public static final String CAN_REPAIR_MODULES_UNDER_FIRE = "can_repair_modules_under_fire";
+	
+	public static final String FRAGMENT_SWARM_SIZE_MOD = "fragment_swarm_size_mod";
+	public static final String FRAGMENT_SWARM_RESPAWN_RATE_MULT = "fragment_swarm_respawn_rate_mult";
+	public static final String SWARM_LAUNCHER_WING_SIZE_MOD = "swarm_launcher_wing_size_mod";
 	
 	/**
 	 * Modifying suppliesToRecover does not affect deployment points.
@@ -235,6 +244,7 @@ public class Stats {
 	public static final String MEDIUM_BEAM_MOD = "medium_beam_mod";
 	public static final String LARGE_BEAM_MOD = "large_beam_mod";
 		
+	public static final String FORCE_ALLOW_CONVERTED_HANGAR = "force_allow_converted_hangar";
 	public static final String CONVERTED_HANGAR_MOD = "converted_hangar_mod";
 	public static final String CONVERTED_HANGAR_NO_CREW_INCREASE = "converted_hangar_no_crew_increase";
 	public static final String CONVERTED_HANGAR_NO_REARM_INCREASE = "converted_hangar_no_rearm_increase";

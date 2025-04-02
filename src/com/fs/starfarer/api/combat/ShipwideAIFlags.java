@@ -47,6 +47,7 @@ public class ShipwideAIFlags {
 		DO_NOT_BACK_OFF_EVEN_WHILE_VENTING,
 		BACK_OFF,
 		BACK_OFF_MIN_RANGE,
+		BACK_OFF_MAX_RANGE,
 		STANDING_OFF_VS_SHIP_ON_MAP_BORDER,
 		BACKING_OFF,
 		SAFE_VENT,
@@ -70,6 +71,10 @@ public class ShipwideAIFlags {
 		PHASE_ATTACK_RUN_TIMEOUT,
 		
 		DO_NOT_PURSUE,
+		
+		TIMID_ESCORT,
+		ESCORT_RANGE_MODIFIER,
+		IGNORES_ORDERS,
 		
 		
 		/**
@@ -109,6 +114,12 @@ public class ShipwideAIFlags {
 		HAS_POTENTIAL_MINE_TRIGGER_NEARBY,
 		
 		TARGET_FOR_SHIP_SYSTEM,
+		
+		CUSTOM1,
+		CUSTOM2,
+		CUSTOM3,
+		CUSTOM4,
+		CUSTOM5,
 	}
 	
 	public static final float FLAG_DURATION = 0.5f;

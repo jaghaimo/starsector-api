@@ -8,6 +8,7 @@ import com.fs.starfarer.api.EveryFrameScript;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.SoundAPI;
 import com.fs.starfarer.api.campaign.CampaignEngineLayers;
+import com.fs.starfarer.api.campaign.CampaignEventListener.FleetDespawnReason;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.CustomCampaignEntityAPI;
 import com.fs.starfarer.api.campaign.CustomEntitySpecAPI;
@@ -16,6 +17,7 @@ import com.fs.starfarer.api.campaign.SectorEntityToken.VisibilityLevel;
 import com.fs.starfarer.api.combat.ViewportAPI;
 import com.fs.starfarer.api.graphics.SpriteAPI;
 import com.fs.starfarer.api.impl.campaign.abilities.InterdictionPulseAbility;
+import com.fs.starfarer.api.impl.campaign.enc.EncounterManager;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.intel.events.ht.HTPoints;
@@ -30,6 +32,9 @@ public class AbyssalLightEntityPlugin extends BaseCustomEntityPlugin {
 		FADE_OUT,
 		EXPAND,
 	}
+	
+	public static float SENSOR_BURST_TRIGGER_RANGE = 500f;
+	public static float DWELLER_TRIGGER_RANGE = 200f;
 	
 	public static float MIN_DURATION = 20f;
 	public static float MAX_DURATION = 30f;
@@ -46,6 +51,63 @@ public class AbyssalLightEntityPlugin extends BaseCustomEntityPlugin {
 	public static float PLAYER_PROXIMITY_MIN_BRIGHTNESS = 0.25f;
 	
 	
+	public static class DwellerEncounterScript implements EveryFrameScript {
+		protected float elapsed = 0f;
+		protected String trigger;
+		protected boolean done = false;
+		protected float triggerDelay;
+		protected SectorEntityToken light;
+		protected CampaignFleetAPI fleet;
+		public DwellerEncounterScript(String trigger, CampaignFleetAPI fleet, SectorEntityToken light) {
+			this.trigger = trigger;
+			this.fleet = fleet;
+			this.light = light;
+			triggerDelay = 1f + (float) Math.random() * 1f;
+			
+		}
+		public boolean isDone() {
+			return done;
+		}
+		public boolean runWhilePaused() {
+			return false;
+		}
+		public void advance(float amount) {
+			if (done) return;
+			
+			if (Global.getSector().isPaused() || Global.getSector().getCampaignUI().isShowingDialog()) {
+				return;
+			}
+			
+			elapsed += amount;
+			
+			if (fleet == null || elapsed > 3f || !light.isAlive() || light.hasTag(Tags.FADING_OUT_AND_EXPIRING) ||
+					fleet.getContainingLocation() != light.getContainingLocation()) {
+				done = true;
+				return;
+			}
+			
+			float dist = Misc.getDistance(fleet, light) - fleet.getRadius() - light.getRadius();
+			if (dist > DWELLER_TRIGGER_RANGE) {
+				done = true;
+				return;
+			}
+			
+			
+			if (elapsed > triggerDelay) {
+				if (fleet.isPlayerFleet()) {
+					Misc.showRuleDialog(light, trigger);
+				} else {
+					fleet.despawn(FleetDespawnReason.DESTROYED_BY_BATTLE, light);
+					if (light.getCustomPlugin() instanceof AbyssalLightEntityPlugin) {
+						AbyssalLightEntityPlugin plugin = (AbyssalLightEntityPlugin) light.getCustomPlugin();
+						plugin.despawn(DespawnType.FADE_OUT);
+					}
+				}
+				done = true;
+				return;
+			}
+		}
+	}
 	public static class AbyssalLightSoundStopper implements EveryFrameScript {
 		protected transient SoundAPI sound = null;
 		protected float elapsed = 0f;
@@ -122,6 +184,7 @@ public class AbyssalLightEntityPlugin extends BaseCustomEntityPlugin {
 	protected float untilFrequencyChange = 0f;
 	protected float untilSoundPlayed = 0f;
 	protected float flickerDur = 0f;
+	protected float abilityResponseFlickerTimeout = 0f;
 	protected DespawnType despawnType = null;
 	protected boolean playedDespawnSound = false;
 	
@@ -186,10 +249,29 @@ public class AbyssalLightEntityPlugin extends BaseCustomEntityPlugin {
 					}
 					if (volume > 1f) volume = 1f;
 					if (volume < 0f) volume = 0f;
-					SoundAPI sound = Global.getSoundPlayer().playSound("abyssal_light_random_sound", 1f, volume, entity.getLocation(), Misc.ZERO);
+					
+					float pitchMult = 1f;
+					if (isDweller()) {
+						pitchMult = 0.5f;
+					}
+					
+					SoundAPI sound = Global.getSoundPlayer().playSound("abyssal_light_random_sound", 1f * pitchMult, volume, entity.getLocation(), Misc.ZERO);
 					Global.getSector().addScript(new AbyssalLightSoundStopper(sound));
 					//flickerDur = 3f + 2f * (float) Math.random();
 					flickerDur = 0.5f + 0.5f * (float) Math.random();
+					
+// too random			
+//					if (isDweller()) {
+//						CampaignFleetAPI fleet = Global.getSector().getPlayerFleet();
+//						if (fleet != null && abilityResponseFlickerTimeout <= 0f) {
+//							flickerDur = 0.5f + 0.5f * (float) Math.random();
+//							abilityResponseFlickerTimeout = 3f;
+//							float dist = Misc.getDistance(fleet, entity);
+//							if (dist < DWELLER_TRIGGER_RANGE + fleet.getRadius() + entity.getRadius()) {
+//								Global.getSector().addScript(new DwellerEncounterScript("DwellerAttackAfterAbilityUse", entity));
+//							}						
+//						}
+//					}
 				}
 			}
 		}
@@ -212,7 +294,10 @@ public class AbyssalLightEntityPlugin extends BaseCustomEntityPlugin {
 	public AbyssalLightParams getParams() {
 		return params;
 	}
-
+	
+	public boolean isDweller() {
+		return entity != null && entity.hasTag(Tags.DWELLER_LIGHT);
+	}
 	
 	public void advance(float amount) {
 		if (isDespawning()) {
@@ -233,7 +318,9 @@ public class AbyssalLightEntityPlugin extends BaseCustomEntityPlugin {
 			
 			return;
 		}
-
+		
+		//boolean dweller = isDespawning(); 
+		
 		float days = Misc.getDays(amount);
 		params.durationDays -= days;
 		if (params.durationDays <= 0f || Misc.getAbyssalDepth(entity) < 1f) {
@@ -251,6 +338,11 @@ public class AbyssalLightEntityPlugin extends BaseCustomEntityPlugin {
 			flickerDur -= amount;
 			if (flickerDur < 0) flickerDur = 0;
 		}
+		if (abilityResponseFlickerTimeout > 0) {
+			abilityResponseFlickerTimeout -= amount;
+			if (abilityResponseFlickerTimeout < 0) abilityResponseFlickerTimeout = 0;
+			//System.out.println("Timeout: " + abilityResponseFlickerTimeout);
+		}
 		
 		flicker.advance(amount * 10f);
 		fader.advance(amount);
@@ -264,16 +356,26 @@ public class AbyssalLightEntityPlugin extends BaseCustomEntityPlugin {
 					
 					
 					if (fleet.getMemoryWithoutUpdate().getBoolean(MemFlags.JUST_DID_INTERDICTION_PULSE)) {
-						AbyssalLightBonus bonus = AbyssalLightBonus.get(fleet);
-						
-						float brightness = getProximityBasedBrightnessFactor(fleet, entity.getLocation());
-						bonus.addBurnBonus(params.bonusMult * brightness);
-						
-						if (fleet.isPlayerFleet()) {
-							bonus.addTopographyPoints(params.getTopographyPoints());
+						if (isDweller()) {
+							if (abilityResponseFlickerTimeout <= 0f) {
+								flickerDur = 0.5f + 0.5f * (float) Math.random();
+								abilityResponseFlickerTimeout = 6f;
+								if (dist < DWELLER_TRIGGER_RANGE + fleet.getRadius() + entity.getRadius()) {
+									Global.getSector().addScript(new DwellerEncounterScript("DwellerAttackAfterAbilityUse", fleet, entity));
+								}						
+							}
+						} else {
+							AbyssalLightBonus bonus = AbyssalLightBonus.get(fleet);
+							
+							float brightness = getProximityBasedBrightnessFactor(fleet, entity.getLocation());
+							bonus.addBurnBonus(params.bonusMult * brightness);
+							
+							if (fleet.isPlayerFleet()) {
+								bonus.addTopographyPoints(params.getTopographyPoints());
+							}
+							
+							despawn(DespawnType.EXPAND);
 						}
-						
-						despawn(DespawnType.EXPAND);
 					}
 				}
 			}
@@ -283,22 +385,36 @@ public class AbyssalLightEntityPlugin extends BaseCustomEntityPlugin {
 		if (Global.getSector().getMemoryWithoutUpdate().getBoolean(MemFlags.GLOBAL_SENSOR_BURST_JUST_USED_IN_CURRENT_LOCATION)) {
 			if (entity.getContainingLocation() != null) {
 				for (CampaignFleetAPI fleet : entity.getContainingLocation().getFleets()) {
-					float range = 500f + fleet.getRadius() + entity.getRadius();
+					float range = SENSOR_BURST_TRIGGER_RANGE + fleet.getRadius() + entity.getRadius();
 					float dist = Misc.getDistance(fleet.getLocation(), entity.getLocation());
 					if (dist > range) continue;
 					
 					
 					if (fleet.getMemoryWithoutUpdate().getBoolean(MemFlags.JUST_DID_SENSOR_BURST)) {
-						AbyssalLightBonus bonus = AbyssalLightBonus.get(fleet);
-						
-						float brightness = getProximityBasedBrightnessFactor(fleet, entity.getLocation());
-						bonus.addSensorBonus(params.bonusMult * brightness);
-						
-						if (fleet.isPlayerFleet()) {
-							bonus.addTopographyPoints(params.getTopographyPoints());
+						if (isDweller()) {
+							if (abilityResponseFlickerTimeout <= 0f) {
+								flickerDur = 0.5f + 0.5f * (float) Math.random();
+								abilityResponseFlickerTimeout = 6f;
+								if (dist < DWELLER_TRIGGER_RANGE + fleet.getRadius() + entity.getRadius()) {
+									Global.getSector().addScript(new DwellerEncounterScript("DwellerAttackAfterAbilityUse", fleet, entity));
+								}						
+							}
+						} else {
+							AbyssalLightBonus bonus = AbyssalLightBonus.get(fleet);
+							
+							float brightness = getProximityBasedBrightnessFactor(fleet, entity.getLocation());
+							bonus.addSensorBonus(params.bonusMult * brightness);
+							
+							if (fleet.isPlayerFleet()) {
+								bonus.addTopographyPoints(params.getTopographyPoints());
+								
+								// can cause overlapping gravity wells etc
+								//EncounterManager.getInstance().getPointTimeout().clear();
+								EncounterManager.getInstance().getCreatorTimeout().clear();
+							}
+							
+							despawn(DespawnType.EXPAND);
 						}
-						
-						despawn(DespawnType.EXPAND);
 					}
 				}
 			}
@@ -312,7 +428,11 @@ public class AbyssalLightEntityPlugin extends BaseCustomEntityPlugin {
 		float mult = 1f;
 		if (flickerDur < 1f) mult = flickerDur;
 		
-		mult *= 0.25f;
+		if (isDweller()) {
+			mult *= 0.75f;
+		} else {
+			mult *= 0.25f;
+		}
 		
 		float f = 1f - flicker.getBrightness() * mult;
 		return f;
@@ -323,7 +443,6 @@ public class AbyssalLightEntityPlugin extends BaseCustomEntityPlugin {
 		if (phase < 0.5f) glowAlpha = phase * 2f;
 		if (phase >= 0.5f) glowAlpha = (1f - (phase - 0.5f) * 2f);
 		glowAlpha = 0.75f + glowAlpha * 0.25f;
-		//glowAlpha *= getFlickerBasedMult();
 		
 		if (glowAlpha < 0) glowAlpha = 0;
 		if (glowAlpha > 1) glowAlpha = 1;

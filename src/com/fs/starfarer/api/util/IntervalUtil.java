@@ -46,7 +46,7 @@ public class IntervalUtil {
 		return elapsed;
 	}
 
-	private void nextInterval() {
+	public void nextInterval() {
 		if (random != null) {
 			currInterval = minInterval + (maxInterval - minInterval) * random.nextFloat();
 		} else {

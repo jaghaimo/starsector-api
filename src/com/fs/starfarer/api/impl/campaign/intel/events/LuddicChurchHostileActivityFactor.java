@@ -309,18 +309,19 @@ public class LuddicChurchHostileActivityFactor extends BaseHostileActivityFactor
 	}
 	
 	public static MarketAPI getHesperus(boolean requireMilitaryBase) {
-		MarketAPI kazeron = Global.getSector().getEconomy().getMarket("hesperus");
-		if (kazeron == null || kazeron.hasCondition(Conditions.DECIVILIZED)) {
+		MarketAPI hesperus = Global.getSector().getEconomy().getMarket("hesperus");
+		if (hesperus == null || hesperus.hasCondition(Conditions.DECIVILIZED) ||
+				!hesperus.getFactionId().equals(Factions.LUDDIC_CHURCH)) {
 			return null;
 		}
 		if (requireMilitaryBase) {
-			Industry b = kazeron.getIndustry(Industries.MILITARYBASE);
-			if (b == null) b = kazeron.getIndustry(Industries.HIGHCOMMAND);
+			Industry b = hesperus.getIndustry(Industries.MILITARYBASE);
+			if (b == null) b = hesperus.getIndustry(Industries.HIGHCOMMAND);
 			if (b == null || b.isDisrupted() || !b.isFunctional()) {
 				return null;
 			}
 		}
-		return kazeron;
+		return hesperus;
 	}
 	
 	

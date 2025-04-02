@@ -239,6 +239,7 @@ public class MiscellaneousThemeGenerator extends BaseThemeGenerator {
 			PlanetaryShield.applyVisuals(planet);
 			Global.getSector().getMemoryWithoutUpdate().set(PLANETARY_SHIELD_PLANET_KEY, planet);
 			planet.getMemoryWithoutUpdate().set(PLANETARY_SHIELD_PLANET, true);
+			planet.getStarSystem().addTag(Tags.THEME_SPECIAL);
 			
 			long seed = StarSystemGenerator.random.nextLong();
 			planet.getMemoryWithoutUpdate().set(MemFlags.SALVAGE_SEED, seed);
@@ -890,6 +891,7 @@ public class MiscellaneousThemeGenerator extends BaseThemeGenerator {
 		}
 		
 		tundra.setName("Sentinel");
+		tundra.getMarket().setName("Sentinel");
 		tundra.addTag(Tags.NOT_RANDOM_MISSION_TARGET);
 		tundra.getMemoryWithoutUpdate().set(PK_PLANET_KEY, true);
 		Global.getSector().getPersistentData().put(PK_PLANET_KEY, tundra);

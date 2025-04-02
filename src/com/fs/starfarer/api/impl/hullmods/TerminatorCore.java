@@ -13,6 +13,8 @@ public class TerminatorCore extends BaseLogisticsHullMod {
 	public static float DAMAGE_MISSILES_PERCENT = 100f;
 	public static float DAMAGE_FIGHTERS_PERCENT = 100f;
 	
+	public static float BEAM_RANGE_BONUS = 300f;
+	
 	public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
 		//stats.getEnergyAmmoBonus().modifyFlat(id, EXTRA_CHARGES);
 		//stats.getEnergyRoFMult().modifyMult(id, ROF_MULT);
@@ -23,7 +25,7 @@ public class TerminatorCore extends BaseLogisticsHullMod {
 		stats.getDamageToFighters().modifyPercent(id, DAMAGE_FIGHTERS_PERCENT);
 		//stats.getProjectileSpeedMult().modifyMult(id, 100f);
 		stats.getBeamWeaponTurnRateBonus().modifyMult(id, 2f);
-		stats.getBeamWeaponRangeBonus().modifyFlat(id, 300f);
+		stats.getBeamWeaponRangeBonus().modifyFlat(id, BEAM_RANGE_BONUS);
 		//stats.getBeamWeaponRangeBonus().modifyFlat(id, 300f);
 		stats.getAutofireAimAccuracy().modifyFlat(id, 1f);
 		
@@ -44,6 +46,8 @@ public class TerminatorCore extends BaseLogisticsHullMod {
 
 
 	public String getDescriptionParam(int index, HullSize hullSize) {
+		if (index == 0) return "" + (int) DAMAGE_MISSILES_PERCENT + "%";
+		if (index == 1) return "" + (int) BEAM_RANGE_BONUS;
 		return null;
 	}
 

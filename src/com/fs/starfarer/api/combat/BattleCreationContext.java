@@ -27,10 +27,13 @@ public class BattleCreationContext {
 	
 	private float pursuitRangeModifier = 0f;
 	
+	public float extraEnemyStandoffRange = 0f;
+	
 	private int playerCommandPoints = 0;
 	
 	public boolean aiRetreatAllowed = true;
 	public boolean objectivesAllowed = true;
+	public boolean forceObjectivesOnMap = false;
 	public boolean enemyDeployAll = false;
 //	public boolean playerDefendingStation = false;
 //	public boolean enemyDefendingStation = false;
@@ -150,7 +153,10 @@ public class BattleCreationContext {
 		this.initialNumSteps = initialNumSteps;
 	}
 
-	
+	public float getExtraEnemyStandoffRange() {
+		return extraEnemyStandoffRange;
+	}
+
 }
 
 

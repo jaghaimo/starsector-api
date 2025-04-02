@@ -1,7 +1,8 @@
 package com.fs.starfarer.api.combat;
 
-import java.awt.Color;
 import java.util.List;
+
+import java.awt.Color;
 
 import org.lwjgl.util.vector.Vector2f;
 
@@ -60,7 +61,7 @@ public interface ShipEngineControllerAPI {
 	boolean isTurningRight();
 	boolean isStrafingLeft();
 	boolean isStrafingRight();
-	
+	boolean isIdle();
 	
 	List<ShipEngineAPI> getShipEngines();
 	void fadeToOtherColor(Object key, Color other, Color contrailColor, float effectLevel, float maxBlend);
@@ -87,5 +88,6 @@ public interface ShipEngineControllerAPI {
 	void forceShowAccelerating();
 	ColorShifterAPI getFlameColorShifter();
 	float getTurnDeceleration();
+
 	
 }

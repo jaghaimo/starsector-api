@@ -56,4 +56,8 @@ public interface FluxTrackerAPI {
 	void setOverloadProgress(float empProgress);
 	void setOverloadDuration(float empDuration);
 	void ventFlux();
+	void setOverloadColor(Color overloadColor);
+	Color getOverloadColor();
+	void setOverloadText(String overloadText);
+	String getOverloadText();
 }

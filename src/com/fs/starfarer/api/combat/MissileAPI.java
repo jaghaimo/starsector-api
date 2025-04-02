@@ -1,7 +1,9 @@
 package com.fs.starfarer.api.combat;
 
-import java.awt.Color;
 import java.util.EnumSet;
+import java.util.Set;
+
+import java.awt.Color;
 
 import org.json.JSONObject;
 import org.lwjgl.util.vector.Vector2f;
@@ -201,6 +203,12 @@ public interface MissileAPI extends DamagingProjectileAPI {
 	float getGuidanceBonus();
 	boolean isDoNotFlareEnginesWhenStrafingOrDecelerating();
 	void setDoNotFlareEnginesWhenStrafingOrDecelerating(boolean doNotFlare);
+	void setDidDamage(boolean didDamage);
+	void updateMaxSpeed();
+	Set<String> getTags();
+	void addTag(String tag);
+	boolean hasTag(String tag);
+	void removeTag(String tag);
 	
 	// always null anyway
 	//MutableShipStatsAPI getStats();

@@ -96,7 +96,7 @@ public class ContactIntel extends BaseIntelPlugin {
 			Global.getSector().addScript(this);
 		}
 		
-		setImportant(true);
+		//setImportant(true);
 	}
 	
 //	public ContactIntel(PersonAPI person, CampaignFleetAPI fleet) {

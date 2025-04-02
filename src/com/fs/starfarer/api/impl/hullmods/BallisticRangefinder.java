@@ -2,6 +2,7 @@ package com.fs.starfarer.api.impl.hullmods;
 
 import java.awt.Color;
 
+import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BaseHullMod;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
@@ -200,8 +201,8 @@ public class BallisticRangefinder extends BaseHullMod {
 		tooltip.addPara("Utilizes targeting data from the ship's largest ballistic slot "
 				+ "to benefit certain weapons, extending the base range of "
 				+ "typical ballistic weapons to match similar but larger weapons. "
-				+ "Also benefits hybrid weapons. Point-defense weapons are unaffected.",
-				opad, h, "ship's largest ballistic slot", "base range");
+				+ "Greatly benefits hybrid weapons. Point-defense weapons are unaffected.",
+				opad, h, "ship's largest ballistic slot", "base range", "Greatly benefits hybrid weapons");
 		
 		//tooltip.addPara("The maximum range is capped, based on the largest slot.", opad);
 		tooltip.addPara("The range bonus is based on the size of the largest ballistic slot, "
@@ -225,14 +226,20 @@ public class BallisticRangefinder extends BaseHullMod {
 				20f, true, true, 
 				new Object [] {"Largest b. slot", col1W, "Small wpn", colW, "Medium wpn", colW, "Range cap", lastW});
 		
+		Color reallyG = g;
+		if (Global.CODEX_TOOLTIP_MODE) {
+			g = h;
+		}
 		
 		Color c = null;
 		if (largest == WeaponSize.SMALL) c = h;
 		else if (largest == WeaponSize.MEDIUM) c = h;
 		else c = g;
+		
+		
 		tooltip.addRow(Alignment.MID, c, "Small / Medium",
 				Alignment.MID, c, "+" + (int) BONUS_SMALL_1,
-				Alignment.MID, g, "---",
+				Alignment.MID, reallyG, "---",
 				Alignment.MID, c, "" + (int)BONUS_MAX_1);
 		
 		if (largest == WeaponSize.LARGE) c = h;

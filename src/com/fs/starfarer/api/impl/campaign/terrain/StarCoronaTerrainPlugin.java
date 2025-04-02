@@ -1,9 +1,10 @@
 package com.fs.starfarer.api.impl.campaign.terrain;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.EnumSet;
 import java.util.List;
+
+import java.awt.Color;
 
 import org.lwjgl.util.vector.Vector2f;
 
@@ -201,6 +202,8 @@ public class StarCoronaTerrainPlugin extends BaseRingTerrain implements AuroraRe
 			
 			float intensity = getIntensityAtPoint(fleet.getLocation());
 			if (intensity <= 0) return;
+			
+			if (fleet.hasTag(Tags.FLEET_IGNORES_CORONA)) return;
 
 			String buffId = getModId();
 			float buffDur = 0.1f;

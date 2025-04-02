@@ -1,7 +1,8 @@
 package com.fs.starfarer.api.campaign;
 
-import java.awt.Color;
 import java.util.Set;
+
+import java.awt.Color;
 
 import com.fs.starfarer.api.InteractionDialogImageVisual;
 import com.fs.starfarer.api.campaign.CampaignUIAPI.CoreUITradeMode;
@@ -18,6 +19,8 @@ public interface VisualPanelAPI {
 	void showPersonInfo(PersonAPI person);
 	void showSecondPerson(PersonAPI person);
 	void hideSecondPerson();
+	void hideRankNamePost();
+	
 	void showPlanetInfo(SectorEntityToken planet);
 	void showFleetMemberInfo(FleetMemberAPI member);
 	

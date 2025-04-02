@@ -69,6 +69,15 @@ public class FireAll extends BaseCommandPlugin {
 			trigger = var.memory.getString(var.name);
 		}
 		
+		
+		MemoryAPI mem = getEntityMemory(memoryMap);
+		mem.set("$fireAllTrigger", trigger, 0);
+		boolean intercepted = FireBest.fire(null, dialog, memoryMap, "FireAllIntercept");
+		if (intercepted) {
+			return true; // we did *something*, so: return true
+		}
+		
+		
 		RulesAPI rules = Global.getSector().getRules();
 		List<RuleAPI> matches = rules.getAllMatching(ruleId, trigger, dialog, memoryMap);
 		if (matches.isEmpty()) return false;

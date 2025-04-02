@@ -1,8 +1,9 @@
 package com.fs.starfarer.api.campaign.impl.items;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
+
+import java.awt.Color;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CargoStackAPI;
@@ -10,6 +11,8 @@ import com.fs.starfarer.api.campaign.CargoTransferHandlerAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.econ.SubmarketAPI;
 import com.fs.starfarer.api.graphics.SpriteAPI;
+import com.fs.starfarer.api.impl.SharedUnlockData;
+import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.loading.IndustrySpecAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
@@ -103,6 +106,11 @@ public class IndustryBlueprintItemPlugin extends BaseSpecialItemPlugin implement
 	public void createTooltip(TooltipMakerAPI tooltip, boolean expanded, CargoTransferHandlerAPI transferHandler, Object stackSource) {
 		super.createTooltip(tooltip, expanded, transferHandler, stackSource);
 		
+		// not needed, done in core code that calls this
+//		if (industry.hasTag(Tags.CODEX_UNLOCKABLE)) {
+//			SharedUnlockData.get().reportPlayerAwareOfIndustry(industry.getId(), true);
+//		}
+		
 		float pad = 3f;
 		float opad = 10f;
 		float small = 5f;
@@ -139,6 +147,10 @@ public class IndustryBlueprintItemPlugin extends BaseSpecialItemPlugin implement
 	@Override
 	public void performRightClickAction() {
 		String industryId = stack.getSpecialDataIfSpecial().getData();
+		
+		if (industry.hasTag(Tags.CODEX_UNLOCKABLE)) {
+			SharedUnlockData.get().reportPlayerAwareOfIndustry(industry.getId(), true);
+		}
 		
 		if (Global.getSector().getPlayerFaction().knowsIndustry(industryId)) {
 			Global.getSector().getCampaignUI().getMessageDisplay().addMessage(

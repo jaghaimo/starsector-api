@@ -1,10 +1,11 @@
 package com.fs.starfarer.api.impl.campaign.intel.events;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
+
+import java.awt.Color;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
@@ -240,6 +241,11 @@ public class BaseHostileActivityFactor extends BaseEventFactor implements Hostil
 		}	
 		return false;
 	}
+
+//	@Override
+//	public boolean canEscalate(HostileActivityEventIntel intel, EventStageData stage) {
+//		return true;
+//	}
 }
 
 

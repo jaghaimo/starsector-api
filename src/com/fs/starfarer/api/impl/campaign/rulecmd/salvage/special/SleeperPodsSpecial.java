@@ -198,6 +198,7 @@ public class SleeperPodsSpecial extends BaseSalvageSpecial {
 
 				playerFleet.getFleetData().addOfficer(data.officer);
 				AddRemoveCommodity.addOfficerGainText(data.officer, text);
+				CryopodOfficerGen.incrNumExceptionalCreated();
 				break;
 			case ADMIN:
 				addText("The thawing process completes, and the pod opens. " +

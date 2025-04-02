@@ -1,6 +1,5 @@
 package com.fs.starfarer.api.impl.campaign.intel.bases;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -8,6 +7,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 import java.util.Set;
+
+import java.awt.Color;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.BattleAPI;
@@ -36,6 +37,7 @@ import com.fs.starfarer.api.impl.campaign.ids.FleetTypes;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin;
+import com.fs.starfarer.api.impl.campaign.intel.events.LuddicPathHostileActivityFactor;
 import com.fs.starfarer.api.impl.campaign.rulecmd.HA_CMD;
 import com.fs.starfarer.api.ui.Alignment;
 import com.fs.starfarer.api.ui.SectorMapAPI;
@@ -385,6 +387,10 @@ public class LuddicPathCellsIntel extends BaseIntelPlugin implements RouteFleetS
 			info.addPara(indent + "None", initPad);
 		}
 		
+		if (market.isPlayerOwned() && LuddicPathHostileActivityFactor.isPlayerDefeatedPatherExpedition()) {
+			info.addPara("You defeated a Luddic Path armada sent against you, and " 
+					+ "they are now more reluctant to take active measures against your colonies.", opad);
+		}
 		
 	}
 	

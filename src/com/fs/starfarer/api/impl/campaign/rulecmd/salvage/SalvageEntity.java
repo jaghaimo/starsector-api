@@ -1009,7 +1009,7 @@ public class SalvageEntity extends BaseCommandPlugin {
 					} else if (row.isFighterWing()) {
 						result.addItems(CargoItemType.FIGHTER_CHIP, row.getFighterWingId(), (int) qty);
 					} else if (row.isSpecialItem()) { 
-						if (Items.MODSPEC.equals(row.getSpecialItemId()) && 
+						if (Items.TAG_MODSPEC.equals(row.getSpecialItemId()) && 
 								result.getQuantity(CargoItemType.SPECIAL, 
 										new SpecialItemData(row.getSpecialItemId(), row.getSpecialItemData())) > 0) {
 							continue;
@@ -1085,7 +1085,7 @@ public class SalvageEntity extends BaseCommandPlugin {
 							result.addItems(CargoItemType.FIGHTER_CHIP, row.getFighterWingId(), (int) qty);
 						}
 					} else if (row.isSpecialItem()) {
-						if (Items.MODSPEC.equals(row.getSpecialItemId()) && 
+						if (Items.TAG_MODSPEC.equals(row.getSpecialItemId()) && 
 								result.getQuantity(CargoItemType.SPECIAL, 
 										new SpecialItemData(row.getSpecialItemId(), row.getSpecialItemData())) > 0) {
 							continue;

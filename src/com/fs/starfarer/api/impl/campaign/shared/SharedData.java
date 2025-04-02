@@ -16,6 +16,11 @@ import com.fs.starfarer.api.campaign.econ.MonthlyReport;
 import com.fs.starfarer.api.impl.campaign.CoreScript;
 import com.fs.starfarer.api.util.TimeoutTracker;
 
+/**
+ * Assorted bits of shared data within a single campaign. NOT across campaigns.
+ * @author Alex
+ *
+ */
 public class SharedData {
 	
 	public static class UniqueEncounterData {

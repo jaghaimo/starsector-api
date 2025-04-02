@@ -2,6 +2,7 @@ package com.fs.starfarer.api.impl.campaign.abilities;
 
 import java.awt.Color;
 
+import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.fleet.FleetMemberViewAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
@@ -128,9 +129,13 @@ public class GoDarkAbility extends BaseToggleAbility {
 			status = " (on)";
 		}
 		
-		LabelAPI title = tooltip.addTitle(spec.getName() + status);
-		title.highlightLast(status);
-		title.setHighlightColor(gray);
+		if (!Global.CODEX_TOOLTIP_MODE) {
+			LabelAPI title = tooltip.addTitle(spec.getName() + status);
+			title.highlightLast(status);
+			title.setHighlightColor(gray);
+		} else {
+			tooltip.addSpacer(-10f);
+		}
 
 		float pad = 10f;
 		

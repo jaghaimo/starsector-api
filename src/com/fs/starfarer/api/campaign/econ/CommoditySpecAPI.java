@@ -3,8 +3,9 @@ package com.fs.starfarer.api.campaign.econ;
 import java.util.Set;
 
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.MarketCMD.RaidDangerLevel;
+import com.fs.starfarer.api.loading.WithSourceMod;
 
-public interface CommoditySpecAPI {
+public interface CommoditySpecAPI extends WithSourceMod {
 	String getOrigin();
 	String getIconName();
 	String getIconLargeName();

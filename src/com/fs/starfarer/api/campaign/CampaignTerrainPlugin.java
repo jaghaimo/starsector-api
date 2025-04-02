@@ -1,7 +1,8 @@
 package com.fs.starfarer.api.campaign;
 
-import java.awt.Color;
 import java.util.EnumSet;
+
+import java.awt.Color;
 
 import org.lwjgl.util.vector.Vector2f;
 
@@ -13,6 +14,7 @@ public interface CampaignTerrainPlugin {
 	void init(String terrainId, SectorEntityToken entity, Object param);
 	
 	String getTerrainId();
+	void setTerrainId(String id);
 	
 	/**
 	 * How far away from the viewport the center of this entity can be before it stops being rendered.
@@ -98,6 +100,8 @@ public interface CampaignTerrainPlugin {
 	String getNameAOrAn();
 
 	String getNameForTooltip();
+
+	void setEntity(SectorEntityToken entity);
 }
 
 

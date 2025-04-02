@@ -1,10 +1,11 @@
 package com.fs.starfarer.api.impl.campaign.intel.bases;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Set;
+
+import java.awt.Color;
 
 import org.apache.log4j.Logger;
 import org.json.JSONException;
@@ -253,13 +254,7 @@ public class PirateBaseIntel extends BaseIntelPlugin implements EveryFrameScript
 		
 		Global.getSector().getEconomy().addMarket(market, true);
 
-		baseCommander = market.getFaction().createRandomPerson(Misc.random);
-		baseCommander.setRankId(Ranks.SPACE_CAPTAIN);
-		baseCommander.setPostId(Ranks.POST_STATION_COMMANDER);
-		baseCommander.setImportanceAndVoice(PersonImportance.HIGH, Misc.random);
-		baseCommander.addTag(Tags.CONTACT_UNDERWORLD);
-		baseCommander.getMemoryWithoutUpdate().set(PIRATE_BASE_COMMANDER, true);
-		market.getCommDirectory().addPerson(baseCommander);
+		baseCommander = initBaseCommander();
 		
 		log.info(String.format("Added pirate base in [%s], tier: %s", system.getName(), tier.name()));
 		
@@ -279,6 +274,16 @@ public class PirateBaseIntel extends BaseIntelPlugin implements EveryFrameScript
 		PortsideBarData.getInstance().addEvent(new PirateBaseRumorBarEvent(this));
 	}
 	
+	private PersonAPI initBaseCommander() {
+		baseCommander = market.getFaction().createRandomPerson(Misc.random);
+		baseCommander.setRankId(Ranks.SPACE_CAPTAIN);
+		baseCommander.setPostId(Ranks.POST_STATION_COMMANDER);
+		baseCommander.setImportanceAndVoice(PersonImportance.HIGH, Misc.random);
+		baseCommander.addTag(Tags.CONTACT_UNDERWORLD);
+		baseCommander.getMemoryWithoutUpdate().set(PIRATE_BASE_COMMANDER, true);
+		market.getCommDirectory().addPerson(baseCommander);
+		return baseCommander;
+	}
 	@Override
 	public boolean isHidden() {
 		if (super.isHidden()) return true;
@@ -496,10 +501,12 @@ public class PirateBaseIntel extends BaseIntelPlugin implements EveryFrameScript
 			}
 		}
 		
-		if (tier == PirateBaseTier.TIER_5_3MODULE || tier == PirateBaseTier.TIER_4_3MODULE) {
-			baseCommander.setImportance(PersonImportance.VERY_HIGH);
-		} else {
-			baseCommander.setImportance(PersonImportance.HIGH);
+		if (baseCommander != null) {
+			if (tier == PirateBaseTier.TIER_5_3MODULE || tier == PirateBaseTier.TIER_4_3MODULE) {
+				baseCommander.setImportance(PersonImportance.VERY_HIGH);
+			} else {
+				baseCommander.setImportance(PersonImportance.HIGH);
+			}
 		}
 	}
 	
@@ -822,6 +829,9 @@ public class PirateBaseIntel extends BaseIntelPlugin implements EveryFrameScript
 	}
 	
 	public String getSortString() {
+		if (getTagsForSort().contains(Tags.INTEL_FLEET_LOG) || getTagsForSort().contains(Tags.INTEL_EXPLORATION)) {
+			return getSortStringNewestFirst();
+		}
 		String base = Misc.ucFirst(getFactionForUIColors().getPersonNamePrefix());
 		return base + " Base";
 		//return "Pirate Base";
@@ -1296,6 +1306,7 @@ public class PirateBaseIntel extends BaseIntelPlugin implements EveryFrameScript
 	}
 	
 	public boolean affectsMarket(MarketAPI market) {
+		if (market == null) return false;
 		if (market.isHidden()) return false;
 		if (market.getFaction() == this.market.getFaction()) return false;
 		
@@ -1421,6 +1432,9 @@ public class PirateBaseIntel extends BaseIntelPlugin implements EveryFrameScript
 		return entity;
 	}
 	public PersonAPI getBaseCommander() {
+		if (baseCommander == null) {
+			baseCommander = initBaseCommander();
+		}
 		return baseCommander;
 	}
 	public void setBaseCommander(PersonAPI baseCommander) {

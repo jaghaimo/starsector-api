@@ -8,6 +8,9 @@ public class AbyssalFrequencies {
 	
 	public static float NO_ABYSS_ENCOUNTER_MULT = 10f;
 	
+	public static float DWELLER_FREQ_MIN = 3f;
+	public static float DWELLER_FREQ_MAX = 10f;
+	
 	public static float LIGHT_FREQ = 10f;
 	public static float ROGUE_REGULAR_FREQ = 5f;
 	public static float ROGUE_HINTS_FREQ = 5f;
@@ -42,6 +45,19 @@ public class AbyssalFrequencies {
 			return 0f;
 		}
 		return LIGHT_FREQ;
+	}
+	
+	public static float getAbyssalLightDwellerFrequency(EncounterManager manager, EncounterPoint point) {
+		if (!isPointSuited(point, false, HyperspaceAbyssPluginImpl.DEPTH_THRESHOLD_FOR_DWELLER_LIGHT)) {
+			return 0f;
+		}
+		
+		AbyssalEPData data = (AbyssalEPData) point.custom;
+		float f = DWELLER_FREQ_MIN;
+		f += (DWELLER_FREQ_MAX - DWELLER_FREQ_MIN) * 
+				(data.depth - HyperspaceAbyssPluginImpl.DEPTH_THRESHOLD_FOR_DWELLER_LIGHT) * 0.33f;
+		if (f > DWELLER_FREQ_MAX) f = DWELLER_FREQ_MAX; 
+		return f;
 	}
 	
 	public static float getAbyssalRogueStellarObjectFrequency(EncounterManager manager, EncounterPoint point) {

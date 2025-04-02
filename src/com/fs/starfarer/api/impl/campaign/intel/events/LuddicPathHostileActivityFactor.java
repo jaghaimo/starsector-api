@@ -1,8 +1,9 @@
 package com.fs.starfarer.api.impl.campaign.intel.events;
 
-import java.awt.Color;
 import java.util.List;
 import java.util.Random;
+
+import java.awt.Color;
 
 import org.lwjgl.util.vector.Vector2f;
 
@@ -261,8 +262,9 @@ public class LuddicPathHostileActivityFactor extends BaseHostileActivityFactor i
 		
 		
 		info.addPara("This attack represents a significant resource investment by the Pathers. "
-				+ "If it is defeated, Luddic Path cells Sector-wide will be disrupted.", 
-				opad, Misc.getPositiveHighlightColor(), "disrupted");
+				+ "If it is defeated, Luddic Path cells Sector-wide will be disrupted and Pathers will take "
+				+ "less interest in your operations in the future.", 
+				opad, Misc.getPositiveHighlightColor(), "disrupted", "less interest");
 		
 		
 		stage.beginResetReqList(info, true, "crisis", opad);

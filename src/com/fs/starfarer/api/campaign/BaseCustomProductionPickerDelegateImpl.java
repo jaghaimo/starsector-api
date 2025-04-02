@@ -39,4 +39,49 @@ public class BaseCustomProductionPickerDelegateImpl implements CustomProductionP
 		return true;
 	}
 
+	@Override
+	public String getWeaponColumnNameOverride() {
+		return null;
+	}
+
+	@Override
+	public String getNoMatchingBlueprintsLabelOverride() {
+		return null;
+	}
+
+	@Override
+	public String getMaximumOrderValueLabelOverride() {
+		return null;
+	}
+
+	@Override
+	public String getCurrentOrderValueLabelOverride() {
+		return null;
+	}
+
+	@Override
+	public boolean isUseCreditSign() {
+		return true;
+	}
+
+	@Override
+	public int getCostOverride(Object item) {
+		return -1;
+	}
+
+	@Override
+	public String getItemGoesOverMaxValueStringOverride() {
+		return null;
+	}
+
+	@Override
+	public String getCustomOrderLabelOverride() {
+		return null;
+	}
+
+	@Override
+	public String getNoProductionOrdersLabelOverride() {
+		return null;
+	}
+
 }

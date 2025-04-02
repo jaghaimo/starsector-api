@@ -16,6 +16,7 @@ import com.fs.starfarer.api.util.Misc;
 
 public class CarrierGroup {
 	
+	public static float TOP_SPEED_PERCENT = 10;
 	public static float REPLACEMENT_RATE_PERCENT = 50;
 	
 	public static float OFFICER_MULT = 1.5f;
@@ -42,6 +43,10 @@ public class CarrierGroup {
 				if (isOfficer(stats)) rateBonus *= OFFICER_MULT;
 				float timeMult = 1f / ((100f + rateBonus) / 100f);
 				stats.getFighterRefitTimeMult().modifyMult(id, timeMult);
+				
+				float speedBonus = computeAndCacheThresholdBonus(stats, "cg_top_speed", TOP_SPEED_PERCENT, ThresholdBonusType.FIGHTER_BAYS);
+				if (isOfficer(stats)) speedBonus *= OFFICER_MULT;
+				stats.getMaxSpeed().modifyPercent(id, speedBonus);
 			}
 		}
 		
@@ -63,6 +68,13 @@ public class CarrierGroup {
 			info.addPara("+%s faster fighter replacement rate (maximum: %s)", 0f, hc, hc,
 					"" + (int) rateBonus + "%",
 					"" + (int) REPLACEMENT_RATE_PERCENT + "%");
+			
+			float speedBonus = computeAndCacheThresholdBonus(data, stats, "cg_top_speed", TOP_SPEED_PERCENT, ThresholdBonusType.FIGHTER_BAYS);
+			
+			info.addPara("+%s ship top speed (maximum: %s)", 0f, hc, hc,
+					"" + (int) speedBonus + "%",
+					"" + (int) TOP_SPEED_PERCENT + "%");
+			
 			addFighterBayThresholdInfo(info, data);
 			info.addPara(indent + "Effect increased by %s for ships with officers, including flagship",
 					0f, tc, hc, 

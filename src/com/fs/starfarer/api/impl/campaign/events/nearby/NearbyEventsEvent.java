@@ -1,6 +1,5 @@
 package com.fs.starfarer.api.impl.campaign.events.nearby;
 
-import java.awt.Color;
 import java.text.DecimalFormat;
 import java.text.ParseException;
 import java.util.HashSet;
@@ -9,6 +8,8 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Random;
 import java.util.Set;
+
+import java.awt.Color;
 
 import org.lwjgl.util.vector.Vector2f;
 
@@ -262,13 +263,14 @@ public class NearbyEventsEvent extends BaseEventPlugin implements RouteFleetSpaw
 		picker.add(DistressEventType.DERELICT_SHIP, 10f);
 
 		DistressEventType type = picker.pick();
-		if (TEST_MODE) type = DistressEventType.PIRATE_AMBUSH;
+		//if (TEST_MODE) type = DistressEventType.PIRATE_AMBUSH;
+		if (TEST_MODE) type = DistressEventType.DERELICT_SHIP;
 		
 		if (type == DistressEventType.NORMAL) {
 			generateDistressCallNormal(system);
 		} else if (type == DistressEventType.PIRATE_AMBUSH) {
 			generateDistressCallAmbush(system);
-		} else if (type == DistressEventType.PIRATE_AMBUSH_TRAP || TEST_MODE) {
+		} else if (type == DistressEventType.PIRATE_AMBUSH_TRAP) {
 			generateDistressCallAmbushTrap(system);
 		} else if (type == DistressEventType.DERELICT_SHIP) {
 			generateDistressDerelictShip(system);

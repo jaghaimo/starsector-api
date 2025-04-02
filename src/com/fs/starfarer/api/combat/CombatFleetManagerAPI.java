@@ -18,6 +18,7 @@ public interface CombatFleetManagerAPI {
 	public interface AssignmentInfo {
 		CombatAssignmentType getType();
 		AssignmentTargetAPI getTarget();
+		List<DeployedFleetMemberAPI> getAssignedMembers();
 	}
 	
 	

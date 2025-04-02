@@ -1,10 +1,11 @@
 package com.fs.starfarer.api.impl.combat;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+
+import java.awt.Color;
 
 import org.lwjgl.util.vector.Vector2f;
 
@@ -206,10 +207,19 @@ public class DroneStrikeStats extends BaseShipSystemScript implements DroneStrik
 //				drone.setHitpoints(-1f);
 				
 				//float thickness = 16f;
+//				EmpArcParams params = new EmpArcParams();
+//				params.segmentLengthMult = 4f;
+//				//params.glowSizeMult = 0.5f;
+//				params.brightSpotFadeFraction = 0.33f;
+//				params.brightSpotFullFraction = 1f;
+////				params.movementDurMax = 0.2f;
+//				params.flickerRateMult = 0.7f;
+				
+				
 				float thickness = 26f;
 				float coreWidthMult = 0.67f;
 				EmpArcEntityAPI arc = engine.spawnEmpArcVisual(ship.getLocation(), ship,
-						missile.getLocation(), missile, thickness, new Color(255,100,100,255), Color.white);
+						missile.getLocation(), missile, thickness, new Color(255,100,100,255), Color.white, null);
 				arc.setCoreWidthOverride(thickness * coreWidthMult);
 				arc.setSingleFlickerMode();
 			} else {

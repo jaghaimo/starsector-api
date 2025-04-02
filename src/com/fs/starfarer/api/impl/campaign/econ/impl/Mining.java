@@ -99,6 +99,9 @@ public class Mining extends BaseIndustry implements MarketImmigrationModifier{
 	@Override
 	public String getCurrentImage() {
 		float size = market.getSize();
+		if (market.getPlanetEntity() != null && market.getPlanetEntity().isGasGiant()) {
+			return Global.getSettings().getSpriteName("industry", "mining_gas_giant");
+		}
 		if (size <= SIZE_FOR_SMALL_IMAGE) {
 			return Global.getSettings().getSpriteName("industry", "mining_low");
 		}

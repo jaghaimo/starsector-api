@@ -37,6 +37,10 @@ public class BaseCombatLayeredRenderingPlugin implements CombatLayeredRenderingP
 	public boolean isExpired() {
 		return false;
 	}
+	
+	public CombatEntityAPI getEntity() {
+		return entity;
+	}
 
 	public void render(CombatEngineLayers layer, ViewportAPI viewport) {
 //		float x = 0;

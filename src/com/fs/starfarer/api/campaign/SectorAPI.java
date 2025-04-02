@@ -1,8 +1,9 @@
 package com.fs.starfarer.api.campaign;
 
-import java.awt.Color;
 import java.util.List;
 import java.util.Map;
+
+import java.awt.Color;
 
 import org.lwjgl.util.vector.Vector2f;
 
@@ -359,6 +360,12 @@ public interface SectorAPI {
 	void removeStarSystemNextFrame(StarSystemAPI system);
 
 	SectorEntityToken getMousedOverEntity();
+
+	MarketAPI getCurrentlyOpenMarket();
+	void setCurrentlyOpenMarket(MarketAPI currentlyOpenMarket);
+
+	boolean isInSectorGen();
+	void setInSectorGen(boolean isInSectorGen);
 
 }
 

@@ -1,16 +1,18 @@
 package com.fs.starfarer.api.impl.campaign.intel.events;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
+
+import java.awt.Color;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.campaign.comm.IntelInfoPlugin;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.impl.campaign.enc.SlipstreamPirateEPEC;
+import com.fs.starfarer.api.impl.campaign.fleets.EconomyFleetRouteManager;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.intel.bases.PirateBaseIntel;
 import com.fs.starfarer.api.impl.campaign.rulecmd.HA_CMD;
@@ -275,6 +277,10 @@ public class PirateBasePirateActivityCause2 extends BaseHostileActivityCause2 {
 	
 
 	public float getMagnitudeContribution(StarSystemAPI system) {
+		if (EconomyFleetRouteManager.ENEMY_STRENGTH_CHECK_EXCLUDE_PIRATES) {
+			return 0f;
+		}
+		
 		List<MarketAPI> markets = Misc.getMarketsInLocation(system, Factions.PLAYER);
 		float maxSize = 0f;
 		for (MarketAPI market : markets) {

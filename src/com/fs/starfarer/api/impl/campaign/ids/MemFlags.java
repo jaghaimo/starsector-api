@@ -71,6 +71,8 @@ public class MemFlags {
 	 */
 	public static final String MARKET_HAS_CUSTOM_INTERACTION_OPTIONS = "$hasCustomInteractionOptions";
 	
+	public static final String MARKET_CAN_ALWAYS_INCENTIVIZE_GROWTH = "$marketCanAlwaysIncentivizeGrowth";
+	
 	public static final String MARKET_EXTRA_SUSPICION = "$marketExtraSuspicion";
 	public static final String PATROL_EXTRA_SUSPICION = "$patrolExtraSuspicion";
 	
@@ -81,6 +83,7 @@ public class MemFlags {
 	public static final String FLEET_DO_NOT_IGNORE_PLAYER = "$cfai_doNotIgnorePlayer";
 	public static final String FLEET_IGNORES_OTHER_FLEETS = "$cfai_ignoreOtherFleets";
 	public static final String FLEET_IGNORED_BY_OTHER_FLEETS = "$cfai_ignoredByOtherFleets";
+	public static final String FLEET_IGNORED_BY_FACTION = "$cfai_ignoredByFaction";
 	
 	public static final String FLEET_PATROL_DISTANCE = "$cfai_patrolDist";
 	

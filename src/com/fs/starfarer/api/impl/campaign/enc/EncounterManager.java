@@ -37,6 +37,7 @@ public class EncounterManager implements EveryFrameScript, EncounterPointProvide
 		CREATORS.add(new OutsideSystemNoEPEC());
 		
 		CREATORS.add(new AbyssalLightEPEC());
+		CREATORS.add(new AbyssalLightDwellerEPEC());
 		CREATORS.add(new AbyssalRogueStellarObjectEPEC());
 		CREATORS.add(new AbyssalRogueStellarObjectDireHintsEPEC());
 		CREATORS.add(new AbyssalNoEPEC());
@@ -45,17 +46,17 @@ public class EncounterManager implements EveryFrameScript, EncounterPointProvide
 	
 	public static EncounterManager getInstance() {
 		String key = "$encounterManager";
-		EncounterManager calc = (EncounterManager) Global.getSector().getMemoryWithoutUpdate().get(key);
-		if (calc == null) {
+		EncounterManager manager = (EncounterManager) Global.getSector().getMemoryWithoutUpdate().get(key);
+		if (manager == null) {
 			for (EveryFrameScript curr : Global.getSector().getScripts()) {
 				if (curr instanceof EncounterManager) {
-					calc = (EncounterManager) curr;
-					Global.getSector().getMemoryWithoutUpdate().set(key, calc);
+					manager = (EncounterManager) curr;
+					Global.getSector().getMemoryWithoutUpdate().set(key, manager);
 					break;
 				}
 			}
 		}
-		return calc;
+		return manager;
 	}
 	
 	protected Object readResolve() {

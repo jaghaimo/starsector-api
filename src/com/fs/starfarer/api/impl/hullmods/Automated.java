@@ -30,20 +30,24 @@ public class Automated extends BaseHullMod {
 
 
 	public String getDescriptionParam(int index, HullSize hullSize) {
-		if (index == 0) return "" + (int)Math.round(MAX_CR_PENALTY * 100f) + "%";
+		//if (index == 0) return "" + (int)Math.round(MAX_CR_PENALTY * 100f) + "%";
 		return null;
 	}
 	
 	public void addPostDescriptionSection(TooltipMakerAPI tooltip, HullSize hullSize, ShipAPI ship, float width, boolean isForModSpec) {
+		float opad = 10f;
+		if (ship == null || ship.getHullSpec().hasTag(Tags.AUTOMATED_RECOVERABLE)) {
+			tooltip.addPara("Automated ships usually require specialized equipment and expertise to maintain, "
+					+ "resulting in a maximum combat readiness penalty of %s. "
+					+ "This penalty can be offset by a fleet commander skilled in the use of "
+					+ "automated ships.", opad, Misc.getHighlightColor(),
+					"" + (int)Math.round(MAX_CR_PENALTY * 100f) + "%");
+		}
+		
 		if (isInPlayerFleet(ship)) {
-			float opad = 10f;
 			boolean noPenalty = isAutomatedNoPenalty(ship);
-			String usually = "";
-			if (noPenalty) usually = "usually ";
-//			tooltip.addPara("Automated ships " + usually + "require specialized equipment and expertise to maintain. In a " +
-//					"fleet lacking these, they're virtually useless, with their maximum combat " +
-//					"readiness being reduced by %s.", opad, Misc.getHighlightColor(),
-//					"" + (int)Math.round(MAX_CR_PENALTY * 100f) + "%");
+//			String usually = "";
+//			if (noPenalty) usually = "usually ";
 			if (noPenalty) {
 				tooltip.addPara("However, this ship was automated in a fashion that does not require special expertise "
 						+ "to maintain. Some of the techniques used are poorly understood, likely dating to "
@@ -74,5 +78,12 @@ public class Automated extends BaseHullMod {
 		return member.getHullSpec().hasTag(Tags.TAG_AUTOMATED_NO_PENALTY) ||
 				member.getVariant().hasTag(Tags.TAG_AUTOMATED_NO_PENALTY);
 	}
+	
+	
+//	@Override
+//	public void applyEffectsToFighterSpawnedByShip(ShipAPI fighter, ShipAPI ship, String id) {
+//		new RoilingSwarmEffect(fighter);
+//	}
+
 
 }

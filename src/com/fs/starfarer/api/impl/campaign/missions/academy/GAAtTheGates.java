@@ -9,6 +9,7 @@ import java.util.Map;
 import org.lwjgl.util.vector.Vector2f;
 
 import com.fs.starfarer.api.Global;
+import com.fs.starfarer.api.campaign.BattleAPI;
 import com.fs.starfarer.api.campaign.CampaignEventListener.FleetDespawnReason;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.CargoAPI;
@@ -274,6 +275,7 @@ public class GAAtTheGates extends GABaseMission implements CurrentLocationChange
 		connectWithGlobalFlag(Stage.TALK_TO_HEGEMON, Stage.MEET_DAUD, "$gaATG_goToDaudMeeting");
 		connectWithGlobalFlag(Stage.MEET_DAUD, Stage.DO_SCANS, "$gaATG_gotDaudDeal");
 		connectWithGlobalFlag(Stage.DO_SCANS, Stage.RETURN_WITH_DEAL_AND_SCANS, "$gaATG_scannedSixGates");
+		
 		setStageOnGlobalFlag(Stage.FIRST_JANUS_EXPERIMENT, "$gaATG_useJanusPrototype");
 		setStageOnGlobalFlag(Stage.FIRST_JANUS_RESULTS, "$gaATG_firstJanusResults");
 		setStageOnGlobalFlag(Stage.COUREUSE_MISSION, "$gaATG_getMissionFromCoureuse");
@@ -452,26 +454,25 @@ public class GAAtTheGates extends GABaseMission implements CurrentLocationChange
 		Color h = Misc.getHighlightColor();
 		
 		// Contact the High Hegemon
-		if (currentStage == Stage.TALK_TO_COUREUSE || 
-				currentStage == Stage.TALK_TO_YARIBAY ) {
+		//if (currentStage == Stage.TALK_TO_COUREUSE || 
+		if (		currentStage == Stage.TALK_TO_YARIBAY ) {
 			info.addPara("Contact Horus Yaribay to get envoy credentials so you can contact High Hegemon Daud.", opad);
+			//info.addImages(width, 128, opad, opad, horus_yaribay.getPortraitSprite(),horus_yaribay.getFaction().getCrest());
 			addStandardMarketDesc("Gens Yaribay is based " + kazeron.getOnOrAt(), kazeron, info, opad);
 		} 
 		else if (currentStage == Stage.TALK_TO_HEGEMON)
 		{
 			info.addPara("Set up a private meeting with High Hegemon Baikal Daud and get him to accept the deal with Provost Baird.", opad);
+			//info.addImages(width, 128, opad, opad, daud.getPortraitSprite(),daud.getFaction().getCrest());
 			info.addPara("Optional: provide Daud with encrypted Yaribay comm codes.", opad);
 			addStandardMarketDesc("The High Hegemon's office is based " + chicomoztoc.getOnOrAt(), chicomoztoc, info, opad);
 		}
 		else if (currentStage == Stage.MEET_DAUD)
 		{
 			info.addPara("Meet with High Hegemon Baikal Daud on a shipyard orbiting Chicomoztoc.", opad);
+			//info.addImages(width, 128, opad, opad, daud.getPortraitSprite(),daud.getFaction().getCrest());
 			info.addPara("Optional: provide Daud with encrypted Yaribay comm codes.", opad);
 			addStandardMarketDesc("The High Hegemon's office is based " + chicomoztoc.getOnOrAt(), chicomoztoc, info, opad);
-		}
-		else if (currentStage == Stage.MEET_DAUD)
-		{
-			
 		}
 		else if (currentStage == Stage.RETURN_WITH_DEAL_AND_SCANS)
 		{
@@ -492,10 +493,11 @@ public class GAAtTheGates extends GABaseMission implements CurrentLocationChange
 					 GateEntityPlugin.getNumGatesScanned() < 6 )
 		{
 			info.addPara("Scan six Gates with the instruments provided by Academician Coureuse.", opad);
-			bullet(info);
 			info.addPara("%s Gates scanned", opad, Misc.getHighlightColor(), 
 					"" + GateEntityPlugin.getNumGatesScanned() + " / 6");
 			unindent(info);
+			//info.addImage(Global.getSettings().getSpriteName("illustrations", "dead_gate"), width, opad);
+			bullet(info);
 		}
 		
 		// Everything else in the mission arc.
@@ -528,6 +530,7 @@ public class GAAtTheGates extends GABaseMission implements CurrentLocationChange
 		else if (currentStage == Stage.RETURN_TO_KANTA)
 		{
 			info.addPara("Return Clone Loke to Warlord Kanta.", opad);
+			//info.addImages(width, 128, opad, opad, kanta.getPortraitSprite(), kanta.getFaction().getCrest());
 		}
 		else if (currentStage == Stage.GO_TO_MAGEC_GATE)
 		{
@@ -580,6 +583,7 @@ public class GAAtTheGates extends GABaseMission implements CurrentLocationChange
 		if (currentStage == Stage.TALK_TO_COUREUSE || 
 				currentStage == Stage.TALK_TO_YARIBAY ) {
 			info.addPara("Contact Horus Yaribay on Kazeron to get envoy credentials", tc, pad);
+			
 			pad = 0;
 		} 
 		else if (currentStage == Stage.TALK_TO_HEGEMON)
@@ -881,6 +885,14 @@ public class GAAtTheGates extends GABaseMission implements CurrentLocationChange
 						encounterGateHegemony.getMemoryWithoutUpdate().unset("$GAATGhegemonyScanFleet");
 					}
 				}
+				
+				@Override
+				public void reportBattleOccurred(CampaignFleetAPI fleet, CampaignFleetAPI primaryWinner, BattleAPI battle) {
+					if (battle.wasFleetDefeated(fleet, primaryWinner)) {
+						fleet.getMemoryWithoutUpdate().unset("$gaATG_hegScanFleet");
+						encounterGateHegemony.getMemoryWithoutUpdate().unset("$GAATGhegemonyScanFleet");
+					}
+				}
 			});
 			
 			encounterHegemonyFleet = fleets.get(0);
@@ -938,6 +950,13 @@ public class GAAtTheGates extends GABaseMission implements CurrentLocationChange
 						encounterGateLuddic.getMemoryWithoutUpdate().unset("$GAATGluddicScanGate");
 					}
 				}
+				
+				public void reportBattleOccurred(CampaignFleetAPI fleet, CampaignFleetAPI primaryWinner, BattleAPI battle) {
+					if (battle.wasFleetDefeated(fleet, primaryWinner)) {
+						fleet.getMemoryWithoutUpdate().unset("$gaATG_luddicScanFleet");
+						encounterGateLuddic.getMemoryWithoutUpdate().unset("$GAATGluddicScanGate");
+					}
+				}
 			});
 		}
 		else if(chosenEncounter == ScanEncounterVariation.PATHER)
@@ -971,7 +990,6 @@ public class GAAtTheGates extends GABaseMission implements CurrentLocationChange
 			triggerOrderFleetPatrol(true, gate);
 			
 			triggerFleetSetPatrolLeashRange(250f); // fairly close.
-			//triggerMakeFleetIgnoredByOtherFleets();
 			triggerSetFleetMissionRef("$gaATG_ref"); // so they can be made unimportant
 			triggerFleetAddDefeatTrigger("GAATGpirateScanFleetDefeated");
 			triggerMakeFleetGoAwayAfterDefeat();
@@ -993,7 +1011,20 @@ public class GAAtTheGates extends GABaseMission implements CurrentLocationChange
 						encounterGatePirate.getMemoryWithoutUpdate().unset("$GAATGpirateScanGate");
 					}
 				}
+				@Override
+				public void reportBattleOccurred(CampaignFleetAPI fleet, CampaignFleetAPI primaryWinner, BattleAPI battle) {
+					// if our pirates get defeated in any battle...
+					if (battle.wasFleetDefeated(fleet, primaryWinner)) {
+						fleet.getMemoryWithoutUpdate().unset("$gaATG_pirateScanFleet");
+						encounterGatePirate.getMemoryWithoutUpdate().unset("$GAATGpirateScanGate");
+					}
+				}
 			});
+			
+			fleet.addEventListener(new BaseFleetEventListener() {
+				
+			});
+			
 			encounterGatePirate = gate;
 			encounterPirateFleet = fleet;
 			setFlag(gate, "$GAATGpirateScanGate", true);
@@ -1064,11 +1095,24 @@ public class GAAtTheGates extends GABaseMission implements CurrentLocationChange
 						encounterGateTT.getMemoryWithoutUpdate().unset("$GAATGttScanGate");
 					}
 				}
+				
+				@Override
+				public void reportBattleOccurred(CampaignFleetAPI fleet, CampaignFleetAPI primaryWinner, BattleAPI battle) {
+					if (battle.wasFleetDefeated(fleet, primaryWinner)) {
+						fleet.getMemoryWithoutUpdate().unset("$gaATG_ttScanFleet");
+						encounterGateTT.getMemoryWithoutUpdate().unset("$GAATGttScanGate");
+					}
+				}
+			});
+			
+			fleet.addEventListener(new BaseFleetEventListener() {
+				
 			});
 			
 			//encounterHegemonyFleet = fleets.get(0);
 
 			encounterGateTT = gate;
+			encounterTTFleet = fleet; // unused?
 			setFlag(gate, "$GAATGttScanGate", true);
 		}
 		else

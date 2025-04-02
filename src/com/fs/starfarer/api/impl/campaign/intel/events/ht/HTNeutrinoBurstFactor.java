@@ -22,7 +22,7 @@ public class HTNeutrinoBurstFactor extends BaseOneTimeFactor {
 		return new BaseFactorTooltip() {
 			@Override
 			public void createTooltip(TooltipMakerAPI tooltip, boolean expanded, Object tooltipParam) {
-				tooltip.addPara("A neurtno burst emitted from an overloaded sensor array, revealing nearby slipstreams and "
+				tooltip.addPara("A neutrino burst emitted from an overloaded sensor array, revealing nearby slipstreams and "
 						+ "providing useful topography readings.",
 						0f);
 			}

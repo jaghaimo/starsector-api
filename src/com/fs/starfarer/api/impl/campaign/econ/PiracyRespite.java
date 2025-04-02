@@ -9,6 +9,7 @@ import com.fs.starfarer.api.util.Misc;
 
 public class PiracyRespite extends BaseMarketConditionPlugin {
 
+	public static boolean NEW_MODE = true;
 	//public static float ACCESSIBILITY_BONUS = 0.3f;
 	public static float ACCESSIBILITY_BONUS = 0.1f;
 	public static float ACCESSIBILITY_BONUS_KANTA = 0.1f;
@@ -26,6 +27,7 @@ public class PiracyRespite extends BaseMarketConditionPlugin {
 	}
 
 	public void apply(String id) {
+		if (NEW_MODE) return;
 		String text = Misc.ucFirst(getName().toLowerCase());
 		if (KantaCMD.playerHasProtection()) {
 			text += " (with Kanta's Protection)";
@@ -34,6 +36,7 @@ public class PiracyRespite extends BaseMarketConditionPlugin {
 	}
 
 	public void unapply(String id) {
+		if (NEW_MODE) return;
 		market.getAccessibilityMod().unmodifyFlat(id);
 	}
 	
@@ -46,23 +49,36 @@ public class PiracyRespite extends BaseMarketConditionPlugin {
 		
 		float opad = 10f;
 		
-		int rem = Math.round(script.getDaysRemaining());
-		String days = rem == 1 ? "day" : "days";
-
-		if (KantaCMD.playerHasProtection()) {
-			tooltip.addPara("Your colonies have %s, resulting in an "
-					+ "increased accessibility bonus.", opad, Misc.getPositiveHighlightColor(),
-					"Kanta's Protection");
-		}
-		
-		if (rem >= 0) {
-			tooltip.addPara("%s accessibility (%s " + days + " remaining).", 
-					opad, h,
-					"+" + (int)Math.round(getBonus() * 100f) + "%", "" + rem);
+		if (NEW_MODE) {
+			if (KantaCMD.playerHasProtection()) {
+				tooltip.addPara("Your colonies have %s, and pirates are wary of "
+						+ "attacking trade fleets serving them lest they attract her wrath. "
+						+ "Shipping disruptions from piracy are virtually eliminated.", opad, Misc.getPositiveHighlightColor(),
+						"Kanta's Protection");
+			} else {
+				tooltip.addPara("You've defeated a large armada sent against your colonies, and pirates are wary of "
+						+ "attacking trade fleets serving them, "
+						+ "resulting in a greatly reduced number of shipping disruptions.", opad);
+			}
 		} else {
-			tooltip.addPara("%s accessibility.", 
-					opad, h,
-					"+" + (int)Math.round(getBonus() * 100f) + "%");
+			int rem = Math.round(script.getDaysRemaining());
+			String days = rem == 1 ? "day" : "days";
+	
+			if (KantaCMD.playerHasProtection()) {
+				tooltip.addPara("Your colonies have %s, resulting in an "
+						+ "increased accessibility bonus.", opad, Misc.getPositiveHighlightColor(),
+						"Kanta's Protection");
+			}
+			
+			if (rem >= 0) {
+				tooltip.addPara("%s accessibility (%s " + days + " remaining).", 
+						opad, h,
+						"+" + (int)Math.round(getBonus() * 100f) + "%", "" + rem);
+			} else {
+				tooltip.addPara("%s accessibility.", 
+						opad, h,
+						"+" + (int)Math.round(getBonus() * 100f) + "%");
+			}
 		}
 	}
 

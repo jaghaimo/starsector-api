@@ -14,6 +14,7 @@ import com.fs.starfarer.api.campaign.CustomCampaignEntityPlugin;
 import com.fs.starfarer.api.campaign.CustomEntitySpecAPI;
 import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
+import com.fs.starfarer.api.campaign.JumpPointAPI;
 import com.fs.starfarer.api.campaign.LocationAPI;
 import com.fs.starfarer.api.campaign.OptionPanelAPI;
 import com.fs.starfarer.api.campaign.RuleBasedDialog;
@@ -708,7 +709,7 @@ public class Objectives extends BaseCommandPlugin {
 				cargo.sort();
 				for (CargoStackAPI stack : cargo.getStacksCopy()) {
 					if (stack.isSpecialStack()) {
-						WormholeManager.get().addWormhole(stack.getSpecialDataIfSpecial(), entity, dialog);
+						JumpPointAPI jp = WormholeManager.get().addWormhole(stack.getSpecialDataIfSpecial(), entity, dialog);
 						
 						if (!DebugFlags.OBJECTIVES_DEBUG) {
 							playerCargo.removeCommodity(Commodities.FUEL, WORMHOLE_FUEL);
@@ -716,6 +717,10 @@ public class Objectives extends BaseCommandPlugin {
 						}
 						
 						FireBest.fire(null, dialog, memoryMap, "WormholeDeploymentFinished");
+						
+						if (jp != null) {
+							MiscCMD.addWormholeIntelIfNeeded(jp, text, true);
+						}
 						break;
 					}
 				}
@@ -731,8 +736,8 @@ public class Objectives extends BaseCommandPlugin {
 				
 				boolean makeUnstable = WormholeManager.willWormholeBecomeUnstable(entity);
 				if (makeUnstable) {
-					panel.addPara("Once the operation is completed, the wormhole will take about a cycle to stablize,"
-							+ "before it can be used.", 10f, Misc.getHighlightColor(), "cycle");
+					panel.addPara("Once the operation is completed, the wormhole will take about half a cycle to stablize,"
+							+ "before it can be used.", 10f, Misc.getHighlightColor(), "half a cycle");
 				} else {
 					panel.addPara("Usually, the wormhole will take about a cycle to stablize, but you have "
 							+ "calibration data that will allow it to be used immediately.", 10f);

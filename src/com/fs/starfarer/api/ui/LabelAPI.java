@@ -37,4 +37,5 @@ public interface LabelAPI {
 	void advance(float amount);
 	void setHighlightOnMouseover(boolean highlightOnMouseover);
 	void setColor(Color color);
+	Color getColor();
 }

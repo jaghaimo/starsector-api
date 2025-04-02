@@ -2,6 +2,8 @@ package com.fs.starfarer.api.combat;
 
 import org.lwjgl.util.vector.Vector2f;
 
+import com.fs.starfarer.api.plugins.ShipSystemStatsScript;
+
 public interface ShipSystemAPI {
 	
 	public static enum SystemState {
@@ -71,4 +73,6 @@ public interface ShipSystemAPI {
 	void setAmmoReloadProgress(float progress);
 
 	boolean canBeActivated();
+
+	ShipSystemStatsScript getScript();
 }

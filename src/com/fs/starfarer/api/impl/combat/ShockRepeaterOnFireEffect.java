@@ -1,7 +1,8 @@
 package com.fs.starfarer.api.impl.combat;
 
-import java.awt.Color;
 import java.util.Iterator;
+
+import java.awt.Color;
 
 import org.lwjgl.util.vector.Vector2f;
 
@@ -97,6 +98,7 @@ public class ShockRepeaterOnFireEffect implements OnFireEffectPlugin {
 				if (otherShip.isHulk()) continue;
 				//if (!otherShip.isAlive()) continue;
 				if (otherShip.isPhased()) continue;
+				if (!otherShip.isTargetable()) continue;
 			}
 			
 			if (other.getCollisionClass() == CollisionClass.NONE) continue;

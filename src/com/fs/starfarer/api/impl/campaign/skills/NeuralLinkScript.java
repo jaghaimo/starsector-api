@@ -1,10 +1,11 @@
 package com.fs.starfarer.api.impl.campaign.skills;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+
+import java.awt.Color;
 
 import org.lwjgl.input.Mouse;
 
@@ -510,12 +511,18 @@ public class NeuralLinkScript extends BaseEveryFrameCombatPlugin {
 	
 	public float getTransferTime() {
 		float total = 0f;
+		boolean instant = false;
 		for (ShipAPI ship : linked) {
 			if (ship.getFleetMember() == null) continue;
 			total += ship.getFleetMember().getDeploymentPointsCost();
+			if (ship == Global.getCombatEngine().getPlayerShip() &&
+					ship.getMutableStats().getDynamic().getValue(Stats.INSTANT_NEURAL_TRANSFER_FROM, 0f) > 0f) {
+				instant = true;
+			}
 		}
 		
 		total = Math.round(total);
+		if (instant) total = 0f;
 		
 		//INSTANT_TRANSFER_DP = 0f;
 		

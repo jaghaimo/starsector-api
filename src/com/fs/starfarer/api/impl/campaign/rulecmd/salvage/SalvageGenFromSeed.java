@@ -486,6 +486,8 @@ public class SalvageGenFromSeed extends BaseCommandPlugin {
 				memory.set("$hasNonStation", hasNonStation, 0);
 				
 				defenders.setLocation(entity.getLocation().x, entity.getLocation().y);
+				
+				//Global.getSector().getCampaignUI().restartEncounterMusic(entity);
 			}
 		} else {
 			memory.set("$hasDefenders", false, 0);

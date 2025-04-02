@@ -1,6 +1,5 @@
 package com.fs.starfarer.api.impl.campaign.events;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
@@ -9,6 +8,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 import java.util.Set;
+
+import java.awt.Color;
 
 import org.apache.log4j.Logger;
 
@@ -552,6 +553,10 @@ public class OfficerManagerEvent extends BaseEventPlugin implements CallableEven
 			int num = eliteSkillsNumOverride;
 			if (num < 0) {
 				num = plugin.getMaxEliteSkills(person);
+				if (num > 1 && faction != null && faction.getId().startsWith("tri")) {
+					//System.out.println("32fwefwe");
+					num = plugin.getMaxEliteSkills(person);
+				}
 			}
 			addEliteSkills(person, num, random);
 		}

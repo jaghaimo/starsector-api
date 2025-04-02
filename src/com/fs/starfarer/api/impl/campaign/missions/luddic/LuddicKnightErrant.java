@@ -8,7 +8,6 @@ import org.lwjgl.util.vector.Vector2f;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
-import com.fs.starfarer.api.campaign.RepLevel;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
@@ -17,12 +16,7 @@ import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.FleetTypes;
 import com.fs.starfarer.api.impl.campaign.ids.People;
 import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithSearch;
-import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.FleetQuality;
-import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.FleetSize;
-import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.OfficerNum;
-import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.OfficerQuality;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
-import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.Misc.Token;
 
 public class LuddicKnightErrant extends HubMissionWithSearch {
@@ -114,7 +108,7 @@ public class LuddicKnightErrant extends HubMissionWithSearch {
 	
 		beginStageTrigger(Stage.COMPLETED);
 		triggerMakeNonStoryCritical("chalcedon", "mazalot", "gilead");
-		triggerSetGlobalMemoryValue("$lke_completed", true);
+		triggerSetGlobalMemoryValue("$lke_missionCompleted", true);
 		endTrigger();
 		
 		

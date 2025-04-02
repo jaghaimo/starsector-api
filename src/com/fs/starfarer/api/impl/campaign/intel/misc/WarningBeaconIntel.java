@@ -1,13 +1,13 @@
 package com.fs.starfarer.api.impl.campaign.intel.misc;
 
-import java.awt.Color;
 import java.util.Set;
+
+import java.awt.Color;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
-import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.RemnantThemeGenerator.RemnantSystemType;
@@ -133,9 +133,9 @@ public class WarningBeaconIntel extends BaseIntelPlugin {
 		Set<String> tags = super.getIntelTags(map);
 		tags.add(Tags.INTEL_BEACON);
 		
-		if (getRemnantType() != null) {
-			tags.add(Factions.REMNANTS);
-		}
+//		if (getRemnantType() != null) {
+//			tags.add(Factions.REMNANTS);
+//		}
 		
 		return tags;
 	}

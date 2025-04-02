@@ -22,6 +22,11 @@ public class SensorBurstAbilityAI extends BaseAbilityAI {
 		interval.advance(days);
 		if (!interval.intervalElapsed()) return;
 		
+//		if (fleet.isInCurrentLocation()) {
+//			ability.activate();
+//			return;
+//		}
+		
 		MemoryAPI mem = fleet.getMemoryWithoutUpdate();
 		
 		if (ability.isActiveOrInProgress()) {

@@ -7,6 +7,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import com.fs.starfarer.api.characters.MutableCharacterStatsAPI;
 import com.fs.starfarer.api.combat.ShipHullSpecAPI.ShipTypeHints;
 import com.fs.starfarer.api.loading.FighterWingSpecAPI;
@@ -185,6 +188,10 @@ public interface ShipVariantAPI {
 
 	boolean isMayAutoAssignWeapons();
 	void setMayAutoAssignWeapons(boolean mayAutoAssign);
+
+	String getFullDesignationForShip();
+
+	JSONObject toJSONObject() throws JSONException;
 
 
 }

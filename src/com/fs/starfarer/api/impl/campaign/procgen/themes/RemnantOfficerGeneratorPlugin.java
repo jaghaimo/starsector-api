@@ -34,7 +34,9 @@ import com.fs.starfarer.api.util.WeightedRandomPicker;
 
 public class RemnantOfficerGeneratorPlugin extends BaseGenerateFleetOfficersPlugin {
 	
+	protected boolean putCoresOnCivShips = false;
 	protected boolean forceIntegrateCores = false;
+	protected boolean forceNoCommander = false;
 	protected boolean derelictMode = false;
 	protected float coreMult = 1f;
 	
@@ -46,6 +48,23 @@ public class RemnantOfficerGeneratorPlugin extends BaseGenerateFleetOfficersPlug
 		this.coreMult = coreMult;
 	}
 	
+
+	
+	public boolean isForceNoCommander() {
+		return forceNoCommander;
+	}
+
+	public void setForceNoCommander(boolean forceNoCommander) {
+		this.forceNoCommander = forceNoCommander;
+	}
+
+	public boolean isPutCoresOnCivShips() {
+		return putCoresOnCivShips;
+	}
+
+	public void setPutCoresOnCivShips(boolean putCoresOnCivShips) {
+		this.putCoresOnCivShips = putCoresOnCivShips;
+	}
 
 	public boolean isForceIntegrateCores() {
 		return forceIntegrateCores;
@@ -127,8 +146,9 @@ public class RemnantOfficerGeneratorPlugin extends BaseGenerateFleetOfficersPlug
 		
 		int maxSize = 0;
 		for (FleetMemberAPI member : members) {
+			if (!Misc.isAutomated(member)) continue;
 			if (member.isFighterWing()) continue;
-			if (member.isCivilian()) continue;
+			if (member.isCivilian() && !putCoresOnCivShips) continue;
 			int size = member.getHullSpec().getHullSize().ordinal();
 			if (size > maxSize) {
 				maxSize = size;
@@ -138,8 +158,8 @@ public class RemnantOfficerGeneratorPlugin extends BaseGenerateFleetOfficersPlug
 		List<FleetMemberAPI> allWithOfficers = new ArrayList<FleetMemberAPI>();
 		int addedCores = 0;
 		for (FleetMemberAPI member : members) {
-			
-			if (member.isCivilian()) continue;
+			if (!Misc.isAutomated(member)) continue;
+			if (member.isCivilian() && !putCoresOnCivShips) continue;
 			if (member.isFighterWing()) continue;
 			
 			float fp = member.getFleetPointCost();
@@ -199,7 +219,7 @@ public class RemnantOfficerGeneratorPlugin extends BaseGenerateFleetOfficersPlug
 				
 				PersonAPI person = plugin.createPerson(pick, fleet.getFaction().getId(), random);
 				member.setCaptain(person);
-				if (integrate) {
+				if (integrate && !Commodities.OMEGA_CORE.equals(pick)) {
 					integrateAndAdaptCoreForAIFleet(member);
 				}
 				
@@ -221,7 +241,7 @@ public class RemnantOfficerGeneratorPlugin extends BaseGenerateFleetOfficersPlug
 		
 		
 		FleetMemberAPI flagship = withOfficers.pick();
-		if (!derelictMode && flagship != null) {
+		if (!derelictMode && !forceNoCommander && flagship != null) {
 			PersonAPI commander = flagship.getCaptain();
 			commander.setRankId(Ranks.SPACE_COMMANDER);
 			commander.setPostId(Ranks.POST_FLEET_COMMANDER);

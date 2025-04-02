@@ -2,6 +2,7 @@ package com.fs.starfarer.api.campaign.impl.items;
 
 import java.awt.Color;
 
+import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CargoTransferHandlerAPI;
 import com.fs.starfarer.api.impl.campaign.shared.WormholeManager.WormholeItemData;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
@@ -29,7 +30,11 @@ public class WormholeAnchorPlugin extends BaseSpecialItemPlugin {
 		Color b = Misc.getButtonTextColor();
 		b = Misc.getPositiveHighlightColor();
 
-		tooltip.addTitle(getName());
+		if (!Global.CODEX_TOOLTIP_MODE) {
+			tooltip.addTitle(getName());
+		} else {
+			tooltip.addSpacer(-opad);
+		}
 		
 		String design = getDesignType();
 		if (design != null) {
@@ -37,6 +42,9 @@ public class WormholeAnchorPlugin extends BaseSpecialItemPlugin {
 		}
 		
 		if (!spec.getDesc().isEmpty()) {
+			if (Global.CODEX_TOOLTIP_MODE) {
+				tooltip.setParaSmallInsignia();
+			}
 			tooltip.addPara(spec.getDesc(), Misc.getTextColor(), opad);
 		}
 		

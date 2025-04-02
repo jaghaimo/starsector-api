@@ -12,6 +12,11 @@ public interface HyperspaceAbyssPlugin {
 	boolean isInAbyss(SectorEntityToken entity);
 	float getAbyssalDepth(Vector2f loc);
 	float getAbyssalDepth(SectorEntityToken entity);
+	
+	float getAbyssalDepth(Vector2f loc, boolean uncapped);
+	float getAbyssalDepth(SectorEntityToken entity, boolean uncapped);
+	
+	
 	void advance(float amount);
 	List<StarSystemAPI> getAbyssalSystems();
 }

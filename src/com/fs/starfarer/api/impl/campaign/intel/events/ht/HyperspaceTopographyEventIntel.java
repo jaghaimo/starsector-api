@@ -1,10 +1,11 @@
 package com.fs.starfarer.api.impl.campaign.intel.events.ht;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.EnumSet;
 import java.util.List;
 import java.util.Set;
+
+import java.awt.Color;
 
 import org.lwjgl.util.vector.Vector2f;
 
@@ -142,8 +143,8 @@ public class HyperspaceTopographyEventIntel extends BaseEventIntel implements Fl
 		
 		addStage(Stage.START, 0);
 		addStage(Stage.SLIPSTREAM_NAVIGATION, PROGRESS_1, StageIconSize.MEDIUM);
-		addStage(Stage.SLIPSTREAM_DETECTION, PROGRESS_2, StageIconSize.MEDIUM);
-		addStage(Stage.REVERSE_POLARITY, PROGRESS_3, StageIconSize.LARGE);
+		addStage(Stage.REVERSE_POLARITY, PROGRESS_2, StageIconSize.LARGE);
+		addStage(Stage.SLIPSTREAM_DETECTION, PROGRESS_3, StageIconSize.MEDIUM);
 		addStage(Stage.HYPERFIELD_OPTIMIZATION, PROGRESS_4, StageIconSize.MEDIUM);
 		addStage(Stage.GENERATE_SLIPSURGE, PROGRESS_5, StageIconSize.LARGE);
 		addStage(Stage.TOPOGRAPHIC_DATA, PROGRESS_MAX, true, StageIconSize.SMALL);

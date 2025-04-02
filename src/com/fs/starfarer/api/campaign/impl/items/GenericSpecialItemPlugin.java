@@ -1,8 +1,9 @@
 package com.fs.starfarer.api.campaign.impl.items;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
+
+import java.awt.Color;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CargoTransferHandlerAPI;
@@ -85,19 +86,82 @@ public class GenericSpecialItemPlugin extends BaseSpecialItemPlugin {
 		}
 		
 	}
+	
+	public static void addSpecialNotesSection(Industry industry, InstallableItemEffect effect, TooltipMakerAPI tooltip, boolean withRequiresText, float pad) {
+		String name = effect.getSpecialNotesName();
+		if (name == null) return;
+		
+		List<String> reqs = effect.getSpecialNotes(industry);
+		if (reqs == null) return;
+
+		Color [] hl = new Color[reqs.size()];
+		
+		int i = 0;
+		String list = "";
+		for (String curr : reqs) {
+			list += curr + ", ";
+			hl[i] = Misc.getBasePlayerColor();
+			i++;
+		}
+		if (!list.isEmpty()) {
+			list = list.substring(0, list.length() - 2);
+			list = Misc.ucFirst(list);
+			reqs.set(0, Misc.ucFirst(reqs.get(0)));
+			
+			float bulletWidth = 70f;
+			if (withRequiresText) {
+				tooltip.setBulletWidth(bulletWidth);
+				tooltip.setBulletColor(Misc.getGrayColor());
+				tooltip.setBulletedListMode(name + ":");
+			}
+			
+			LabelAPI label = tooltip.addPara(list, Misc.getGrayColor(), pad);
+			label.setHighlightColors(hl);
+			label.setHighlight(reqs.toArray(new String[0]));
+			
+			if (withRequiresText) {
+				tooltip.setBulletedListMode(null);
+			}
+		}
+		
+	}
+	
+	protected transient boolean tooltipIsForPlanetSearch = false;
+	public boolean isTooltipIsForPlanetSearch() {
+		return tooltipIsForPlanetSearch;
+	}
+	public void setTooltipIsForPlanetSearch(boolean tooltipIsForPlanetSearch) {
+		this.tooltipIsForPlanetSearch = tooltipIsForPlanetSearch;
+	}
+	
 
 	@Override
 	public void createTooltip(TooltipMakerAPI tooltip, boolean expanded, CargoTransferHandlerAPI transferHandler, Object stackSource) {
 		//super.createTooltip(tooltip, expanded, transferHandler, stackSource, false);
 		
+		// doing this in core code instead where it catches all special items not just colony ones
+//		if (!Global.CODEX_TOOLTIP_MODE) {
+//			if (getSpec().hasTag(Items.TAG_COLONY_ITEM) || getSpec().hasTag(Tags.CODEX_UNLOCKABLE)) {
+//				SharedUnlockData.get().reportPlayerAwareOfSpecialItem(getId(), true);
+//			}
+//		}
+		
 		float pad = 0f;
 		float opad = 10f;
 		
-		tooltip.addTitle(getName());
+		if (!Global.CODEX_TOOLTIP_MODE) {
+			tooltip.addTitle(getName());
+		} else {
+			tooltip.addSpacer(-opad);
+		}
 		
-		LabelAPI design = Misc.addDesignTypePara(tooltip, getDesignType(), opad);
+		LabelAPI design = null;
 		
-		float bulletWidth = 70f;
+		if (!tooltipIsForPlanetSearch) {
+			design = Misc.addDesignTypePara(tooltip, getDesignType(), opad);
+		}
+		
+		float bulletWidth = 86f;
 		if (design != null) {
 			bulletWidth = design.computeTextWidth("Design type: ");
 		}
@@ -111,23 +175,38 @@ public class GenericSpecialItemPlugin extends BaseSpecialItemPlugin {
 			addInstalledInSection(tooltip, opad);
 			tooltip.setBulletedListMode("Requires:");
 			addReqsSection(null, effect, tooltip, false, pad);
+			if (effect.getSpecialNotesName() != null) {
+				tooltip.setBulletedListMode(effect.getSpecialNotesName() + ":");
+				addSpecialNotesSection(null, effect, tooltip, false, pad);
+			}
 			
 			tooltip.setBulletedListMode(null);
 			
-			if (!spec.getDesc().isEmpty()) {
-				Color c = Misc.getTextColor();
-				//if (useGray) c = Misc.getGrayColor();
-				tooltip.addPara(spec.getDesc(), c, opad);
+			if (Global.CODEX_TOOLTIP_MODE) {
+				tooltip.setParaSmallInsignia();
 			}
-			effect.addItemDescription(null, tooltip, new SpecialItemData(getId(), null), InstallableItemDescriptionMode.CARGO_TOOLTIP);
+			
+			if (!tooltipIsForPlanetSearch) {
+				if (!spec.getDesc().isEmpty()) {
+					Color c = Misc.getTextColor();
+					//if (useGray) c = Misc.getGrayColor();
+					tooltip.addPara(spec.getDesc(), c, opad);
+				}
+			}
+			
+			if (!tooltipIsForPlanetSearch) {
+				effect.addItemDescription(null, tooltip, new SpecialItemData(getId(), null), InstallableItemDescriptionMode.CARGO_TOOLTIP);
+			}
 		} else {
-			if (!spec.getDesc().isEmpty()) {
+			if (!spec.getDesc().isEmpty() && !tooltipIsForPlanetSearch) {
 				Color c = Misc.getTextColor();
+				if (Global.CODEX_TOOLTIP_MODE) {
+					tooltip.setParaSmallInsignia();
+				}
 				tooltip.addPara(spec.getDesc(), c, opad);
 			}
 		}
 			
-
 		addCostLabel(tooltip, opad, transferHandler, stackSource);
 	}
 	

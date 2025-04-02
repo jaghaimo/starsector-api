@@ -80,7 +80,15 @@ public class BlackMarketPlugin extends BaseSubmarketPlugin {
 			FactionDoctrineAPI doctrine = market.getFaction().getDoctrine().clone();
 //			FactionDoctrineAPI doctrine = submarket.getFaction().getDoctrine().clone();
 //			doctrine.setWarships(3);
-//			doctrine.setCarriers(2);
+			if (doctrine.getWarships() > 0) {
+				doctrine.setWarships(Math.max(2, doctrine.getWarships()));
+			}
+			if (doctrine.getCarriers() > 0) {
+				doctrine.setCarriers(Math.max(2, doctrine.getCarriers()));
+			}
+			if (doctrine.getPhaseShips() > 0) {
+				doctrine.setPhaseShips(Math.max(2, doctrine.getPhaseShips()));
+			}
 //			doctrine.setPhaseShips(2);
 			
 			addShips(market.getFactionId(),

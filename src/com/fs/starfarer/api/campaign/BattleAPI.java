@@ -101,4 +101,6 @@ public interface BattleAPI {
 	List<CampaignFleetAPI> getStationSide();
 	void genCombined(boolean withStation);
 	boolean join(CampaignFleetAPI fleet, BattleSide side);
+	boolean wasFleetDefeated(CampaignFleetAPI fleet, CampaignFleetAPI primaryWinner);
+	boolean wasFleetVictorious(CampaignFleetAPI fleet, CampaignFleetAPI primaryWinner);
 }

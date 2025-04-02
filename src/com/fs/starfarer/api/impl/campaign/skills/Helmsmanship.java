@@ -108,7 +108,7 @@ public class Helmsmanship {
 		}
 		
 		public String getEffectDescription(float level) {
-			return "The 0-flux speed boost is activated at any flux level, as long as the ship is not generating flux or is venting / overloaded";
+			return "The 0-flux speed boost is activated at any flux level, if the ship is not generating flux or is venting / overloaded";
 		}
 		
 		public String getEffectPerLevelDescription() {

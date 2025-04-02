@@ -4,7 +4,10 @@ import java.util.Map;
 
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.PlanetAPI;
+import com.fs.starfarer.api.campaign.econ.MarketConditionAPI;
 import com.fs.starfarer.api.combat.MutableStat;
+import com.fs.starfarer.api.impl.campaign.ids.Conditions;
+import com.fs.starfarer.api.impl.campaign.procgen.themes.DerelictThemeGenerator;
 
 public interface SurveyPlugin {
 	void init(CampaignFleetAPI fleet, PlanetAPI planet);
@@ -39,6 +42,30 @@ public interface SurveyPlugin {
 	MutableStat getXPMult();
 	
 	String getSurveyDataType(PlanetAPI planet);
+	
+	default int getSurveyDataScore(PlanetAPI planet) {
+		if (planet.getMarket() == null) return 0;
+		int count = 0;
+		float value = 0;
+		for (MarketConditionAPI mc : planet.getMarket().getConditions()) {
+			if (DerelictThemeGenerator.interestingConditionsWithRuins.contains(mc.getId())) {
+				count++;
+			}
+			if (mc.getGenSpec() != null) {
+				//value += mc.getGenSpec().getXpMult();
+				value += mc.getGenSpec().getRank();
+			}
+		}
+		
+		if (planet.getMarket().hasCondition(Conditions.HABITABLE)) {
+			value += 4f;
+		}
+		
+		float hazard = planet.getMarket().getHazardValue();
+		value -= (hazard - 1f) * 2f;
+		
+		return (int) value;
+	};
 
 	Map<String, Integer> getOutpostConsumed();
 	

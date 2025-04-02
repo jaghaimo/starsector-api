@@ -5,15 +5,12 @@ import java.util.List;
 import java.util.Map;
 
 import com.fs.starfarer.api.Global;
-import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.PersonImportance;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
-import com.fs.starfarer.api.campaign.CampaignEventListener.FleetDespawnReason;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
-import com.fs.starfarer.api.campaign.listeners.BaseFleetEventListener;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Entities;
@@ -55,7 +52,7 @@ public class GAFindingCoureuse extends GABaseMission {
 	protected int kapteynBribeCost;
 	protected int kapteynBarBribeCost;
 	protected SectorEntityToken scavengerFleet;
-	
+	protected SectorEntityToken probeEmpty;
 	
 	@Override
 	protected boolean create(MarketAPI createdAt, boolean barEvent) {
@@ -126,7 +123,10 @@ public class GAFindingCoureuse extends GABaseMission {
 		picker.add(probe1, 1f);
 		picker.add(probe2, 1f);
 		picker.add(probe3, 1f);
-		picker.pick().addTag("empty");
+		
+		// set the empty probe aside - set it as unimportant after the scavenger probe is found
+		probeEmpty = picker.pick(); 
+		probeEmpty.addTag("empty");
 
 		// "probe4" is the interior components of the looted probe, held by the scavenger.
 		
@@ -236,16 +236,19 @@ public class GAFindingCoureuse extends GABaseMission {
 			SectorEntityToken scavenger = getEntityFromGlobal("$gaFC_probeScavenger");
 			//LocationAPI dropLocation = scavenger.getContainingLocation();
 			SectorEntityToken probe4 = probeSystem.addCustomEntity(null, "Ejected Cargo Pod", Entities.CARGO_POD_SPECIAL, Factions.NEUTRAL);
-					//does this need Misc.genUID() as first parameter?
 			probe4.setLocation(scavenger.getLocation().x, scavenger.getLocation().y); // redundant?
-			// spawnEntity(Entities.GENERIC_PROBE, scavenger.getLocation());
 			probe4.addTag("gaFC_lootedProbe"); //unused?
 			Misc.makeImportant(probe4, getMissionId());
-			//Misc.makeUnimportant(scavenger, getMissionId());
+			
+			// get rid of the highlight on the empty probe
+			// Yes, the player doesn't *know* it's empty, but this saves time and bother.
+			//Misc.makeUnimportant(probeEmpty, getMissionId());
+			
 			// it was getting re-flagged "important" when updateData etc was called since
 			// it was still noted down that it should be important during the current stage
 			// this method call cleans that out
 			makeUnimportant(scavenger);
+			makeUnimportant(probeEmpty);
 			
 			return true;
 		}

@@ -14,7 +14,6 @@ import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetFactoryV3;
 import com.fs.starfarer.api.impl.campaign.fleets.FleetParamsV3;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
-import com.fs.starfarer.api.impl.campaign.ids.HullMods;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.RemnantSeededFleetManager;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.SalvageSpecialInteraction.SalvageSpecialData;
@@ -119,7 +118,7 @@ public class TransmitterTrapSpecial extends BaseSalvageSpecial {
 				FleetMemberAPI flagship = fleet.getFlagship();
 				boolean makeAggressive = false;
 				if (flagship != null) {
-					makeAggressive = flagship.getVariant().hasHullMod(HullMods.AUTOMATED);
+					makeAggressive = Misc.isAutomated(flagship.getVariant());
 				}
 				makeFleetInterceptPlayer(fleet, makeAggressive, true, 30f);
 			}
@@ -143,7 +142,7 @@ public class TransmitterTrapSpecial extends BaseSalvageSpecial {
 					FleetMemberAPI flagship = fleet.getFlagship();
 					boolean makeAggressive = false;
 					if (flagship != null) {
-						makeAggressive = flagship.getVariant().hasHullMod(HullMods.AUTOMATED);
+						makeAggressive = Misc.isAutomated(flagship.getVariant());
 					}
 					makeFleetInterceptPlayer(fleet, makeAggressive, true, 30f);
 					foundSomeFleets = true;
@@ -175,7 +174,7 @@ public class TransmitterTrapSpecial extends BaseSalvageSpecial {
 				FleetMemberAPI flagship = closest.getFlagship();
 				boolean makeAggressive = false;
 				if (flagship != null) {
-					makeAggressive = flagship.getVariant().hasHullMod(HullMods.AUTOMATED);
+					makeAggressive = Misc.isAutomated(flagship.getVariant());
 				}
 				makeFleetInterceptPlayer(closest, makeAggressive, true, 30f);
 				return;
@@ -203,7 +202,7 @@ public class TransmitterTrapSpecial extends BaseSalvageSpecial {
 			FleetMemberAPI flagship = fleet.getFlagship();
 			boolean makeAggressive = false;
 			if (flagship != null) {
-				makeAggressive = flagship.getVariant().hasHullMod(HullMods.AUTOMATED);
+				makeAggressive = Misc.isAutomated(flagship.getVariant());
 			}
 			makeFleetInterceptPlayer(fleet, makeAggressive, true, 30f);
 			

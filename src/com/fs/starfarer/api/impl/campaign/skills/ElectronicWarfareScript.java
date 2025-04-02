@@ -128,7 +128,7 @@ public class ElectronicWarfareScript extends BaseEveryFrameCombatPlugin {
 
 		String icon = Global.getSettings().getSpriteName("ui", "icon_tactical_electronic_warfare");
 		
-		if (playerPenalty > 0) {
+		if (playerPenalty > 0 || eTotal > 0) {
 			applyPenalty(engine.getFleetManager(0), playerPenalty, eMax);
 			
 			String sMax = "";
@@ -141,7 +141,7 @@ public class ElectronicWarfareScript extends BaseEveryFrameCombatPlugin {
 			engine.maintainStatusForPlayerShip(KEY_STATUS_ENEMY_RATING, icon, title, data, eMax > 0);
 		}
 		
-		if (enemyPenalty > 0) {
+		if (enemyPenalty > 0 || pTotal > 0) {
 			applyPenalty(engine.getFleetManager(1), enemyPenalty, pMax);
 			
 			String sMax = "";

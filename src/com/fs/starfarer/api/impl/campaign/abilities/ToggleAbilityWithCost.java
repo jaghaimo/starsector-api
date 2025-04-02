@@ -1,8 +1,9 @@
 package com.fs.starfarer.api.impl.campaign.abilities;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
+
+import java.awt.Color;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.BuffManagerAPI.Buff;
@@ -183,8 +184,6 @@ public class ToggleAbilityWithCost extends BaseToggleAbility {
 		
 		float pad = 10f;
 		
-		float fuelCost = computeFuelCost(true);
-		float supplyCost = computeSupplyCost(true);
 		
 		String preventsRecovery = "";
 		if (!canRecoverCRWhileActive(true)) {
@@ -197,70 +196,117 @@ public class ToggleAbilityWithCost extends BaseToggleAbility {
 		}
 		preventsRecovery += deactivateCost;
 		
-		if (supplyCost > 0 && fuelCost > 0) {
-			if (prefix == null) {
-				prefix = "C";
-			} else {
-				prefix += " c";
+		if (Global.CODEX_TOOLTIP_MODE) {
+			String years = "year's";
+			if (getFuelCostMult(true) != 1) years = "years'";
+			
+			if (getFuelCostMult(true) > 0 && getCRCostMult(true) > 0) {
+				if (prefix == null) {
+					prefix = "C";
+				} else {
+					prefix += " c";
+				}
+				tooltip.addPara(prefix + "onsumes %s light " + years + " worth of fuel and reduces the combat readiness "
+						+ "of all ships by %s of a combat deployment." + preventsRecovery,
+						pad, 
+						highlight,
+						"" + Misc.getRoundedValue(getFuelCostMult(true)),
+						"" + (int) Math.round(getCRCostMult(true) * 100f) + "%");
+			} else if (getCRCostMult(true) > 0) {
+				if (prefix == null) {
+					prefix = "R";
+				} else {
+					prefix += " r";
+				}
+				tooltip.addPara(prefix + "educes the combat readiness "
+						+ "of all ships by %s of a combat deployment." + preventsRecovery,
+						pad, 
+						highlight,
+						"" + Misc.getRoundedValue(getFuelCostMult(true)),
+						"" + (int) Math.round(getCRCostMult(true) * 100f) + "%");
+			} else if (getFuelCostMult(true) > 0) {
+				if (prefix == null) {
+					prefix = "C";
+				} else {
+					prefix += " c";
+				}
+				tooltip.addPara(prefix + "onsumes %s light " + years + " worth of fuel." + preventsRecovery,
+						pad, 
+						highlight,
+						"" + Misc.getRoundedValue(getFuelCostMult(true)));
 			}
-			tooltip.addPara(prefix + "onsumes %s fuel and reduces the combat readiness" +
+			
+			if (getCRCostMult(true) > 0) {
+				tooltip.addPara("Ships with insufficient combat readiness may suffer damage when the ability is activated.", pad);
+			}
+		} else {		
+			float fuelCost = computeFuelCost(true);
+			float supplyCost = computeSupplyCost(true);
+			if (supplyCost > 0 && fuelCost > 0) {
+				if (prefix == null) {
+					prefix = "C";
+				} else {
+					prefix += " c";
+				}
+				tooltip.addPara(prefix + "onsumes %s fuel and reduces the combat readiness" +
+							" of all ships, costing up to %s supplies to recover." + preventsRecovery, pad, 
+							highlight,
+							Misc.getRoundedValueMaxOneAfterDecimal(fuelCost),
+							Misc.getRoundedValueMaxOneAfterDecimal(supplyCost));
+			} else if (supplyCost > 0) {
+				if (prefix == null) {
+					prefix = "R";
+				} else {
+					prefix += " r";
+				}
+				tooltip.addPara(prefix + "educes the combat readiness" +
 						" of all ships, costing up to %s supplies to recover." + preventsRecovery, pad, 
 						highlight,
-						Misc.getRoundedValueMaxOneAfterDecimal(fuelCost),
 						Misc.getRoundedValueMaxOneAfterDecimal(supplyCost));
-		} else if (supplyCost > 0) {
-			if (prefix == null) {
-				prefix = "R";
-			} else {
-				prefix += " r";
-			}
-			tooltip.addPara(prefix + "educes the combat readiness" +
-					" of all ships, costing up to %s supplies to recover." + preventsRecovery, pad, 
-					highlight,
-					Misc.getRoundedValueMaxOneAfterDecimal(supplyCost));
-		} else if (fuelCost > 0) {
-			if (prefix == null) {
-				prefix = "C";
-			} else {
-				prefix += " c";
-			}
-			tooltip.addPara(prefix + "onsumes %s fuel." + preventsRecovery, pad, 
-					highlight,
-					Misc.getRoundedValueMaxOneAfterDecimal(fuelCost));
-		}
-		
-		if (fuelCost > 0 && fuelCost > fleet.getCargo().getFuel()) {
-			tooltip.addPara("Not enough fuel.", bad, pad);
-		} else {
-			addOtherNotUsableReason(tooltip, expanded);
-		}
-		
-		List<FleetMemberAPI> nonReady = getNonReadyShips(true);
-		if (!nonReady.isEmpty()) {
-			tooltip.addPara("Some ships don't have enough combat readiness " +
-							"and may suffer damage if the ability is activated:", pad, 
-							Misc.getNegativeHighlightColor(), "may suffer damage");
-			int j = 0;
-			int max = 4;
-			float initPad = 5f;
-			for (FleetMemberAPI member : nonReady) {
-				if (j >= max) {
-					if (nonReady.size() > max + 1) {
-						tooltip.addPara(BaseIntelPlugin.INDENT + "... and several other ships", initPad);
-						break;
-					}
-				}
-				String str = "";
-				if (!member.isFighterWing()) {
-					str += member.getShipName() + ", ";
-					str += member.getHullSpec().getHullNameWithDashClass();
+			} else if (fuelCost > 0) {
+				if (prefix == null) {
+					prefix = "C";
 				} else {
-					str += member.getVariant().getFullDesignationWithHullName();
+					prefix += " c";
 				}
-				
-				tooltip.addPara(BaseIntelPlugin.INDENT + str, initPad);
-				initPad = 0f;
-				j++;
+				tooltip.addPara(prefix + "onsumes %s fuel." + preventsRecovery, pad, 
+						highlight,
+						Misc.getRoundedValueMaxOneAfterDecimal(fuelCost));
+			}
+			
+			if (fuelCost > 0 && fuelCost > fleet.getCargo().getFuel()) {
+				tooltip.addPara("Not enough fuel.", bad, pad);
+			} else {
+				addOtherNotUsableReason(tooltip, expanded);
+			}
+			
+			List<FleetMemberAPI> nonReady = getNonReadyShips(true);
+			if (!nonReady.isEmpty()) {
+				tooltip.addPara("Some ships don't have enough combat readiness " +
+								"and may suffer damage if the ability is activated:", pad, 
+								Misc.getNegativeHighlightColor(), "may suffer damage");
+				int j = 0;
+				int max = 4;
+				float initPad = 5f;
+				for (FleetMemberAPI member : nonReady) {
+					if (j >= max) {
+						if (nonReady.size() > max + 1) {
+							tooltip.addPara(BaseIntelPlugin.INDENT + "... and several other ships", initPad);
+							break;
+						}
+					}
+					String str = "";
+					if (!member.isFighterWing()) {
+						str += member.getShipName() + ", ";
+						str += member.getHullSpec().getHullNameWithDashClass();
+					} else {
+						str += member.getVariant().getFullDesignationWithHullName();
+					}
+					
+					tooltip.addPara(BaseIntelPlugin.INDENT + str, initPad);
+					initPad = 0f;
+					j++;
+				}
 			}
 		}
 	}

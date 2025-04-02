@@ -3,8 +3,9 @@ package com.fs.starfarer.api.campaign;
 import java.util.Set;
 
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.MarketCMD.RaidDangerLevel;
+import com.fs.starfarer.api.loading.WithSourceMod;
 
-public interface SpecialItemSpecAPI {
+public interface SpecialItemSpecAPI extends WithSourceMod {
 	String getIconName();
 	
 	int getStackSize();

@@ -4,12 +4,13 @@ import com.fs.starfarer.api.campaign.BattleAPI;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.CampaignProgressIndicatorAPI;
 import com.fs.starfarer.api.campaign.CargoAPI;
+import com.fs.starfarer.api.campaign.CargoAPI.CargoItemType;
 import com.fs.starfarer.api.campaign.CargoStackAPI;
+import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.FleetStubAPI;
 import com.fs.starfarer.api.campaign.JumpPointAPI;
 import com.fs.starfarer.api.campaign.OrbitAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
-import com.fs.starfarer.api.campaign.CargoAPI.CargoItemType;
 import com.fs.starfarer.api.campaign.ai.CampaignFleetAIAPI;
 import com.fs.starfarer.api.campaign.comm.CommMessageAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
@@ -63,4 +64,6 @@ public interface FactoryAPI {
 	CampaignFleetAIAPI createFleetAI(CampaignFleetAPI fleet);
 	OrbitAPI createCircularOrbitPointingDown(SectorEntityToken focus, float angle, float orbitRadius, float orbitDays);
 	//CargoStackAPI createCargoStack(CargoItemType type, Object data, Object data2, CargoAPI cargo);
+	CampaignFleetAPI createEmptyFleet(FactionAPI faction, boolean aiMode);
+	void setCurrentlyOpenMarket(MarketAPI currentlyOpenMarket);
 }

@@ -1,7 +1,8 @@
 package com.fs.starfarer.api.impl.campaign.intel.misc;
 
-import java.awt.Color;
 import java.util.Set;
+
+import java.awt.Color;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CargoAPI;
@@ -60,6 +61,9 @@ public class CargoPodsIntel extends FleetLogIntel {
 			info.showCargo(cargo, 20, true, opad);
 		}
 
+		addLogTimestamp(info, tc, opad);
+		
+		addDeleteButton(info, width);
 	}
 
 	@Override
@@ -74,7 +78,8 @@ public class CargoPodsIntel extends FleetLogIntel {
 	}
 
 	public String getSortString() {
-		return "Stabilized Cargo Pods";
+		//return "Stabilized Cargo Pods";
+		return super.getSortString();
 	}
 
 	public String getName() {

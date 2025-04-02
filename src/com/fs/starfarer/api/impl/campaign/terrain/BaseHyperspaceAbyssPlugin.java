@@ -15,9 +15,17 @@ public abstract class BaseHyperspaceAbyssPlugin implements HyperspaceAbyssPlugin
 	}
 
 	public float getAbyssalDepth(SectorEntityToken entity) {
-		return getAbyssalDepth(entity.getLocation());
+		return getAbyssalDepth(entity.getLocation(), false);
 	}
-	public abstract float getAbyssalDepth(Vector2f loc);
+	public float getAbyssalDepth(Vector2f loc) {
+		return getAbyssalDepth(loc, false);
+	}
+	
+	public float getAbyssalDepth(SectorEntityToken entity, boolean uncapped) {
+		return getAbyssalDepth(entity.getLocation(), uncapped);
+	}
+	public abstract float getAbyssalDepth(Vector2f loc, boolean uncapped);
+	
 	
 	public boolean isInAbyss(Vector2f loc) {
 		return getAbyssalDepth(loc) > 0;

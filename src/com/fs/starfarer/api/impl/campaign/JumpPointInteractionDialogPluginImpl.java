@@ -1,11 +1,12 @@
 package com.fs.starfarer.api.impl.campaign;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import java.awt.Color;
 
 import org.lwjgl.input.Keyboard;
 
@@ -31,6 +32,7 @@ import com.fs.starfarer.api.impl.campaign.ids.Abilities;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.rulecmd.DumpMemory;
+import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.MiscCMD;
 import com.fs.starfarer.api.impl.campaign.shared.WormholeManager;
 import com.fs.starfarer.api.impl.campaign.tutorial.TutorialMissionIntel;
 import com.fs.starfarer.api.loading.Description;
@@ -305,6 +307,11 @@ public class JumpPointInteractionDialogPluginImpl implements InteractionDialogPl
 					showWarningIfNeeded();
 				}
 			}
+			
+			if (isWormhole()) {
+				MiscCMD.addWormholeIntelIfNeeded(jumpPoint, textPanel, false);
+			}
+				
 			createInitialOptions();
 			break;
 		case STABILIZE:

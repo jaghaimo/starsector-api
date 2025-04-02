@@ -422,6 +422,12 @@ public interface MarketAPI extends HasMemory {
 	void setRetainSuppressedConditionsSetWhenEmpty(Boolean retainSuppressedConditionsSetWhenEmpty);
 	float getGrossIncome();
 	boolean hasFunctionalIndustry(String id);
+	
+	/**
+	 * Transient. Do not use unless the market is a faked-up one.
+	 * @param faction
+	 */
+	void setCachedFaction(FactionAPI faction);
 }
 
 

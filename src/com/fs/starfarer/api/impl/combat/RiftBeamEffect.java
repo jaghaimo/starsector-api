@@ -73,7 +73,7 @@ public class RiftBeamEffect implements EveryFrameWeaponEffectPlugin {
 															  (float) Math.random() * 360f, null);
 		if (source != null) {
 			Global.getCombatEngine().applyDamageModifiersToSpawnedProjectileWithNullWeapon(
-											source, WeaponType.MISSILE, false, mine.getDamage());
+											source, WeaponType.ENERGY, false, mine.getDamage());
 		}
 		
 		

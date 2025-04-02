@@ -1,11 +1,12 @@
 package com.fs.starfarer.api.impl.campaign.terrain;
 
-import java.awt.Color;
 import java.util.Arrays;
 import java.util.Random;
 import java.util.zip.DataFormatException;
 import java.util.zip.Deflater;
 import java.util.zip.Inflater;
+
+import java.awt.Color;
 
 import javax.xml.bind.DatatypeConverter;
 
@@ -109,6 +110,7 @@ public abstract class BaseTiledTerrain extends BaseTerrain {
 				}
 			}
 		}
+		sampleCache = null;
 	}
 	
 	
@@ -336,6 +338,84 @@ public abstract class BaseTiledTerrain extends BaseTerrain {
 		return result;
 	}
 	
+	public static class TileSample {
+		public int texIndex = -1;
+		public float angle = 0;
+		public float xOff = 0;
+		public float yOff = 0;
+		public float weight = 0;
+	}
+	
+	protected transient TileSample [][] sampleCache = null;
+	protected transient int samplesForCache = 0;
+	
+	public boolean isUseSampleCache() {
+		return false;
+	}
+
+	public void forceClearSampleCache() {
+		sampleCache = null;
+	}
+	public void updateSampleCache(int samples, boolean force) {
+		if (tiles == null) return;
+		if (sampleCache != null && samplesForCache == samples && !force) {
+			return;
+		}
+		samplesForCache = samples;
+		
+		//(0, tiles.length, 0, tiles[0].length
+		
+		int cacheW = tiles.length / samples + 1; 
+		int cacheH = tiles[0].length / samples + 1;
+		sampleCache = new TileSample[cacheW][cacheH];
+		
+		float renderSize = getTileRenderSize();
+		renderSize *= samples;
+		
+		for (float i = 0; i <= tiles.length; i+=samples) {
+			if (i < 0 || i >= tiles.length) continue;
+			for (float j = 0; j <= tiles[0].length; j+=samples) {
+				if (j < 0 || j >= tiles[0].length) continue;
+				int texIndex = -1;
+				float angle = 0;
+				float xOff = 0;
+				float yOff = 0;
+				float weight = 0;
+				for (int m = 0; m < samples && i + m <= tiles.length; m++) {
+					if (i + m < 0 || i + m >= tiles.length) continue;
+					for (int n = 0; n < samples && j + n < tiles[0].length; n++) {
+						if (j + n < 0 || j + n >= tiles[0].length) continue;
+						int currIndex = tiles[(int) i + m][(int) j + n];
+						if (currIndex >= 0 && texIndex < 0) {
+							texIndex = currIndex;
+							Random rand = new Random((long) (i + j * tiles.length) * 1000000);
+							angle = rand.nextFloat() * 360f;
+							float offRange = renderSize * 0.25f;
+							xOff = -offRange / 2f + offRange * rand.nextFloat();
+							yOff = -offRange / 2f + offRange * rand.nextFloat();
+//							if (Keyboard.isKeyDown(Keyboard.KEY_O)) {
+//								xOff = yOff = 0f;
+//							}
+						}
+						if (currIndex >= 0) {
+							weight++;
+						}
+					}
+				}
+				TileSample sample = new TileSample();
+				sample.texIndex = texIndex;
+				sample.angle = angle;
+				sample.xOff = xOff;
+				sample.yOff = yOff;
+				sample.weight = weight;
+				
+				sampleCache[(int)i/samples][(int)j/samples] = sample;
+			}
+		}
+	}
+	
+	
+	
 	protected void renderSubArea(float startColumn, float endColumn, float startRow, float endRow, float factor, int samples, float alphaMult) {
 		float x = entity.getLocation().x;
 		float y = entity.getLocation().y;
@@ -397,27 +477,53 @@ public abstract class BaseTiledTerrain extends BaseTerrain {
 					float xOff = 0;
 					float yOff = 0;
 					float weight = 0;
-					for (int m = 0; m < samples && i + m <= endColumn; m++) {
-						if (i + m < 0 || i + m >= tiles.length) continue;
-						for (int n = 0; n < samples && j + n < endRow; n++) {
-							if (j + n < 0 || j + n >= tiles[0].length) continue;
-							int currIndex = tiles[(int) i + m][(int) j + n];
-							if (currIndex >= 0 && texIndex < 0) {
-								texIndex = currIndex;
-								Random rand = new Random((long) (i + j * tiles.length) * 1000000);
-								angle = rand.nextFloat() * 360f;
-								float offRange = renderSize * 0.25f;
-								xOff = -offRange / 2f + offRange * rand.nextFloat();
-								yOff = -offRange / 2f + offRange * rand.nextFloat();
-//								if (Keyboard.isKeyDown(Keyboard.KEY_O)) {
-//									xOff = yOff = 0f;
-//								}
-							}
-							if (currIndex >= 0) {
-								weight++;
+					
+					boolean usingSample = false;
+					if (isUseSampleCache()) {
+						updateSampleCache(samples, false);
+						if (sampleCache != null) {
+							TileSample sample = null;
+							int sampleI = (int)i/samples;
+							int sampleJ = (int)j/samples;
+							if (sampleI >= 0 && sampleI < sampleCache.length &&
+									sampleJ >= 0 && sampleJ < sampleCache[0].length) {
+								sample = sampleCache[sampleI][sampleJ];
+								if (sample != null) {
+									texIndex = sample.texIndex;
+									angle = sample.angle;
+									xOff = sample.xOff;
+									yOff = sample.yOff;
+									weight = sample.weight;
+									usingSample = true;
+								}
 							}
 						}
 					}
+					
+					if (!usingSample) {
+						for (int m = 0; m < samples && i + m <= endColumn; m++) {
+							if (i + m < 0 || i + m >= tiles.length) continue;
+							for (int n = 0; n < samples && j + n < endRow; n++) {
+								if (j + n < 0 || j + n >= tiles[0].length) continue;
+								int currIndex = tiles[(int) i + m][(int) j + n];
+								if (currIndex >= 0 && texIndex < 0) {
+									texIndex = currIndex;
+									Random rand = new Random((long) (i + j * tiles.length) * 1000000);
+									angle = rand.nextFloat() * 360f;
+									float offRange = renderSize * 0.25f;
+									xOff = -offRange / 2f + offRange * rand.nextFloat();
+									yOff = -offRange / 2f + offRange * rand.nextFloat();
+	//								if (Keyboard.isKeyDown(Keyboard.KEY_O)) {
+	//									xOff = yOff = 0f;
+	//								}
+								}
+								if (currIndex >= 0) {
+									weight++;
+								}
+							}
+						}
+					}
+
 					if (texIndex >= 0) {
 						int texCellX = texIndex % params.tW;
 						int texCellY = texIndex / params.tW;
@@ -443,6 +549,7 @@ public abstract class BaseTiledTerrain extends BaseTerrain {
 					}
 				}
 			}
+			
 			GL11.glEnd();
 		}
 	}
@@ -738,7 +845,7 @@ public abstract class BaseTiledTerrain extends BaseTerrain {
 	
 	
 	public static String toHexString(byte[] array) {
-	    return DatatypeConverter.printBase64Binary(array);
+		return DatatypeConverter.printBase64Binary(array);
 	}
 
 	public static byte[] toByteArray(String s) {

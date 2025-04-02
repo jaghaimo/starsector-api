@@ -149,7 +149,7 @@ public class RouteManager implements FleetEventListener {
 		public boolean isInSystem() {
 			if (to == null && from != null && from.getContainingLocation() != null && !from.getContainingLocation().isHyperspace()) return true;
 			
-			if (!from.getContainingLocation().isHyperspace() && 
+			if (from != null && !from.getContainingLocation().isHyperspace() && 
 					from.getContainingLocation() == to.getContainingLocation()) {
 				return true;
 			}

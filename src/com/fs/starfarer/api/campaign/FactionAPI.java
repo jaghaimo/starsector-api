@@ -349,6 +349,8 @@ public interface FactionAPI extends HasMemory {
 	void setSecondaryColorOverride(Color secondaryOverride);
 	int getSecondaryColorSegmentsOverride();
 	void setSecondaryColorSegmentsOverride(int secondaryColorSegmentsOverride);
+	String pickRandomShipName(String prefix);
+	LinkedHashSet<String> getRestrictToVariants();
 	
 	
 }

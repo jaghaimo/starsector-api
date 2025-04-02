@@ -25,6 +25,15 @@ public class ShipRoles {
 	public static final String COMBAT_FREIGHTER_MEDIUM = "combatFreighterMedium";
 	public static final String COMBAT_FREIGHTER_LARGE = "combatFreighterLarge";
 	
+	public static final String THREAT_FABRICATOR = "threatFabricator";
+	public static final String THREAT_HIVE = "threatHive";
+	public static final String THREAT_OVERSEER = "threatOverseer";
+	
+	public static final String DWELLER_TENDRIL = "dwellerTendril";
+	public static final String DWELLER_MAELSTROM = "dwellerMaelstrom";
+	public static final String DWELLER_EYE = "dwellerEye";
+	public static final String DWELLER_MAW = "dwellerMaw";
+	
 	public static final String CIV_RANDOM = "civilianRandom";
 	
 	public static final String PHASE_SMALL = "phaseSmall";

@@ -1,10 +1,11 @@
 package com.fs.starfarer.api.impl.campaign.terrain;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.EnumSet;
 import java.util.List;
 import java.util.Random;
+
+import java.awt.Color;
 
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.util.vector.Vector2f;
@@ -1132,6 +1133,11 @@ public class HyperspaceTerrainPlugin extends BaseTiledTerrain { // implements Ne
 //		}
 		return true;
 	}
+	
+	@Override
+	public float getRenderRange() {
+		return Float.MAX_VALUE;
+	}
 
 	@Override
 	public boolean containsPoint(Vector2f test, float r) {
@@ -1141,8 +1147,14 @@ public class HyperspaceTerrainPlugin extends BaseTiledTerrain { // implements Ne
 	public float getAbyssalDepth(Vector2f loc) {
 		return getAbyssPlugin().getAbyssalDepth(loc);
 	}
+	public float getAbyssalDepth(Vector2f loc, boolean uncapped) {
+		return getAbyssPlugin().getAbyssalDepth(loc, uncapped);
+	}
 	public float getAbyssalDepth(SectorEntityToken other) {
 		return getAbyssPlugin().getAbyssalDepth(other);
+	}
+	public float getAbyssalDepth(SectorEntityToken other, boolean uncapped) {
+		return getAbyssPlugin().getAbyssalDepth(other, uncapped);
 	}
 	public boolean isInAbyss(SectorEntityToken other) {
 		return getAbyssPlugin().isInAbyss(other);
@@ -1153,6 +1165,7 @@ public class HyperspaceTerrainPlugin extends BaseTiledTerrain { // implements Ne
 	}
 	
 	public boolean isInClouds(SectorEntityToken other) {
+		if (other == null) return false;
 		if (other.getContainingLocation() != this.entity.getContainingLocation()) return false;
 		if (isPreventedFromAffecting(other)) return false;
 		return super.containsPoint(other.getLocation(), other.getRadius());
@@ -1414,7 +1427,7 @@ public class HyperspaceTerrainPlugin extends BaseTiledTerrain { // implements Ne
 				if (cell != null && cell.isSignaling() && cell.signal < 0.2f) {
 					cell.signal = 0; // go to storm as soon as a fleet enters, if it's close to storming already
 				}
-				if (cell != null && cell.isStorming() && !Misc.isSlowMoving(fleet)) {
+				if (cell != null && cell.isStorming() && !Misc.isSlowMoving(fleet) && fleet.getBattle() == null) {
 					// storm
 					if (STORM_SENSOR_RANGE_MULT != 1) {
 						fleet.getStats().addTemporaryModMult(0.1f, getModId() + "_storm_sensor",
@@ -1763,6 +1776,9 @@ public class HyperspaceTerrainPlugin extends BaseTiledTerrain { // implements Ne
 		return 10;
 	}
 	
+	public boolean isUseSampleCache() {
+		return true;
+	}
 	
 	
 //	public static float getBurnPenalty(CampaignFleetAPI fleet) {

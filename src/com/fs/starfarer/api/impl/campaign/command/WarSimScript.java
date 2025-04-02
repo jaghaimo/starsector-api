@@ -17,6 +17,7 @@ import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.listeners.ObjectiveEventListener;
 import com.fs.starfarer.api.impl.campaign.MilitaryResponseScript;
 import com.fs.starfarer.api.impl.campaign.MilitaryResponseScript.MilitaryResponseParams;
+import com.fs.starfarer.api.impl.campaign.fleets.EconomyFleetRouteManager;
 import com.fs.starfarer.api.impl.campaign.fleets.RouteManager;
 import com.fs.starfarer.api.impl.campaign.fleets.RouteManager.OptionalFleetData;
 import com.fs.starfarer.api.impl.campaign.fleets.RouteManager.RouteData;
@@ -443,6 +444,11 @@ public class WarSimScript implements EveryFrameScript, ObjectiveEventListener {
 	public static float getEnemyStrength(FactionAPI faction, StarSystemAPI system, boolean assumeHostileToPlayer) {
 		float enemyStr = 0;
 		Set<String> seen = new HashSet<String>();
+		if (EconomyFleetRouteManager.ENEMY_STRENGTH_CHECK_EXCLUDE_PIRATES) {
+			seen.add(Factions.PIRATES);
+		}
+		
+		
 		for (MarketAPI target : Misc.getMarketsInLocation(system)) {
 			if (!(assumeHostileToPlayer && target.getFaction().isPlayerFaction())) {
 				if (!target.getFaction().isHostileTo(faction)) continue;
@@ -483,6 +489,11 @@ public class WarSimScript implements EveryFrameScript, ObjectiveEventListener {
 			
 			if (fleet.isPlayerFleet()) continue;
 			
+//			if (EconomyFleetRouteManager.FACTION_STRENGTH_CHECK_EXCLUDE_PIRATES && 
+//					fleet.getFaction().getId().equals(Factions.PIRATES)) {
+//				continue;
+//			}
+			
 			strength += fleet.getEffectiveStrength();
 			
 			seenFleets.add(fleet);
@@ -495,6 +506,11 @@ public class WarSimScript implements EveryFrameScript, ObjectiveEventListener {
 			if (data == null) continue;
 			if (route.getFactionId() == null) continue;
 			if (!faction.getId().equals(route.getFactionId())) continue;
+			
+//			if (EconomyFleetRouteManager.FACTION_STRENGTH_CHECK_EXCLUDE_PIRATES && 
+//					route.getFactionId().equals(Factions.PIRATES)) {
+//				continue;
+//			}
 			
 			strength += data.getStrengthModifiedByDamage();
 		}

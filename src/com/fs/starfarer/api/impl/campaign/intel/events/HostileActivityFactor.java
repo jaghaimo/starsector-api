@@ -1,7 +1,8 @@
 package com.fs.starfarer.api.impl.campaign.intel.events;
 
-import java.awt.Color;
 import java.util.Random;
+
+import java.awt.Color;
 
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
@@ -34,6 +35,7 @@ public interface HostileActivityFactor {
 			   					Color tc, float initPad);
 
 	void addStageDescriptionForEvent(HostileActivityEventIntel intel, EventStageData stage, TooltipMakerAPI info);
+	//boolean canEscalate(HostileActivityEventIntel intel, EventStageData stage);
 
 	String getEventStageIcon(HostileActivityEventIntel intel, EventStageData stage);
 	String getEventStageSound(HAERandomEventData data);

@@ -1,12 +1,40 @@
 package com.fs.starfarer.api.characters;
 
-import java.awt.Color;
+import java.util.List;
 import java.util.Set;
 
+import java.awt.Color;
+
 import com.fs.starfarer.api.characters.LevelBasedEffect.ScopeDescription;
+import com.fs.starfarer.api.loading.WithSourceMod;
 
-public interface SkillSpecAPI {
+public interface SkillSpecAPI extends WithSourceMod {
 
+	public interface SkillEffectSpecAPI {
+		String getGoverningSkill();
+		SkillEffectType getType();
+		ShipSkillEffect getAsShipEffect();
+		FleetTotalSource getAsFleetTotalSource();
+		AfterShipCreationSkillEffect getAsAfterShipCreationEffect();
+		MarketSkillEffect getAsMarketEffect();
+		CharacterStatsSkillEffect getAsStatsEffect();
+		FleetStatsSkillEffect getAsFleetEffect();
+		LevelBasedEffect getAsLevelBasedEffect();
+		DescriptionSkillEffect getAsDescriptionEffect();
+		String getEffectClass();
+		//List<HullModUnlock> getHullModUnlocks();
+		List<String> getAbilityUnlocks();
+		List<String> getUnlockedHullMods(float level);
+		boolean isLevelBased();
+		void setLevelBased(boolean levelBased);
+		float getRequiredSkillLevel();
+		void setRequiredSkillLevel(float requiredSkillLevel);
+		void setGoverningSkill(String governingSkill);
+		String getName();
+		void setName(String name);
+		List<String> getHullmods();
+	}
+	
 	boolean isAptitudeEffect();
 	String getId();
 	String getDescription();
@@ -50,6 +78,10 @@ public interface SkillSpecAPI {
 	void setReqPoints(int reqPoints);
 	int getReqPointsPer();
 	void setReqPointsPer(int reqPointsPer);
+	Set<String> getAllHullmodUnlocks();
+	Set<String> getAllAbilityUnlocks();
+	int getGoverningAptitudeOrder();
+	List<SkillEffectSpecAPI> getEffectsAPI();
 	
 
 }

@@ -1,7 +1,8 @@
 package com.fs.starfarer.api.impl.combat;
 
-import java.awt.Color;
 import java.util.EnumSet;
+
+import java.awt.Color;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BaseCombatLayeredRenderingPlugin;
@@ -27,6 +28,8 @@ public class ShipExplosionFlareVisual extends BaseCombatLayeredRenderingPlugin {
 		public Color color;
 		public float flareWidth;
 		public float flareHeight;
+		public float fadeIn = 0.25f;
+		public float fadeOut = 2f;
 		
 		public ShipExplosionFlareParams() {
 		}
@@ -57,7 +60,7 @@ public class ShipExplosionFlareVisual extends BaseCombatLayeredRenderingPlugin {
 		this.p = p;
 		//fader = new FaderUtil(1f, 0f, 2f);
 		//fader.fadeOut();
-		fader = new FaderUtil(0f, 0.25f, 2f);
+		fader = new FaderUtil(0f, p.fadeIn, p.fadeOut);
 		fader.setBounceDown(true);
 		fader.fadeIn();
 		sprite = Global.getSettings().getSprite("graphics/fx/starburst_glow1.png");

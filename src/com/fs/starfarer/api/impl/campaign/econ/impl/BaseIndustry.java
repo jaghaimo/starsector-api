@@ -1,6 +1,5 @@
 package com.fs.starfarer.api.impl.campaign.econ.impl;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -9,6 +8,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 import java.util.Set;
+
+import java.awt.Color;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CargoAPI;
@@ -30,6 +31,7 @@ import com.fs.starfarer.api.campaign.listeners.ListenerUtil;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.combat.MutableStat;
 import com.fs.starfarer.api.combat.MutableStat.StatMod;
+import com.fs.starfarer.api.impl.SharedUnlockData;
 import com.fs.starfarer.api.impl.campaign.DebugFlags;
 import com.fs.starfarer.api.impl.campaign.econ.impl.ConstructionQueue.ConstructionQueueItem;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
@@ -42,6 +44,7 @@ import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin;
 import com.fs.starfarer.api.impl.campaign.intel.MessageIntel;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.MarketCMD.RaidDangerLevel;
+import com.fs.starfarer.api.impl.codex.CodexDataV2;
 import com.fs.starfarer.api.loading.IndustrySpecAPI;
 import com.fs.starfarer.api.ui.Alignment;
 import com.fs.starfarer.api.ui.IconRenderMode;
@@ -139,6 +142,10 @@ public abstract class BaseIndustry implements Industry, Cloneable {
 			supplyBonusFromOther = new MutableStat(0);
 		}
 		return supplyBonusFromOther;
+	}
+
+	public void setMarket(MarketAPI market) {
+		this.market = market;
 	}
 
 	public void init(String id, MarketAPI market) {
@@ -799,6 +806,7 @@ public abstract class BaseIndustry implements Industry, Cloneable {
 	public Pair<String, Integer> getMaxDeficit(String ... commodityIds) {
 		Pair<String, Integer> result = new Pair<String, Integer>();
 		result.two = 0;
+		if (Global.CODEX_TOOLTIP_MODE) return result;
 		for (String id : commodityIds) {
 			int demand = (int) getDemand(id).getQuantity().getModifiedValue();
 			CommodityOnMarketAPI com = market.getCommodityData(id);
@@ -921,6 +929,12 @@ public abstract class BaseIndustry implements Industry, Cloneable {
 	
 	protected transient IndustryTooltipMode currTooltipMode = null;
 	public void createTooltip(IndustryTooltipMode mode, TooltipMakerAPI tooltip, boolean expanded) {
+		
+		if (getSpec() != null && getSpec().hasTag(Tags.CODEX_UNLOCKABLE)) {
+			SharedUnlockData.get().reportPlayerAwareOfIndustry(getSpec().getId(), true);
+		}
+		tooltip.setCodexEntryId(CodexDataV2.getIndustryEntryId(getSpec().getId()));
+		
 		currTooltipMode = mode;
 		
 		float pad = 3f;
@@ -1284,6 +1298,7 @@ public abstract class BaseIndustry implements Industry, Cloneable {
 		if (!needToAddIndustry) {
 			reapply();
 		}
+		market.reapplyConditions();
 	}
 	
 	public void addInstalledItemsSection(IndustryTooltipMode mode, TooltipMakerAPI tooltip, boolean expanded) {

@@ -378,7 +378,8 @@ public class TriTachyonHostileActivityFactor extends BaseHostileActivityFactor
 	
 	public static MarketAPI getNortia() {
 		MarketAPI nortia = Global.getSector().getEconomy().getMarket("nortia");
-		if (nortia == null || nortia.hasCondition(Conditions.DECIVILIZED)) {
+		if (nortia == null || nortia.hasCondition(Conditions.DECIVILIZED) ||
+				!nortia.getFactionId().equals(Factions.INDEPENDENT)) {
 			return null;
 		}
 		return nortia;

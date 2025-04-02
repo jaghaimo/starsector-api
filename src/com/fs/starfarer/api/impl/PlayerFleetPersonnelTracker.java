@@ -1,10 +1,11 @@
 package com.fs.starfarer.api.impl;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+
+import java.awt.Color;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
@@ -102,7 +103,7 @@ public class PlayerFleetPersonnelTracker implements ColonyInteractionListener,
 			try { 
 				PersonnelData copy = (PersonnelData) super.clone();
 				copy.savedNum = savedNum;
-				copy.savedXP= savedXP;
+				copy.savedXP = savedXP;
 				return copy;
 			} catch (CloneNotSupportedException e) { 
 				throw new RuntimeException(e);
@@ -403,12 +404,12 @@ public class PlayerFleetPersonnelTracker implements ColonyInteractionListener,
 	
 	
 	
-	public float getMarineEffectBonus(PersonnelData data) {
+	public static float getMarineEffectBonus(PersonnelData data) {
 		float f =  data.getXPLevel();
 		//if (true) return 30f;
 		return Math.round(f * MAX_EFFECTIVENESS_PERCENT);
 	}
-	public float getMarineLossesReductionPercent(PersonnelData data) {
+	public static float getMarineLossesReductionPercent(PersonnelData data) {
 		float f =  data.getXPLevel();
 		//if (true) return 30f;
 		return Math.round(f * MAX_LOSS_REDUCTION_PERCENT);
@@ -443,7 +444,7 @@ public class PlayerFleetPersonnelTracker implements ColonyInteractionListener,
 	
 				PersonnelRank rank = data.getRank();
 				
-				LabelAPI heading = info.addSectionHeading(rank.name + " Marines", 
+				LabelAPI heading = info.addSectionHeading(rank.name + " marines", 
 									Misc.getBasePlayerColor(), Misc.getDarkPlayerColor(), Alignment.MID, opad);
 				heading.autoSizeToWidth(info.getTextWidthOverride());
 				PositionAPI p = heading.getPosition();

@@ -36,4 +36,9 @@ public interface ShipAIPlugin {
 	void cancelCurrentManeuver();
 
 	ShipAIConfig getConfig();
+	
+	default void setTargetOverride(ShipAPI target) {};
 }
+
+
+

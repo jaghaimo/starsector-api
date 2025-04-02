@@ -1,6 +1,11 @@
 package com.fs.starfarer.api.characters;
 
-public interface MarketConditionSpecAPI {
+import java.util.Set;
+
+import com.fs.starfarer.api.impl.campaign.procgen.ConditionGenDataSpec;
+import com.fs.starfarer.api.loading.WithSourceMod;
+
+public interface MarketConditionSpecAPI extends WithSourceMod {
 
 	float getOrder();
 	String getId();
@@ -17,4 +22,8 @@ public interface MarketConditionSpecAPI {
 	void setDesc(String desc);
 	void setOrder(float order);
 	void setPlanetary(boolean planetary);
+	Set<String> getTags();
+	void addTag(String tag);
+	boolean hasTag(String tag);
+	ConditionGenDataSpec getGenSpec();
 }

@@ -79,6 +79,13 @@ public interface ArmorGridAPI {
 	int [] getCellAtLocation(Vector2f loc);
 
 	Vector2f getLocation(int cellX, int cellY);
+
+	
+	/**
+	 * Call this to prevent all weapons/engines on the ship from taking damage, ever.
+	 */
+	void clearComponentMap();
+	void buildComponentMap();
 }
 
 

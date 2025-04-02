@@ -1,9 +1,10 @@
 package com.fs.starfarer.api.campaign.comm;
 
-import java.awt.Color;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
+
+import java.awt.Color;
 
 import org.lwjgl.util.vector.Vector2f;
 
@@ -21,6 +22,7 @@ public interface CommMessageAPI {
 		REFIT_TAB,
 		INTEL_TAB,
 		CHARACTER_TAB,
+		CARGO_TAB,
 		INCOME_TAB,
 		COLONY_INFO,
 		INTERACTION_DIALOG,

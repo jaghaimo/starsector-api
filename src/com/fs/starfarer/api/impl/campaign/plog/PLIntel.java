@@ -1,7 +1,8 @@
 package com.fs.starfarer.api.impl.campaign.plog;
 
-import java.awt.Color;
 import java.util.Set;
+
+import java.awt.Color;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.FactionAPI;
@@ -64,7 +65,9 @@ public class PLIntel extends BaseIntelPlugin {
 	}
 	
 	public String getSortString() {
-		return "History";
+		//return "History";
+		//return "Fleet Log " + getPlayerVisibleTimestamp();
+		return "AAA"; // shows up first in fleet log
 	}
 	
 	public String getName() {
@@ -110,7 +113,7 @@ public class PLIntel extends BaseIntelPlugin {
 	}
 
 	public String getIcon() {
-		return Global.getSettings().getSpriteName("intel", "fleet_log");
+		return Global.getSettings().getSpriteName("intel", "playthrough_log");
 	}
 	
 	public Set<String> getIntelTags(SectorMapAPI map) {

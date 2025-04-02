@@ -1,10 +1,14 @@
 package com.fs.starfarer.api.campaign;
 
+import java.util.Set;
+
 import java.awt.Color;
 
 import org.lwjgl.util.vector.Vector3f;
 
-public interface PlanetSpecAPI {
+import com.fs.starfarer.api.loading.WithSourceMod;
+
+public interface PlanetSpecAPI extends WithSourceMod {
 	String getName();
 	float getTilt();
 	float getPitch();
@@ -112,6 +116,9 @@ public interface PlanetSpecAPI {
 	boolean isGasGiant();
 	String getDescriptionId();
 	void setDescriptionId(String descriptionId);
+	Set<String> getTags();
+	void addTag(String tag);
+	boolean hasTag(String tag);
 
 }
 	

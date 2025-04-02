@@ -1,11 +1,12 @@
 package com.fs.starfarer.api.impl.campaign;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
 import java.util.Set;
+
+import java.awt.Color;
 
 import org.apache.log4j.Logger;
 import org.lwjgl.util.vector.Vector2f;
@@ -339,6 +340,8 @@ public class CoreScript extends BaseCampaignEventListener implements EveryFrameS
 	public void reportPlayerOpenedMarket(MarketAPI market) {
 		super.reportPlayerOpenedMarket(market);
 		SharedData.getData().getPlayerActivityTracker().updateLastVisit(market);
+		
+		//new TempImmigrationModifier(market, 100, 200f, "Testing immigration mod");
 	}
 
 	
@@ -403,6 +406,8 @@ public class CoreScript extends BaseCampaignEventListener implements EveryFrameS
 				}
 			}
 		}
+		
+		Misc.getSimulatorPlugin().reportPlayerBattleOccurred(primaryWinner, battle);
 	}
 	
 
@@ -468,6 +473,8 @@ public class CoreScript extends BaseCampaignEventListener implements EveryFrameS
 			float p = Global.getSettings().getFloat("salvageWeaponProb");
 			for (String slotId : variant.getNonBuiltInWeaponSlots()) {
 				String weaponId = variant.getWeaponId(slotId);
+				WeaponSpecAPI spec = Global.getSettings().getWeaponSpec(weaponId);
+				if (spec.hasTag(Tags.NO_DROP)) continue;
 				data.addWeapon(weaponId, 1f * p);
 			}
 		}

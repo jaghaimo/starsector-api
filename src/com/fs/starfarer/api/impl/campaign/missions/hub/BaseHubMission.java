@@ -1,6 +1,5 @@
 package com.fs.starfarer.api.impl.campaign.missions.hub;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
@@ -11,6 +10,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 import java.util.Set;
+
+import java.awt.Color;
 
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.util.vector.Vector2f;
@@ -44,6 +45,7 @@ import com.fs.starfarer.api.characters.ImportantPeopleAPI.PersonDataAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.combat.StatBonus;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
+import com.fs.starfarer.api.impl.MusicPlayerPluginImpl;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.MissionCompletionRep;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepActionEnvelope;
@@ -304,6 +306,7 @@ public abstract class BaseHubMission extends BaseIntelPlugin implements HubMissi
 	public static class FlagData {
 		public MemoryAPI memory;
 		public String flag;
+		public Object value;
 		public LinkedHashSet<Object> stages = new LinkedHashSet<Object>();
 	}
 	
@@ -1228,7 +1231,11 @@ public abstract class BaseHubMission extends BaseIntelPlugin implements HubMissi
 		for (FlagData fd : flags) {
 			if (fd.stages.contains(currentStage)) {
 				removeMemoryFlagChanges(fd.memory, fd.flag);
-				fd.memory.set(fd.flag, true);
+				if (fd.value == null) {
+					fd.memory.set(fd.flag, true);
+				} else {
+					fd.memory.set(fd.flag, fd.value);
+				}
 				changes.add(new VariableSet(fd.memory, fd.flag, true));
 			} else {
 				fd.memory.unset(fd.flag);
@@ -1590,16 +1597,23 @@ public abstract class BaseHubMission extends BaseIntelPlugin implements HubMissi
 	public void setFlag(MemoryAPI memory, String flag, Object value, boolean permanent) {
 		setFlag(memory, flag, value, permanent, (Object []) null);
 	}
+	
+	
 	public void setFlag(MemoryAPI memory, String flag, Object value, boolean permanent, Object ... stages) {
 		if (stages != null && stages.length > 0) {
 			FlagData fd = new FlagData();
 			fd.memory = memory;
 			fd.flag = flag;
+			fd.value = value;
 			fd.stages.addAll(Arrays.asList(stages));
 			flags.add(fd);
 			if (fd.stages.contains(currentStage)) {
 				removeMemoryFlagChanges(fd.memory, fd.flag);
-				fd.memory.set(fd.flag, true);
+				if (fd.value == null) {
+					fd.memory.set(fd.flag, true);
+				} else {
+					fd.memory.set(fd.flag, fd.value);
+				}
 				changes.add(new VariableSet(fd.memory, fd.flag, true));
 			}
 		} else {
@@ -1610,6 +1624,19 @@ public abstract class BaseHubMission extends BaseIntelPlugin implements HubMissi
 			}
 			changes.add(new VariableSet(memory, flag, !permanent));
 		}
+	}
+	
+	public void setMusic(MarketAPI market, String musicSetId, Object ... stages) {
+		setMusic(market.getMemoryWithoutUpdate(), musicSetId, stages);
+	}
+	public void setMusic(StarSystemAPI system, String musicSetId, Object ... stages) {
+		setMusic(system.getMemoryWithoutUpdate(), musicSetId, stages);
+	}
+	public void setMusic(SectorEntityToken entity, String musicSetId, Object ... stages) {
+		setMusic(entity.getMemoryWithoutUpdate(), musicSetId, stages);
+	}
+	public void setMusic(MemoryAPI memory, String musicSetId, Object ... stages) {
+		setFlag(memory, MusicPlayerPluginImpl.MUSIC_SET_MEM_KEY_MISSION, musicSetId, false, stages);
 	}
 	
 	public boolean setGlobalReference(String key) {
@@ -2091,6 +2118,9 @@ public abstract class BaseHubMission extends BaseIntelPlugin implements HubMissi
 	}
 
 	public String getSortString() {
+		if (getTagsForSort().contains(Tags.INTEL_EXPLORATION) && getIntelTags(null).contains(Tags.INTEL_EXPLORATION)) {
+			return getSortStringNewestFirst();
+		}
 		return getBaseName();
 	}
 	

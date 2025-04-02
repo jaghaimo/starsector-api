@@ -85,6 +85,8 @@ public interface CombatEntityAPI {
 	 */
 	Map<String, Object> getCustomData();
 	void setHitpoints(float hitpoints);
+	boolean isPointInBounds(Vector2f p);
+	boolean wasRemoved();
 	
 }
 

@@ -1,5 +1,7 @@
 package com.fs.starfarer.api.impl.campaign.submarkets;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 import com.fs.starfarer.api.Global;
@@ -529,12 +531,35 @@ public class BaseSubmarketPlugin implements SubmarketPlugin {
 
 		CampaignFleetAPI fleet = FleetFactoryV3.createFleet(params);
 		if (fleet != null) {
-			float p = 0.5f;
+			//float p = 0.5f;
 			//p = 1f;
+			
+			WeightedRandomPicker<FleetMemberAPI> picker = new WeightedRandomPicker<>(itemGenRandom);
+			FactionAPI faction = Global.getSector().getFaction(factionId);
 			for (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {
-				if (itemGenRandom.nextFloat() > p) continue;
+				float f = 1f;
+				if (faction != null) {
+					Float mult = faction.getFactionSpec().getShipSellFrequency().get(member.getHullId());
+					if (mult != null) {
+						f *= mult;
+					}
+				}
+				if (itemGenRandom.nextFloat() > f * 0.5f) continue;
 				if (member.getHullSpec().hasTag(Tags.NO_SELL)) continue;
 				if (!isMilitaryMarket() && member.getHullSpec().hasTag(Tags.MILITARY_MARKET_ONLY)) continue;
+				
+				picker.add(member, f);
+			}
+			
+			List<FleetMemberAPI> members = new ArrayList<>();
+			while (!picker.isEmpty()) {
+				members.add(picker.pickAndRemove());
+			}
+			
+			for (FleetMemberAPI member : members) {
+				//if (itemGenRandom.nextFloat() > p) continue;
+//				if (member.getHullSpec().hasTag(Tags.NO_SELL)) continue;
+//				if (!isMilitaryMarket() && member.getHullSpec().hasTag(Tags.MILITARY_MARKET_ONLY)) continue;
 				String emptyVariantId = member.getHullId() + "_Hull";
 				addShip(emptyVariantId, true, params.qualityOverride);
 			}
@@ -631,7 +656,7 @@ public class BaseSubmarketPlugin implements SubmarketPlugin {
 			
 			//cargo.addItems(CargoItemType.MOD_SPEC, id, 1);
 			
-			cargo.addItems(CargoItemType.SPECIAL, new SpecialItemData(Items.MODSPEC, id), 1);
+			cargo.addItems(CargoItemType.SPECIAL, new SpecialItemData(Items.TAG_MODSPEC, id), 1);
 		}
 		
 	}
@@ -650,7 +675,7 @@ public class BaseSubmarketPlugin implements SubmarketPlugin {
 		CargoAPI cargo = getCargo();
 		for (CargoStackAPI stack : cargo.getStacksCopy()) {
 			//if (stack.isModSpecStack() && stack.getData().equals(id)) return true;
-			if (stack.isSpecialStack() && stack.getSpecialDataIfSpecial().getId().equals(Items.MODSPEC) &&
+			if (stack.isSpecialStack() && stack.getSpecialDataIfSpecial().getId().equals(Items.TAG_MODSPEC) &&
 					stack.getSpecialDataIfSpecial().getData().equals(id)) return true;
 		}
 		return false;

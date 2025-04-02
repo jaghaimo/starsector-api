@@ -1,12 +1,13 @@
 package com.fs.starfarer.api.impl.hullmods;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
+
+import java.awt.Color;
 
 import com.fs.starfarer.api.GameState;
 import com.fs.starfarer.api.Global;
@@ -237,7 +238,7 @@ public class MissileAutoloader extends BaseHullMod {
 		if (op == 2 || op == 3) return 2f;
 		if (op == 4) return 3f;
 		if (op == 5 || op == 6) return 4f;
-		if (op == 7 || op == 8) return 6f;
+		if (op == 7 || op == 8) return 5f;
 		return 6f;
 	}
 	
@@ -276,18 +277,20 @@ public class MissileAutoloader extends BaseHullMod {
 				+ "Having fewer of these simplifies the task and "
 				+ "increases the number of possible reloads.", opad);
 		
-		if (isForModSpec || ship == null) return;
+		if (isForModSpec || (ship == null && !Global.CODEX_TOOLTIP_MODE)) return;
 		
 		tooltip.setBgAlpha(0.9f);
 		
 		List<WeaponAPI> weapons = new ArrayList<WeaponAPI>();
 		Set<String> seen = new LinkedHashSet<String>();
-		for (WeaponAPI w : ship.getAllWeapons()) {
-			if (!isAffected(w)) continue;
-			String id = w.getId();
-			if (seen.contains(id)) continue;
-			seen.add(id);
-			weapons.add(w);
+		if (ship != null) {
+			for (WeaponAPI w : ship.getAllWeapons()) {
+				if (!isAffected(w)) continue;
+				String id = w.getId();
+				if (seen.contains(id)) continue;
+				seen.add(id);
+				weapons.add(w);
+			}
 		}
 		
 		float numW = 130f;
@@ -314,10 +317,10 @@ public class MissileAutoloader extends BaseHullMod {
 		HullSize prev = HullSize.FRIGATE;
 		for (ReloadCapacityData curr : sortedCap) {
 			Color c = Misc.getGrayColor();
-			if (cap == curr) {
+			if (cap == curr || Global.CODEX_TOOLTIP_MODE) {
 				c = Misc.getHighlightColor();
 			}
-			if (curr.size != hullSize) continue;
+			if (curr.size != hullSize && !Global.CODEX_TOOLTIP_MODE) continue;
 //			if (prev != curr.size) {
 //				tooltip.addRow("", "", "");
 //			}
@@ -328,6 +331,11 @@ public class MissileAutoloader extends BaseHullMod {
 		}
 		tooltip.addTable("", 0, opad);
 		
+		
+		if (Global.CODEX_TOOLTIP_MODE) {
+			tooltip.addSpacer(5f);
+			return;
+		}
 		
 		Collections.sort(weapons, new Comparator<WeaponAPI>() {
 			public int compare(WeaponAPI o1, WeaponAPI o2) {

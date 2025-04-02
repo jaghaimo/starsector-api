@@ -52,4 +52,6 @@ public interface ViewportAPI {
 	void setExternalControl(boolean externalControl);
 	void setCenter(Vector2f c);
 	void setAlphaMult(float alphaMult);
+	boolean isEverythingNearViewport();
+	void setEverythingNearViewport(boolean everythingNearViewport);
 }

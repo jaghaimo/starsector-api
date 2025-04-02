@@ -31,7 +31,9 @@ import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.FleetTypes;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
+import com.fs.starfarer.api.impl.campaign.intel.events.PiracyRespiteScript;
 import com.fs.starfarer.api.impl.campaign.intel.misc.TradeFleetDepartureIntel;
+import com.fs.starfarer.api.impl.campaign.rulecmd.KantaCMD;
 import com.fs.starfarer.api.impl.campaign.shared.SharedData;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.TimeoutTracker;
@@ -99,6 +101,7 @@ public class EconomyFleetRouteManager extends BaseRouteFleetManager implements F
 		return Math.min(maxBasedOnMarkets, Global.getSettings().getInt("maxEconFleets"));
 	}
 	
+	public static boolean ENEMY_STRENGTH_CHECK_EXCLUDE_PIRATES = false;
 	
 	protected void addRouteFleetIfPossible() {
 		MarketAPI from = pickSourceMarket();
@@ -140,8 +143,16 @@ public class EconomyFleetRouteManager extends BaseRouteFleetManager implements F
 //				System.out.println("32ff32f23");
 //			}
 			
+			if (PiracyRespiteScript.playerHasPiracyRespite()) {
+				if (from.getFaction().isPlayerFaction() || to.getFaction().isPlayerFaction()) {
+					ENEMY_STRENGTH_CHECK_EXCLUDE_PIRATES = true;
+				}
+			}
+			
 			LocationDanger dFrom = WarSimScript.getDangerFor(factionId, sysFrom);
 			LocationDanger dTo = WarSimScript.getDangerFor(factionId, sysTo);
+			
+			ENEMY_STRENGTH_CHECK_EXCLUDE_PIRATES = false;
 			
 			LocationDanger danger = dFrom.ordinal() > dTo.ordinal() ? dFrom : dTo;
 			
@@ -501,6 +512,15 @@ public class EconomyFleetRouteManager extends BaseRouteFleetManager implements F
 		if (fleet == null) return null;;
 		
 		//fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_TRADE_FLEET, true);
+		
+		if (KantaCMD.playerHasProtection() && route.custom instanceof EconomyRouteData) {
+			EconomyRouteData data = (EconomyRouteData) route.custom;
+			if (data.from != null && data.to != null) {
+				if (data.from.getFaction().isPlayerFaction() || data.to.getFaction().isPlayerFaction()) {
+					fleet.getMemoryWithoutUpdate().set(MemFlags.FLEET_IGNORED_BY_FACTION, Factions.PIRATES);
+				}
+			}
+		}
 		
 		fleet.addEventListener(this);
 		

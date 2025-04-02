@@ -176,6 +176,7 @@ public class JailbreakMission extends HubMissionWithBarEvent {
 	
 	@Override
 	public void addDescriptionForNonEndStage(TooltipMakerAPI info, float width, float height) {
+		if (getPerson() == null || getPerson().getMarket() == null) return;
 		float opad = 10f;
 		Color h = Misc.getHighlightColor();
 		if (currentStage == Stage.JAILBREAK) {

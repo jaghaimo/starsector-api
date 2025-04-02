@@ -1,6 +1,7 @@
 package com.fs.starfarer.api.combat;
 
 import java.util.List;
+import java.util.Map;
 
 import com.fs.starfarer.api.loading.FighterWingSpecAPI;
 import com.fs.starfarer.api.loading.FormationType;
@@ -61,6 +62,16 @@ public interface FighterWingAPI {
 	void removeMember(ShipAPI member);
 
 	void setSourceBay(FighterLaunchBayAPI sourceBay);
+
+	void addMember(ShipAPI ship);
+	void setSourceShip(ShipAPI sourceShip);
+	boolean isLeader(ShipAPI ship);
+
+
+	Map<String, Object> getCustomData();
+
+
+	void setLeader(ShipAPI leader);
 }
 
 

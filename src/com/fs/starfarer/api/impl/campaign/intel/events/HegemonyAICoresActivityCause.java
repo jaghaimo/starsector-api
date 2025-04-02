@@ -1,7 +1,8 @@
 package com.fs.starfarer.api.impl.campaign.intel.events;
 
-import java.awt.Color;
 import java.util.List;
+
+import java.awt.Color;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
@@ -156,8 +157,6 @@ public class HegemonyAICoresActivityCause extends BaseHostileActivityCause2 {
 		
 		List<MarketAPI> markets = Misc.getMarketsInLocation(system, Factions.PLAYER);
 		
-		float perAICorePoint = Global.getSettings().getFloat("hegemonyPerAICorePoint");
-
 		float total = 0f;
 		for (MarketAPI market : markets) {
 			float points = getAICorePoints(market);

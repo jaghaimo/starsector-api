@@ -28,6 +28,7 @@ public class Industries {
 	//public static final String ORBITALDEPOT = "orbitaldepot";
 	public static final String WAYSTATION = "waystation";
 	public static final String CRYOSANCTUM = "cryosanctum";
+	public static final String CRYOREVIVAL = "cryorevival";
 	
 	public static final String ORBITALSTATION = "orbitalstation";
 	public static final String BATTLESTATION = "battlestation";

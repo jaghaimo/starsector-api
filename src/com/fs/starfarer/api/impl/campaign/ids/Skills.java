@@ -113,6 +113,7 @@ public class Skills {
 //	public static final String PLANETARY_OPERATIONS = "planetary_operations";
 //	public static final String INDUSTRIAL_PLANNING = "industrial_planning";
 	
+	public static final String TAG_NO_AI_CORE = "no_ai_core";
 	public static final String TAG_AI_CORE = "ai_core";
 	public static final String TAG_NPC_ONLY = "npc_only";
 	public static final String TAG_AI_CORE_ONLY = "ai_core_only";

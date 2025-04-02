@@ -1,7 +1,8 @@
 package com.fs.starfarer.api.impl.campaign.econ.impl;
 
-import java.awt.Color;
 import java.util.Random;
+
+import java.awt.Color;
 
 import org.lwjgl.util.vector.Vector2f;
 
@@ -545,6 +546,9 @@ public class MilitaryBase extends BaseIndustry implements RouteFleetSpawner, Fle
 	}
 	
 	public static CampaignFleetAPI createPatrol(PatrolType type, String factionId, RouteData route, MarketAPI market, Vector2f locInHyper, Random random) {
+		return createPatrol(type, 0f, factionId, route, market, locInHyper, random);
+	}
+	public static CampaignFleetAPI createPatrol(PatrolType type, float extraTankerPts, String factionId, RouteData route, MarketAPI market, Vector2f locInHyper, Random random) {
 		if (random == null) random = new Random();
 		
 		
@@ -563,6 +567,8 @@ public class MilitaryBase extends BaseIndustry implements RouteFleetSpawner, Fle
 			freighter = Math.round((float) random.nextFloat() * 10f);
 			break;
 		}
+		
+		tanker += extraTankerPts;
 		
 		FleetParamsV3 params = new FleetParamsV3(
 				market, 

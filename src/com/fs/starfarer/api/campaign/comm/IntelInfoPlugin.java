@@ -1,8 +1,9 @@
 package com.fs.starfarer.api.campaign.comm;
 
-import java.awt.Color;
 import java.util.List;
 import java.util.Set;
+
+import java.awt.Color;
 
 import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
@@ -185,6 +186,9 @@ public interface IntelInfoPlugin {
 
 
 	void tableRowClicked(IntelUIAPI ui, TableRowClickData data);
+
+	Set<String> getTagsForSort();
+	void setTagsForSort(Set<String> tagsForSort);
 }
 
 

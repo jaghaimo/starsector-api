@@ -1,8 +1,9 @@
 package com.fs.starfarer.api.impl.hullmods;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
+
+import java.awt.Color;
 
 import com.fs.starfarer.api.GameState;
 import com.fs.starfarer.api.Global;
@@ -237,6 +238,7 @@ public class PhaseField extends BaseHullMod implements HullModFleetEffect {
 		float total = Math.max(totalProfile + totalPhaseSensors, 1f);
 		
 		float mult = totalProfile / total;
+		if (totalPhaseSensors <= 0f) mult = 1f;
 		
 		if (mult < MIN_FIELD_MULT) mult = MIN_FIELD_MULT;
 		if (mult > 1f) mult = 1f;

@@ -1,8 +1,9 @@
 package com.fs.starfarer.api.impl.campaign.intel.group;
 
-import java.awt.Color;
 import java.util.List;
 import java.util.Random;
+
+import java.awt.Color;
 
 import org.lwjgl.util.vector.Vector2f;
 
@@ -74,7 +75,7 @@ public class TestFleetGroupIntel extends FleetGroupIntel {
 		
 		origin = garnir.getPrimaryEntity();
 		
-		createRoute(Factions.PIRATES, 30, 7, null);
+		createRoute(Factions.PIRATES, 30, 7, null, null);
 	}
 	
 	protected void spawnFleets() {

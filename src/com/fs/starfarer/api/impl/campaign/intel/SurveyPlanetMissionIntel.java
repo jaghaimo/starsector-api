@@ -1,9 +1,10 @@
 package com.fs.starfarer.api.impl.campaign.intel;
 
-import java.awt.Color;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+
+import java.awt.Color;
 
 import org.apache.log4j.Logger;
 import org.lwjgl.util.vector.Vector2f;
@@ -260,7 +261,8 @@ public class SurveyPlanetMissionIntel extends BaseMissionIntel implements Survey
 	}
 	
 	public String getSortString() {
-		return "Survey";
+		//return "Survey";
+		return super.getSortString();
 	}
 	
 	public String getName() {

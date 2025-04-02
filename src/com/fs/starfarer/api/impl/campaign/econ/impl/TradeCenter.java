@@ -20,7 +20,7 @@ public class TradeCenter extends BaseIndustry implements MarketImmigrationModifi
 	public static float ALPHA_CORE_BONUS = 25f;
 	public static float IMPROVE_BONUS = 25f;
 	
-	public static float STABILITY_PELANTY = 3f;
+	public static float STABILITY_PENALTY = 3f;
 	
 	//protected transient CargoAPI savedCargo = null;
 	protected transient SubmarketAPI saved = null;
@@ -58,7 +58,7 @@ public class TradeCenter extends BaseIndustry implements MarketImmigrationModifi
 		}
 		
 		//modifyStabilityWithBaseMod();
-		market.getStability().modifyFlat(getModId(), -STABILITY_PELANTY, getNameForModifier());
+		market.getStability().modifyFlat(getModId(), -STABILITY_PENALTY, getNameForModifier());
 		
 		market.getIncomeMult().modifyPercent(getModId(0), BASE_BONUS, getNameForModifier());
 		
@@ -98,7 +98,7 @@ public class TradeCenter extends BaseIndustry implements MarketImmigrationModifi
 		tooltip.addPara("Colony income: %s", opad, h, aStr);
 		
 		h = Misc.getNegativeHighlightColor();
-		tooltip.addPara("Stability penalty: %s", opad, h, "" + -(int)STABILITY_PELANTY);
+		tooltip.addPara("Stability penalty: %s", opad, h, "" + -(int)STABILITY_PENALTY);
 	}
 	
 	@Override

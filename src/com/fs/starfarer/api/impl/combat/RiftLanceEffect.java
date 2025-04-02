@@ -115,7 +115,7 @@ public class RiftLanceEffect implements BeamEffectPlugin { //WithReset {
 															  (float) Math.random() * 360f, null);
 		if (source != null) {
 			Global.getCombatEngine().applyDamageModifiersToSpawnedProjectileWithNullWeapon(
-											source, WeaponType.MISSILE, false, mine.getDamage());
+											source, WeaponType.ENERGY, false, mine.getDamage());
 //			float extraDamageMult = source.getMutableStats().getMissileWeaponDamageMult().getModifiedValue();
 //			mine.getDamage().setMultiplier(mine.getDamage().getMultiplier() * extraDamageMult);
 		}

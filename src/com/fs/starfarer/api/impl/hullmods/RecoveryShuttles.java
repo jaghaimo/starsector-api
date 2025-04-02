@@ -6,6 +6,7 @@ import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.impl.campaign.ids.HullMods;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
+import com.fs.starfarer.api.util.Misc;
 
 public class RecoveryShuttles extends BaseHullMod {
 
@@ -31,7 +32,9 @@ public class RecoveryShuttles extends BaseHullMod {
 	}
 	
 	public boolean isApplicableToShip(ShipAPI ship) {
-		if (ship.getVariant().hasHullMod(HullMods.AUTOMATED)) return false;
+		if (Misc.isAutomated(ship.getVariant())) return false;
+		
+		if (ship.getVariant().hasHullMod(HullMods.CONVERTED_HANGAR)) return true;
 		
 		//int bays = (int) ship.getMutableStats().getNumFighterBays().getBaseValue();
 		int bays = (int) ship.getMutableStats().getNumFighterBays().getModifiedValue();
@@ -42,7 +45,7 @@ public class RecoveryShuttles extends BaseHullMod {
 	}
 	
 	public String getUnapplicableReason(ShipAPI ship) {
-		if (ship != null && ship.getVariant().hasHullMod(HullMods.AUTOMATED)) {
+		if (ship != null && Misc.isAutomated(ship.getVariant())) {
 			return "Can not be installed on automated ships";
 		}
 		return "Ship does not have fighter bays";

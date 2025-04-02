@@ -1,9 +1,10 @@
 package com.fs.starfarer.api.loading;
 
-import java.awt.Color;
 import java.util.EnumSet;
 import java.util.List;
 import java.util.Set;
+
+import java.awt.Color;
 
 import org.lwjgl.util.vector.Vector2f;
 
@@ -15,7 +16,7 @@ import com.fs.starfarer.api.combat.WeaponAPI.DerivedWeaponStatsAPI;
 import com.fs.starfarer.api.combat.WeaponAPI.WeaponSize;
 import com.fs.starfarer.api.combat.WeaponAPI.WeaponType;
 
-public interface WeaponSpecAPI {
+public interface WeaponSpecAPI extends WithSourceMod {
 	float getOrdnancePointCost(MutableCharacterStatsAPI stats);
 	EnumSet<WeaponAPI.AIHints> getAIHints();
 	
@@ -136,4 +137,7 @@ public interface WeaponSpecAPI {
 	void setTurnRate(float turnRate);
 	boolean isRestrictToSpecifiedMountType();
 	void setRestrictToSpecifiedMountType(boolean restrictToSpecifiedMountType);
+	float getFadePreviousFireSound();
+	void setFadePreviousFireSound(float fadePreviousFireSound);
+	void setDamageType(DamageType damageType);
 }

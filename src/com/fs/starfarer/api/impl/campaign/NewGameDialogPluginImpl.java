@@ -14,12 +14,15 @@ import com.fs.starfarer.api.campaign.rules.MemKeys;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.characters.CharacterCreationData;
 import com.fs.starfarer.api.combat.EngagementResultAPI;
+import com.fs.starfarer.api.impl.SharedSettings;
 import com.fs.starfarer.api.impl.campaign.rulecmd.DumpMemory;
 import com.fs.starfarer.api.impl.campaign.rulecmd.FireAll;
 import com.fs.starfarer.api.impl.campaign.rulecmd.FireBest;
 
 public class NewGameDialogPluginImpl implements InteractionDialogPlugin {
 
+	public static String CAMPAIGN_HELP_POPUPS_OPTION_CHECKED = "campaignHelpPopupsOptionChecked";
+	
 	private static enum OptionId {
 		INIT,
 		CONTINUE_CHOICES,
@@ -64,6 +67,8 @@ public class NewGameDialogPluginImpl implements InteractionDialogPlugin {
 		
 		//dialog.setPromptText("------------------------------");
 		dialog.setPromptText("-");
+		
+		data.setCampaignHelpEnabled(SharedSettings.optBoolean(CAMPAIGN_HELP_POPUPS_OPTION_CHECKED, true));
 		
 		dialog.hideTextPanel();
 		visual.showNewGameOptionsPanel(data);
@@ -117,9 +122,14 @@ public class NewGameDialogPluginImpl implements InteractionDialogPlugin {
 			OptionId option = (OptionId) optionData;
 			switch (option) {
 			case LEAVE:
+				SharedSettings.setBoolean(CAMPAIGN_HELP_POPUPS_OPTION_CHECKED, data.isCampaignHelpEnabled());
+				SharedSettings.saveIfNeeded();
 				dialog.dismissAsCancel();
 				break;
 			case CONTINUE_CHOICES:
+				SharedSettings.setBoolean(CAMPAIGN_HELP_POPUPS_OPTION_CHECKED, data.isCampaignHelpEnabled());
+				SharedSettings.saveIfNeeded();
+				
 				dialog.showTextPanel();
 				visual.showPersonInfo(data.getPerson(), true);
 				options.clearOptions();

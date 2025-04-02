@@ -17,7 +17,7 @@ public class StandardPerseanLeagueActivityCause extends BaseHostileActivityCause
 	/** IF CHANGING THESE: ALSO UPDATE THE plReynardHannanJoinSelNo RULE **/
 	public static int LARGE_COLONY = 5;
 	public static int MEDIUM_COLONY = 4;
-	public static int COUNT_IF_MEDIUM = 2;
+	public static int COUNT_IF_MEDIUM = 3;
 	
 	public static float MAX_MAG = 0.5f;
 	

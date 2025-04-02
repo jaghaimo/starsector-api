@@ -1,8 +1,9 @@
 package com.fs.starfarer.api.impl.campaign.abilities;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
+
+import java.awt.Color;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.Script;
@@ -125,28 +126,34 @@ public class TransponderAbility extends BaseToggleAbility {
 			status = " (on)";
 		}
 		
-		LabelAPI title = tooltip.addTitle(spec.getName() + status);
-		title.highlightLast(status);
-		title.setHighlightColor(gray);
+		if (!Global.CODEX_TOOLTIP_MODE) {
+			LabelAPI title = tooltip.addTitle(spec.getName() + status);
+			title.highlightLast(status);
+			title.setHighlightColor(gray);
+		} else {
+			tooltip.addSpacer(-10f);
+		}
 
 		float pad = 10f;
 		tooltip.addPara("Transponders transmit identifying information to all fleets within range.", pad);
 		
-		List<FactionAPI> factions = getFactionsThatWouldBecomeHostile();
-		if (!factions.isEmpty()) {
-			String text = "Turning the transponder on now would reveal your hostile actions to";
-			boolean first = true;
-			boolean last = false;
-			for (FactionAPI faction : factions) {
-				last = factions.indexOf(faction) == factions.size() - 1;
-				if (first || !last) {
-					text += " " + faction.getDisplayNameWithArticle() + ",";
-				} else {
-					text += " and " + faction.getDisplayNameWithArticle() + ",";
+		if (!Global.CODEX_TOOLTIP_MODE) {
+			List<FactionAPI> factions = getFactionsThatWouldBecomeHostile();
+			if (!factions.isEmpty()) {
+				String text = "Turning the transponder on now would reveal your hostile actions to";
+				boolean first = true;
+				boolean last = false;
+				for (FactionAPI faction : factions) {
+					last = factions.indexOf(faction) == factions.size() - 1;
+					if (first || !last) {
+						text += " " + faction.getDisplayNameWithArticle() + ",";
+					} else {
+						text += " and " + faction.getDisplayNameWithArticle() + ",";
+					}
 				}
+				text = text.substring(0, text.length() - 1) + ".";
+				tooltip.addPara(text, red, pad);
 			}
-			text = text.substring(0, text.length() - 1) + ".";
-			tooltip.addPara(text, red, pad);
 		}
 		
 		tooltip.addPara("When the transponder is on, your fleet can be detected at longer range and " +

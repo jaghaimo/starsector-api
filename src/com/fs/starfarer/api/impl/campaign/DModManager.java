@@ -15,7 +15,6 @@ import com.fs.starfarer.api.combat.ShipHullSpecAPI;
 import com.fs.starfarer.api.combat.ShipHullSpecAPI.ShipTypeHints;
 import com.fs.starfarer.api.combat.ShipVariantAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
-import com.fs.starfarer.api.impl.campaign.ids.HullMods;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.loading.HullModSpecAPI;
@@ -250,7 +249,8 @@ public class DModManager {
 	public static boolean assumeAllShipsAreAutomated = false;
 
 	public static void removeUnsuitedMods(ShipVariantAPI variant, List<HullModSpecAPI> mods) {
-		boolean auto = variant.hasHullMod(HullMods.AUTOMATED);
+		//boolean auto = variant.hasHullMod(HullMods.AUTOMATED);
+		boolean auto = Misc.isAutomated(variant);
 		if (assumeAllShipsAreAutomated) auto = true;
 		boolean civ = variant.getHullSpec().getHints().contains(ShipTypeHints.CIVILIAN);
 		//boolean phase = variant.getHullSpec().getDefenseType() == ShieldType.PHASE;

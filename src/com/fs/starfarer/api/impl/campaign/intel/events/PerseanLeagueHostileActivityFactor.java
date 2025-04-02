@@ -1,7 +1,8 @@
 package com.fs.starfarer.api.impl.campaign.intel.events;
 
-import java.awt.Color;
 import java.util.Random;
+
+import java.awt.Color;
 
 import org.lwjgl.util.vector.Vector2f;
 
@@ -47,8 +48,8 @@ public class PerseanLeagueHostileActivityFactor extends BaseHostileActivityFacto
 	//public static final String DEFEATED_BLOCKADE = "$defeatedLeagueBlockade";
 	public static final String HASSLE_REASON = "leagueEnforcer";
 	
-	public static float INDEPENDENT_REP_FOR_DEFEATING = 0.5f;
-	public static float HEGEMONY_REP_FOR_DEFEATING = 0.3f;
+//	public static float INDEPENDENT_REP_FOR_DEFEATING = 0.5f;
+//	public static float HEGEMONY_REP_FOR_DEFEATING = 0.3f;
 	
 	public PerseanLeagueHostileActivityFactor(HostileActivityEventIntel intel) {
 		super(intel);
@@ -187,15 +188,24 @@ public class PerseanLeagueHostileActivityFactor extends BaseHostileActivityFacto
 				+ "Colonies in that system will suffer a major accessibility penalty for as long as the blockade lasts.",
 				small, Misc.getNegativeHighlightColor(), "major accessibility penalty");
 		
-		LabelAPI label = info.addPara("If the blockading force is defeated, your standing with the Hegemony "
-				+ "and the independents will increase substantially, and the Persean League will likely abandon "
+//		LabelAPI label = info.addPara("If the blockading force is defeated, your standing with the Hegemony "
+//				+ "and the independents will increase substantially, and the Persean League will likely abandon "
+//				+ "further efforts to strong-arm you and be more open to negotiation.", 
+//				opad);
+//		label.setHighlight("Hegemony", "independents", "increase substantially", "Persean League");
+//		label.setHighlightColors(Global.getSector().getFaction(Factions.HEGEMONY).getBaseUIColor(),
+//				Global.getSector().getFaction(Factions.INDEPENDENT).getBaseUIColor(),
+//				Misc.getPositiveHighlightColor(),
+//				Global.getSector().getFaction(Factions.PERSEAN).getBaseUIColor());
+		
+		LabelAPI label = info.addPara("If the blockading force is defeated, your colonies will be viewed as "
+				+ "a more stable trading partner, resulting in increased accessibility, "
+				+ "and the Persean League will likely abandon "
 				+ "further efforts to strong-arm you and be more open to negotiation.", 
 				opad);
-		label.setHighlight("Hegemony", "independents", "increase substantially", "Persean League");
-		label.setHighlightColors(Global.getSector().getFaction(Factions.HEGEMONY).getBaseUIColor(),
-				Global.getSector().getFaction(Factions.INDEPENDENT).getBaseUIColor(),
-				Misc.getPositiveHighlightColor(),
-				Global.getSector().getFaction(Factions.PERSEAN).getBaseUIColor());
+		label.setHighlight("increased accessibility", "Persean League");
+		label.setHighlightColors(Misc.getPositiveHighlightColor(),
+								 Global.getSector().getFaction(Factions.PERSEAN).getBaseUIColor());		
 		
 		Color c = Global.getSector().getFaction(Factions.PERSEAN).getBaseUIColor();
 		stage.beginResetReqList(info, true, "crisis", opad);
@@ -280,7 +290,8 @@ public class PerseanLeagueHostileActivityFactor extends BaseHostileActivityFacto
 	
 	public static MarketAPI getKazeron(boolean requireMilitaryBase) {
 		MarketAPI kazeron = Global.getSector().getEconomy().getMarket("kazeron");
-		if (kazeron == null || kazeron.hasCondition(Conditions.DECIVILIZED)) {
+		if (kazeron == null || kazeron.hasCondition(Conditions.DECIVILIZED) || 
+				!kazeron.getFactionId().equals(Factions.PERSEAN)) {
 			return null;
 		}
 		if (requireMilitaryBase) {
@@ -373,9 +384,9 @@ public class PerseanLeagueHostileActivityFactor extends BaseHostileActivityFacto
 	
 	public void reportFGIAborted(FleetGroupIntel intel) {
 		PerseanLeagueMembership.setDefeatedBlockade(true);
-		
-		Misc.adjustRep(Factions.HEGEMONY, HEGEMONY_REP_FOR_DEFEATING, null);
-		Misc.adjustRep(Factions.INDEPENDENT, INDEPENDENT_REP_FOR_DEFEATING, null);
+		new EstablishedPolityScript();
+//		Misc.adjustRep(Factions.HEGEMONY, HEGEMONY_REP_FOR_DEFEATING, null);
+//		Misc.adjustRep(Factions.INDEPENDENT, INDEPENDENT_REP_FOR_DEFEATING, null);
 	}
 	
 	

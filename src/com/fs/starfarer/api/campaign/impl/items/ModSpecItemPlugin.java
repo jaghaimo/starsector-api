@@ -1,11 +1,12 @@
 package com.fs.starfarer.api.campaign.impl.items;
 
-import java.awt.Color;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 import java.util.Set;
+
+import java.awt.Color;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -169,6 +170,11 @@ public class ModSpecItemPlugin extends BaseSpecialItemPlugin {
 	public void createTooltip(TooltipMakerAPI tooltip, boolean expanded, CargoTransferHandlerAPI transferHandler, Object stackSource) {
 		//super.createTooltip(tooltip, expanded, transferHandler, stackSource);
 		
+		// not needed, done in core code that calls this
+//		if (spec.hasTag(Tags.CODEX_UNLOCKABLE)) {
+//			SharedUnlockData.get().reportPlayerAwareOfHullmod(spec.getId(), true);
+//		}
+		
 		float pad = 3f;
 		float opad = 10f;
 		float small = 5f;
@@ -214,6 +220,8 @@ public class ModSpecItemPlugin extends BaseSpecialItemPlugin {
 			e.addSModSection(tooltip, size, null, getTooltipWidth(), true, false);
 		}
 		
+		e.addRequiredItemSection(tooltip, null, null, null, getTooltipWidth(), true);
+		
 		addCostLabel(tooltip, opad, transferHandler, stackSource);
 		
 		//if (CampaignEngine.getInstance().getCharacterData().getPerson().getStats().isHullModAvailable(id)) {
@@ -258,8 +266,7 @@ public class ModSpecItemPlugin extends BaseSpecialItemPlugin {
 			Global.getSoundPlayer().playUISound("ui_acquired_hullmod", 1, 1);
 			Global.getSector().getCharacterData().addHullMod(modId);
 			Global.getSector().getCampaignUI().getMessageDisplay().addMessage(
-					"Acquired hull mod: " + modSpec.getDisplayName() + "");//, 
-
+					"Acquired hull mod: " + modSpec.getDisplayName() + "");
 		}
 	}
 

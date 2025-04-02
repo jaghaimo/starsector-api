@@ -1,6 +1,5 @@
 package com.fs.starfarer.api.impl.campaign.velfield;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.EnumSet;
 import java.util.Iterator;
@@ -10,6 +9,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 import java.util.Set;
+
+import java.awt.Color;
 
 import org.lwjgl.input.Mouse;
 import org.lwjgl.opengl.GL11;
@@ -2250,8 +2251,11 @@ public class SlipstreamTerrainPlugin2 extends BaseTerrain {
 				
 				String key = "$slipstream_moveToYOffset";
 				if (fleetTryingToMove && fleet.getMoveDestination() != null) {
-					float mx = Mouse.getX();
-					float my = Mouse.getY();
+//					float mx = Mouse.getX();
+//					float my = Mouse.getY();
+					// this accounts for screen scaling
+					float mx = Global.getSettings().getMouseX();
+					float my = Global.getSettings().getMouseY();
 					float wmx = Global.getSector().getViewport().convertScreenXToWorldX(mx);
 					float wmy = Global.getSector().getViewport().convertScreenYToWorldY(my);
 					float [] desired = getLengthAndWidthFractionWithinStream(new Vector2f(wmx, wmy));

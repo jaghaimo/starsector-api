@@ -21,6 +21,10 @@ public class DamagingExplosionSpec implements Cloneable {
 	private float maxDamage;
 	private float minDamage;
 	
+	private float maxEMPDamage;
+	private float minEMPDamage;
+	
+	
 	private float particleSpawnRadius = -1f;
 	
 	private CollisionClass collisionClass;
@@ -37,6 +41,7 @@ public class DamagingExplosionSpec implements Cloneable {
 
 	private DamageType damageType = DamageType.ENERGY;
 	private String soundSetId;
+	private float soundVolume = 1f;
 	
 	private boolean showGraphic = true;
 	private boolean useDetailedExplosion = true;
@@ -128,6 +133,7 @@ public class DamagingExplosionSpec implements Cloneable {
 			spec.detailedExplosionFlashDuration = (float) explosionSpecJson.optDouble("detailedExplosionFlashDuration", -1f);
 			spec.detailedExplosionFlashColorFringe = Misc.optColor(explosionSpecJson, "detailedExplosionFlashColorFringe", null);
 			spec.detailedExplosionFlashColorCore = Misc.optColor(explosionSpecJson, "detailedExplosionFlashColorCore", null);
+			spec.soundVolume = (float) explosionSpecJson.optDouble("soundVolume", 1f);
 			
 			spec.particleSpawnRadius = (float) explosionSpecJson.optDouble("particleSpawnRadius", -1f);
 			
@@ -363,6 +369,28 @@ public class DamagingExplosionSpec implements Cloneable {
 	public void setDetailedExplosionFlashDuration(float detailedExplosionFlashDuration) {
 		this.detailedExplosionFlashDuration = detailedExplosionFlashDuration;
 	}
-	
-	
+
+	public float getSoundVolume() {
+		return soundVolume;
+	}
+
+	public void setSoundVolume(float soundVolume) {
+		this.soundVolume = soundVolume;
+	}
+
+	public float getMaxEMPDamage() {
+		return maxEMPDamage;
+	}
+
+	public void setMaxEMPDamage(float maxEMPDamage) {
+		this.maxEMPDamage = maxEMPDamage;
+	}
+
+	public float getMinEMPDamage() {
+		return minEMPDamage;
+	}
+
+	public void setMinEMPDamage(float minEMPDamage) {
+		this.minEMPDamage = minEMPDamage;
+	}
 }

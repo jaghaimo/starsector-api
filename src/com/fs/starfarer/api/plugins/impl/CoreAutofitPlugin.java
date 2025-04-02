@@ -30,6 +30,7 @@ import com.fs.starfarer.api.combat.WeaponAPI.AIHints;
 import com.fs.starfarer.api.combat.WeaponAPI.WeaponType;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.DModManager;
+import com.fs.starfarer.api.impl.campaign.HullModItemManager;
 import com.fs.starfarer.api.impl.campaign.fleets.DefaultFleetInflater;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.HullMods;
@@ -379,6 +380,10 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 		}
 
 		List<String> targetMods = new ArrayList<String>();
+		for (String id : target.getSMods()) {
+			if (target.getSModdedBuiltIns().contains(id)) continue;
+			targetMods.add(id);
+		}
 		for (String id : target.getNonBuiltInHullmods()) {
 			//if (HullMods.FLUX_DISTRIBUTOR.equals(id) || HullMods.FLUX_COIL.equals(id)) continue;
 			targetMods.add(id);
@@ -836,11 +841,28 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 			return 0;
 		}
 		
+		boolean hasItemIfAny = HullModItemManager.getInstance().isRequiredItemAvailable(mod.getId(), 
+								delegate.getFleetMember(), current, delegate.getMarket());
+		if (!hasItemIfAny) {
+			if (orig != null) {
+				ship.setVariantForHullmodCheckOnly(orig);
+			}
+			return 0;
+		}
+		
+		
 		if (orig != null && ship != null) {
 			ship.setVariantForHullmodCheckOnly(orig);
 		}
 		
 		current.addMod(mod.getId());
+		
+		if (ship != null && mod.getId() != null && mod.getEffect() != null) {
+			if (!mod.hasTag(Tags.DO_NOT_APPLY_HULLMOD_DURING_AUTOFIT)) {
+				mod.getEffect().applyEffectsBeforeShipCreation(ship.getHullSize(), ship.getMutableStats(), mod.getId());
+				mod.getEffect().applyEffectsAfterShipCreation(ship, mod.getId());
+			}
+		}
 		return cost;
 	}
 	
@@ -2227,6 +2249,63 @@ public class CoreAutofitPlugin extends BaseAutofitPlugin {
 		}
 		
 		return (int) addedTotal;
+	}
+	
+	
+	
+	public void addSMods(FleetMemberAPI member, int numSmods, AutofitPluginDelegate delegate) {
+		availableMods = new LinkedHashSet<String>(delegate.getAvailableHullmods());
+		
+		ShipVariantAPI current = member.getVariant();
+		
+		int added = convertToSMods(current, numSmods);
+		addExtraVents(current);
+		addExtraCaps(current);
+		//addHullmods(current, delegate, HullMods.FLUX_DISTRIBUTOR, HullMods.FLUX_COIL);
+		if (!current.hasHullMod(HullMods.FLUX_DISTRIBUTOR)) {
+			addDistributor(current, delegate);
+		}
+		if (!current.hasHullMod(HullMods.FLUX_COIL)) {
+			addCoil(current, delegate);
+		}
+		//addModsWithSpareOPIfAny(current, target, true, delegate);
+		//addHullmods(current, delegate, HullMods.FLUX_DISTRIBUTOR, HullMods.FLUX_COIL);
+		if (current.getHullSize() == HullSize.FRIGATE || current.hasHullMod(HullMods.SAFETYOVERRIDES)) {
+			addHullmods(current, delegate, HullMods.HARDENED_SUBSYSTEMS, HullMods.REINFORCEDHULL, HullMods.BLAST_DOORS);
+		} else {
+			addHullmods(current, delegate, HullMods.REINFORCEDHULL, HullMods.BLAST_DOORS, HullMods.HARDENED_SUBSYSTEMS);
+		}
+		int remaining = numSmods - added;
+		if (remaining > 0) {
+			List<String> mods = new ArrayList<String>();
+			mods.add(HullMods.FLUX_DISTRIBUTOR);
+			mods.add(HullMods.FLUX_COIL);
+			if (current.getHullSize() == HullSize.FRIGATE || current.hasHullMod(HullMods.SAFETYOVERRIDES)) {
+				mods.add(HullMods.HARDENED_SUBSYSTEMS);
+				mods.add(HullMods.REINFORCEDHULL);
+			} else {
+				mods.add(HullMods.REINFORCEDHULL);
+				mods.add(HullMods.HARDENED_SUBSYSTEMS);
+			}
+			mods.add(HullMods.BLAST_DOORS);
+			Iterator<String> iter = mods.iterator();
+			while (iter.hasNext()) {
+				String modId = iter.next();
+				if (current.getPermaMods().contains(modId)) {
+					iter.remove();
+				}
+			}
+//				while (!mods.isEmpty() && current.hasHullMod(mods.get(0))) {
+//					mods.remove(0);
+//				}
+			for (int i = 0; i < remaining && !mods.isEmpty(); i++) {
+				current.setNumFluxCapacitors(0);
+				current.setNumFluxVents(0);
+				String modId = mods.get(Math.min(i, mods.size() - 1));
+				addHullmods(current, delegate, modId);
+				convertToSMods(current, 1);
+			}
+		}
 	}
 	
 }

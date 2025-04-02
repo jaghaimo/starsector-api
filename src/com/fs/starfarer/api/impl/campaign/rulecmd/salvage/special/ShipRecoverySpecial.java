@@ -15,6 +15,7 @@ import com.fs.starfarer.api.campaign.InteractionDialogAPI;
 import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.listeners.ListenerUtil;
+import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.combat.ShipVariantAPI;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.fleet.FleetMemberType;
@@ -57,6 +58,7 @@ public class ShipRecoverySpecial extends BaseSalvageSpecial {
 		public ShipCondition condition = ShipCondition.AVERAGE;
 		public String variantId = null;
 		public ShipVariantAPI variant = null;
+		public PersonAPI captain = null;
 		public String shipName = null;
 		public String fleetMemberId = null;
 		public boolean addDmods = true;
@@ -346,6 +348,10 @@ public class ShipRecoverySpecial extends BaseSalvageSpecial {
 		member.setOwner(1);
 		if (shipData.fleetMemberId != null) {
 			member.setId(shipData.fleetMemberId);
+		}
+		
+		if (shipData.captain != null) {
+			member.setCaptain(shipData.captain);
 		}
 		
 		if (isNameKnown(shipData.condition) || (shipData.nameAlwaysKnown != null && shipData.nameAlwaysKnown)) {

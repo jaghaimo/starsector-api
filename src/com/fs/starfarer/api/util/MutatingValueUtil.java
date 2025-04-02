@@ -9,6 +9,8 @@ public class MutatingValueUtil {
 	
 	private float rate;
 	private float rateSign;
+	private float rateMult = 1f;
+	private float valueMult = 1f;
 	
 	private float sign = 0;
 
@@ -27,9 +29,9 @@ public class MutatingValueUtil {
 	
 	public void advance(float amount) {
 		if (rateSign != 0) {
-			value += amount * rate * rateSign;
+			value += amount * rate * rateSign * rateMult;
 		} else {
-			value += amount * rate;
+			value += amount * rate * rateMult;
 		}
 		if (value > max) {
 			rateSign = -1f;
@@ -37,10 +39,27 @@ public class MutatingValueUtil {
 			rateSign = 1f;
 		}
 	}
+	
+	public float getRateMult() {
+		return rateMult;
+	}
+
+	public void setRateMult(float rateMult) {
+		this.rateMult = rateMult;
+	}
 
 	public float getValue() {
-		if (sign != 0) return value * sign;
-		return value;
+		if (sign != 0) return value * sign * valueMult;
+		return value * valueMult;
+	}
+	
+
+	public float getValueMult() {
+		return valueMult;
+	}
+
+	public void setValueMult(float valueMult) {
+		this.valueMult = valueMult;
 	}
 
 	public void setValue(float value) {

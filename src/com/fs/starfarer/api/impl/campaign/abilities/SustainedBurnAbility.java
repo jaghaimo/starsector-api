@@ -170,9 +170,13 @@ public class SustainedBurnAbility extends BaseToggleAbility {
 			status = " (on)";
 		}
 		
-		LabelAPI title = tooltip.addTitle("Sustained Burn" + status);
-		title.highlightLast(status);
-		title.setHighlightColor(gray);
+		if (!Global.CODEX_TOOLTIP_MODE) {
+			LabelAPI title = tooltip.addTitle("Sustained Burn" + status);
+			title.highlightLast(status);
+			title.setHighlightColor(gray);
+		} else {
+			tooltip.addSpacer(-10f);
+		}
 
 		float pad = 10f;
 		
@@ -196,11 +200,13 @@ public class SustainedBurnAbility extends BaseToggleAbility {
 		tooltip.addPara("The burn level increase does not apply to flat burn bonuses, " +
 						"such as those from Nav Buoys or tugs.", pad);
 		
-		CampaignFleetAPI fleet = getFleet();
-		if (fleet != null) {
-			if (!fleet.isAIMode() && fleet.getCargo().getFuel() <= 0 && 
-					fleet.getContainingLocation() != null && fleet.getContainingLocation().isHyperspace()) {
-				tooltip.addPara("Out of fuel.", Misc.getNegativeHighlightColor(), pad);
+		if (!Global.CODEX_TOOLTIP_MODE) {
+			CampaignFleetAPI fleet = getFleet();
+			if (fleet != null) {
+				if (!fleet.isAIMode() && fleet.getCargo().getFuel() <= 0 && 
+						fleet.getContainingLocation() != null && fleet.getContainingLocation().isHyperspace()) {
+					tooltip.addPara("Out of fuel.", Misc.getNegativeHighlightColor(), pad);
+				}
 			}
 		}
 		

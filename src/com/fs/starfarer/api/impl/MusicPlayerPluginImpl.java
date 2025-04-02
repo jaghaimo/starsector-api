@@ -12,21 +12,27 @@ import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.campaign.ai.ModularFleetAIAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
+import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Entities;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
+import com.fs.starfarer.api.impl.campaign.tutorial.TutorialMissionIntel;
 import com.fs.starfarer.api.util.Misc;
 
 public class MusicPlayerPluginImpl implements MusicPlayerPluginWithVolumeControl {
 
 	public static String KEEP_PLAYING_LOCATION_MUSIC_DURING_ENCOUNTER_MEM_KEY = "$playLocationMusicDuringEnc";
+	public static String COMBAT_MUSIC_SET_MEM_KEY = "$combatMusicSetId";
+	public static String COMBAT_MUSIC_SET_FACTION_KEY = "music_combat_set";
 	public static String MUSIC_SET_MEM_KEY = "$musicSetId";
+	public static String MUSIC_SET_MEM_KEY_MISSION = "$musicSetIdForMission";
 	
 	
 	public static String MUSIC_ENCOUNTER_MYSTERIOUS_AGGRO = "music_encounter_mysterious";
 	public static String MUSIC_ENCOUNTER_MYSTERIOUS_NON_AGGRESSIVE = "music_encounter_mysterious_non_aggressive";
 	public static String MUSIC_ENCOUNTER_NEUTRAL = "music_encounter_neutral";
+	public static String MUSIC_GALATIA_ACADEMY = "music_galatia_academy";
 	
 	
 	public static Object CAMPAIGN_SYSTEM = new Object();
@@ -71,7 +77,11 @@ public class MusicPlayerPluginImpl implements MusicPlayerPluginWithVolumeControl
 			 the same music will just keep playing uninterrupted.
 			 */
 			StarSystemAPI system = (StarSystemAPI) playerFleet.getContainingLocation();
-			String musicSetId = system.getMemoryWithoutUpdate().getString(MUSIC_SET_MEM_KEY);
+			String musicSetId = system.getMemoryWithoutUpdate().getString(MUSIC_SET_MEM_KEY_MISSION);
+			if (musicSetId != null) {
+				return getToken(SYSTEM_MUSIC_PREFIX + musicSetId);
+			}
+			musicSetId = system.getMemoryWithoutUpdate().getString(MUSIC_SET_MEM_KEY);
 			if (musicSetId != null) {
 				return getToken(SYSTEM_MUSIC_PREFIX + musicSetId);
 			}
@@ -85,6 +95,15 @@ public class MusicPlayerPluginImpl implements MusicPlayerPluginWithVolumeControl
 	}
 	
 	public String getMusicSetIdForCombat(CombatEngineAPI engine) {
+		if (engine.getContext() != null && engine.getContext().getOtherFleet() != null) {
+			CampaignFleetAPI other = engine.getContext().getOtherFleet();
+			MemoryAPI mem = other.getMemoryWithoutUpdate();
+			if (mem.contains(COMBAT_MUSIC_SET_MEM_KEY)) {
+				return mem.getString(COMBAT_MUSIC_SET_MEM_KEY);
+			}
+			String factionSet = other.getFaction().getMusicMap().get(COMBAT_MUSIC_SET_FACTION_KEY);
+			if (factionSet != null) return factionSet;
+		}
 		return "music_combat";
 	}
 	
@@ -137,6 +156,18 @@ public class MusicPlayerPluginImpl implements MusicPlayerPluginWithVolumeControl
 	 * @return
 	 */
 	protected String getPlanetSurveyMusicSetId(Object param) {
+		SectorEntityToken token = null;
+		if (param instanceof SectorEntityToken) {
+			token = (SectorEntityToken) param;
+		} else if (param instanceof MarketAPI) {
+			token = ((MarketAPI)param).getPlanetEntity();
+		}
+		if (token != null) {	
+			String musicSetId = token.getMemoryWithoutUpdate().getString(MUSIC_SET_MEM_KEY_MISSION);
+			if (musicSetId != null) return musicSetId;
+			musicSetId = token.getMemoryWithoutUpdate().getString(MUSIC_SET_MEM_KEY);
+			if (musicSetId != null) return musicSetId;
+		}
 		return "music_survey_and_scavenge";
 	}
 	
@@ -148,9 +179,14 @@ public class MusicPlayerPluginImpl implements MusicPlayerPluginWithVolumeControl
 		CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();
 		if (playerFleet.getContainingLocation() instanceof StarSystemAPI) {
 			StarSystemAPI system = (StarSystemAPI) playerFleet.getContainingLocation();
-			String musicSetId = system.getMemoryWithoutUpdate().getString(MUSIC_SET_MEM_KEY);
+			String musicSetId = system.getMemoryWithoutUpdate().getString(MUSIC_SET_MEM_KEY_MISSION);
+			if (musicSetId != null) return musicSetId;
+			musicSetId = system.getMemoryWithoutUpdate().getString(MUSIC_SET_MEM_KEY);
 			if (musicSetId != null) return musicSetId;
 
+			if (system.hasTag(Tags.SYSTEM_ABYSSAL)) {
+				return "music_campaign_abyssal";
+			}
 			if (system.hasTag(Tags.THEME_CORE) ||
 					!Misc.getMarketsInLocation(system, Factions.PLAYER).isEmpty()) {
 				return "music_campaign";
@@ -164,7 +200,9 @@ public class MusicPlayerPluginImpl implements MusicPlayerPluginWithVolumeControl
 		if (param instanceof SectorEntityToken) {
 			SectorEntityToken token = (SectorEntityToken) param;
 			
-			String musicSetId = token.getMemoryWithoutUpdate().getString(MUSIC_SET_MEM_KEY);
+			String musicSetId = token.getMemoryWithoutUpdate().getString(MUSIC_SET_MEM_KEY_MISSION);
+			if (musicSetId != null) return musicSetId;
+			musicSetId = token.getMemoryWithoutUpdate().getString(MUSIC_SET_MEM_KEY);
 			if (musicSetId != null) return musicSetId;
 			
 			if (Entities.ABYSSAL_LIGHT.equals(token.getCustomEntityType())) {
@@ -186,6 +224,9 @@ public class MusicPlayerPluginImpl implements MusicPlayerPluginWithVolumeControl
 			if (token.hasTag(Tags.GATE)) {
 				return MUSIC_ENCOUNTER_NEUTRAL;
 			}
+			if (token.hasTag(Tags.OBJECTIVE)) {
+				return MUSIC_ENCOUNTER_NEUTRAL;
+			}
 			if (token.hasTag(Tags.SALVAGEABLE)) {
 				if (token.getMemoryWithoutUpdate() != null && token.getMemoryWithoutUpdate().getBoolean("$hasDefenders")) {
 					if (token.getMemoryWithoutUpdate().getBoolean("$limboMiningStation")) {
@@ -201,6 +242,12 @@ public class MusicPlayerPluginImpl implements MusicPlayerPluginWithVolumeControl
 			if (token.hasTag(Tags.SALVAGE_MUSIC)) {
 				return "music_survey_and_scavenge";
 			}
+			
+//			MemoryAPI memory = token.getMemoryWithoutUpdate();
+//			if (!memory.getBoolean("$defenderFleetDefeated") && memory.getBoolean("$hasDefenders")) { 
+//				CampaignFleetAPI defenders = memory.getFleet("$defenderFleet");
+//				if (defenders != null) token = defenders;
+//			}
 			
 			if (token.getFaction() != null) {
 				FactionAPI faction = (FactionAPI) token.getFaction();
@@ -250,12 +297,22 @@ public class MusicPlayerPluginImpl implements MusicPlayerPluginWithVolumeControl
 		if (param instanceof MarketAPI) {
 			MarketAPI market = (MarketAPI) param;
 			
-			String musicSetId = market.getMemoryWithoutUpdate().getString(MUSIC_SET_MEM_KEY);
+			String musicSetId = market.getMemoryWithoutUpdate().getString(MUSIC_SET_MEM_KEY_MISSION);
+			if (musicSetId != null) return musicSetId;
+			musicSetId = market.getMemoryWithoutUpdate().getString(MUSIC_SET_MEM_KEY);
 			if (musicSetId != null) return musicSetId;
 			
 			if (market.getPrimaryEntity() != null &&
 					market.getPrimaryEntity().getMemoryWithoutUpdate().getBoolean("$abandonedStation")) {
 				return getPlanetSurveyMusicSetId(param);
+			}
+			
+			if (market.getPrimaryEntity() != null &&
+					market.getPrimaryEntity().getId().equals("station_galatia_academy")) {
+				if (TutorialMissionIntel.isTutorialInProgress()) {
+					return MUSIC_ENCOUNTER_MYSTERIOUS_AGGRO;
+				}
+				return MUSIC_GALATIA_ACADEMY;
 			}
 			
 			FactionAPI faction = market.getFaction();

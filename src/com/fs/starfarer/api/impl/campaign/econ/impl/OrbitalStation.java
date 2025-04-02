@@ -185,6 +185,12 @@ public class OrbitalStation extends BaseIndustry implements FleetEventListener {
 
 
 
+	public CampaignFleetAPI getStationFleet() {
+		return stationFleet;
+	}
+	public SectorEntityToken getStationEntity() {
+		return stationEntity;
+	}
 
 
 	protected CampaignFleetAPI stationFleet = null;
@@ -419,6 +425,8 @@ public class OrbitalStation extends BaseIndustry implements FleetEventListener {
 	
 	
 	protected void matchStationAndCommanderToCurrentIndustry() {
+		if (stationFleet == null) return;
+		
 		stationFleet.getFleetData().clear();
 		
 		String fleetName = null;

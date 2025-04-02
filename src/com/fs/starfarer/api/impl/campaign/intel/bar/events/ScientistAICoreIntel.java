@@ -237,6 +237,9 @@ public class ScientistAICoreIntel extends BaseIntelPlugin {
 	}
 	
 	public String getSortString() {
+		if (getTagsForSort().contains(Tags.INTEL_FLEET_LOG) || getTagsForSort().contains(Tags.INTEL_EXPLORATION)) {
+			return getSortStringNewestFirst();
+		}
 		return "Technology Cache";
 	}
 	

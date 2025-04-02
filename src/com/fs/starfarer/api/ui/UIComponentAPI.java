@@ -10,4 +10,7 @@ public interface UIComponentAPI {
 	void render(float alphaMult);
 	void processInput(List<InputEventAPI> events);
 	void advance(float amount);
+
+	void setOpacity(float opacity);
+	float getOpacity();
 }

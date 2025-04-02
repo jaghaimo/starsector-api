@@ -7,6 +7,7 @@ import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.SpecialItemData;
 import com.fs.starfarer.api.impl.campaign.ids.Items;
 import com.fs.starfarer.api.impl.campaign.ids.Sounds;
+import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.rulecmd.SetStoryOption;
 import com.fs.starfarer.api.loading.WeaponSpecAPI;
 
@@ -31,6 +32,9 @@ public class WeaponBlueprintOffer extends BaseHistorianOfferWithLocation {
 	}
 	
 	public String getSortString() {
+		if (getTagsForSort().contains(Tags.INTEL_FLEET_LOG) || getTagsForSort().contains(Tags.INTEL_EXPLORATION)) {
+			return getSortStringNewestFirst();
+		}
 		return "Weapon Blueprint";
 	}
 	

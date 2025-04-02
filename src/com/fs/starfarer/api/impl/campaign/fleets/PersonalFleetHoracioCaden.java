@@ -28,11 +28,16 @@ public class PersonalFleetHoracioCaden extends PersonalFleetScript {
 		setMinRespawnDelayDays(10f);
 		setMaxRespawnDelayDays(20f);
 	}
+	
+	@Override
+	protected MarketAPI getSourceMarket() {
+		return Global.getSector().getEconomy().getMarket("sindria");
+	}
 
 	@Override
 	public CampaignFleetAPI spawnFleet() {
 		
-		MarketAPI sindria = Global.getSector().getEconomy().getMarket("sindria");
+		MarketAPI sindria = getSourceMarket();
 		
 		FleetCreatorMission m = new FleetCreatorMission(random);
 		m.beginFleet();

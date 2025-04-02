@@ -1,7 +1,8 @@
 package com.fs.starfarer.api.impl.combat;
 
-import java.awt.Color;
 import java.util.List;
+
+import java.awt.Color;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin;
@@ -97,20 +98,22 @@ public class AcausalDisruptorStats extends BaseShipSystemScript {
 		} else {
 			if (target == null || target.getOwner() == ship.getOwner()) {
 				if (player) {
-					target = Misc.findClosestShipEnemyOf(ship, ship.getMouseTarget(), HullSize.FIGHTER, range, true);
+					target = Misc.findClosestShipEnemyOf(ship, ship.getMouseTarget(), HullSize.FRIGATE, range, true);
 				} else {
 					Object test = ship.getAIFlags().getCustom(AIFlags.MANEUVER_TARGET);
 					if (test instanceof ShipAPI) {
 						target = (ShipAPI) test;
 						float dist = Misc.getDistance(ship.getLocation(), target.getLocation());
 						float radSum = ship.getCollisionRadius() + target.getCollisionRadius();
-						if (dist > range + radSum) target = null;
+						if (dist > range + radSum || target.isFighter()) target = null;
 					}
 				}
 			}
-			if (target == null) {
-				target = Misc.findClosestShipEnemyOf(ship, ship.getLocation(), HullSize.FIGHTER, range, true);
-			}
+		}
+		
+		if (target != null && target.isFighter()) target = null;
+		if (target == null) {
+			target = Misc.findClosestShipEnemyOf(ship, ship.getLocation(), HullSize.FRIGATE, range, true);
 		}
 		if (target == null || target.getFluxTracker().isOverloadedOrVenting()) target = ship;
 		

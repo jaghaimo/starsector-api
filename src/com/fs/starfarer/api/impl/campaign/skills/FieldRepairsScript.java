@@ -96,7 +96,7 @@ public class FieldRepairsScript implements EveryFrameScript {
 				pickNext();
 			} else {
 				if (fleet.getFleetData().getMembersListCopy().contains(picked) &&
-						DModManager.getNumDMods(picked.getVariant()) > 0) {
+						DModManager.getNumNonBuiltInDMods(picked.getVariant()) > 0) {
 					
 					DModManager.removeDMod(picked.getVariant(), dmod);
 					
@@ -105,7 +105,7 @@ public class FieldRepairsScript implements EveryFrameScript {
 					intel.setIcon(Global.getSettings().getSpriteName("intel", "repairs_finished"));
 					Global.getSector().getCampaignUI().addMessage(intel, MessageClickAction.REFIT_TAB, picked);
 					
-					int dmods = DModManager.getNumDMods(picked.getVariant());
+					int dmods = DModManager.getNumNonBuiltInDMods(picked.getVariant());
 					if (dmods <= 0) {
 						restoreToNonDHull(picked.getVariant());
 					}
@@ -122,7 +122,7 @@ public class FieldRepairsScript implements EveryFrameScript {
 			} else {
 				seen.add(pickedNew.getId());
 				
-				float numDmods = DModManager.getNumDMods(pickedNew.getVariant());
+				float numDmods = DModManager.getNumNonBuiltInDMods(pickedNew.getVariant());
 				if (fleet.getFleetData().getMembersListCopy().contains(pickedNew) && numDmods > 0) {
 					float probRemove = MIN_NEW_REMOVE_PROB + numDmods * NEW_REMOVE_PROB_PER_DMOD;
 					if (newRandom.nextFloat() < probRemove) {
@@ -133,7 +133,7 @@ public class FieldRepairsScript implements EveryFrameScript {
 						intel.setIcon(Global.getSettings().getSpriteName("intel", "repairs_finished"));
 						Global.getSector().getCampaignUI().addMessage(intel, MessageClickAction.REFIT_TAB, pickedNew);
 						
-						int dmods = DModManager.getNumDMods(pickedNew.getVariant());
+						int dmods = DModManager.getNumNonBuiltInDMods(pickedNew.getVariant());
 						if (dmods <= 0) {
 							restoreToNonDHull(pickedNew.getVariant());
 						}
@@ -227,7 +227,7 @@ public class FieldRepairsScript implements EveryFrameScript {
 	}
 
 	
-	public static void restoreToNonDHull(ShipVariantAPI v) {
+	public static ShipHullSpecAPI getBaseNonDHullFor(ShipVariantAPI v) {
 		ShipHullSpecAPI base = v.getHullSpec().getDParentHull();
 		
 		// so that a skin with dmods can be "restored" - i.e. just dmods suppressed w/o changing to
@@ -238,6 +238,11 @@ public class FieldRepairsScript implements EveryFrameScript {
 		if (base == null && v.getHullSpec().isRestoreToBase()) {
 			base = v.getHullSpec().getBaseHull();
 		}
+		return base;
+	}
+	
+	public static void restoreToNonDHull(ShipVariantAPI v) {
+		ShipHullSpecAPI base = getBaseNonDHullFor(v);
 		
 		if (base != null) {
 			//v.clearPermaMods();

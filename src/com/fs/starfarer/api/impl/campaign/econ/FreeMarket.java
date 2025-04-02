@@ -125,31 +125,44 @@ public class FreeMarket extends BaseMarketConditionPlugin implements MarketImmig
 	protected void createTooltipAfterDescription(TooltipMakerAPI tooltip, boolean expanded) {
 		super.createTooltipAfterDescription(tooltip, expanded);
 		
-		if (!market.hasSpaceport()) {
+		if (!market.hasSpaceport() && !Global.CODEX_TOOLTIP_MODE) {
 			tooltip.addPara("Requires a spaceport to have any effect", Misc.getNegativeHighlightColor(), 10f);
 			return;
 		}
 		
-//		tooltip.addPara("%s stability", 
-//						10f, Misc.getHighlightColor(),
-//						"-" + (int)STABILITY_PENALTY);
-		tooltip.addPara("%s stability (maximum of %s, reached after %s days)", 
-				10f, Misc.getHighlightColor(),
-				"-" + (int)getStabilityPenalty(),
-				"-" + (int) (MAX_STABILITY_PENALTY),
-				"" + (int) MAX_DAYS);
-		tooltip.addPara("%s population growth (maximum of %s, reached after %s days)",
-				
-				10f, Misc.getHighlightColor(), 
-				"+" + (int) getImmigrationBonus(),
-				"+" + (int) (MAX_GROWTH),
-				"" + (int) MAX_DAYS);
-		
-		tooltip.addPara("%s accessibility (maximum of %s, reached after %s days)", 
-				10f, Misc.getHighlightColor(), 
-				"+" + (int) Math.round(getAccessBonus() * 100f) + "%",
-				"+" + (int) Math.round(MAX_ACCESS_BONUS * 100f) + "%",
-				"" + (int) MAX_DAYS);
+		if (Global.CODEX_TOOLTIP_MODE) {
+			tooltip.addPara("Reduced stability (maximum of %s, reached after %s days)", 
+					10f, Misc.getHighlightColor(),
+					"-" + (int) (MAX_STABILITY_PENALTY),
+					"" + (int) MAX_DAYS);
+			tooltip.addPara("Increased population growth (maximum of %s, reached after %s days)",
+					10f, Misc.getHighlightColor(), 
+					"+" + (int) (MAX_GROWTH),
+					"" + (int) MAX_DAYS);
+			
+			tooltip.addPara("Increased accessibility (maximum of %s, reached after %s days)", 
+					10f, Misc.getHighlightColor(), 
+					"+" + (int) Math.round(MAX_ACCESS_BONUS * 100f) + "%",
+					"" + (int) MAX_DAYS);
+		} else {
+			tooltip.addPara("%s stability (maximum of %s, reached after %s days)", 
+					10f, Misc.getHighlightColor(),
+					"-" + (int)getStabilityPenalty(),
+					"-" + (int) (MAX_STABILITY_PENALTY),
+					"" + (int) MAX_DAYS);
+			tooltip.addPara("%s population growth (maximum of %s, reached after %s days)",
+					
+					10f, Misc.getHighlightColor(), 
+					"+" + (int) getImmigrationBonus(),
+					"+" + (int) (MAX_GROWTH),
+					"" + (int) MAX_DAYS);
+			
+			tooltip.addPara("%s accessibility (maximum of %s, reached after %s days)", 
+					10f, Misc.getHighlightColor(), 
+					"+" + (int) Math.round(getAccessBonus() * 100f) + "%",
+					"+" + (int) Math.round(MAX_ACCESS_BONUS * 100f) + "%",
+					"" + (int) MAX_DAYS);
+		}
 		
 		tooltip.addPara("Colony does not require the transponder to be turned on for open trade. " +
 						"All commodities are legal to trade.", 10f);

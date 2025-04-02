@@ -1,10 +1,11 @@
 package com.fs.starfarer.api.impl.campaign.intel.bases;
 
-import java.awt.Color;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Random;
 import java.util.Set;
+
+import java.awt.Color;
 
 import org.apache.log4j.Logger;
 import org.json.JSONException;
@@ -148,6 +149,12 @@ public class LuddicPathBaseIntel extends BaseIntelPlugin implements EveryFrameSc
 		weights.put(LocationType.GAS_GIANT_ORBIT, 10f);
 		weights.put(LocationType.PLANET_ORBIT, 10f);
 		WeightedRandomPicker<EntityLocation> locs = BaseThemeGenerator.getLocations(null, system, null, 100f, weights);
+		if (locs.isEmpty()) {
+			weights.clear();
+			weights.put(LocationType.STAR_ORBIT, 10f);
+			weights.put(LocationType.OUTER_SYSTEM, 0.0001f);
+			locs = BaseThemeGenerator.getLocations(null, system, null, 100f, weights);
+		}
 		EntityLocation loc = locs.pick();
 		
 		if (loc == null) {
@@ -385,7 +392,7 @@ public class LuddicPathBaseIntel extends BaseIntelPlugin implements EveryFrameSc
 				addedListenerTo.removeEventListener(this);
 			}
 			fleet.addEventListener(this);
-			addedListenerTo = fleet;			
+			addedListenerTo = fleet;
 		}
 		
 		monthlyInterval.advance(days);
@@ -572,6 +579,10 @@ public class LuddicPathBaseIntel extends BaseIntelPlugin implements EveryFrameSc
 	}
 	
 	public String getSortString() {
+		if (getTagsForSort().contains(Tags.INTEL_FLEET_LOG) || getTagsForSort().contains(Tags.INTEL_EXPLORATION)) {
+			return getSortStringNewestFirst();
+		}
+		
 		String base = Misc.ucFirst(getFactionForUIColors().getPersonNamePrefix());
 		return base + " Base";
 	}
@@ -701,6 +712,7 @@ public class LuddicPathBaseIntel extends BaseIntelPlugin implements EveryFrameSc
 		if (bountyData != null) {
 			tags.add(Tags.INTEL_BOUNTY);
 		}
+		
 		tags.add(Tags.INTEL_EXPLORATION);
 		
 //		if (target != null && !Misc.getMarketsInLocation(target, Factions.PLAYER).isEmpty()) {
@@ -789,11 +801,20 @@ public class LuddicPathBaseIntel extends BaseIntelPlugin implements EveryFrameSc
 			curr = Math.round(mod.value);
 		}
 		
+		int avWithoutPenalties = (int) Math.round(com.getAvailableStat().getBaseValue());
+		for (StatMod m : com.getAvailableStat().getFlatMods().values()) {
+			if (m.value < 0) continue;
+			avWithoutPenalties += (int) Math.round(m.value);
+		}
+		
 		int a = com.getAvailable() - curr;
+		a = avWithoutPenalties - curr;
 		int d = com.getMaxDemand();
 		if (d > a) {
-			com.getAvailableStat().modifyFlat(modId, (d - a), "Brought in by smugglers");
-		}
+			//int supply = Math.max(1, d - a - 1);
+			int supply = Math.max(1, d - a);
+			com.getAvailableStat().modifyFlat(modId, supply, "Brought in by smugglers");
+		}		
 	}
 
 	public void economyUpdated() {

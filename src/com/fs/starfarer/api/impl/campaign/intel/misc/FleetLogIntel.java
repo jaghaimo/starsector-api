@@ -6,6 +6,7 @@ import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignTerrainAPI;
 import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
+import com.fs.starfarer.api.campaign.econ.MarketAPI.SurveyLevel;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.intel.BaseIntelPlugin;
 import com.fs.starfarer.api.impl.campaign.terrain.DebrisFieldTerrainPlugin;
@@ -19,11 +20,16 @@ import com.fs.starfarer.api.ui.SectorMapAPI;
  */
 public class FleetLogIntel extends BaseIntelPlugin {
 
+	public static Object DISCOVERED_PARAM = new Object();
+	
 	public static float DEFAULT_DURATION = 365f;
 
 	protected Float duration = null; 
 	protected SectorEntityToken removeTrigger = null;
+	protected Boolean keepExploredDebrisField = null;
+	protected Boolean removeSurveyedPlanet = null;
 	protected String icon = null;
+	protected String iconId = null;
 	protected String sound = null;
 	
 	public FleetLogIntel() {
@@ -41,20 +47,45 @@ public class FleetLogIntel extends BaseIntelPlugin {
 		duration = days;
 	}
 
+	public String getSortString() {
+		return getSortStringNewestFirst();
+	}
+	
+	public Boolean getKeepExploredDebrisField() {
+		return keepExploredDebrisField;
+	}
+
+	public void setKeepExploredDebrisField(Boolean keepExploredDebrisField) {
+		this.keepExploredDebrisField = keepExploredDebrisField;
+	}
+
+	public Boolean getRemoveSurveyedPlanet() {
+		return removeSurveyedPlanet;
+	}
+
+	public void setRemoveSurveyedPlanet(Boolean removeSurveyedPlanet) {
+		this.removeSurveyedPlanet = removeSurveyedPlanet;
+	}
+
 	@Override
 	public boolean shouldRemoveIntel() {
 		if (isEnded()) return true;
 		
 		if (removeTrigger != null) {
 			if (!removeTrigger.isAlive()) return true;
-			if (removeTrigger instanceof CampaignTerrainAPI) {
+			if (removeTrigger instanceof CampaignTerrainAPI && keepExploredDebrisField == null) {
 				CampaignTerrainAPI terrain = (CampaignTerrainAPI) removeTrigger;
 				if (terrain.getPlugin() instanceof DebrisFieldTerrainPlugin) {
 					DebrisFieldTerrainPlugin debris = (DebrisFieldTerrainPlugin) terrain.getPlugin();
 					if (debris.isScavenged()) return true;
 				}
 			} else if (removeTrigger instanceof PlanetAPI) {
-				
+				if (removeSurveyedPlanet != null && removeSurveyedPlanet) {
+					PlanetAPI planet = (PlanetAPI) removeTrigger;
+					if (planet.getMarket() != null && planet.getMarket().getSurveyLevel() == SurveyLevel.FULL) {
+						return true;
+					}
+				}
 			}
 		}
 		
@@ -70,19 +101,30 @@ public class FleetLogIntel extends BaseIntelPlugin {
 	}
 
 	
+	
+	public String getIconId() {
+		return iconId;
+	}
+
+	public void setIconId(String iconId) {
+		this.iconId = iconId;
+	}
+
 	public void setIcon(String icon) {
 		this.icon = icon;
 	}
 
 	@Override
 	public String getIcon() {
+		if (iconId != null) {
+			return Global.getSettings().getSpriteName("intel", iconId);
+		}
 		if (icon != null) return icon;
 		return Global.getSettings().getSpriteName("intel", "fleet_log");
 	}
 
 	@Override
 	public Set<String> getIntelTags(SectorMapAPI map) {
-		//Set<String> tags = new LinkedHashSet<String>(); ??? why probably bug
 		Set<String> tags = super.getIntelTags(map);
 		tags.add(Tags.INTEL_FLEET_LOG);
 		return tags;
@@ -109,7 +151,7 @@ public class FleetLogIntel extends BaseIntelPlugin {
 		if (sound != null) return sound;
 		return getSoundLogUpdate();
 	}
-	
+
 }
 
 

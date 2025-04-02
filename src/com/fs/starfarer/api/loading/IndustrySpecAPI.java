@@ -6,7 +6,7 @@ import com.fs.starfarer.api.campaign.econ.Industry;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.impl.campaign.rulecmd.salvage.MarketCMD.RaidDangerLevel;
 
-public interface IndustrySpecAPI {
+public interface IndustrySpecAPI extends WithSourceMod {
 
 	String getId();
 	void setId(String id);
@@ -43,6 +43,5 @@ public interface IndustrySpecAPI {
 	void setData(String data);
 	RaidDangerLevel getDisruptDanger();
 	void setDisruptDanger(RaidDangerLevel disruptDanger);
-	
 
 }

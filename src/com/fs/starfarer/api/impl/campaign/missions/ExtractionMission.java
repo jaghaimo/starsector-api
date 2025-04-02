@@ -240,6 +240,8 @@ public class ExtractionMission extends HubMissionWithBarEvent {
 	
 	@Override
 	public void addDescriptionForNonEndStage(TooltipMakerAPI info, float width, float height) {
+		if (getPerson() == null || getPerson().getMarket() == null) return;
+		
 		float opad = 10f;
 		Color h = Misc.getHighlightColor();
 		if (currentStage == Stage.EXTRACT) {
@@ -276,6 +278,8 @@ public class ExtractionMission extends HubMissionWithBarEvent {
 
 	@Override
 	public boolean addNextStepText(TooltipMakerAPI info, Color tc, float pad) {
+		if (getPerson() == null || getPerson().getMarket() == null) return false;
+		
 		Color h = Misc.getHighlightColor();
 		if (currentStage == Stage.EXTRACT) {
 				info.addPara("Extract agent from " +

@@ -206,18 +206,24 @@ public class ScavengeAbility extends BaseDurationAbility {
 		Color gray = Misc.getGrayColor();
 		Color highlight = Misc.getHighlightColor();
 		
-		tooltip.addTitle(spec.getName());
+		if (!Global.CODEX_TOOLTIP_MODE) {
+			tooltip.addTitle(spec.getName());
+		} else {
+			tooltip.addSpacer(-10f);
+		}
 
 		float pad = 10f;
 		tooltip.addPara("Pick through a debris field looking for anything of value.", pad);
 		
-		DebrisFieldTerrainPlugin debris = getDebrisField();
-		if (debris == null) {
-			tooltip.addPara("Your fleet is not currently inside a debris field.", Misc.getNegativeHighlightColor(), pad);
-		} else if (debris.isScavenged()) {
-			tooltip.addPara("Your fleet is inside a debris field, but it contains nothing of value.", Misc.getNegativeHighlightColor(), pad);
-		} else {
-			tooltip.addPara("Your fleet is inside a debris field and can begin scavenging.", Misc.getPositiveHighlightColor(), pad);
+		if (!Global.CODEX_TOOLTIP_MODE) {
+			DebrisFieldTerrainPlugin debris = getDebrisField();
+			if (debris == null) {
+				tooltip.addPara("Your fleet is not currently inside a debris field.", Misc.getNegativeHighlightColor(), pad);
+			} else if (debris.isScavenged()) {
+				tooltip.addPara("Your fleet is inside a debris field, but it contains nothing of value.", Misc.getNegativeHighlightColor(), pad);
+			} else {
+				tooltip.addPara("Your fleet is inside a debris field and can begin scavenging.", Misc.getPositiveHighlightColor(), pad);
+			}
 		}
 //		tooltip.addPara("Increases sensor range by %s* units and" +
 //				" increases the range at which the fleet can be detected by %s* units." +

@@ -1,8 +1,9 @@
 package com.fs.starfarer.api.impl.campaign.intel.events;
 
-import java.awt.Color;
 import java.util.List;
 import java.util.Random;
+
+import java.awt.Color;
 
 import org.lwjgl.util.vector.Vector2f;
 
@@ -246,7 +247,8 @@ public class SindrianDiktatHostileActivityFactor extends BaseHostileActivityFact
 	
 	public static MarketAPI getSindria(boolean requireMilitaryBase) {
 		MarketAPI sindria = Global.getSector().getEconomy().getMarket("sindria");
-		if (sindria == null || sindria.hasCondition(Conditions.DECIVILIZED)) {
+		if (sindria == null || sindria.hasCondition(Conditions.DECIVILIZED) ||
+				!sindria.getFactionId().equals(Factions.DIKTAT)) {
 			return null;
 		}
 		if (requireMilitaryBase) {

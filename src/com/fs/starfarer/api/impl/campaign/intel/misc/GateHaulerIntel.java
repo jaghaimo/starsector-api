@@ -1,9 +1,10 @@
 package com.fs.starfarer.api.impl.campaign.intel.misc;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
+
+import java.awt.Color;
 
 import org.lwjgl.util.vector.Vector2f;
 
@@ -389,6 +390,8 @@ public class GateHaulerIntel extends BaseIntelPlugin {
 					} else {
 						loc.location = new Vector2f(stableLocation.getLocation());
 					}
+					stableLocation.getStarSystem().getMemoryWithoutUpdate().set("$deployedGateHaulerHere", true);
+					
 					AddedEntity added = BaseThemeGenerator.addNonSalvageEntity(
 							stableLocation.getStarSystem(), loc, Entities.INACTIVE_GATE, Factions.NEUTRAL);
 					
@@ -401,6 +404,8 @@ public class GateHaulerIntel extends BaseIntelPlugin {
 					if (added.entity != null) {
 						Misc.fadeIn(added.entity, 3f);
 					}
+					
+					
 				}
 			}
 		}
@@ -594,6 +599,8 @@ public class GateHaulerIntel extends BaseIntelPlugin {
 		}
 			
 		
+		addLogTimestamp(info, tc, opad);
+		
 		//addBulletPoints(info, ListInfoMode.IN_DESC);
 		
 	}
@@ -607,12 +614,16 @@ public class GateHaulerIntel extends BaseIntelPlugin {
 	public Set<String> getIntelTags(SectorMapAPI map) {
 		Set<String> tags = super.getIntelTags(map);
 		tags.add(Tags.INTEL_GATES);
-		tags.add(Tags.INTEL_EXPLORATION);
+		tags.add(Tags.INTEL_FLEET_LOG);
+		//tags.add(Tags.INTEL_EXPLORATION);
 		return tags;
 	}
 	
 	public String getSortString() {
-		return super.getSortString();
+		if (getTagsForSort().contains(Tags.INTEL_FLEET_LOG) || getTagsForSort().contains(Tags.INTEL_EXPLORATION)) {
+			return getSortStringNewestFirst();
+		}
+		return "AAA";
 	}
 	
 	
@@ -671,8 +682,10 @@ public class GateHaulerIntel extends BaseIntelPlugin {
 		return result;
 	}
 
+	public GateHaulerAction getAction() {
+		return action;
+	}
 
-	
 }
 
 

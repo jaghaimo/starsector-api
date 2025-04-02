@@ -31,7 +31,7 @@ public class IncreaseSmugglingSuspicion extends BaseCommandPlugin {
 		
 		float curr = market.getMemoryWithoutUpdate().getFloat(MemFlags.MARKET_EXTRA_SUSPICION);
 		curr += amount;
-		market.getMemoryWithoutUpdate().set(MemFlags.MARKET_EXTRA_SUSPICION, curr);
+		market.getMemoryWithoutUpdate().set(MemFlags.MARKET_EXTRA_SUSPICION, curr, 30f);
 		
 		return true;
 	}

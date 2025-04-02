@@ -1,8 +1,9 @@
 package com.fs.starfarer.api.impl.combat;
 
-import java.awt.Color;
 import java.util.Iterator;
 import java.util.List;
+
+import java.awt.Color;
 
 import org.lwjgl.util.vector.Vector2f;
 
@@ -33,6 +34,7 @@ public class RealityDisruptorChargeGlow extends CombatEntityPluginWithParticles 
 		SOURCE,
 		DEST,
 		DEST_NO_TARGET,
+		INIMICAL_EMANATION,
 	}
 	
 	public static float ARC_RATE_MULT = 2f;
@@ -42,7 +44,7 @@ public class RealityDisruptorChargeGlow extends CombatEntityPluginWithParticles 
 	//public static int ARCS_ON_HIT = 15;
 	
 	public static float REPAIR_RATE_MULT = 0.5f;
-	public static float REPAIR_RATE_DEBUFF_DUR = 10f;
+	public static float REPAIR_RATE_DEBUFF_DUR = 5f;
 	
 	public static Color UNDERCOLOR = RiftCascadeEffect.EXPLOSION_UNDERCOLOR;
 	public static Color RIFT_COLOR = RiftCascadeEffect.STANDARD_RIFT_COLOR;
@@ -56,15 +58,17 @@ public class RealityDisruptorChargeGlow extends CombatEntityPluginWithParticles 
 		
 		public ShipAPI ship;
 		public float dur = REPAIR_RATE_DEBUFF_DUR;
-		public RDRepairRateDebuff(ShipAPI ship) {
+		public RDRepairRateDebuff(ShipAPI ship, float dur) {
 			this.ship = ship;
+			this.dur = dur;
 			
 			ship.getMutableStats().getCombatEngineRepairTimeMult().modifyMult(DEBUFF_ID, 1f/REPAIR_RATE_MULT);
 			ship.getMutableStats().getCombatWeaponRepairTimeMult().modifyMult(DEBUFF_ID, 1f/REPAIR_RATE_MULT);
 		}
 
-		public void resetDur() {
-			dur = REPAIR_RATE_DEBUFF_DUR;
+		public void resetDur(float dur) {
+			//dur = REPAIR_RATE_DEBUFF_DUR;
+			this.dur = Math.max(this.dur, dur);
 		}
 		
 		public void advance(float amount) {
@@ -74,7 +78,7 @@ public class RealityDisruptorChargeGlow extends CombatEntityPluginWithParticles 
 					Global.getCombatEngine() != null && Global.getCombatEngine().getPlayerShip() == ship) {
 				Global.getCombatEngine().maintainStatusForPlayerShip(STATUS_KEY,
 						Global.getSettings().getSpriteName("ui", "icon_tactical_reality_disruptor"),
-						"REALITY DISRUPTOR", "SLOWER REPAIRS: " + (int)Math.max(1, Math.round(dur)) + " SEC", true);
+						"REALITY DISRUPTED", "SLOWER REPAIRS: " + (int)Math.max(1, Math.round(dur)) + " SEC", true);
 			}
 			
 			if (dur <= 0) {
@@ -195,16 +199,16 @@ public class RealityDisruptorChargeGlow extends CombatEntityPluginWithParticles 
 					   );
 			arc.setCoreWidthOverride(thickness * coreWidthMult);
 			
-			spawnEMPParticles(EMPArcHitType.SOURCE, proj.getLocation(), null);
-			spawnEMPParticles(EMPArcHitType.DEST, arc.getTargetLocation(), target);
+			spawnEMPParticles(EMPArcHitType.SOURCE, proj, proj.getLocation(), null);
+			spawnEMPParticles(EMPArcHitType.DEST, proj, arc.getTargetLocation(), target);
 			
 			if (target instanceof ShipAPI) {
 				ShipAPI s = (ShipAPI) target;
 				List<RDRepairRateDebuff> listeners = s.getListeners(RDRepairRateDebuff.class);
 				if (listeners.isEmpty()) {
-					s.addListener(new RDRepairRateDebuff(s));
+					s.addListener(new RDRepairRateDebuff(s, REPAIR_RATE_DEBUFF_DUR));
 				} else {
-					listeners.get(0).resetDur();
+					listeners.get(0).resetDur(REPAIR_RATE_DEBUFF_DUR);
 				}
 			}
 			
@@ -215,8 +219,8 @@ public class RealityDisruptorChargeGlow extends CombatEntityPluginWithParticles 
 			arc.setCoreWidthOverride(thickness * coreWidthMult);
 			Global.getSoundPlayer().playSound("realitydisruptor_emp_impact", 1f, 1f, to, new Vector2f());
 			
-			spawnEMPParticles(EMPArcHitType.SOURCE, from, null);
-			spawnEMPParticles(EMPArcHitType.DEST_NO_TARGET, to, null);
+			spawnEMPParticles(EMPArcHitType.SOURCE, proj, from, null);
+			spawnEMPParticles(EMPArcHitType.DEST_NO_TARGET, proj, to, null);
 		}
 	}
 	
@@ -365,7 +369,7 @@ public class RealityDisruptorChargeGlow extends CombatEntityPluginWithParticles 
 //		Vector2f.add(prev.offset, dir, prev.offset);
 	}
 	
-	public void spawnEMPParticles(EMPArcHitType type, Vector2f point, CombatEntityAPI target) {
+	public static void spawnEMPParticles(EMPArcHitType type, DamagingProjectileAPI proj, Vector2f point, CombatEntityAPI target) {
 		CombatEngineAPI engine = Global.getCombatEngine();
 		
 		Color color = RiftLanceEffect.getColorForDarkening(RIFT_COLOR);
@@ -374,6 +378,7 @@ public class RealityDisruptorChargeGlow extends CombatEntityPluginWithParticles 
 		float baseDuration = 1.5f;
 		Vector2f vel = new Vector2f();
 		int numNegative = 5;
+		int numSwirly = 7;
 		switch (type) {
 		case DEST:
 			size = 50f;
@@ -384,12 +389,26 @@ public class RealityDisruptorChargeGlow extends CombatEntityPluginWithParticles 
 			break;
 		case DEST_NO_TARGET:
 			break;
+		case INIMICAL_EMANATION:
+			numNegative = 5;
+			numSwirly = 7;
+			//numSwirly = 12;
+			size = 25;
+			color = RiftLanceEffect.getColorForDarkening(UNDERCOLOR);
+			baseDuration = 1f;
+			if (target != null && !(target instanceof MissileAPI)) {
+				vel.set(target.getVelocity());
+//				if (vel.length() > 100f) {
+//					vel.scale(100f / vel.length());
+//				}
+			}
+			break;
 		case SOURCE:
 			size = 40f;
 			numNegative = 10;
 			break;
 		}
-		Vector2f dir = Misc.getUnitVectorAtDegreeAngle(proj.getFacing() + 180f);
+		boolean inimical = type == EMPArcHitType.INIMICAL_EMANATION;
 		//dir.negate();
 		//numNegative = 0;
 		for (int i = 0; i < numNegative; i++) {
@@ -400,13 +419,16 @@ public class RealityDisruptorChargeGlow extends CombatEntityPluginWithParticles 
 			if (type == EMPArcHitType.SOURCE) {
 				nSize *= 1.5f;
 			}
-			Vector2f pt = Misc.getPointWithinRadius(point, nSize * 0.5f);
+			float scatterMult = 1f;
+			if (inimical) scatterMult = 0.25f;
+			Vector2f pt = Misc.getPointWithinRadius(point, nSize * 0.5f * scatterMult);
 			Vector2f v = Misc.getUnitVectorAtDegreeAngle((float) Math.random() * 360f);
 			v.scale(nSize + nSize * (float) Math.random() * 0.5f);
 			v.scale(0.2f);
 			
 			float endSizeMult = 2f;
 			if (type == EMPArcHitType.SOURCE) {
+				Vector2f dir = Misc.getUnitVectorAtDegreeAngle(proj.getFacing() + 180f);
 				pt = Misc.getPointWithinRadius(point, nSize * 0f);
 				Vector2f offset = new Vector2f(dir);
 				offset.scale(size * 0.2f * i);
@@ -429,18 +451,38 @@ public class RealityDisruptorChargeGlow extends CombatEntityPluginWithParticles 
 //				v.set(0f, 0f);
 //			}
 			
+			float rampUp = 0.25f / dur;
+			if (inimical) {
+				rampUp = 0f;
+				//nSize *= 2f;
+			}
 			engine.addNegativeNebulaParticle(pt, v, nSize * 1f, endSizeMult,
 			//engine.addNegativeSwirlyNebulaParticle(pt, v, nSize * 1f, endSizeMult,
-											0.25f / dur, 0f, dur, color);
+										rampUp, 0f, dur, color);
 		}
 		
 		float dur = baseDuration; 
 		float rampUp = 0.5f / dur;
+		if (inimical) {
+			//numSwirly = 15;
+			//rampUp = 0.1f;
+			rampUp = 0f;
+		}
 		color = UNDERCOLOR;
-		for (int i = 0; i < 7; i++) {
+//		if (inimical) {
+//			color = DwellerShroud.SHROUD_COLOR;
+//		}
+		for (int i = 0; i < numSwirly; i++) {
 			Vector2f loc = new Vector2f(point);
-			loc = Misc.getPointWithinRadius(loc, size * 1f);
+			float scatterMult = 1f;
+			if (inimical) scatterMult = 0.5f;
+			loc = Misc.getPointWithinRadius(loc, size * 1f * scatterMult);
 			float s = size * 4f * (0.5f + (float) Math.random() * 0.5f);
+			if (inimical) {
+				//size *= 2f;
+				//size *= 1.25f;
+				//size *= 1.1f;
+			}
 			engine.addSwirlyNebulaParticle(loc, vel, s, 1.5f, rampUp, 0f, dur, color, false);
 		}
 	}

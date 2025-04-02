@@ -7,6 +7,7 @@ public class Conditions {
 	
 	public static final String HOSTILE_ACTIVITY = "hostile_activity";
 	public static final String PIRACY_RESPITE = "piracy_respite";
+	public static final String ESTABLISHED_POLITY = "established_polity";
 	public static final String BLOCKADED = "blockaded";
 	public static final String PIRATE_ACTIVITY = "pirate_activity";
 	public static final String PATHER_CELLS = "pather_cells";

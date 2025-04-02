@@ -133,6 +133,7 @@ public class GADerelictArtifact extends GABaseMission {
 			triggerCreateFleet(FleetSize.LARGE, FleetQuality.DEFAULT, Factions.PIRATES, FleetTypes.PATROL_MEDIUM, pirateSystem);
 			triggerAutoAdjustFleetStrengthMajor();
 			triggerSetStandardHostilePirateFlags();
+			triggerMakeFleetIgnoredByOtherFleets();
 			triggerPickLocationAtInSystemJumpPoint(pirateSystem);
 			triggerSpawnFleetAtPickedLocation();
 			triggerOrderFleetPatrolEntity(true);

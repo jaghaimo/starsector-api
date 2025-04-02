@@ -28,7 +28,7 @@ public class IonBeamEffect implements BeamEffectPlugin {
 			
 			if (fireInterval.intervalElapsed()) {
 				ShipAPI ship = (ShipAPI) target;
-				boolean hitShield = target.getShield() != null && target.getShield().isWithinArc(beam.getTo());
+				boolean hitShield = target.getShield() != null && target.getShield().isWithinArc(beam.getRayEndPrevFrame());
 				float pierceChance = ((ShipAPI)target).getHardFluxLevel() - 0.1f;
 				pierceChance *= ship.getMutableStats().getDynamic().getValue(Stats.SHIELD_PIERCED_MULT);
 				

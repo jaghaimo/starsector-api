@@ -134,7 +134,7 @@ public class HIOrdersInteractionDialogPluginImpl implements InteractionDialogPlu
 		case COMPLY:
 			textPanel.addPara("The local authorities will comply with the inspection. This will result " +
 					"in all AI cores being found and confiscated, and will cause your standing with the Hegemony " +
-					"to fall based on the nuber of AI cores found.");
+					"to fall based on the number of AI cores found.");
 			textPanel.addPara("If AI cores currently in use are removed or moved off-planet, this activity will " +
 					"surely leave traces for inspectors to find, inspiring them to much greater zeal.");
 			break;

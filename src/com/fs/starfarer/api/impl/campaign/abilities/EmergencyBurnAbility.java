@@ -1,8 +1,9 @@
 package com.fs.starfarer.api.impl.campaign.abilities;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
+
+import java.awt.Color;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.BattleAPI;
@@ -256,14 +257,17 @@ public class EmergencyBurnAbility extends BaseDurationAbility {
 		Color fuel = Global.getSettings().getColor("progressBarFuelColor");
 		Color bad = Misc.getNegativeHighlightColor();
 		
-		LabelAPI title = tooltip.addTitle("Emergency Burn");
+		if (!Global.CODEX_TOOLTIP_MODE) {
+			LabelAPI title = tooltip.addTitle("Emergency Burn");
+		} else {
+			tooltip.addSpacer(-10f);
+		}
+		
 //		title.highlightLast(status);
 //		title.setHighlightColor(gray);
 
 		float pad = 10f;
 		
-		float fuelCost = computeFuelCost();
-		float supplyCost = computeSupplyCost();
 		
 		tooltip.addPara("Increases the maximum burn level by %s." +
 				" Reduces sensor range by %s and increases the range at" +
@@ -278,58 +282,74 @@ public class EmergencyBurnAbility extends BaseDurationAbility {
 				"" + (int)(DETECTABILITY_PERCENT) + "%"
 		);
 		
-		if (supplyCost > 0) {
-			tooltip.addPara("Consumes %s fuel and reduces the combat readiness" +
-						" of all ships, costing up to %s supplies to recover. Also prevents combat readiness recovery while active.", pad, 
-						highlight,
-						Misc.getRoundedValueMaxOneAfterDecimal(fuelCost),
-						Misc.getRoundedValueMaxOneAfterDecimal(supplyCost));
-		} else {
-			tooltip.addPara("Consumes %s fuel and prevents combat readiness recovery while active.", pad, 
+		if (Global.CODEX_TOOLTIP_MODE) {
+			String years = "year's";
+			if (FUEL_USE_MULT != 1) years = "years'";
+			tooltip.addPara("Consumes %s light " + years + " worth of fuel and reduces the combat readiness "
+					+ "of all ships by %s of a combat deployment. " +
+					"Prevents combat readiness recovery while active.", pad, 
 					highlight,
-					Misc.getRoundedValueMaxOneAfterDecimal(fuelCost));
-		}
-		
-		if (fuelCost > fleet.getCargo().getFuel()) {
-			tooltip.addPara("Not enough fuel.", bad, pad);
-		}
-		
-		List<FleetMemberAPI> nonReady = getNonReadyShips();
-		if (!nonReady.isEmpty()) {
-			//tooltip.addPara("Not all ships have enough combat readiness to initiate an emergency burn. Ships that require higher CR:", pad);
-			tooltip.addPara("Some ships don't have enough combat readiness to safely initiate an emergency burn " +
-							"and may suffer damage if the ability is activated:", pad, 
-							Misc.getNegativeHighlightColor(), "may suffer damage");
-			//tooltip.beginGridFlipped(getTooltipWidth(), 1, 30, pad);
-			//tooltip.setGridLabelColor(bad);
-			int j = 0;
-			int max = 4;
-			float initPad = 5f;
-			for (FleetMemberAPI member : nonReady) {
-				if (j >= max) {
-					if (nonReady.size() > max + 1) {
-						tooltip.addPara(BaseIntelPlugin.INDENT + "... and several other ships", initPad);
-						break;
-					}
-				}
-				
-				//float crLoss = member.getDeployCost() * CR_COST_MULT;
-				//String cost = "" + Math.round(crLoss * 100) + "%";
-				String str = "";
-				if (!member.isFighterWing()) {
-					str += member.getShipName() + ", ";
-					str += member.getHullSpec().getHullNameWithDashClass();
-				} else {
-					str += member.getVariant().getFullDesignationWithHullName();
-				}
-				
-				tooltip.addPara(BaseIntelPlugin.INDENT + str, initPad);
-				initPad = 0f;
-				j++;
-				
-				//tooltip.addToGrid(0, j++, str, cost, bad);
+					"" + Misc.getRoundedValue(FUEL_USE_MULT),
+					"" + (int) Math.round(CR_COST_MULT * 100f) + "%");
+			
+			tooltip.addPara("Ships with insufficient combat readiness may suffer damage when the ability is activated.", pad);
+		} else {
+			float fuelCost = computeFuelCost();
+			float supplyCost = computeSupplyCost();
+			
+			if (supplyCost > 0) {
+				tooltip.addPara("Consumes %s fuel and reduces the combat readiness" +
+							" of all ships, costing up to %s supplies to recover. Also prevents combat readiness recovery while active.", pad, 
+							highlight,
+							Misc.getRoundedValueMaxOneAfterDecimal(fuelCost),
+							Misc.getRoundedValueMaxOneAfterDecimal(supplyCost));
+			} else {
+				tooltip.addPara("Consumes %s fuel and prevents combat readiness recovery while active.", pad, 
+						highlight,
+						Misc.getRoundedValueMaxOneAfterDecimal(fuelCost));
 			}
-			//tooltip.addGrid(3f);
+			
+			if (fuelCost > fleet.getCargo().getFuel()) {
+				tooltip.addPara("Not enough fuel.", bad, pad);
+			}
+			
+			List<FleetMemberAPI> nonReady = getNonReadyShips();
+			if (!nonReady.isEmpty()) {
+				//tooltip.addPara("Not all ships have enough combat readiness to initiate an emergency burn. Ships that require higher CR:", pad);
+				tooltip.addPara("Some ships don't have enough combat readiness to safely initiate an emergency burn " +
+								"and may suffer damage if the ability is activated:", pad, 
+								Misc.getNegativeHighlightColor(), "may suffer damage");
+				//tooltip.beginGridFlipped(getTooltipWidth(), 1, 30, pad);
+				//tooltip.setGridLabelColor(bad);
+				int j = 0;
+				int max = 4;
+				float initPad = 5f;
+				for (FleetMemberAPI member : nonReady) {
+					if (j >= max) {
+						if (nonReady.size() > max + 1) {
+							tooltip.addPara(BaseIntelPlugin.INDENT + "... and several other ships", initPad);
+							break;
+						}
+					}
+					
+					//float crLoss = member.getDeployCost() * CR_COST_MULT;
+					//String cost = "" + Math.round(crLoss * 100) + "%";
+					String str = "";
+					if (!member.isFighterWing()) {
+						str += member.getShipName() + ", ";
+						str += member.getHullSpec().getHullNameWithDashClass();
+					} else {
+						str += member.getVariant().getFullDesignationWithHullName();
+					}
+					
+					tooltip.addPara(BaseIntelPlugin.INDENT + str, initPad);
+					initPad = 0f;
+					j++;
+					
+					//tooltip.addToGrid(0, j++, str, cost, bad);
+				}
+				//tooltip.addGrid(3f);
+			}
 		}
 		
 		//tooltip.addPara("Disables \"Go Dark\" when activated.", pad);

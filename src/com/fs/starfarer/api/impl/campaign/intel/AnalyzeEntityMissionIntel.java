@@ -1,9 +1,10 @@
 package com.fs.starfarer.api.impl.campaign.intel;
 
-import java.awt.Color;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+
+import java.awt.Color;
 
 import org.apache.log4j.Logger;
 import org.lwjgl.util.vector.Vector2f;
@@ -228,7 +229,8 @@ public class AnalyzeEntityMissionIntel extends BaseMissionIntel {
 	}
 	
 	public String getSortString() {
-		return "Analyze";
+		return super.getSortString();
+		//return "Analyze";
 	}
 	
 	public String getName() {
@@ -238,7 +240,7 @@ public class AnalyzeEntityMissionIntel extends BaseMissionIntel {
 //		} else {
 			name = entity.getName(); // we want caps on every word since this is a title, so no getNameInText()
 //		}
-			
+		
 		return "Analyze " + name + getPostfixForState();
 	}
 	

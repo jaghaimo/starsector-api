@@ -1,7 +1,8 @@
 package com.fs.starfarer.api.combat;
 
-import java.awt.Color;
 import java.util.List;
+
+import java.awt.Color;
 
 import org.lwjgl.util.vector.Vector2f;
 
@@ -112,6 +113,30 @@ public interface WeaponAPI {
 		RESET_BARREL_INDEX_ON_BURST,
 		
 		USE_LESS_VS_SHIELDS,
+		
+		/**
+		 * Compute range from the ship's targeting oval instead of from the slot location. 
+		 * Useful for swarm missile weapons where the launch point is not from the weapon slot.
+		 */
+		RANGE_FROM_TARGETING_OVAL,
+		
+		/**
+		 * Similar to RANGE_FROM_TARGETING_OVAL, but from ship center + radius instead. Useful for missile weapons
+		 * that have a fixed maximum range rather than being limited by flight time, but - as in the case of
+		 * some fragment weapons - can be launched from very different locations.
+		 */
+		RANGE_FROM_SHIP_RADIUS,
+		
+		/**
+		 * Increased weight for preferring to select for manual fire. 
+		 */
+		IMPORTANT,
+		
+		/**
+		 * The weapon should not be selected for manual fire. It still might be if it's in a group with other 
+		 * weapons or there's no other choice.
+		 */
+		NO_MANUAL_FIRE,
 	}
 	
 	
@@ -273,6 +298,11 @@ public interface WeaponAPI {
 	void setWeaponGlowWidthMult(float weaponGlowWidthMult);
 	void setWeaponGlowHeightMult(float weaponGlowHeightMult);
 	void stopFiring();
+	boolean isForceDisabled();
+	void setForceDisabled(boolean forceDisabled);
+	Object getCustom();
+	void setCustom(Object custom);
+	boolean isForceNoFireOneFrame();
 }
 
 

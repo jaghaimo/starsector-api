@@ -1,10 +1,11 @@
 package com.fs.starfarer.api.campaign;
 
-import java.awt.Color;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+
+import java.awt.Color;
 
 import org.json.JSONObject;
 
@@ -94,5 +95,6 @@ public interface FactionSpecAPI {
 	WeightedRandomPicker<String> getVoicePickerLow();
 	WeightedRandomPicker<String> getVoicePickerMedium();
 	WeightedRandomPicker<String> getVoicePickerHigh();
+	List<String> getAllVariantsForRole(String roleId);
 
 }

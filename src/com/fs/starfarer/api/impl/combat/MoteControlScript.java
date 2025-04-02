@@ -1,11 +1,12 @@
 package com.fs.starfarer.api.impl.combat;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+
+import java.awt.Color;
 
 import org.lwjgl.util.vector.Vector2f;
 
@@ -17,6 +18,7 @@ import com.fs.starfarer.api.combat.CombatEngineLayers;
 import com.fs.starfarer.api.combat.CombatEntityAPI;
 import com.fs.starfarer.api.combat.DamageType;
 import com.fs.starfarer.api.combat.EmpArcEntityAPI;
+import com.fs.starfarer.api.combat.EmpArcEntityAPI.EmpArcParams;
 import com.fs.starfarer.api.combat.EveryFrameCombatPlugin;
 import com.fs.starfarer.api.combat.MissileAPI;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
@@ -299,6 +301,33 @@ public class MoteControlScript extends BaseShipSystemScript {
 				target = data.attractorLock;
 			}
 			
+			EmpArcParams params = new EmpArcParams();
+//			params.segmentLengthMult = 4f;
+//			params.zigZagReductionFactor = 0.25f;
+//			params.fadeOutDist = 200f;
+//			params.minFadeOutMult = 2f;
+			
+			params.segmentLengthMult = 8f;
+			params.zigZagReductionFactor = 0.15f;
+			
+			params.brightSpotFullFraction = 0.5f;
+			params.brightSpotFadeFraction = 0.5f;
+			//params.nonBrrightSpotMinBrightness = 0.25f;
+			
+			float dist = Misc.getDistance(slotLoc, target.getLocation());
+			params.flickerRateMult = 0.6f - dist / 3000f;
+			if (params.flickerRateMult < 0.3f) {
+				params.flickerRateMult = 0.3f;
+			}
+			
+			
+//			params.fadeOutDist = 500f;
+//			params.minFadeOutMult = 2f;
+//			params.flickerRateMult = 0.7f;
+			//params.movementDurMax = 0.1f;
+//			params.movementDurMin = 0.25f;
+//			params.movementDurMax = 0.25f;
+			
 			float emp = 0;
 			float dam = 0;
 			EmpArcEntityAPI arc = (EmpArcEntityAPI)engine.spawnEmpArc(ship, slotLoc, ship, target,
@@ -310,12 +339,17 @@ public class MoteControlScript extends BaseShipSystemScript {
 							   40f, // thickness
 							   //new Color(100,165,255,255),
 							   MoteControlScript.getEMPColor(ship),
-							   new Color(255,255,255,255)
+							   new Color(255,255,255,255),
+							   params
 							   );
 			if (data.attractorLock != null) {
 				arc.setTargetToShipCenter(slotLoc, data.attractorLock);
 			}
 			arc.setCoreWidthOverride(30f);
+			
+			//arc.setFadedOutAtStart(true);
+			//arc.setRenderGlowAtStart(false);
+			arc.setSingleFlickerMode(true);
 			
 			if (data.attractorLock == null) {
 				Global.getSoundPlayer().playSound("mote_attractor_targeted_empty_space", 1f, 1f, data.attractorTarget, new Vector2f());

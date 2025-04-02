@@ -1,7 +1,8 @@
 package com.fs.starfarer.api.loading;
 
-import java.awt.Color;
 import java.util.EnumSet;
+
+import java.awt.Color;
 
 import com.fs.starfarer.api.combat.BeamEffectPlugin;
 import com.fs.starfarer.api.combat.CollisionClass;
@@ -82,6 +83,8 @@ public interface BeamWeaponSpecAPI extends WeaponSpecAPI {
 	void setCoreWidthMult(float coreWidthMult);
 	float getHitGlowBrightenDuration();
 	void setHitGlowBrightenDuration(float hitGlowBrightenDuration);
+	boolean isRandomizeTextureOffset();
+	void setRandomizeTextureOffset(boolean randomizeTextureOffset);
 
 
 }

@@ -53,7 +53,7 @@ public class RuggedConstruction extends BaseHullMod {
 
 	@Override
 	public boolean affectsOPCosts() {
-		return true;
+		return true; // probably intended even though it doesn't, actually -am
 	}
 
 }

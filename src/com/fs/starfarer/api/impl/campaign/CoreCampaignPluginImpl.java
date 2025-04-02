@@ -1,8 +1,9 @@
 package com.fs.starfarer.api.impl.campaign;
 
-import java.awt.Color;
 import java.util.HashSet;
 import java.util.Set;
+
+import java.awt.Color;
 
 import org.json.JSONObject;
 
@@ -195,6 +196,7 @@ public class CoreCampaignPluginImpl extends BaseCampaignPlugin {
 		}
 		
 		memory.set("$abyssalDepth", Misc.getAbyssalDepth(entity), 0);
+		memory.set("$abyssalDepthUncapped", Misc.getAbyssalDepth(entity, true), 0);
 		
 		String onOrAt = "on";
 		if (entity.hasTag(Tags.STATION)) {
@@ -347,6 +349,9 @@ public class CoreCampaignPluginImpl extends BaseCampaignPlugin {
 			memory.set("$isSurveyed", market.getSurveyLevel() == SurveyLevel.FULL, 0);
 			memory.set("$surveyLevel", market.getSurveyLevel().name(), 0);
 			memory.set("$isPlanetConditionMarketOnly", market.isPlanetConditionMarketOnly(), 0);
+			
+			float daysExisted = market.getDaysInExistence();
+			memory.set("$daysExisted", daysExisted, 0);
 			
 			memory.set("$isHidden", market.isHidden(), 0);
 			
@@ -546,6 +551,7 @@ public class CoreCampaignPluginImpl extends BaseCampaignPlugin {
 
 		if (fleet != null) {
 			memory.set("$abyssalDepth", Misc.getAbyssalDepth(fleet), 0);
+			memory.set("$abyssalDepthUncapped", Misc.getAbyssalDepth(fleet, true), 0);
 		}
 		
 		PersonAPI person = Global.getSector().getPlayerPerson();

@@ -1,8 +1,9 @@
 package com.fs.starfarer.api.impl.campaign.abilities;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
+
+import java.awt.Color;
 
 import org.lwjgl.util.vector.Vector2f;
 
@@ -231,7 +232,11 @@ public class FractureJumpAbility extends BaseDurationAbility {
 		Color fuel = Global.getSettings().getColor("progressBarFuelColor");
 		Color bad = Misc.getNegativeHighlightColor();
 		
-		LabelAPI title = tooltip.addTitle("Transverse Jump");
+		if (!Global.CODEX_TOOLTIP_MODE) {
+			LabelAPI title = tooltip.addTitle("Transverse Jump");
+		} else {
+			tooltip.addSpacer(-10f);
+		}
 
 		float pad = 10f;
 
@@ -241,93 +246,107 @@ public class FractureJumpAbility extends BaseDurationAbility {
 						"jump into a star system across the hyperspace boundary near a nascent gravity well, " +
 						"emerging near the entity corresponding to the gravity well.", pad);
 		
-		float fuelCost = computeFuelCost();
-		float supplyCost = computeSupplyCost();
 		
-		if (supplyCost > 0) {
-			tooltip.addPara("Jumping into hyperspace consumes %s fuel and slightly reduces the combat readiness" +
-						" of all ships, costing up to %s supplies to recover. Jumping into a star system is free.", pad, 
-						highlight,
-						Misc.getRoundedValueMaxOneAfterDecimal(fuelCost),
-						Misc.getRoundedValueMaxOneAfterDecimal(supplyCost));
-		} else {
-			tooltip.addPara("Jumping into hyperspace consumes %s fuel. Jumping into a star system is free.", pad, 
+		if (Global.CODEX_TOOLTIP_MODE) {
+			String years = "year's";
+			if (FUEL_USE_MULT != 1) years = "years'";
+			tooltip.addPara("Jumping into hyperspace consumes %s light " + years + " worth of fuel and reduces the combat readiness "
+					+ "of all ships by %s of a combat deployment. " +
+					"Jumping into a star system is free.", pad, 
 					highlight,
-					Misc.getRoundedValueMaxOneAfterDecimal(fuelCost));
-		}
-		
-		
-		if (TutorialMissionIntel.isTutorialInProgress()) { 
-			tooltip.addPara("Can not be used right now.", bad, pad);
-		}
-		
-		if (!fleet.isInHyperspace()) {
-			if (fuelCost > fleet.getCargo().getFuel()) {
-				tooltip.addPara("Not enough fuel.", bad, pad);
-			}
-		
-			List<FleetMemberAPI> nonReady = getNonReadyShips();
-			if (!nonReady.isEmpty()) {
-				//tooltip.addPara("Not all ships have enough combat readiness to initiate an emergency burn. Ships that require higher CR:", pad);
-				tooltip.addPara("Some ships don't have enough combat readiness to safely initiate a transverse jump " +
-								"and may suffer damage if the ability is activated:", pad, 
-								Misc.getNegativeHighlightColor(), "may suffer damage");
-				int j = 0;
-				int max = 4;
-				float initPad = 5f;
-				for (FleetMemberAPI member : nonReady) {
-					if (j >= max) {
-						if (nonReady.size() > max + 1) {
-							tooltip.addPara(BaseIntelPlugin.INDENT + "... and several other ships", initPad);
-							break;
-						}
-					}
-					String str = "";
-					if (!member.isFighterWing()) {
-						str += member.getShipName() + ", ";
-						str += member.getHullSpec().getHullNameWithDashClass();
-					} else {
-						str += member.getVariant().getFullDesignationWithHullName();
-					}
-					
-					tooltip.addPara(BaseIntelPlugin.INDENT + str, initPad);
-					initPad = 0f;
-					j++;
-				}
+					"" + Misc.getRoundedValue(FUEL_USE_MULT),
+					"" + (int) Math.round(CR_COST_MULT * 100f) + "%");
+			
+			tooltip.addPara("Ships with insufficient combat readiness may suffer damage when the ability is activated.", pad);
+		} else {
+			float fuelCost = computeFuelCost();
+			float supplyCost = computeSupplyCost();
+			
+			if (supplyCost > 0) {
+				tooltip.addPara("Jumping into hyperspace consumes %s fuel and slightly reduces the combat readiness" +
+							" of all ships, costing up to %s supplies to recover. Jumping into a star system is free.", pad, 
+							highlight,
+							Misc.getRoundedValueMaxOneAfterDecimal(fuelCost),
+							Misc.getRoundedValueMaxOneAfterDecimal(supplyCost));
+			} else {
+				tooltip.addPara("Jumping into hyperspace consumes %s fuel. Jumping into a star system is free.", pad, 
+						highlight,
+						Misc.getRoundedValueMaxOneAfterDecimal(fuelCost));
 			}
 			
-//			List<FleetMemberAPI> nonReady = getNonReadyShips();
-//			if (!nonReady.isEmpty()) {
-//				tooltip.addPara("Not all ships have enough combat readiness to initiate a transverse jump. Ships that require higher CR:", pad);
-//				tooltip.beginGridFlipped(getTooltipWidth(), 1, 30, pad);
-//				//tooltip.setGridLabelColor(bad);
-//				int j = 0;
-//				int max = 7;
-//				for (FleetMemberAPI member : nonReady) {
-//					if (j >= max) {
-//						if (nonReady.size() > max + 1) {
-//							tooltip.addToGrid(0, j++, "... and several other ships", "", bad);
-//							break;
-//						}
-//					}
-//					float crLoss = member.getDeployCost() * CR_COST_MULT;
-//					String cost = "" + Math.round(crLoss * 100) + "%";
-//					String str = "";
-//					if (!member.isFighterWing()) {
-//						str += member.getShipName() + ", ";
-//						str += member.getHullSpec().getHullNameWithDashClass();
-//					} else {
-//						str += member.getVariant().getFullDesignationWithHullName();
-//					}
-//					tooltip.addToGrid(0, j++, str, cost, bad);
-//				}
-//				tooltip.addGrid(3f);
-//			}
-		}
-
-		if (fleet.isInHyperspace()) {
-			if (well == null) {
-				tooltip.addPara("Must be near a nascent gravity well.", bad, pad);
+			
+			if (TutorialMissionIntel.isTutorialInProgress()) { 
+				tooltip.addPara("Can not be used right now.", bad, pad);
+			}
+			
+			if (!fleet.isInHyperspace()) {
+				if (fuelCost > fleet.getCargo().getFuel()) {
+					tooltip.addPara("Not enough fuel.", bad, pad);
+				}
+			
+				List<FleetMemberAPI> nonReady = getNonReadyShips();
+				if (!nonReady.isEmpty()) {
+					//tooltip.addPara("Not all ships have enough combat readiness to initiate an emergency burn. Ships that require higher CR:", pad);
+					tooltip.addPara("Some ships don't have enough combat readiness to safely initiate a transverse jump " +
+									"and may suffer damage if the ability is activated:", pad, 
+									Misc.getNegativeHighlightColor(), "may suffer damage");
+					int j = 0;
+					int max = 4;
+					float initPad = 5f;
+					for (FleetMemberAPI member : nonReady) {
+						if (j >= max) {
+							if (nonReady.size() > max + 1) {
+								tooltip.addPara(BaseIntelPlugin.INDENT + "... and several other ships", initPad);
+								break;
+							}
+						}
+						String str = "";
+						if (!member.isFighterWing()) {
+							str += member.getShipName() + ", ";
+							str += member.getHullSpec().getHullNameWithDashClass();
+						} else {
+							str += member.getVariant().getFullDesignationWithHullName();
+						}
+						
+						tooltip.addPara(BaseIntelPlugin.INDENT + str, initPad);
+						initPad = 0f;
+						j++;
+					}
+				}
+				
+	//			List<FleetMemberAPI> nonReady = getNonReadyShips();
+	//			if (!nonReady.isEmpty()) {
+	//				tooltip.addPara("Not all ships have enough combat readiness to initiate a transverse jump. Ships that require higher CR:", pad);
+	//				tooltip.beginGridFlipped(getTooltipWidth(), 1, 30, pad);
+	//				//tooltip.setGridLabelColor(bad);
+	//				int j = 0;
+	//				int max = 7;
+	//				for (FleetMemberAPI member : nonReady) {
+	//					if (j >= max) {
+	//						if (nonReady.size() > max + 1) {
+	//							tooltip.addToGrid(0, j++, "... and several other ships", "", bad);
+	//							break;
+	//						}
+	//					}
+	//					float crLoss = member.getDeployCost() * CR_COST_MULT;
+	//					String cost = "" + Math.round(crLoss * 100) + "%";
+	//					String str = "";
+	//					if (!member.isFighterWing()) {
+	//						str += member.getShipName() + ", ";
+	//						str += member.getHullSpec().getHullNameWithDashClass();
+	//					} else {
+	//						str += member.getVariant().getFullDesignationWithHullName();
+	//					}
+	//					tooltip.addToGrid(0, j++, str, cost, bad);
+	//				}
+	//				tooltip.addGrid(3f);
+	//			}
+			}
+	
+			if (fleet.isInHyperspace()) {
+				if (well == null) {
+					tooltip.addPara("Must be near a nascent gravity well.", bad, pad);
+				}
 			}
 		}
 		

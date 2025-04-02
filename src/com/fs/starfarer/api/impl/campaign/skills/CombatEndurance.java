@@ -116,7 +116,7 @@ public class CombatEndurance {
 								TooltipMakerAPI info, float width) {
 			initElite(stats, skill);
 			
-			info.addPara("When below %s hull, repair %s per second; maximum total repair is "
+			info.addPara("When below %s hull, repair %s per second; total repair is "
 					+ "the higher of %s points or %s of maximum hull", 0f, hc, hc,
 					"" + (int)Math.round(MAX_REGEN_LEVEL * 100f) + "%",
 					//"" + (int)Math.round(REGEN_RATE * 100f) + "%",

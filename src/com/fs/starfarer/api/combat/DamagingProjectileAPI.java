@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.lwjgl.util.vector.Vector2f;
 
+import com.fs.starfarer.api.loading.DamagingExplosionSpec;
 import com.fs.starfarer.api.loading.ProjectileSpawnType;
 import com.fs.starfarer.api.loading.ProjectileSpecAPI;
 
@@ -81,7 +82,8 @@ public interface DamagingProjectileAPI extends CombatEntityAPI {
 	
 	
 	/**
-	 * Only supported by damaging explosions, not other types of projectiles.
+	 * Only supported by damaging explosions, not @Override
+	other types of projectiles.
 	 * @param c
 	 */
 	void removeDamagedAlready(CombatEntityAPI c);
@@ -102,5 +104,8 @@ public interface DamagingProjectileAPI extends CombatEntityAPI {
 	 */
 	Vector2f getTailEnd();
 	List<CombatEntityAPI> getDamagedAlready();
-	
+
+	default DamagingExplosionSpec getExplosionSpecIfExplosion() { return null; }
 }
+
+

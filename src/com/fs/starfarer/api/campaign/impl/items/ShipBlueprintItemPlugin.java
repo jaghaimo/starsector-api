@@ -1,12 +1,13 @@
 package com.fs.starfarer.api.campaign.impl.items;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 import java.util.Set;
+
+import java.awt.Color;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -199,6 +200,12 @@ public class ShipBlueprintItemPlugin extends BaseSpecialItemPlugin implements Bl
 	@Override
 	public void performRightClickAction() {
 		String hullId = stack.getSpecialDataIfSpecial().getData();
+		
+//		ShipHullSpecAPI spec = Global.getSettings().getHullSpec(hullId);
+//		if (spec != null && spec.hasTag(Tags.CODEX_UNLOCKABLE)) {
+//			String baseId = CodexDataV2.getBaseHullId(spec);
+//			SharedUnlockData.get().reportPlayerAwareOfShip(baseId, true);
+//		}
 		
 		if (Global.getSector().getPlayerFaction().knowsShip(hullId)) {
 			Global.getSector().getCampaignUI().getMessageDisplay().addMessage(

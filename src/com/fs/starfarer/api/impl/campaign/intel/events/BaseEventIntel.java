@@ -1,11 +1,12 @@
 package com.fs.starfarer.api.impl.campaign.intel.events;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 import java.util.Set;
+
+import java.awt.Color;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
@@ -287,6 +288,7 @@ public class BaseEventIntel extends BaseIntelPlugin implements EconomyTickListen
 		}
 		
 
+		afterStageDescriptions(main);
 		
 		float barW = getBarWidth();
 		float factorWidth = (barW - opad) / 2f;
@@ -449,6 +451,9 @@ public class BaseEventIntel extends BaseIntelPlugin implements EconomyTickListen
 		return 0f;
 	}
 	
+	public void afterStageDescriptions(TooltipMakerAPI main) {
+		
+	}
 	public void addStageDescriptionWithImage(TooltipMakerAPI main, Object stageId) {
 		EventStageDisplayData data = createDisplayData(stageId);
 		String icon;

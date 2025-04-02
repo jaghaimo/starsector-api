@@ -343,7 +343,7 @@ public class RiftCascadeEffect implements BeamEffectPlugin { //WithReset {
 					Object o = Global.getSettings().getWeaponSpec(RIFTCASCADE_MINELAYER).getProjectileSpec();
 					if (o instanceof MissileSpecAPI) {
 						MissileSpecAPI spec = (MissileSpecAPI) o;
-						float explosionRadius = (float) spec.getBehaviorJSON().optJSONObject("explosionSpec").optDouble("coreRadius");
+						float explosionRadius = (float) spec.getBehaviorJSON().optJSONObject("explosionSpec").optDouble("coreRadius", 100f);
 						float sizeMult = getSizeMult();
 						explosionRadius *= sizeMult;
 						

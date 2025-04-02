@@ -7,11 +7,14 @@ import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.econ.Industry;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.econ.MarketImmigrationModifier;
+import com.fs.starfarer.api.impl.campaign.econ.impl.ConstructionQueue.ConstructionQueueItem;
 import com.fs.starfarer.api.impl.campaign.ids.Conditions;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Industries;
+import com.fs.starfarer.api.impl.campaign.ids.People;
 import com.fs.starfarer.api.impl.campaign.intel.events.LuddicChurchHostileActivityFactor;
 import com.fs.starfarer.api.impl.campaign.population.PopulationComposition;
+import com.fs.starfarer.api.loading.IndustrySpecAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 
@@ -127,14 +130,9 @@ public class LuddicMajority extends BaseMarketConditionPlugin implements MarketI
 					"+" + (int) getImmigrationBonus(false));
 		}
 
-		addConditions(tooltip, market, opad);
-//		if (!matchesBonusConditions(market)) {
-//			tooltip.addPara("The bonus is negated due to the colony not meeting certain conditions.", opad,
-//					Misc.getNegativeHighlightColor(), "negated");
-//		} else if (market.isPlayerOwned() && LuddicChurchHostileActivityFactor.isDefeatedExpedition()) {
-//			tooltip.addPara("The bonus is doubled due to the population feeling securely out from under the direct "
-//					+ "influence of the Luddic Church.", opad, Misc.getPositiveHighlightColor(), "doubled");
-//		}
+		if (!Global.CODEX_TOOLTIP_MODE) {
+			addConditions(tooltip, market, opad);
+		}
 	}
 	
 	public static void addConditions(TooltipMakerAPI tooltip, MarketAPI market, float opad) {
@@ -149,7 +147,6 @@ public class LuddicMajority extends BaseMarketConditionPlugin implements MarketI
 		String heavy = null;
 		String military = null;
 		String rural = null;
-		
 		
 		for (Industry ind : market.getIndustries()) {
 			if (ind.getSpec().hasTag(Industries.TAG_INDUSTRIAL)) {
@@ -167,6 +164,28 @@ public class LuddicMajority extends BaseMarketConditionPlugin implements MarketI
 			}
 		}
 		
+		if (market.getConstructionQueue() != null) {
+			for (ConstructionQueueItem item : market.getConstructionQueue().getItems()) {
+				IndustrySpecAPI spec = Global.getSettings().getIndustrySpec(item.id);
+				if (spec != null) {
+					if (spec.hasTag(Industries.TAG_INDUSTRIAL)) {
+						if (heavy == null) heavy = spec.getName();
+						hasIndustrial = true;
+					}
+					if (spec.hasTag(Industries.TAG_MILITARY) || spec.hasTag(Industries.TAG_COMMAND)) {
+						if (military == null) military = spec.getName();
+						hasMilitary = true;
+					}
+					
+					if (spec.hasTag(Industries.TAG_RURAL)) {
+						if (rural == null) rural = spec.getName();
+						hasRural = true;
+					}
+				}
+				break;
+			}
+		}
+		
 		boolean matches = matchesBonusConditions(market);
 		
 		if (!matches) {
@@ -181,6 +200,10 @@ public class LuddicMajority extends BaseMarketConditionPlugin implements MarketI
 			}
 			//opad = 5f;
 			tooltip.setBulletedListMode("    - ");
+			if (market.getAdmin() != null && market.getAdmin().getId().equals(People.DARDAN_KATO)) {
+				tooltip.addPara("Dardan Kato's \"policies\"", opad);
+				opad = 0f;
+			}
 			if (madeDeal) {
 				tooltip.addPara("Deal made with Luddic Church to curtail immigration", opad);
 				opad = 0f;
@@ -227,6 +250,11 @@ public class LuddicMajority extends BaseMarketConditionPlugin implements MarketI
 		
 		if (!market.hasCondition(Conditions.HABITABLE)) return false;
 		
+		if (market.getAdmin() != null && market.getAdmin().getId().equals(People.DARDAN_KATO)) {
+			// he's that dumb about it
+			return false;
+		}
+		
 		boolean hasRural = false;
 		for (Industry ind : market.getIndustries()) {
 			if (ind.getSpec().hasTag(Industries.TAG_INDUSTRIAL)) return false;
@@ -235,6 +263,18 @@ public class LuddicMajority extends BaseMarketConditionPlugin implements MarketI
 			
 			hasRural |= ind.getSpec().hasTag(Industries.TAG_RURAL);
 		}
+		
+		if (market.getConstructionQueue() != null) {
+			for (ConstructionQueueItem item : market.getConstructionQueue().getItems()) {
+				IndustrySpecAPI spec = Global.getSettings().getIndustrySpec(item.id);
+				if (spec != null) {
+					if (spec.hasTag(Industries.TAG_INDUSTRIAL)) return false;
+					if (spec.hasTag(Industries.TAG_MILITARY) || spec.hasTag(Industries.TAG_COMMAND)) return false;
+				}
+				break;
+			}
+		}
+		
 		return hasRural;
 	}
 

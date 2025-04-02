@@ -9,6 +9,7 @@ import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.impl.campaign.ids.FleetTypes;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.intel.PerseanLeagueMembership;
+import com.fs.starfarer.api.impl.campaign.intel.events.EstablishedPolityScript;
 import com.fs.starfarer.api.impl.campaign.missions.FleetCreatorMission;
 import com.fs.starfarer.api.util.IntervalUtil;
 import com.fs.starfarer.api.util.Misc;
@@ -82,6 +83,7 @@ public class PerseanLeaguePunitiveExpedition extends GenericRaidFGI  {
 		m.triggerSetFleetFlag(PLPE_FLEET);
 		
 		m.setFleetSource(params.source);
+		setFleetCreatorQualityFromRoute(m);
 		m.setFleetDamageTaken(damage);
 	
 		m.triggerSetWarFleet();
@@ -98,6 +100,8 @@ public class PerseanLeaguePunitiveExpedition extends GenericRaidFGI  {
 	public void abort() {
 		if (!isAborted()) {
 			PerseanLeagueMembership.setDefeatedPunEx(true);
+			new EstablishedPolityScript();
+			
 			for (CampaignFleetAPI curr : getFleets()) {
 				curr.getMemoryWithoutUpdate().unset(PLPE_FLEET);
 			}

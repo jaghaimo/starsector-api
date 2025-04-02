@@ -47,4 +47,5 @@ public interface FactionDoctrineAPI {
 	void setStrictComposition(boolean strictComposition);
 	float getOfficerSkillsShuffleProbability();
 	List<String> getOfficerSkills();
+	void copyToDoctrine(FactionDoctrineAPI other);
 }

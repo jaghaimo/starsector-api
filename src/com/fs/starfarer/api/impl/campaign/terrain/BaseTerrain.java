@@ -1,8 +1,9 @@
 package com.fs.starfarer.api.impl.campaign.terrain;
 
-import java.awt.Color;
 import java.util.EnumSet;
 import java.util.List;
+
+import java.awt.Color;
 
 import org.lwjgl.util.vector.Vector2f;
 
@@ -42,9 +43,19 @@ public class BaseTerrain implements CampaignTerrainPlugin {
 	public SectorEntityToken getEntity() {
 		return entity;
 	}
+	
+	@Override
+	public void setEntity(SectorEntityToken entity) {
+		this.entity = entity;
+	}
 
 	public String getTerrainId() {
 		return terrainId;
+	}
+	
+	@Override
+	public void setTerrainId(String id) {
+		terrainId = id;
 	}
 
 	protected boolean shouldCheckFleetsToApplyEffect() {
@@ -63,17 +74,22 @@ public class BaseTerrain implements CampaignTerrainPlugin {
 		// System.out.println(entity.getContainingLocation().getTerrainCopy().size());
 		// System.out.println(entity.getContainingLocation().getFleets().size());
 		// }
+//		if (entity.isPlayerFleet()) {
+//			System.out.println("23fwefe");
+//		}
 		if (shouldCheckFleetsToApplyEffect()) {
 			float renderRange = getRenderRange();
 			// renderRange *= renderRange;
 			float days = Global.getSector().getClock().convertToDays(amount);
 			for (CampaignFleetAPI fleet : fleets) {
-				if (fleet.isStationMode())
+				if (fleet.isStationMode()) {
 					continue;
-
+				}
+				
 				float dist = Misc.getDistance(fleet.getLocation(), entity.getLocation());
-				if (dist > renderRange)
+				if (dist > renderRange) {
 					continue;
+				}
 
 				String cat = getEffectCategory();
 				String key = "$terrain_" + cat;

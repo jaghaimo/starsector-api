@@ -23,11 +23,14 @@ public class PiracyRespiteScript implements EconomyUpdateListener {
 		return (PiracyRespiteScript) Global.getSector().getMemoryWithoutUpdate().get(KEY);
 	}
 	
+	public static boolean playerHasPiracyRespite() {
+		return get() != null;
+	}
+	
 
 	protected long timestamp;
 	
 	public PiracyRespiteScript() {
-		
 		sendGainedMessage();
 		
 		// to avoid duplicates
@@ -47,13 +50,17 @@ public class PiracyRespiteScript implements EconomyUpdateListener {
 	public void sendGainedMessage() {
 		MessageIntel msg = new MessageIntel();
 		msg.addLine("Piracy Respite gained", Misc.getBasePlayerColor());
-		msg.addLine(BaseIntelPlugin.BULLET + "Colonies receive %s accessibility", Misc.getTextColor(),
-				new String [] {"+" + (int)Math.round(PiracyRespite.ACCESSIBILITY_BONUS * 100f) + "%"},
-				Misc.getHighlightColor());
-		if (DURATION > 0) {
-			msg.addLine(BaseIntelPlugin.BULLET + "Lasts for %s days", Misc.getTextColor(),
-					new String [] {"" + (int)PiracyRespiteScript.DURATION},
-				Misc.getHighlightColor());
+		if (!PiracyRespite.NEW_MODE) {
+			msg.addLine(BaseIntelPlugin.BULLET + "Colonies receive %s accessibility", Misc.getTextColor(),
+					new String [] {"+" + (int)Math.round(PiracyRespite.ACCESSIBILITY_BONUS * 100f) + "%"},
+					Misc.getHighlightColor());
+			if (DURATION > 0) {
+				msg.addLine(BaseIntelPlugin.BULLET + "Lasts for %s days", Misc.getTextColor(),
+						new String [] {"" + (int)PiracyRespiteScript.DURATION},
+					Misc.getHighlightColor());
+			}
+		} else {
+			msg.addLine(BaseIntelPlugin.BULLET + "Reduced shipping disruptions", Misc.getTextColor());
 		}
 		msg.setIcon(Global.getSettings().getSpriteName("events", "piracy_respite"));
 		msg.setSound(Sounds.REP_GAIN);
@@ -85,9 +92,16 @@ public class PiracyRespiteScript implements EconomyUpdateListener {
 	}
 
 	public void economyUpdated() {
-		for (MarketAPI curr : Misc.getPlayerMarkets(false)) {
-			if (!curr.hasCondition(Conditions.PIRACY_RESPITE)) {
-				curr.addCondition(Conditions.PIRACY_RESPITE);
+		//for (MarketAPI curr : Misc.getPlayerMarkets(false)) {
+		for (MarketAPI curr : Global.getSector().getEconomy().getMarketsCopy()) {
+			if (curr.isPlayerOwned() && curr.getFaction() != null && curr.getFaction().isPlayerFaction()) {
+				if (!curr.hasCondition(Conditions.PIRACY_RESPITE)) {
+					curr.addCondition(Conditions.PIRACY_RESPITE);
+				}
+			} else {
+				if (curr.hasCondition(Conditions.PIRACY_RESPITE)) {
+					curr.removeCondition(Conditions.PIRACY_RESPITE);
+				}
 			}
 		}
 	}
@@ -97,7 +111,8 @@ public class PiracyRespiteScript implements EconomyUpdateListener {
 			sendExpiredMessage();
 		}
 		Global.getSector().getMemoryWithoutUpdate().unset(KEY);
-		for (MarketAPI curr : Misc.getPlayerMarkets(false)) {
+		//for (MarketAPI curr : Misc.getPlayerMarkets(false)) {
+		for (MarketAPI curr : Global.getSector().getEconomy().getMarketsCopy()) {
 			if (curr.hasCondition(Conditions.PIRACY_RESPITE)) {
 				curr.removeCondition(Conditions.PIRACY_RESPITE);
 			}

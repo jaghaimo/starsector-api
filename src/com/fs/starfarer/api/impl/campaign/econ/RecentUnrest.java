@@ -1,5 +1,6 @@
 package com.fs.starfarer.api.impl.campaign.econ;
 
+import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.econ.MarketConditionAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Conditions;
@@ -100,17 +101,23 @@ public class RecentUnrest extends BaseMarketConditionPlugin {
 		float pad = 3f;
 		float opad = 10f;
 		
-		tooltip.addPara("%s stability. Goes down by one point every three months.", 
-				opad, Misc.getHighlightColor(),
-				"-" + (int)penalty);
-		
-		if (!reasons.getItems().isEmpty()) {
-			tooltip.addPara("Recent contributing factors:", opad);
+		if (Global.CODEX_TOOLTIP_MODE) {
+			tooltip.addPara("A penalty to stability that goes down by %s point every three months.", 
+					opad, Misc.getHighlightColor(),
+					"1");
+		} else {
+			tooltip.addPara("%s stability. Goes down by one point every three months.", 
+					opad, Misc.getHighlightColor(),
+					"-" + (int)penalty);
 			
-			float initPad = pad;
-			for (String reason : reasons.getItems()) {
-				tooltip.addPara(BaseIntelPlugin.BULLET + reason, initPad);
-				initPad = 0f;
+			if (!reasons.getItems().isEmpty()) {
+				tooltip.addPara("Recent contributing factors:", opad);
+				
+				float initPad = pad;
+				for (String reason : reasons.getItems()) {
+					tooltip.addPara(BaseIntelPlugin.BULLET + reason, initPad);
+					initPad = 0f;
+				}
 			}
 		}
 		

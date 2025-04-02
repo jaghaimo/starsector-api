@@ -138,6 +138,7 @@ public class PerseanLeagueBlockade extends BlockadeFGI {
 		}
 		
 		m.setFleetSource(params.source);
+		setFleetCreatorQualityFromRoute(m);
 		m.setFleetDamageTaken(damage);
 	
 		m.triggerSetPatrol();

@@ -1,9 +1,10 @@
 package com.fs.starfarer.api.campaign;
 
-import java.awt.Color;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
+
+import java.awt.Color;
 
 import org.lwjgl.util.vector.Vector2f;
 

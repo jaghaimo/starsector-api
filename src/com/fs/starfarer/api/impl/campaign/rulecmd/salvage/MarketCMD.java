@@ -376,6 +376,10 @@ public class MarketCMD extends BaseCommandPlugin {
 			convinceMercToStay();
 		} else if (command.equals("mercLeaves")) {
 			mercLeaves();
+		} else if (command.equals("assistVolturnInsurgents"))
+		{
+			MarketAPI volturn = Global.getSector().getEconomy().getMarket("volturn");
+			RecentUnrest.get(volturn).add(2, "The Luddic insurgency acquired unusually heavy weaponry somehow");
 		}
 		
 		return true;

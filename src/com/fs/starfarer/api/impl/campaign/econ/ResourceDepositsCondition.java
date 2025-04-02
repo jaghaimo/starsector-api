@@ -283,6 +283,13 @@ public class ResourceDepositsCondition extends BaseHazardCondition implements Ma
 				CommoditySpecAPI spec = Global.getSettings().getCommoditySpec(commodityId);
 				
 				String industryId = INDUSTRY.get(commodityId);
+				if (commodityId.equals(Commodities.FOOD) && condition.getId().equals(Conditions.WATER_SURFACE) &&
+						industryId.equals(Industries.FARMING)) {
+					industryId = Industries.AQUACULTURE;
+				} else if (commodityId.equals(Commodities.LOBSTER) && condition.getId().equals(Conditions.VOLTURNIAN_LOBSTER_PENS) &&
+						industryId.equals(Industries.FARMING)) {
+					industryId = Industries.AQUACULTURE;
+				}
 				IndustrySpecAPI ind = Global.getSettings().getIndustrySpec(industryId);
 				
 				

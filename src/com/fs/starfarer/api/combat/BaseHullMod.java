@@ -5,11 +5,13 @@ import java.awt.Color;
 import com.fs.starfarer.api.GameState;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignUIAPI.CoreUITradeMode;
+import com.fs.starfarer.api.campaign.CargoStackAPI;
 import com.fs.starfarer.api.campaign.econ.Industry;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
+import com.fs.starfarer.api.impl.campaign.HullModItemManager;
 import com.fs.starfarer.api.impl.campaign.ids.HullMods;
 import com.fs.starfarer.api.impl.campaign.ids.Industries;
 import com.fs.starfarer.api.loading.HullModSpecAPI;
@@ -20,7 +22,7 @@ import com.fs.starfarer.api.util.Misc;
 public class BaseHullMod implements HullModEffect {
 
 	protected HullModSpecAPI spec;
-
+	
 	public void init(HullModSpecAPI spec) {
 		this.spec = spec;
 		
@@ -217,7 +219,11 @@ public class BaseHullMod implements HullModEffect {
 					tooltip.addPara("This effect only applies if this built-in hullmod is enhanced using a %s. Doing this does not count against the maximum number of s-mods a ship can have.",
 							opad, s, "story point");
 				} else {
-					tooltip.addPara("This effect only applies if this hullmod is built into the hull using a story point. Cheap hullmods have stronger effects.",
+					String cheap = "Cheap hullmods have stronger effects."; 
+					if (Global.CODEX_TOOLTIP_MODE) {
+						cheap = "Cheaper hullmods have stronger effects, more expensive hullmods may have penalties.";
+					}
+					tooltip.addPara("This effect only applies if this hullmod is built into the hull using a story point. " + cheap,
 							opad, s, "story point");
 				}
 //				tooltip.addPara("This hullmod has the following effect when built into the hull using a story point:",
@@ -318,6 +324,45 @@ public class BaseHullMod implements HullModEffect {
 	public boolean showInRefitScreenModPickerFor(ShipAPI ship) {
 		return true;
 	}
+	
+	public void addRequiredItemSection(TooltipMakerAPI tooltip, 
+								FleetMemberAPI member, ShipVariantAPI currentVariant, MarketAPI dockedAt,
+								float width, boolean isForModSpec) {
+		
+		CargoStackAPI req = getRequiredItem();
+		if (req != null) {
+			float opad = 10f;
+			if (isForModSpec || Global.CODEX_TOOLTIP_MODE) {
+				Color color = Misc.getBasePlayerColor();
+				if (isForModSpec) {
+					color = Misc.getHighlightColor();
+				}
+				String name = req.getDisplayName();
+				String aOrAn = Misc.getAOrAnFor(name);
+				tooltip.addPara("Requires " + aOrAn + " %s to install.", 
+									opad, color, name);
+			} else if (currentVariant != null && member != null) {
+				if (currentVariant.hasHullMod(spec.getId())) {
+					if (!currentVariant.getHullSpec().getBuiltInMods().contains(spec.getId())) {
+						Color color = Misc.getPositiveHighlightColor();
+						tooltip.addPara("Using item: " + req.getDisplayName(), 
+											color, opad);
+					}
+				} else {
+					int available = HullModItemManager.getInstance().getNumAvailableMinusUnconfirmed(req, 
+																member, currentVariant, dockedAt);
+					Color color = Misc.getPositiveHighlightColor();
+					if (available < 1) color = Misc.getNegativeHighlightColor();
+					if (available < 0) available = 0;
+					tooltip.addPara("Requires item: " + req.getDisplayName() + " (" + available + " available)", 
+										color, opad);
+				}
+			}
+		}		
+		
+	}
+	
+	
 }
 
 

@@ -225,6 +225,7 @@ public class GABuyArtifact extends GABaseMission {
 	
 	@Override
 	public void addDescriptionForNonEndStage(TooltipMakerAPI info, float width, float height) {
+		if (getPerson() == null || getPerson().getMarket() == null) return;
 		float opad = 10f;
 		Color h = Misc.getHighlightColor();
 		if (currentStage == Stage.GO_TO_MARKET) {

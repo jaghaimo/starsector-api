@@ -6,6 +6,7 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
@@ -84,6 +85,8 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 	
 	
 	protected CombatDamageData runningDamageTotal = null;
+	
+	protected Map<FleetMemberAPI, CampaignFleetAPI> origSourceForRecoveredShips = new LinkedHashMap<>();
 	
 	public FleetEncounterContext() {
 		
@@ -1592,10 +1595,17 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 //						keepCaptain = true;
 //					}
 					if (!keepCaptain) {
-						data.getMember().setCaptain(Global.getFactory().createPerson());
 						if (aiCoreId != null) {
+							data.getMember().setCaptain(Global.getFactory().createPerson());
 							data.getMember().getCaptain().getMemoryWithoutUpdate().set(
-									"$aiCoreIdForRecovery", aiCoreId);
+										"$aiCoreIdForRecovery", aiCoreId);
+						} else if (!own && data.getMember().getCaptain() != null &&
+								data.getMember().getCaptain().isAICore()) {
+							aiCoreId = data.getMember().getCaptain().getAICoreId();
+							data.getMember().setCaptain(Global.getFactory().createPerson());
+							data.getMember().getCaptain().getMemoryWithoutUpdate().set(
+									"$aiCoreIdForPossibleRecovery", aiCoreId);
+							
 						}
 					}
 				}
@@ -1603,7 +1613,10 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 				ShipVariantAPI variant = data.getMember().getVariant();
 				variant = variant.clone();
 				variant.setSource(VariantSource.REFIT);
-				variant.setOriginalVariant(null);
+				
+				// maybe this was necessary? commenting this out to for simulator to be able to unlock recoverable ship variants
+				//variant.setOriginalVariant(null);
+				
 				//DModManager.setDHull(variant);
 				data.getMember().setVariant(variant, false, true);
 				
@@ -1734,6 +1747,7 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 			playerFleet.getFleetData().addFleetMember(member);
 			if (context != null) {
 				context.getBattle().getCombinedFor(playerFleet).getFleetData().addFleetMember(member);
+				context.origSourceForRecoveredShips.put(member, context.getBattle().getSourceFleet(member));
 				context.getBattle().getMemberSourceMap().put(member, playerFleet);
 			}
 			
@@ -1774,7 +1788,7 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 					boolean retainAllHullmods, boolean retainKnownHullmods, boolean clearSMods,
 					float weaponRetainProb, float wingRetainProb, Random salvageRandom) {
 		ShipVariantAPI variant = member.getVariant().clone();
-		variant.setOriginalVariant(null);
+		//variant.setOriginalVariant(null);
 		if (retainAllHullmods) {
 			// do nothing
 		} else if (retainKnownHullmods) {
@@ -2064,9 +2078,19 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 		
 		//CampaignFleetAPI fleet = side.getFleet();
 		CampaignFleetAPI fleet = Global.getSector().getPlayerFleet();
-		int fpTotal = 0;
+		float fpTotal = 0;
 		for (FleetMemberData data : otherSide.getOwnCasualties()) {
 			float fp = data.getMember().getFleetPointCost();
+			
+//			String prefix = "xp_mult_";
+//			for (String tag : data.getMember().getHullSpec().getTags()) {
+//				if (tag.startsWith(prefix)) {
+//					tag = tag.replaceFirst(prefix, "");
+//					fp *= Float.parseFloat(tag);
+//					break;
+//				}
+//			}
+			
 			fp *= 1f + data.getMember().getCaptain().getStats().getLevel() / 5f;
 			fpTotal += fp;
 		}
@@ -2206,6 +2230,10 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 				continue;
 			}
 			
+			if (data.getMember() != null && data.getMember().getHullSpec().hasTag(Tags.NO_BATTLE_SALVAGE)) {
+				continue;
+			}
+			
 			if (origSalvageRandom != null) {
 				String sig = data.getMember().getHullId();
 				if (data.getMember().getVariant() != null) {
@@ -2241,6 +2269,10 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 			if (data.getMember().isAlly()) continue;
 			
 			if (data.getStatus() == Status.CAPTURED || data.getStatus() == Status.REPAIRED) {
+				continue;
+			}
+			
+			if (data.getMember() != null && data.getMember().getHullSpec().hasTag(Tags.NO_BATTLE_SALVAGE)) {
 				continue;
 			}
 			
@@ -2424,7 +2456,7 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 		
 		float lostCargo = 0f;
 		float lostFuel = 0f;
-		
+
 		float totalLoss = 0f;
 		for (FleetMemberData data : winner.getEnemyCasualties()) {
 //			if (data.getStatus() == Status.REPAIRED) {
@@ -2435,6 +2467,9 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 //			}
 			
 			CampaignFleetAPI source = battle.getSourceFleet(data.getMember());
+			CampaignFleetAPI orig = origSourceForRecoveredShips.get(data.getMember());
+			if (orig != null) source = orig;
+			
 			if (source != null) {
 				CargoAPI c = source.getCargo();
 				LossFraction loss = fractions.get(c);
@@ -2568,19 +2603,42 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 		if (salvageRandom != null) random = salvageRandom;
 		
 		float p = Global.getSettings().getFloat("salvageHullmodProb");
+		float pItem = Global.getSettings().getFloat("salvageHullmodRequiredItemProb");
 		
 		for (String id : variant.getHullMods()) {
-			if (random.nextFloat() > mult) continue;
-			if (random.nextFloat() > p) continue;
+			if (!variant.getHullSpec().isBuiltInMod(id)) {
+				if (random.nextFloat() < pItem && random.nextFloat() < mult) {
+					HullModSpecAPI spec = Global.getSettings().getHullModSpec(id);
+					CargoStackAPI item = spec.getEffect().getRequiredItem();
+					if (item != null) {
+						boolean addToLoot = true;
+						if (item.getSpecialItemSpecIfSpecial() != null && item.getSpecialItemSpecIfSpecial().hasTag(Tags.NO_DROP)) {
+							addToLoot = false;
+						} else if (item.getResourceIfResource() != null && item.getResourceIfResource().hasTag(Tags.NO_DROP)) {
+							addToLoot = false;
+						} else if (item.getFighterWingSpecIfWing() != null && item.getFighterWingSpecIfWing().hasTag(Tags.NO_DROP)) {
+							addToLoot = false;
+						} else if (item.getWeaponSpecIfWeapon() != null && item.getWeaponSpecIfWeapon().hasTag(Tags.NO_DROP)) {
+							addToLoot = false;
+						}
+						if (addToLoot) {
+							loot.addItems(item.getType(), item.getData(), 1);
+						}
+					}
+				}
+			}
 			
-			HullModSpecAPI spec = Global.getSettings().getHullModSpec(id);
-			boolean known = Global.getSector().getPlayerFaction().knowsHullMod(id);
-			if (DebugFlags.ALLOW_KNOWN_HULLMOD_DROPS) known = false;
-			if (known || spec.isHidden() || spec.isHiddenEverywhere()) continue;
-			//if (spec.isAlwaysUnlocked()) continue;
-			if (spec.hasTag(Tags.HULLMOD_NO_DROP)) continue;
-			
-			loot.addHullmods(id, 1);
+			//if (random.nextFloat() > mult) continue;
+			if (random.nextFloat() < p && random.nextFloat() < mult) {
+				HullModSpecAPI spec = Global.getSettings().getHullModSpec(id);
+				boolean known = Global.getSector().getPlayerFaction().knowsHullMod(id);
+				if (DebugFlags.ALLOW_KNOWN_HULLMOD_DROPS) known = false;
+				if (known || spec.isHidden() || spec.isHiddenEverywhere()) continue;
+				//if (spec.isAlwaysUnlocked()) continue;
+				if (spec.hasTag(Tags.HULLMOD_NO_DROP)) continue;
+				
+				loot.addHullmods(id, 1);
+			}
 		}
 		
 		for (String slotId : variant.getModuleSlots()) {
@@ -2647,12 +2705,26 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 						  member.getCaptain().getMemoryWithoutUpdate().getString("$aiCoreIdForRecovery"), 1);
 		}
 		
+		if (own) {
+			HullModItemManager.getInstance().giveBackAllItems(member, loot);
+		}
+		
+		
 		Random random = Misc.random;
 		if (salvageRandom != null) random = salvageRandom;
 		
+		String coreIdOverride = null;
+		if (member.getCaptain() != null && 
+				member.getCaptain().getMemoryWithoutUpdate().contains("$aiCoreIdForPossibleRecovery")) {
+			coreIdOverride = member.getCaptain().getMemoryWithoutUpdate().getString("$aiCoreIdForPossibleRecovery");
+		}
 		if (!own && !lootingModule && 
-				member.getCaptain().isAICore() && !variant.hasTag(Tags.VARIANT_DO_NOT_DROP_AI_CORE_FROM_CAPTAIN)) {
+				(member.getCaptain().isAICore() || coreIdOverride != null) &&
+				!variant.hasTag(Tags.VARIANT_DO_NOT_DROP_AI_CORE_FROM_CAPTAIN)) {
 			String cid = member.getCaptain().getAICoreId();
+			if (coreIdOverride != null) {
+				cid = coreIdOverride;
+			}
 			if (cid != null) {
 				CommoditySpecAPI spec = Global.getSettings().getCommoditySpec(cid);
 				if (!spec.hasTag(Tags.NO_DROP)) {
@@ -3378,7 +3450,7 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 		for (FleetMemberAPI member : battle.getNonPlayerCombined().getFleetData().getMembersListCopy()) {
 			if (member.isMothballed()) continue;
 			float mult = baseMult;
-			if (member.isStation()) mult *= 2f;
+			if (member.isStation()) mult *= 1f;
 			else if (member.isCivilian()) mult *= 0.25f;
 			if (member.getCaptain() != null && !member.getCaptain().isDefault()) {
 				scoreEnemy += officerBase + officerPerLevel * Math.max(1f, member.getCaptain().getStats().getLevel());
@@ -3387,9 +3459,18 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 			for (int i = 0; i < dMods; i++) {
 				mult *= dModMult;
 			}
-			scoreEnemy += member.getUnmodifiedDeploymentPointsCost() * mult;
+//			String prefix = "battle_difficulty_mult_";
+//			for (String tag : member.getHullSpec().getTags()) {
+//				if (tag.startsWith(prefix)) {
+//					tag = tag.replaceFirst(prefix, "");
+//					mult *= Float.parseFloat(tag);
+//					break;
+//				}
+//			}
+			//scoreEnemy += member.getUnmodifiedDeploymentPointsCost() * mult;
+			scoreEnemy += member.getFleetPointCost() * mult;
 		}
-		scoreEnemy *= 0.67f;
+		scoreEnemy *= 0.6f;
 		
 		float maxPlayserShipScore = 0f;
 		
@@ -3400,7 +3481,7 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 		for (FleetMemberAPI member : battle.getPlayerCombined().getFleetData().getMembersListCopy()) {
 			if (member.isMothballed()) continue;
 			float mult = baseMult;
-			if (member.isStation()) mult *= 2f;
+			if (member.isStation()) mult *= 1f;
 			else if (member.isCivilian()) mult *= 0.25f;
 			if (member.getCaptain() != null && !member.getCaptain().isDefault()) {
 				scorePlayer += officerBase + officerPerLevel * Math.max(1f, member.getCaptain().getStats().getLevel());
@@ -3412,7 +3493,8 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 			for (int i = 0; i < dMods; i++) {
 				mult *= dModMult;
 			}
-			float currShipBaseScore = member.getUnmodifiedDeploymentPointsCost() * mult;
+			//float currShipBaseScore = member.getUnmodifiedDeploymentPointsCost() * mult;
+			float currShipBaseScore = member.getFleetPointCost() * mult;
 			scorePlayer += currShipBaseScore;
 			if (battle.getSourceFleet(member) != null && battle.getSourceFleet(member).isPlayerFleet()) {
 				maxPlayserShipScore = Math.max(maxPlayserShipScore, currShipBaseScore);

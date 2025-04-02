@@ -20,6 +20,9 @@ public class Ranks {
 	public static String GROUND_GENERAL = "groundGeneral";
 	
 	public static String CITIZEN = "citizen";
+	public static String ARISTOCRAT = "aristocrat";
+	public static String EXECUTIVE = "executive";
+	public static String SENIOR_EXECUTIVE = "seniorExecutive";
 	public static String UNKNOWN = "unknown";
 	public static String TERRORIST = "terrorist";
 	public static String FREEDOM_FIGHTER = "freedomFighter";
@@ -57,7 +60,7 @@ public class Ranks {
 	
 	
 	public static String POST_AGENT = "agent";
-	public static String POST_ARISTOCRAT = "aristocrat";
+	public static String POST_ARISTOCRAT = "aristocrat"; // but should this be a post?
 	public static String POST_SPECIAL_AGENT = "specialAgent";
 	public static String POST_GUILDMASTER = "guildMaster";
 	public static String POST_COMMUNE_LEADER = "communeLeader";
@@ -86,6 +89,7 @@ public class Ranks {
 	public static String POST_FREELANCE_ADMIN = "freeAdmin";
 	
 	public static String POST_GENERIC_MILITARY = "genericMilitary";
+	public static String POST_MARINE_SQUAD_LEADER = "marineSquadLeader";
 	
 	public static String POST_TRADER = "trader";
 	public static String POST_MERCHANT = "merchant";
@@ -96,6 +100,7 @@ public class Ranks {
 	public static String POST_SENIOR_EXECUTIVE = "seniorExecutive";
 	public static String POST_COMMODITIES_AGENT = "commodities_agent";
 	public static String POST_ENTREPRENEUR = "entrepreneur";
+	public static String POST_NANOFORGE_ENGINEER = "nanoforge_engineer";
 	
 	public static String POST_SHADY = "shady";
 	public static String POST_GANGSTER = "gangster";
@@ -106,13 +111,16 @@ public class Ranks {
 	public static String POST_ARMS_DEALER = "armsDealer";
 	public static String POST_SPACER = "spacer";
 	
+	public static String POST_SECURITY_CHIEF = "securityChief";
 	public static String POST_DOCTOR = "doctor";
 	public static String POST_HACKER = "hacker";
 	public static String POST_HERMIT = "hermit";
 	public static String POST_PENSIONER = "pensioner";
 	public static String POST_ACTIVIST = "activist";
 	public static String POST_TERRORIST = "terrorist";
+	public static String POST_CURATE = "curate";
 	public static String POST_SYNOD_SUBCURATE = "synodSubcurate";
+	public static String POST_SUBCURATE = "subcurate";
 	public static String POST_HERETIC = "heretic";
 	public static String POST_ARCHCURATE = "archcurate";
 	public static String POST_WARLORD = "warlord";
@@ -122,7 +130,7 @@ public class Ranks {
 	public static String POST_INITIATE = "initiate";
 	public static String POST_NOVICE = "novice";
 	public static String POST_PILGRIM = "pilgrim";
-	
+
 	//public static String POST_ = "";
 	
 	

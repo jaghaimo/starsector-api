@@ -102,6 +102,7 @@ public interface ShieldAPI {
 	void setRingRotationRate(float ringRotationRate);
 	boolean isSkipRendering();
 	void setSkipRendering(boolean skipRendering);
+	void applyShieldEffects(Color innerColor, Color ringColor, float thicknessBonus, float fluctuationBonus, float effectLevel);
 	
 	
 	

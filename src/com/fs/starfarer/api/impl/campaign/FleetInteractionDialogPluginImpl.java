@@ -1,11 +1,12 @@
 package com.fs.starfarer.api.impl.campaign;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
+
+import java.awt.Color;
 
 import org.lwjgl.input.Keyboard;
 
@@ -69,6 +70,8 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 
 	public static float EMERGENCY_REPAIRS_MAX_DP = Global.getSettings().getFloat("emergencyRepairsMaxDPValue");
 	
+	public static String DO_NOT_AUTO_SHOW_FC_PORTRAIT = "$doNotAutoShowFleetCommanderPortrait";
+	
 	public static interface FIDConfigGen {
 		FIDConfig createConfig();
 	}
@@ -82,9 +85,13 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 		public boolean showEngageText = true;
 		public boolean alwaysAttackVsAttack = false;
 		public boolean alwaysPursue = false;
+		public boolean alwaysHarry = false;
+		public boolean alwaysLetGo = false;
 		public boolean dismissOnLeave = true;
 		public boolean withSalvage = true;
 		public boolean lootCredits = true;
+		
+		public boolean showCrRecoveryText = true;
 		
 		public boolean showVictoryText = true;
 		
@@ -111,6 +118,16 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 		public boolean straightToEngage = false;
 		public boolean playerAttackingStation = false;
 		public boolean playerDefendingStation = false;
+		
+		
+//		/**
+//		 * Note: this means that retreating won't work, either - the player will be forced to re-engage every time until
+//		 * one fleet is entirely destroyed.
+//		 * Also this gets broken completely by e.g. Phase Anchor
+//		 */
+//		public boolean noLeaveOption = false;
+		
+		public boolean noLeaveOptionOnFirstEngagement = false;
 		
 		
 		public Random salvageRandom = null;
@@ -759,15 +776,19 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 				last == EngagementOutcome.BATTLE_PLAYER_OUT_FIRST_WIN) {
 			float recoveryFraction = context.performPostEngagementRecoveryBoth(result);
 			if (recoveryFraction > 0) {
-				addText(getString("bothRecovery"));
+				if (config.showCrRecoveryText) {
+					addText(getString("bothRecovery"));
+				}
 			}
 		} else {
 			float recoveryFraction = context.performPostVictoryRecovery(result);
 			if (recoveryFraction > 0) {
-				if (context.didPlayerWinLastEngagement()) {
-					addText(getString("playerRecovery"));
-				} else {
-					addText(getString("enemyRecovery"));
+				if (config.showCrRecoveryText) {
+					if (context.didPlayerWinLastEngagement()) {
+						addText(getString("playerRecovery"));
+					} else {
+						addText(getString("enemyRecovery"));
+					}
 				}
 			}
 		}
@@ -1319,7 +1340,8 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 				conversationDelegate.notifyActivePersonChanged();
 				inConversation = false;
 			}
-			if (inConversation && !visual.isShowingPersonInfo(actualOther.getCommander())) {
+			if (inConversation && !visual.isShowingPersonInfo(actualOther.getCommander()) &&
+					!dialog.getInteractionTarget().getMemoryWithoutUpdate().getBoolean(DO_NOT_AUTO_SHOW_FC_PORTRAIT)) {
 				visual.showPersonInfo(actualOther.getCommander());
 			}
 			break;
@@ -2840,67 +2862,71 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 				if (ai != null) {
 					hostile = ai.isHostileTo(playerFleet) || context.isEngagedInHostilities();
 				}
-				if (!config.leaveAlwaysAvailable &&
-						(otherFleetWantsToFight() || (hostile && !otherFleetWantsToDisengage()))) {
-					if (canDisengageCleanly(playerFleet)) {
-						options.addOption("Disengage", OptionId.DISENGAGE, getString("tooltipCleanDisengage"));
-					} else if (canDisengageWithoutPursuit(playerFleet) && !(!otherFleetWantsToFight() && !otherFleetWantsToDisengage())) {
-						options.addOption("Disengage", OptionId.DISENGAGE, getString("tooltipHarrassableDisengage"));
-					} else {
-						if (otherFleetHoldingVsStrongerEnemy() || (!otherFleetWantsToFight() && !otherFleetWantsToDisengage())) {
-							options.addOption("Leave", OptionId.LEAVE, null);
-							options.setShortcut(OptionId.LEAVE, Keyboard.KEY_ESCAPE, false, false, false, true);
-//							options.addOption("Go back", OptionId.GO_TO_MAIN, null);
-//							options.setShortcut(OptionId.GO_TO_MAIN, Keyboard.KEY_ESCAPE, false, false, false, true);
+				//if (!config.noLeaveOption) {
+				boolean noLeave = !context.isEngagedInHostilities() && config.noLeaveOptionOnFirstEngagement;
+				if (!noLeave) {
+					if (!config.leaveAlwaysAvailable &&
+							(otherFleetWantsToFight() || (hostile && !otherFleetWantsToDisengage()))) {
+						if (canDisengageCleanly(playerFleet)) {
+							options.addOption("Disengage", OptionId.DISENGAGE, getString("tooltipCleanDisengage"));
+						} else if (canDisengageWithoutPursuit(playerFleet) && !(!otherFleetWantsToFight() && !otherFleetWantsToDisengage())) {
+							options.addOption("Disengage", OptionId.DISENGAGE, getString("tooltipHarrassableDisengage"));
 						} else {
-							boolean addSPDisengage = true;
-							if (canDisengage() || !playerHasReadyShips) {
-								options.addOption("Attempt to disengage", OptionId.ATTEMPT_TO_DISENGAGE, getString("tootipAttemptToDisengage"));
-								
-								addSPDisengage = true;
-								
+							if (otherFleetHoldingVsStrongerEnemy() || (!otherFleetWantsToFight() && !otherFleetWantsToDisengage())) {
+								options.addOption("Leave", OptionId.LEAVE, null);
+								options.setShortcut(OptionId.LEAVE, Keyboard.KEY_ESCAPE, false, false, false, true);
+	//							options.addOption("Go back", OptionId.GO_TO_MAIN, null);
+	//							options.setShortcut(OptionId.GO_TO_MAIN, Keyboard.KEY_ESCAPE, false, false, false, true);
 							} else {
-								boolean hasStation = false;
-								boolean allStation = true;
-								for (CampaignFleetAPI curr : context.getBattle().getSideFor(otherFleet)) {
-									allStation &= curr.isStationMode();
-									hasStation |= curr.isStationMode();
-								}
-								
-								if (hasStation) {
-									if (allStation) {
-										options.addOption("Disengage", OptionId.DISENGAGE, getString("tooltipCleanDisengage"));
-									} else {
-										options.addOption("Disengage", OptionId.DISENGAGE, getString("tooltipHarrassableDisengage"));
-									}
-									addSPDisengage = false;
+								boolean addSPDisengage = true;
+								if (canDisengage() || !playerHasReadyShips) {
+									options.addOption("Attempt to disengage", OptionId.ATTEMPT_TO_DISENGAGE, getString("tootipAttemptToDisengage"));
+									
+									addSPDisengage = true;
+									
 								} else {
-									if (withText && !shownTooLargeToRetreatMessage) {
-										shownTooLargeToRetreatMessage = true;
-										//addText(getString("playerTooLargeToDisengage"), getString("highlightTooLarge"), Misc.getNegativeHighlightColor());
-										//addText(getString("playerTooLargeCanFightToDisengage"), getString("highlightCanFight"), Misc.getHighlightColor());
-										LabelAPI label = textPanel.addParagraph(getString("playerTooLargeToDisengage"));
-										label.setHighlight(getString("highlightTooLarge"), getString("highlightDisengage"));
-										label.setHighlightColors(Misc.getNegativeHighlightColor(), Misc.getHighlightColor());
+									boolean hasStation = false;
+									boolean allStation = true;
+									for (CampaignFleetAPI curr : context.getBattle().getSideFor(otherFleet)) {
+										allStation &= curr.isStationMode();
+										hasStation |= curr.isStationMode();
+									}
+									
+									if (hasStation) {
+										if (allStation) {
+											options.addOption("Disengage", OptionId.DISENGAGE, getString("tooltipCleanDisengage"));
+										} else {
+											options.addOption("Disengage", OptionId.DISENGAGE, getString("tooltipHarrassableDisengage"));
+										}
+										addSPDisengage = false;
+									} else {
+										if (withText && !shownTooLargeToRetreatMessage) {
+											shownTooLargeToRetreatMessage = true;
+											//addText(getString("playerTooLargeToDisengage"), getString("highlightTooLarge"), Misc.getNegativeHighlightColor());
+											//addText(getString("playerTooLargeCanFightToDisengage"), getString("highlightCanFight"), Misc.getHighlightColor());
+											LabelAPI label = textPanel.addParagraph(getString("playerTooLargeToDisengage"));
+											label.setHighlight(getString("highlightTooLarge"), getString("highlightDisengage"));
+											label.setHighlightColors(Misc.getNegativeHighlightColor(), Misc.getHighlightColor());
+										}
 									}
 								}
-							}
-							if (addSPDisengage) {
-								//options.addOption("Execute a series of special maneuvers, allowing you to disengage cleanly", OptionId.DISENGAGE);
-								options.addOption("Disengage by executing a series of special maneuvers", OptionId.CLEAN_DISENGAGE,
-												  "Allows your fleet to disengage without being pursued.");
-								SetStoryOption.set(dialog, 1, OptionId.CLEAN_DISENGAGE, "cleanDisengage", Sounds.STORY_POINT_SPEND_COMBAT,
-										"Maneuvered to disengage from " + otherFleet.getNameWithFactionKeepCase());
-								
-								addEmergencyRepairsOption();
+								if (addSPDisengage) {
+									//options.addOption("Execute a series of special maneuvers, allowing you to disengage cleanly", OptionId.DISENGAGE);
+									options.addOption("Disengage by executing a series of special maneuvers", OptionId.CLEAN_DISENGAGE,
+													  "Allows your fleet to disengage without being pursued.");
+									SetStoryOption.set(dialog, 1, OptionId.CLEAN_DISENGAGE, "cleanDisengage", Sounds.STORY_POINT_SPEND_COMBAT,
+											"Maneuvered to disengage from " + otherFleet.getNameWithFactionKeepCase());
+									
+									addEmergencyRepairsOption();
+								}
 							}
 						}
+					} else {
+						options.addOption("Leave", OptionId.LEAVE, null);
+						options.setShortcut(OptionId.LEAVE, Keyboard.KEY_ESCAPE, false, false, false, true);
+	//					options.addOption("Go back", OptionId.GO_TO_MAIN, null);
+	//					options.setShortcut(OptionId.GO_TO_MAIN, Keyboard.KEY_ESCAPE, false, false, false, true);
 					}
-				} else {
-					options.addOption("Leave", OptionId.LEAVE, null);
-					options.setShortcut(OptionId.LEAVE, Keyboard.KEY_ESCAPE, false, false, false, true);
-//					options.addOption("Go back", OptionId.GO_TO_MAIN, null);
-//					options.setShortcut(OptionId.GO_TO_MAIN, Keyboard.KEY_ESCAPE, false, false, false, true);
 				}
 			}
 		}
@@ -3082,6 +3108,12 @@ public class FleetInteractionDialogPluginImpl implements InteractionDialogPlugin
 		
 		if (config.alwaysPursue) {
 			return PursuitOption.PURSUE;
+		}
+		if (config.alwaysHarry) {
+			return PursuitOption.HARRY;
+		}
+		if (config.alwaysLetGo) {
+			return PursuitOption.LET_THEM_GO;
 		}
 		
 		boolean allStation = false;

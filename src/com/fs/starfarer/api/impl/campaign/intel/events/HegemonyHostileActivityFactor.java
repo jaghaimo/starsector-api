@@ -1,7 +1,8 @@
 package com.fs.starfarer.api.impl.campaign.intel.events;
 
-import java.awt.Color;
 import java.util.Random;
+
+import java.awt.Color;
 
 import org.lwjgl.util.vector.Vector2f;
 
@@ -86,6 +87,13 @@ public class HegemonyHostileActivityFactor extends BaseHostileActivityFactor imp
 			return 0;
 		}
 		return super.getProgress(intel);
+	}
+	
+	public float getEffectMagnitude(StarSystemAPI system) {//, boolean adjustByEventProgress) {
+		if (!checkFactionExists(Factions.HEGEMONY, true)) {
+			return 0;
+		}
+		return super.getEffectMagnitude(system);
 	}
 	
 	public String getDesc(BaseEventIntel intel) {
@@ -258,7 +266,7 @@ public class HegemonyHostileActivityFactor extends BaseHostileActivityFactor imp
 		label.setHighlightColors(Misc.getBasePlayerColor(), Misc.getNegativeHighlightColor(), Misc.getNegativeHighlightColor());
 		
 		int defeated = getInspectionsDefeated();
-		if (defeated < INSPECTIONS_TO_DEFEAT) {
+		if (defeated < INSPECTIONS_TO_DEFEAT - 1) {
 			label = info.addPara("If this inspection is defeated by military means, the Hegemony is likely to "
 					+ "escalate the conflict, although only up to a point.", 
 					opad, Misc.getNegativeHighlightColor(), "escalate the conflict");

@@ -7,9 +7,12 @@ import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.BattleAPI;
 import com.fs.starfarer.api.campaign.CampaignEventListener.FleetDespawnReason;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
+import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.listeners.FleetEventListener;
 import com.fs.starfarer.api.characters.PersonAPI;
+import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.People;
+import com.fs.starfarer.api.util.Misc;
 
 public abstract class PersonalFleetScript implements EveryFrameScript, FleetEventListener {
 	
@@ -24,6 +27,9 @@ public abstract class PersonalFleetScript implements EveryFrameScript, FleetEven
 	protected CampaignFleetAPI fleet;
 	protected Random random = new Random();
 	protected boolean done = false;
+	protected String defeatTrigger = null;
+	
+	protected float origFP = 0f;
 	
 	public PersonalFleetScript(String personId) {
 		this.personId = personId;
@@ -42,6 +48,16 @@ public abstract class PersonalFleetScript implements EveryFrameScript, FleetEven
 		return false;
 	}
 
+	public String getDefeatTrigger() {
+		return defeatTrigger;
+	}
+
+	public void setDefeatTrigger(String defeatTrigger) {
+		this.defeatTrigger = defeatTrigger;
+	}
+
+	protected abstract MarketAPI getSourceMarket();
+	
 	public void advance(float amount) {
 		if (amount <= 0 || isDone()) return;
 		
@@ -63,7 +79,15 @@ public abstract class PersonalFleetScript implements EveryFrameScript, FleetEven
 				if (canSpawnFleetNow()) {
 					fleet = spawnFleet();
 					if (fleet != null) {
+						origFP = fleet.getFleetPoints();
+						MarketAPI source = getSourceMarket();
+						if (source != null) {
+							fleet.getMemoryWithoutUpdate().set(MemFlags.MEMORY_KEY_SOURCE_MARKET, source.getId());
+						}
 						fleet.addEventListener(this);
+						if (defeatTrigger != null) {
+							Misc.addDefeatTrigger(fleet, defeatTrigger);
+						}
 					}
 				}
 				if (fleet == null) {
@@ -88,6 +112,10 @@ public abstract class PersonalFleetScript implements EveryFrameScript, FleetEven
 	}
 
 	public void reportBattleOccurred(CampaignFleetAPI fleet, CampaignFleetAPI primaryWinner, BattleAPI battle) {
+		float currFP = fleet.getFleetPoints();
+		if (currFP < origFP * 0.33f && !Misc.isFleetReturningToDespawn(fleet)) {
+			Misc.giveStandardReturnToSourceAssignments(fleet);
+		}
 	}
 
 	public String getPersonId() {

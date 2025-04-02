@@ -1,12 +1,14 @@
 package com.fs.starfarer.api.combat;
 
-import java.awt.Color;
 import java.util.List;
 import java.util.Map;
+
+import java.awt.Color;
 
 import org.lwjgl.util.vector.Vector2f;
 
 import com.fs.starfarer.api.campaign.CombatDamageData;
+import com.fs.starfarer.api.combat.EmpArcEntityAPI.EmpArcParams;
 import com.fs.starfarer.api.combat.WeaponAPI.WeaponType;
 import com.fs.starfarer.api.combat.listeners.CombatListenerManagerAPI;
 import com.fs.starfarer.api.loading.DamagingExplosionSpec;
@@ -183,6 +185,18 @@ public interface CombatEngineAPI {
 										float thickness,
 										Color fringe, Color core);
 	
+	public EmpArcEntityAPI spawnEmpArc(ShipAPI damageSource,
+			Vector2f point,
+			CombatEntityAPI pointAnchor,
+			CombatEntityAPI empTargetEntity,
+			DamageType damageType,
+			float damAmount,
+			float empDamAmount,
+			float maxRange,
+			String impactSoundId,
+			float thickness,
+			Color fringe, Color core, EmpArcParams params);
+	
 	/**
 	 * Same as spawnEmpArc, but goes through shields if they're blocking the line from the point to the chosen target.
 	 */
@@ -191,6 +205,11 @@ public interface CombatEngineAPI {
 													CombatEntityAPI empTargetEntity, DamageType damageType,
 													float damAmount, float empDamAmount, float maxRange,
 													String impactSoundId, float thickness, Color fringe, Color core);	
+	public EmpArcEntityAPI spawnEmpArcPierceShields(ShipAPI damageSource,
+			Vector2f point, CombatEntityAPI pointAnchor,
+			CombatEntityAPI empTargetEntity, DamageType damageType,
+			float damAmount, float empDamAmount, float maxRange,
+			String impactSoundId, float thickness, Color fringe, Color core, EmpArcParams params);	
 	
 	
 	float getMapWidth();
@@ -270,9 +289,9 @@ public interface CombatEngineAPI {
 	boolean isInFastTimeAdvance();
 
 	/**
-	 * DOES NOT WORK.
+	 * Should work now.
 	 */
-	@Deprecated CombatEntityAPI spawnProjectile(ShipAPI ship, WeaponAPI weapon,
+	CombatEntityAPI spawnProjectile(ShipAPI ship, WeaponAPI weapon,
 			String weaponId, String projSpecId, Vector2f point, float angle,
 			Vector2f shipVelocity);
 
@@ -378,6 +397,8 @@ public interface CombatEngineAPI {
 
 	EmpArcEntityAPI spawnEmpArcVisual(Vector2f from, CombatEntityAPI fromAnchor, Vector2f to, CombatEntityAPI toAnchor,
 									  float thickness, Color fringe, Color core);
+	EmpArcEntityAPI spawnEmpArcVisual(Vector2f from, CombatEntityAPI fromAnchor, Vector2f to, CombatEntityAPI toAnchor,
+			float thickness, Color fringe, Color core, EmpArcParams params);
 
 	void addSmoothParticle(Vector2f loc, Vector2f vel, float size,
 			float brightness, float rampUpFraction, float totalDuration,
@@ -456,6 +477,33 @@ public interface CombatEngineAPI {
 	void setShipPlayerLastTransferredCommandTo(ShipAPI ship);
 
 	void spawnMuzzleFlashOrSmoke(ShipAPI ship, Vector2f point, WeaponSpecAPI spec, float targetAngle);
+
+	boolean isInMissionSim();
+
+	boolean isShipAlive(ShipAPI ship);
+
+	void spawnDebrisSmall(Vector2f loc, Vector2f vel, int num, float facing, float spread, float minVel, float velRange,
+			float maxRotation);
+	void spawnDebrisMedium(Vector2f loc, Vector2f vel, int num, float facing, float spread, float minVel,
+			float velRange, float maxRotation);
+	void spawnDebrisLarge(Vector2f loc, Vector2f vel, int num, float facing, float spread, float minVel, float velRange,
+			float maxRotation);
+
+	void addFloatingDamageText(Vector2f loc, float damage, float spread, Color color, CombatEntityAPI to,
+									CombatEntityAPI source);
+
+	MissileAIPlugin createProximityFuseAI(MissileAPI missile);
+	String getBackgroundSpriteName();
+
+	boolean isInEngine(ShipAPI ship);
+
+	boolean hasPluginOfClass(Class c);
+
+	void applyImpact(Vector2f vel, float impact, CombatEntityAPI target, Vector2f point);
+
+	void playShipExplosionSound(ShipAPI ship);
+
+	CombatEntityAPI spawnAsteroid(String spriteName, float x, float y, float dx, float dy, boolean fromRing);
 	
 	//float getElapsedInCurrentFrame();
 

@@ -25,7 +25,11 @@ public class WormholeScannerPlugin extends BaseSpecialItemPlugin {
 		Color b = Misc.getButtonTextColor();
 		b = Misc.getPositiveHighlightColor();
 
-		tooltip.addTitle(getName());
+		if (!Global.CODEX_TOOLTIP_MODE) {
+			tooltip.addTitle(getName());
+		} else {
+			tooltip.addSpacer(-opad);
+		}
 		
 		String design = getDesignType();
 		if (design != null) {
@@ -33,12 +37,17 @@ public class WormholeScannerPlugin extends BaseSpecialItemPlugin {
 		}
 		
 		if (!spec.getDesc().isEmpty()) {
+			if (Global.CODEX_TOOLTIP_MODE) {
+				tooltip.setParaSmallInsignia();
+			}
 			tooltip.addPara(spec.getDesc(), Misc.getTextColor(), opad);
 		}
 		
 		addCostLabel(tooltip, opad, transferHandler, stackSource);
 		
-		tooltip.addPara("Right-click to integrate the " + getName() + " with your fleet", b, opad);
+		if (!Global.CODEX_TOOLTIP_MODE) {
+			tooltip.addPara("Right-click to integrate the " + getName() + " with your fleet", b, opad);
+		}
 	}
 
 	@Override

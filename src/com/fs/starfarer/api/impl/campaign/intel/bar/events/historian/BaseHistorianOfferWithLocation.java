@@ -1,7 +1,8 @@
 package com.fs.starfarer.api.impl.campaign.intel.bar.events.historian;
 
-import java.awt.Color;
 import java.util.Set;
+
+import java.awt.Color;
 
 import org.lwjgl.util.vector.Vector2f;
 
@@ -32,6 +33,7 @@ public abstract class BaseHistorianOfferWithLocation extends BaseHistorianOffer 
 	public BaseHistorianOfferWithLocation(SectorEntityToken entity) {
 		super();
 		this.entity = entity;
+		setImportant(true);
 	}
 
 	@Override
@@ -61,8 +63,11 @@ public abstract class BaseHistorianOfferWithLocation extends BaseHistorianOffer 
 	}
 	
 	protected void endIntel() {
+		if (isEnding() || isEnded()) return;
+		
 		endAfterDelay();
 		Global.getSector().addScript(this);
+		Global.getSector().getListenerManager().removeListener(this);
 		
 		if (Misc.random.nextFloat() < 0.5f) return;
 		if (this instanceof WeaponBlueprintOffer) return;

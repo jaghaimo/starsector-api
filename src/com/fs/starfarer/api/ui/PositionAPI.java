@@ -41,5 +41,8 @@ public interface PositionAPI {
 	PositionAPI belowMid(UIComponentAPI sibling, float yPad);
 	PositionAPI belowRight(UIComponentAPI sibling, float yPad);
 	
+	void setSuspendRecompute(boolean suspendRecompute);
+	boolean isSuspendRecompute();
+	
 	
 }

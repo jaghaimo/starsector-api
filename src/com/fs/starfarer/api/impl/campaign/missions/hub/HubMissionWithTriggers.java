@@ -1599,6 +1599,7 @@ public abstract class HubMissionWithTriggers extends BaseHubMission {
 		public Float transportMult = null;
 		public Float utilityMult = null;
 		public Float qualityMod = null;
+		public Float qualityOverride = null;
 		
 		public Float damage = null;
 		
@@ -1827,6 +1828,9 @@ public abstract class HubMissionWithTriggers extends BaseHubMission {
 			}
 			
 			params.updateQualityAndProducerFromSourceMarket();
+			if (qualityOverride != null) {
+				params.qualityOverride = qualityOverride + params.qualityMod;;
+			}
 			context.fleet = FleetFactoryV3.createFleet(params);
 			context.fleet.setFacing(random.nextFloat() * 360f);
 			
@@ -2461,12 +2465,17 @@ public abstract class HubMissionWithTriggers extends BaseHubMission {
 	
 	
 	public void triggerSetFleetCommander(final PersonAPI commander) {
-		triggerCustomAction(new TriggerAction() {
-			public void doAction(TriggerActionContext context) {
-				context.fleet.setCommander(commander);
-				context.fleet.getFleetData().ensureHasFlagship();
-			}
-		});
+		CreateFleetAction cfa = getPreviousCreateFleetAction();
+		if (cfa != null && cfa.params != null) {
+			cfa.params.commander = commander;
+		} else {
+			triggerCustomAction(new TriggerAction() {
+				public void doAction(TriggerActionContext context) {
+					context.fleet.setCommander(commander);
+					context.fleet.getFleetData().ensureHasFlagship();
+				}
+			});
+		}
 	}
 // commander will get overriden by default inflater so uh
 // will it? doesn't seem like it would, looking at DFI
@@ -3311,7 +3320,12 @@ public abstract class HubMissionWithTriggers extends BaseHubMission {
 	}
 	
 	public void triggerFleetAddCommanderSkill(String skill, int level) {
-		triggerCustomAction(new AddCommanderSkillAction(skill, level));
+		CreateFleetAction cfa = getPreviousCreateFleetAction();
+		if (cfa != null && cfa.params != null && cfa.params.commander != null) {
+			cfa.params.commander.getStats().setSkillLevel(skill, level);
+		} else {
+			triggerCustomAction(new AddCommanderSkillAction(skill, level));
+		}
 	}
 	
 	/**

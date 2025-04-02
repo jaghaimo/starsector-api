@@ -7,16 +7,17 @@ import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 
-public class DistressCallIntel extends BreadcrumbIntel {
+public class DistressCallIntel extends BreadcrumbIntelV2 {
 
 	protected StarSystemAPI system;
 
 	public DistressCallIntel(StarSystemAPI system) {
-		super(null, system.getCenter());
+		super(system.getCenter());
 		this.system = system;
 		Global.getSector().addScript(this);
 		
-		setIcon(Global.getSettings().getSpriteName("intel", "distress_call"));
+		//setIcon(Global.getSettings().getSpriteName("intel", "distress_call"));
+		setIconId("distress_call");
 		setSound("ui_intel_distress_call");
 		setDuration(60f);
 		setTitle("Distress Call");
@@ -64,18 +65,23 @@ public class DistressCallIntel extends BreadcrumbIntel {
 
 		info.addPara(text, opad);
 		
-		float days = getDaysSincePlayerVisible();
-		if (days >= 1) {
-			addDays(info, "ago.", days, tc, opad);
-		}
+//		float days = getDaysSincePlayerVisible();
+//		if (days >= 1) {
+//			addDays(info, "ago.", days, tc, opad);
+//		}
 		
 		if (isEnding()) {
 			info.addPara("You've investigated the system this distress call came from.", opad);
 		}
+		
+		addLogTimestamp(info, tc, opad);
+		
+		addDeleteButton(info, width);
 	}
 
 	public String getSortString() {
-		return "Distress Call";
+		//return "Distress Call";
+		return super.getSortString();
 	}
 
 	public String getName() {

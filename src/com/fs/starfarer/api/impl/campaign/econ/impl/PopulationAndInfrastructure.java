@@ -1,8 +1,9 @@
 package com.fs.starfarer.api.impl.campaign.econ.impl;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
+
+import java.awt.Color;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -13,6 +14,7 @@ import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.FactionDoctrineAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.SpecialItemData;
+import com.fs.starfarer.api.campaign.comm.IntelInfoPlugin;
 import com.fs.starfarer.api.campaign.econ.CommodityMarketDataAPI;
 import com.fs.starfarer.api.campaign.econ.CommodityOnMarketAPI;
 import com.fs.starfarer.api.campaign.econ.Industry;
@@ -33,7 +35,7 @@ import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Industries;
 import com.fs.starfarer.api.impl.campaign.ids.Items;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
-import com.fs.starfarer.api.impl.campaign.ids.Tags;
+import com.fs.starfarer.api.impl.campaign.intel.misc.HypershuntIntel;
 import com.fs.starfarer.api.impl.campaign.population.PopulationComposition;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator.AddedEntity;
@@ -593,7 +595,7 @@ public class PopulationAndInfrastructure extends BaseIndustry implements MarketI
 
 	@Override
 	public float getBuildOrUpgradeProgress() {
-		if (!super.isBuilding() && market.getSize() < Misc.MAX_COLONY_SIZE) {
+		if (!super.isBuilding() && market.getSize() < Misc.getMaxMarketSize(market)) {
 			return Misc.getMarketSizeProgress(market);
 		}
 		return super.getBuildOrUpgradeProgress();
@@ -601,14 +603,14 @@ public class PopulationAndInfrastructure extends BaseIndustry implements MarketI
 
 	@Override
 	public boolean isBuilding() {
-		if (!super.isBuilding() && market.getSize() < Misc.MAX_COLONY_SIZE && getBuildOrUpgradeProgress() > 0) return true;
+		if (!super.isBuilding() && market.getSize() < Misc.getMaxMarketSize(market) && getBuildOrUpgradeProgress() > 0) return true;
 		
 		return super.isBuilding();
 	}
 
 	@Override
 	public boolean isUpgrading() {
-		if (!super.isBuilding() && market.getSize() < Misc.MAX_COLONY_SIZE) return true;
+		if (!super.isBuilding() && market.getSize() < Misc.getMaxMarketSize(market)) return true;
 		
 		return super.isUpgrading();
 	}
@@ -830,10 +832,19 @@ public class PopulationAndInfrastructure extends BaseIndustry implements MarketI
 
 	
 	public static Pair<SectorEntityToken, Float> getNearestCoronalTap(Vector2f locInHyper, boolean usable) {
+		return getNearestCoronalTap(locInHyper, usable, false);
+	}
+	public static Pair<SectorEntityToken, Float> getNearestCoronalTap(Vector2f locInHyper, boolean usable, boolean requireDefendersDefeated) {
 		SectorEntityToken nearest = null;
 		float minDist = Float.MAX_VALUE;
 		
-		for (SectorEntityToken entity : Global.getSector().getCustomEntitiesWithTag(Tags.CORONAL_TAP)) {
+		//for (SectorEntityToken entity : Global.getSector().getCustomEntitiesWithTag(Tags.CORONAL_TAP)) {
+		for (IntelInfoPlugin intel : Global.getSector().getIntelManager().getIntel(HypershuntIntel.class)) {
+			HypershuntIntel hypershunt = (HypershuntIntel) intel;
+			if (requireDefendersDefeated && !hypershunt.defendersDefeated()) {
+				continue;
+			}
+			SectorEntityToken entity = hypershunt.getEntity();
 			if (!usable || entity.getMemoryWithoutUpdate().contains("$usable")) {
 				float dist = Misc.getDistanceLY(locInHyper, entity.getLocationInHyperspace());
 				if (dist > ItemEffectsRepo.CORONAL_TAP_LIGHT_YEARS && 

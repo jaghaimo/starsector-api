@@ -42,5 +42,12 @@ public interface CustomCampaignEntityPlugin {
 	boolean isMapTooltipExpandable();
 	void createMapTooltip(TooltipMakerAPI tooltip, boolean expanded);
 	void appendToCampaignTooltip(TooltipMakerAPI tooltip, VisibilityLevel level);
+	default boolean isRenderWhenViewportAlphaMultIsZero() {
+		return false;
+	}
 
 }
+
+
+
+

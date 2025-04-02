@@ -91,4 +91,22 @@ public class BaseModPlugin implements ModPlugin {
 		
 	}
 
+	@Override
+	public void onAboutToStartGeneratingCodex() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onAboutToLinkCodexEntries() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onCodexDataGenerated() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

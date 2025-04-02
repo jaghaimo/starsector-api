@@ -44,9 +44,13 @@ public class AbyssalRogueStellarObjectDireHintsEPEC extends AbyssalRogueStellarO
 	public static enum GhostShipType {
 		GS_AI_CORES,
 		GS_TRI_TACHYON,
+		GS_ZGR_MERC,
+		GS_ACADEMY,
 		GS_ADVENTURERS,
 		GS_OPIS,
-		GS_PIRATES;
+		GS_PIRATES,
+		GS_VAMBRACE;
+//		GS_VAMBRACE2;
 		
 		public String getTimeoutKey() {
 			return "$" + name() + "_timeout";
@@ -60,7 +64,7 @@ public class AbyssalRogueStellarObjectDireHintsEPEC extends AbyssalRogueStellarO
 		DIRE_HINT_TYPES.add(AbyssalDireHintType.MINING_OP, 10f);
 		DIRE_HINT_TYPES.add(AbyssalDireHintType.GAS_GIANT_TURBULENCE, 10f);
 		DIRE_HINT_TYPES.add(AbyssalDireHintType.BLACK_HOLE_READINGS, 10f);
-		DIRE_HINT_TYPES.add(AbyssalDireHintType.GHOST_SHIP, 10f);
+		DIRE_HINT_TYPES.add(AbyssalDireHintType.GHOST_SHIP, 20f);
 	}
 	
 	
@@ -179,12 +183,15 @@ public class AbyssalRogueStellarObjectDireHintsEPEC extends AbyssalRogueStellarO
 			type = GhostShipType.GS_ADVENTURERS;
 			type = GhostShipType.GS_OPIS;
 			type = GhostShipType.GS_PIRATES;
+			type = GhostShipType.GS_ZGR_MERC;
+			type = GhostShipType.GS_ACADEMY;
+			type = GhostShipType.GS_VAMBRACE;
+			//type = GhostShipType.GS_VAMBRACE2;
 		}
 		
 		if (type == GhostShipType.GS_AI_CORES) {
 			String variantId = pickVariant(Factions.INDEPENDENT, ShipRoles.COMBAT_LARGE, data.random);
 			if (variantId == null) return false;
-			
 			addShipAroundPlanet(planet, variantId, ShipCondition.GOOD, type.name(), data.random);
 		} else if (type == GhostShipType.GS_TRI_TACHYON) {
 			addShipAroundPlanet(planet, "apogee_Balanced", ShipCondition.GOOD, type.name(), data.random);
@@ -198,16 +205,39 @@ public class AbyssalRogueStellarObjectDireHintsEPEC extends AbyssalRogueStellarO
 			String variantId = pickVariant(Factions.PIRATES, ShipRoles.COMBAT_LARGE, data.random);
 			if (variantId == null) return false;
 			addShipAroundPlanet(planet, variantId, ShipCondition.BATTERED, type.name(), data.random);
+		} else if (type == GhostShipType.GS_ACADEMY) {
+			addShipAroundPlanet(planet, "apogee_Balanced", ShipCondition.BATTERED, type.name(), "GAS Itzamna", data.random);
+		} else if (type == GhostShipType.GS_ZGR_MERC) {
+			String variantId = pickVariant(Factions.MERCENARY, ShipRoles.COMBAT_MEDIUM, data.random);
+			if (variantId == null) return false;
+			addShipAroundPlanet(planet, variantId, ShipCondition.WRECKED, type.name(), data.random);
+		} else if (type == GhostShipType.GS_VAMBRACE) {
+			SectorEntityToken vambrace = system.addCustomEntity("derelict_vambrace", 
+					"Derelict Structure", "derelict_vambrace", Factions.NEUTRAL);
+			float orbitRadius = planet.getRadius() + data.random.nextFloat() * 100f;
+			float orbitDays = orbitRadius / (10f + data.random.nextFloat() * 5f);
+			vambrace.setCircularOrbit(planet, data.random.nextFloat() * 360f, orbitRadius, orbitDays);
 		}
-		
+		/* else if (type == GhostShipType.GS_VAMBRACE2) {
+			SectorEntityToken vambrace = system.addCustomEntity("derelict_vambrace","Derelict Structure", "derelict_vambrace2", "neutral");
+			vambrace.setCircularOrbit(planet, 300f, planet.getRadius() + 100f, 100f);
+		}*/
 		Global.getSector().getMemoryWithoutUpdate().set(type.getTimeoutKey(), true, 90f);
 		
 		return true;
 	}
 	
 	public void addShipAroundPlanet(SectorEntityToken planet, String variantId, ShipCondition condition, 
-									String gsType, Random random) {
+			String gsType, Random random) {
+		this.addShipAroundPlanet(planet, variantId, condition, gsType, null, random);
+	}
+	public void addShipAroundPlanet(SectorEntityToken planet, String variantId, ShipCondition condition, 
+									String gsType, String shipName, Random random) {
 		PerShipData psd = new PerShipData(variantId, condition, 0f);
+		if (shipName != null) {
+			psd.shipName = shipName;
+			psd.nameAlwaysKnown = true;
+		}
 		DerelictShipData params = new DerelictShipData(psd, true);
 
 		CustomCampaignEntityAPI ship = (CustomCampaignEntityAPI) BaseThemeGenerator.addSalvageEntity(
@@ -216,7 +246,7 @@ public class AbyssalRogueStellarObjectDireHintsEPEC extends AbyssalRogueStellarO
 		//ship.addTag(Tags.EXPIRES);
 		
 		ship.setDiscoverable(true);
-		float orbitRadius = 200f + random.nextFloat() * 100f;
+		float orbitRadius = planet.getRadius() + 200f + random.nextFloat() * 100f;
 		float orbitDays = orbitRadius / (10f + random.nextFloat() * 5f);
 		ship.setCircularOrbit(planet, random.nextFloat() * 360f, orbitRadius, orbitDays);
 		

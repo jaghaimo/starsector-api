@@ -18,6 +18,7 @@ public interface BoundsAPI {
 	public interface SegmentAPI {
 		Vector2f getP1();
 		Vector2f getP2();
+		void set(float x1, float y1, float x2, float y2);
 	}
 	
 	/**

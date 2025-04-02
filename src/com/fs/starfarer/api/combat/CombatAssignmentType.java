@@ -7,6 +7,7 @@ public enum CombatAssignmentType {
 	ASSAULT,
 	ENGAGE,
 	AVOID,
+	IGNORE,
 	DEFEND,
 	RALLY_TASK_FORCE,
 	RALLY_CARRIER,

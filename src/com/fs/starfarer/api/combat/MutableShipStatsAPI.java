@@ -328,6 +328,7 @@ public interface MutableShipStatsAPI {
 
 	StatBonus getPhaseCloakCooldownBonus();
 	StatBonus getSystemCooldownBonus();
+	StatBonus getSystemFluxCostBonus();
 	StatBonus getSystemRegenBonus();
 	StatBonus getSystemUsesBonus();
 	StatBonus getSystemRangeBonus();
@@ -373,6 +374,8 @@ public interface MutableShipStatsAPI {
 	MutableStat getBallisticAmmoRegenMult();
 
 	MutableStat getShieldSoftFluxConversion();
+
+	StatBonus getBeamSpeedMod();
 
 }
 

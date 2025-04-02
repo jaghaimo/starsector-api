@@ -1,8 +1,9 @@
 package com.fs.starfarer.api.impl.campaign.missions.academy;
 
-import java.awt.Color;
 import java.util.List;
 import java.util.Map;
+
+import java.awt.Color;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
@@ -83,6 +84,8 @@ public class GATransverseJump extends GABaseMission {
 		addFailureStages(Stage.FAILED);
 		
 		setStoryMission();
+		
+		//setMusic(planet, MusicPlayerPluginImpl.MUSIC_ENCOUNTER_MYSTERIOUS_AGGRO, Stage.GO_TO_OUTPOST);
 		
 		makeImportant(planet, "$gaTJ_targetPlanet", Stage.GO_TO_OUTPOST);
 		makeImportant(getPerson(), "$gaTJ_needToReturn", Stage.RETURN_TO_ACADEMY);

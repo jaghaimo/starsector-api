@@ -1,12 +1,13 @@
 package com.fs.starfarer.api.impl.campaign.intel.misc;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Set;
+
+import java.awt.Color;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CargoAPI;
@@ -217,6 +218,7 @@ public class ProductionReportIntel extends FleetLogIntel {
 			Global.getSector().getPlayerFleet().getFleetData().syncIfNeeded();
 		}
 
+		addLogTimestamp(info, tc, opad);
 	}
 
 	@Override
@@ -232,7 +234,8 @@ public class ProductionReportIntel extends FleetLogIntel {
 	}
 
 	public String getSortString() {
-		return "Production";
+		//return "Production";
+		return super.getSortString();
 	}
 
 	public String getName() {

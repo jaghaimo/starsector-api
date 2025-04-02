@@ -126,10 +126,12 @@ public class SensorBurstAbility extends BaseDurationAbility {
 	public void createTooltip(TooltipMakerAPI tooltip, boolean expanded) {
 		Color gray = Misc.getGrayColor();
 		Color highlight = Misc.getHighlightColor();
-		
-		LabelAPI title = tooltip.addTitle(spec.getName());
-//		title.highlightLast(status);
-//		title.setHighlightColor(gray);
+
+		if (!Global.CODEX_TOOLTIP_MODE) {
+			LabelAPI title = tooltip.addTitle(spec.getName());
+		} else {
+			tooltip.addSpacer(-10f);
+		}
 
 		float pad = 10f;
 		tooltip.addPara("Turn off engines to reduce interference and link all sensors in the fleet into a single network.", pad);

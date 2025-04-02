@@ -15,6 +15,7 @@ public class DefectiveManufactory extends BaseHullMod {
 	
 	
 	public void applyEffectsToFighterSpawnedByShip(ShipAPI fighter, ShipAPI ship, String id) {
+		//if (fighter.getHullSpec().hasTag(Tags.SWARM_FIGHTER)) return;
 		float effect = ship.getMutableStats().getDynamic().getValue(Stats.DMOD_EFFECT_MULT);
 		
 		MutableShipStatsAPI stats = fighter.getMutableStats();

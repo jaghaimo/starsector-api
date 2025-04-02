@@ -1,15 +1,17 @@
 package com.fs.starfarer.api.combat;
 
-import java.awt.Color;
 import java.util.EnumSet;
 import java.util.Set;
+
+import java.awt.Color;
 
 import org.json.JSONObject;
 
 import com.fs.starfarer.api.combat.WeaponAPI.WeaponType;
+import com.fs.starfarer.api.loading.WithSourceMod;
 import com.fs.starfarer.api.plugins.ShipSystemStatsScript;
 
-public interface ShipSystemSpecAPI {
+public interface ShipSystemSpecAPI extends WithSourceMod {
 
 	String getIconSpriteName();
 
@@ -284,5 +286,6 @@ public interface ShipSystemSpecAPI {
 	boolean isReloadBaseAmmoAmountOnly();
 	void setReloadBaseAmmoAmountOnly(boolean reloadBaseAmmoAmountOnly);
 
+	boolean usesAmmo();
 
 }

@@ -5,21 +5,17 @@ import org.lwjgl.util.vector.Vector2f;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
-import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Conditions;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.FleetTypes;
-import com.fs.starfarer.api.impl.campaign.ids.Industries;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.People;
-import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.missions.FleetCreatorMission;
 import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.FleetQuality;
 import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.FleetSize;
 import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.OfficerNum;
 import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithTriggers.OfficerQuality;
 import com.fs.starfarer.api.impl.campaign.missions.hub.MissionFleetAutoDespawn;
-import com.fs.starfarer.api.loading.VariantSource;
 
 public class PersonalFleetOxanaHyder extends PersonalFleetScript {
 	
@@ -30,9 +26,14 @@ public class PersonalFleetOxanaHyder extends PersonalFleetScript {
 	}
 
 	@Override
+	protected MarketAPI getSourceMarket() {
+		return Global.getSector().getEconomy().getMarket("sindria");
+	}
+	
+	@Override
 	public CampaignFleetAPI spawnFleet() {
 		
-		MarketAPI sindria = Global.getSector().getEconomy().getMarket("sindria");
+		MarketAPI sindria = getSourceMarket();
 		
 		FleetCreatorMission m = new FleetCreatorMission(random);
 		m.beginFleet();

@@ -170,7 +170,7 @@ public class StoragePlugin extends BaseSubmarketPlugin {
 		float opad = 10f;
 		float pad = 3f;
 		if (market.isPlayerOwned()) {
-			tooltip.addPara(Misc.getTokenReplaced("$market is under your control, and there " +
+			tooltip.addPara(Misc.getTokenReplaced("$marketName is under your control, and there " +
 					"are no storage fees or expenses.", market.getPrimaryEntity()), opad); 
 			return;
 		}

@@ -1,19 +1,25 @@
 package com.fs.starfarer.api.impl.campaign.econ.impl;
 
+import java.util.Map;
+
 import java.awt.Color;
 
 import org.lwjgl.util.vector.Vector2f;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
+import com.fs.starfarer.api.campaign.comm.IntelInfoPlugin;
 import com.fs.starfarer.api.campaign.econ.CommoditySpecAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.econ.MarketImmigrationModifier;
 import com.fs.starfarer.api.campaign.listeners.ColonyOtherFactorsListener;
+import com.fs.starfarer.api.impl.PlanetSearchData.PlanetFilter;
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
-import com.fs.starfarer.api.impl.campaign.ids.Tags;
+import com.fs.starfarer.api.impl.campaign.ids.Industries;
+import com.fs.starfarer.api.impl.campaign.intel.misc.CryosleeperIntel;
 import com.fs.starfarer.api.impl.campaign.population.PopulationComposition;
+import com.fs.starfarer.api.loading.IndustrySpecAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.Pair;
@@ -202,7 +208,10 @@ public class Cryorevival extends BaseIndustry implements MarketImmigrationModifi
 		SectorEntityToken nearest = null;
 		float minDist = Float.MAX_VALUE;
 		
-		for (SectorEntityToken entity : Global.getSector().getCustomEntitiesWithTag(Tags.CRYOSLEEPER)) {
+		//for (SectorEntityToken entity : Global.getSector().getCustomEntitiesWithTag(Tags.CRYOSLEEPER)) {
+		for (IntelInfoPlugin intel : Global.getSector().getIntelManager().getIntel(CryosleeperIntel.class)) {
+			CryosleeperIntel cryo = (CryosleeperIntel) intel;
+			SectorEntityToken entity = cryo.getEntity();
 			if (!usable || entity.getMemoryWithoutUpdate().contains("$usable")) {
 				float dist = Misc.getDistanceLY(locInHyper, entity.getLocationInHyperspace());
 				if (dist > MAX_BONUS_DIST_LY && Math.round(dist * 10f) <= MAX_BONUS_DIST_LY * 10f) {
@@ -259,7 +268,7 @@ public class Cryorevival extends BaseIndustry implements MarketImmigrationModifi
 	}
 	
 	
-	public static class CryosleeperFactor implements ColonyOtherFactorsListener {
+	public static class CryosleeperFactor implements ColonyOtherFactorsListener, PlanetFilter {
 		public boolean isActiveFactorFor(SectorEntityToken entity) {
 			return getNearestCryosleeper(entity.getLocationInHyperspace(), true) != null;
 		}
@@ -292,6 +301,40 @@ public class Cryorevival extends BaseIndustry implements MarketImmigrationModifi
 							"" + (int)Math.round(distMult * 100f) + "%");
 				}
 			}
+		}
+		
+		public String getOtherFactorId() {
+			return "cryosleeper";
+		}
+		
+		public String getOtherFactorButtonText() {
+			return "Domain-era Cryosleeper within range";
+		}
+		
+		@Override
+		public boolean accept(SectorEntityToken entity, Map<String, String> params) {
+			if (!params.containsKey(getOtherFactorId())) return true;
+			
+			if (entity.getMarket() == null) return false;
+			
+			Pair<SectorEntityToken, Float> p = Cryorevival.getNearestCryosleeper(entity.getLocationInHyperspace(), false);
+			if (p == null || p.two > Cryorevival.MAX_BONUS_DIST_LY) return false;
+			return true;
+		}
+
+		@Override
+		public boolean shouldShow() {
+			return Global.getSector().getIntelManager().getIntelCount(CryosleeperIntel.class, true) > 0;
+		}
+		@Override
+		public void createTooltip(TooltipMakerAPI info, float width, String param) {
+			float opad = 10f;
+			Color h = Misc.getHighlightColor();
+			IndustrySpecAPI spec = Global.getSettings().getIndustrySpec(Industries.CRYOREVIVAL);
+			info.addTitle("Cryosleeper");
+			info.addPara("Only show planets within %s light-years of a Domain-era Cryosleeper. Colonies "
+					+ "within range can build a %s and benefit from hugely increased population growth.", 
+					opad, h, "" + (int)Math.round(Cryorevival.MAX_BONUS_DIST_LY), spec.getName());
 		}
 	}
 	

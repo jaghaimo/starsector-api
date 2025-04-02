@@ -8,6 +8,7 @@ import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 import java.util.Set;
 
 import com.fs.starfarer.api.BaseModPlugin;
@@ -195,6 +196,10 @@ import com.fs.starfarer.api.impl.campaign.fleets.RouteManager.OptionalFleetData;
 import com.fs.starfarer.api.impl.campaign.fleets.RouteManager.RouteData;
 import com.fs.starfarer.api.impl.campaign.fleets.RouteManager.RouteFleetSpawner;
 import com.fs.starfarer.api.impl.campaign.fleets.RouteManager.RouteSegment;
+import com.fs.starfarer.api.impl.campaign.fleets.SDFHegemony;
+import com.fs.starfarer.api.impl.campaign.fleets.SDFLeague;
+import com.fs.starfarer.api.impl.campaign.fleets.SDFLuddicChurch;
+import com.fs.starfarer.api.impl.campaign.fleets.SDFTriTachyon;
 import com.fs.starfarer.api.impl.campaign.fleets.SeededFleetManager;
 import com.fs.starfarer.api.impl.campaign.fleets.SeededFleetManager.SeededFleet;
 import com.fs.starfarer.api.impl.campaign.fleets.SourceBasedFleetManager;
@@ -204,7 +209,6 @@ import com.fs.starfarer.api.impl.campaign.graid.StandardGroundRaidObjectivesCrea
 import com.fs.starfarer.api.impl.campaign.ids.Commodities;
 import com.fs.starfarer.api.impl.campaign.ids.Conditions;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
-import com.fs.starfarer.api.impl.campaign.ids.HullMods;
 import com.fs.starfarer.api.impl.campaign.ids.Industries;
 import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Missions;
@@ -248,6 +252,7 @@ import com.fs.starfarer.api.impl.campaign.intel.bar.events.LuddicFarmerBarEventC
 import com.fs.starfarer.api.impl.campaign.intel.bar.events.LuddicPathBaseBarEvent;
 import com.fs.starfarer.api.impl.campaign.intel.bar.events.MercsOnTheRunBarEvent;
 import com.fs.starfarer.api.impl.campaign.intel.bar.events.MercsOnTheRunBarEventCreator;
+//import com.fs.starfarer.api.impl.campaign.intel.bar.events.MercsOnTheRunBarEventCreator;
 import com.fs.starfarer.api.impl.campaign.intel.bar.events.PirateBaseRumorBarEvent;
 import com.fs.starfarer.api.impl.campaign.intel.bar.events.PlanetaryShieldBarEventCreator;
 import com.fs.starfarer.api.impl.campaign.intel.bar.events.QuartermasterCargoSwapBarEvent;
@@ -293,13 +298,21 @@ import com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityManager;
 import com.fs.starfarer.api.impl.campaign.intel.events.ht.HTFactorTracker;
 import com.fs.starfarer.api.impl.campaign.intel.inspection.HegemonyInspectionManager;
 import com.fs.starfarer.api.impl.campaign.intel.misc.BreadcrumbIntel;
+import com.fs.starfarer.api.impl.campaign.intel.misc.BreadcrumbIntelV2;
+import com.fs.starfarer.api.impl.campaign.intel.misc.CargoPodsIntel;
 import com.fs.starfarer.api.impl.campaign.intel.misc.CommSnifferIntel;
+import com.fs.starfarer.api.impl.campaign.intel.misc.CryosleeperIntel;
 import com.fs.starfarer.api.impl.campaign.intel.misc.DistressCallIntel;
 import com.fs.starfarer.api.impl.campaign.intel.misc.GateIntel;
+import com.fs.starfarer.api.impl.campaign.intel.misc.HypershuntIntel;
 import com.fs.starfarer.api.impl.campaign.intel.misc.LuddicShrineIntel;
 import com.fs.starfarer.api.impl.campaign.intel.misc.ProductionReportIntel;
+import com.fs.starfarer.api.impl.campaign.intel.misc.RemnantNexusIntel;
+import com.fs.starfarer.api.impl.campaign.intel.misc.SalvorsTallyIntel;
+import com.fs.starfarer.api.impl.campaign.intel.misc.SimUpdateIntel;
 import com.fs.starfarer.api.impl.campaign.intel.misc.TradeFleetDepartureIntel;
 import com.fs.starfarer.api.impl.campaign.intel.misc.WarningBeaconIntel;
+import com.fs.starfarer.api.impl.campaign.intel.misc.WormholeIntel;
 import com.fs.starfarer.api.impl.campaign.intel.punitive.PunitiveExpeditionManager;
 import com.fs.starfarer.api.impl.campaign.intel.punitive.PunitiveExpeditionManager.PunExData;
 import com.fs.starfarer.api.impl.campaign.intel.raid.RaidIntel;
@@ -430,9 +443,15 @@ import com.fs.starfarer.api.impl.campaign.velfield.SlipstreamTerrainPlugin2.Slip
 import com.fs.starfarer.api.impl.campaign.velfield.SlipstreamVisibilityManager;
 import com.fs.starfarer.api.impl.campaign.world.GateHaulerLocation;
 import com.fs.starfarer.api.impl.campaign.world.Limbo;
+import com.fs.starfarer.api.impl.campaign.world.NamelessRock;
 import com.fs.starfarer.api.impl.campaign.world.TTBlackSite;
 import com.fs.starfarer.api.impl.campaign.world.TTBlackSite.ZigFIDConfig;
 import com.fs.starfarer.api.impl.campaign.world.ZigLeashAssignmentAI;
+import com.fs.starfarer.api.impl.codex.CodexUnlocker;
+import com.fs.starfarer.api.impl.combat.dweller.ShroudedEjectaAI;
+import com.fs.starfarer.api.impl.combat.dweller.ShroudedVortexAI;
+import com.fs.starfarer.api.impl.combat.threat.DisposableThreatFleetManager;
+import com.fs.starfarer.api.impl.combat.threat.ThreatSwarmAI;
 import com.fs.starfarer.api.loading.CampaignPingSpec;
 import com.fs.starfarer.api.plugins.impl.CoreBuildObjectiveTypePicker;
 import com.fs.starfarer.api.util.DelayedActionScript;
@@ -450,6 +469,31 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 	@Override
 	public void onGameLoad(boolean newGame) {
 		econPostSaveRestore();
+
+//		MarketAPI market =  Global.getSector().getEconomy().getMarket("eochu_bres");
+//		if (market != null) {
+//			PersonAPI person = Global.getFactory().createPerson();
+//			person.setId(People.GLAMOR_ROTANEV);
+//			person.setFaction(Factions.TRITACHYON);
+//			person.setGender(Gender.FEMALE);
+//			person.setRankId(Ranks.SENIOR_EXECUTIVE);
+//			person.setPostId(Ranks.POST_INTELLIGENCE_DIRECTOR);
+//			person.setImportance(PersonImportance.VERY_HIGH);
+//			person.getName().setFirst("Zunya");
+//			person.getName().setLast("Glamor-Rotanev");
+//			person.setPortraitSprite(Global.getSettings().getSpriteName("characters",  person.getId()));
+//			person.getStats().setSkillLevel(Skills.BULK_TRANSPORT, 1);
+//			person.getStats().setSkillLevel(Skills.INDUSTRIAL_PLANNING, 1);
+//			person.getStats().setSkillLevel(Skills.OFFICER_MANAGEMENT, 1);
+//			person.addTag(Tags.CONTACT_TRADE);
+//			person.addTag(Tags.CONTACT_MILITARY);
+//			person.setVoice(Voices.BUSINESS);
+//			
+//			market.getCommDirectory().addPerson(person, 1); // second after Sun
+//			market.getCommDirectory().getEntryForPerson(person).setHidden(true); // you'll hear from her people.
+//			market.addPerson(person);
+//			Global.getSector().getImportantPeople().addPerson(person);
+//		}
 		
 		
 		StarSystemAPI limbo = Global.getSector().getStarSystem("Limbo");
@@ -457,6 +501,10 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 			new Limbo().generate(Global.getSector());
 			new GateHaulerLocation().generate(Global.getSector());
 			SectorProcGen.clearAbyssalHyperspaceAndSetSystemTags();
+		}
+		
+		if (Global.getSector().getStarSystem("nameless_rock_location") == null) {
+			new NamelessRock().generate(Global.getSector());
 		}
 		
 		// the token replacement generators don't get saved
@@ -557,6 +605,9 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 		if (!listeners.hasListenerOfClass(StandardGroundRaidObjectivesCreator.class)) {
 			listeners.addListener(new StandardGroundRaidObjectivesCreator(), true);
 		}
+//		if (!listeners.hasListenerOfClass(FleetLogIntelCreator.class)) {
+//			listeners.addListener(new FleetLogIntelCreator(), true);
+//		}
 		
 		if (!listeners.hasListenerOfClass(CryosleeperFactor.class)) {
 			listeners.addListener(new CryosleeperFactor(), true);
@@ -566,6 +617,9 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 		}
 		if (!listeners.hasListenerOfClass(SlipstreamVisibilityManager.class)) {
 			listeners.addListener(new SlipstreamVisibilityManager(), true);
+		}
+		if (!listeners.hasListenerOfClass(CodexUnlocker.class)) {
+			listeners.addListener(new CodexUnlocker(), true);
 		}
 		
 //		if (!sector.hasScript(SlipstreamVisibilityManager.class)) {
@@ -580,9 +634,19 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 		if (!plugins.hasPlugin(SalvageDefenderModificationPluginImpl.class)) {
 			plugins.addPlugin(new SalvageDefenderModificationPluginImpl(), true);
 		}
+		
+		CoreDiscoverEntityPlugin discoverPlugin = null;
 		if (!plugins.hasPlugin(CoreDiscoverEntityPlugin.class)) {
-			plugins.addPlugin(new CoreDiscoverEntityPlugin(), true);
+			discoverPlugin = new CoreDiscoverEntityPlugin();
+			plugins.addPlugin(discoverPlugin, true);
+		} else {
+			discoverPlugin = (CoreDiscoverEntityPlugin) plugins.getPluginsOfClass(CoreDiscoverEntityPlugin.class).get(0);
 		}
+		if (!listeners.hasListenerOfClass(CoreDiscoverEntityPlugin.class)) {
+			listeners.addListener(discoverPlugin, true);
+		}
+		
+		
 		if (!plugins.hasPlugin(CoreBuildObjectiveTypePicker.class)) {
 			plugins.addPlugin(new CoreBuildObjectiveTypePicker(), true);
 		}
@@ -603,6 +667,7 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 //		}
 		
 		PlayerFleetPersonnelTracker.getInstance();
+		HullModItemManager.getInstance();
 		
 		
 		if (!sector.hasScript(StrandedGiveTJScript.class)) {
@@ -613,6 +678,18 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 		}
 		if (!sector.hasScript(PersonalFleetOxanaHyder.class)) {
 			sector.addScript(new PersonalFleetOxanaHyder());
+		}
+		if (!sector.hasScript(SDFHegemony.class)) {
+			sector.addScript(new SDFHegemony());
+		}
+		if (!sector.hasScript(SDFLeague.class)) {
+			sector.addScript(new SDFLeague());
+		}
+		if (!sector.hasScript(SDFTriTachyon.class)) {
+			sector.addScript(new SDFTriTachyon());
+		}
+		if (!sector.hasScript(SDFLuddicChurch.class)) {
+			sector.addScript(new SDFLuddicChurch());
 		}
 //		if (!sector.hasScript(PilgrimageFleetRouteManager.class)) {
 //			sector.addScript(new PilgrimageFleetRouteManager());
@@ -667,6 +744,9 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 		
 		if (!sector.hasScript(DisposableHostileActivityFleetManager.class)) {
 			sector.addScript(new DisposableHostileActivityFleetManager());
+		}
+		if (!sector.hasScript(DisposableThreatFleetManager.class)) {
+			sector.addScript(new DisposableThreatFleetManager());
 		}
 		if (!sector.hasScript(HostileActivityManager.class)) {
 			sector.addScript(new HostileActivityManager());
@@ -739,9 +819,9 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 		if (!bar.hasEventCreator(DiktatLobsterBarEventCreator.class)) {
 			bar.addEventCreator(new DiktatLobsterBarEventCreator());
 		}
-		if (!bar.hasEventCreator(MercsOnTheRunBarEventCreator.class)) {
-			bar.addEventCreator(new MercsOnTheRunBarEventCreator());
-		}
+		//if (!bar.hasEventCreator(MercsOnTheRunBarEventCreator.class)) {
+		//	bar.addEventCreator(new MercsOnTheRunBarEventCreator());
+		//}
 		if (!bar.hasEventCreator(CorruptPLClerkSuppliesBarEventCreator.class)) {
 			bar.addEventCreator(new CorruptPLClerkSuppliesBarEventCreator());
 		}
@@ -776,13 +856,18 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 		new TTBlackSite().generate(Global.getSector());
 		new Limbo().generate(Global.getSector());
 		new GateHaulerLocation().generate(Global.getSector());
+		// sensor array is added in a procgen system, so have to do it after procgen
+		//new NamelessRock().generate(Global.getSector());
 	}
 	
 	
 	@Override
 	public void onNewGameAfterTimePass() {
+		
+		// sensor array is added in a procgen system, so have to do it here 
+		new NamelessRock().generate(Global.getSector());
+		
 		new CustomFleets().spawn();
-
 		
 		EveryFrameScript script = new AnalyzeEntityIntelCreator().createMissionIntel();
 		if (script instanceof BaseIntelPlugin) {
@@ -973,6 +1058,18 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 		Misc.makeStoryCritical("gilead", id);
 		Misc.makeStoryCritical("chalcedon", id);
 		Misc.makeStoryCritical("mazalot", id);
+		
+		id = Missions.FALSE_IDOLS;
+		Misc.makeStoryCritical("asher", id);
+		Misc.makeStoryCritical("chalcedon", id);
+		Misc.makeStoryCritical("olinadu", id);
+		Misc.makeStoryCritical("kazeron", id);
+		Misc.makeStoryCritical("gilead", id);
+		Misc.makeStoryCritical("hesperus", id);
+		Misc.makeStoryCritical("tartessus", id);
+		
+		id = Missions.ABYSSAL_SPACE_ODDITY;
+		//Misc.makeStoryCritical("galatia_academy", id); // n/a
 		
 		id = Missions.KANTA_LIBRE; // Like, not a real mission. Yet? Set so Kanta's Den doesn't deciv and break Stuff. -dgb
 		Misc.makeStoryCritical("kantas_den", id);
@@ -1258,185 +1355,189 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 //		Global.getSector().getHyperspace().getPersistentData().put(SlipstreamTerrainPlugin.LOCATION_SLIPSTREAM_KEY, slipstream);
 	}
 	
-	private void createInitialPeople() {
+	public static void createInitialPeople(MarketAPI market, Random random) {
 		ImportantPeopleAPI ip = Global.getSector().getImportantPeople();
 		
+		boolean addedPerson = false;
+		
+		PersonAPI admin = null;
+		
+		LinkedHashSet<PersonAPI> randomPeople = new LinkedHashSet<PersonAPI>();
+		
+		
+		if (market.hasIndustry(Industries.MILITARYBASE) || market.hasIndustry(Industries.HIGHCOMMAND)) {
+			PersonAPI person = market.getFaction().createRandomPerson(StarSystemGenerator.random);
+			String rankId = Ranks.GROUND_MAJOR;
+			if (market.getSize() >= 6) {
+				rankId = Ranks.GROUND_GENERAL;
+			} else if (market.getSize() >= 4) {
+				rankId = Ranks.GROUND_COLONEL;
+			}
+			person.setRankId(rankId);
+			person.setPostId(Ranks.POST_BASE_COMMANDER);
+			if (market.getSize() >= 8) {
+				person.setImportanceAndVoice(PersonImportance.VERY_HIGH, StarSystemGenerator.random);
+			} else if (market.getSize() >= 6) {
+				person.setImportanceAndVoice(PersonImportance.HIGH, StarSystemGenerator.random);
+			} else {
+				person.setImportanceAndVoice(PersonImportance.MEDIUM, StarSystemGenerator.random);
+			}
+			person.addTag(Tags.CONTACT_MILITARY);
+			
+			market.getCommDirectory().addPerson(person);
+			market.addPerson(person);
+			ip.addPerson(person);
+			ip.getData(person).getLocation().setMarket(market);
+			ip.checkOutPerson(person, "permanent_staff");
+			addedPerson = true;
+			randomPeople.add(person);
+		}
+		
+		boolean hasStation = false;
+		for (Industry curr : market.getIndustries()) {
+			if (curr.getSpec().hasTag(Industries.TAG_STATION)) {
+				hasStation = true;
+				break;
+			}
+		}
+		if (hasStation) {
+			PersonAPI person = market.getFaction().createRandomPerson(StarSystemGenerator.random);
+			String rankId = Ranks.SPACE_COMMANDER;
+			if (market.getSize() >= 6) {
+				rankId = Ranks.SPACE_ADMIRAL;
+			} else if (market.getSize() >= 4) {
+				rankId = Ranks.SPACE_CAPTAIN;
+			}
+			person.setRankId(rankId);
+			person.setPostId(Ranks.POST_STATION_COMMANDER);
+			
+			if (market.getSize() >= 8) {
+				person.setImportanceAndVoice(PersonImportance.VERY_HIGH, StarSystemGenerator.random);
+			} else if (market.getSize() >= 6) {
+				person.setImportanceAndVoice(PersonImportance.HIGH, StarSystemGenerator.random);
+			} else {
+				person.setImportanceAndVoice(PersonImportance.MEDIUM, StarSystemGenerator.random);
+			}
+			
+			person.addTag(Tags.CONTACT_MILITARY);
+			
+			market.getCommDirectory().addPerson(person);
+			market.addPerson(person);
+			ip.addPerson(person);
+			ip.getData(person).getLocation().setMarket(market);
+			ip.checkOutPerson(person, "permanent_staff");
+			addedPerson = true;
+			randomPeople.add(person);
+			
+			if (market.getPrimaryEntity().hasTag(Tags.STATION)) {
+				admin = person;
+			}
+		}
+		
+		if (market.hasSpaceport()) {
+			PersonAPI person = market.getFaction().createRandomPerson(StarSystemGenerator.random);
+			//person.setRankId(Ranks.SPACE_CAPTAIN);
+			person.setPostId(Ranks.POST_PORTMASTER);
+			
+			if (market.getSize() >= 8) {
+				person.setImportanceAndVoice(PersonImportance.HIGH, StarSystemGenerator.random);
+			} else if (market.getSize() >= 6) {
+				person.setImportanceAndVoice(PersonImportance.MEDIUM, StarSystemGenerator.random);
+			} else if (market.getSize() >= 4) {
+				person.setImportanceAndVoice(PersonImportance.LOW, StarSystemGenerator.random);
+			} else {
+				person.setImportanceAndVoice(PersonImportance.VERY_LOW, StarSystemGenerator.random);
+			}
+			
+			person.addTag(Tags.CONTACT_TRADE);
+			
+			market.getCommDirectory().addPerson(person);
+			market.addPerson(person);
+			ip.addPerson(person);
+			ip.getData(person).getLocation().setMarket(market);
+			ip.checkOutPerson(person, "permanent_staff");
+			addedPerson = true;
+			randomPeople.add(person);
+		}
+		
+		if (addedPerson) {
+			PersonAPI person = market.getFaction().createRandomPerson(StarSystemGenerator.random);
+			person.setRankId(Ranks.SPACE_COMMANDER);
+			person.setPostId(Ranks.POST_SUPPLY_OFFICER);
+			
+			if (market.getSize() >= 6) {
+				person.setImportanceAndVoice(PersonImportance.MEDIUM, StarSystemGenerator.random);
+			} else if (market.getSize() >= 4) {
+				person.setImportanceAndVoice(PersonImportance.LOW, StarSystemGenerator.random);
+			} else {
+				person.setImportanceAndVoice(PersonImportance.VERY_LOW, StarSystemGenerator.random);
+			}
+			
+			person.addTag(Tags.CONTACT_MILITARY);
+			person.addTag(Tags.CONTACT_TRADE);
+			if (StarSystemGenerator.random.nextFloat() < 0.2f) {
+				person.addTag(Tags.CONTACT_UNDERWORLD);
+			}
+			
+			market.getCommDirectory().addPerson(person);
+			market.addPerson(person);
+			ip.addPerson(person);
+			ip.getData(person).getLocation().setMarket(market);
+			ip.checkOutPerson(person, "permanent_staff");
+			addedPerson = true;
+			randomPeople.add(person);
+		}
+		
+		if (!addedPerson || admin == null) {
+			PersonAPI person = market.getFaction().createRandomPerson(StarSystemGenerator.random);
+			person.setRankId(Ranks.CITIZEN);
+			person.setPostId(Ranks.POST_ADMINISTRATOR);
+			
+			if (market.getSize() >= 8) {
+				person.setImportanceAndVoice(PersonImportance.VERY_HIGH, StarSystemGenerator.random);
+			} else if (market.getSize() >= 6) {
+				person.setImportanceAndVoice(PersonImportance.HIGH, StarSystemGenerator.random);
+			} else {
+				person.setImportanceAndVoice(PersonImportance.MEDIUM, StarSystemGenerator.random);
+			}
+			
+			person.addTag(Tags.CONTACT_TRADE);
+			
+			market.getCommDirectory().addPerson(person);
+			market.addPerson(person);
+			ip.addPerson(person);
+			ip.getData(person).getLocation().setMarket(market);
+			ip.checkOutPerson(person, "permanent_staff");
+			admin = person;
+			randomPeople.add(person);
+		}
+		
+		if (admin != null) {
+			addSkillsAndAssignAdmin(market, admin);
+		}
+		
+		List<PersonAPI> people = new ArrayList<PersonAPI>(randomPeople);
+		Iterator<PersonAPI> iter = people.iterator();
+		while (iter.hasNext()) {
+			PersonAPI curr = iter.next();
+			if (curr == null || curr.getFaction() == null) {
+				iter.remove();
+				continue;
+			}
+			if (curr.isDefault() || curr.isAICore() || curr.isPlayer()) {
+				iter.remove();
+				continue;
+			}
+		}
+		dedupePortraits(people);
+	}
+	
+	private void createInitialPeople() {
 		
 		//List<MarketAPI> withAutoAdmins = new ArrayList<MarketAPI>();
 		for (MarketAPI market : Global.getSector().getEconomy().getMarketsCopy()) {
 			if (market.getMemoryWithoutUpdate().getBoolean(MemFlags.MARKET_DO_NOT_INIT_COMM_LISTINGS)) continue;
-			boolean addedPerson = false;
-			
-			PersonAPI admin = null;
-			
-			LinkedHashSet<PersonAPI> randomPeople = new LinkedHashSet<PersonAPI>();
-			
-			
-			if (market.hasIndustry(Industries.MILITARYBASE) || market.hasIndustry(Industries.HIGHCOMMAND)) {
-				PersonAPI person = market.getFaction().createRandomPerson(StarSystemGenerator.random);
-				String rankId = Ranks.GROUND_MAJOR;
-				if (market.getSize() >= 6) {
-					rankId = Ranks.GROUND_GENERAL;
-				} else if (market.getSize() >= 4) {
-					rankId = Ranks.GROUND_COLONEL;
-				}
-				person.setRankId(rankId);
-				person.setPostId(Ranks.POST_BASE_COMMANDER);
-				if (market.getSize() >= 8) {
-					person.setImportanceAndVoice(PersonImportance.VERY_HIGH, StarSystemGenerator.random);
-				} else if (market.getSize() >= 6) {
-					person.setImportanceAndVoice(PersonImportance.HIGH, StarSystemGenerator.random);
-				} else {
-					person.setImportanceAndVoice(PersonImportance.MEDIUM, StarSystemGenerator.random);
-				}
-				person.addTag(Tags.CONTACT_MILITARY);
-				
-				market.getCommDirectory().addPerson(person);
-				market.addPerson(person);
-				ip.addPerson(person);
-				ip.getData(person).getLocation().setMarket(market);
-				ip.checkOutPerson(person, "permanent_staff");
-				addedPerson = true;
-				randomPeople.add(person);
-			}
-			
-			boolean hasStation = false;
-			for (Industry curr : market.getIndustries()) {
-				if (curr.getSpec().hasTag(Industries.TAG_STATION)) {
-					hasStation = true;
-					break;
-				}
-			}
-			if (hasStation) {
-				PersonAPI person = market.getFaction().createRandomPerson(StarSystemGenerator.random);
-				String rankId = Ranks.SPACE_COMMANDER;
-				if (market.getSize() >= 6) {
-					rankId = Ranks.SPACE_ADMIRAL;
-				} else if (market.getSize() >= 4) {
-					rankId = Ranks.SPACE_CAPTAIN;
-				}
-				person.setRankId(rankId);
-				person.setPostId(Ranks.POST_STATION_COMMANDER);
-				
-				if (market.getSize() >= 8) {
-					person.setImportanceAndVoice(PersonImportance.VERY_HIGH, StarSystemGenerator.random);
-				} else if (market.getSize() >= 6) {
-					person.setImportanceAndVoice(PersonImportance.HIGH, StarSystemGenerator.random);
-				} else {
-					person.setImportanceAndVoice(PersonImportance.MEDIUM, StarSystemGenerator.random);
-				}
-				
-				person.addTag(Tags.CONTACT_MILITARY);
-				
-				market.getCommDirectory().addPerson(person);
-				market.addPerson(person);
-				ip.addPerson(person);
-				ip.getData(person).getLocation().setMarket(market);
-				ip.checkOutPerson(person, "permanent_staff");
-				addedPerson = true;
-				randomPeople.add(person);
-				
-				if (market.getPrimaryEntity().hasTag(Tags.STATION)) {
-					admin = person;
-				}
-			}
-			
-			if (market.hasSpaceport()) {
-				PersonAPI person = market.getFaction().createRandomPerson(StarSystemGenerator.random);
-				//person.setRankId(Ranks.SPACE_CAPTAIN);
-				person.setPostId(Ranks.POST_PORTMASTER);
-				
-				if (market.getSize() >= 8) {
-					person.setImportanceAndVoice(PersonImportance.HIGH, StarSystemGenerator.random);
-				} else if (market.getSize() >= 6) {
-					person.setImportanceAndVoice(PersonImportance.MEDIUM, StarSystemGenerator.random);
-				} else if (market.getSize() >= 4) {
-					person.setImportanceAndVoice(PersonImportance.LOW, StarSystemGenerator.random);
-				} else {
-					person.setImportanceAndVoice(PersonImportance.VERY_LOW, StarSystemGenerator.random);
-				}
-				
-				person.addTag(Tags.CONTACT_TRADE);
-				
-				market.getCommDirectory().addPerson(person);
-				market.addPerson(person);
-				ip.addPerson(person);
-				ip.getData(person).getLocation().setMarket(market);
-				ip.checkOutPerson(person, "permanent_staff");
-				addedPerson = true;
-				randomPeople.add(person);
-			}
-			
-			if (addedPerson) {
-				PersonAPI person = market.getFaction().createRandomPerson(StarSystemGenerator.random);
-				person.setRankId(Ranks.SPACE_COMMANDER);
-				person.setPostId(Ranks.POST_SUPPLY_OFFICER);
-				
-				if (market.getSize() >= 6) {
-					person.setImportanceAndVoice(PersonImportance.MEDIUM, StarSystemGenerator.random);
-				} else if (market.getSize() >= 4) {
-					person.setImportanceAndVoice(PersonImportance.LOW, StarSystemGenerator.random);
-				} else {
-					person.setImportanceAndVoice(PersonImportance.VERY_LOW, StarSystemGenerator.random);
-				}
-				
-				person.addTag(Tags.CONTACT_MILITARY);
-				person.addTag(Tags.CONTACT_TRADE);
-				if (StarSystemGenerator.random.nextFloat() < 0.2f) {
-					person.addTag(Tags.CONTACT_UNDERWORLD);
-				}
-				
-				market.getCommDirectory().addPerson(person);
-				market.addPerson(person);
-				ip.addPerson(person);
-				ip.getData(person).getLocation().setMarket(market);
-				ip.checkOutPerson(person, "permanent_staff");
-				addedPerson = true;
-				randomPeople.add(person);
-			}
-			
-			if (!addedPerson || admin == null) {
-				PersonAPI person = market.getFaction().createRandomPerson(StarSystemGenerator.random);
-				person.setRankId(Ranks.CITIZEN);
-				person.setPostId(Ranks.POST_ADMINISTRATOR);
-				
-				if (market.getSize() >= 8) {
-					person.setImportanceAndVoice(PersonImportance.VERY_HIGH, StarSystemGenerator.random);
-				} else if (market.getSize() >= 6) {
-					person.setImportanceAndVoice(PersonImportance.HIGH, StarSystemGenerator.random);
-				} else {
-					person.setImportanceAndVoice(PersonImportance.MEDIUM, StarSystemGenerator.random);
-				}
-				
-				person.addTag(Tags.CONTACT_TRADE);
-				
-				market.getCommDirectory().addPerson(person);
-				market.addPerson(person);
-				ip.addPerson(person);
-				ip.getData(person).getLocation().setMarket(market);
-				ip.checkOutPerson(person, "permanent_staff");
-				admin = person;
-				randomPeople.add(person);
-			}
-			
-			if (admin != null) {
-				addSkillsAndAssignAdmin(market, admin);
-			}
-			
-			List<PersonAPI> people = new ArrayList<PersonAPI>(randomPeople);
-			Iterator<PersonAPI> iter = people.iterator();
-			while (iter.hasNext()) {
-				PersonAPI curr = iter.next();
-				if (curr == null || curr.getFaction() == null) {
-					iter.remove();
-					continue;
-				}
-				if (curr.isDefault() || curr.isAICore() || curr.isPlayer()) {
-					iter.remove();
-					continue;
-				}
-			}
-			dedupePortraits(people);
+			createInitialPeople(market, StarSystemGenerator.random);
 		}
 		
 		assignCustomAdmins();
@@ -1602,7 +1703,7 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 		
 	}
 
-	protected void addSkillsAndAssignAdmin(MarketAPI market, PersonAPI admin) {
+	public static void addSkillsAndAssignAdmin(MarketAPI market, PersonAPI admin) {
 		List<String> skills = Global.getSettings().getSortedSkillIds();
 //		if (!skills.contains(Skills.PLANETARY_OPERATIONS) ||
 //				!skills.contains(Skills.SPACE_OPERATIONS) ||
@@ -2846,6 +2947,7 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 		x.alias("BaseHubMission", BaseHubMission.class);
 		x.alias("GateIntel", GateIntel.class);
 		x.alias("BreadcrumbIntel", BreadcrumbIntel.class);
+		x.alias("BreadcrumbIntelV2", BreadcrumbIntelV2.class);
 		x.alias("WarningBeaconIntel", WarningBeaconIntel.class);
 		x.alias("DelayedFleetEncounter", DelayedFleetEncounter.class);
 		x.alias("MissionTrigger", MissionTrigger.class);
@@ -2854,6 +2956,13 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 		x.alias("LuddicPathBaseBarEvent", LuddicPathBaseBarEvent.class);
 		x.alias("HubMissionBarEventWrapper", HubMissionBarEventWrapper.class);
 		x.alias("HistorianBarEvent", HistorianBarEvent.class);
+		x.alias("RemnantNexusIntel", RemnantNexusIntel.class);
+		x.alias("SalvorsTallyIntel", SalvorsTallyIntel.class);
+		x.alias("CryosleeperIntel", CryosleeperIntel.class);
+		x.alias("HypershuntIntel", HypershuntIntel.class);
+		x.alias("SimUpdateIntel", SimUpdateIntel.class);
+		x.alias("CargoPodsIntel", CargoPodsIntel.class);
+		x.alias("WormholeIntel", WormholeIntel.class);
 		
 		x.alias("SpecBarEventCreator", SpecBarEventCreator.class);
 		x.aliasAttribute(SpecBarEventCreator.class, "specId", "sId");
@@ -3003,7 +3112,73 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 	
 	@Override
 	public PluginPick<ShipAIPlugin> pickShipAI(FleetMemberAPI member, ShipAPI ship) {
-		if (ship.isFighter()) return null;
+		if (ship.isFighter()) {
+			if (ship.getHullSpec().hasTag(Tags.THREAT_SWARM_AI)) {
+				return new PluginPick<ShipAIPlugin>(new ThreatSwarmAI(ship), PickPriority.CORE_SPECIFIC);
+			}
+			if (ship.getHullSpec().hasTag(Tags.DWELLER_VORTEX)) {
+				return new PluginPick<ShipAIPlugin>(new ShroudedVortexAI(ship), PickPriority.CORE_SPECIFIC);
+			}
+			if (ship.getHullSpec().hasTag(Tags.DWELLER_EJECTA)) {
+				return new PluginPick<ShipAIPlugin>(new ShroudedEjectaAI(ship), PickPriority.CORE_SPECIFIC);
+			}
+			return null;
+		}
+		
+		
+		if (ship.getHullSpec().hasTag(Tags.THREAT)) {
+			ShipAIConfig config = new ShipAIConfig();
+			
+			//boolean overseer = ship.getHullSpec().getHullId().equals("overseer_unit");
+			
+			if (ship.getHullSpec().hasTag(Tags.THREAT_TIMID)) {
+				config.personalityOverride = Personalities.TIMID;
+			} else if (ship.getHullSpec().hasTag(Tags.THREAT_CAUTIOUS)) {
+				config.personalityOverride = Personalities.CAUTIOUS;
+			} else if (ship.getHullSpec().hasTag(Tags.THREAT_AGGRESSIVE)) {
+				config.personalityOverride = Personalities.AGGRESSIVE;
+//				config.alwaysStrafeOffensively = true;
+//				config.backingOffWhileNotVentingAllowed = false;
+//				config.turnToFaceWithUndamagedArmor = false;
+//				config.burnDriveIgnoreEnemies = true;
+			} else if (ship.getHullSpec().hasTag(Tags.THREAT_RECKLESS)) {
+				config.personalityOverride = Personalities.RECKLESS;
+				config.alwaysStrafeOffensively = true;
+				config.backingOffWhileNotVentingAllowed = false;
+				config.turnToFaceWithUndamagedArmor = false;
+				config.burnDriveIgnoreEnemies = true;
+			} else {
+				config.personalityOverride = Personalities.STEADY;
+			}
+			
+			PickPriority priority = PickPriority.CORE_SET;
+			return new PluginPick<ShipAIPlugin>(Global.getSettings().createDefaultShipAI(ship, config), priority);
+		}
+		
+		if (ship.getHullSpec().hasTag(Tags.DWELLER)) {
+			ShipAIConfig config = new ShipAIConfig();
+			
+			if (ship.getHullSpec().hasTag(Tags.DWELLER_TIMID)) {
+				config.personalityOverride = Personalities.TIMID;
+			} else if (ship.getHullSpec().hasTag(Tags.DWELLER_CAUTIOUS)) {
+				config.personalityOverride = Personalities.CAUTIOUS;
+			} else if (ship.getHullSpec().hasTag(Tags.DWELLER_AGGRESSIVE)) {
+				config.personalityOverride = Personalities.AGGRESSIVE;
+			} else if (ship.getHullSpec().hasTag(Tags.DWELLER_RECKLESS)) {
+				config.personalityOverride = Personalities.RECKLESS;
+				config.alwaysStrafeOffensively = true;
+				config.backingOffWhileNotVentingAllowed = false;
+				config.turnToFaceWithUndamagedArmor = false;
+				config.burnDriveIgnoreEnemies = true;
+			} else {
+				config.personalityOverride = Personalities.STEADY;
+			}
+			
+			PickPriority priority = PickPriority.CORE_SET;
+			return new PluginPick<ShipAIPlugin>(Global.getSettings().createDefaultShipAI(ship, config), priority);
+		}
+		
+		
 		
 		Set<String> derelicts = new HashSet<String>();
 		derelicts.add("warden");
@@ -3018,7 +3193,7 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 		
 		String hullId = ship.getHullSpec().getHullId();
 		if (!zigguratOnEnemySide && 
-				!derelicts.contains(hullId) && !ship.getVariant().hasHullMod(HullMods.AUTOMATED)) return null;
+				!derelicts.contains(hullId) && !Misc.isAutomated(ship.getVariant())) return null;
 		
 		//HullSize size = ship.getHullSize();
 		
@@ -3039,7 +3214,11 @@ public class CoreLifecyclePluginImpl extends BaseModPlugin {
 			config.personalityOverride = Personalities.RECKLESS;
 		}
 		
-		return new PluginPick<ShipAIPlugin>(Global.getSettings().createDefaultShipAI(ship, config), PickPriority.CORE_SPECIFIC);
+		PickPriority priority = PickPriority.CORE_SET;
+		if (zigguratOnEnemySide) {
+			priority = PickPriority.CORE_SPECIFIC;
+		}
+		return new PluginPick<ShipAIPlugin>(Global.getSettings().createDefaultShipAI(ship, config), priority);
 	}
 	
 //	public PluginPick<MissileAIPlugin> pickMissileAI(final MissileAPI missile, final ShipAPI launchingShip) {

@@ -1,8 +1,5 @@
 package com.fs.starfarer.api.util;
 
-import java.awt.Color;
-import java.awt.image.BufferedImage;
-import java.awt.image.Raster;
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.nio.Buffer;
@@ -15,6 +12,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Locale;
@@ -25,6 +23,10 @@ import java.util.UUID;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import java.awt.Color;
+import java.awt.image.BufferedImage;
+import java.awt.image.Raster;
 
 import javax.imageio.ImageIO;
 
@@ -63,6 +65,7 @@ import com.fs.starfarer.api.campaign.JumpPointAPI.JumpDestination;
 import com.fs.starfarer.api.campaign.LocationAPI;
 import com.fs.starfarer.api.campaign.ParticleControllerAPI;
 import com.fs.starfarer.api.campaign.PlanetAPI;
+import com.fs.starfarer.api.campaign.PlanetSpecAPI;
 import com.fs.starfarer.api.campaign.RepLevel;
 import com.fs.starfarer.api.campaign.ReputationActionResponsePlugin.ReputationAdjustmentResult;
 import com.fs.starfarer.api.campaign.ResourceCostPanelAPI;
@@ -92,6 +95,7 @@ import com.fs.starfarer.api.campaign.events.CampaignEventTarget;
 import com.fs.starfarer.api.campaign.rules.MemKeys;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
 import com.fs.starfarer.api.characters.AbilityPlugin;
+import com.fs.starfarer.api.characters.MarketConditionSpecAPI;
 import com.fs.starfarer.api.characters.MutableCharacterStatsAPI;
 import com.fs.starfarer.api.characters.MutableCharacterStatsAPI.SkillLevelAPI;
 import com.fs.starfarer.api.characters.OfficerDataAPI;
@@ -111,6 +115,8 @@ import com.fs.starfarer.api.combat.WeaponAPI;
 import com.fs.starfarer.api.combat.listeners.ApplyDamageResultAPI;
 import com.fs.starfarer.api.combat.listeners.CombatListenerUtil;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
+import com.fs.starfarer.api.graphics.SpriteAPI;
+import com.fs.starfarer.api.impl.SharedUnlockData;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.CustomRepImpact;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepActionEnvelope;
 import com.fs.starfarer.api.impl.campaign.CoreReputationPlugin.RepActions;
@@ -144,10 +150,13 @@ import com.fs.starfarer.api.impl.campaign.intel.contacts.ContactIntel;
 import com.fs.starfarer.api.impl.campaign.plog.PlaythroughLog;
 import com.fs.starfarer.api.impl.campaign.plog.SModRecord;
 import com.fs.starfarer.api.impl.campaign.population.CoreImmigrationPluginImpl;
+import com.fs.starfarer.api.impl.campaign.procgen.ConditionGenDataSpec;
 import com.fs.starfarer.api.impl.campaign.procgen.DefenderDataOverride;
 import com.fs.starfarer.api.impl.campaign.procgen.PlanetConditionGenerator;
+import com.fs.starfarer.api.impl.campaign.procgen.PlanetGenDataSpec;
 import com.fs.starfarer.api.impl.campaign.procgen.SalvageEntityGenDataSpec.DropData;
 import com.fs.starfarer.api.impl.campaign.procgen.StarAge;
+import com.fs.starfarer.api.impl.campaign.procgen.StarGenDataSpec;
 import com.fs.starfarer.api.impl.campaign.procgen.StarSystemGenerator;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.BaseThemeGenerator.OrbitGap;
 import com.fs.starfarer.api.impl.campaign.rulecmd.AddRemoveCommodity;
@@ -165,16 +174,15 @@ import com.fs.starfarer.api.impl.campaign.terrain.PulsarBeamTerrainPlugin;
 import com.fs.starfarer.api.impl.campaign.terrain.StarCoronaTerrainPlugin;
 import com.fs.starfarer.api.impl.campaign.velfield.SlipstreamTerrainPlugin2;
 import com.fs.starfarer.api.impl.campaign.velfield.SlipstreamTerrainPlugin2.SlipstreamSegment;
+import com.fs.starfarer.api.impl.codex.CodexUnlocker;
 import com.fs.starfarer.api.loading.HullModSpecAPI;
 import com.fs.starfarer.api.loading.IndustrySpecAPI;
 import com.fs.starfarer.api.plugins.FactionPersonalityPickerPlugin;
+import com.fs.starfarer.api.plugins.SimulatorPlugin;
 import com.fs.starfarer.api.plugins.SurveyPlugin;
 import com.fs.starfarer.api.ui.Alignment;
 import com.fs.starfarer.api.ui.LabelAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
-
-import sun.misc.Cleaner;
-import sun.nio.ch.DirectBuffer;
 
 
 public class Misc {
@@ -184,7 +192,6 @@ public class Misc {
 	public static String SIR = "Sir";
 	public static String MAAM = "Ma'am";
 	public static String CAPTAIN = "Captain";
-	
 	
 	public static float FLUX_PER_CAPACITOR = Global.getSettings().getFloat("fluxPerCapacitor");
 	public static float DISSIPATION_PER_VENT = Global.getSettings().getFloat("dissipationPerVent");
@@ -1871,7 +1878,7 @@ public class Misc {
 		float u = (p3.x - p1.x) * (p2.x - p1.x) + (p3.y - p1.y) * (p2.y - p1.y);
 		float denom = Vector2f.sub(p2, p1, new Vector2f()).length();
 		denom *= denom;
-		//if (denom == 0) return 0;
+		if (denom == 0) return p1;
 		u /= denom;
 		Vector2f i = new Vector2f();
 		i.x = p1.x + u * (p2.x - p1.x);
@@ -2321,9 +2328,12 @@ public class Misc {
 		return getAbyssalDepth(entity) > 0;
 	}
 	public static float getAbyssalDepth(Vector2f loc) {
+		return getAbyssalDepth(loc, false);
+	}
+	public static float getAbyssalDepth(Vector2f loc, boolean uncapped) {
 		HyperspaceTerrainPlugin plugin = getHyperspaceTerrainPlugin();
 		if (plugin == null) return 0f;
-		return plugin.getAbyssalDepth(loc);
+		return plugin.getAbyssalDepth(loc, uncapped);
 	}
 	
 	public static List<StarSystemAPI> getAbyssalSystems() {
@@ -2335,7 +2345,13 @@ public class Misc {
 	public static float getAbyssalDepthOfPlayer() {
 		return getAbyssalDepth(Global.getSector().getPlayerFleet());
 	}
+	public static float getAbyssalDepthOfPlayer(boolean uncapped) {
+		return getAbyssalDepth(Global.getSector().getPlayerFleet(), uncapped);
+	}
 	public static float getAbyssalDepth(SectorEntityToken entity) {
+		return getAbyssalDepth(entity, false);
+	}
+	public static float getAbyssalDepth(SectorEntityToken entity, boolean uncapped) {
 		if (entity == null || !entity.isInHyperspace()) return 0f;
 		return getAbyssalDepth(entity.getLocation());
 	}
@@ -2506,6 +2522,33 @@ public class Misc {
 		}
 		return closest;
 	}
+	
+	public static ShipAPI findClosestShipTo(ShipAPI ship, Vector2f locFromForSorting, HullSize smallestToNote, float maxRange, boolean considerShipRadius, boolean allowHulks, FindShipFilter filter) {
+		CombatEngineAPI engine = Global.getCombatEngine();
+		List<ShipAPI> ships = engine.getShips();
+		float minDist = Float.MAX_VALUE;
+		ShipAPI closest = null;
+		for (ShipAPI other : ships) {
+			if (other == ship) continue;
+			if (other.getHullSize().ordinal() < smallestToNote.ordinal()) continue;
+			if (other.isShuttlePod()) continue;
+			if (other.isHulk()) continue;
+			if (allowHulks || other.getOwner() != 100) {
+				if (filter != null && !filter.matches(other)) continue;
+				
+				float dist = getDistance(ship.getLocation(), other.getLocation());
+				float distSort = getDistance(locFromForSorting, other.getLocation());
+				float radSum = ship.getCollisionRadius() + other.getCollisionRadius();
+				if (!considerShipRadius) radSum = 0;
+				if (dist > maxRange + radSum) continue;
+				if (distSort < minDist) {
+					closest = other;
+					minDist = distSort;
+				}
+			}
+		}
+		return closest;
+	}	
 	
 	
 	public static <T extends Enum<T>> T mapToEnum(JSONObject json, String key, Class<T> enumType, T defaultOption) throws JSONException {
@@ -2680,33 +2723,48 @@ public class Misc {
 		if (Math.abs(delta) > Math.abs(diff)) delta = diff;
 		return curr + delta;
 	}
-	
+
+	public static Map<Class, Method> cleanerCache = new LinkedHashMap<>();
+	public static Map<Class, Method> cleanCache = new LinkedHashMap<>();
+    
 	public static void cleanBuffer(Buffer toBeDestroyed) {
     	try {
-    		if (toBeDestroyed instanceof DirectBuffer) {
-    			Cleaner cleaner = ((DirectBuffer) toBeDestroyed).cleaner();
-    			if (cleaner != null) cleaner.clean();
-    			Global.getLogger(Misc.class).info(String.format("Cleaned buffer (using cast)"));
-    			return;
-    		} else {
-    			
-    		}
     		
-	    	Method cleanerMethod = toBeDestroyed.getClass().getMethod("cleaner");
-	    	cleanerMethod.setAccessible(true);
-	    	Object cleaner = cleanerMethod.invoke(toBeDestroyed);
-	    	if (cleaner != null) {
-	    		Method cleanMethod = cleaner.getClass().getMethod("clean");
-	    		cleanMethod.setAccessible(true);
-	    		cleanMethod.invoke(cleaner);
-	    		Global.getLogger(Misc.class).info(String.format("Cleaned buffer (using reflection)"));
-	    	} else {
-	    		Global.getLogger(Misc.class).warn(String.format("Buffer can not be cleaned"));
-	    	}
+    		Method cleanerMethod = cleanerCache.get(toBeDestroyed.getClass());
+    		if (cleanerMethod == null) {
+    			cleanerMethod = toBeDestroyed.getClass().getMethod("cleaner");
+    			if (cleanerMethod != null) {
+	    			cleanerMethod.setAccessible(true);
+	    			cleanerCache.put(toBeDestroyed.getClass(), cleanerMethod);
+    			}
+    		}
+    		if (cleanerMethod != null) {
+		    	Object cleaner = cleanerMethod.invoke(toBeDestroyed);
+		    	if (cleaner != null) {
+		    		Method cleanMethod = cleanCache.get(cleaner.getClass());
+		    		if (cleanMethod == null) {
+		    			cleanMethod = cleaner.getClass().getMethod("clean");
+		    			if (cleanMethod != null) {
+			    			cleanMethod.setAccessible(true);
+			    			cleanCache.put(cleaner.getClass(), cleanMethod);
+		    			}
+		    		}
+		    		if (cleanMethod != null) {
+			    		cleanMethod.invoke(cleaner);
+			    		Global.getLogger(Misc.class).info(String.format("Cleaned buffer (using reflection)"));
+		    		} else {
+		    			Global.getLogger(Misc.class).warn(String.format("Buffer can not be cleaned"));
+		    		}
+		    	} else {
+		    		Global.getLogger(Misc.class).warn(String.format("Buffer can not be cleaned"));
+		    	}
+    		} else {
+    			Global.getLogger(Misc.class).warn(String.format("Buffer can not be cleaned"));
+    		}
     	} catch (Exception e) {
     		Global.getLogger(Misc.class).warn(e.getMessage(), e);
     	}
-    }
+    }	
 	
 	
 	public static float getFleetwideTotalStat(CampaignFleetAPI fleet, String dynamicMemberStatId) {
@@ -2934,6 +2992,12 @@ public class Misc {
 				AddRemoveCommodity.addCommodityGainText(dataType, 1, text);
 			}
 		}
+		
+		if (planet.getSpec().hasTag(Tags.CODEX_UNLOCKABLE)) {
+			SharedUnlockData.get().reportPlayerAwareOfPlanet(planet.getSpec().getPlanetType(), true);
+		}
+		
+		CodexUnlocker.makeAwareOfConditionsOn(planet.getMarket());
 	}
 	
 	public static void setFullySurveyed(MarketAPI market, TextPanelAPI text, boolean withNotification) {
@@ -3550,6 +3614,17 @@ public class Misc {
 		return str;
 	}
 	
+	public static String getPlanetSurveyClass(PlanetAPI planet) {
+		SurveyPlugin plugin = (SurveyPlugin) Global.getSettings().getNewPluginInstance("surveyPlugin");
+		String type = plugin.getSurveyDataType(planet);
+		if (type != null) {
+			CommoditySpecAPI spec = Global.getSettings().getCommoditySpec(type);
+			String classStr = spec.getName().replaceFirst(" Survey Data", "");
+			return classStr;
+		}
+		return "Class N";
+	}
+	
 	
 	public static void setDefenderOverride(SectorEntityToken entity, DefenderDataOverride override) {
 		entity.getMemoryWithoutUpdate().set(MemFlags.SALVAGE_DEFENDER_OVERRIDE, override);
@@ -3729,6 +3804,10 @@ public class Misc {
 		SectorEntityToken jumpPoint = null;
 		float minDist = Float.MAX_VALUE;
 		for (SectorEntityToken curr : system.getJumpPoints()) {
+			if (curr instanceof JumpPointAPI && ((JumpPointAPI)curr).isWormhole()) {
+				continue;
+			}
+			
 			float dist = Misc.getDistance(system.getCenter().getLocation(), curr.getLocation());
 			if (dist < minDist) {
 				jumpPoint = curr;
@@ -4072,6 +4151,7 @@ public class Misc {
 		return seed;
 	}
 	
+	
 	public static long getNameBasedSeed(SectorEntityToken entity) {
 		String id = entity.getName();
 		if (id == null) id = genUID();
@@ -4130,6 +4210,9 @@ public class Misc {
 		return false;
 	}
 
+	public static SimulatorPlugin getSimulatorPlugin() {
+		return (SimulatorPlugin) Global.getSettings().getPlugin("simulatorPlugin");
+	}
 	
 	public static ImmigrationPlugin getImmigrationPlugin(MarketAPI market) {
 		ImmigrationPlugin plugin = Global.getSector().getPluginPicker().pickImmigrationPlugin(market);
@@ -4671,7 +4754,10 @@ public class Misc {
 		}
 		return false;
 	}
-	
+
+	public static String getFleetType(CampaignFleetAPI fleet) {
+		return fleet.getMemoryWithoutUpdate().getString(MemFlags.MEMORY_KEY_FLEET_TYPE);
+	}
 	public static boolean isPatrol(CampaignFleetAPI fleet) {
 		return fleet.getMemoryWithoutUpdate().getBoolean(MemFlags.MEMORY_KEY_PATROL_FLEET);
 	}
@@ -5190,6 +5276,7 @@ public class Misc {
 	}
 	
 	public static int getNumStableLocations(StarSystemAPI system) {
+		if (system == null) return 0;
 		int count = system.getEntitiesWithTag(Tags.STABLE_LOCATION).size();
 		count += system.getEntitiesWithTag(Tags.OBJECTIVE).size();
 		for (SectorEntityToken e : system.getJumpPoints()) {
@@ -5392,6 +5479,15 @@ public class Misc {
 		person.getMemoryWithoutUpdate().set(CAPTAIN_UNREMOVABLE, unremovable);
 	}
 	
+	public static final String KEEP_CAPTAIN_ON_SHIP_RECOVERY = "$keep_captain_on_ship_recovery";
+	public static boolean isKeepOnShipRecovery(PersonAPI person) {
+		return person != null && person.getMemoryWithoutUpdate().is(KEEP_CAPTAIN_ON_SHIP_RECOVERY, true);
+	}
+	
+	public static void setKeepOnShipRecovery(PersonAPI person, boolean keepOnRecovery) {
+		person.getMemoryWithoutUpdate().set(KEEP_CAPTAIN_ON_SHIP_RECOVERY, keepOnRecovery);
+	}
+	
 	public static boolean isAutomated(MutableShipStatsAPI stats) {
 		if (stats == null) return false;
 		return isAutomated(stats.getFleetMember());
@@ -5401,7 +5497,9 @@ public class Misc {
 		return member != null && member.getVariant() != null && isAutomated(member.getVariant());
 	}
 	public static boolean isAutomated(ShipVariantAPI variant) {
-		return variant != null && variant.hasHullMod(HullMods.AUTOMATED);
+		return variant != null && (variant.hasHullMod(HullMods.AUTOMATED) ||
+				variant.hasTag(Tags.AUTOMATED) ||
+				(variant.getHullSpec() != null && variant.getHullSpec().hasTag(Tags.AUTOMATED)));
 	}
 	public static boolean isAutomated(ShipAPI ship) {
 		if (ship == null) return false;
@@ -5790,6 +5888,25 @@ public class Misc {
 			   market.hasCondition(Conditions.RUINS_VAST));
 	}
 	
+	public static MarketConditionSpecAPI getRuinsSpec(MarketAPI market) {
+		String id = getRuinsType(market);
+		return Global.getSettings().getMarketConditionSpec(id);
+	}
+	
+	/**
+	 * Assumes the market *does* have ruins.
+	 * @param market
+	 * @return
+	 */
+	public static String getRuinsType(MarketAPI market) {
+		if (market == null) return Conditions.RUINS_SCATTERED;
+		if (market.hasCondition(Conditions.RUINS_SCATTERED)) return Conditions.RUINS_SCATTERED; 
+		if (market.hasCondition(Conditions.RUINS_WIDESPREAD)) return Conditions.RUINS_WIDESPREAD; 
+		if (market.hasCondition(Conditions.RUINS_EXTENSIVE)) return Conditions.RUINS_EXTENSIVE; 
+		if (market.hasCondition(Conditions.RUINS_VAST)) return Conditions.RUINS_VAST;
+		return Conditions.RUINS_SCATTERED;
+	}
+	
 	public static boolean hasFarmland(MarketAPI market) {
 		return market != null && 
 				(market.hasCondition(Conditions.FARMLAND_POOR) || 
@@ -5836,6 +5953,9 @@ public class Misc {
 	}
 	
 	public static boolean shouldShowDamageFloaty(ShipAPI source, ShipAPI target) {
+		if (target == null || !Global.getCombatEngine().getShips().contains(target)) {
+			return false;
+		}
 		CombatEngineAPI engine = Global.getCombatEngine();
 		ShipAPI playerShip = engine.getPlayerShip();
 		
@@ -5986,6 +6106,9 @@ public class Misc {
 		case DESTROYER: weight += 2; break;
 		case FRIGATE: weight += 1; break;
 		case FIGHTER: weight += 1; break;
+		}
+		if (ship.getHullSpec().isPhase() && (ship.isFrigate() || ship.isDestroyer())) {
+			weight += 2f;
 		}
 		if (nonCombat && adjustForNonCombat) weight *= 0.25f;
 		if (ship.isDrone()) weight *= 0.1f;
@@ -6458,6 +6581,39 @@ public class Misc {
 		return false;
 	}
 	
+	public static boolean turnTowardsFacingV2(ShipAPI ship, float desiredFacing, float relativeAngVel) {		
+		
+		float turnVel = ship.getAngularVelocity() - relativeAngVel;
+		float absTurnVel = Math.abs(turnVel);
+		
+		float turnDecel = ship.getEngineController().getTurnDeceleration();
+		// v t - 0.5 a t t = dist
+		// dv = a t;  t = v / a
+		float decelTime = absTurnVel / turnDecel; 
+		float decelDistance = absTurnVel * decelTime - 0.5f * turnDecel * decelTime * decelTime;
+		
+		float facingAfterNaturalDecel = ship.getFacing() + Math.signum(turnVel) * decelDistance;
+		float diffWithEventualFacing = getAngleDiff(facingAfterNaturalDecel, desiredFacing);
+		float diffWithCurrFacing = getAngleDiff(ship.getFacing(), desiredFacing);
+		
+		if (diffWithEventualFacing > 1f) {
+			float turnDir = getClosestTurnDirection(ship.getFacing(), desiredFacing);
+			if (Math.signum(turnVel) == Math.signum(turnDir)) {
+				if (decelDistance > diffWithCurrFacing) {
+					turnDir = -turnDir;
+				}
+			}
+			if (turnDir < 0) {
+				ship.giveCommand(ShipCommand.TURN_RIGHT, null, 0);
+			} else if (turnDir >= 0) {
+				ship.giveCommand(ShipCommand.TURN_LEFT, null, 0);
+			} else {
+				return false;
+			}
+		}
+		return false;
+	}
+	
 	public static int getUntrustwortyCount() {
 		int count = Global.getSector().getPlayerMemoryWithoutUpdate().getInt(MemFlags.PLAYER_UNTRUSTWORTHY);
 		return count;
@@ -6613,6 +6769,163 @@ public class Misc {
 		while (s3.length() < 2) s3 = "0" + s3;
 		
 		return base + " " + s0 + s1 + "-" + s2 + s3 + type.suffix;
+	}
+	
+	public static float getAveragePlanetRadius(PlanetSpecAPI spec) {
+		if (spec.isStar()) {
+			StarGenDataSpec starData = (StarGenDataSpec) 
+					Global.getSettings().getSpec(StarGenDataSpec.class, spec.getPlanetType(), true);
+			if (starData != null) { 
+				return (starData.getMinRadius() + starData.getMaxRadius()) * 0.5f;
+			}
+		}
+		
+		PlanetGenDataSpec planetData = (PlanetGenDataSpec) 
+				Global.getSettings().getSpec(PlanetGenDataSpec.class, spec.getPlanetType(), true);
+		if (planetData != null) {
+			return (planetData.getMinRadius() + planetData.getMaxRadius()) * 0.5f;
+		}
+		
+		return 200f;
+	}
+	
+	public static boolean canPlanetTypeRollHabitable(PlanetSpecAPI spec) {
+		return canPlanetTypeRollCondition(spec, Conditions.HABITABLE);
+	}
+	
+	public static boolean canPlanetTypeRollCondition(PlanetSpecAPI spec, String id) {
+		ConditionGenDataSpec hab = (ConditionGenDataSpec) 
+				Global.getSettings().getSpec(ConditionGenDataSpec.class, id, true);
+
+		PlanetGenDataSpec genData = (PlanetGenDataSpec) 
+				Global.getSettings().getSpec(PlanetGenDataSpec.class, spec.getPlanetType(), true);
+
+		if (genData != null && hab != null) {
+			String planetCat = genData.getCategory();
+			if (hab.hasMultiplier(planetCat) && hab.getMultiplier(planetCat) > 0) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	public static int getMaxMarketSize(MarketAPI market) {
+		return (int)Math.round(market.getStats().getDynamic().getMod(
+							Stats.MAX_MARKET_SIZE).computeEffective(Misc.MAX_COLONY_SIZE));
+	}
+	
+	public static float countEnemyWeightInArc(ShipAPI ship, float dir, float arc, float maxRange, boolean ignoreFightersAndModules) {
+		return countEnemyWeightInArcAroundLocation(ship, ship.getLocation(), dir, arc, maxRange, null, ignoreFightersAndModules);
+	}
+	public static float countEnemyWeightInArcAroundLocation(ShipAPI ship, Vector2f loc, float dir, float arc, float maxRange,
+								ShipAPI ignore, boolean ignoreFightersAndModules) {
+		return countEnemyWeightInArcAroundLocation(ship.getOwner(), loc, dir, arc, maxRange, ignore, ignoreFightersAndModules, false);
+	}
+	public static float countEnemyWeightInArcAroundLocation(int owner, Vector2f loc, 
+				float dir, float arc, float maxRange,
+				ShipAPI ignore, boolean ignoreFightersAndModules, boolean awareOnly) {
+		CombatEngineAPI engine = Global.getCombatEngine();
+		List<ShipAPI> ships = engine.getAllShips();
+		
+		float weight = 0;
+		for (ShipAPI other : ships) {
+			if (ignoreFightersAndModules) {
+				if (other.isFighter()) continue;
+				if (other.isStationModule()) continue;
+			}
+			if (other.isFighter() && other.getWing() != null && !other.getWing().isLeader(other)) continue;
+			if (other.isHulk()) continue;
+			if (other.isDrone()) continue;
+			if (other.isShuttlePod()) continue;
+			if (other.getOwner() == 100) continue;
+			if (owner == other.getOwner()) continue;
+			//if (other.isRetreating()) continue;
+			if (other.controlsLocked()) continue;
+			if (other == ignore) continue;
+			if (awareOnly && !engine.isAwareOf(owner, other)) continue;
+			
+			float dist = getDistance(loc, other.getLocation());
+			if (dist > maxRange) continue;
+
+			if (arc >= 360f || isInArc(dir, arc, loc, other.getLocation())) {
+				weight += getShipWeight(other);
+				//weight += other.getHullSize().ordinal();
+			}
+		}
+		return weight;
+	}
+	
+	public static float [] getFloatArray(String key) {
+		try {
+			JSONArray arr = Global.getSettings().getJSONArray(key);
+			float [] result = new float [arr.length()];
+			for (int i = 0; i < arr.length(); i++) {
+				result[i] = (float) arr.optDouble(i, 0f);
+			}
+			return result;
+		} catch (JSONException e) {
+			return null;
+		}
+	}
+	
+	public static enum WeaponSkinType {
+		UNDER,
+		TURRET,
+		HARDPOINT,
+		TURRET_GLOW,
+		HARDPOINT_GLOW,
+		TURRET_BARRELS,
+		HARDPOINT_BARRELS,
+	}
+	
+	public static SpriteAPI getWeaponSkin(ShipAPI ship, String weaponId, WeaponSkinType type) {
+		String cat = null;
+		SpriteAPI skin = null;
+		if (ship.getOwner() == 0 || ship.getOriginalOwner() == 0) {
+			cat = "weaponSkinsPlayerOnly";
+			skin = getWeaponSkin(cat, weaponId, ship, type);
+		}
+		if (skin != null) return skin;
+		
+		cat = "weaponSkinsPlayerAndNPC";
+		skin = getWeaponSkin(cat, weaponId, ship, type);
+		return skin;
+	}
+	
+	
+	public static SpriteAPI getWeaponSkin(String cat, String weaponId, ShipAPI ship, WeaponSkinType type) {
+		
+		String exclude = "weaponSkinsExcludeFromSharing";
+		String style = ship.getHullStyleId();
+		
+		List<String> skins = Global.getSettings().getSpriteKeys(cat);
+		Set<String> noSharing = new LinkedHashSet<String>(Global.getSettings().getSpriteKeys(exclude));
+		
+		List<SpriteAPI> matching = new ArrayList<SpriteAPI>();
+		String keyForHull = weaponId + ":" + style + ":" + type.name();
+		for (String key : skins) {
+			if (key.equals(keyForHull)) {
+				return Global.getSettings().getSprite(cat, key);
+			}
+			if (key.startsWith(weaponId) && !noSharing.contains(key)) {
+				matching.add(Global.getSettings().getSprite(cat, key));
+			}
+		}
+		
+		if (!matching.isEmpty()) {
+			SpriteAPI best = null;
+			float minDist = Float.MAX_VALUE;
+			
+			for (SpriteAPI curr : matching) {
+				float dist = Misc.getColorDist(ship.getSpriteAPI().getAverageBrightColor(), curr.getAverageBrightColor());
+				if (dist < minDist) {
+					best = curr;
+					minDist = dist;
+				}
+			}
+			return best;
+		}
+		return null;
 	}
 }
 

@@ -48,6 +48,13 @@ public class AbyssalRogueStellarObjectEPEC extends BaseEPEncounterCreator {
 		BLACK_HOLE
 	}
 	
+	public static float MIN_THREAT_PROB = 0.25f;
+	public static float MAX_THREAT_PROB = 0.75f;
+	public static float MAX_THREAT_PROB_DEPTH = 5f;
+	
+	public static float MIN_DEPTH_FOR_GUARANTEED = 3f;
+	public static float BONUS_PROB_PER_FAIL = 0.125f;
+	
 	public static float PROB_BLACK_HOLE_ORBITERS = 0.1f;
 	
 	public static WeightedRandomPicker<RogueStellarObjectType> STELLAR_OBJECT_TYPES = new WeightedRandomPicker<RogueStellarObjectType>();
@@ -105,11 +112,38 @@ public class AbyssalRogueStellarObjectEPEC extends BaseEPEncounterCreator {
 		system.addTag(Tags.TEMPORARY_LOCATION);
 		system.addTag(Tags.SYSTEM_ABYSSAL);
 		
-		if (data.random.nextFloat() < 0.5f) {
-			system.setBackgroundTextureFilename("graphics/backgrounds/background4.jpg");
-		} else {
-			system.setBackgroundTextureFilename("graphics/backgrounds/background5.jpg");
+		
+		if (data.nearest == null) {
+			float prob = (data.depth - 1f) / (MAX_THREAT_PROB_DEPTH - 1f) * MAX_THREAT_PROB;
+			if (prob > MAX_THREAT_PROB) prob = MAX_THREAT_PROB;
+			if (prob > 0 && prob < MIN_THREAT_PROB) prob = 0.25f;
+			
+			String failKey = "$threatSpawnsFailedToRoll";
+			float numFails = Global.getSector().getMemoryWithoutUpdate().getInt(failKey);
+			float probBonus = 0f;
+			if (data.depth >= MIN_DEPTH_FOR_GUARANTEED) {
+				probBonus = numFails * BONUS_PROB_PER_FAIL;
+			}
+			if (data.random.nextFloat() < prob + probBonus) {
+				system.addTag(Tags.SYSTEM_CAN_SPAWN_THREAT);
+				numFails = 0;
+			} else {
+				numFails++;
+			}
+			Global.getSector().getMemoryWithoutUpdate().set(failKey, (int) numFails);
+//			public static float MIN_DEPTH_FOR_GUARANTEED = 3f;
+//			public static float BONUS_PROB_PER_FAIL = 0.25f;
 		}
+		
+		
+		// threat spawn-in animation looks best against this bg
+		system.setBackgroundTextureFilename("graphics/backgrounds/background4.jpg");
+		
+//		if (data.random.nextFloat() < 0.5f) {
+//			system.setBackgroundTextureFilename("graphics/backgrounds/background4.jpg");
+//		} else {
+//			system.setBackgroundTextureFilename("graphics/backgrounds/background5.jpg");
+//		}
 
 		system.getLocation().set(point.loc.x, point.loc.y);
 

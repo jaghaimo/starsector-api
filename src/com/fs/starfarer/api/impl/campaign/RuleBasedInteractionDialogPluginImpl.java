@@ -1,8 +1,9 @@
 package com.fs.starfarer.api.impl.campaign;
 
-import java.awt.Color;
 import java.util.HashMap;
 import java.util.Map;
+
+import java.awt.Color;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
@@ -46,6 +47,10 @@ public class RuleBasedInteractionDialogPluginImpl implements InteractionDialogPl
 	private MemoryAPI memory;
 	
 	private CampaignFleetAPI playerFleet;
+	
+	private Object custom1;
+	private Object custom2;
+	private Object custom3;
 	
 	private static final Color HIGHLIGHT_COLOR = Global.getSettings().getColor("buttonShortcut");
 	
@@ -248,6 +253,24 @@ public class RuleBasedInteractionDialogPluginImpl implements InteractionDialogPl
 
 	public Map<String, MemoryAPI> getMemoryMap() {
 		return memoryMap;
+	}
+	public Object getCustom1() {
+		return custom1;
+	}
+	public void setCustom1(Object custom1) {
+		this.custom1 = custom1;
+	}
+	public Object getCustom2() {
+		return custom2;
+	}
+	public void setCustom2(Object custom2) {
+		this.custom2 = custom2;
+	}
+	public Object getCustom3() {
+		return custom3;
+	}
+	public void setCustom3(Object custom3) {
+		this.custom3 = custom3;
 	}
 	
 }

@@ -63,6 +63,11 @@ public class GAReturnHamatsu extends GABaseMission { //implements ShipRecoveryLi
 		
 		setPersonIsPotentialContactOnSuccess(callisto, 1f);
 		
+		beginStageTrigger(Stage.COMPLETED);
+		triggerSetGlobalMemoryValue("$gaRH_missionCompleted", true);
+		triggerMakeNonStoryCritical(callisto.getMarket());
+		endTrigger();
+		
 		return true;
 	}
 	

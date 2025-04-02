@@ -1,10 +1,11 @@
 package com.fs.starfarer.api.impl.campaign.intel.group;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.Set;
+
+import java.awt.Color;
 
 import org.lwjgl.util.vector.Vector2f;
 
@@ -127,7 +128,7 @@ public class GenericRaidFGI extends FleetGroupIntel {
 		
 		int total = 0;
 		for (Integer i : params.fleetSizes) total += i;
-		createRoute(params.factionId, total, params.fleetSizes.size(), null);
+		createRoute(params.factionId, total, params.fleetSizes.size(), null, params);
 	}
 	
 	protected GenericPayloadAction createPayloadAction() {
@@ -189,6 +190,7 @@ public class GenericRaidFGI extends FleetGroupIntel {
 		m.triggerSetFleetFaction(params.factionId);
 		
 		m.setFleetSource(params.source);
+		setFleetCreatorQualityFromRoute(m);
 		m.setFleetDamageTaken(damage);
 		if (pirate) {
 			m.triggerSetPirateFleet();
@@ -637,6 +639,11 @@ public class GenericRaidFGI extends FleetGroupIntel {
 	
 	public void doCustomRaidAction(CampaignFleetAPI fleet, MarketAPI market, float raidStr) {
 		
+	}
+	
+	public void setFleetCreatorQualityFromRoute(FleetCreatorMission m) {
+		if (m == null || route == null || route.getExtra() == null || route.getExtra().quality == null) return;
+		m.getPreviousCreateFleetAction().qualityOverride = route.getExtra().quality;
 	}
 }
 

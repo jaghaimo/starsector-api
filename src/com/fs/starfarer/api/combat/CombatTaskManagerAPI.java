@@ -2,6 +2,8 @@ package com.fs.starfarer.api.combat;
 
 import java.util.List;
 
+import org.lwjgl.util.vector.Vector2f;
+
 import com.fs.starfarer.api.combat.CombatFleetManagerAPI.AssignmentInfo;
 
 public interface CombatTaskManagerAPI {
@@ -60,4 +62,10 @@ public interface CombatTaskManagerAPI {
 	MutableStat getCPRateModifier();
 	void removeAssignment(AssignmentInfo info);
 	void clearEmptyWaypoints();
+	AssignmentTargetAPI createWaypoint2(Vector2f loc, boolean ally);
+	void setAssignmentWeight(AssignmentInfo info, float weight);
+	void reassign();
+	AssignmentTargetAPI getAssignmentTargetFor(ShipAPI ship);
+	void clearTasks();
+	AssignmentInfo getAssignmentInfoForTarget(AssignmentTargetAPI target);
 }

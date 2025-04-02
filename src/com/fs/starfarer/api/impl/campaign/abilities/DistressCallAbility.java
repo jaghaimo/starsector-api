@@ -1,7 +1,8 @@
 package com.fs.starfarer.api.impl.campaign.abilities;
 
-import java.awt.Color;
 import java.util.Random;
+
+import java.awt.Color;
 
 import org.lwjgl.util.vector.Vector2f;
 
@@ -279,7 +280,11 @@ public class DistressCallAbility extends BaseDurationAbility implements RouteFle
 		Color highlight = Misc.getHighlightColor();
 		Color bad = Misc.getNegativeHighlightColor();
 		
-		LabelAPI title = tooltip.addTitle(spec.getName());
+		if (!Global.CODEX_TOOLTIP_MODE) {
+			LabelAPI title = tooltip.addTitle(spec.getName());
+		} else {
+			tooltip.addSpacer(-10f);
+		}
 
 		float pad = 10f;
 		
@@ -295,11 +300,13 @@ public class DistressCallAbility extends BaseDurationAbility implements RouteFle
 		tooltip.addPara("The signal is non-directional and carries no data, and is therefore not useful for " +
 						"calling for help in a tactical situation.", pad);
 		
-		if (fleet.isInHyperspace()) {
-			tooltip.addPara("Can not be used in hyperspace.", bad, pad);
-		}
-		if (fleet.getContainingLocation() != null && fleet.getContainingLocation().hasTag(Tags.SYSTEM_ABYSSAL)) {
-			tooltip.addPara("Can not be used in star systems deep within abyssal hyperspace.", bad, pad);
+		if (!Global.CODEX_TOOLTIP_MODE) {
+			if (fleet.isInHyperspace()) {
+				tooltip.addPara("Can not be used in hyperspace.", bad, pad);
+			}
+			if (fleet.getContainingLocation() != null && fleet.getContainingLocation().hasTag(Tags.SYSTEM_ABYSSAL)) {
+				tooltip.addPara("Can not be used in star systems deep within abyssal hyperspace.", bad, pad);
+			}
 		}
 		
 		addIncompatibleToTooltip(tooltip, expanded);
@@ -328,12 +335,16 @@ public class DistressCallAbility extends BaseDurationAbility implements RouteFle
 //			faction = Factions.PIRATES;
 			if (faction == null) return null;
 			
+			//int fuelNeeded = DistressResponse.getNeededFuel(player);
+			
 			CampaignFleetAPI fleet = null;
 			if (Factions.INDEPENDENT.equals(faction)) {
 				WeightedRandomPicker<String> typePicker = new WeightedRandomPicker<String>();
-				typePicker.add(FleetTypes.SCAVENGER_SMALL, 5f);
-				typePicker.add(FleetTypes.SCAVENGER_MEDIUM, 10f);
-				typePicker.add(FleetTypes.SCAVENGER_LARGE, 5f);
+//				typePicker.add(FleetTypes.SCAVENGER_SMALL, 5f); // too little fuel to bother
+				
+				//if (fuelNeeded < 750) {
+				typePicker.add(FleetTypes.SCAVENGER_MEDIUM, 10f); // 500+ fuel
+				typePicker.add(FleetTypes.SCAVENGER_LARGE, 5f); // 1000+ fuel
 				String type = typePicker.pick();
 	
 				fleet = RuinsFleetRouteManager.createScavenger(
@@ -341,12 +352,12 @@ public class DistressCallAbility extends BaseDurationAbility implements RouteFle
 												route, null, false, null);
 			} else {
 				WeightedRandomPicker<PatrolType> picker = new WeightedRandomPicker<PatrolType>();
-				picker.add(PatrolType.FAST, 5f); 
-				picker.add(PatrolType.COMBAT, 10f); 
+//				picker.add(PatrolType.FAST, 5f); 
+//				picker.add(PatrolType.COMBAT, 10f); 
 				picker.add(PatrolType.HEAVY, 5f);
 				PatrolType type = picker.pick();
 				
-				fleet = MilitaryBase.createPatrol(type, faction, route, null, data.inner.getLocationInHyperspace(), route.getRandom());
+				fleet = MilitaryBase.createPatrol(type, 15f, faction, route, null, data.inner.getLocationInHyperspace(), route.getRandom());
 				//fleet = PatrolFleetManager.createPatrolFleet(type, null, faction, data.inner.getLocationInHyperspace(), 0f);
 			}
 			if (fleet == null) return null;

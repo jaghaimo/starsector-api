@@ -1,7 +1,8 @@
 package com.fs.starfarer.api.impl.campaign.missions;
 
-import java.awt.Color;
 import java.util.Map;
+
+import java.awt.Color;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CargoAPI;
@@ -216,6 +217,7 @@ public class BlueprintIntel extends HubMissionWithBarEvent implements ShowLootLi
 		
 		if (entity == null) {
 			requireEntityTags(ReqMode.ANY, Tags.SALVAGEABLE);
+			requireEntityUndiscovered();
 			preferEntityInDirectionOfOtherMissions();
 			entity = pickEntity();
 		}

@@ -119,9 +119,13 @@ public class ReversePolarityToggle extends ToggleAbilityWithCost {
 			status = " (on)";
 		}
 		
-		LabelAPI title = tooltip.addTitle("Reverse Polarity" + status);
-		title.highlightLast(status);
-		title.setHighlightColor(gray);
+		if (!Global.CODEX_TOOLTIP_MODE) {
+			LabelAPI title = tooltip.addTitle("Reverse Polarity" + status);
+			title.highlightLast(status);
+			title.setHighlightColor(gray);
+		} else {
+			tooltip.addSpacer(-10f);
+		}
 
 		float pad = 10f;
 		

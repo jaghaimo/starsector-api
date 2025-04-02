@@ -40,7 +40,7 @@ public class RiftCascadeMineExplosion implements ProximityExplosionEffect {
 		explosion.addDamagedAlready(explosion.getSource());
 		
 		CombatEntityAPI prev = null;
-		for (int i = 0; i < 2; i++) {
+		for (int i = 0; i < params.numRiftsToSpawn; i++) { // 2 by default
 			NEParams p = params.clone();
 			p.radius *= 0.75f + 0.5f * (float) Math.random();
 

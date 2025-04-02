@@ -18,6 +18,7 @@ import com.fs.starfarer.api.impl.campaign.Tuning;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.intel.BaseEventManager;
+import com.fs.starfarer.api.impl.campaign.intel.events.LuddicPathHostileActivityFactor;
 import com.fs.starfarer.api.util.IntervalUtil;
 import com.fs.starfarer.api.util.Misc;
 import com.fs.starfarer.api.util.Pair;
@@ -25,6 +26,9 @@ import com.fs.starfarer.api.util.WeightedRandomPicker;
 
 public class LuddicPathBaseManager extends BaseEventManager {
 
+	public static float LUDDIC_CHURCH_INTEREST_MULT = 0.1f;
+	public static float PLAYER_DEFEATED_PATHER_CRISIS_INTEREST_MULT = 0.5f;
+	
 	public static float AI_CORE_ADMIN_INTEREST = 10f;
 
 	public static final String KEY = "$core_luddicPathBaseManager";
@@ -234,7 +238,11 @@ public class LuddicPathBaseManager extends BaseEventManager {
 		}
 		
 		if (market.getFactionId().equals(Factions.LUDDIC_CHURCH)) {
-			total *= 0.1f;
+			total *= LUDDIC_CHURCH_INTEREST_MULT;
+		}
+		
+		if (market.isPlayerOwned() && LuddicPathHostileActivityFactor.isPlayerDefeatedPatherExpedition()) {
+			total *= PLAYER_DEFEATED_PATHER_CRISIS_INTEREST_MULT;
 		}
 		
 		return total;

@@ -244,7 +244,7 @@ public class DamageControl {
 	
 	public static class Level8Desc implements DescriptionSkillEffect {
 		public String getString() {
-			return "\n\n*Normally, a damaged but functional module would not be repaired until 5 seconds have passed "
+			return "\n\n*Normally, a damaged but functional module will not be repaired until 5 seconds have passed "
 					+ "without it taking damage.";
 		}
 		public Color[] getHighlightColors() {

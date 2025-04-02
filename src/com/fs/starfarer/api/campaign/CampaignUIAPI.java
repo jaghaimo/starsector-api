@@ -1,7 +1,8 @@
 package com.fs.starfarer.api.campaign;
 
-import java.awt.Color;
 import java.util.List;
+
+import java.awt.Color;
 
 import com.fs.starfarer.api.Script;
 import com.fs.starfarer.api.campaign.comm.CommMessageAPI.MessageClickAction;
@@ -16,6 +17,10 @@ public interface CampaignUIAPI {
 		OPEN,
 		SNEAK,
 		NONE,
+	}
+	
+	public static interface DismissDialogDelegate {
+		void dialogDismissed();
 	}
 	
 	MessageDisplayAPI getMessageDisplay();
@@ -83,10 +88,10 @@ public interface CampaignUIAPI {
 	CoreUITabId getCurrentCoreTab();
 
 	void cmdExitWithoutSaving();
-	void cmdSaveAndExit();
+	boolean cmdSaveAndExit();
 	void cmdSettings();
 	void cmdSaveCopy();
-	void cmdSave();
+	boolean cmdSave();
 	void cmdLoad();
 	void cmdCodex();
 
@@ -142,6 +147,15 @@ public interface CampaignUIAPI {
 	void setHideUI(boolean hideUI);
 
 	void setZoomFactor(float zoomFactor);
+
+	/**
+	 * If the game is currently showing a dialog of any ort: does not do anything.
+	 */
+	void autosave();
+
+	boolean showInteractionDialogFromCargo(InteractionDialogPlugin plugin, SectorEntityToken interactionTarget, DismissDialogDelegate delegate);
+
+	void restartEncounterMusic(SectorEntityToken interactionTarget);
 
 
 }

@@ -1,11 +1,12 @@
 package com.fs.starfarer.api.impl.campaign.econ;
 
-import java.awt.Color;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+
+import java.awt.Color;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
@@ -179,7 +180,9 @@ public class BaseMarketConditionPlugin implements MarketConditionPlugin {
 				tokens.put("$marketSystem", "hyperspace");
 			}
 			tokens.put("$marketName", market.getName());
+			tokens.put("$MarketName", Misc.ucFirst(market.getName()));
 			tokens.put("$market", market.getName());
+			tokens.put("$Market", Misc.ucFirst(market.getName()));
 		}
 		
 		CampaignFleetAPI playerFleet = Global.getSector().getPlayerFleet();
@@ -238,8 +241,10 @@ public class BaseMarketConditionPlugin implements MarketConditionPlugin {
 	public void createTooltip(TooltipMakerAPI tooltip, boolean expanded) {
 		float opad = 10f;
 		
-		Color color = market.getTextColorForFactionOrPlanet();
-		tooltip.addTitle(condition.getName(), color);
+		if (!Global.CODEX_TOOLTIP_MODE) {
+			Color color = market.getTextColorForFactionOrPlanet();
+			tooltip.addTitle(condition.getName(), color);
+		}
 		
 		String text = condition.getSpec().getDesc();
 		Map<String, String> tokens = getTokenReplacements();

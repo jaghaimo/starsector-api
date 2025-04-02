@@ -10,6 +10,7 @@ import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.CargoAPI;
 import com.fs.starfarer.api.campaign.CargoAPI.CargoItemType;
 import com.fs.starfarer.api.campaign.InteractionDialogAPI;
+import com.fs.starfarer.api.campaign.LocationAPI;
 import com.fs.starfarer.api.campaign.OptionPanelAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
@@ -77,8 +78,28 @@ public class GateHaulerCMD extends BaseCommandPlugin {
 			return canDeploy();
 		} else if (command.equals("deploy")) {
 			deploy();
+		} else if (command.equals("isInCurrentSystem")) {
+			return isInCurrentSystem();
+		} else if (command.equals("wasDeployedToCurrentSystem")) {
+			return wasDeployedToCurrentSystem();
 		}
 		return true;
+	}
+	
+	public boolean wasDeployedToCurrentSystem() {
+		LocationAPI loc = Global.getSector().getCurrentLocation();
+		if (loc == null) return false;
+		return loc.getMemoryWithoutUpdate().getBoolean("$deployedGateHaulerHere");
+		
+	}
+	public boolean isInCurrentSystem() {
+		GateHaulerIntel intel = GateHaulerIntel.get(entity);
+		if (intel != null) {
+			if (intel.getAction() == null) {
+				return intel.getGateHauler().getContainingLocation() == Global.getSector().getCurrentLocation();
+			}
+		}
+		return false;
 	}
 	
 	public void deploy() {

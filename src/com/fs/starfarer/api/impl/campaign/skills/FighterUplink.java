@@ -22,6 +22,8 @@ public class FighterUplink {
 	public static float MAX_SPEED_PERCENT = 20;
 	public static float CREW_LOSS_PERCENT = 50;
 	
+	public static float DAMAGE_BONUS_PERCENT = 10;
+	
 	public static float TARGET_LEADING_BONUS = 50f;
 	
 	public static float OFFICER_MULT = 1.5f;
@@ -98,6 +100,12 @@ public class FighterUplink {
 			float aimBonus = getAimBonus(stats);
 			if (isOfficer(stats)) aimBonus *= OFFICER_MULT;
 			stats.getAutofireAimAccuracy().modifyFlat(id, aimBonus * 0.01f);
+			
+			float damBonus = getDamageBonus(stats);
+			if (isOfficer(stats)) damBonus *= OFFICER_MULT;
+			stats.getBallisticWeaponDamageMult().modifyPercent(id, damBonus);
+			stats.getEnergyWeaponDamageMult().modifyPercent(id, damBonus);
+			stats.getMissileWeaponDamageMult().modifyPercent(id, damBonus);
 		}
 		
 		public void unapply(MutableShipStatsAPI stats, HullSize hullSize, String id) {
@@ -110,6 +118,10 @@ public class FighterUplink {
 			stats.getDeceleration().unmodifyPercent(id);
 			
 			stats.getAutofireAimAccuracy().unmodifyFlat(id);
+			
+			stats.getBallisticWeaponDamageMult().unmodifyPercent(id);
+			stats.getEnergyWeaponDamageMult().unmodifyPercent(id);
+			stats.getMissileWeaponDamageMult().unmodifyPercent(id);
 		}
 		
 		public String getEffectDescription(float level) {
@@ -168,6 +180,24 @@ public class FighterUplink {
 			return bonus;
 		}
 		
+		protected float getDamageBonus(MutableShipStatsAPI stats) {
+			FleetDataAPI data = getFleetData(stats);
+			return getDamageBonus(data);
+		}
+		
+		protected float getDamageBonus(FleetDataAPI data) {
+			if (data == null) return DAMAGE_BONUS_PERCENT;
+			String key = "fighter_uplink_damage";
+			Float bonus = (Float) data.getCacheClearedOnSync().get(key);
+			if (bonus != null) return bonus;
+			
+			float bays = getNumFighterBays(data);
+			bonus = getThresholdBasedRoundedBonus(DAMAGE_BONUS_PERCENT, bays, FIGHTER_BAYS_THRESHOLD);
+			
+			data.getCacheClearedOnSync().put(key, bonus);
+			return bonus;
+		}
+		
 		public void createCustomDescription(MutableCharacterStatsAPI stats, SkillSpecAPI skill, 
 											TooltipMakerAPI info, float width) {
 			init(stats, skill);
@@ -181,6 +211,7 @@ public class FighterUplink {
 			//float damBonus = getDamageBonus(data);
 			float speedBonus = getMaxSpeedBonus(data);
 			float aimBonus = getAimBonus(data);
+			float damBonus = getDamageBonus(data);
 			//float bays = getNumFighterBays(data);
 			
 //			info.addPara("+%s damage dealt (maximum: %s)", 0f, hc, hc,
@@ -196,6 +227,9 @@ public class FighterUplink {
 			info.addPara("+%s target leading accuracy (maximum: %s)", 0f, hc, hc,
 					"" + (int) aimBonus + "%",
 					"" + (int) TARGET_LEADING_BONUS + "%");
+			info.addPara("+%s damage dealt (maximum: %s)", 0f, hc, hc,
+					"" + (int) damBonus + "%",
+					"" + (int) DAMAGE_BONUS_PERCENT + "%");			
 			addFighterBayThresholdInfo(info, data);
 			info.addPara(indent + "Effect increased by %s for ships with offcers, including flagship",
 					0f, tc, hc, 

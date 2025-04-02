@@ -46,7 +46,9 @@ public abstract class DisposableFleetManager extends PlayerVisibleFleetManager {
 	}
 	
 	protected String getSpawnKey(StarSystemAPI system) {
-		return "$core_recentSpawn_" + getSpawnId() + "_" + system.getName();
+		String sysId = system.getOptionalUniqueId();
+		if (sysId == null) sysId = system.getName();
+		return "$core_recentSpawn_" + getSpawnId() + "_" + sysId;
 	}
 	
 	protected void addRecentSpawn(StarSystemAPI system) {
@@ -59,6 +61,7 @@ public abstract class DisposableFleetManager extends PlayerVisibleFleetManager {
 	}
 	
 	protected float getRecentSpawnsForSystem(StarSystemAPI system) {
+		if (system == null) return 0f;
 		String key = getSpawnKey(system);
 		float e = Global.getSector().getMemoryWithoutUpdate().getExpire(key);
 		if (e < 0) e = 0;
@@ -101,6 +104,10 @@ public abstract class DisposableFleetManager extends PlayerVisibleFleetManager {
 	protected float spawnRateMult = 1f;
 	protected StarSystemAPI currSpawnLoc = null;
 	
+	protected void currSpawnLocChanged() {
+		
+	}
+	
 	@Override
 	public void advance(float amount) {
 		if (TutorialMissionIntel.isTutorialInProgress()) {
@@ -123,21 +130,24 @@ public abstract class DisposableFleetManager extends PlayerVisibleFleetManager {
 			StarSystemAPI closest = pickCurrentSpawnLocation();
 			if (closest != currSpawnLoc) {
 				currSpawnLoc = closest;
+				currSpawnLocChanged();
 			}
 			
-			//List<ManagedFleetData> remove = new ArrayList<ManagedFleetData>();
-			for (ManagedFleetData data : active) {
-				if (Misc.isFleetReturningToDespawn(data.fleet)) continue;
-				// if it's player-visible/in the currently active location,
-				// make it return to source when it's been beat up enough
-				// to be worth despawning
-				//if (isOkToDespawnAssumingNotPlayerVisible(data.fleet)) {
-				
-				float fp = data.fleet.getFleetPoints();
-				float spawnFP = data.fleet.getMemoryWithoutUpdate().getFloat(KEY_SPAWN_FP);
-				if (fp < spawnFP * 0.33f) {
-					Misc.giveStandardReturnToSourceAssignments(data.fleet);
-					//remove.add(data);
+			if (withReturnToSourceAssignments()) {
+				//List<ManagedFleetData> remove = new ArrayList<ManagedFleetData>();
+				for (ManagedFleetData data : active) {
+					if (Misc.isFleetReturningToDespawn(data.fleet)) continue;
+					// if it's player-visible/in the currently active location,
+					// make it return to source when it's been beat up enough
+					// to be worth despawning
+					//if (isOkToDespawnAssumingNotPlayerVisible(data.fleet)) {
+					
+					float fp = data.fleet.getFleetPoints();
+					float spawnFP = data.fleet.getMemoryWithoutUpdate().getFloat(KEY_SPAWN_FP);
+					if (fp < spawnFP * 0.33f) {
+						Misc.giveStandardReturnToSourceAssignments(data.fleet);
+						//remove.add(data);
+					}
 				}
 			}
 			
@@ -145,6 +155,10 @@ public abstract class DisposableFleetManager extends PlayerVisibleFleetManager {
 			
 			updateSpawnRateMult();
 		}
+	}
+	
+	protected boolean withReturnToSourceAssignments() {
+		return true;
 	}
 	
 	public StarSystemAPI getCurrSpawnLoc() {
@@ -277,8 +291,16 @@ public abstract class DisposableFleetManager extends PlayerVisibleFleetManager {
 	protected void setLocationAndOrders(CampaignFleetAPI fleet, float probStartInHyper, float probStayInHyper) {
 		StarSystemAPI system = getCurrSpawnLoc();
 		
-		if ((float) Math.random() < probStartInHyper || 
-				(Global.getSector().getPlayerFleet() != null && Global.getSector().getPlayerFleet().isInHyperspace())) {
+		boolean forceStartInHyper = false;
+		if (currSpawnLoc != null) {
+			float recentSpawns = getRecentSpawnsForSystem(currSpawnLoc);
+			float max = getDesiredNumFleetsForSpawnLocation();
+			if (recentSpawns > max * 0.75f || currSpawnLoc.getDaysSinceLastPlayerVisit() < 30f) {
+				forceStartInHyper = Global.getSector().getPlayerFleet() != null && Global.getSector().getPlayerFleet().isInHyperspace();
+			}
+		}
+		
+		if ((float) Math.random() < probStartInHyper || forceStartInHyper) {
 			Global.getSector().getHyperspace().addEntity(fleet);
 		} else {
 			system.addEntity(fleet);

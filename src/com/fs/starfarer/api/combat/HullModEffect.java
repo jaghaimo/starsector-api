@@ -3,6 +3,7 @@ package com.fs.starfarer.api.combat;
 import java.awt.Color;
 
 import com.fs.starfarer.api.campaign.CampaignUIAPI.CoreUITradeMode;
+import com.fs.starfarer.api.campaign.CargoStackAPI;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
@@ -11,7 +12,7 @@ import com.fs.starfarer.api.ui.TooltipMakerAPI;
 
 /**
  * Note: the effect class is instantiated once per application session.
- * Storing campaign data in members of an implementing class is a bad idea,
+ * Storing campaign data in data members of an implementing class is a bad idea (will likely cause memory leaks),
  * use SectorAPI.getPersistentData() instead.
  * @author Alex Mosolov
  *
@@ -121,6 +122,11 @@ public interface HullModEffect {
 			boolean isForModSpec, boolean isForBuildInList);
 	boolean hasSModEffect();
 	
+	
+	void addRequiredItemSection(TooltipMakerAPI tooltip, 
+			FleetMemberAPI member, ShipVariantAPI currentVariant, MarketAPI dockedAt,
+			float width, boolean isForModSpec);
+	
 	String getSModDescriptionParam(int index, HullSize hullSize);
 	String getSModDescriptionParam(int index, HullSize hullSize, ShipAPI ship);
 	
@@ -128,6 +134,17 @@ public interface HullModEffect {
 	boolean isSModEffectAPenalty();
 	
 	boolean showInRefitScreenModPickerFor(ShipAPI ship);
+
+	
+	default CargoStackAPI getRequiredItem() {
+		return null;
+	}
+	
+	/**
+	 * Only called once. Not called again if the ship is removed and then added back to the engine.
+	 */
+	default void applyEffectsAfterShipAddedToCombatEngine(ShipAPI ship, String id) {
+	}
 }
 
 

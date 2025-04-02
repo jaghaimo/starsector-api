@@ -13,6 +13,7 @@ import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.CargoAPI;
 import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.campaign.FleetInflater;
+import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.econ.SubmarketAPI;
 import com.fs.starfarer.api.characters.MutableCharacterStatsAPI;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
@@ -438,7 +439,9 @@ public class DefaultFleetInflater implements FleetInflater, AutofitPluginDelegat
 				}
 			}
 			
-			
+//			if (member.getHullId().equals("grendel")) {
+//				System.out.println("efwefwef");
+//			}
 			ShipVariantAPI target = member.getVariant();
 			if (target.getOriginalVariant() != null) {
 				// needed if inflating the same fleet repeatedly to pick up weapon availability changes etc
@@ -701,5 +704,16 @@ public class DefaultFleetInflater implements FleetInflater, AutofitPluginDelegat
 
 	public boolean isAllowSlightRandomization() {
 		return true;
+	}
+
+
+	@Override
+	public MarketAPI getMarket() {
+		return null;
+	}
+
+	@Override
+	public FleetMemberAPI getFleetMember() {
+		return null;
 	}
 }

@@ -35,8 +35,8 @@ public class ItemEffectsRepo {
 	public static String HABITABLE = "habitable";
 	public static String GAS_GIANT = "gas giant";
 	public static String NO_ATMOSPHERE = "no atmosphere";
-	public static String NOT_EXTREME_WEATHER = "not extreme weather";
-	public static String NOT_EXTREME_TECTONIC_ACTIVITY = "not extreme tectonic activity";
+	public static String NOT_EXTREME_WEATHER = "no extreme weather";
+	public static String NOT_EXTREME_TECTONIC_ACTIVITY = "no extreme tectonic activity";
 	public static String NO_TRANSPLUTONIC_ORE_DEPOSITS = "no transplutonic ore deposits";
 	public static String NO_VOLATILES_DEPOSITS = "no volatiles deposits";
 	public static String HOT_OR_EXTREME_HEAT = "hot or extreme heat";
@@ -178,16 +178,42 @@ public class ItemEffectsRepo {
 			}
 			protected void addItemDescriptionImpl(Industry industry, TooltipMakerAPI text, SpecialItemData data,
 				   	  							  InstallableItemDescriptionMode mode, String pre, float pad) {
+//				List<String> conds = new ArrayList<String>();
+//				for (String id : FUSION_LAMP_CONDITIONS) {
+//					MarketConditionSpecAPI mc = Global.getSettings().getMarketConditionSpec(id);
+//					conds.add(mc.getName());
+//				}
+//				text.addPara(pre + "Counters the effects of " + Misc.getAndJoined(conds) + ". Increases heat on non-cold planets. " +  
+//						"Adds demand for %s units of volatiles.",
+//						pad, Misc.getHighlightColor(), 
+//						"" + FUSION_LAMP_VOLATILES);
+				text.addPara(pre + "Increases heat on non-cold planets. " +  
+						"Adds demand for %s units of volatiles.",
+						pad, Misc.getHighlightColor(), 
+						"" + FUSION_LAMP_VOLATILES);				
+			}
+			@Override
+			public String getSpecialNotesName() {
+				return "Counters";
+			}
+			@Override
+			public List<String> getSpecialNotes(Industry industry) {
 				List<String> conds = new ArrayList<String>();
 				for (String id : FUSION_LAMP_CONDITIONS) {
 					MarketConditionSpecAPI mc = Global.getSettings().getMarketConditionSpec(id);
-					conds.add(mc.getName());
+					conds.add(mc.getName().toLowerCase());
 				}
-				text.addPara(pre + "Counters the effects of " + Misc.getAndJoined(conds) + ". Increases heat on non-cold planets. " +  
-						"Adds demand for %s units of volatiles.",
-						pad, Misc.getHighlightColor(), 
-						"" + FUSION_LAMP_VOLATILES);
+				return conds;
 			}
+			@Override
+			public Set<String> getConditionsRelatedToRequirements(Industry industry) {
+				Set<String> list = super.getConditionsRelatedToRequirements(industry);
+				list.addAll(FUSION_LAMP_CONDITIONS);
+				list.add(Conditions.HOT);
+				list.add(Conditions.VERY_HOT);
+				return list;
+			}
+			
 		});
 		put(Items.CORRUPTED_NANOFORGE, new BoostIndustryInstallableItemEffect(
 									Items.CORRUPTED_NANOFORGE, CORRUPTED_NANOFORGE_PROD, 0) {

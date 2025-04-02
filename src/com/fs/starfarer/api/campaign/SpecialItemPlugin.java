@@ -1,16 +1,24 @@
 package com.fs.starfarer.api.campaign;
 
-import java.awt.Color;
 import java.util.Random;
+
+import java.awt.Color;
 
 import org.json.JSONException;
 
+import com.fs.starfarer.api.campaign.CargoAPI.CargoItemType;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.econ.SubmarketAPI;
 import com.fs.starfarer.api.graphics.SpriteAPI;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 
 public interface SpecialItemPlugin {
+	public static interface RightClickActionHelper {
+		void removeFromClickedStackFirst(int num);
+		void removeFromAnyStack(CargoItemType type, Object data, int num);
+		void addItems(CargoItemType type, Object data, float quantity);
+		float getNumItems(CargoItemType type, Object data);
+	}
 	
 	public interface SpecialItemRendererAPI {
 		void renderSchematic(SpriteAPI sprite, float cx, float cy, float alphaMult);
@@ -46,7 +54,13 @@ public interface SpecialItemPlugin {
 	
 	boolean hasRightClickAction();
 	void performRightClickAction();
+	void performRightClickAction(RightClickActionHelper helper);
+	
 	boolean shouldRemoveOnRightClickAction();
+	
+//	int getNumToRemove();
+//	boolean shouldRemoveCalledAfterRightClickAction();
+//	void setReadOnlyCargoForRightClickAction(CargoAPI cargo);
 	
 	boolean isTooltipExpandable();
 	float getTooltipWidth();

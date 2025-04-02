@@ -1,8 +1,9 @@
 package com.fs.starfarer.api.impl.combat;
 
-import java.awt.Color;
 import java.util.Arrays;
 import java.util.EnumSet;
+
+import java.awt.Color;
 
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.util.vector.Vector2f;
@@ -22,6 +23,7 @@ public class NegativeExplosionVisual extends BaseCombatLayeredRenderingPlugin {
 
 	public static class NEParams implements Cloneable {
 		//public float fadeIn = 0.25f;
+		public int numRiftsToSpawn = 2;
 		public float fadeIn = 0.1f;
 		public float fadeOut = 0.5f;
 		public float spawnHitGlowAt = 0f;
@@ -29,11 +31,15 @@ public class NegativeExplosionVisual extends BaseCombatLayeredRenderingPlugin {
 		public float radius = 20f;
 		public float thickness = 25f;
 		public float noiseMag = 1f;
+		public float noiseMult = 1f;
 		public float noisePeriod = 0.1f;
 		public boolean withHitGlow = true;
+		public boolean withNegativeParticles = true;
 		public Color color = new Color(100,100,255);
 		public Color underglow = RiftCascadeEffect.EXPLOSION_UNDERCOLOR;
+		public Color blackColor = Color.black;
 		public Color invertForDarkening = null;
+		public boolean additiveBlend = false;
 		
 		public NEParams() {
 		}
@@ -139,7 +145,7 @@ public class NegativeExplosionVisual extends BaseCombatLayeredRenderingPlugin {
 			//c = Misc.setAlpha(c, 80);
 			//c = Misc.scaleAlpha(c, 0.5f);
 			float durMult = 1f;
-			for (int i = 0; i < 7; i++) {
+			for (int i = 0; i < 7 && p.withNegativeParticles; i++) {
 				dur = 4f + 4f * (float) Math.random();
 				//dur = p.fadeIn + p.fadeOut + 3f + (float) Math.random() * 2f;
 				dur *= durMult;
@@ -175,16 +181,18 @@ public class NegativeExplosionVisual extends BaseCombatLayeredRenderingPlugin {
 			//float sizeMult = p.hitGlowSizeMult;
 			
 			c = p.underglow;
-			//c = Misc.setAlpha(c, 255);
-			for (int i = 0; i < 15; i++) {
-				//rampUp = (float) Math.random() * 0.05f + 0.05f;
-				Vector2f loc = new Vector2f(point);
-				loc = Misc.getPointWithinRadius(loc, size * 1f);
-				//loc = Misc.getPointAtRadius(loc, size * 1f);
-				float s = size * 3f * (0.25f + (float) Math.random() * 0.25f);
-				//s *= 0.5f;
-//				engine.addSmoothParticle(loc, entity.getVelocity(), s, 1f, rampUp, dur, c);
-				engine.addNebulaParticle(loc, entity.getVelocity(), s, 1.5f, rampUp, 0f, dur, c);
+			if (c != null) {
+				//c = Misc.setAlpha(c, 255);
+				for (int i = 0; i < 15; i++) {
+					//rampUp = (float) Math.random() * 0.05f + 0.05f;
+					Vector2f loc = new Vector2f(point);
+					loc = Misc.getPointWithinRadius(loc, size * 1f);
+					//loc = Misc.getPointAtRadius(loc, size * 1f);
+					float s = size * 3f * (0.25f + (float) Math.random() * 0.25f);
+					//s *= 0.5f;
+	//				engine.addSmoothParticle(loc, entity.getVelocity(), s, 1f, rampUp, dur, c);
+					engine.addNebulaParticle(loc, entity.getVelocity(), s, 1.5f, rampUp, 0f, dur, c);
+				}
 			}
 			spawnedHitGlow = true;
 		}
@@ -248,17 +256,18 @@ public class NegativeExplosionVisual extends BaseCombatLayeredRenderingPlugin {
 				circleAlpha = alphaMult * 2f;
 			}
 			float tCircleBorder = 1f;
-			renderCircle(x, y, r, circleAlpha, segments, Color.black);
-			renderAtmosphere(x, y, r, tCircleBorder, circleAlpha, segments, atmosphereTex, noise, Color.black, false);
+			renderCircle(x, y, r, circleAlpha, segments, p.blackColor);
+			renderAtmosphere(x, y, r, tCircleBorder, circleAlpha, segments, atmosphereTex, noise, p.blackColor, p.additiveBlend);
 		}
 		//GL14.glBlendEquation(GL14.GL_FUNC_ADD);
 		
 //		GL11.glPopMatrix();
 	}
-
+	
 	
 	private void renderCircle(float x, float y, float radius, float alphaMult, int segments, Color color) {
-		if (fader.isFadingIn()) alphaMult = 1f;
+		if (fader.isFadingIn() && p.blackColor == Color.black) alphaMult = 1f;
+		//if (fader.isFadingIn()) alphaMult = 1f;
 		
 		float startRad = (float) Math.toRadians(0);
 		float endRad = (float) Math.toRadians(360);
@@ -271,7 +280,11 @@ public class NegativeExplosionVisual extends BaseCombatLayeredRenderingPlugin {
 		GL11.glDisable(GL11.GL_TEXTURE_2D);
 		
 		GL11.glEnable(GL11.GL_BLEND);
-		GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
+		if (p.additiveBlend) {
+			GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE);
+		} else {
+			GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
+		}
 		
 		
 		GL11.glColor4ub((byte)color.getRed(),
@@ -288,7 +301,7 @@ public class NegativeExplosionVisual extends BaseCombatLayeredRenderingPlugin {
 			float cos = (float) Math.cos(theta);
 			float sin = (float) Math.sin(theta);
 			
-			float m1 = 0.75f + 0.65f * noise[(int)i];
+			float m1 = 0.75f + 0.65f * noise[(int)i] * p.noiseMult;
 			if (p.noiseMag <= 0) {
 				m1 = 1f;
 			}
@@ -343,7 +356,7 @@ public class NegativeExplosionVisual extends BaseCombatLayeredRenderingPlugin {
 			float cos = (float) Math.cos(theta);
 			float sin = (float) Math.sin(theta);
 			
-			float m1 = 0.75f + 0.65f * noise[(int)i];
+			float m1 = 0.75f + 0.65f * noise[(int)i] * p.noiseMult;
 			float m2 = m1;
 			if (p.noiseMag <= 0) {
 				m1 = 1f;
@@ -368,6 +381,11 @@ public class NegativeExplosionVisual extends BaseCombatLayeredRenderingPlugin {
 		GL11.glEnd();
 		GL11.glPopMatrix();
 	}
+
+	public FaderUtil getFader() {
+		return fader;
+	}
+	
 }
 
 

@@ -4,9 +4,21 @@ public class HullMods {
 
 	//public static final String PDJAMMER = "pdjammer";
 	
+	public static final String THREAT_HULLMOD = "threat_hullmod";
+	public static final String DWELLER_HULLMOD = "dweller_hullmod";
+	public static final String SHROUDED_MANTLE = "shrouded_mantle";
+	
+	
+	
 	public static final String ANDRADA_MODS = "andrada_mods";
 	
+	public static final String GROUND_SUPPORT = "ground_support";
+	public static final String ADVANCED_GROUND_SUPPORT = "advanced_ground_support";
+	
 	public static final String HIGH_SCATTER_AMP = "high_scatter_amp";
+	
+	public static final String BALLISTIC_RANGEFINDER = "ballistic_rangefinder";
+	public static final String COHERER = "coherer";
 	
 	public static final String DETACH_WHEN_INACTIVE_SUBMODULE = "detach_when_inactive_submodule";
 	
@@ -103,6 +115,8 @@ public class HullMods {
 	
 	public static final String VASTBULK = "vastbulk";
 	
+	public static final String VAST_HANGAR = "vast_hangar";
+	
 	public static final String ADDITIONAL_BERTHING = "additional_berthing";
 	public static final String AUXILIARY_FUEL_TANKS = "auxiliary_fuel_tanks";
 	public static final String EXPANDED_CARGO_HOLDS = "expanded_cargo_holds";
@@ -114,6 +128,10 @@ public class HullMods {
 	public static final String HIGH_FREQUENCY_ATTRACTOR = "high_frequency_attractor";
 	
 	public static final String FLUX_SHUNT = "fluxshunt";
+	
+	public static final String FRAGMENT_SWARM = "fragment_swarm";
+	public static final String SECONDARY_FABRICATOR = "secondary_fabricator";
+	public static final String FRAGMENT_COORDINATOR = "fragment_coordinator";
 	
 	
 	

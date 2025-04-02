@@ -172,6 +172,9 @@ public class FleetFactoryV3 {
 			
 			market.getStats().getDynamic().getMod(Stats.COMBAT_FLEET_SIZE_MULT).modifyFlat("fake", 1f);
 			
+			if (params.factionOverride != null) {
+				market.setCachedFaction(params.factionOverride);
+			}
 //			CommodityOnMarketAPI com = market.getCommodityData(Commodities.SHIPS);
 //			com.setMaxSupply(6);
 //			com.setMaxDemand(6);
@@ -207,7 +210,14 @@ public class FleetFactoryV3 {
 		ShipPickMode mode = Misc.getShipPickMode(market, factionId);
 		if (params.modeOverride != null) mode = params.modeOverride;
 		
-		CampaignFleetAPI fleet = createEmptyFleet(factionId, params.fleetType, market);
+		CampaignFleetAPI fleet = null;
+		
+		if (params.factionOverride != null) {
+			fleet = Global.getFactory().createEmptyFleet(params.factionOverride, true);
+			fleet.setName(params.factionOverride.getFleetTypeName(params.fleetType));
+		} else {
+			fleet = createEmptyFleet(factionId, params.fleetType, market);
+		}
 		fleet.getFleetData().setOnlySyncMemberLists(true);
 		
 		Misc.getSalvageSeed(fleet); // will set it
@@ -870,12 +880,17 @@ public class FleetFactoryV3 {
 	
 	
 	public static void addCommanderAndOfficersV2(CampaignFleetAPI fleet, FleetParamsV3 params, Random random) {
+		addCommanderAndOfficersV2(fleet, params, random, false, false);
+	}
+	public static void addCommanderAndOfficersV2(CampaignFleetAPI fleet, FleetParamsV3 params, Random random, boolean simFleet, boolean putOfficersOnCivShips) {
 		
-		GenerateFleetOfficersPickData pickData = new GenerateFleetOfficersPickData(fleet, params);
-		GenerateFleetOfficersPlugin genPlugin = Global.getSector().getGenericPlugins().pickPlugin(GenerateFleetOfficersPlugin.class, pickData);
-		if (genPlugin != null) {
-			genPlugin.addCommanderAndOfficers(fleet, params, random);
-			return;
+		if (!simFleet) {
+			GenerateFleetOfficersPickData pickData = new GenerateFleetOfficersPickData(fleet, params);
+			GenerateFleetOfficersPlugin genPlugin = Global.getSector().getGenericPlugins().pickPlugin(GenerateFleetOfficersPlugin.class, pickData);
+			if (genPlugin != null) {
+				genPlugin.addCommanderAndOfficers(fleet, params, random);
+				return;
+			}
 		}
 
 		FactionAPI faction = fleet.getFaction();
@@ -889,7 +904,7 @@ public class FleetFactoryV3 {
 		float combatPoints = 0f;
 		float combatShips = 0f;
 		for (FleetMemberAPI member : members) {
-			if (member.isCivilian()) continue;
+			if (member.isCivilian() && !putOfficersOnCivShips) continue;
 			if (member.isFighterWing()) continue;
 			combatPoints += member.getFleetPointCost();
 			combatShips++;
@@ -964,7 +979,7 @@ public class FleetFactoryV3 {
 		for (FleetMemberAPI member : members) {
 			if (member.isFighterWing()) continue;
 			if (member.isFlagship()) continue;
-			if (member.isCivilian()) continue;
+			if (member.isCivilian() && !putOfficersOnCivShips) continue;
 			if (!member.getCaptain().isDefault()) continue;
 			int size = member.getHullSpec().getHullSize().ordinal();
 			if (size > maxSize) {
@@ -975,7 +990,7 @@ public class FleetFactoryV3 {
 		for (FleetMemberAPI member : members) {
 			if (member.isFighterWing()) continue;
 			if (member.isFlagship()) continue;
-			if (member.isCivilian()) continue;
+			if (member.isCivilian() && !putOfficersOnCivShips) continue;
 			if (!member.getCaptain().isDefault()) continue;
 			
 			float weight = (float) member.getFleetPointCost();
@@ -996,9 +1011,12 @@ public class FleetFactoryV3 {
 		
 		
 		FleetMemberAPI flagship = flagshipPicker.pickAndRemove();
-		picker.remove(flagship);
+		if (!simFleet) picker.remove(flagship);
 		int commanderLevel = maxOfficerLevel;
 		int commanderLevelLimit = maxCommanderLevel;
+//		if (simFleet) {
+//			commanderLevelLimit = maxOfficerLevel;
+//		}
 //		if (commanderLevelLimit > params.officerLevelLimit) commanderLevelLimit = params.officerLevelLimit;
 //		if (commanderLevelLimit > maxCommanderLevel) commanderLevelLimit = maxCommanderLevel;
 		if (params.commanderLevelLimit != 0) {
@@ -1020,7 +1038,11 @@ public class FleetFactoryV3 {
 			commander.setPostId(Ranks.POST_FLEET_COMMANDER);
 		}
 		fleet.setCommander(commander);
-		fleet.getFleetData().setFlagship(flagship);
+		if (simFleet) {
+			//numOfficers++;
+		} else {
+			fleet.getFleetData().setFlagship(flagship);
+		}
 		
 		int commanderOfficerLevelBonus = (int) commander.getStats().getDynamic().getMod(Stats.OFFICER_MAX_LEVEL_MOD).computeEffective(0);
 		int officerLevelLimit = plugin.getMaxLevel(null) + commanderOfficerLevelBonus;
@@ -1047,6 +1069,9 @@ public class FleetFactoryV3 {
 				 level = (int) Math.ceil((float) level * Global.getSettings().getFloat("easyOfficerLevelMult"));
 			}
 			if (level < 1) level = 1;
+//			if (level >= 7) {
+//				System.out.println("4fefewfwe");
+//			}
 			if (level > officerLevelLimit) level = officerLevelLimit;
 			if (params.commander != null && params.commander.isPlayer()) {
 				level = (int) params.commander.getStats().getDynamic().getMod(Stats.OFFICER_MAX_LEVEL_MOD).computeEffective(Global.getSettings().getInt("officerMaxLevel"));
@@ -1058,6 +1083,10 @@ public class FleetFactoryV3 {
 				person.setPersonality(Personalities.CAUTIOUS);
 			}
 			
+//			if (person.getStats().getLevel()  >= 7) {
+//				System.out.println("4fefewfwe");
+//			}
+
 			if (debug) {
 				System.out.println("Added level " + person.getStats().getLevel() + " officer");
 			}

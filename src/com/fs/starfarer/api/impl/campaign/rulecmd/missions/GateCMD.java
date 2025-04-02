@@ -14,6 +14,7 @@ import com.fs.starfarer.api.campaign.JumpPointAPI.JumpDestination;
 import com.fs.starfarer.api.campaign.LocationAPI;
 import com.fs.starfarer.api.campaign.OptionPanelAPI;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
+import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.campaign.TextPanelAPI;
 import com.fs.starfarer.api.campaign.listeners.ListenerUtil;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
@@ -174,8 +175,23 @@ public class GateCMD extends BaseCommandPlugin {
 	
 	public static void explode(SectorEntityToken gate) {
 		gate.getContainingLocation().addScript(new GateExplosionScript(gate));
+		
+		// If the player blew up the Gate at a responsible distance from the core worlds, take note.
+		// Askonia is near the center of the core worlds, so use distance to there to gauge.
+		
+		if(Global.getSector().getMemoryWithoutUpdate().contains("$gaATG_useJanusPrototype") && 
+			!Global.getSector().getMemoryWithoutUpdate().contains("$ggaATG_firstJanusResults")) {
+			StarSystemAPI askonia = Global.getSector().getStarSystem("askonia");
+			if(askonia != null) {
+				float dist = Misc.getDistance(gate.getLocationInHyperspace(), askonia.getLocation());
+				System.out.print("dist = " + dist);
+				if(dist > 12000.0f) {
+					Global.getSector().getMemoryWithoutUpdate().set("$gaATG_didRemoteFirstJanusTest", true );
+				}
+			}
+		}
+		
 	}
-	
 }
 
 

@@ -3,17 +3,20 @@
  */
 package com.fs.starfarer.api.impl.campaign.econ.impl;
 
-import java.awt.Color;
 import java.util.ArrayList;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
+
+import java.awt.Color;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.SpecialItemData;
 import com.fs.starfarer.api.campaign.SpecialItemSpecAPI;
 import com.fs.starfarer.api.campaign.econ.Industry;
-import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.campaign.econ.InstallableIndustryItemPlugin.InstallableItemDescriptionMode;
+import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Conditions;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
@@ -145,9 +148,46 @@ public abstract class BaseInstallableItemEffect implements InstallableItemEffect
 				}
 			}
 		}
-		
 		return unmet;
 	}
+	
+	@Override
+	public Set<String> getConditionsRelatedToRequirements(Industry industry) {
+		Set<String> cond = new LinkedHashSet<>();
+		
+		for (String curr : getRequirements(industry)) {
+			if (ItemEffectsRepo.NO_ATMOSPHERE.equals(curr)) {
+				cond.add(Conditions.NO_ATMOSPHERE);
+			} else if (ItemEffectsRepo.HABITABLE.equals(curr)) {
+				cond.add(Conditions.HABITABLE);
+			} else if (ItemEffectsRepo.NOT_HABITABLE.equals(curr)) {
+				cond.add(Conditions.HABITABLE);
+			} else if (ItemEffectsRepo.NOT_EXTREME_WEATHER.equals(curr)) {
+				cond.add(Conditions.EXTREME_WEATHER);
+			} else if (ItemEffectsRepo.NOT_EXTREME_TECTONIC_ACTIVITY.equals(curr)) {
+				cond.add(Conditions.EXTREME_TECTONIC_ACTIVITY);
+			} else if (ItemEffectsRepo.NO_TRANSPLUTONIC_ORE_DEPOSITS.equals(curr)) {
+				cond.add(Conditions.RARE_ORE_SPARSE);
+				cond.add(Conditions.RARE_ORE_MODERATE);
+				cond.add(Conditions.RARE_ORE_ABUNDANT);
+				cond.add(Conditions.RARE_ORE_RICH);
+				cond.add(Conditions.RARE_ORE_ULTRARICH);
+			} else if (ItemEffectsRepo.NO_VOLATILES_DEPOSITS.equals(curr)) {
+				cond.add(Conditions.VOLATILES_TRACE);
+				cond.add(Conditions.VOLATILES_DIFFUSE);
+				cond.add(Conditions.VOLATILES_ABUNDANT);
+				cond.add(Conditions.VOLATILES_PLENTIFUL);
+			} else if (ItemEffectsRepo.HOT_OR_EXTREME_HEAT.equals(curr)) {
+				cond.add(Conditions.HOT);
+				cond.add(Conditions.VERY_HOT);
+			} else if (ItemEffectsRepo.COLD_OR_EXTREME_COLD.equals(curr)) {
+				cond.add(Conditions.COLD);
+				cond.add(Conditions.VERY_COLD);
+			}
+		}
+		return cond;
+	}
+	
 	
 	
 	protected void addRequirements(TooltipMakerAPI text, boolean canInstall, 

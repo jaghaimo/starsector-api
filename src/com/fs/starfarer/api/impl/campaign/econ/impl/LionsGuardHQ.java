@@ -351,6 +351,7 @@ public class LionsGuardHQ extends BaseIndustry implements RouteFleetSpawner, Fle
 		for (FleetMemberAPI member : fleet.getFleetData().getMembersListCopy()) {
 			if (member.isCapital()) {
 				member.setVariant(member.getVariant().clone(), false, false);
+				
 				member.getVariant().setSource(VariantSource.REFIT);
 				member.getVariant().addTag(Tags.TAG_NO_AUTOFIT);
 				member.getVariant().addTag(Tags.VARIANT_CONSISTENT_WEAPON_DROPS);

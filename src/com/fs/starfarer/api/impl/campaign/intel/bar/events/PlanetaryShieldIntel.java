@@ -1,9 +1,10 @@
 package com.fs.starfarer.api.impl.campaign.intel.bar.events;
 
-import java.awt.Color;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+
+import java.awt.Color;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;

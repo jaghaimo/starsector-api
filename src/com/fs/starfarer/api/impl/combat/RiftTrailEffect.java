@@ -1,7 +1,8 @@
 package com.fs.starfarer.api.impl.combat;
 
-import java.awt.Color;
 import java.util.List;
+
+import java.awt.Color;
 
 import org.lwjgl.util.vector.Vector2f;
 
@@ -9,6 +10,7 @@ import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.combat.MissileAPI;
+import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.input.InputEventAPI;
 import com.fs.starfarer.api.util.IntervalUtil;
 import com.fs.starfarer.api.util.Misc;
@@ -18,6 +20,7 @@ public class RiftTrailEffect extends BaseEveryFrameCombatPlugin {
 	protected IntervalUtil interval = new IntervalUtil(0.1f, 0.3f);
 	
 	protected MissileAPI missile;
+	protected ShipAPI ship;
 	protected String loopId;
 	
 	
@@ -25,47 +28,94 @@ public class RiftTrailEffect extends BaseEveryFrameCombatPlugin {
 		this.missile = missile;
 		this.loopId = loopId;
 	}
+	
+	public RiftTrailEffect(ShipAPI ship, String loopId) {
+		this.ship = ship;
+		this.loopId = loopId;
+	}
 
 	@Override
 	public void advance(float amount, List<InputEventAPI> events) {
 		if (Global.getCombatEngine().isPaused()) return;
 		
-		if (loopId != null) {
-			Global.getSoundPlayer().playLoop(loopId, missile, 1f, missile.getBrightness(), 
-					missile.getLocation(), missile.getVelocity());
-		}
-		
-		interval.advance(amount);
-		if (interval.intervalElapsed()) {
-			addParticles();
-		}
-		
-		if (missile.isExpired() || missile.didDamage() || !Global.getCombatEngine().isEntityInPlay(missile)) {
-			Global.getCombatEngine().removePlugin(this);
+		if (missile != null) {
+			if (loopId != null) {
+				Global.getSoundPlayer().playLoop(loopId, missile, 1f, missile.getBrightness(), 
+						missile.getLocation(), missile.getVelocity());
+			}
+			
+			interval.advance(amount);
+			if (interval.intervalElapsed()) {
+				addParticles();
+			}
+			
+			if (missile.isExpired() || missile.didDamage() || !Global.getCombatEngine().isEntityInPlay(missile)) {
+				Global.getCombatEngine().removePlugin(this);
+			}
+		} else if (ship != null) {
+			if (loopId != null) {
+				Global.getSoundPlayer().playLoop(loopId, ship, 1f, 1f, 
+						ship.getLocation(), ship.getVelocity());
+			}
+			
+			interval.advance(amount);
+			if (interval.intervalElapsed()) {
+				addParticles();
+			}
+			
+			if (ship.isExpired() || !Global.getCombatEngine().isShipAlive(ship)) {
+				Global.getCombatEngine().removePlugin(this);
+			}
 		}
 	}
 	
+	protected Color getUndercolor() {
+		return RiftCascadeEffect.EXPLOSION_UNDERCOLOR;
+	}
+	protected Color getDarkeningColor() {
+		return RiftLanceEffect.getColorForDarkening(RiftCascadeEffect.STANDARD_RIFT_COLOR);
+	}
+	protected float getBaseParticleDuration() {
+		return 4f;
+	}
+	
+	protected float getBaseParticleSize() {
+		if (missile != null) return missile.getSpec().getGlowRadius() * 0.5f;
+		return ship.getCollisionRadius();
+	}
+	protected float getCurrentBaseAlpha() {
+		if (missile != null) return missile.getCurrentBaseAlpha();
+		return 1f;
+	}
+	protected Vector2f getEntityLocation() {
+		if (missile != null) return missile.getLocation();
+		return ship.getLocation();
+	}
+	protected Vector2f getEntityVelocity() {
+		if (missile != null) return missile.getVelocity();
+		return ship.getVelocity();
+	}
 
 	public void addParticles() {
 		CombatEngineAPI engine = Global.getCombatEngine();
-		Color c = RiftLanceEffect.getColorForDarkening(RiftCascadeEffect.STANDARD_RIFT_COLOR);
+		Color c = getDarkeningColor();
 		// subtracting the standard color looks better, makes the red a bit purplish
 		// inverting red to substract doesn't look as good for the trails
 //		MissileSpecAPI spec = missile.getSpec();
 //		c = spec.getExplosionColor();
 		
-		Color undercolor = RiftCascadeEffect.EXPLOSION_UNDERCOLOR;
+		Color undercolor = getUndercolor();
 		
-		float b = missile.getCurrentBaseAlpha();
+		float b = getCurrentBaseAlpha();
 		c = Misc.scaleAlpha(c, b);
 		undercolor = Misc.scaleAlpha(undercolor, b);
 		
-		float baseDuration = 4f;
+		float baseDuration = getBaseParticleDuration();
 		float size = 30f;
-		size = missile.getSpec().getGlowRadius() * 0.5f;
+		size = getBaseParticleSize();
 		
-		Vector2f point = new Vector2f(missile.getLocation());
-		Vector2f pointOffset = new Vector2f(missile.getVelocity());
+		Vector2f point = new Vector2f(getEntityLocation());
+		Vector2f pointOffset = new Vector2f(getEntityVelocity());
 		pointOffset.scale(0.1f);
 		Vector2f.add(point, pointOffset, point);
 		

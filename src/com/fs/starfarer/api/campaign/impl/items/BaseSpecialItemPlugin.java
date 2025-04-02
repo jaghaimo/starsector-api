@@ -1,9 +1,10 @@
 package com.fs.starfarer.api.campaign.impl.items;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+
+import java.awt.Color;
 
 import org.json.JSONException;
 
@@ -42,6 +43,10 @@ public class BaseSpecialItemPlugin implements SpecialItemPlugin {
 		this.stack = stack;
 	}
 
+	@Override
+	public void performRightClickAction(RightClickActionHelper helper) {
+		performRightClickAction();
+	}
 	public void performRightClickAction() {
 		
 	}
@@ -57,7 +62,7 @@ public class BaseSpecialItemPlugin implements SpecialItemPlugin {
 	
 	public void createTooltip(TooltipMakerAPI tooltip, boolean expanded, CargoTransferHandlerAPI transferHandler, Object stackSource) {
 		boolean useGray = true;
-		if (getClass() == BaseSpecialItemPlugin.class) {
+		if (getClass() == BaseSpecialItemPlugin.class || Global.CODEX_TOOLTIP_MODE) {
 			useGray = false;
 		}
 		createTooltip(tooltip, expanded, transferHandler, stackSource, useGray);
@@ -65,11 +70,18 @@ public class BaseSpecialItemPlugin implements SpecialItemPlugin {
 	public void createTooltip(TooltipMakerAPI tooltip, boolean expanded, CargoTransferHandlerAPI transferHandler, Object stackSource, boolean useGray) {
 		float opad = 10f;
 		
-		tooltip.addTitle(getName());
+		if (!Global.CODEX_TOOLTIP_MODE) {
+			tooltip.addTitle(getName());
+		} else {
+			tooltip.addSpacer(-opad);
+		}
 		
 		String design = getDesignType();
 		Misc.addDesignTypePara(tooltip, design, opad);
 		
+		if (Global.CODEX_TOOLTIP_MODE) {
+			tooltip.setParaSmallInsignia();
+		}
 		if (!spec.getDesc().isEmpty()) {
 			Color c = Misc.getTextColor();
 			if (useGray) c = Misc.getGrayColor();
@@ -109,6 +121,17 @@ public class BaseSpecialItemPlugin implements SpecialItemPlugin {
 	
 	
 	protected void addCostLabel(TooltipMakerAPI tooltip, float pad, CargoTransferHandlerAPI transferHandler, Object stackSource) {
+		if (stack == null) return;
+		
+		//if (Global.CODEX_TOOLTIP_MODE) return;
+		if (Global.CODEX_TOOLTIP_MODE) {
+			int cost = (int) stack.getBaseValuePerUnit();
+			tooltip.setParaFontDefault();
+			tooltip.addPara("Base value: %s", pad, Misc.getGrayColor(), Misc.getHighlightColor(), Misc.getDGSCredits(cost));
+			return;
+			//tooltip.setParaSmallInsignia();
+		}
+		
 		ItemCostLabelData data = getCostLabelData(stack, transferHandler, stackSource);
 		
 		LabelAPI label = tooltip.addPara(data.text, pad);
@@ -212,6 +235,7 @@ public class BaseSpecialItemPlugin implements SpecialItemPlugin {
 	protected void addShipList(TooltipMakerAPI tooltip, String title, List<String> hulls, int max, float opad) {
 		addBlueprintList(tooltip, title, hulls, max, opad, new BlueprintLister(){
 			public boolean isKnown(String id) {
+				if (Global.CODEX_TOOLTIP_MODE) return false;
 				return Global.getSector().getPlayerFaction().knowsShip(id);
 			}
 			public String getNoun(int num) {
@@ -228,6 +252,7 @@ public class BaseSpecialItemPlugin implements SpecialItemPlugin {
 	protected void addWeaponList(TooltipMakerAPI tooltip, String title, List<String> weapons, int max, float opad) {
 		addBlueprintList(tooltip, title, weapons, max, opad, new BlueprintLister(){
 			public boolean isKnown(String id) {
+				if (Global.CODEX_TOOLTIP_MODE) return false;
 				return Global.getSector().getPlayerFaction().knowsWeapon(id);
 			}
 			public String getNoun(int num) {
@@ -244,6 +269,7 @@ public class BaseSpecialItemPlugin implements SpecialItemPlugin {
 	protected void addFighterList(TooltipMakerAPI tooltip, String title, List<String> wings, int max, float opad) {
 		addBlueprintList(tooltip, title, wings, max, opad, new BlueprintLister(){
 			public boolean isKnown(String id) {
+				if (Global.CODEX_TOOLTIP_MODE) return false;
 				return Global.getSector().getPlayerFaction().knowsFighter(id);
 			}
 			public String getNoun(int num) {
@@ -263,7 +289,13 @@ public class BaseSpecialItemPlugin implements SpecialItemPlugin {
 		Color b = Misc.getButtonTextColor();
 		Color g = Misc.getGrayColor();
 		
+		if (Global.CODEX_TOOLTIP_MODE) {
+			tooltip.setParaSmallInsignia();
+		}
 		tooltip.addPara(title, opad);
+		if (Global.CODEX_TOOLTIP_MODE) {
+			tooltip.setParaFontDefault();
+		}
 		
 		String tab = "        ";
 		float small = 5f;
@@ -306,6 +338,21 @@ public class BaseSpecialItemPlugin implements SpecialItemPlugin {
 	public SpecialItemSpecAPI getSpec() {
 		return spec;
 	}
+	
+//	@Override
+//	public int getNumToRemove() {
+//		return 1;
+//	}
+//	
+//	@Override
+//	public boolean shouldRemoveCalledAfterRightClickAction() {
+//		return false;
+//	}
+//	@Override
+//	public void setReadOnlyCargoForRightClickAction(CargoAPI cargo) {
+//		// TODO Auto-generated method stub
+//		
+//	}
 	
 }
 

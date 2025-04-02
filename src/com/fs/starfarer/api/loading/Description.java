@@ -3,7 +3,9 @@ package com.fs.starfarer.api.loading;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Description {
+import com.fs.starfarer.api.ModSpecAPI;
+
+public class Description implements WithSourceMod {
 
 	public static enum Type {
 		SHIP,
@@ -15,6 +17,7 @@ public class Description {
 		ASTEROID,
 		FACTION,
 		TERRAIN,
+		GALLERY,
 		CUSTOM,
 	}
 	
@@ -23,6 +26,7 @@ public class Description {
 	
 	private String text1 ="No description... yet", text2 ="No description... yet", text3 ="No description... yet";
 	private String text4 = null;
+	private String text5 = null;
 
 	public Description(String id, Type type) {
 		this.type = type;
@@ -33,6 +37,14 @@ public class Description {
 		return id + "_" + type.name();
 	}
 	
+	public String getText5() {
+		return text5;
+	}
+
+	public void setText5(String text5) {
+		this.text5 = text5;
+	}
+
 	public String getText4() {
 		return text4;
 	}
@@ -42,6 +54,9 @@ public class Description {
 	}
 	public boolean hasText4() {
 		return text4 != null && !text4.isEmpty();
+	}
+	public boolean hasText5() {
+		return text5 != null && !text5.isEmpty();
 	}
 
 	public String getText1() {
@@ -59,10 +74,26 @@ public class Description {
 	}
 	
 	public List<String> getText1Paras() {
+		return getParas(text1);
+	}
+	public List<String> getText2Paras() {
+		return getParas(text2);
+	}
+	public List<String> getText3Paras() {
+		return getParas(text3);
+	}
+	public List<String> getText4Paras() {
+		return getParas(text4);
+	}
+	public List<String> getText5Paras() {
+		return getParas(text5);
+	}
+	
+	public List<String> getParas(String text) {
 		List<String> result = new ArrayList<String>();
-		if (text1 == null) return result;
+		if (text == null) return result;
 		
-		String [] temp = text1.split("\\n");
+		String [] temp = text.split("\\n");
 		for (String p : temp) {
 			p = p.trim();
 			if (p.isEmpty()) continue;
@@ -111,5 +142,11 @@ public class Description {
 		return true;
 	}
 	
-	
+	private ModSpecAPI sourceMod = null;
+	public ModSpecAPI getSourceMod() {
+		return sourceMod;
+	}
+	public void setSourceMod(ModSpecAPI sourceMod) {
+		this.sourceMod = sourceMod;
+	}
 }

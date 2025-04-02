@@ -1,6 +1,7 @@
 package com.fs.starfarer.api.impl.campaign.econ.impl;
 
 import java.util.List;
+import java.util.Set;
 
 import com.fs.starfarer.api.campaign.SpecialItemData;
 import com.fs.starfarer.api.campaign.econ.Industry;
@@ -25,6 +26,14 @@ public interface InstallableItemEffect {
 	 */
 	List<String> getUnmetRequirements(Industry industry);
 	List<String> getRequirements(Industry industry);
+	
+	default String getSpecialNotesName() {
+		return null;
+	}
+	default public List<String> getSpecialNotes(Industry industry) {
+		return null;
+	}
+	Set<String> getConditionsRelatedToRequirements(Industry industry);
 	
 //	boolean canBeInstalledIn(Industry industry);
 //	String getRequirementsText(Industry industry);

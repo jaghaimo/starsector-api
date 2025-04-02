@@ -30,7 +30,7 @@ public class EventHorizonPlugin extends StarCoronaTerrainPlugin {
 		}
 		tooltip.addPara("Reduces the combat readiness of " +
 				"all ships near the event horizon at a steady pace.", nextPad);
-		tooltip.addPara("The drive field is also distrupted, making getting away from the event horizon more difficult.", pad);
+		tooltip.addPara("The drive field is also disrupted, making getting away from the event horizon more difficult.", pad);
 		
 		if (expanded) {
 			tooltip.addSectionHeading("Combat", Alignment.MID, pad);

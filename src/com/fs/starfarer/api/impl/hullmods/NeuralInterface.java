@@ -81,6 +81,11 @@ public class NeuralInterface extends BaseHullMod {
 		
 		stats.getDynamic().getMod(Stats.DEPLOYMENT_POINTS_MOD).unmodify(SupportDoctrine.SUPPORT_DOCTRINE_DP_REDUCTION_ID);
 		
+		boolean sMod = isSMod(stats);
+		if (sMod) {
+			stats.getDynamic().getMod(Stats.INSTANT_NEURAL_TRANSFER_FROM).modifyFlat(id, 1f);
+		}
+		
 //		if (stats.getFleetMember() != null && stats.getFleetMember().getCaptain() != null) {
 //			PersonAPI p = stats.getFleetMember().getCaptain();
 //			if (p.isDefault() && Misc.isAutomated(stats.getFleetMember())) {

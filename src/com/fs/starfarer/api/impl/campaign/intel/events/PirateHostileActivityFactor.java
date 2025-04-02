@@ -1,11 +1,12 @@
 package com.fs.starfarer.api.impl.campaign.intel.events;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Random;
+
+import java.awt.Color;
 
 import org.lwjgl.util.vector.Vector2f;
 
@@ -15,6 +16,7 @@ import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.campaign.comm.IntelInfoPlugin;
 import com.fs.starfarer.api.campaign.comm.IntelInfoPlugin.ListInfoMode;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
+import com.fs.starfarer.api.impl.campaign.econ.PiracyRespite;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.intel.bases.PirateBaseIntel;
 import com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.EventStageData;
@@ -211,14 +213,20 @@ public class PirateHostileActivityFactor extends BaseHostileActivityFactor imple
 				Misc.getNegativeHighlightColor(), "reduced stability");
 		
 		if (stage.id == Stage.HA_EVENT) {
-			if (PiracyRespiteScript.DURATION < 0) {
-				info.addPara("If the raid is defeated, your colonies will "
-						+ "permanently gain increased accessibility.", 
-						opad, Misc.getPositiveHighlightColor(), "increased accessibility");
+			if (PiracyRespite.NEW_MODE) {
+				info.addPara("If the raid is defeated, your colonies will suffer less shipping disruptions from "
+						+ "piracy for the foreseeable future.", 
+						opad, Misc.getPositiveHighlightColor(), "less shipping disruptions");
 			} else {
-				info.addPara("If the raid is defeated, your colonies will gain "
-						+ "increased accessibility for several cycles.", 
-						opad, Misc.getPositiveHighlightColor(), "increased accessibility");
+				if (PiracyRespiteScript.DURATION < 0) {
+					info.addPara("If the raid is defeated, your colonies will "
+							+ "permanently gain increased accessibility.", 
+							opad, Misc.getPositiveHighlightColor(), "increased accessibility");
+				} else {
+					info.addPara("If the raid is defeated, your colonies will gain "
+							+ "increased accessibility for several cycles.", 
+							opad, Misc.getPositiveHighlightColor(), "increased accessibility");
+				}
 			}
 		}
 		

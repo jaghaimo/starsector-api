@@ -1,10 +1,11 @@
 package com.fs.starfarer.api.impl.combat;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+
+import java.awt.Color;
 
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
@@ -21,7 +22,7 @@ public class LidarArrayStats extends BaseShipSystemScript {
 	public static Color WEAPON_GLOW = new Color(255,50,50,155);
 	
 	public static float RANGE_BONUS = 100f;
-	public static float PASSIVE_RANGE_BONUS = 25f;
+	public static float PASSIVE_RANGE_BONUS = 35f;
 	public static float ROF_BONUS = 2f;
 	public static float RECOIL_BONUS = 75f;
 	public static float PROJECTILE_SPEED_BONUS = 50f;

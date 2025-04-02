@@ -1,7 +1,8 @@
 package com.fs.starfarer.api.impl.campaign.abilities;
 
-import java.awt.Color;
 import java.util.EnumSet;
+
+import java.awt.Color;
 
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.util.vector.Vector2f;
@@ -70,9 +71,13 @@ public class GraviticScanAbility extends BaseToggleAbility {
 			status = " (on)";
 		}
 		
-		LabelAPI title = tooltip.addTitle(spec.getName() + status);
-		title.highlightLast(status);
-		title.setHighlightColor(gray);
+		if (!Global.CODEX_TOOLTIP_MODE) {
+			LabelAPI title = tooltip.addTitle(spec.getName() + status);
+			title.highlightLast(status);
+			title.setHighlightColor(gray);
+		} else {
+			tooltip.addSpacer(-10f);
+		}
 
 		float pad = 10f;
 		
@@ -111,7 +116,7 @@ public class GraviticScanAbility extends BaseToggleAbility {
 				+ "Except for abyssal areas, the background noise levels are such that it is unable to detect any other neutrino sources. "
 				+ "When the fleet is traversing a slipstream, the detector is overwhelmed and shuts down.",
 				pad, highlight, "" + maxRange);
-		if (Misc.isInsideSlipstream(getFleet())) {
+		if (!Global.CODEX_TOOLTIP_MODE && Misc.isInsideSlipstream(getFleet())) {
 			tooltip.addPara("Cannot activate while inside slipstream.", bad, pad);
 		}
 //		if (getFleet() != null && getFleet().isInHyperspace()) {

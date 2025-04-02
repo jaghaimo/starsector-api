@@ -1,8 +1,9 @@
 package com.fs.starfarer.api.impl.combat.dem;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.List;
+
+import java.awt.Color;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -279,6 +280,18 @@ public class DEMScript extends BaseEveryFrameCombatPlugin implements MissileAIPl
 					demDrone.getMutableStats().getEnergyWeaponDamageMult().applyMods(ship.getMutableStats().getMissileWeaponDamageMult());
 					demDrone.getMutableStats().getMissileWeaponDamageMult().applyMods(ship.getMutableStats().getMissileWeaponDamageMult());
 					demDrone.getMutableStats().getBallisticWeaponDamageMult().applyMods(ship.getMutableStats().getMissileWeaponDamageMult());
+					
+					demDrone.getMutableStats().getDamageToCapital().applyMods(ship.getMutableStats().getDamageToCapital());
+					demDrone.getMutableStats().getDamageToCruisers().applyMods(ship.getMutableStats().getDamageToCruisers());
+					demDrone.getMutableStats().getDamageToDestroyers().applyMods(ship.getMutableStats().getDamageToDestroyers());
+					demDrone.getMutableStats().getDamageToFrigates().applyMods(ship.getMutableStats().getDamageToFrigates());
+					demDrone.getMutableStats().getDamageToFighters().applyMods(ship.getMutableStats().getDamageToFighters());
+					demDrone.getMutableStats().getDamageToMissiles().applyMods(ship.getMutableStats().getDamageToMissiles());
+					demDrone.getMutableStats().getDamageToTargetEnginesMult().applyMods(ship.getMutableStats().getDamageToTargetEnginesMult());
+					demDrone.getMutableStats().getDamageToTargetHullMult().applyMods(ship.getMutableStats().getDamageToTargetHullMult());
+					demDrone.getMutableStats().getDamageToTargetShieldsMult().applyMods(ship.getMutableStats().getDamageToTargetShieldsMult());
+					demDrone.getMutableStats().getDamageToTargetWeaponsMult().applyMods(ship.getMutableStats().getDamageToTargetWeaponsMult());
+					
 					demDrone.setCollisionClass(CollisionClass.NONE);
 					demDrone.giveCommand(ShipCommand.SELECT_GROUP, null, 0);
 					Global.getCombatEngine().addEntity(demDrone);
@@ -570,17 +583,17 @@ public class DEMScript extends BaseEveryFrameCombatPlugin implements MissileAIPl
 		public float shapedExplosionArc = 90f;
 		
 		public void load(JSONObject json) throws JSONException {
-			shapedExplosionEndSizeMin = (float)json.optDouble("shapedExplosionEndSizeMin");
-			shapedExplosionEndSizeMax = (float)json.optDouble("shapedExplosionEndSizeMax");
+			shapedExplosionEndSizeMin = (float)json.optDouble("shapedExplosionEndSizeMin", 1f);
+			shapedExplosionEndSizeMax = (float)json.optDouble("shapedExplosionEndSizeMax", 2f);
 			shapedExplosionNumParticles = json.optInt("shapedExplosionNumParticles");
-			shapedExplosionMinParticleSize = (float)json.optDouble("shapedExplosionMinParticleSize");
-			shapedExplosionMaxParticleSize = (float)json.optDouble("shapedExplosionMaxParticleSize");
-			shapedExplosionScatter = (float)json.optDouble("shapedExplosionScatter");
-			shapedExplosionMinParticleVel = (float)json.optDouble("shapedExplosionMinParticleVel");
-			shapedExplosionMaxParticleVel = (float)json.optDouble("shapedExplosionMaxParticleVel");
-			shapedExplosionMinParticleDur = (float)json.optDouble("shapedExplosionMinParticleDur");
-			shapedExplosionMaxParticleDur = (float)json.optDouble("shapedExplosionMaxParticleDur");
-			shapedExplosionArc = (float)json.optDouble("shapedExplosionArc");
+			shapedExplosionMinParticleSize = (float)json.optDouble("shapedExplosionMinParticleSize", 80f);
+			shapedExplosionMaxParticleSize = (float)json.optDouble("shapedExplosionMaxParticleSize", 100f);
+			shapedExplosionScatter = (float)json.optDouble("shapedExplosionScatter", 100f);
+			shapedExplosionMinParticleVel = (float)json.optDouble("shapedExplosionMinParticleVel", 100f);
+			shapedExplosionMaxParticleVel = (float)json.optDouble("shapedExplosionMaxParticleVel", 350f);
+			shapedExplosionMinParticleDur = (float)json.optDouble("shapedExplosionMinParticleDur", 1f);
+			shapedExplosionMaxParticleDur = (float)json.optDouble("shapedExplosionMaxParticleDur", 2f);
+			shapedExplosionArc = (float)json.optDouble("shapedExplosionArc", 90f);
 			shapedExplosionColor = Misc.optColor(json, "shapedExplosionColor", null);
 		}
 	}

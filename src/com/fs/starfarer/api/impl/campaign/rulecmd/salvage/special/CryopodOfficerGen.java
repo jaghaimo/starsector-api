@@ -4,13 +4,33 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.FactionAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Skills;
+import com.fs.starfarer.api.impl.campaign.procgen.themes.SalvageSpecialAssigner;
+import com.fs.starfarer.api.plugins.OfficerLevelupPlugin;
 import com.fs.starfarer.api.util.WeightedRandomPicker;
 
 public class CryopodOfficerGen {
 
+	public static String EXCEPTIONAL_OFFICERS_CREATED_KEY = "$SleeperPodsSpecialCreator_exceptionalCount";
+	
+	public static int getNumExceptionalCreated() {
+		return Global.getSector().getMemoryWithoutUpdate().getInt(EXCEPTIONAL_OFFICERS_CREATED_KEY);
+	}
+	
+	public static void incrNumExceptionalCreated() {
+		int num = getNumExceptionalCreated() + 1;
+		Global.getSector().getMemoryWithoutUpdate().set(EXCEPTIONAL_OFFICERS_CREATED_KEY, num);
+	}
+	
+	public static boolean canAddMoreExceptional() {
+		return getNumExceptionalCreated() < SalvageSpecialAssigner.MAX_EXCEPTIONAL_PODS_OFFICERS;
+	}
+	
+	
+	
 	public static class CryopodOfficerTemplate {
 		public List<String> base = new ArrayList<String>();
 		public List<String> elite = new ArrayList<String>();
@@ -32,6 +52,9 @@ public class CryopodOfficerGen {
 			
 			int level = base.size() + elite.size();
 			officer.getStats().setLevel(level);
+			
+			OfficerLevelupPlugin plugin = (OfficerLevelupPlugin) Global.getSettings().getPlugin("officerLevelUp");
+			officer.getStats().setXP(plugin.getXPForLevel(level));
 			
 			for (String id : base) {
 				officer.getStats().setSkillLevel(id, 1);
@@ -243,7 +266,7 @@ public class CryopodOfficerGen {
 		t.base.add(Skills.TARGET_ANALYSIS);
 		t.base.add(Skills.SYSTEMS_EXPERTISE);
 		t.base.add(Skills.COMBAT_ENDURANCE);
-		TEMPLATES_EXCEPTIONAL.add(t, 5f);
+		TEMPLATES_NORMAL.add(t, 5f);
 		
 		// phase ship, take 2	
 		t = new CryopodOfficerTemplate();
@@ -252,7 +275,7 @@ public class CryopodOfficerGen {
 		t.base.add(Skills.TARGET_ANALYSIS);
 		t.base.add(Skills.MISSILE_SPECIALIZATION);
 		t.base.add(Skills.COMBAT_ENDURANCE);
-		TEMPLATES_EXCEPTIONAL.add(t, 5f);
+		TEMPLATES_NORMAL.add(t, 5f);
 		
 
 		// SO? fairly generic
@@ -262,7 +285,7 @@ public class CryopodOfficerGen {
 		t.base.add(Skills.MISSILE_SPECIALIZATION);
 		t.base.add(Skills.IMPACT_MITIGATION);
 		t.base.add(Skills.FIELD_MODULATION);
-		TEMPLATES_EXCEPTIONAL.add(t, 10f);
+		TEMPLATES_NORMAL.add(t, 10f);
 		
 		// END LEVEL 5 OFFICERS
 		

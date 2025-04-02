@@ -1,7 +1,9 @@
 package com.fs.starfarer.api.ui;
 
-import java.awt.Color;
 import java.util.List;
+import java.util.Set;
+
+import java.awt.Color;
 
 import com.fs.starfarer.api.campaign.CampaignFleetAPI;
 import com.fs.starfarer.api.campaign.CargoAPI;
@@ -10,6 +12,7 @@ import com.fs.starfarer.api.campaign.PersonImportance;
 import com.fs.starfarer.api.campaign.PlanetAPI;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.campaign.econ.CommodityOnMarketAPI;
+import com.fs.starfarer.api.campaign.econ.CommoditySpecAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.combat.MutableStat;
 import com.fs.starfarer.api.combat.MutableStat.StatMod;
@@ -17,6 +20,7 @@ import com.fs.starfarer.api.combat.StatBonus;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
 import com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel;
 import com.fs.starfarer.api.impl.campaign.intel.events.BaseEventIntel.EventStageDisplayData;
+import com.fs.starfarer.api.impl.codex.CodexEntryPlugin;
 import com.fs.starfarer.api.ui.ButtonAPI.UICheckboxSize;
 
 
@@ -35,6 +39,21 @@ public interface TooltipMakerAPI extends UIPanelAPI {
 		RIGHT,
 		ABOVE,
 		BELOW;
+	}
+	
+	public static interface ActionListenerDelegate {
+		void actionPerformed(Object data, Object source);
+	}
+	
+	public static class PlanetInfoParams {
+		public boolean scaleEvenWhenShowingName = false;
+		public boolean showName;
+		public boolean withClass;
+		public String classStrOverride = null;
+		public boolean showConditions;
+		public float conditionsYOffset = 0f;
+		public float conditionsHeight = 32f;
+		public boolean showHazardRating = false;
 	}
 	
 	public interface TooltipCreator {
@@ -110,6 +129,7 @@ public interface TooltipMakerAPI extends UIPanelAPI {
 	void setIconSpacingMedium();
 	void setIconSpacingWide();
 	void addIcons(CommodityOnMarketAPI com, int num, IconRenderMode mode);
+	void addIcons(CommoditySpecAPI com, int num, IconRenderMode mode);
 	void addIconGroup(float pad);
 	void addIconGroup(float rowHeight, float pad);
 	void cancelGrid();
@@ -230,6 +250,8 @@ public interface TooltipMakerAPI extends UIPanelAPI {
 	void showCost(String title, boolean withAvailable, Color color, Color dark, float pad, String[] res,
 				  int[] quantities);
 	void showCost(Color color, Color dark, float pad, String[] res, int[] quantities);
+	void showCost(String title, boolean withAvailable, float widthOverride, float heightOverride, Color color,
+			Color dark, float pad, String[] res, int[] quantities, boolean[] consumed);	
 	UIComponentAPI getPrev();
 	ButtonAPI addAreaCheckbox(String text, Object data, Color base, Color bg, Color bright, float width, float height,
 			float pad, boolean leftAlign);
@@ -340,14 +362,55 @@ public interface TooltipMakerAPI extends UIPanelAPI {
 
 	void showPlanetInfo(PlanetAPI planet, float pad);
 	void showPlanetInfo(PlanetAPI planet, float w, float h, boolean withName, float pad);
+	void showPlanetInfo(PlanetAPI planet, float w, float h, PlanetInfoParams params, float pad);
 	
 	ButtonAPI addCheckbox(float width, float height, String text, Object data, UICheckboxSize size, float pad);
 	ButtonAPI addCheckbox(float width, float height, String text, Object data, String font, Color textColor,
 			UICheckboxSize size, float pad);
 	UIComponentAPI addSkillPanel(PersonAPI person, boolean admin, float pad);
 	UIComponentAPI addSkillPanelOneColumn(PersonAPI person, boolean admin, float pad);
+	void addCodexEntries(String title, Set<String> entryIds, boolean sort, float pad);
 	
+	/**
+	 * ID of codex entry to open with F2 when this tooltip is shown.
+	 * Setting it to something and then back to null will not remove the "press F2" prompt etc.
+	 * See: CodexDataV2.getXXXXEntryId() methods for how to get entry ids. 
+	 * @param codexEntryId
+	 */
+	void setCodexEntryId(String codexEntryId);
+	String getCodexEntryId();
+	void setCodexEntryFleetMember(FleetMemberAPI member);
+	void setCodexTempEntry(CodexEntryPlugin tempCodexEntry);
 	//UIPanelAPI beginTable(float itemHeight, Object[] columns);
+	LabelAPI addParaWithMarkup(String str, float pad);
+	LabelAPI addParaWithMarkup(String str, Color color, float pad);
+	LabelAPI addParaWithMarkup(String str, float pad, String... tokens);
+	
+	/**
+	 * Markup:
+	 * {{string}} -> highlights it
+	 * {{color:<color>|string}} -> highlights it with color
+	 * color can be h|good|bad|text|gray|blue or a color in settings.json
+	 * If passing in tokens and needing to use a % in the base string: use %% (tokens means a String.format call)
+	 * If NOT passing in tokens and needing to use a % in the base string: use % (no String.format call)
+	 * 
+	 * @param str
+	 * @param color
+	 * @param pad
+	 * @param tokens
+	 * @return
+	 */
+	LabelAPI addParaWithMarkup(String str, Color color, float pad, String... tokens);
+	void showCargo(CargoAPI cargo, int max, boolean sort, float pad, float itemHeight, float itemPad);
+	
+	
+	/**
+	 * Needs to be called *before* any methods that create UI elements 
+	 * that call the action listener (such as addButton) are called.
+	 * Warning: If the TooltipMakerAPI already has an action listener, it will be overridden.
+	 * @param delegate
+	 */
+	void setActionListenerDelegate(ActionListenerDelegate delegate);
 	
 	//LabelAPI addParaWithIndent(String text, Color color, float indent, String format, float pad, Color hl, String... highlights);
 }

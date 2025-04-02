@@ -17,7 +17,7 @@ public class ElectronicWarfare {
 	
 	public static float PER_SHIP_BONUS = 1f;
 	
-	public static float CAP_RANGE = 1000f;
+	public static float CAP_RANGE = 500f;
 	public static float CAP_RATE = 5f;
 
 	

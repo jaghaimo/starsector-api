@@ -1,11 +1,12 @@
 package com.fs.starfarer.api.impl.campaign.procgen;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
+
+import java.awt.Color;
 
 import org.lwjgl.util.vector.Vector2f;
 
@@ -38,7 +39,9 @@ import com.fs.starfarer.api.impl.campaign.eventide.DuelDialogDelegate;
 import com.fs.starfarer.api.impl.campaign.eventide.DuelPanel;
 import com.fs.starfarer.api.impl.campaign.ids.Entities;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
+import com.fs.starfarer.api.impl.campaign.ids.MemFlags;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
+import com.fs.starfarer.api.impl.campaign.intel.PromoteOfficerIntel;
 import com.fs.starfarer.api.impl.campaign.intel.bases.PirateBaseIntel;
 import com.fs.starfarer.api.impl.campaign.intel.events.HostileActivityEventIntel;
 import com.fs.starfarer.api.impl.campaign.intel.events.ht.HTScanFactor;
@@ -267,9 +270,18 @@ public class EventTestPluginImpl implements InteractionDialogPlugin {
 			
 			for (int i = 0; i < 10; i++) {
 				Vector2f loc = Misc.getPointWithinRadius(playerFleet.getLocation(), 10000f);
+				//Vector2f loc = Misc.getPointWithinRadius(playerFleet.getLocation(), 2000f);
 				if (Misc.getAbyssalDepth(loc) >= 1f) {
 					AbyssalLightParams params = new AbyssalLightParams();
 					SectorEntityToken e2 = Global.getSector().getHyperspace().addCustomEntity(Misc.genUID(), null, Entities.ABYSSAL_LIGHT, Factions.NEUTRAL, params);
+					
+					if ((float) Math.random() > 0.5f) {
+						params.color = new Color(225,200,255,255);
+						//params.color = new Color(255,200,200,255);
+						e2.addTag(Tags.DWELLER_LIGHT);
+						long seed = Misc.random.nextLong();
+						e2.getMemoryWithoutUpdate().set(MemFlags.SALVAGE_SEED, seed);
+					}
 					e2.setLocation(loc.x, loc.y);
 				}
 			}
@@ -324,8 +336,8 @@ public class EventTestPluginImpl implements InteractionDialogPlugin {
 			LuddicShrineIntel.addShrineIntelIfNeeded("killa", textPanel);
 			LuddicShrineIntel.addShrineIntelIfNeeded("volturn", textPanel);
 			
-//			PromoteOfficerIntel intel = new PromoteOfficerIntel(textPanel);
-//			Global.getSector().getIntelManager().addIntel(intel, false, textPanel);
+			PromoteOfficerIntel intel2 = new PromoteOfficerIntel(textPanel);
+			Global.getSector().getIntelManager().addIntel(intel2, false, textPanel);
 			
 //			dialog.showCustomProductionPicker(new BaseCustomProductionPickerDelegateImpl());
 			

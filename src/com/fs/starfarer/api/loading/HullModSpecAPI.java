@@ -6,7 +6,7 @@ import com.fs.starfarer.api.combat.HullModEffect;
 import com.fs.starfarer.api.combat.HullModFleetEffect;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 
-public interface HullModSpecAPI {
+public interface HullModSpecAPI extends WithSourceMod {
 
 	HullModEffect getEffect();
 	HullModFleetEffect getFleetEffect();

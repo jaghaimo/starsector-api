@@ -52,4 +52,6 @@ public interface CharacterCreationData {
 	
 	void addScriptBeforeTimePass(Script script);
 	List<Script> getScriptsBeforeTimePass();
+	boolean isCampaignHelpEnabled();
+	void setCampaignHelpEnabled(boolean campaignHelp);
 }

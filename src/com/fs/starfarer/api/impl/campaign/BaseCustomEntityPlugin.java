@@ -46,6 +46,11 @@ public class BaseCustomEntityPlugin implements CustomCampaignEntityPlugin {
 	public void appendToCampaignTooltip(TooltipMakerAPI tooltip, VisibilityLevel level) {
 		
 	}
+
+//	@Override
+//	public boolean isRenderWhenViewportAlphaMultIsZero() {
+//		return false;
+//	}
 }
 
 
