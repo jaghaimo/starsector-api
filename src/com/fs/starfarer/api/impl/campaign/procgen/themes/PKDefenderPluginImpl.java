@@ -114,6 +114,7 @@ public class PKDefenderPluginImpl extends BaseGenericPlugin implements SalvageDe
 		for (FleetMemberAPI curr : fleet.getFleetData().getMembersListCopy()) {
 			curr.getVariant().addPermaMod(HullMods.AUTOMATED);
 			curr.getVariant().setVariantDisplayName("Automated");
+			curr.getVariant().addTag(Tags.TAG_NO_AUTOFIT);
 			curr.getVariant().addTag(Tags.TAG_AUTOMATED_NO_PENALTY);
 			curr.getVariant().addTag(Tags.VARIANT_UNRESTORABLE);
 			curr.getVariant().addTag(Tags.TAG_RETAIN_SMODS_ON_RECOVERY);

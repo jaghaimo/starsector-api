@@ -8,13 +8,14 @@ import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipHullSpecAPI;
 import com.fs.starfarer.api.combat.ShipVariantAPI;
+import com.fs.starfarer.api.loading.WithSourceMod;
 
 /**
  * @author Alex Mosolov
  *
  * Copyright 2012 Fractal Softworks, LLC
  */
-public interface FleetMemberAPI {
+public interface FleetMemberAPI extends WithSourceMod {
 	PersonAPI getCaptain();
 	
 	

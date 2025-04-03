@@ -116,6 +116,7 @@ public class HullMods {
 	public static final String VASTBULK = "vastbulk";
 	
 	public static final String VAST_HANGAR = "vast_hangar";
+	public static final String DESIGN_COMPROMISES = "design_compromises";
 	
 	public static final String ADDITIONAL_BERTHING = "additional_berthing";
 	public static final String AUXILIARY_FUEL_TANKS = "auxiliary_fuel_tanks";

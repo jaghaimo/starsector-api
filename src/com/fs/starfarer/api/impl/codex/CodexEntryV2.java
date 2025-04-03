@@ -270,7 +270,7 @@ public class CodexEntryV2 implements CodexEntryPlugin {
 	
 	public boolean areAnyRelatedEntriesUnlocked() {
 		// recursed back to this entry due to something else circularly checking its locked status
-		if (checking) return true;
+		if (checking) return isUnlockedIfRequiresUnlock();
 		checking = true;
 		boolean found = false;
 		for (CodexEntryPlugin rel : getRelatedEntries()) {

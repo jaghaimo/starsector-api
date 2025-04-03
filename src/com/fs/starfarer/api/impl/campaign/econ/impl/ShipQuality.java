@@ -137,7 +137,7 @@ public class ShipQuality implements EconomyUpdateListener {
 		}
 		
 		if (factionId != null) {
-			if (market != null) {
+			if (market != null && market.getFaction() != null) {
 				quality -= market.getFaction().getDoctrine().getShipQualityContribution();
 			}
 			quality += Global.getSector().getFaction(factionId).getDoctrine().getShipQualityContribution();

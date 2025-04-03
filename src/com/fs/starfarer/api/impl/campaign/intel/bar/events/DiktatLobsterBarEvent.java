@@ -106,7 +106,7 @@ public class DiktatLobsterBarEvent extends BaseGetCommodityBarEvent {
 		return 
 				"What this amounts to, you are told, is that the District 4 Gendarmerie's evidence " +
 				"locker - and maintenance bay, and several interrogation rooms - are filled with cases " +
-				"of cyro-stabilized Volturnian Lobster, nearly %s units in all. The officers eat like " +
+				"of cryo-stabilized Volturnian Lobster, nearly %s units in all. The officers eat like " +
 				"royalty, yes, but there's only so much one can take and the coolant cells won't last " +
 				"another week without replacement, so.\n\n"
 				+ Misc.ucFirst(heOrShe) + " turns to " +

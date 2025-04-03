@@ -23,7 +23,7 @@ public class SecondaryFabricatorHullmod extends BaseHullMod {
 		
 		boolean sMod = isSMod(stats);
 		if (sMod) {
-			stats.getDynamic().getStat(Stats.FRAGMENT_SWARM_RESPAWN_RATE_MULT).modifyPercent(id, SMOD_RATE_INCREASE);
+			stats.getDynamic().getStat(Stats.FRAGMENT_SWARM_RESPAWN_RATE_MULT).modifyPercent(id, RATE_INCREASE + SMOD_RATE_INCREASE);
 		}
 	}
 

@@ -90,6 +90,9 @@ public class SurveyDataSpecial extends BaseSalvageSpecial {
 		case PLANET_SURVEY_DATA:
 			initPlanetSurveyData();
 			break;
+		default:
+			initNothing();
+			break;			
 		}
 
 	}

@@ -924,6 +924,9 @@ public class FleetEncounterContext implements FleetEncounterContextPlugin {
 			}
 			
 			float recoveryAmount = Math.round(deployCost * recoveryFraction * 100f) / 100f;
+			if (member.getHullSpec().hasTag(Tags.FULL_CR_RECOVERY)) {
+				recoveryAmount = member.getRepairTracker().getMaxCR() - member.getRepairTracker().getCR();
+			}
 			
 			totalRecovery += recoveryAmount;
 			count++;

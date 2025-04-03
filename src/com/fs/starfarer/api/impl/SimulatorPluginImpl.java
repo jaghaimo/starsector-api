@@ -135,12 +135,12 @@ public class SimulatorPluginImpl implements SimulatorPlugin, AutofitPluginDelega
 	
 	public static boolean isShowDevCategories() {
 		return (Global.getSettings().isDevMode() && !Global.getSettings().getBoolean("playtestingMode")) ||
-				!Global.getCombatEngine().isInCampaignSim();
+				!(Global.getCombatEngine().isInCampaignSim() || Global.getCombatEngine().isInMissionSim());
 	}
 	
 	public static boolean isSimFullyUnlocked() {
 		return (Global.getSettings().isDevMode() && !Global.getSettings().getBoolean("playtestingMode")) ||
-				!Global.getCombatEngine().isInCampaignSim();
+				!(Global.getCombatEngine().isInCampaignSim() || Global.getCombatEngine().isInMissionSim());
 	}
 	
 	public static boolean isAllStandardStuffUnlocked() {

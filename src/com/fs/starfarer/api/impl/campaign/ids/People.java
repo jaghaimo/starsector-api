@@ -68,6 +68,7 @@ public class People {
 	public static String GARGOYLE = "gargoyle";
 	public static String ZAL = "zal";
 	public static String ELEK = "elek";
+	//public static String SIMISOLA = "simisola";
 	public static String GA_RECRUITER = "ga_recruiter";
 	
 	// gaFC minor characters
@@ -653,7 +654,7 @@ public class People {
 		}
 		
 		market =  Global.getSector().getEconomy().getMarket("asher");
-		{
+		if (market != null) {
 			// Consulting Nanoforge Engineer
 			PersonAPI person = Global.getSector().getFaction(Factions.INDEPENDENT).createRandomPerson(StarSystemGenerator.random);
 			person.setId(NANOFORGE_ENGINEER);
@@ -874,6 +875,23 @@ public class People {
 		market.getCommDirectory().getEntryForPerson(person4).setHidden(true);
 		market.addPerson(person4);
 		Global.getSector().getImportantPeople().addPerson(person4); // so the person can be retrieved by id
+		
+		/*PersonAPI person5 = Global.getFactory().createPerson();
+		person5.setId(People.SIMISOLA);
+		person5.setImportance(PersonImportance.LOW);
+		person5.setFaction(Factions.INDEPENDENT);
+		person5.setGender(Gender.MALE);
+		person5.setRankId(Ranks.CITIZEN);
+		person5.setPostId(Ranks.POST_ACADEMICIAN);
+		person5.setVoice(Voices.SCIENTIST);
+		person5.getName().setFirst("Tobe");
+		person5.getName().setLast("Simisola");
+		person5.setPortraitSprite(Global.getSettings().getSpriteName("characters", "simisola"));
+		
+		market.getCommDirectory().addPerson(person5);
+		market.getCommDirectory().getEntryForPerson(person5).setHidden(true);
+		market.addPerson(person5);
+		Global.getSector().getImportantPeople().addPerson(person5); // so the person can be retrieved by id*/
 	}
 	
 	
@@ -1251,6 +1269,7 @@ public class People {
 			person.setImportance(PersonImportance.VERY_HIGH);
 			person.getName().setFirst("Orcus");
 			person.getName().setLast("Rao");
+			person.addTag(Tags.CONTACT_MILITARY);
 			person.setPortraitSprite(Global.getSettings().getSpriteName("characters", "orcus_rao"));
 			person.getStats().setSkillLevel(Skills.HELMSMANSHIP, 1);
 			person.getStats().setSkillLevel(Skills.TARGET_ANALYSIS, 1);

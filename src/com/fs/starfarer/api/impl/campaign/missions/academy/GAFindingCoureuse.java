@@ -155,6 +155,9 @@ public class GAFindingCoureuse extends GABaseMission {
 		makeImportant(probe1, "$gaFC_probe", Stage.FOLLOW_THE_EXPERIMENTS);
 		makeImportant(probe2, "$gaFC_probe", Stage.FOLLOW_THE_EXPERIMENTS);
 		makeImportant(probe3, "$gaFC_probe", Stage.FOLLOW_THE_EXPERIMENTS);
+		probe1.getMemoryWithoutUpdate().set("$gaProbeGeneric", true);
+		probe2.getMemoryWithoutUpdate().set("$gaProbeGeneric", true);
+		probe3.getMemoryWithoutUpdate().set("$gaProbeGeneric", true);
 		//makeImportant(probe4, "$gaFC_probe", Stage.FOLLOW_THE_EXPERIMENTS);
 		
 		
@@ -238,6 +241,7 @@ public class GAFindingCoureuse extends GABaseMission {
 			SectorEntityToken probe4 = probeSystem.addCustomEntity(null, "Ejected Cargo Pod", Entities.CARGO_POD_SPECIAL, Factions.NEUTRAL);
 			probe4.setLocation(scavenger.getLocation().x, scavenger.getLocation().y); // redundant?
 			probe4.addTag("gaFC_lootedProbe"); //unused?
+			probe4.getMemoryWithoutUpdate().set("$gaProbeGeneric", true);
 			Misc.makeImportant(probe4, getMissionId());
 			
 			// get rid of the highlight on the empty probe

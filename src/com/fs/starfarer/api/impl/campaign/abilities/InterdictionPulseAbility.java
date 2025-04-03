@@ -121,7 +121,8 @@ public class InterdictionPulseAbility extends BaseDurationAbility {
 	
 
 	public static float getRange(CampaignFleetAPI fleet) {
-		return BASE_RANGE + fleet.getSensorRangeMod().computeEffective(fleet.getSensorStrength()) / 2f;
+		float max = Global.getSettings().getMaxSensorRange();
+		return Math.min(max, BASE_RANGE + fleet.getSensorRangeMod().computeEffective(fleet.getSensorStrength()) / 2f);
 	}
 	
 	@Override

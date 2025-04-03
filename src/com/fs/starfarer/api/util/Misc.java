@@ -6907,7 +6907,7 @@ public class Misc {
 			if (key.equals(keyForHull)) {
 				return Global.getSettings().getSprite(cat, key);
 			}
-			if (key.startsWith(weaponId) && !noSharing.contains(key)) {
+			if (key.startsWith(weaponId) && key.endsWith(type.name()) && !noSharing.contains(key)) {
 				matching.add(Global.getSettings().getSprite(cat, key));
 			}
 		}

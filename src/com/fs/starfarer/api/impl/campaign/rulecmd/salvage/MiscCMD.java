@@ -14,6 +14,7 @@ import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
 import com.fs.starfarer.api.campaign.TextPanelAPI;
 import com.fs.starfarer.api.campaign.rules.MemoryAPI;
+import com.fs.starfarer.api.impl.PlayerFleetPersonnelTracker;
 import com.fs.starfarer.api.impl.campaign.ids.FleetTypes;
 import com.fs.starfarer.api.impl.campaign.intel.misc.CryosleeperIntel;
 import com.fs.starfarer.api.impl.campaign.intel.misc.HypershuntIntel;
@@ -80,6 +81,10 @@ public class MiscCMD extends BaseCommandPlugin {
 			}
 		} else if (command.equals("addWormholeIntel")) {
 			addWormholeIntelIfNeeded(entity, dialog.getTextPanel(), true);
+		} else if (command.equals("addMarineXP")) {
+			float amount = params.get(1).getFloat(memoryMap);
+			PlayerFleetPersonnelTracker.getInstance().update();
+			PlayerFleetPersonnelTracker.getInstance().getMarineData().addXP(amount);
 		} else if (command.equals("mk1_spawnThreatFleet")) {
 			StarSystemAPI system = Global.getSector().getStarSystem(NamelessRock.NAMELESS_ROCK_LOCATION_ID);
 			

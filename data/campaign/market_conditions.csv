@@ -75,7 +75,7 @@ Pirate Activity,pirate_activity,,,TRUE,com.fs.starfarer.api.impl.campaign.intel.
 The pirates most likely have a base somewhere relatively nearby.",graphics/icons/markets/pirate_activity.png,1300
 Hostile Activity,hostile_activity,,,TRUE,com.fs.starfarer.api.impl.campaign.intel.events.HostileActivity,,graphics/icons/markets/pirate_activity.png,1350
 Piracy Respite,piracy_respite,,,TRUE,com.fs.starfarer.api.impl.campaign.econ.PiracyRespite,This colony is experiencing a respite from the depredations of piracy otherwise so common in the Sector.,graphics/icons/markets/respite40.png,1375
-Established Polity,established_polity,,,TRUE,com.fs.starfarer.api.impl.campaign.econ.EstablishedPolity,,graphics/icons/markets/blockade.png,1380
+Established Polity,established_polity,,,TRUE,com.fs.starfarer.api.impl.campaign.econ.EstablishedPolity,,graphics/icons/markets/established_polity.png,1380
 Blockaded,blockaded,,,TRUE,com.fs.starfarer.api.impl.campaign.econ.Blockaded,"The system that this colony is in is experiencing a blockade, and regular trade shipping is suffering from harassment or worse. The effects will continue until the blockading force leaves or is soundly defeated.",graphics/icons/markets/blockade.png,1385
 Luddic Path Cells,pather_cells,,,TRUE,com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCells,,graphics/icons/markets/pather_cells.png,1400
 ,,,,,,,,

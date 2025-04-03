@@ -18,6 +18,11 @@ public class Tags {
 	
 	public static final String NO_SIM = "no_sim";
 	
+	/**
+	 * On hulls. Full CR recovery after combat, to max value.
+	 */
+	public static final String FULL_CR_RECOVERY = "full_cr_recovery";
+	
 	public static final String INDUSTRY_DO_NOT_SHOW_IN_BUILD_DIALOG = "do_not_show_in_build_dialog";
 	
 	

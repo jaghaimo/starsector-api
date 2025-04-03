@@ -52,7 +52,7 @@ public class PaladinEffect implements BeamEffectPlugin {
 				0.5f, // particleDuration
 				150, // particleCount
 				new Color(255,255,255,255), // particleColor
-				new Color(255,100,100,175)  // explosionColor
+				new Color(255,100,100,75)  // explosionColor
 		);
 
 		spec.setDamageType(DamageType.FRAGMENTATION);

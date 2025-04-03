@@ -76,8 +76,8 @@ public class TiaTaxet {
 		tia_stable1.setCircularOrbitPointingDown(tia_star, 0 , 2900, 100);
 		
 		// An asteroid belts
-		system.addRingBand(tia_star, "misc", "rings_dust0", 256f, 1, Color.white, 256f, 4300, 220f, null, null);
-		system.addRingBand(tia_star, "misc", "rings_asteroids0", 256f, 0, Color.white, 256f, 4400, 226f, null, null);
+		system.addRingBand(tia_star, "misc", "rings_dust0", 256f, 1, Color.white, 256f, 3550, 220f, null, null);
+		system.addRingBand(tia_star, "misc", "rings_asteroids0", 256f, 0, Color.white, 256f, 3650, 226f, null, null);
 		system.addAsteroidBelt(tia_star, 150, 3600, 170, 200, 250, Terrain.ASTEROID_BELT, "Lagua's Torus");
 		
 		// Arbitrary Asteroid field 

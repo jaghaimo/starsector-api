@@ -244,6 +244,8 @@ public class Objectives extends BaseCommandPlugin {
 						 Factions.NEUTRAL); // faction
 				if (entity.getOrbit() != null) {
 					built.setOrbit(entity.getOrbit().makeCopy());
+				} else {
+					built.setLocation(entity.getLocation().x, entity.getLocation().y);
 				}
 				loc.removeEntity(entity);
 				updateOrbitingEntities(loc, entity, built);

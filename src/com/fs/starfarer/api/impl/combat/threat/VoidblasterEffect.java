@@ -15,7 +15,6 @@ import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.WeaponAPI;
 import com.fs.starfarer.api.combat.listeners.ApplyDamageResultAPI;
 import com.fs.starfarer.api.combat.listeners.DamageDealtModifier;
-import com.fs.starfarer.api.impl.combat.SquallOnFireEffect;
 import com.fs.starfarer.api.util.Misc;
 
 public class VoidblasterEffect implements OnHitEffectPlugin, OnFireEffectPlugin, EveryFrameWeaponEffectPlugin,
@@ -31,7 +30,7 @@ public class VoidblasterEffect implements OnHitEffectPlugin, OnFireEffectPlugin,
 	@Override
 	public void onFire(DamagingProjectileAPI projectile, WeaponAPI weapon, CombatEngineAPI engine) {
 		ShipAPI ship = weapon.getShip();
-		if (!ship.hasListenerOfClass(SquallOnFireEffect.class)) {
+		if (!ship.hasListenerOfClass(VoidblasterEffect.class)) {
 			ship.addListener(this);
 			weaponId = weapon.getId();
 		}

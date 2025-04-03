@@ -107,6 +107,9 @@ public class SmugglingScanScript implements EveryFrameScript {
 		suspicionLevel += closestSuspicion;
 		//suspicionLevel = 1f;
 		boolean doScan = (float) Math.random() < suspicionLevel * 5f && suspicionLevel >= threshold;
+		if (curr.getMemoryWithoutUpdate().getBoolean(MemFlags.MEMORY_KEY_PATROL_ALLOW_TOFF)) {
+			doScan = false;
+		}
 		//doScan = true;
 		
 		if (doScan) {
@@ -160,7 +163,11 @@ public class SmugglingScanScript implements EveryFrameScript {
 				return;
 			}
 			//curr.getMemoryWithoutUpdate().contains("$pursuePlayer_smugglingScan");
-			Misc.setFlagWithReason(mem, MemFlags.MEMORY_KEY_PURSUE_PLAYER, "smugglingScan", true, 1f);
+			if (!curr.getMemoryWithoutUpdate().getBoolean(MemFlags.MEMORY_KEY_PATROL_ALLOW_TOFF)) {
+				Misc.setFlagWithReason(mem, MemFlags.MEMORY_KEY_PURSUE_PLAYER, "smugglingScan", true, 1f);
+			} else {
+				Misc.setFlagWithReason(mem, MemFlags.MEMORY_KEY_PURSUE_PLAYER, "smugglingScan", false, 0f);
+			}
 		}
 	}
 	

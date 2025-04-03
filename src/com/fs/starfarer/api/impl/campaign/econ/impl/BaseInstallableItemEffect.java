@@ -17,6 +17,7 @@ import com.fs.starfarer.api.campaign.SpecialItemSpecAPI;
 import com.fs.starfarer.api.campaign.econ.Industry;
 import com.fs.starfarer.api.campaign.econ.InstallableIndustryItemPlugin.InstallableItemDescriptionMode;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
+import com.fs.starfarer.api.campaign.econ.MarketAPI.SurveyLevel;
 import com.fs.starfarer.api.impl.campaign.ids.Conditions;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
@@ -79,22 +80,32 @@ public abstract class BaseInstallableItemEffect implements InstallableItemEffect
 	}
 	
 	public List<String> getUnmetRequirements(Industry industry) {
+		return getUnmetRequirements(industry, false);
+	}
+	public List<String> getUnmetRequirements(Industry industry, boolean checkSurveyed) {
 		List<String> unmet = new ArrayList<String>();
 		if (industry == null) return unmet;
 		
 		MarketAPI market = industry.getMarket();
 		
+		boolean prelim = market.getSurveyLevel().ordinal() >= SurveyLevel.PRELIMINARY.ordinal();
+		boolean full = market.getSurveyLevel().ordinal() >= SurveyLevel.FULL.ordinal();
+		if (!checkSurveyed) {
+			prelim = true;
+			full = true;
+		}
+		
 		for (String curr : getRequirements(industry)) {
 			if (ItemEffectsRepo.NO_ATMOSPHERE.equals(curr)) {
-				if (!market.hasCondition(Conditions.NO_ATMOSPHERE)) {
+				if (!market.hasCondition(Conditions.NO_ATMOSPHERE) || !prelim) {
 					unmet.add(curr);
 				}
 			} else if (ItemEffectsRepo.HABITABLE.equals(curr)) {
-				if (!market.hasCondition(Conditions.HABITABLE)) {
+				if (!market.hasCondition(Conditions.HABITABLE) || !prelim) {
 					unmet.add(curr);
 				}
 			} else if (ItemEffectsRepo.NOT_HABITABLE.equals(curr)) {
-				if (market.hasCondition(Conditions.HABITABLE)) {
+				if (market.hasCondition(Conditions.HABITABLE) || !prelim) {
 					unmet.add(curr);
 				}
 			} else if (ItemEffectsRepo.GAS_GIANT.equals(curr)) {
@@ -106,36 +117,36 @@ public abstract class BaseInstallableItemEffect implements InstallableItemEffect
 					unmet.add(curr);
 				}
 			} else if (ItemEffectsRepo.NOT_EXTREME_WEATHER.equals(curr)) {
-				if (market.hasCondition(Conditions.EXTREME_WEATHER)) {
+				if (market.hasCondition(Conditions.EXTREME_WEATHER) || !prelim) {
 					unmet.add(curr);
 				}
 			} else if (ItemEffectsRepo.NOT_EXTREME_TECTONIC_ACTIVITY.equals(curr)) {
-				if (market.hasCondition(Conditions.EXTREME_TECTONIC_ACTIVITY)) {
+				if (market.hasCondition(Conditions.EXTREME_TECTONIC_ACTIVITY) || !prelim) {
 					unmet.add(curr);
 				}
 			} else if (ItemEffectsRepo.NO_TRANSPLUTONIC_ORE_DEPOSITS.equals(curr)) {
-				if (market.hasCondition(Conditions.RARE_ORE_SPARSE) ||
+				if ((market.hasCondition(Conditions.RARE_ORE_SPARSE) ||
 						market.hasCondition(Conditions.RARE_ORE_MODERATE) ||
 						market.hasCondition(Conditions.RARE_ORE_ABUNDANT) ||
 						market.hasCondition(Conditions.RARE_ORE_RICH) ||
-						market.hasCondition(Conditions.RARE_ORE_ULTRARICH)) {
+						market.hasCondition(Conditions.RARE_ORE_ULTRARICH)) || !full) {
 					unmet.add(curr);
 				}
 			} else if (ItemEffectsRepo.NO_VOLATILES_DEPOSITS.equals(curr)) {
-				if (market.hasCondition(Conditions.VOLATILES_TRACE) ||
+				if ((market.hasCondition(Conditions.VOLATILES_TRACE) ||
 						market.hasCondition(Conditions.VOLATILES_DIFFUSE) ||
 						market.hasCondition(Conditions.VOLATILES_ABUNDANT) ||
-						market.hasCondition(Conditions.VOLATILES_PLENTIFUL)) {
+						market.hasCondition(Conditions.VOLATILES_PLENTIFUL)) || !full) {
 					unmet.add(curr);
 				}
 			} else if (ItemEffectsRepo.HOT_OR_EXTREME_HEAT.equals(curr)) {
-				if (!market.hasCondition(Conditions.HOT) &&
-						!market.hasCondition(Conditions.VERY_HOT)) {
+				if ((!market.hasCondition(Conditions.HOT) &&
+						!market.hasCondition(Conditions.VERY_HOT)) || !prelim) {
 					unmet.add(curr);
 				}
 			} else if (ItemEffectsRepo.COLD_OR_EXTREME_COLD.equals(curr)) {
-				if (!market.hasCondition(Conditions.COLD) &&
-						!market.hasCondition(Conditions.VERY_COLD)) {
+				if ((!market.hasCondition(Conditions.COLD) &&
+						!market.hasCondition(Conditions.VERY_COLD)) || !prelim) {
 					unmet.add(curr);
 				}
 			} else if (ItemEffectsRepo.CORONAL_TAP_RANGE.equals(curr)) {

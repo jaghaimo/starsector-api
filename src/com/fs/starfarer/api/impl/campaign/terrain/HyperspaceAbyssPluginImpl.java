@@ -92,16 +92,21 @@ public class HyperspaceAbyssPluginImpl extends BaseHyperspaceAbyssPlugin impleme
 		
 //		boolean player = Misc.getDistance(Global.getSector().getPlayerFleet().getLocationInHyperspace(), loc) < 5f;
 		
+		float depthBasedOnCorner = 0f;
 		if (test < 1f) {
 			float threshold = 0.95f;
 //			if (player) {
 //				System.out.println("Depth: " + (1f - (test - threshold) / (1f - threshold)));
 //			}
 			if (uncapped) {
-				return (1f - (test - threshold) / (1f - threshold));
+				//return (1f - (test - threshold) / (1f - threshold));
+				depthBasedOnCorner = (1f - (test - threshold) / (1f - threshold));
+			} else {
+				if (test < threshold) depthBasedOnCorner = 1f;
+				else depthBasedOnCorner = 1f - (test - threshold) / (1f - threshold);
 			}
-			if (test < threshold) return 1f;
-			return 1f - (test - threshold) / (1f - threshold);
+//			if (test < threshold) return 1f;
+//			return 1f - (test - threshold) / (1f - threshold);
 		}
 		
 		// outside the map area
@@ -115,13 +120,17 @@ public class HyperspaceAbyssPluginImpl extends BaseHyperspaceAbyssPlugin impleme
 //			if (player) {
 //				System.out.println("Depth: " + max/2000f);
 //			}
-			if (uncapped) return max / 2000f;
-			
-			return Math.min(1f, max / 2000f);
+//			if (uncapped) return max / 2000f;
+//			return Math.min(1f, max / 2000f);
+			if (uncapped) {
+				return Math.max(depthBasedOnCorner, max / 2000f);
+			}
+			return Math.min(1f, Math.max(depthBasedOnCorner, max / 2000f));
 		}
 		
 		// inside the map, outside the Abyss area
-		return 0f;
+		//return 0f;
+		return depthBasedOnCorner;
 	}
 	
 	/**

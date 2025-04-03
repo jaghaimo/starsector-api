@@ -19,6 +19,7 @@ import com.fs.starfarer.api.impl.campaign.ids.Items;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.combat.threat.RoilingSwarmEffect.RoilingSwarmParams;
+import com.fs.starfarer.api.loading.HullModSpecAPI;
 import com.fs.starfarer.api.util.ColorShifterUtil;
 import com.fs.starfarer.api.util.Misc;
 
@@ -320,15 +321,29 @@ public class FragmentSwarmHullmod extends BaseHullMod {
 								new SpecialItemData(Items.FRAGMENT_FABRICATOR, null), null);
 	}
 	
+	public static boolean hasShroudedHullmods(ShipAPI ship) {
+		if (ship == null || ship.getVariant() == null) return false;
+		for (String id : ship.getVariant().getHullMods()) {
+			HullModSpecAPI spec = Global.getSettings().getHullModSpec(id);
+			if (spec != null && spec.hasTag(Tags.SHROUDED)) return true;
+		}
+		return false;
+	}
+	
 	public boolean isApplicableToShip(ShipAPI ship) {
 		if (ship != null && ship.getHullSpec().isPhase()) {
 			return false;
 		}
+		if (hasShroudedHullmods(ship)) return false;
+		
 		return true;
 	}
 	
 	public String getUnapplicableReason(ShipAPI ship) {
-		return "Can not be installed on a phase ship";
+		if (ship != null && ship.getHullSpec().isPhase()) {
+			return "Can not be installed on a phase ship";
+		}
+		return "Incompatible with Shrouded hullmods";
 	}
 
 	public String getDescriptionParam(int index, HullSize hullSize) {

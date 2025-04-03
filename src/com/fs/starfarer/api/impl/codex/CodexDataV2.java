@@ -809,7 +809,8 @@ public class CodexDataV2 {
 					WeaponSpecAPI spec = (WeaponSpecAPI) curr.getParam();
 					techs.add(spec.getManufacturer());
 					
-					if (spec.getAIHints().contains(AIHints.SYSTEM) && 
+					if (spec.getAIHints().contains(AIHints.SYSTEM) &&
+							spec.getPrimaryRoleStr() != null &&
 							spec.getPrimaryRoleStr().endsWith("(Fighter)")) {
 						fighter++;
 					} else {
@@ -1684,6 +1685,8 @@ public class CodexDataV2 {
 						if (size == WeaponSize.MEDIUM) sizeTag = MEDIUM;
 						if (size == WeaponSize.LARGE) sizeTag = LARGE;
 						if (spec.getAIHints().contains(AIHints.SYSTEM) && 
+								spec.getPrimaryRoleStr() != null &&
+								spec.getPrimaryRoleStr() != null && 
 								spec.getPrimaryRoleStr().endsWith("(Fighter)")) {
 							sizeTag = FIGHTER_WEAPON;
 						}
@@ -2658,7 +2661,8 @@ public class CodexDataV2 {
 		for (CodexEntryPlugin weapon : weapons.getChildren()) {
 			if (weapon.getParam() instanceof WeaponSpecAPI) {
 				WeaponSpecAPI spec = (WeaponSpecAPI) weapon.getParam();
-				if (spec.getAIHints().contains(AIHints.SYSTEM) && 
+				if (spec.getAIHints().contains(AIHints.SYSTEM) &&
+						spec.getPrimaryRoleStr() != null &&
 						spec.getPrimaryRoleStr().endsWith("(Fighter)")) {
 					continue;
 				}
@@ -2780,6 +2784,7 @@ public class CodexDataV2 {
 		makeRelated(getFighterEntryId("terminator_wing"), getShipSystemEntryId("drone_strike"));
 				
 		makeRelated(getHullmodEntryId(HullMods.VAST_HANGAR), getHullmodEntryId(HullMods.CONVERTED_HANGAR));
+		makeRelated(getHullmodEntryId(HullMods.DESIGN_COMPROMISES), getHullmodEntryId(HullMods.CONVERTED_HANGAR));
 
 		// tech mining and all ruins
 		makeRelated(getIndustryEntryId(Industries.TECHMINING), getConditionEntryId(Conditions.RUINS_SCATTERED));

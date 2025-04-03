@@ -1,6 +1,5 @@
 package com.fs.starfarer.api.impl.campaign.missions;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -9,6 +8,8 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+
+import java.awt.Color;
 
 import org.lwjgl.util.vector.Vector2f;
 

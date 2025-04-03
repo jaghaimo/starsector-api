@@ -185,7 +185,7 @@ public class QuartermasterCargoSwapBarEvent extends BaseGetCommodityBarEvent {
 				"vents to you about how " + getHisOrHer() + " provision request got mixed up and " +
 				getHeOrShe() + " was shipped %s units of " + take.getLowerCaseName() + " instead of %s units of " +
 				give.getLowerCaseName() + ". \"A mining drone with half its Ludd-damned " +
-				"computer fried on rads would do a better job than the idiots in Fleet Supply\" " +
+				"computer fried on rads would do a better job than the idiots in Fleet Supply,\" " +
 				getHeOrShe() + " growls, knocking back the rest of " + getHisOrHer() + " drink and " +
 				"slamming the glass down.\n\n" +
 				"You have %s " + units + " of " + give.getLowerCaseName() + " on board.";

@@ -48,6 +48,12 @@ public class CarrierGroup {
 				if (isOfficer(stats)) speedBonus *= OFFICER_MULT;
 				stats.getMaxSpeed().modifyPercent(id, speedBonus);
 			}
+//			else {
+//				// may be needed to make refit screen show the right values when adding/removing Converted Hangar
+//				// leaving this be for now
+//				stats.getFighterRefitTimeMult().unmodifyMult(id);
+//				stats.getMaxSpeed().unmodifyPercent(id);
+//			}
 		}
 		
 		public void unapply(MutableShipStatsAPI stats, HullSize hullSize, String id) {

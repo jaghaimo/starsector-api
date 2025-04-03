@@ -353,6 +353,10 @@ public class MapMarkerIntel extends FleetLogIntel {
 	public boolean shouldRemoveIntel() {
 		return super.shouldRemoveIntel();
 	}
+	
+	public boolean isHidden() {
+		return hidden != null;  
+	}
 
 	
 }

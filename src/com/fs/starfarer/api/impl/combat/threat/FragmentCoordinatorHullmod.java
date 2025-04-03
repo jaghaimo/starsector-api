@@ -23,7 +23,7 @@ public class FragmentCoordinatorHullmod extends BaseHullMod {
 		
 		boolean sMod = isSMod(stats);
 		if (sMod) {
-			stats.getDynamic().getMod(Stats.FRAGMENT_SWARM_SIZE_MOD).modifyPercent(id, SMOD_SIZE_INCREASE);
+			stats.getDynamic().getMod(Stats.FRAGMENT_SWARM_SIZE_MOD).modifyPercent(id, SIZE_INCREASE + SMOD_SIZE_INCREASE);
 		}
 	}
 

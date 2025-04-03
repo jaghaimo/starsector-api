@@ -147,7 +147,7 @@ The ship's flux dissipation and capacity, even the nominal base values, are redu
 
 The range of ballistic weapons is reduced by %s, the rate of fire of missile weapons is reduced by %s, and the flux generation of energy weapons is increased by %s.
 
-On the plus side, extra nanoforge capacity can be brought online more easily, alloving the installation of a %s despite the ship already having a fighter bay, increasing the number of operational fighter bays to %s.","Reduces missile and ballistic weapon range, and flux dissipation / capacity.",,graphics/hullmods/design_compromises.png
+On the plus side, extra nanoforge capacity can be brought online more easily, allowing the installation of a %s despite the ship already having a fighter bay, increasing the number of operational fighter bays to %s.","Reduces missile and ballistic weapon range, and flux dissipation / capacity.",,graphics/hullmods/design_compromises.png
 ,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,
@@ -217,7 +217,7 @@ Shrouded Mantle,shrouded_mantle,,,,"codex_unlockable, shrouded, no_drop_salvage"
 
 Crew casualties in combat are increased by %s.",The ship recoils away from damage.,The ship benefits from %s of the healing provided by Hungering Rift.,graphics/hullmods/shrouded_mantle.png
 Shrouded Thunderhead,shrouded_thunderhead,,,,"codex_unlockable, shrouded, no_drop_salvage","Weapons, Special",,,,,5,10,15,25,com.fs.starfarer.api.impl.combat.dweller.ShroudedThunderheadHullmod,<created by script>,The ship fires Rift Lightning bolts at recent targets of its weapons.,,graphics/hullmods/shrouded_thunderhead.png
-Shrouded Lens,shrouded_lens,,,,"codex_unlockable, shrouded, no_drop_salvage",Special,,,,,5,10,15,25,com.fs.starfarer.api.impl.combat.dweller.ShroudedLensHullmod,<created by script>,"The Lens automatically focuses on nearby targets, dealing damage in an area.",,graphics/hullmods/shrouded_lens.png
+Shrouded Lens,shrouded_lens,,,,"codex_unlockable, shrouded, no_drop_salvage",Special,,,,,3,6,9,15,com.fs.starfarer.api.impl.combat.dweller.ShroudedLensHullmod,<created by script>,"The Lens automatically focuses on nearby targets, dealing damage in an area.",,graphics/hullmods/shrouded_lens.png
 ,,,,,,,,,,,,,,,,,,,
 # ship skin buffs,,,,,,,,,,,,,,,,,,,
 Fourteenth Battlegroup,fourteenth,,,,,,,,TRUE,,0,0,0,0,data.hullmods.Fourteenth,"This ship is a survivor of the original 14th Domain Battlegroup which founded the Hegemony. It is a prime specimen of the Domain Navy's ""decisive battle"" doctrine, particularly exhibited by a series of radical structural modifications (performed with pre-Collapse industrial methods) which allow the mounting of heavier armor plating by a flat increase of %s standard units, with only a %s reduction in speed and maneuverability. Exceptionally well-tuned energy systems increase flux throughput and capacity by %s over standard examples of this hull.",,,graphics/hullmods/fourteenth.png

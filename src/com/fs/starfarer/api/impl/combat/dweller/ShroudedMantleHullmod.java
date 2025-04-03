@@ -33,7 +33,7 @@ public class ShroudedMantleHullmod extends HumanShipShroudedHullmod {
 		
 		boolean sMod = isSMod(stats);
 		if (sMod) {
-			stats.getDynamic().getStat(AssayingRiftEffect.HUNGERING_RIFT_HEAL_MULT_STAT).modifyMult(id, HEAL_MULT);
+			stats.getDynamic().getMod(AssayingRiftEffect.HUNGERING_RIFT_HEAL_MOD_HUMAN_SHIPS).modifyFlat(id, HEAL_MULT);
 		}
 	}
 

@@ -47,7 +47,7 @@ public class TutorialLeashAssignmentAI extends BaseAssignmentAI {
 //			System.out.println(fleet.getCurrentAssignment().getAssignment().name() + ", dist: " + dist);
 //		}
 		
-		if (dist > 1500 && fleet.getAI().getCurrentAssignmentType() == FleetAssignment.ORBIT_AGGRESSIVE) {
+		if (dist > 1200 && fleet.getAI().getCurrentAssignmentType() == FleetAssignment.ORBIT_AGGRESSIVE) {
 			fleet.addAssignmentAtStart(FleetAssignment.ORBIT_PASSIVE, toGuard, 3f, null);
 			CampaignFleetAIAPI ai = fleet.getAI();
 			if (ai instanceof ModularFleetAIAPI) {

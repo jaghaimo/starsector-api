@@ -63,4 +63,9 @@ public interface SpriteAPI {
 	void renderAtCenterNoBind(float x, float y);
 	int getBlendDest();
 	int getBlendSrc();
+	
+	float getTexX();
+	float getTexY();
+	float getTexWidth();
+	float getTexHeight();
 }

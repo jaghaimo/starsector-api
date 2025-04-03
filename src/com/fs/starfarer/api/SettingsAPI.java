@@ -75,6 +75,8 @@ import com.fs.starfarer.api.util.ListMap;
 public interface SettingsAPI {
 	int getBattleSize();
 	
+	boolean isShowingCodex();
+	
 	/**
 	 * Can be used outside the campaign, unlike FactoryAPI.createPerson().
 	 * @return

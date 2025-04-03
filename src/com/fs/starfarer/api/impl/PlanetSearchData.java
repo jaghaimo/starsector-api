@@ -28,6 +28,7 @@ import com.fs.starfarer.api.impl.campaign.ids.Conditions;
 import com.fs.starfarer.api.impl.campaign.ids.Items;
 import com.fs.starfarer.api.impl.campaign.ids.Tags;
 import com.fs.starfarer.api.impl.campaign.intel.misc.HypershuntIntel;
+import com.fs.starfarer.api.impl.campaign.procgen.ConditionGenDataSpec;
 import com.fs.starfarer.api.impl.codex.CodexDataV2;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
 import com.fs.starfarer.api.util.Misc;
@@ -67,15 +68,26 @@ public class PlanetSearchData {
 		}
 	}
 	
+	public static boolean conditionRequiresSurveying(String id) {
+		Object test = Global.getSettings().getSpec(ConditionGenDataSpec.class, id, true);
+		if (test instanceof ConditionGenDataSpec) {
+			ConditionGenDataSpec spec = (ConditionGenDataSpec) test;
+			return spec.isRequiresSurvey();
+		}
+		return false;
+	}
+	
 	public static class MarketConditionData implements PlanetFilter {
 		public String id;
 		public String conditionId;
 		public MarketConditionSpecAPI spec;
+		public boolean reqSurvey;
 		public MarketConditionData(String conditionId) {
 			this.id = "ps_mc_" + conditionId;
 			this.conditionId = conditionId;
 			
 			spec = Global.getSettings().getMarketConditionSpec(conditionId);
+			reqSurvey = conditionRequiresSurveying(id);
 		}
 		
 		@Override
@@ -84,6 +96,15 @@ public class PlanetSearchData {
 			if (selected == null) return true;
 			
 			if (entity.getMarket() == null) return false;
+			
+			if (spec != null && reqSurvey && entity.getMarket().getSurveyLevel() != SurveyLevel.FULL) {
+				return false;
+			}
+			if (spec != null && spec.isPlanetary() && 
+					(entity.getMarket().getSurveyLevel() == SurveyLevel.NONE || 
+					entity.getMarket().getSurveyLevel() == SurveyLevel.SEEN)) {
+				return false;
+			}
 			
 			return entity.getMarket().hasCondition(conditionId);
 		}
@@ -125,7 +146,13 @@ public class PlanetSearchData {
 				Pair<SectorEntityToken, Float> p = PopulationAndInfrastructure.getNearestCoronalTap(entity.getLocationInHyperspace(), false, true);
 				if (p == null || p.two > ItemEffectsRepo.CORONAL_TAP_LIGHT_YEARS) return false;
 				return true;
-			} else if (itemId.equals(Items.ORBITAL_FUSION_LAMP)) {
+			}
+			
+//			if (entity.getMarket().getSurveyLevel() != SurveyLevel.FULL) {
+//				return false;
+//			}
+			
+			if (itemId.equals(Items.ORBITAL_FUSION_LAMP)) {
 				for (String id : ItemEffectsRepo.FUSION_LAMP_CONDITIONS) {
 					if (entity.getMarket().hasCondition(id)) return true;
 				}
@@ -137,7 +164,7 @@ public class PlanetSearchData {
 			BaseIndustry fake = new Farming(); // constructor does nothing much
 			fake.setMarket(entity.getMarket());
 			
-			return effect.getUnmetRequirements(fake).isEmpty();
+			return effect.getUnmetRequirements(fake, true).isEmpty();
 		}
 
 		@Override

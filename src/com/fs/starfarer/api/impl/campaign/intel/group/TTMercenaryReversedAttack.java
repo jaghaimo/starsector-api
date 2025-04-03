@@ -57,6 +57,7 @@ public class TTMercenaryReversedAttack extends GenericRaidFGI  {
 		SectorEntityToken origin = pf.getContainingLocation().createToken(pf.getLocation());
 		
 		MarketAPI fake = Global.getFactory().createMarket("fake", "an independent world", 5);
+		fake.setFactionId(Factions.INDEPENDENT);
 		fake.setPrimaryEntity(origin);
 		origin.setMarket(fake);
 		params.source = fake;

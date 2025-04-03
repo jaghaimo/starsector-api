@@ -35,7 +35,9 @@ import com.fs.starfarer.api.util.WeightedRandomPicker;
  */
 public class AssayingRiftEffect implements OnFireEffectPlugin, OnHitEffectPlugin, EveryFrameWeaponEffectPlugin {
 
+	
 	public static String HUNGERING_RIFT_HEAL_MULT_STAT = "hungering_rift_heal_mult_stat";
+	public static String HUNGERING_RIFT_HEAL_MOD_HUMAN_SHIPS = "hungering_rift_heal_mod";
 	
 	public static float HEAL_AMOUNT = 1000f;
 	
@@ -113,6 +115,8 @@ public class AssayingRiftEffect implements OnFireEffectPlugin, OnHitEffectPlugin
 					if (other.isFighter()) continue;
 					if (other.getOwner() != source.getOwner()) continue;
 					
+					if (getHealMult(other) <= 0) continue;
+					
 					DwellerShroud otherShroud = DwellerShroud.getShroudFor(source);
 					if (otherShroud == null) continue;
 					
@@ -128,12 +132,11 @@ public class AssayingRiftEffect implements OnFireEffectPlugin, OnHitEffectPlugin
 				if (toHeal == null) toHeal = healNeedLess.pick();
 				if (toHeal != null) {
 					float healAmount = HEAL_AMOUNT;
-					healAmount *= toHeal.getMutableStats().getDynamic().getValue(HUNGERING_RIFT_HEAL_MULT_STAT);
+					healAmount *= getHealMult(toHeal);
 					toHeal.setHitpoints(Math.min(toHeal.getMaxHitpoints(), toHeal.getHitpoints() + healAmount));
 				}
 			}
 		}
-		
 		
 		NEParams p = RiftCascadeMineExplosion.createStandardRiftParams(color, 15f);
 		p.fadeOut = 1f;
@@ -145,6 +148,13 @@ public class AssayingRiftEffect implements OnFireEffectPlugin, OnHitEffectPlugin
 		if (target != null) vel.set(target.getVelocity());
 		Global.getSoundPlayer().playSound("assaying_rift_explosion", 1f, 1f, point, vel);
 	}
+	
+	public static float getHealMult(ShipAPI toHeal) {
+		float base = toHeal.getMutableStats().getDynamic().getValue(HUNGERING_RIFT_HEAL_MULT_STAT);
+		base += toHeal.getMutableStats().getDynamic().getValue(HUNGERING_RIFT_HEAL_MOD_HUMAN_SHIPS, 0f);
+		return base;
+	}
+	
 	
 	public void onFire(DamagingProjectileAPI projectile, WeaponAPI weapon, CombatEngineAPI engine) {
 		MissileAIPlugin proxAI = Global.getCombatEngine().createProximityFuseAI((MissileAPI)projectile);

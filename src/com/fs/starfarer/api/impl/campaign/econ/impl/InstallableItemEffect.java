@@ -25,6 +25,7 @@ public interface InstallableItemEffect {
 	 * @return
 	 */
 	List<String> getUnmetRequirements(Industry industry);
+	List<String> getUnmetRequirements(Industry industry, boolean checkSurveyed);
 	List<String> getRequirements(Industry industry);
 	
 	default String getSpecialNotesName() {

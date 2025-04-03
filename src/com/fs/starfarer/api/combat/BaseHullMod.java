@@ -2,7 +2,6 @@ package com.fs.starfarer.api.combat;
 
 import java.awt.Color;
 
-import com.fs.starfarer.api.GameState;
 import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.campaign.CampaignUIAPI.CoreUITradeMode;
 import com.fs.starfarer.api.campaign.CargoStackAPI;
@@ -134,8 +133,9 @@ public class BaseHullMod implements HullModEffect {
 	
 	public boolean hasSModEffectSection(HullSize hullSize, ShipAPI ship, boolean isForModSpec) {
 		if (!hasSModEffect()) return false;
-		GameState state = Global.getCurrentState();
-		if (state == GameState.TITLE && !Global.getSettings().isDevMode()) return false;
+		// hope commenting this out doesn't make it crash
+		//GameState state = Global.getCurrentState();
+		//if (state == GameState.TITLE && !Global.getSettings().isDevMode()) return false;
 		if (Misc.CAN_SMOD_BUILT_IN) {
 			return !isBuiltIn(ship) || !isSModEffectAPenalty();
 		}

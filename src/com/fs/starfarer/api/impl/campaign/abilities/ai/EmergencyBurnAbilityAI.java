@@ -28,6 +28,12 @@ public class EmergencyBurnAbilityAI extends BaseAbilityAI {
 //	}
 
 	protected void activate() {
+//		if (fleet.getContainingLocation() != null && fleet.getContainingLocation().isCurrentLocation()) {
+//			float dist = Misc.getDistance(fleet.getLocation(), Global.getSector().getPlayerFleet().getLocation());
+//			if (dist < 1000f) {
+//				System.out.println("fwefewfew");
+//			}
+//		}
 		ability.activate();
 		MemoryAPI mem = fleet.getMemoryWithoutUpdate();
 		mem.set(AI_USE_TIMEOUT_KEY, true,

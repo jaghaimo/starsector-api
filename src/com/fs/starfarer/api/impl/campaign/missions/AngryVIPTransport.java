@@ -9,6 +9,7 @@ import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.impl.campaign.ids.Factions;
 import com.fs.starfarer.api.impl.campaign.ids.Ranks;
+import com.fs.starfarer.api.impl.campaign.ids.Voices;
 import com.fs.starfarer.api.impl.campaign.missions.academy.GACelestialObject.Variation;
 import com.fs.starfarer.api.impl.campaign.missions.hub.HubMissionWithBarEvent;
 import com.fs.starfarer.api.ui.TooltipMakerAPI;
@@ -32,7 +33,8 @@ public class AngryVIPTransport extends HubMissionWithBarEvent {
 	protected int quantity;
 	protected String destinationId;
 	protected Variation variation;
-	
+	protected PersonAPI person;
+		
 	@Override
 	protected boolean create(MarketAPI createdAt, boolean barEvent) {
 		// if already accepted by the player, abort
@@ -69,17 +71,30 @@ public class AngryVIPTransport extends HubMissionWithBarEvent {
 		}
 		
 		destinationId = pickOne(withoutSource);
-		if (destinationId == null) return false;
+		if (destinationId == null) {
+			System.out.print("AVIPT failed on destinationId");
+			return false;
+		}
 		
-		sourceMarket.getFaction().createRandomPerson();
+		//sourceMarket.getFaction().createRandomPerson();
+		//PersonAPI person = sourceMarket.getFaction().createRandomPerson();
+		setGiverRank(Ranks.CITIZEN);
+		setGiverPost(Ranks.ARISTOCRAT);
+		findOrCreateGiver(createdAt, false, false);
 		
-		PersonAPI person = sourceMarket.getFaction().createRandomPerson();
-		person.setRankId(Ranks.CITIZEN);
-		person.setPostId(Ranks.POST_ARISTOCRAT);
 		
-		if (person == null) return false;
+		person = getPerson();
+		if (person == null) {
+			return false;
+		}
 		
-		setPersonOverride(person);
+		//person.setRankId(Ranks.CITIZEN);
+		person.setVoice(Voices.ARISTO);
+		//person.setPostId(Ranks.POST_ARISTOCRAT);
+		
+		//if (person == null) return false;
+		
+		//setPersonOverride(person);
 		
 		if (!setPersonMissionRef(person, "$avipt_ref")) {
 			return false;

@@ -373,7 +373,7 @@ public class LuddicPathCellsIntel extends BaseIntelPlugin implements RouteFleetS
 		for (Industry ind : industries) {
 			//float score = LuddicPathBaseManager.getLuddicPathMarketInterest(market);
 			float score = ind.getPatherInterest();
-			if (score > 0) {
+			if ((int)Math.round(score) != 0) {
 				int s = (int) Math.round(score);
 				info.addPara(indent + ind.getCurrentName() + " (%s)", initPad, h, "" + s);
 				initPad = 3f;
