@@ -1,5 +1,7 @@
 var NAVTREEINDEX56 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#aa1773ccb185fa991f6421447aefb80bc":[1,0,0,0,0,0,5,0,9,5,18],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#aa9790c01956ae1948bd98eba2a4e7826":[0,0,0,0,0,0,5,0,9,5,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#aa9790c01956ae1948bd98eba2a4e7826":[1,0,0,0,0,0,5,0,9,5,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#ab289db8b5e1699ae7ce3743c1e5a8010":[0,0,0,0,0,0,5,0,9,5,9],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#ab289db8b5e1699ae7ce3743c1e5a8010":[1,0,0,0,0,0,5,0,9,5,9],
@@ -247,7 +249,5 @@ var NAVTREEINDEX56 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1AnalyzeEntityIntelCreator.html#a8e6fb657f01170ae089bdc21bccef951":[1,0,0,0,0,0,5,0,11,10,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1AnalyzeEntityIntelCreator.html#ab2a8add3f22f0df0effb9ecd1305cb73":[0,0,0,0,0,0,5,0,11,10,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1AnalyzeEntityIntelCreator.html#ab2a8add3f22f0df0effb9ecd1305cb73":[1,0,0,0,0,0,5,0,11,10,4],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1AnalyzeEntityMissionIntel.html":[0,0,0,0,0,0,5,0,11,11],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1AnalyzeEntityMissionIntel.html":[1,0,0,0,0,0,5,0,11,11],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1AnalyzeEntityMissionIntel.html#a0051907c0a4ecd784f80e100354546e2":[0,0,0,0,0,0,5,0,11,11,22]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1AnalyzeEntityMissionIntel.html":[0,0,0,0,0,0,5,0,11,11]
 };

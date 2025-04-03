@@ -101,6 +101,7 @@ $(function(){initNavTree('classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1AssayingRiftEffect-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">com.fs.starfarer.api.impl.combat.dweller.AssayingRiftEffect Class Reference</div></div>
@@ -134,10 +135,17 @@ Public Member Functions</h2></td></tr>
 <tr class="inherit_header pub_methods_interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1OnHitEffectPlugin"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1OnHitEffectPlugin')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1OnHitEffectPlugin.html">com.fs.starfarer.api.combat.OnHitEffectPlugin</a></td></tr>
 <tr class="inherit_header pub_methods_interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1EveryFrameWeaponEffectPlugin"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1EveryFrameWeaponEffectPlugin')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1EveryFrameWeaponEffectPlugin.html">com.fs.starfarer.api.combat.EveryFrameWeaponEffectPlugin</a></td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:ae3c6c79fbaace9dd32484aa0d8df3936" id="r_ae3c6c79fbaace9dd32484aa0d8df3936"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3c6c79fbaace9dd32484aa0d8df3936">getHealMult</a> (<a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html">ShipAPI</a> toHeal)</td></tr>
+<tr class="separator:ae3c6c79fbaace9dd32484aa0d8df3936"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a24ba126decbcdf7642a6362207ea9a62" id="r_a24ba126decbcdf7642a6362207ea9a62"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24ba126decbcdf7642a6362207ea9a62">HUNGERING_RIFT_HEAL_MULT_STAT</a> = &quot;hungering_rift_heal_mult_stat&quot;</td></tr>
 <tr class="separator:a24ba126decbcdf7642a6362207ea9a62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab188ef31580c6a1134774e758b1af2d" id="r_aab188ef31580c6a1134774e758b1af2d"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab188ef31580c6a1134774e758b1af2d">HUNGERING_RIFT_HEAL_MOD_HUMAN_SHIPS</a> = &quot;hungering_rift_heal_mod&quot;</td></tr>
+<tr class="separator:aab188ef31580c6a1134774e758b1af2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66ed723f8b60b2806afbc61343d7d296" id="r_a66ed723f8b60b2806afbc61343d7d296"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a66ed723f8b60b2806afbc61343d7d296">HEAL_AMOUNT</a> = 1000f</td></tr>
 <tr class="separator:a66ed723f8b60b2806afbc61343d7d296"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad69df9ac0e6a552ffa3a41a73163cf73" id="r_ad69df9ac0e6a552ffa3a41a73163cf73"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad69df9ac0e6a552ffa3a41a73163cf73">ASSAYING_RIFT</a> = &quot;assaying_rift&quot;</td></tr>
@@ -185,7 +193,34 @@ Static Public Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1EveryFrameWeaponEffectPlugin.html#a3b32dda6d3d8c3fcf5a13d84447791e1">com.fs.starfarer.api.combat.EveryFrameWeaponEffectPlugin</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AssayingRiftEffect_8java_source.html#l00073">73</a> of file <a class="el" href="AssayingRiftEffect_8java_source.html">AssayingRiftEffect.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AssayingRiftEffect_8java_source.html#l00075">75</a> of file <a class="el" href="AssayingRiftEffect_8java_source.html">AssayingRiftEffect.java</a>.</p>
+
+</div>
+</div>
+<a id="ae3c6c79fbaace9dd32484aa0d8df3936" name="ae3c6c79fbaace9dd32484aa0d8df3936"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3c6c79fbaace9dd32484aa0d8df3936">&#9670;&#160;</a></span>getHealMult()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static float com.fs.starfarer.api.impl.combat.dweller.AssayingRiftEffect.getHealMult </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html">ShipAPI</a></td>          <td class="paramname"><span class="paramname"><em>toHeal</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="AssayingRiftEffect_8java_source.html#l00152">152</a> of file <a class="el" href="AssayingRiftEffect_8java_source.html">AssayingRiftEffect.java</a>.</p>
 
 </div>
 </div>
@@ -215,7 +250,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1OnFireEffectPlugin.html#a311cdd64c43363b408cb61e077f6e629">com.fs.starfarer.api.combat.OnFireEffectPlugin</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AssayingRiftEffect_8java_source.html#l00149">149</a> of file <a class="el" href="AssayingRiftEffect_8java_source.html">AssayingRiftEffect.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AssayingRiftEffect_8java_source.html#l00159">159</a> of file <a class="el" href="AssayingRiftEffect_8java_source.html">AssayingRiftEffect.java</a>.</p>
 
 </div>
 </div>
@@ -260,7 +295,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1OnHitEffectPlugin.html#ab4367dd15bcdc484344365a661313f23">com.fs.starfarer.api.combat.OnHitEffectPlugin</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AssayingRiftEffect_8java_source.html#l00091">91</a> of file <a class="el" href="AssayingRiftEffect_8java_source.html">AssayingRiftEffect.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AssayingRiftEffect_8java_source.html#l00093">93</a> of file <a class="el" href="AssayingRiftEffect_8java_source.html">AssayingRiftEffect.java</a>.</p>
 
 </div>
 </div>
@@ -285,7 +320,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AssayingRiftEffect_8java_source.html#l00044">44</a> of file <a class="el" href="AssayingRiftEffect_8java_source.html">AssayingRiftEffect.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AssayingRiftEffect_8java_source.html#l00046">46</a> of file <a class="el" href="AssayingRiftEffect_8java_source.html">AssayingRiftEffect.java</a>.</p>
 
 </div>
 </div>
@@ -300,6 +335,30 @@ Static Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">float com.fs.starfarer.api.impl.combat.dweller.AssayingRiftEffect.HEAL_AMOUNT = 1000f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="AssayingRiftEffect_8java_source.html#l00042">42</a> of file <a class="el" href="AssayingRiftEffect_8java_source.html">AssayingRiftEffect.java</a>.</p>
+
+</div>
+</div>
+<a id="aab188ef31580c6a1134774e758b1af2d" name="aab188ef31580c6a1134774e758b1af2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab188ef31580c6a1134774e758b1af2d">&#9670;&#160;</a></span>HUNGERING_RIFT_HEAL_MOD_HUMAN_SHIPS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.fs.starfarer.api.impl.combat.dweller.AssayingRiftEffect.HUNGERING_RIFT_HEAL_MOD_HUMAN_SHIPS = &quot;hungering_rift_heal_mod&quot;</td>
         </tr>
       </table>
   </td>
@@ -333,7 +392,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="AssayingRiftEffect_8java_source.html#l00038">38</a> of file <a class="el" href="AssayingRiftEffect_8java_source.html">AssayingRiftEffect.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AssayingRiftEffect_8java_source.html#l00039">39</a> of file <a class="el" href="AssayingRiftEffect_8java_source.html">AssayingRiftEffect.java</a>.</p>
 
 </div>
 </div>
@@ -358,7 +417,7 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 <p>One Hungering Rift weapon can produce up to 5 or so rifts at a time if they're fired non-stop and don't hit anything early. </p>
 
-<p class="definition">Definition at line <a class="el" href="AssayingRiftEffect_8java_source.html#l00049">49</a> of file <a class="el" href="AssayingRiftEffect_8java_source.html">AssayingRiftEffect.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AssayingRiftEffect_8java_source.html#l00051">51</a> of file <a class="el" href="AssayingRiftEffect_8java_source.html">AssayingRiftEffect.java</a>.</p>
 
 </div>
 </div>

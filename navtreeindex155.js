@@ -1,5 +1,11 @@
 var NAVTREEINDEX155 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1ColorShifterUtil.html#a446cc2ef1797746fde02d0f2ee820e5d":[1,0,0,0,0,0,11,6,7],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1ColorShifterUtil.html#a723b5833013935ab981ad124c39a7337":[0,0,0,0,0,0,11,6,1],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1ColorShifterUtil.html#a723b5833013935ab981ad124c39a7337":[1,0,0,0,0,0,11,6,1],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1ColorShifterUtil.html#a8aff4465fbf9ddec2eb02bcf51e41b63":[0,0,0,0,0,0,11,6,4],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1ColorShifterUtil.html#a8aff4465fbf9ddec2eb02bcf51e41b63":[1,0,0,0,0,0,11,6,4],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1ColorShifterUtil.html#a90661d153734290ed0b072e9d25da47a":[0,0,0,0,0,0,11,6,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1ColorShifterUtil.html#a90661d153734290ed0b072e9d25da47a":[1,0,0,0,0,0,11,6,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1ColorShifterUtil.html#a90ee853fc2740afd2ecc61bcf8f03334":[0,0,0,0,0,0,11,6,14],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1ColorShifterUtil.html#a90ee853fc2740afd2ecc61bcf8f03334":[1,0,0,0,0,0,11,6,14],
@@ -243,11 +249,5 @@ var NAVTREEINDEX155 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutableValue.html#a866dd8ca2379ea052f2bdf140d65b69d":[1,0,0,0,0,0,11,19,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutableValue.html#a93f64ad5f3ce9fb9b47e0cdc17938677":[0,0,0,0,0,0,11,19,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutableValue.html#a93f64ad5f3ce9fb9b47e0cdc17938677":[1,0,0,0,0,0,11,19,3],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutableValue.html#abc1b3f85c61b352cf5ed261b8e0e2007":[0,0,0,0,0,0,11,19,5],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutableValue.html#abc1b3f85c61b352cf5ed261b8e0e2007":[1,0,0,0,0,0,11,19,5],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutatingValueUtil.html":[0,0,0,0,0,0,11,20],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutatingValueUtil.html":[1,0,0,0,0,0,11,20],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutatingValueUtil.html#a0b5c2e24032862e0991da194bee7b14c":[0,0,0,0,0,0,11,20,12],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutatingValueUtil.html#a0b5c2e24032862e0991da194bee7b14c":[1,0,0,0,0,0,11,20,12],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutatingValueUtil.html#a0d07561d35e24d219a7b9a988ea7019e":[0,0,0,0,0,0,11,20,1]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutableValue.html#abc1b3f85c61b352cf5ed261b8e0e2007":[0,0,0,0,0,0,11,19,5]
 };

@@ -1,5 +1,13 @@
 var NAVTREEINDEX200 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShieldAPI.html#abaa766b097d74691a685369e82384eec":[0,0,0,0,0,0,2,60,12],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShieldAPI.html#abaa766b097d74691a685369e82384eec":[1,0,0,0,0,0,2,60,12],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShieldAPI.html#ac7d508716c3becf8ae31ec8f945d809d":[0,0,0,0,0,0,2,60,2],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShieldAPI.html#ac7d508716c3becf8ae31ec8f945d809d":[1,0,0,0,0,0,2,60,2],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShieldAPI.html#adab4ea070173b7e38fed3d4f1295311b":[0,0,0,0,0,0,2,60,0],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShieldAPI.html#adab4ea070173b7e38fed3d4f1295311b":[1,0,0,0,0,0,2,60,0],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShieldAPI.html#af18136d5d7f14e513f872e1566cd6b8f":[0,0,0,0,0,0,2,60,21],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShieldAPI.html#af18136d5d7f14e513f872e1566cd6b8f":[1,0,0,0,0,0,2,60,21],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShieldAPI.html#af7d5347dd7c30dcd69aad958774f726b":[0,0,0,0,0,0,2,60,24],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShieldAPI.html#af7d5347dd7c30dcd69aad958774f726b":[1,0,0,0,0,0,2,60,24],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShieldAPI.html#aff9bbaff2255f6d587a03ffa2d0207de":[0,0,0,0,0,0,2,60,3],
@@ -241,13 +249,5 @@ var NAVTREEINDEX200 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html#a6141a721b9002aa7a25f34767957b999":[0,0,0,0,0,0,2,63,238],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html#a6141a721b9002aa7a25f34767957b999":[1,0,0,0,0,0,2,63,238],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html#a61ffcbfc4bea0e337cb75cde5ae8c066":[0,0,0,0,0,0,2,63,54],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html#a61ffcbfc4bea0e337cb75cde5ae8c066":[1,0,0,0,0,0,2,63,54],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html#a62e5eb12c3b7e6c619e93105d234cdfb":[0,0,0,0,0,0,2,63,83],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html#a62e5eb12c3b7e6c619e93105d234cdfb":[1,0,0,0,0,0,2,63,83],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html#a63eb00051761db066e4c5084db133d34":[0,0,0,0,0,0,2,63,58],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html#a63eb00051761db066e4c5084db133d34":[1,0,0,0,0,0,2,63,58],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html#a6533a23ee1b5c9f67d568ac09eecff7c":[0,0,0,0,0,0,2,63,177],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html#a6533a23ee1b5c9f67d568ac09eecff7c":[1,0,0,0,0,0,2,63,177],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html#a655508016e9b5cb6fcd34507a5f1b125":[0,0,0,0,0,0,2,63,122],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html#a655508016e9b5cb6fcd34507a5f1b125":[1,0,0,0,0,0,2,63,122]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipAPI.html#a61ffcbfc4bea0e337cb75cde5ae8c066":[1,0,0,0,0,0,2,63,54]
 };

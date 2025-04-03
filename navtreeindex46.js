@@ -1,5 +1,7 @@
 var NAVTREEINDEX46 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1OfficerManagerEvent.html#afb98d77729038a9f3b5c74ecc236cac9":[1,0,0,0,0,0,5,0,6,11,17],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1OfficerManagerEvent.html#afbe691dfa4e3278666f4554c63414797":[0,0,0,0,0,0,5,0,6,11,15],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1OfficerManagerEvent.html#afbe691dfa4e3278666f4554c63414797":[1,0,0,0,0,0,5,0,6,11,15],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate.html":[0,0,0,0,0,0,5,0,6,12],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1PriceUpdate.html":[1,0,0,0,0,0,5,0,6,12],
@@ -247,7 +249,5 @@ var NAVTREEINDEX46 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1AutoDespawnScript.html":[1,0,0,0,0,0,5,0,7,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1AutoDespawnScript.html#a3f0e481d0e254f6cdbb9d8bc45962b8f":[0,0,0,0,0,0,5,0,7,1,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1AutoDespawnScript.html#a3f0e481d0e254f6cdbb9d8bc45962b8f":[1,0,0,0,0,0,5,0,7,1,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1AutoDespawnScript.html#a7b1c74288118fe9373a4bceece4bd926":[0,0,0,0,0,0,5,0,7,1,3],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1AutoDespawnScript.html#a7b1c74288118fe9373a4bceece4bd926":[1,0,0,0,0,0,5,0,7,1,3],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1AutoDespawnScript.html#a9ca3d61588d59b2fa22457d2753dc423":[0,0,0,0,0,0,5,0,7,1,0]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1AutoDespawnScript.html#a7b1c74288118fe9373a4bceece4bd926":[0,0,0,0,0,0,5,0,7,1,3]
 };

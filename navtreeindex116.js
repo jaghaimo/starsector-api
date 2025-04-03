@@ -1,5 +1,11 @@
 var NAVTREEINDEX116 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RepairAvailable.html#ab01dd8dfe8ffb819cddcdc5c3e041a3d":[1,0,0,0,0,0,5,0,16,143,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RepairEnoughSupplies.html":[0,0,0,0,0,0,5,0,16,144],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RepairEnoughSupplies.html":[1,0,0,0,0,0,5,0,16,144],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RepairEnoughSupplies.html#aa06e6b81d97755d4db46f674cca584e2":[0,0,0,0,0,0,5,0,16,144,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RepairEnoughSupplies.html#aa06e6b81d97755d4db46f674cca584e2":[1,0,0,0,0,0,5,0,16,144,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RepairNeeded.html":[0,0,0,0,0,0,5,0,16,145],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RepairNeeded.html":[1,0,0,0,0,0,5,0,16,145],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RepairNeeded.html#acff7bc62da8adb9ab363c2470343020b":[0,0,0,0,0,0,5,0,16,145,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RepairNeeded.html#acff7bc62da8adb9ab363c2470343020b":[1,0,0,0,0,0,5,0,16,145,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX116 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1academy_1_1GAReduceRandomRep.html#a1533819e5178e01205b775467de7ecf1":[1,0,0,0,0,0,5,0,16,0,2,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1academy_1_1GenGAIntroAcademician.html":[0,0,0,0,0,0,5,0,16,0,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1academy_1_1GenGAIntroAcademician.html":[1,0,0,0,0,0,5,0,16,0,3],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1academy_1_1GenGAIntroAcademician.html#a1d81e38f9ce03ab1a48f6193d72bca3b":[0,0,0,0,0,0,5,0,16,0,3,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1academy_1_1GenGAIntroAcademician.html#a1d81e38f9ce03ab1a48f6193d72bca3b":[1,0,0,0,0,0,5,0,16,0,3,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1academy_1_1ShowGAOfficer.html":[0,0,0,0,0,0,5,0,16,0,4],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1academy_1_1ShowGAOfficer.html":[1,0,0,0,0,0,5,0,16,0,4],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1academy_1_1ShowGAOfficer.html#a6b1c83dd6769b55b1b96fe163ec07aa1":[0,0,0,0,0,0,5,0,16,0,4,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1academy_1_1ShowGAOfficer.html#a6b1c83dd6769b55b1b96fe163ec07aa1":[1,0,0,0,0,0,5,0,16,0,4,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1academy_1_1UnhideGACharacters.html":[0,0,0,0,0,0,5,0,16,0,5]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1academy_1_1GenGAIntroAcademician.html#a1d81e38f9ce03ab1a48f6193d72bca3b":[0,0,0,0,0,0,5,0,16,0,3,0]
 };

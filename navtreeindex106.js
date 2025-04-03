@@ -1,5 +1,11 @@
 var NAVTREEINDEX106 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1luddic_1_1LuddicPilgrimsPath.html#acbbb14464a1e7cc1404bf591f08fd240":[1,0,0,0,0,0,5,0,12,4,3,11],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1luddic_1_1LuddicPilgrimsPath.html#acd467dbe7b28f4f08f49c82bfad61add":[0,0,0,0,0,0,5,0,12,4,3,18],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1luddic_1_1LuddicPilgrimsPath.html#acd467dbe7b28f4f08f49c82bfad61add":[1,0,0,0,0,0,5,0,12,4,3,18],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1luddic_1_1LuddicPilgrimsPath.html#ad2fcfbef5df2e9973f718251ef6ca620":[0,0,0,0,0,0,5,0,12,4,3,9],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1luddic_1_1LuddicPilgrimsPath.html#ad2fcfbef5df2e9973f718251ef6ca620":[1,0,0,0,0,0,5,0,12,4,3,9],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1luddic_1_1LuddicPilgrimsPath.html#ae5bb095fe886f9e762bff0ee65654ab0":[0,0,0,0,0,0,5,0,12,4,3,16],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1luddic_1_1LuddicPilgrimsPath.html#ae5bb095fe886f9e762bff0ee65654ab0":[1,0,0,0,0,0,5,0,12,4,3,16],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1BasePLEntry.html":[0,0,0,0,0,0,5,0,13,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1BasePLEntry.html":[1,0,0,0,0,0,5,0,13,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX106 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PlaythroughLog.html":[1,0,0,0,0,0,5,0,13,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PlaythroughLog.html#a05a2d571f896267955e96496f5d6bd44":[0,0,0,0,0,0,5,0,13,3,11],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PlaythroughLog.html#a05a2d571f896267955e96496f5d6bd44":[1,0,0,0,0,0,5,0,13,3,11],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PlaythroughLog.html#a0e13181bb117f43bdff8f0b96e76e5b5":[0,0,0,0,0,0,5,0,13,3,17],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PlaythroughLog.html#a0e13181bb117f43bdff8f0b96e76e5b5":[1,0,0,0,0,0,5,0,13,3,17],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PlaythroughLog.html#a115075799c6edcd9181433c4f047efc0":[0,0,0,0,0,0,5,0,13,3,8],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PlaythroughLog.html#a115075799c6edcd9181433c4f047efc0":[1,0,0,0,0,0,5,0,13,3,8],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PlaythroughLog.html#a11d32b0c6d83fa8be11c73b268f1336e":[0,0,0,0,0,0,5,0,13,3,15],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PlaythroughLog.html#a11d32b0c6d83fa8be11c73b268f1336e":[1,0,0,0,0,0,5,0,13,3,15],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PlaythroughLog.html#a1af4338c50386f62363bcc63aa531667":[0,0,0,0,0,0,5,0,13,3,37]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1plog_1_1PlaythroughLog.html#a0e13181bb117f43bdff8f0b96e76e5b5":[0,0,0,0,0,0,5,0,13,3,17]
 };

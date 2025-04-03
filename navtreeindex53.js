@@ -1,5 +1,7 @@
 var NAVTREEINDEX53 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBIGenerateSlipstream.html#a7880c91025db83e6ab3c7e60ce6438c5":[1,0,0,0,0,0,5,0,8,17,16],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBIGenerateSlipstream.html#a824722a15a75c2ef22b2863bca5e7d3c":[0,0,0,0,0,0,5,0,8,17,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBIGenerateSlipstream.html#a824722a15a75c2ef22b2863bca5e7d3c":[1,0,0,0,0,0,5,0,8,17,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBIGenerateSlipstream.html#a855a468b9d4d51d8e4e607150354c2ae":[0,0,0,0,0,0,5,0,8,17,9],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1GBIGenerateSlipstream.html#a855a468b9d4d51d8e4e607150354c2ae":[1,0,0,0,0,0,5,0,8,17,9],
@@ -247,7 +249,5 @@ var NAVTREEINDEX53 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1SpeedReduction.html#ad430772d8e2b74c0ef29277fff6ce45c":[1,0,0,0,0,0,5,0,8,38,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1AbyssalDrifterGhost.html":[0,0,0,0,0,0,5,0,8,0,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1AbyssalDrifterGhost.html":[1,0,0,0,0,0,5,0,8,0,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1AbyssalDrifterGhost.html#a434305a0f5ef9c9e0b2c234cc1f96ff6":[0,0,0,0,0,0,5,0,8,0,0,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1AbyssalDrifterGhost.html#a434305a0f5ef9c9e0b2c234cc1f96ff6":[1,0,0,0,0,0,5,0,8,0,0,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1AbyssalDrifterGhostCreator.html":[0,0,0,0,0,0,5,0,8,0,1]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1AbyssalDrifterGhost.html#a434305a0f5ef9c9e0b2c234cc1f96ff6":[0,0,0,0,0,0,5,0,8,0,0,0]
 };

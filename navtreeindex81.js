@@ -1,5 +1,7 @@
 var NAVTREEINDEX81 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1FleetGroupIntel.html#ac0c44acd6fc91c87c6c784f31dff8e67":[1,0,0,0,0,0,5,0,11,5,10,11],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1FleetGroupIntel.html#ac280560c5d990b492c94f68f8758c430":[0,0,0,0,0,0,5,0,11,5,10,67],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1FleetGroupIntel.html#ac280560c5d990b492c94f68f8758c430":[1,0,0,0,0,0,5,0,11,5,10,67],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1FleetGroupIntel.html#ac59f271d666901b55e5268bc3d312897":[0,0,0,0,0,0,5,0,11,5,10,54],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1FleetGroupIntel.html#ac59f271d666901b55e5268bc3d312897":[1,0,0,0,0,0,5,0,11,5,10,54],
@@ -247,7 +249,5 @@ var NAVTREEINDEX81 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1SindrianDiktatPunitiveExpedition.html#a081530566280d8efa59cfbb7ea2e5234":[1,0,0,0,0,0,5,0,11,5,15,11],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1SindrianDiktatPunitiveExpedition.html#a171eb855f2f9ed7768f4e13bbb82d2eb":[0,0,0,0,0,0,5,0,11,5,15,8],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1SindrianDiktatPunitiveExpedition.html#a171eb855f2f9ed7768f4e13bbb82d2eb":[1,0,0,0,0,0,5,0,11,5,15,8],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1SindrianDiktatPunitiveExpedition.html#a30cc0061ef7a5a0e561a75f1229973fe":[0,0,0,0,0,0,5,0,11,5,15,6],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1SindrianDiktatPunitiveExpedition.html#a30cc0061ef7a5a0e561a75f1229973fe":[1,0,0,0,0,0,5,0,11,5,15,6],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1SindrianDiktatPunitiveExpedition.html#a4f03903b66c7a7457f432f7395c194b8":[0,0,0,0,0,0,5,0,11,5,15,7]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1SindrianDiktatPunitiveExpedition.html#a30cc0061ef7a5a0e561a75f1229973fe":[0,0,0,0,0,0,5,0,11,5,15,6]
 };

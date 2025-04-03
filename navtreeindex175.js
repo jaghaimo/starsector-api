@@ -1,5 +1,13 @@
 var NAVTREEINDEX175 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ParticleControllerAPI.html#a57f06d34f85cc9074adeed40f54952f6":[0,0,0,0,0,0,0,84,14],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ParticleControllerAPI.html#a57f06d34f85cc9074adeed40f54952f6":[1,0,0,0,0,0,0,84,14],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ParticleControllerAPI.html#a5be2c149823b4826a54e76b003ff65be":[0,0,0,0,0,0,0,84,1],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ParticleControllerAPI.html#a5be2c149823b4826a54e76b003ff65be":[1,0,0,0,0,0,0,84,1],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ParticleControllerAPI.html#a5bf41ded21b2a29c47376ceac5491e61":[0,0,0,0,0,0,0,84,2],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ParticleControllerAPI.html#a5bf41ded21b2a29c47376ceac5491e61":[1,0,0,0,0,0,0,84,2],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ParticleControllerAPI.html#a6c411ae33658437465eb030a28a2781a":[0,0,0,0,0,0,0,84,5],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ParticleControllerAPI.html#a6c411ae33658437465eb030a28a2781a":[1,0,0,0,0,0,0,84,5],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ParticleControllerAPI.html#a7009764e489f1e694ab20dc7ebd5697d":[0,0,0,0,0,0,0,84,8],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ParticleControllerAPI.html#a7009764e489f1e694ab20dc7ebd5697d":[1,0,0,0,0,0,0,84,8],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ParticleControllerAPI.html#a7105f61647675a783f26e01ae0948575":[0,0,0,0,0,0,0,84,21],
@@ -241,13 +249,5 @@ var NAVTREEINDEX175 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PluginPickerAPI.html#a7f11c53cdec3c2fa1eb7408ff1b88e8b":[0,0,0,0,0,0,0,90,2],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PluginPickerAPI.html#a7f11c53cdec3c2fa1eb7408ff1b88e8b":[1,0,0,0,0,0,0,90,2],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PluginPickerAPI.html#a9143ccdafe3401b56f4bbfda49eb1cec":[0,0,0,0,0,0,0,90,3],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PluginPickerAPI.html#a9143ccdafe3401b56f4bbfda49eb1cec":[1,0,0,0,0,0,0,90,3],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PluginPickerAPI.html#acd541a248a810dcf5d4c08a919cb0d1a":[0,0,0,0,0,0,0,90,0],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PluginPickerAPI.html#acd541a248a810dcf5d4c08a919cb0d1a":[1,0,0,0,0,0,0,90,0],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RenderingAffectedByAbyssalDepth.html":[0,0,0,0,0,0,0,91],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RenderingAffectedByAbyssalDepth.html":[1,0,0,0,0,0,0,91],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RenderingAffectedByAbyssalDepth.html#abb310a26032764e9ffe1920f26f8a668":[0,0,0,0,0,0,0,91,0],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RenderingAffectedByAbyssalDepth.html#abb310a26032764e9ffe1920f26f8a668":[1,0,0,0,0,0,0,91,0],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ReputationActionResponsePlugin.html":[0,0,0,0,0,0,0,93],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ReputationActionResponsePlugin.html":[1,0,0,0,0,0,0,93]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PluginPickerAPI.html#a9143ccdafe3401b56f4bbfda49eb1cec":[1,0,0,0,0,0,0,90,3]
 };

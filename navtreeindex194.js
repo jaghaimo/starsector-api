@@ -1,5 +1,13 @@
 var NAVTREEINDEX194 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#ae5defc9ed12f97552c4b8297f2be0e57":[0,0,0,0,0,0,2,21,112],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#ae5defc9ed12f97552c4b8297f2be0e57":[1,0,0,0,0,0,2,21,112],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#ae71d89d3545263cd3f251a858a28fef0":[0,0,0,0,0,0,2,21,69],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#ae71d89d3545263cd3f251a858a28fef0":[1,0,0,0,0,0,2,21,69],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#ae77c145ea27779059fa3e521ee15bf72":[0,0,0,0,0,0,2,21,62],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#ae77c145ea27779059fa3e521ee15bf72":[1,0,0,0,0,0,2,21,62],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#ae7dabe5516a6fea1d52b8754822b5fdf":[0,0,0,0,0,0,2,21,3],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#ae7dabe5516a6fea1d52b8754822b5fdf":[1,0,0,0,0,0,2,21,3],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#ae8a15dbb1f11f1d9fefe92d0577c4c91":[0,0,0,0,0,0,2,21,127],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#ae8a15dbb1f11f1d9fefe92d0577c4c91":[1,0,0,0,0,0,2,21,127],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#ae8f4dbb507b9fd26714e1b20901c6f6e":[0,0,0,0,0,0,2,21,140],
@@ -241,13 +249,5 @@ var NAVTREEINDEX194 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatNebulaAPI_1_1CloudAPI.html":[0,0,0,0,0,0,2,27,0],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatNebulaAPI_1_1CloudAPI.html":[1,0,0,0,0,0,2,27,0],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatNebulaAPI_1_1CloudAPI.html#a154ba5d5b7d614ca159127d6bd1e4b25":[0,0,0,0,0,0,2,27,0,0],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatNebulaAPI_1_1CloudAPI.html#a154ba5d5b7d614ca159127d6bd1e4b25":[1,0,0,0,0,0,2,27,0,0],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatNebulaAPI_1_1CloudAPI.html#a2b735d1ecc6044e1d7925591b76cfe68":[0,0,0,0,0,0,2,27,0,3],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatNebulaAPI_1_1CloudAPI.html#a2b735d1ecc6044e1d7925591b76cfe68":[1,0,0,0,0,0,2,27,0,3],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatNebulaAPI_1_1CloudAPI.html#a679766079d6f40afafb79329c565df0e":[0,0,0,0,0,0,2,27,0,1],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatNebulaAPI_1_1CloudAPI.html#a679766079d6f40afafb79329c565df0e":[1,0,0,0,0,0,2,27,0,1],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatNebulaAPI_1_1CloudAPI.html#af08c4689c66c58083c85aaa3c95c5f12":[0,0,0,0,0,0,2,27,0,2],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatNebulaAPI_1_1CloudAPI.html#af08c4689c66c58083c85aaa3c95c5f12":[1,0,0,0,0,0,2,27,0,2],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatReadinessPlugin.html":[0,0,0,0,0,0,2,28],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatReadinessPlugin.html":[1,0,0,0,0,0,2,28]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatNebulaAPI_1_1CloudAPI.html#a154ba5d5b7d614ca159127d6bd1e4b25":[1,0,0,0,0,0,2,27,0,0]
 };

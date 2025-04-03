@@ -1,5 +1,7 @@
 var NAVTREEINDEX79 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1BaseFGAction.html":[1,0,0,0,0,0,5,0,11,5,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1BaseFGAction.html#a04e28ef9728abc32b3ebf4b82a985db9":[0,0,0,0,0,0,5,0,11,5,0,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1BaseFGAction.html#a04e28ef9728abc32b3ebf4b82a985db9":[1,0,0,0,0,0,5,0,11,5,0,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1BaseFGAction.html#a1a61a0babf671833886b408707b7811e":[0,0,0,0,0,0,5,0,11,5,0,15],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1BaseFGAction.html#a1a61a0babf671833886b408707b7811e":[1,0,0,0,0,0,5,0,11,5,0,15],
@@ -247,7 +249,5 @@ var NAVTREEINDEX79 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1FGTravelAction.html#a655a72396789058dc76eac4259197772":[1,0,0,0,0,0,5,0,11,5,8,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1FGTravelAction.html#a67fc86d3d93a7469524c31bd261c68dd":[0,0,0,0,0,0,5,0,11,5,8,10],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1FGTravelAction.html#a67fc86d3d93a7469524c31bd261c68dd":[1,0,0,0,0,0,5,0,11,5,8,10],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1FGTravelAction.html#a7558942ae4d17ce6eb2a30389a7a22f8":[0,0,0,0,0,0,5,0,11,5,8,13],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1FGTravelAction.html#a7558942ae4d17ce6eb2a30389a7a22f8":[1,0,0,0,0,0,5,0,11,5,8,13],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1FGTravelAction.html#a912cf1a590b639fe2599af2265e5c810":[0,0,0,0,0,0,5,0,11,5,8,22]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1FGTravelAction.html#a7558942ae4d17ce6eb2a30389a7a22f8":[0,0,0,0,0,0,5,0,11,5,8,13]
 };

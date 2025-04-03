@@ -1,5 +1,13 @@
 var NAVTREEINDEX180 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html#a6ff0e803dfbf2141c96df346a748855e":[0,0,0,0,0,0,0,110,1],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html#a6ff0e803dfbf2141c96df346a748855e":[1,0,0,0,0,0,0,110,1],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html#a7769298ca75e2e921bfd2762a3004d47":[0,0,0,0,0,0,0,110,5],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html#a7769298ca75e2e921bfd2762a3004d47":[1,0,0,0,0,0,0,110,5],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html#a7a43df0535f113a7d2ae9bc06e510262":[0,0,0,0,0,0,0,110,30],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html#a7a43df0535f113a7d2ae9bc06e510262":[1,0,0,0,0,0,0,110,30],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html#a7b0ae4a2771bf78d579955afbccdbb56":[0,0,0,0,0,0,0,110,6],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html#a7b0ae4a2771bf78d579955afbccdbb56":[1,0,0,0,0,0,0,110,6],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html#a83a7728328bcedada59768ebc7da6f1d":[0,0,0,0,0,0,0,110,0],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html#a83a7728328bcedada59768ebc7da6f1d":[1,0,0,0,0,0,0,110,0],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1TextPanelAPI.html#a8ededb72628ff58aa9cf473721f4722e":[0,0,0,0,0,0,0,110,14],
@@ -241,13 +249,5 @@ var NAVTREEINDEX180 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1FleetAssignmentDataAPI.html#a798cebe891e297ee2bf5164bc6232b7f":[0,0,0,0,0,0,0,0,4,5],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1FleetAssignmentDataAPI.html#a798cebe891e297ee2bf5164bc6232b7f":[1,0,0,0,0,0,0,0,4,5],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1FleetAssignmentDataAPI.html#a8a920739e994bd2bcecba7f6ce7c2fd1":[0,0,0,0,0,0,0,0,4,0],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1FleetAssignmentDataAPI.html#a8a920739e994bd2bcecba7f6ce7c2fd1":[1,0,0,0,0,0,0,0,4,0],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1FleetAssignmentDataAPI.html#ad5d7b4e40a85b69877c41561e032e924":[0,0,0,0,0,0,0,0,4,10],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1FleetAssignmentDataAPI.html#ad5d7b4e40a85b69877c41561e032e924":[1,0,0,0,0,0,0,0,4,10],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1FleetAssignmentDataAPI.html#ae04165c61d17fe1a9f73084574cab50d":[0,0,0,0,0,0,0,0,4,6],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1FleetAssignmentDataAPI.html#ae04165c61d17fe1a9f73084574cab50d":[1,0,0,0,0,0,0,0,4,6],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1FleetAssignmentDataAPI.html#afa2a50aaf19e882892ddee5fcd437c59":[0,0,0,0,0,0,0,0,4,8],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1FleetAssignmentDataAPI.html#afa2a50aaf19e882892ddee5fcd437c59":[1,0,0,0,0,0,0,0,4,8],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1FleetStubAI.html":[0,0,0,0,0,0,0,0,5],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1FleetStubAI.html":[1,0,0,0,0,0,0,0,5]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ai_1_1FleetAssignmentDataAPI.html#a8a920739e994bd2bcecba7f6ce7c2fd1":[1,0,0,0,0,0,0,0,4,0]
 };

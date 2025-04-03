@@ -1,3 +1,21 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1Themes.html" title=" " alt="" coords="5,5,321,46"/>
+<area shape="rect" id="Node000000" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BaseSalvageSpecial.html" title=" " alt="" coords="5,267,367,307"/>
+<area shape="rect" id="Node000001" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BlueprintSpecial.html" title=" " alt="" coords="415,5,776,46"/>
+<area shape="poly" id="edge1395_Node000000_Node000001" title=" " alt="" coords="208,252,243,207,290,153,348,100,413,57,442,44,444,49,416,61,351,105,294,157,247,210,212,255"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BreadcrumbSpecial.html" title=" " alt="" coords="415,71,776,111"/>
+<area shape="poly" id="edge1396_Node000000_Node000002" title=" " alt="" coords="219,254,303,186,357,151,414,122,449,109,451,114,416,127,359,156,306,190,222,258"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1CargoManifestSpecial.html" title=" " alt="" coords="415,136,776,177"/>
+<area shape="poly" id="edge1397_Node000000_Node000003" title=" " alt="" coords="241,257,321,221,414,187,462,175,463,180,415,192,323,226,243,262"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1DomainSurveyDerelictSpecial.html" title=" " alt="" coords="415,201,776,242"/>
+<area shape="poly" id="edge1398_Node000000_Node000004" title=" " alt="" coords="332,261,463,240,464,245,333,266"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1ShipRecoverySpecial.html" title=" " alt="" coords="415,267,776,307"/>
+<area shape="poly" id="edge1399_Node000000_Node000005" title=" " alt="" coords="382,284,414,284,414,290,382,290"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1SleeperPodsSpecial.html" title=" " alt="" coords="415,332,776,373"/>
+<area shape="poly" id="edge1400_Node000000_Node000006" title=" " alt="" coords="333,308,464,329,463,334,332,313"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1SurveyDataSpecial.html" title=" " alt="" coords="415,397,776,438"/>
+<area shape="poly" id="edge1401_Node000000_Node000007" title=" " alt="" coords="243,312,323,348,415,382,463,394,462,399,414,387,321,353,241,317"/>
+<area shape="rect" id="Node000008" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1TopographicDataSpecial.html" title=" " alt="" coords="415,463,776,503"/>
+<area shape="poly" id="edge1402_Node000000_Node000008" title=" " alt="" coords="222,316,306,384,359,418,416,447,451,460,449,465,414,452,357,423,303,388,219,320"/>
+<area shape="rect" id="Node000009" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1TransmitterTrapSpecial.html" title=" " alt="" coords="415,528,776,569"/>
+<area shape="poly" id="edge1403_Node000000_Node000009" title=" " alt="" coords="212,319,247,364,294,417,351,469,416,513,444,525,442,530,413,517,348,474,290,421,243,367,208,322"/>
 </map>

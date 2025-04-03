@@ -1,5 +1,7 @@
 var NAVTREEINDEX40 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a78bc57516fbd9898595938b79ef7b17f":[1,0,0,0,0,0,5,0,2,0,17,32],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a790b1fdeff9d77bb014d07af66e7ef08":[0,0,0,0,0,0,5,0,2,0,17,33],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a790b1fdeff9d77bb014d07af66e7ef08":[1,0,0,0,0,0,5,0,2,0,17,33],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a883f4bf417ca117f3b57d61f62e64bf2":[0,0,0,0,0,0,5,0,2,0,17,24],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a883f4bf417ca117f3b57d61f62e64bf2":[1,0,0,0,0,0,5,0,2,0,17,24],
@@ -247,7 +249,5 @@ var NAVTREEINDEX40 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ShipQuality.html#a9794673ab91dae68174bcbd7f92372b2":[1,0,0,0,0,0,5,0,2,0,23,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ShipQuality.html#aa6e3a990b10d88c441c6dcd80dfad84f":[0,0,0,0,0,0,5,0,2,0,23,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ShipQuality.html#aa6e3a990b10d88c441c6dcd80dfad84f":[1,0,0,0,0,0,5,0,2,0,23,3],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ShipQuality.html#adaf36af5d92a2e9f6b574723f7c253a0":[0,0,0,0,0,0,5,0,2,0,23,7],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ShipQuality.html#adaf36af5d92a2e9f6b574723f7c253a0":[1,0,0,0,0,0,5,0,2,0,23,7],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ShipQuality.html#aed4064573787beb05fc88e4ec3f81fad":[0,0,0,0,0,0,5,0,2,0,23,2]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ShipQuality.html#adaf36af5d92a2e9f6b574723f7c253a0":[0,0,0,0,0,0,5,0,2,0,23,7]
 };

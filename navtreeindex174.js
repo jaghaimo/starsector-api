@@ -1,5 +1,13 @@
 var NAVTREEINDEX174 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#a5bd2cf7333e0be92d5ee4cca43575bc3":[0,0,0,0,0,0,0,76,43],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#a5bd2cf7333e0be92d5ee4cca43575bc3":[1,0,0,0,0,0,0,76,43],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#a5ebd43628a49b42602359f3fb153a799":[0,0,0,0,0,0,0,76,60],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#a5ebd43628a49b42602359f3fb153a799":[1,0,0,0,0,0,0,76,60],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#a5f8dce8288ddbdcb89f6c4a9b683236c":[0,0,0,0,0,0,0,76,44],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#a5f8dce8288ddbdcb89f6c4a9b683236c":[1,0,0,0,0,0,0,76,44],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#a6aa007c160ebf5bf9b037e21f47f5697":[0,0,0,0,0,0,0,76,34],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#a6aa007c160ebf5bf9b037e21f47f5697":[1,0,0,0,0,0,0,76,34],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#a6dc06baa0d07145fb8672a06d619c1af":[0,0,0,0,0,0,0,76,40],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#a6dc06baa0d07145fb8672a06d619c1af":[1,0,0,0,0,0,0,76,40],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#a6ddf6aa73e6e8428003a6ce8dd3168e2":[0,0,0,0,0,0,0,76,36],
@@ -241,13 +249,5 @@ var NAVTREEINDEX174 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ParticleControllerAPI.html#a3d698b5e408cdfbc287d9a57a52cc126":[0,0,0,0,0,0,0,84,9],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ParticleControllerAPI.html#a3d698b5e408cdfbc287d9a57a52cc126":[1,0,0,0,0,0,0,84,9],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ParticleControllerAPI.html#a3e67a5ce6977b661b0fc5d331473312e":[0,0,0,0,0,0,0,84,25],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ParticleControllerAPI.html#a3e67a5ce6977b661b0fc5d331473312e":[1,0,0,0,0,0,0,84,25],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ParticleControllerAPI.html#a57f06d34f85cc9074adeed40f54952f6":[0,0,0,0,0,0,0,84,14],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ParticleControllerAPI.html#a57f06d34f85cc9074adeed40f54952f6":[1,0,0,0,0,0,0,84,14],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ParticleControllerAPI.html#a5be2c149823b4826a54e76b003ff65be":[0,0,0,0,0,0,0,84,1],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ParticleControllerAPI.html#a5be2c149823b4826a54e76b003ff65be":[1,0,0,0,0,0,0,84,1],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ParticleControllerAPI.html#a5bf41ded21b2a29c47376ceac5491e61":[0,0,0,0,0,0,0,84,2],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ParticleControllerAPI.html#a5bf41ded21b2a29c47376ceac5491e61":[1,0,0,0,0,0,0,84,2],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ParticleControllerAPI.html#a6c411ae33658437465eb030a28a2781a":[0,0,0,0,0,0,0,84,5],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ParticleControllerAPI.html#a6c411ae33658437465eb030a28a2781a":[1,0,0,0,0,0,0,84,5]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ParticleControllerAPI.html#a3e67a5ce6977b661b0fc5d331473312e":[1,0,0,0,0,0,0,84,25]
 };

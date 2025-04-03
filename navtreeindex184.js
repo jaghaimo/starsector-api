@@ -1,5 +1,13 @@
 var NAVTREEINDEX184 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1Industry.html#a02474ecec07879e70e1053a3c88905f8":[0,0,0,0,0,0,0,2,8,30],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1Industry.html#a02474ecec07879e70e1053a3c88905f8":[1,0,0,0,0,0,0,2,8,30],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1Industry.html#a0665eb4cfa8a0a73ccae2e8c069480b4":[0,0,0,0,0,0,0,2,8,66],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1Industry.html#a0665eb4cfa8a0a73ccae2e8c069480b4":[1,0,0,0,0,0,0,2,8,66],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1Industry.html#a1040fa9e0fffcfcaf0f4550af9827879":[0,0,0,0,0,0,0,2,8,63],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1Industry.html#a1040fa9e0fffcfcaf0f4550af9827879":[1,0,0,0,0,0,0,2,8,63],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1Industry.html#a193af8285c9371fe25b2f5afd9ad6da9":[0,0,0,0,0,0,0,2,8,58],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1Industry.html#a193af8285c9371fe25b2f5afd9ad6da9":[1,0,0,0,0,0,0,2,8,58],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1Industry.html#a19c1a9c6a0d8d83f0ce877272e966442":[0,0,0,0,0,0,0,2,8,29],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1Industry.html#a19c1a9c6a0d8d83f0ce877272e966442":[1,0,0,0,0,0,0,2,8,29],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1Industry.html#a1e0d4added8c0d4d81e26786441e0a3d":[0,0,0,0,0,0,0,2,8,80],
@@ -241,13 +249,5 @@ var NAVTREEINDEX184 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a137dcd5079befd8bdc68f13bb69fc62d":[0,0,0,0,0,0,0,2,10,150],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a137dcd5079befd8bdc68f13bb69fc62d":[1,0,0,0,0,0,0,2,10,150],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a13d0446fb18ba95ea267fb2980bb9dc5":[0,0,0,0,0,0,0,2,10,81],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a13d0446fb18ba95ea267fb2980bb9dc5":[1,0,0,0,0,0,0,2,10,81],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a14bb858c07fce95211dd58d810f145bf":[0,0,0,0,0,0,0,2,10,67],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a14bb858c07fce95211dd58d810f145bf":[1,0,0,0,0,0,0,2,10,67],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a14d5eece2643d5abb69b004a3087172b":[0,0,0,0,0,0,0,2,10,106],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a14d5eece2643d5abb69b004a3087172b":[1,0,0,0,0,0,0,2,10,106],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a1600a12ff71770730afea6d2e9c7dded":[0,0,0,0,0,0,0,2,10,149],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a1600a12ff71770730afea6d2e9c7dded":[1,0,0,0,0,0,0,2,10,149],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a17380de7f1b5fb4891c626cfebd5c1cb":[0,0,0,0,0,0,0,2,10,115],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a17380de7f1b5fb4891c626cfebd5c1cb":[1,0,0,0,0,0,0,2,10,115]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1econ_1_1MarketAPI.html#a13d0446fb18ba95ea267fb2980bb9dc5":[1,0,0,0,0,0,0,2,10,81]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX69 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1WeaponBlueprintOffer.html#ad48fac33f729ac1004761329d8e82be8":[1,0,0,0,0,0,5,0,11,0,0,0,16,1],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1WeaponBlueprintOffer.html#ae60e842c17895b609e3f5c0382f1eca4":[0,0,0,0,0,0,5,0,11,0,0,0,16,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1WeaponBlueprintOffer.html#ae60e842c17895b609e3f5c0382f1eca4":[1,0,0,0,0,0,5,0,11,0,0,0,16,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1WeaponBlueprintOffer.html#ae84337047d5fe5dd8c7a494c28f0eee9":[0,0,0,0,0,0,5,0,11,0,0,0,16,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1WeaponBlueprintOffer.html#ae84337047d5fe5dd8c7a494c28f0eee9":[1,0,0,0,0,0,5,0,11,0,0,0,16,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX69 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a4c71c02ba0b576f7818b4b4ff73fa15f":[1,0,0,0,0,0,5,0,11,1,3,43],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a4cb16d45c41faa559824ea39de4acae2":[0,0,0,0,0,0,5,0,11,1,3,9],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a4cb16d45c41faa559824ea39de4acae2":[1,0,0,0,0,0,5,0,11,1,3,9],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a50e7f85ab3cdcfe906668d7f874e4dc0":[0,0,0,0,0,0,5,0,11,1,3,23],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a50e7f85ab3cdcfe906668d7f874e4dc0":[1,0,0,0,0,0,5,0,11,1,3,23],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a5e042a5b5a674423bee15089689550ab":[0,0,0,0,0,0,5,0,11,1,3,3]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1LuddicPathCellsIntel.html#a50e7f85ab3cdcfe906668d7f874e4dc0":[0,0,0,0,0,0,5,0,11,1,3,23]
 };

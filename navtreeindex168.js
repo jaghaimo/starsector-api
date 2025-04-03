@@ -1,5 +1,13 @@
 var NAVTREEINDEX168 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CommDirectoryAPI.html#a8127e92a802c2be95e0d63398ec1a07a":[0,0,0,0,0,0,0,42,4],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CommDirectoryAPI.html#a8127e92a802c2be95e0d63398ec1a07a":[1,0,0,0,0,0,0,42,4],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CommDirectoryAPI.html#a8e28e303f2f4f0e377d3534c20a6329c":[0,0,0,0,0,0,0,42,7],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CommDirectoryAPI.html#a8e28e303f2f4f0e377d3534c20a6329c":[1,0,0,0,0,0,0,42,7],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CommDirectoryAPI.html#a95333872a7e060561f560587b5abc51a":[0,0,0,0,0,0,0,42,0],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CommDirectoryAPI.html#a95333872a7e060561f560587b5abc51a":[1,0,0,0,0,0,0,42,0],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CommDirectoryAPI.html#aa7076279455f2b43e76b3231a0f6758f":[0,0,0,0,0,0,0,42,5],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CommDirectoryAPI.html#aa7076279455f2b43e76b3231a0f6758f":[1,0,0,0,0,0,0,42,5],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CommDirectoryAPI.html#adb69b2207126c63ebae93aaa4f2717dd":[0,0,0,0,0,0,0,42,6],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CommDirectoryAPI.html#adb69b2207126c63ebae93aaa4f2717dd":[1,0,0,0,0,0,0,42,6],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CommDirectoryEntryAPI.html":[0,0,0,0,0,0,0,43],
@@ -241,13 +249,5 @@ var NAVTREEINDEX168 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomVisualDialogDelegate.html#abac286cb23a7e24afdb193edaca2800c":[0,0,0,0,0,0,0,54,3],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomVisualDialogDelegate.html#abac286cb23a7e24afdb193edaca2800c":[1,0,0,0,0,0,0,54,3],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomVisualDialogDelegate.html#aebdc1b0a8c426fde7f278f446b980ca6":[0,0,0,0,0,0,0,54,5],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomVisualDialogDelegate.html#aebdc1b0a8c426fde7f278f446b980ca6":[1,0,0,0,0,0,0,54,5],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomVisualDialogDelegate.html#af3976475cd7714bd5b7675812190f034":[0,0,0,0,0,0,0,54,2],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomVisualDialogDelegate.html#af3976475cd7714bd5b7675812190f034":[1,0,0,0,0,0,0,54,2],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomVisualDialogDelegate_1_1DialogCallbacks.html":[0,0,0,0,0,0,0,54,0],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomVisualDialogDelegate_1_1DialogCallbacks.html":[1,0,0,0,0,0,0,54,0],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomVisualDialogDelegate_1_1DialogCallbacks.html#a7ee694f5350044fa7881a7d937c6d098":[0,0,0,0,0,0,0,54,0,0],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomVisualDialogDelegate_1_1DialogCallbacks.html#a7ee694f5350044fa7881a7d937c6d098":[1,0,0,0,0,0,0,54,0,0],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomVisualDialogDelegate_1_1DialogCallbacks.html#a842fe8add9728e13f27084cfc312a005":[0,0,0,0,0,0,0,54,0,1],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomVisualDialogDelegate_1_1DialogCallbacks.html#a842fe8add9728e13f27084cfc312a005":[1,0,0,0,0,0,0,54,0,1]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CustomVisualDialogDelegate.html#aebdc1b0a8c426fde7f278f446b980ca6":[1,0,0,0,0,0,0,54,5]
 };

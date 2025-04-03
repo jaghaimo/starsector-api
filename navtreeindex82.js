@@ -1,5 +1,7 @@
 var NAVTREEINDEX82 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1SindrianDiktatPunitiveExpedition.html#a30cc0061ef7a5a0e561a75f1229973fe":[1,0,0,0,0,0,5,0,11,5,15,6],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1SindrianDiktatPunitiveExpedition.html#a4f03903b66c7a7457f432f7395c194b8":[0,0,0,0,0,0,5,0,11,5,15,7],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1SindrianDiktatPunitiveExpedition.html#a4f03903b66c7a7457f432f7395c194b8":[1,0,0,0,0,0,5,0,11,5,15,7],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1SindrianDiktatPunitiveExpedition.html#a5e17577d0f7e44fd06365e574ce8f61b":[0,0,0,0,0,0,5,0,11,5,15,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1SindrianDiktatPunitiveExpedition.html#a5e17577d0f7e44fd06365e574ce8f61b":[1,0,0,0,0,0,5,0,11,5,15,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX82 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a2717f090fc5e5567439b7dd9b8d6416a":[1,0,0,0,0,0,5,0,11,6,0,23],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a2851854f18f59010e28aaa5dc04fb3b6":[0,0,0,0,0,0,5,0,11,6,0,21],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a2851854f18f59010e28aaa5dc04fb3b6":[1,0,0,0,0,0,5,0,11,6,0,21],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a2a5e0da087b4412ed9b296c19bdcd485":[0,0,0,0,0,0,5,0,11,6,0,4],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a2a5e0da087b4412ed9b296c19bdcd485":[1,0,0,0,0,0,5,0,11,6,0,4],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a34a3c1ef3859797fd8649945df36979a":[0,0,0,0,0,0,5,0,11,6,0,17]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a2a5e0da087b4412ed9b296c19bdcd485":[0,0,0,0,0,0,5,0,11,6,0,4]
 };

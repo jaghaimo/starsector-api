@@ -1,5 +1,11 @@
 var NAVTREEINDEX115 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1NGCAddCargo.html":[1,0,0,0,0,0,5,0,16,99],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1NGCAddCargo.html#a713d3754e3178e9caf1dd5b24d328d35":[0,0,0,0,0,0,5,0,16,99,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1NGCAddCargo.html#a713d3754e3178e9caf1dd5b24d328d35":[1,0,0,0,0,0,5,0,16,99,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1NGCAddCharacterPoints.html":[0,0,0,0,0,0,5,0,16,100],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1NGCAddCharacterPoints.html":[1,0,0,0,0,0,5,0,16,100],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1NGCAddCharacterPoints.html#a944d31854c3d1234eccd70b0daf3bd36":[0,0,0,0,0,0,5,0,16,100,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1NGCAddCharacterPoints.html#a944d31854c3d1234eccd70b0daf3bd36":[1,0,0,0,0,0,5,0,16,100,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1NGCAddCredits.html":[0,0,0,0,0,0,5,0,16,101],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1NGCAddCredits.html":[1,0,0,0,0,0,5,0,16,101],
@@ -243,11 +249,5 @@ var NAVTREEINDEX115 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RepairAll.html#ad3aa101180b0fb47ae0d70c01f2a470f":[1,0,0,0,0,0,5,0,16,142,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RepairAvailable.html":[0,0,0,0,0,0,5,0,16,143],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RepairAvailable.html":[1,0,0,0,0,0,5,0,16,143],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RepairAvailable.html#ab01dd8dfe8ffb819cddcdc5c3e041a3d":[0,0,0,0,0,0,5,0,16,143,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RepairAvailable.html#ab01dd8dfe8ffb819cddcdc5c3e041a3d":[1,0,0,0,0,0,5,0,16,143,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RepairEnoughSupplies.html":[0,0,0,0,0,0,5,0,16,144],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RepairEnoughSupplies.html":[1,0,0,0,0,0,5,0,16,144],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RepairEnoughSupplies.html#aa06e6b81d97755d4db46f674cca584e2":[0,0,0,0,0,0,5,0,16,144,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RepairEnoughSupplies.html#aa06e6b81d97755d4db46f674cca584e2":[1,0,0,0,0,0,5,0,16,144,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RepairNeeded.html":[0,0,0,0,0,0,5,0,16,145]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1RepairAvailable.html#ab01dd8dfe8ffb819cddcdc5c3e041a3d":[0,0,0,0,0,0,5,0,16,143,0]
 };

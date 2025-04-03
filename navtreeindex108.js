@@ -1,5 +1,11 @@
 var NAVTREEINDEX108 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ConditionGenDataSpec.html#a9c6c83fbe49a56e1dd9205a09245f9e4":[1,0,0,0,0,0,5,0,15,7,22],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ConditionGenDataSpec.html#a9d825affeadbf46b0cda575920384d80":[0,0,0,0,0,0,5,0,15,7,1],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ConditionGenDataSpec.html#a9d825affeadbf46b0cda575920384d80":[1,0,0,0,0,0,5,0,15,7,1],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ConditionGenDataSpec.html#aa96d6bbd0400bf4d4ae0afd67fe7955e":[0,0,0,0,0,0,5,0,15,7,17],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ConditionGenDataSpec.html#aa96d6bbd0400bf4d4ae0afd67fe7955e":[1,0,0,0,0,0,5,0,15,7,17],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ConditionGenDataSpec.html#ab27887f17d77a3f944061667e0c7bf7b":[0,0,0,0,0,0,5,0,15,7,7],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ConditionGenDataSpec.html#ab27887f17d77a3f944061667e0c7bf7b":[1,0,0,0,0,0,5,0,15,7,7],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ConditionGenDataSpec.html#abfcb2b044b86fba99b4c3428cdfcca28":[0,0,0,0,0,0,5,0,15,7,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1ConditionGenDataSpec.html#abfcb2b044b86fba99b4c3428cdfcca28":[1,0,0,0,0,0,5,0,15,7,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX108 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1LocationGenDataSpec.html#ac420c67ff4526bfc49ebfe53137c2b4a":[1,0,0,0,0,0,5,0,15,17,10],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1LocationGenDataSpec.html#ad780a6845c2a42338eb26a2131936d85":[0,0,0,0,0,0,5,0,15,17,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1LocationGenDataSpec.html#ad780a6845c2a42338eb26a2131936d85":[1,0,0,0,0,0,5,0,15,17,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1MagFieldGenPlugin.html":[0,0,0,0,0,0,5,0,15,18],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1MagFieldGenPlugin.html":[1,0,0,0,0,0,5,0,15,18],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1MagFieldGenPlugin.html#a3d830e0a407fd5aa1ad54eddf983fefb":[0,0,0,0,0,0,5,0,15,18,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1MagFieldGenPlugin.html#a3d830e0a407fd5aa1ad54eddf983fefb":[1,0,0,0,0,0,5,0,15,18,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1MagFieldGenPlugin.html#af6179392712491ac67590c8ce5179060":[0,0,0,0,0,0,5,0,15,18,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1MagFieldGenPlugin.html#af6179392712491ac67590c8ce5179060":[1,0,0,0,0,0,5,0,15,18,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1MarkovNames.html":[0,0,0,0,0,0,5,0,15,19]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1MagFieldGenPlugin.html":[0,0,0,0,0,0,5,0,15,18]
 };

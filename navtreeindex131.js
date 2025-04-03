@@ -1,5 +1,11 @@
 var NAVTREEINDEX131 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a6710a0099292d7263e748cdc3cc1c2ba":[1,0,0,0,0,0,5,0,20,35,66],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a6757b49e74b75e58b9fa6bc122a3acd2":[0,0,0,0,0,0,5,0,20,35,17],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a6757b49e74b75e58b9fa6bc122a3acd2":[1,0,0,0,0,0,5,0,20,35,17],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a6a219c71386eefe03dff8c52cae4afa2":[0,0,0,0,0,0,5,0,20,35,40],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a6a219c71386eefe03dff8c52cae4afa2":[1,0,0,0,0,0,5,0,20,35,40],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a6b8e4df386668bfe49f7e0881cd89091":[0,0,0,0,0,0,5,0,20,35,57],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a6b8e4df386668bfe49f7e0881cd89091":[1,0,0,0,0,0,5,0,20,35,57],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a6f34c50cbd9531aa4548d1cb371eaf15":[0,0,0,0,0,0,5,0,20,35,22],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a6f34c50cbd9531aa4548d1cb371eaf15":[1,0,0,0,0,0,5,0,20,35,22],
@@ -243,11 +249,5 @@ var NAVTREEINDEX131 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1GalatianAcademyStipend.html#a05019b6ed63c40bf46b932524321ff97":[1,0,0,0,0,0,5,0,21,2,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1GalatianAcademyStipend.html#a3bb2cf42945259e25313cf0423e0e605":[0,0,0,0,0,0,5,0,21,2,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1GalatianAcademyStipend.html#a3bb2cf42945259e25313cf0423e0e605":[1,0,0,0,0,0,5,0,21,2,3],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1GalatianAcademyStipend.html#a3bf1a6b877a52d127b2d240fb98ca2cf":[0,0,0,0,0,0,5,0,21,2,6],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1GalatianAcademyStipend.html#a3bf1a6b877a52d127b2d240fb98ca2cf":[1,0,0,0,0,0,5,0,21,2,6],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1GalatianAcademyStipend.html#a63ab036067f17ccb7b9758ccc8f553aa":[0,0,0,0,0,0,5,0,21,2,7],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1GalatianAcademyStipend.html#a63ab036067f17ccb7b9758ccc8f553aa":[1,0,0,0,0,0,5,0,21,2,7],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1GalatianAcademyStipend.html#a996fb7a39780739ceab1ef1aff443ead":[0,0,0,0,0,0,5,0,21,2,5],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1GalatianAcademyStipend.html#a996fb7a39780739ceab1ef1aff443ead":[1,0,0,0,0,0,5,0,21,2,5],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1GalatianAcademyStipend.html#ab19545ca9fab7a079ddd7b13668ed6fa":[0,0,0,0,0,0,5,0,21,2,2]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1GalatianAcademyStipend.html#a3bf1a6b877a52d127b2d240fb98ca2cf":[0,0,0,0,0,0,5,0,21,2,6]
 };

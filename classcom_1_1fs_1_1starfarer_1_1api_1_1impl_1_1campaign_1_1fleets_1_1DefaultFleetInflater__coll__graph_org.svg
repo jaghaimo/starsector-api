@@ -119,30 +119,29 @@
 <!-- Node7 -->
 <g id="Node000007" class="node">
 <title>Node7</title>
-<g id="a_Node000007"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="694.25,-259.5 559,-259.5 559,-229 694.25,-229 694.25,-259.5"/>
-<text text-anchor="start" x="567" y="-246" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.combat.</text>
-<text text-anchor="middle" x="626.62" y="-234.75" font-family="Helvetica,sans-Serif" font-size="10.00">ShipVariantAPI</text>
+<g id="a_Node000007"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WithSourceMod.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="344.62,-308.5 210.88,-308.5 210.88,-278 344.62,-278 344.62,-308.5"/>
+<text text-anchor="start" x="218.88" y="-295" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.loading.</text>
+<text text-anchor="middle" x="277.75" y="-283.75" font-family="Helvetica,sans-Serif" font-size="10.00">WithSourceMod</text>
 </a>
 </g>
 </g>
-<!-- Node7&#45;&gt;Node1 -->
-<g id="edge6_Node000001_Node000007" class="edge">
-<title>Node7&#45;&gt;Node1</title>
-<g id="a_edge6_Node000001_Node000007"><a xlink:title=" ">
-<path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M706.1,-237.21C738.9,-234.27 777.3,-230.83 811.65,-227.75"/>
-<polygon fill="#9a32cd" stroke="#9a32cd" points="705.9,-233.72 696.25,-238.09 706.53,-240.69 705.9,-233.72"/>
+<!-- Node7&#45;&gt;Node6 -->
+<g id="edge6_Node000006_Node000007" class="edge">
+<title>Node7&#45;&gt;Node6</title>
+<g id="a_edge6_Node000006_Node000007"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M355.95,-293.25C419.33,-293.25 507.82,-293.25 565.89,-293.25"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="356.32,-289.75 346.32,-293.25 356.32,-296.75 356.32,-289.75"/>
 </a>
 </g>
-<text text-anchor="middle" x="767" y="-235.74" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey"> currVariant</text>
 </g>
 <!-- Node8 -->
 <g id="Node000008" class="node">
 <title>Node8</title>
-<g id="a_Node000008"><a xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="705.88,-210.5 547.38,-210.5 547.38,-180 705.88,-180 705.88,-210.5"/>
-<text text-anchor="start" x="555.38" y="-197" font-family="Helvetica,sans-Serif" font-size="10.00">List&lt; com.fs.starfarer.api.plugins.</text>
-<text text-anchor="middle" x="626.62" y="-185.75" font-family="Helvetica,sans-Serif" font-size="10.00">AutofitPlugin.AvailableFighter &gt;</text>
+<g id="a_Node000008"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="694.25,-259.5 559,-259.5 559,-229 694.25,-229 694.25,-259.5"/>
+<text text-anchor="start" x="567" y="-246" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.combat.</text>
+<text text-anchor="middle" x="626.62" y="-234.75" font-family="Helvetica,sans-Serif" font-size="10.00">ShipVariantAPI</text>
 </a>
 </g>
 </g>
@@ -150,19 +149,19 @@
 <g id="edge7_Node000001_Node000008" class="edge">
 <title>Node8&#45;&gt;Node1</title>
 <g id="a_edge7_Node000001_Node000008"><a xlink:title=" ">
-<path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M717.35,-202.98C747.43,-205.56 781.05,-208.46 811.5,-211.08"/>
-<polygon fill="#9a32cd" stroke="#9a32cd" points="717.79,-199.5 707.52,-202.13 717.19,-206.47 717.79,-199.5"/>
+<path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M706.1,-237.21C738.9,-234.27 777.3,-230.83 811.65,-227.75"/>
+<polygon fill="#9a32cd" stroke="#9a32cd" points="705.9,-233.72 696.25,-238.09 706.53,-240.69 705.9,-233.72"/>
 </a>
 </g>
-<text text-anchor="middle" x="767" y="-211.15" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey"> fighters</text>
+<text text-anchor="middle" x="767" y="-235.74" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey"> currVariant</text>
 </g>
 <!-- Node9 -->
 <g id="Node000009" class="node">
 <title>Node9</title>
 <g id="a_Node000009"><a xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="705.88,-161.5 547.38,-161.5 547.38,-131 705.88,-131 705.88,-161.5"/>
-<text text-anchor="start" x="555.38" y="-148" font-family="Helvetica,sans-Serif" font-size="10.00">List&lt; com.fs.starfarer.api.plugins.</text>
-<text text-anchor="middle" x="626.62" y="-136.75" font-family="Helvetica,sans-Serif" font-size="10.00">AutofitPlugin.AvailableWeapon &gt;</text>
+<polygon fill="white" stroke="#666666" points="705.88,-210.5 547.38,-210.5 547.38,-180 705.88,-180 705.88,-210.5"/>
+<text text-anchor="start" x="555.38" y="-197" font-family="Helvetica,sans-Serif" font-size="10.00">List&lt; com.fs.starfarer.api.plugins.</text>
+<text text-anchor="middle" x="626.62" y="-185.75" font-family="Helvetica,sans-Serif" font-size="10.00">AutofitPlugin.AvailableFighter &gt;</text>
 </a>
 </g>
 </g>
@@ -170,18 +169,19 @@
 <g id="edge8_Node000001_Node000009" class="edge">
 <title>Node9&#45;&gt;Node1</title>
 <g id="a_edge8_Node000001_Node000009"><a xlink:title=" ">
-<path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M698.47,-164.8C744.28,-176.8 803.25,-192.24 846.68,-203.62"/>
-<polygon fill="#9a32cd" stroke="#9a32cd" points="699.45,-161.44 688.89,-162.29 697.68,-168.21 699.45,-161.44"/>
+<path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M717.35,-202.98C747.43,-205.56 781.05,-208.46 811.5,-211.08"/>
+<polygon fill="#9a32cd" stroke="#9a32cd" points="717.79,-199.5 707.52,-202.13 717.19,-206.47 717.79,-199.5"/>
 </a>
 </g>
-<text text-anchor="middle" x="767" y="-191.04" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey"> weapons</text>
+<text text-anchor="middle" x="767" y="-211.15" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey"> fighters</text>
 </g>
 <!-- Node10 -->
 <g id="Node000010" class="node">
 <title>Node10</title>
 <g id="a_Node000010"><a xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="663.88,-112.88 589.38,-112.88 589.38,-93.62 663.88,-93.62 663.88,-112.88"/>
-<text text-anchor="middle" x="626.62" y="-99.38" font-family="Helvetica,sans-Serif" font-size="10.00">List&lt; String &gt;</text>
+<polygon fill="white" stroke="#666666" points="705.88,-161.5 547.38,-161.5 547.38,-131 705.88,-131 705.88,-161.5"/>
+<text text-anchor="start" x="555.38" y="-148" font-family="Helvetica,sans-Serif" font-size="10.00">List&lt; com.fs.starfarer.api.plugins.</text>
+<text text-anchor="middle" x="626.62" y="-136.75" font-family="Helvetica,sans-Serif" font-size="10.00">AutofitPlugin.AvailableWeapon &gt;</text>
 </a>
 </g>
 </g>
@@ -189,19 +189,18 @@
 <g id="edge9_Node000001_Node000010" class="edge">
 <title>Node10&#45;&gt;Node1</title>
 <g id="a_edge9_Node000001_Node000010"><a xlink:title=" ">
-<path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M675.37,-110.12C690.53,-113.03 707.19,-116.99 722,-122.25 782.49,-143.75 847.74,-182.07 882.06,-203.55"/>
-<polygon fill="#9a32cd" stroke="#9a32cd" points="676.08,-106.69 665.62,-108.37 674.84,-113.58 676.08,-106.69"/>
+<path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M698.47,-164.8C744.28,-176.8 803.25,-192.24 846.68,-203.62"/>
+<polygon fill="#9a32cd" stroke="#9a32cd" points="699.45,-161.44 688.89,-162.29 697.68,-168.21 699.45,-161.44"/>
 </a>
 </g>
-<text text-anchor="middle" x="767" y="-153.51" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey"> hullmods</text>
+<text text-anchor="middle" x="767" y="-191.04" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey"> weapons</text>
 </g>
 <!-- Node11 -->
 <g id="Node000011" class="node">
 <title>Node11</title>
-<g id="a_Node000011"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="699.12,-75.5 554.12,-75.5 554.12,-45 699.12,-45 699.12,-75.5"/>
-<text text-anchor="start" x="562.12" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.campaign.</text>
-<text text-anchor="middle" x="626.62" y="-50.75" font-family="Helvetica,sans-Serif" font-size="10.00">CampaignFleetAPI</text>
+<g id="a_Node000011"><a xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="663.88,-112.88 589.38,-112.88 589.38,-93.62 663.88,-93.62 663.88,-112.88"/>
+<text text-anchor="middle" x="626.62" y="-99.38" font-family="Helvetica,sans-Serif" font-size="10.00">List&lt; String &gt;</text>
 </a>
 </g>
 </g>
@@ -209,38 +208,39 @@
 <g id="edge10_Node000001_Node000011" class="edge">
 <title>Node11&#45;&gt;Node1</title>
 <g id="a_edge10_Node000001_Node000011"><a xlink:title=" ">
+<path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M675.37,-110.12C690.53,-113.03 707.19,-116.99 722,-122.25 782.49,-143.75 847.74,-182.07 882.06,-203.55"/>
+<polygon fill="#9a32cd" stroke="#9a32cd" points="676.08,-106.69 665.62,-108.37 674.84,-113.58 676.08,-106.69"/>
+</a>
+</g>
+<text text-anchor="middle" x="767" y="-153.51" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey"> hullmods</text>
+</g>
+<!-- Node12 -->
+<g id="Node000012" class="node">
+<title>Node12</title>
+<g id="a_Node000012"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="699.12,-75.5 554.12,-75.5 554.12,-45 699.12,-45 699.12,-75.5"/>
+<text text-anchor="start" x="562.12" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.campaign.</text>
+<text text-anchor="middle" x="626.62" y="-50.75" font-family="Helvetica,sans-Serif" font-size="10.00">CampaignFleetAPI</text>
+</a>
+</g>
+</g>
+<!-- Node12&#45;&gt;Node1 -->
+<g id="edge11_Node000001_Node000012" class="edge">
+<title>Node12&#45;&gt;Node1</title>
+<g id="a_edge11_Node000001_Node000012"><a xlink:title=" ">
 <path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M705.56,-79.05C711.15,-80.71 716.68,-82.45 722,-84.25 754.96,-95.4 764.81,-96.05 794,-115 833.96,-140.94 872.98,-181.57 892.84,-203.67"/>
 <polygon fill="#9a32cd" stroke="#9a32cd" points="706.8,-75.77 696.22,-76.38 704.87,-82.5 706.8,-75.77"/>
 </a>
 </g>
 <text text-anchor="middle" x="767" y="-116.75" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey"> fleet</text>
 </g>
-<!-- Node12 -->
-<g id="Node000012" class="node">
-<title>Node12</title>
-<g id="a_Node000012"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="350.25,-122.5 205.25,-122.5 205.25,-92 350.25,-92 350.25,-122.5"/>
-<text text-anchor="start" x="213.25" y="-109" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.campaign.</text>
-<text text-anchor="middle" x="277.75" y="-97.75" font-family="Helvetica,sans-Serif" font-size="10.00">SectorEntityToken</text>
-</a>
-</g>
-</g>
-<!-- Node12&#45;&gt;Node11 -->
-<g id="edge11_Node000011_Node000012" class="edge">
-<title>Node12&#45;&gt;Node11</title>
-<g id="a_edge11_Node000011_Node000012"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M361.7,-96.01C420.26,-88.08 497.94,-77.55 553.84,-69.98"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="361.56,-92.5 352.12,-97.31 362.5,-99.43 361.56,-92.5"/>
-</a>
-</g>
-</g>
 <!-- Node13 -->
 <g id="Node000013" class="node">
 <title>Node13</title>
-<g id="a_Node000013"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="168.25,-42.5 0,-42.5 0,-12 168.25,-12 168.25,-42.5"/>
-<text text-anchor="start" x="8" y="-29" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.campaign.rules.</text>
-<text text-anchor="middle" x="84.12" y="-17.75" font-family="Helvetica,sans-Serif" font-size="10.00">HasMemory</text>
+<g id="a_Node000013"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="350.25,-73.5 205.25,-73.5 205.25,-43 350.25,-43 350.25,-73.5"/>
+<text text-anchor="start" x="213.25" y="-60" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.campaign.</text>
+<text text-anchor="middle" x="277.75" y="-48.75" font-family="Helvetica,sans-Serif" font-size="10.00">SectorEntityToken</text>
 </a>
 </g>
 </g>
@@ -248,53 +248,72 @@
 <g id="edge12_Node000012_Node000013" class="edge">
 <title>Node13&#45;&gt;Node12</title>
 <g id="a_edge12_Node000012_Node000013"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M127.5,-47.82C150.32,-58.6 179.08,-71.71 205.25,-82.25 213.18,-85.44 221.69,-88.63 229.98,-91.6"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="129.05,-44.68 118.51,-43.55 126.04,-51 129.05,-44.68"/>
-</a>
-</g>
-</g>
-<!-- Node15 -->
-<g id="Node000015" class="node">
-<title>Node15</title>
-<g id="a_Node000015"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="513.25,-30.5 368.25,-30.5 368.25,0 513.25,0 513.25,-30.5"/>
-<text text-anchor="start" x="376.25" y="-17" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.campaign.</text>
-<text text-anchor="middle" x="440.75" y="-5.75" font-family="Helvetica,sans-Serif" font-size="10.00">FactionAPI</text>
-</a>
-</g>
-</g>
-<!-- Node13&#45;&gt;Node15 -->
-<g id="edge15_Node000015_Node000013" class="edge">
-<title>Node13&#45;&gt;Node15</title>
-<g id="a_edge15_Node000015_Node000013"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M179.92,-24.04C238.94,-22.05 313.66,-19.52 367.81,-17.68"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="180.11,-20.53 170.23,-24.37 180.34,-27.53 180.11,-20.53"/>
+<path fill="none" stroke="#63b8ff" d="M362.06,-58.73C420.58,-59.07 498.06,-59.51 553.84,-59.84"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="362.16,-55.23 352.14,-58.67 362.12,-62.23 362.16,-55.23"/>
 </a>
 </g>
 </g>
 <!-- Node14 -->
 <g id="Node000014" class="node">
 <title>Node14</title>
-<g id="a_Node000014"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetOrStubAPI.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="350.25,-73.5 205.25,-73.5 205.25,-43 350.25,-43 350.25,-73.5"/>
-<text text-anchor="start" x="213.25" y="-60" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.campaign.</text>
-<text text-anchor="middle" x="277.75" y="-48.75" font-family="Helvetica,sans-Serif" font-size="10.00">FleetOrStubAPI</text>
+<g id="a_Node000014"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="168.25,-42.5 0,-42.5 0,-12 168.25,-12 168.25,-42.5"/>
+<text text-anchor="start" x="8" y="-29" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.campaign.rules.</text>
+<text text-anchor="middle" x="84.12" y="-17.75" font-family="Helvetica,sans-Serif" font-size="10.00">HasMemory</text>
 </a>
 </g>
 </g>
-<!-- Node14&#45;&gt;Node11 -->
-<g id="edge13_Node000011_Node000014" class="edge">
-<title>Node14&#45;&gt;Node11</title>
-<g id="a_edge13_Node000011_Node000014"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M362.06,-58.73C420.58,-59.07 498.06,-59.51 553.84,-59.84"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="362.16,-55.23 352.14,-58.67 362.12,-62.23 362.16,-55.23"/>
+<!-- Node14&#45;&gt;Node13 -->
+<g id="edge13_Node000013_Node000014" class="edge">
+<title>Node14&#45;&gt;Node13</title>
+<g id="a_edge13_Node000013_Node000014"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M179.73,-42.55C188.21,-43.93 196.7,-45.3 204.94,-46.63"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="180.54,-39.14 170.11,-41 179.42,-46.05 180.54,-39.14"/>
 </a>
 </g>
 </g>
-<!-- Node15&#45;&gt;Node1 -->
-<g id="edge14_Node000001_Node000015" class="edge">
-<title>Node15&#45;&gt;Node1</title>
-<g id="a_edge14_Node000001_Node000015"><a xlink:title=" ">
+<!-- Node16 -->
+<g id="Node000016" class="node">
+<title>Node16</title>
+<g id="a_Node000016"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="513.25,-30.5 368.25,-30.5 368.25,0 513.25,0 513.25,-30.5"/>
+<text text-anchor="start" x="376.25" y="-17" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.campaign.</text>
+<text text-anchor="middle" x="440.75" y="-5.75" font-family="Helvetica,sans-Serif" font-size="10.00">FactionAPI</text>
+</a>
+</g>
+</g>
+<!-- Node14&#45;&gt;Node16 -->
+<g id="edge16_Node000016_Node000014" class="edge">
+<title>Node14&#45;&gt;Node16</title>
+<g id="a_edge16_Node000016_Node000014"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M179.92,-24.04C238.94,-22.05 313.66,-19.52 367.81,-17.68"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="180.11,-20.53 170.23,-24.37 180.34,-27.53 180.11,-20.53"/>
+</a>
+</g>
+</g>
+<!-- Node15 -->
+<g id="Node000015" class="node">
+<title>Node15</title>
+<g id="a_Node000015"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetOrStubAPI.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="350.25,-122.5 205.25,-122.5 205.25,-92 350.25,-92 350.25,-122.5"/>
+<text text-anchor="start" x="213.25" y="-109" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.campaign.</text>
+<text text-anchor="middle" x="277.75" y="-97.75" font-family="Helvetica,sans-Serif" font-size="10.00">FleetOrStubAPI</text>
+</a>
+</g>
+</g>
+<!-- Node15&#45;&gt;Node12 -->
+<g id="edge14_Node000012_Node000015" class="edge">
+<title>Node15&#45;&gt;Node12</title>
+<g id="a_edge14_Node000012_Node000015"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M361.7,-96.01C420.26,-88.08 497.94,-77.55 553.84,-69.98"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="361.56,-92.5 352.12,-97.31 362.5,-99.43 361.56,-92.5"/>
+</a>
+</g>
+</g>
+<!-- Node16&#45;&gt;Node1 -->
+<g id="edge15_Node000001_Node000016" class="edge">
+<title>Node16&#45;&gt;Node1</title>
+<g id="a_edge15_Node000001_Node000016"><a xlink:title=" ">
 <path fill="none" stroke="#9a32cd" stroke-dasharray="5,2" d="M524.92,-4.12C582.24,0.23 659.12,-0.62 722,-25 811.09,-59.54 875.96,-163.8 898.08,-203.59"/>
 <polygon fill="#9a32cd" stroke="#9a32cd" points="524.91,-0.61 515.23,-4.93 525.49,-7.59 524.91,-0.61"/>
 </a>

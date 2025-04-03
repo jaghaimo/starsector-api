@@ -1,5 +1,7 @@
 var NAVTREEINDEX77 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1SindrianDiktatHostileActivityFactor.html#a2582ce4160521e266555b93f58b4f2ae":[1,0,0,0,0,0,5,0,11,4,45,5],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1SindrianDiktatHostileActivityFactor.html#a441909beeaa5187379b88feef0cb785f":[0,0,0,0,0,0,5,0,11,4,45,18],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1SindrianDiktatHostileActivityFactor.html#a441909beeaa5187379b88feef0cb785f":[1,0,0,0,0,0,5,0,11,4,45,18],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1SindrianDiktatHostileActivityFactor.html#a466bcb0ad2c8ff57260459ce42759470":[0,0,0,0,0,0,5,0,11,4,45,7],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1SindrianDiktatHostileActivityFactor.html#a466bcb0ad2c8ff57260459ce42759470":[1,0,0,0,0,0,5,0,11,4,45,7],
@@ -247,7 +249,5 @@ var NAVTREEINDEX77 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HTFactorTracker.html#ac01281644217e798b7861b182e52511e":[1,0,0,0,0,0,5,0,11,4,0,2,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HTFactorTracker.html#ad2082d26bcedf5e69fe5a036ed4e439c":[0,0,0,0,0,0,5,0,11,4,0,2,11],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HTFactorTracker.html#ad2082d26bcedf5e69fe5a036ed4e439c":[1,0,0,0,0,0,5,0,11,4,0,2,11],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HTFactorTracker.html#ada9aa12bf330a11bc6382bd0fe948c65":[0,0,0,0,0,0,5,0,11,4,0,2,14],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HTFactorTracker.html#ada9aa12bf330a11bc6382bd0fe948c65":[1,0,0,0,0,0,5,0,11,4,0,2,14],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HTFactorTracker.html#add11c5ec690a52c9dae957b928e57e71":[0,0,0,0,0,0,5,0,11,4,0,2,17]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HTFactorTracker.html#ada9aa12bf330a11bc6382bd0fe948c65":[0,0,0,0,0,0,5,0,11,4,0,2,14]
 };

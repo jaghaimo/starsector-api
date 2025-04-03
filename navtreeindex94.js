@@ -1,5 +1,11 @@
 var NAVTREEINDEX94 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GADerelictArtifact.html#a0ca1fd6c75c641ef063229d80f53b9ac":[1,0,0,0,0,0,5,0,12,0,8,1],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GADerelictArtifact.html#a1475d76d021aee5032d0d31ae3dd470e":[0,0,0,0,0,0,5,0,12,0,8,9],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GADerelictArtifact.html#a1475d76d021aee5032d0d31ae3dd470e":[1,0,0,0,0,0,5,0,12,0,8,9],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GADerelictArtifact.html#a24cc720ddbf1bcb934a7556643de52e7":[0,0,0,0,0,0,5,0,12,0,8,12],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GADerelictArtifact.html#a24cc720ddbf1bcb934a7556643de52e7":[1,0,0,0,0,0,5,0,12,0,8,12],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GADerelictArtifact.html#a765694a06846135da221fddd960d8cb9":[0,0,0,0,0,0,5,0,12,0,8,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GADerelictArtifact.html#a765694a06846135da221fddd960d8cb9":[1,0,0,0,0,0,5,0,12,0,8,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GADerelictArtifact.html#a77679dbd9600454ee17369b3a19e4e6c":[0,0,0,0,0,0,5,0,12,0,8,11],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GADerelictArtifact.html#a77679dbd9600454ee17369b3a19e4e6c":[1,0,0,0,0,0,5,0,12,0,8,11],
@@ -243,11 +249,5 @@ var NAVTREEINDEX94 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html#a66802a376ae780ad2f48bb848395b277":[1,0,0,0,0,0,5,0,12,0,17,18],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html#a66c5877c8434f0510fcf718b7d8223cb":[0,0,0,0,0,0,5,0,12,0,17,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html#a66c5877c8434f0510fcf718b7d8223cb":[1,0,0,0,0,0,5,0,12,0,17,5],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html#a6db89148c7c179a87b26158c64973a28":[0,0,0,0,0,0,5,0,12,0,17,23],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html#a6db89148c7c179a87b26158c64973a28":[1,0,0,0,0,0,5,0,12,0,17,23],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html#a73dcfff0660268bd19378a01295f87f0":[0,0,0,0,0,0,5,0,12,0,17,20],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html#a73dcfff0660268bd19378a01295f87f0":[1,0,0,0,0,0,5,0,12,0,17,20],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html#a7c192e91e77065509df48905f9662f2a":[0,0,0,0,0,0,5,0,12,0,17,16],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html#a7c192e91e77065509df48905f9662f2a":[1,0,0,0,0,0,5,0,12,0,17,16],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html#a803e65e30ac454d39d602d0eb030703b":[0,0,0,0,0,0,5,0,12,0,17,19]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html#a6db89148c7c179a87b26158c64973a28":[0,0,0,0,0,0,5,0,12,0,17,23]
 };

@@ -1,5 +1,11 @@
 var NAVTREEINDEX126 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a5022e6189fb7032a4be3ee4e3a7bd769":[1,0,0,0,0,0,5,0,20,7,9],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a5830ca97632d9a6ed79b54b9436e8753":[0,0,0,0,0,0,5,0,20,7,5],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a5830ca97632d9a6ed79b54b9436e8753":[1,0,0,0,0,0,5,0,20,7,5],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a5e708440d7c411bb073d389791b49bde":[0,0,0,0,0,0,5,0,20,7,46],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a5e708440d7c411bb073d389791b49bde":[1,0,0,0,0,0,5,0,20,7,46],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a62ccc668f1bca2e7f3ffc5ed0ab9ec39":[0,0,0,0,0,0,5,0,20,7,44],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a62ccc668f1bca2e7f3ffc5ed0ab9ec39":[1,0,0,0,0,0,5,0,20,7,44],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a64e74dbdabe21aabe78bd51158487eaa":[0,0,0,0,0,0,5,0,20,7,33],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1BaseTerrain.html#a64e74dbdabe21aabe78bd51158487eaa":[1,0,0,0,0,0,5,0,20,7,33],
@@ -243,11 +249,5 @@ var NAVTREEINDEX126 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisFieldTerrainPlugin.html#aadd2ec8a7de62684b8124e16e99cc61a":[1,0,0,0,0,0,5,0,20,11,18],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisFieldTerrainPlugin.html#ad3a1a0aac010e1ccd92b7d3fa7a64c96":[0,0,0,0,0,0,5,0,20,11,10],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisFieldTerrainPlugin.html#ad3a1a0aac010e1ccd92b7d3fa7a64c96":[1,0,0,0,0,0,5,0,20,11,10],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisFieldTerrainPlugin.html#ad4c8ed8a1cca4ced6acf48ed387c8d76":[0,0,0,0,0,0,5,0,20,11,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisFieldTerrainPlugin.html#ad4c8ed8a1cca4ced6acf48ed387c8d76":[1,0,0,0,0,0,5,0,20,11,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisFieldTerrainPlugin.html#ae6e66c72a6b4a34e762c772bd50b2b0e":[0,0,0,0,0,0,5,0,20,11,3],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisFieldTerrainPlugin.html#ae6e66c72a6b4a34e762c772bd50b2b0e":[1,0,0,0,0,0,5,0,20,11,3],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisFieldTerrainPlugin.html#ae6e7babb5888fdeabe3ffc75351e9059":[0,0,0,0,0,0,5,0,20,11,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisFieldTerrainPlugin.html#ae6e7babb5888fdeabe3ffc75351e9059":[1,0,0,0,0,0,5,0,20,11,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisFieldTerrainPlugin.html#aee449c1024df601d3a070241c34a5637":[0,0,0,0,0,0,5,0,20,11,0]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisFieldTerrainPlugin.html#ad4c8ed8a1cca4ced6acf48ed387c8d76":[0,0,0,0,0,0,5,0,20,11,2]
 };

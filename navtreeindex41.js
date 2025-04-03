@@ -1,5 +1,7 @@
 var NAVTREEINDEX41 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ShipQuality.html#adaf36af5d92a2e9f6b574723f7c253a0":[1,0,0,0,0,0,5,0,2,0,23,7],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ShipQuality.html#aed4064573787beb05fc88e4ec3f81fad":[0,0,0,0,0,0,5,0,2,0,23,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1ShipQuality.html#aed4064573787beb05fc88e4ec3f81fad":[1,0,0,0,0,0,5,0,2,0,23,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Spaceport.html":[0,0,0,0,0,0,5,0,2,0,24],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Spaceport.html":[1,0,0,0,0,0,5,0,2,0,24],
@@ -247,7 +249,5 @@ var NAVTREEINDEX41 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager.html#a41314d1992e98ad68252bd851256a001":[1,0,0,0,0,0,5,0,3,8,9],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager.html#a4cbfb3d17720081f4a3e157a88c19948":[0,0,0,0,0,0,5,0,3,8,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager.html#a4cbfb3d17720081f4a3e157a88c19948":[1,0,0,0,0,0,5,0,3,8,3],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager.html#a769564080a9c295719760a71cff7d855":[0,0,0,0,0,0,5,0,3,8,4],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager.html#a769564080a9c295719760a71cff7d855":[1,0,0,0,0,0,5,0,3,8,4],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager.html#aa21519a962f6d646e6f9e503c8287b74":[0,0,0,0,0,0,5,0,3,8,1]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1enc_1_1EncounterManager.html#a769564080a9c295719760a71cff7d855":[0,0,0,0,0,0,5,0,3,8,4]
 };

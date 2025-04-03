@@ -1,5 +1,7 @@
 var NAVTREEINDEX44 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1EventideDuelBackground.html":[1,0,0,0,0,0,5,0,5,12],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1EventideDuelBackground.html#a120ae9be2cdd2f39c5ef8d5e5bdb2060":[0,0,0,0,0,0,5,0,5,12,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1EventideDuelBackground.html#a120ae9be2cdd2f39c5ef8d5e5bdb2060":[1,0,0,0,0,0,5,0,5,12,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1EventideDuelBackground.html#a2c2557e6ccc2265f6551b20e2fa3940e":[0,0,0,0,0,0,5,0,5,12,10],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1EventideDuelBackground.html#a2c2557e6ccc2265f6551b20e2fa3940e":[1,0,0,0,0,0,5,0,5,12,10],
@@ -247,7 +249,5 @@ var NAVTREEINDEX44 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html#a5e474e358277aa6868dc1f54434188d4":[1,0,0,0,0,0,5,0,6,2,13],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html#a6df029ff2f93f0f63b16d555d83e62be":[0,0,0,0,0,0,5,0,6,2,9],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html#a6df029ff2f93f0f63b16d555d83e62be":[1,0,0,0,0,0,5,0,6,2,9],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html#a79ea4099d510283d9e5054bba8f1b41d":[0,0,0,0,0,0,5,0,6,2,6],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html#a79ea4099d510283d9e5054bba8f1b41d":[1,0,0,0,0,0,5,0,6,2,6],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html#a7d6ad3fc91a69814413e49b462078973":[0,0,0,0,0,0,5,0,6,2,14]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html#a79ea4099d510283d9e5054bba8f1b41d":[0,0,0,0,0,0,5,0,6,2,6]
 };

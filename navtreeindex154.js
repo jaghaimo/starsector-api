@@ -1,5 +1,11 @@
 var NAVTREEINDEX154 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CampaignEngineGlowIndividualEngine.html#a6341fe7cae2aecdaf105c355d9742868":[1,0,0,0,0,0,11,1,6],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CampaignEngineGlowIndividualEngine.html#a65e892306b8f9dab366f289d4e3959e6":[0,0,0,0,0,0,11,1,8],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CampaignEngineGlowIndividualEngine.html#a65e892306b8f9dab366f289d4e3959e6":[1,0,0,0,0,0,11,1,8],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CampaignEngineGlowIndividualEngine.html#a6a05b0fececc512beb62973d1cd7eb59":[0,0,0,0,0,0,11,1,24],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CampaignEngineGlowIndividualEngine.html#a6a05b0fececc512beb62973d1cd7eb59":[1,0,0,0,0,0,11,1,24],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CampaignEngineGlowIndividualEngine.html#a6b842d9c44f640a493dc439927ae1a27":[0,0,0,0,0,0,11,1,19],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CampaignEngineGlowIndividualEngine.html#a6b842d9c44f640a493dc439927ae1a27":[1,0,0,0,0,0,11,1,19],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CampaignEngineGlowIndividualEngine.html#a828a2539bddc5e8c5d4369bfc852fada":[0,0,0,0,0,0,11,1,26],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1CampaignEngineGlowIndividualEngine.html#a828a2539bddc5e8c5d4369bfc852fada":[1,0,0,0,0,0,11,1,26],
@@ -243,11 +249,5 @@ var NAVTREEINDEX154 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1ColorShifterUtil.html#a1b105b964db2a91e8f0c2be3101c2a25":[1,0,0,0,0,0,11,6,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1ColorShifterUtil.html#a2f1d977187a946ee835f6e96e3e9cfec":[0,0,0,0,0,0,11,6,10],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1ColorShifterUtil.html#a2f1d977187a946ee835f6e96e3e9cfec":[1,0,0,0,0,0,11,6,10],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1ColorShifterUtil.html#a446cc2ef1797746fde02d0f2ee820e5d":[0,0,0,0,0,0,11,6,7],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1ColorShifterUtil.html#a446cc2ef1797746fde02d0f2ee820e5d":[1,0,0,0,0,0,11,6,7],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1ColorShifterUtil.html#a723b5833013935ab981ad124c39a7337":[0,0,0,0,0,0,11,6,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1ColorShifterUtil.html#a723b5833013935ab981ad124c39a7337":[1,0,0,0,0,0,11,6,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1ColorShifterUtil.html#a8aff4465fbf9ddec2eb02bcf51e41b63":[0,0,0,0,0,0,11,6,4],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1ColorShifterUtil.html#a8aff4465fbf9ddec2eb02bcf51e41b63":[1,0,0,0,0,0,11,6,4],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1ColorShifterUtil.html#a90661d153734290ed0b072e9d25da47a":[0,0,0,0,0,0,11,6,3]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1ColorShifterUtil.html#a446cc2ef1797746fde02d0f2ee820e5d":[0,0,0,0,0,0,11,6,7]
 };

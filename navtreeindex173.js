@@ -1,5 +1,13 @@
 var NAVTREEINDEX173 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1GroundRaidTargetPickerDelegate.html#a7c73ab6ecd10c1ab1a9beb99a5243cc4":[0,0,0,0,0,0,0,70,11],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1GroundRaidTargetPickerDelegate.html#a7c73ab6ecd10c1ab1a9beb99a5243cc4":[1,0,0,0,0,0,0,70,11],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1GroundRaidTargetPickerDelegate.html#a8bcc81db97aa029b40702e70729aed14":[0,0,0,0,0,0,0,70,0],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1GroundRaidTargetPickerDelegate.html#a8bcc81db97aa029b40702e70729aed14":[1,0,0,0,0,0,0,70,0],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1GroundRaidTargetPickerDelegate.html#a8d67b09fa07ff307ce3944de05565163":[0,0,0,0,0,0,0,70,10],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1GroundRaidTargetPickerDelegate.html#a8d67b09fa07ff307ce3944de05565163":[1,0,0,0,0,0,0,70,10],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1GroundRaidTargetPickerDelegate.html#a9449a98f32c8f7fadfb035e5d49942af":[0,0,0,0,0,0,0,70,7],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1GroundRaidTargetPickerDelegate.html#a9449a98f32c8f7fadfb035e5d49942af":[1,0,0,0,0,0,0,70,7],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1GroundRaidTargetPickerDelegate.html#acc29f97e01eecb8a3b9ce9f002900ce1":[0,0,0,0,0,0,0,70,6],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1GroundRaidTargetPickerDelegate.html#acc29f97e01eecb8a3b9ce9f002900ce1":[1,0,0,0,0,0,0,70,6],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1GroundRaidTargetPickerDelegate.html#add1b236be3d4ab11b00eb20fbe287b01":[0,0,0,0,0,0,0,70,4],
@@ -241,13 +249,5 @@ var NAVTREEINDEX173 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#a5622c6624447e4b1c00697c573ea4be4":[0,0,0,0,0,0,0,76,0],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#a5622c6624447e4b1c00697c573ea4be4":[1,0,0,0,0,0,0,76,0],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#a57181891e46536a23c39ca7fdf7d6596":[0,0,0,0,0,0,0,76,16],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#a57181891e46536a23c39ca7fdf7d6596":[1,0,0,0,0,0,0,76,16],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#a5bd2cf7333e0be92d5ee4cca43575bc3":[0,0,0,0,0,0,0,76,43],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#a5bd2cf7333e0be92d5ee4cca43575bc3":[1,0,0,0,0,0,0,76,43],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#a5ebd43628a49b42602359f3fb153a799":[0,0,0,0,0,0,0,76,60],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#a5ebd43628a49b42602359f3fb153a799":[1,0,0,0,0,0,0,76,60],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#a5f8dce8288ddbdcb89f6c4a9b683236c":[0,0,0,0,0,0,0,76,44],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#a5f8dce8288ddbdcb89f6c4a9b683236c":[1,0,0,0,0,0,0,76,44],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#a6aa007c160ebf5bf9b037e21f47f5697":[0,0,0,0,0,0,0,76,34],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#a6aa007c160ebf5bf9b037e21f47f5697":[1,0,0,0,0,0,0,76,34]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1LocationAPI.html#a57181891e46536a23c39ca7fdf7d6596":[1,0,0,0,0,0,0,76,16]
 };

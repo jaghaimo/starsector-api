@@ -1,5 +1,11 @@
 var NAVTREEINDEX91 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter_1_1DFEPlaceFleetAction.html":[1,0,0,0,0,0,5,0,12,14,1],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter_1_1DFEPlaceFleetAction.html#a27b85683f08eb2e59c8b5130844e9d62":[0,0,0,0,0,0,5,0,12,14,1,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter_1_1DFEPlaceFleetAction.html#a27b85683f08eb2e59c8b5130844e9d62":[1,0,0,0,0,0,5,0,12,14,1,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter_1_1DFEPlaceFleetAction.html#acbb3803971ef9a6c46de12831f0e42d8":[0,0,0,0,0,0,5,0,12,14,1,1],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter_1_1DFEPlaceFleetAction.html#acbb3803971ef9a6c46de12831f0e42d8":[1,0,0,0,0,0,5,0,12,14,1,1],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DisruptCompetitorMission.html":[0,0,0,0,0,0,5,0,12,15],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DisruptCompetitorMission.html":[1,0,0,0,0,0,5,0,12,15],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DisruptCompetitorMission.html#a2f31865ac857209e5efe49dd2f2bc3e6":[0,0,0,0,0,0,5,0,12,15,6],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DisruptCompetitorMission.html#a2f31865ac857209e5efe49dd2f2bc3e6":[1,0,0,0,0,0,5,0,12,15,6],
@@ -243,11 +249,5 @@ var NAVTREEINDEX91 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1ProcurementMission.html#a092ac16bf3ada605c5018df87f8b768c":[1,0,0,0,0,0,5,0,12,26,13],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1ProcurementMission.html#a1addcc4696c073ae606619ca882ab352":[0,0,0,0,0,0,5,0,12,26,8],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1ProcurementMission.html#a1addcc4696c073ae606619ca882ab352":[1,0,0,0,0,0,5,0,12,26,8],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1ProcurementMission.html#a1f4fbc7a4a304663b45fc87157b18703":[0,0,0,0,0,0,5,0,12,26,7],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1ProcurementMission.html#a1f4fbc7a4a304663b45fc87157b18703":[1,0,0,0,0,0,5,0,12,26,7],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1ProcurementMission.html#a3fece03ff89514c3a02b8602bdcf8979":[0,0,0,0,0,0,5,0,12,26,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1ProcurementMission.html#a3fece03ff89514c3a02b8602bdcf8979":[1,0,0,0,0,0,5,0,12,26,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1ProcurementMission.html#a420e9b941b715bd70f5391d32170d497":[0,0,0,0,0,0,5,0,12,26,9],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1ProcurementMission.html#a420e9b941b715bd70f5391d32170d497":[1,0,0,0,0,0,5,0,12,26,9],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1ProcurementMission.html#a4d40e6fd1c2c3e181ddac95928074ac9":[0,0,0,0,0,0,5,0,12,26,1]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1ProcurementMission.html#a1f4fbc7a4a304663b45fc87157b18703":[0,0,0,0,0,0,5,0,12,26,7]
 };

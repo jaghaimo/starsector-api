@@ -1,5 +1,13 @@
 var NAVTREEINDEX193 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a03da8796904c5c6203528b1dc1c23b96":[0,0,0,0,0,0,2,21,123],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a03da8796904c5c6203528b1dc1c23b96":[1,0,0,0,0,0,2,21,123],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a03eec6c2504502280c84e1086a84ec8c":[0,0,0,0,0,0,2,21,28],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a03eec6c2504502280c84e1086a84ec8c":[1,0,0,0,0,0,2,21,28],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a06ed535facf58a9b89c51f2c8f8ac40e":[0,0,0,0,0,0,2,21,106],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a06ed535facf58a9b89c51f2c8f8ac40e":[1,0,0,0,0,0,2,21,106],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a07a363bfd1fb86aa1fb5eee4254c1e8b":[0,0,0,0,0,0,2,21,133],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a07a363bfd1fb86aa1fb5eee4254c1e8b":[1,0,0,0,0,0,2,21,133],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a08b40d8e691cd888d3eb6786aa48d737":[0,0,0,0,0,0,2,21,46],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a08b40d8e691cd888d3eb6786aa48d737":[1,0,0,0,0,0,2,21,46],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a0a57cfb6ab021be0df462303b1c1bcfe":[0,0,0,0,0,0,2,21,99],
@@ -241,13 +249,5 @@ var NAVTREEINDEX193 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#adb002adeb6053777bcdd38bf9702f9e1":[0,0,0,0,0,0,2,21,58],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#adb002adeb6053777bcdd38bf9702f9e1":[1,0,0,0,0,0,2,21,58],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#ae0fa56f0c7f5494cdac91fb3a70d6586":[0,0,0,0,0,0,2,21,114],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#ae0fa56f0c7f5494cdac91fb3a70d6586":[1,0,0,0,0,0,2,21,114],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#ae5defc9ed12f97552c4b8297f2be0e57":[0,0,0,0,0,0,2,21,112],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#ae5defc9ed12f97552c4b8297f2be0e57":[1,0,0,0,0,0,2,21,112],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#ae71d89d3545263cd3f251a858a28fef0":[0,0,0,0,0,0,2,21,69],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#ae71d89d3545263cd3f251a858a28fef0":[1,0,0,0,0,0,2,21,69],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#ae77c145ea27779059fa3e521ee15bf72":[0,0,0,0,0,0,2,21,62],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#ae77c145ea27779059fa3e521ee15bf72":[1,0,0,0,0,0,2,21,62],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#ae7dabe5516a6fea1d52b8754822b5fdf":[0,0,0,0,0,0,2,21,3],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#ae7dabe5516a6fea1d52b8754822b5fdf":[1,0,0,0,0,0,2,21,3]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#ae0fa56f0c7f5494cdac91fb3a70d6586":[1,0,0,0,0,0,2,21,114]
 };

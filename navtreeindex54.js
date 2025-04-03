@@ -1,5 +1,7 @@
 var NAVTREEINDEX54 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1AbyssalDrifterGhost.html#a434305a0f5ef9c9e0b2c234cc1f96ff6":[1,0,0,0,0,0,5,0,8,0,0,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1AbyssalDrifterGhostCreator.html":[0,0,0,0,0,0,5,0,8,0,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1AbyssalDrifterGhostCreator.html":[1,0,0,0,0,0,5,0,8,0,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1AbyssalDrifterGhostCreator.html#a166b7903f9762af34a2e01cbca7185c9":[0,0,0,0,0,0,5,0,8,0,1,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1types_1_1AbyssalDrifterGhostCreator.html#a166b7903f9762af34a2e01cbca7185c9":[1,0,0,0,0,0,5,0,8,0,1,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX54 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1AbstractGoalGroundRaidObjectivePluginImpl.html":[1,0,0,0,0,0,5,0,9,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1AbstractGoalGroundRaidObjectivePluginImpl.html#a0cfef7ea59505b32a7e71efe2d50afd5":[0,0,0,0,0,0,5,0,9,0,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1AbstractGoalGroundRaidObjectivePluginImpl.html#a0cfef7ea59505b32a7e71efe2d50afd5":[1,0,0,0,0,0,5,0,9,0,5],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1AbstractGoalGroundRaidObjectivePluginImpl.html#a14a7a639117ac8b636be7e7bd6a7a2b9":[0,0,0,0,0,0,5,0,9,0,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1AbstractGoalGroundRaidObjectivePluginImpl.html#a14a7a639117ac8b636be7e7bd6a7a2b9":[1,0,0,0,0,0,5,0,9,0,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1AbstractGoalGroundRaidObjectivePluginImpl.html#a1692a3e8c979c51dd1b5713da033f66c":[0,0,0,0,0,0,5,0,9,0,7]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1AbstractGoalGroundRaidObjectivePluginImpl.html#a14a7a639117ac8b636be7e7bd6a7a2b9":[0,0,0,0,0,0,5,0,9,0,2]
 };

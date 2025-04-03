@@ -1,5 +1,13 @@
 var NAVTREEINDEX196 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DroneLauncherShipSystemAPI.html#a624522db1acfc0e480cd58da15cb7a1f":[0,0,0,0,0,0,2,35,3],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DroneLauncherShipSystemAPI.html#a624522db1acfc0e480cd58da15cb7a1f":[1,0,0,0,0,0,2,35,3],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DroneLauncherShipSystemAPI.html#abade55decbd91598760df3ee8a43d0d9":[0,0,0,0,0,0,2,35,1],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DroneLauncherShipSystemAPI.html#abade55decbd91598760df3ee8a43d0d9":[1,0,0,0,0,0,2,35,1],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DroneLauncherShipSystemAPI.html#ac956d92249e1c45be3a93c2878fbd918":[0,0,0,0,0,0,2,35,2],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DroneLauncherShipSystemAPI.html#ac956d92249e1c45be3a93c2878fbd918":[1,0,0,0,0,0,2,35,2],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1EmpArcEntityAPI.html":[0,0,0,0,0,0,2,36],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1EmpArcEntityAPI.html":[1,0,0,0,0,0,2,36],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1EmpArcEntityAPI.html#a48276ecee44213e86cf9c0c9ff347dd4":[0,0,0,0,0,0,2,36,9],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1EmpArcEntityAPI.html#a48276ecee44213e86cf9c0c9ff347dd4":[1,0,0,0,0,0,2,36,9],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1EmpArcEntityAPI.html#a5dfef3f8e7e54daaada6084cba2ceeb4":[0,0,0,0,0,0,2,36,8],
@@ -241,13 +249,5 @@ var NAVTREEINDEX196 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FluxTrackerAPI.html#a3f50c70f6ba560846ddb212fdd372c8d":[0,0,0,0,0,0,2,44,12],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FluxTrackerAPI.html#a3f50c70f6ba560846ddb212fdd372c8d":[1,0,0,0,0,0,2,44,12],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FluxTrackerAPI.html#a4463362055010ed80a04c87b5e660b8f":[0,0,0,0,0,0,2,44,13],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FluxTrackerAPI.html#a4463362055010ed80a04c87b5e660b8f":[1,0,0,0,0,0,2,44,13],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FluxTrackerAPI.html#a46bf13ab26777df53c10191ce51778a5":[0,0,0,0,0,0,2,44,15],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FluxTrackerAPI.html#a46bf13ab26777df53c10191ce51778a5":[1,0,0,0,0,0,2,44,15],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FluxTrackerAPI.html#a47278d2b94e41efef138415c950dccee":[0,0,0,0,0,0,2,44,14],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FluxTrackerAPI.html#a47278d2b94e41efef138415c950dccee":[1,0,0,0,0,0,2,44,14],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FluxTrackerAPI.html#a4eb037ec7255de1d03713bdffc87f607":[0,0,0,0,0,0,2,44,18],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FluxTrackerAPI.html#a4eb037ec7255de1d03713bdffc87f607":[1,0,0,0,0,0,2,44,18],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FluxTrackerAPI.html#a51256d0abcdf8b1ae9720ea00fcbee2a":[0,0,0,0,0,0,2,44,11],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FluxTrackerAPI.html#a51256d0abcdf8b1ae9720ea00fcbee2a":[1,0,0,0,0,0,2,44,11]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1FluxTrackerAPI.html#a4463362055010ed80a04c87b5e660b8f":[1,0,0,0,0,0,2,44,13]
 };

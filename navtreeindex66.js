@@ -1,5 +1,7 @@
 var NAVTREEINDEX66 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1QuartermasterCargoSwapBarEvent.html#a8b7c91fa6cf9447a3b15da3a8b3eb100":[1,0,0,0,0,0,5,0,11,0,0,26,23],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1QuartermasterCargoSwapBarEvent.html#aa4223c6e349143c17ec7ec9501f0cd90":[0,0,0,0,0,0,5,0,11,0,0,26,19],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1QuartermasterCargoSwapBarEvent.html#aa4223c6e349143c17ec7ec9501f0cd90":[1,0,0,0,0,0,5,0,11,0,0,26,19],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1QuartermasterCargoSwapBarEvent.html#aad692ef38f697dc4dd7db496f4b7cf09":[0,0,0,0,0,0,5,0,11,0,0,26,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1QuartermasterCargoSwapBarEvent.html#aad692ef38f697dc4dd7db496f4b7cf09":[1,0,0,0,0,0,5,0,11,0,0,26,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX66 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanIncentiveScript.html#a53df636b6e970270f7a906af7e29dcbc":[1,0,0,0,0,0,5,0,11,0,0,34,6],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanIncentiveScript.html#a7097b69fa4ff538373a42d754a5d10fc":[0,0,0,0,0,0,5,0,11,0,0,34,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanIncentiveScript.html#a7097b69fa4ff538373a42d754a5d10fc":[1,0,0,0,0,0,5,0,11,0,0,34,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanIncentiveScript.html#a9e31a63cadb18dad271df10d42e9c560":[0,0,0,0,0,0,5,0,11,0,0,34,10],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanIncentiveScript.html#a9e31a63cadb18dad271df10d42e9c560":[1,0,0,0,0,0,5,0,11,0,0,34,10],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanIncentiveScript.html#adb67ce9218cdb810d6bc609691a563ef":[0,0,0,0,0,0,5,0,11,0,0,34,0]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanIncentiveScript.html#a9e31a63cadb18dad271df10d42e9c560":[0,0,0,0,0,0,5,0,11,0,0,34,10]
 };

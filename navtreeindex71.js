@@ -1,5 +1,7 @@
 var NAVTREEINDEX71 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel.html#abb56690fc91f9486de8636a1ac3e5cc4":[1,0,0,0,0,0,5,0,11,1,6,1],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel.html#abdb2b577247d2ab70b545cd2151d3069":[0,0,0,0,0,0,5,0,11,1,6,34],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel.html#abdb2b577247d2ab70b545cd2151d3069":[1,0,0,0,0,0,5,0,11,1,6,34],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel.html#abf262c21c179675dade061d36b63977d":[0,0,0,0,0,0,5,0,11,1,6,71],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bases_1_1PirateBaseIntel.html#abf262c21c179675dade061d36b63977d":[1,0,0,0,0,0,5,0,11,1,6,71],
@@ -247,7 +249,5 @@ var NAVTREEINDEX71 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1deciv_1_1DecivIntel.html#a3976e3c15cd147cabd872b5c2bfb3a1d":[1,0,0,0,0,0,5,0,11,3,0,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1deciv_1_1DecivIntel.html#a3d5d8fc1d9fae149977cae5db6fa3421":[0,0,0,0,0,0,5,0,11,3,0,7],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1deciv_1_1DecivIntel.html#a3d5d8fc1d9fae149977cae5db6fa3421":[1,0,0,0,0,0,5,0,11,3,0,7],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1deciv_1_1DecivIntel.html#a6114b8e13fbe2576eb12809bf80c35f9":[0,0,0,0,0,0,5,0,11,3,0,3],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1deciv_1_1DecivIntel.html#a6114b8e13fbe2576eb12809bf80c35f9":[1,0,0,0,0,0,5,0,11,3,0,3],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1deciv_1_1DecivIntel.html#a6cb00aab4a0dd1141c5e632b4ae158cf":[0,0,0,0,0,0,5,0,11,3,0,1]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1deciv_1_1DecivIntel.html#a6114b8e13fbe2576eb12809bf80c35f9":[0,0,0,0,0,0,5,0,11,3,0,3]
 };

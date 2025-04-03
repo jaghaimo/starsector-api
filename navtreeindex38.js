@@ -97,8 +97,8 @@ var NAVTREEINDEX38 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableIndustryItemPlugin.html#afaae4bea757432b18020cf133f3fd006":[1,0,0,0,0,0,5,0,2,0,1,14],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableItemEffect.html":[0,0,0,0,0,0,5,0,2,0,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableItemEffect.html":[1,0,0,0,0,0,5,0,2,0,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableItemEffect.html#a0790e6505ea1830853ce6a7a26d347c5":[0,0,0,0,0,0,5,0,2,0,2,10],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableItemEffect.html#a0790e6505ea1830853ce6a7a26d347c5":[1,0,0,0,0,0,5,0,2,0,2,10],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableItemEffect.html#a0790e6505ea1830853ce6a7a26d347c5":[0,0,0,0,0,0,5,0,2,0,2,11],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableItemEffect.html#a0790e6505ea1830853ce6a7a26d347c5":[1,0,0,0,0,0,5,0,2,0,2,11],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableItemEffect.html#a0834431166fd3a486c1975715953ea35":[0,0,0,0,0,0,5,0,2,0,2,9],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableItemEffect.html#a0834431166fd3a486c1975715953ea35":[1,0,0,0,0,0,5,0,2,0,2,9],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableItemEffect.html#a0e024321a6c9458af7d39eb33bffad1b":[0,0,0,0,0,0,5,0,2,0,2,3],
@@ -113,8 +113,10 @@ var NAVTREEINDEX38 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableItemEffect.html#a399b7e3cc58ae2c53eca9b7b7f524c7e":[1,0,0,0,0,0,5,0,2,0,2,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableItemEffect.html#a9258b1326448e3f3187857929c4decf0":[0,0,0,0,0,0,5,0,2,0,2,6],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableItemEffect.html#a9258b1326448e3f3187857929c4decf0":[1,0,0,0,0,0,5,0,2,0,2,6],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableItemEffect.html#aaebfa36075e87ef235ee73a12feca6d6":[0,0,0,0,0,0,5,0,2,0,2,11],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableItemEffect.html#aaebfa36075e87ef235ee73a12feca6d6":[1,0,0,0,0,0,5,0,2,0,2,11],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableItemEffect.html#aaebfa36075e87ef235ee73a12feca6d6":[0,0,0,0,0,0,5,0,2,0,2,12],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableItemEffect.html#aaebfa36075e87ef235ee73a12feca6d6":[1,0,0,0,0,0,5,0,2,0,2,12],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableItemEffect.html#aafaebede95830cf2587d00f1e31ed739":[0,0,0,0,0,0,5,0,2,0,2,10],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableItemEffect.html#aafaebede95830cf2587d00f1e31ed739":[1,0,0,0,0,0,5,0,2,0,2,10],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableItemEffect.html#ab8e0045fd6713d29b6c36e18d2a94444":[0,0,0,0,0,0,5,0,2,0,2,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableItemEffect.html#ab8e0045fd6713d29b6c36e18d2a94444":[1,0,0,0,0,0,5,0,2,0,2,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableItemEffect.html#ab9a31b944334947aa56e8967f40169b4":[0,0,0,0,0,0,5,0,2,0,2,8],
@@ -247,7 +249,5 @@ var NAVTREEINDEX38 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Farming.html#a72515e9df452a575afd96554bdc38c97":[1,0,0,0,0,0,5,0,2,0,8,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Farming.html#aba4cd06533764320c2440a99f146e1e6":[0,0,0,0,0,0,5,0,2,0,8,8],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Farming.html#aba4cd06533764320c2440a99f146e1e6":[1,0,0,0,0,0,5,0,2,0,8,8],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Farming.html#aca5825b5d36ed95f78686f634ffa6468":[0,0,0,0,0,0,5,0,2,0,8,10],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Farming.html#aca5825b5d36ed95f78686f634ffa6468":[1,0,0,0,0,0,5,0,2,0,8,10],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Farming.html#acd4e755daa6684da17cc2cc29df9afab":[0,0,0,0,0,0,5,0,2,0,8,7]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Farming.html#aca5825b5d36ed95f78686f634ffa6468":[0,0,0,0,0,0,5,0,2,0,8,10]
 };

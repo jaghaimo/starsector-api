@@ -1,5 +1,7 @@
 var NAVTREEINDEX83 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a2a5e0da087b4412ed9b296c19bdcd485":[1,0,0,0,0,0,5,0,11,6,0,4],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a34a3c1ef3859797fd8649945df36979a":[0,0,0,0,0,0,5,0,11,6,0,17],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a34a3c1ef3859797fd8649945df36979a":[1,0,0,0,0,0,5,0,11,6,0,17],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a38d7402494d20587867b0f2be3a509e1":[0,0,0,0,0,0,5,0,11,6,0,37],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1inspection_1_1HegemonyInspectionIntel.html#a38d7402494d20587867b0f2be3a509e1":[1,0,0,0,0,0,5,0,11,6,0,37],
@@ -247,7 +249,5 @@ var NAVTREEINDEX83 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a6b3afcfdf48775f33e199b689de91e12":[1,0,0,0,0,0,5,0,11,7,3,15],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a79188443390cb1da64d54b05f0f60138":[0,0,0,0,0,0,5,0,11,7,3,6],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a79188443390cb1da64d54b05f0f60138":[1,0,0,0,0,0,5,0,11,7,3,6],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a7c4b168dad1d3e054b22d0fce3d660c6":[0,0,0,0,0,0,5,0,11,7,3,23],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a7c4b168dad1d3e054b22d0fce3d660c6":[1,0,0,0,0,0,5,0,11,7,3,23],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a8a5310df86c898170c93e48bfd03f589":[0,0,0,0,0,0,5,0,11,7,3,8]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1CommSnifferIntel.html#a7c4b168dad1d3e054b22d0fce3d660c6":[0,0,0,0,0,0,5,0,11,7,3,23]
 };

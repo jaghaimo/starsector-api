@@ -1,5 +1,7 @@
 var NAVTREEINDEX64 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a862762395a2c01601e1684ea8a92af06":[1,0,0,0,0,0,5,0,11,0,0,9,15],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a898f0626bb585625f5c9400efb1d9314":[0,0,0,0,0,0,5,0,11,0,0,9,13],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a898f0626bb585625f5c9400efb1d9314":[1,0,0,0,0,0,5,0,11,0,0,9,13],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a8f7b49563d9b7b31d08676d08101e868":[0,0,0,0,0,0,5,0,11,0,0,9,11],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a8f7b49563d9b7b31d08676d08101e868":[1,0,0,0,0,0,5,0,11,0,0,9,11],
@@ -247,7 +249,5 @@ var NAVTREEINDEX64 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicFarmerBarEvent.html#a25e729895ca8e37bf74832576779845e":[1,0,0,0,0,0,5,0,11,0,0,17,19],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicFarmerBarEvent.html#a47b0a4c7d4274646395d291b83433bb0":[0,0,0,0,0,0,5,0,11,0,0,17,13],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicFarmerBarEvent.html#a47b0a4c7d4274646395d291b83433bb0":[1,0,0,0,0,0,5,0,11,0,0,17,13],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicFarmerBarEvent.html#a4ef433377d71fe10d8e846d99cc21e13":[0,0,0,0,0,0,5,0,11,0,0,17,12],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicFarmerBarEvent.html#a4ef433377d71fe10d8e846d99cc21e13":[1,0,0,0,0,0,5,0,11,0,0,17,12],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicFarmerBarEvent.html#a506f5d792c9d76e104ef2a13735e7121":[0,0,0,0,0,0,5,0,11,0,0,17,9]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicFarmerBarEvent.html#a4ef433377d71fe10d8e846d99cc21e13":[0,0,0,0,0,0,5,0,11,0,0,17,12]
 };

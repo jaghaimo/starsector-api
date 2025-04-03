@@ -1,5 +1,11 @@
 var NAVTREEINDEX124 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a5a9dc0265593a954cdc0090aaa6995e2":[1,0,0,0,0,0,5,0,19,0,26],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a5e47caa991e5453d9810862f7ca1806a":[0,0,0,0,0,0,5,0,19,0,24],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a5e47caa991e5453d9810862f7ca1806a":[1,0,0,0,0,0,5,0,19,0,24],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a62148bbb61d95cfc0a2669fd170e153c":[0,0,0,0,0,0,5,0,19,0,37],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a62148bbb61d95cfc0a2669fd170e153c":[1,0,0,0,0,0,5,0,19,0,37],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a643e5520e4bbfb2460a3ac78a9e83285":[0,0,0,0,0,0,5,0,19,0,78],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a643e5520e4bbfb2460a3ac78a9e83285":[1,0,0,0,0,0,5,0,19,0,78],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a651d31ce54366b4082d2dc15b29e76be":[0,0,0,0,0,0,5,0,19,0,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1BaseSubmarketPlugin.html#a651d31ce54366b4082d2dc15b29e76be":[1,0,0,0,0,0,5,0,19,0,5],
@@ -243,11 +249,5 @@ var NAVTREEINDEX124 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#ae33d0b1977716dc6b23573582f4a6564":[1,0,0,0,0,0,5,0,19,3,15],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#af0986a3f39a95fbe98befceaf040a2da":[0,0,0,0,0,0,5,0,19,3,9],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#af0986a3f39a95fbe98befceaf040a2da":[1,0,0,0,0,0,5,0,19,3,9],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#af87fb4176c3e685a0da42f336bce49ec":[0,0,0,0,0,0,5,0,19,3,19],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#af87fb4176c3e685a0da42f336bce49ec":[1,0,0,0,0,0,5,0,19,3,19],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#aff8169ec1834a4f6e905426f2c9fda87":[0,0,0,0,0,0,5,0,19,3,12],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#aff8169ec1834a4f6e905426f2c9fda87":[1,0,0,0,0,0,5,0,19,3,12],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1OpenMarketPlugin.html":[0,0,0,0,0,0,5,0,19,4],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1OpenMarketPlugin.html":[1,0,0,0,0,0,5,0,19,4],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1OpenMarketPlugin.html#a09d67a9864a1afddb114e94640247733":[0,0,0,0,0,0,5,0,19,4,3]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1submarkets_1_1MilitarySubmarketPlugin.html#af87fb4176c3e685a0da42f336bce49ec":[0,0,0,0,0,0,5,0,19,3,19]
 };

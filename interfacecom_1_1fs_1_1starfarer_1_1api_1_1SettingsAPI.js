@@ -159,6 +159,7 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1SettingsAPI =
     [ "isInGame", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1SettingsAPI.html#aa85754b3e4caf1404a9bb46f8c253902", null ],
     [ "isNewPlayer", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1SettingsAPI.html#aba8eb882aa415cdb68cfad8a6f5f80af", null ],
     [ "isShowDamageFloaties", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1SettingsAPI.html#a5007970d35f2d289482584c048222c8d", null ],
+    [ "isShowingCodex", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1SettingsAPI.html#a2a63ee040b9982c96433ace953fba3d0", null ],
     [ "isSoundEnabled", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1SettingsAPI.html#a427bd48dcad3c7ba36223c6daeb95408", null ],
     [ "isStrafeKeyAToggle", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1SettingsAPI.html#a681e2f57ed0b1b441399f6b5c7be05a2", null ],
     [ "loadCSV", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1SettingsAPI.html#a16fd0a278a8800f305f7a1fa4d0d6e8f", null ],

@@ -1,5 +1,7 @@
 var NAVTREEINDEX63 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson.html":[1,0,0,0,0,0,5,0,11,0,0,5],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson.html#a0fa89e3da1a5271deef8f0a1587523b2":[0,0,0,0,0,0,5,0,11,0,0,5,17],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson.html#a0fa89e3da1a5271deef8f0a1587523b2":[1,0,0,0,0,0,5,0,11,0,0,5,17],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson.html#a26591e037e121d6933308c69c458d5bc":[0,0,0,0,0,0,5,0,11,0,0,5,9],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson.html#a26591e037e121d6933308c69c458d5bc":[1,0,0,0,0,0,5,0,11,0,0,5,9],
@@ -247,7 +249,5 @@ var NAVTREEINDEX63 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a8372f14c2716ce2c99a7d61f84ff951c":[1,0,0,0,0,0,5,0,11,0,0,9,6],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a8583f200919a05ebd2988ba596176d2d":[0,0,0,0,0,0,5,0,11,0,0,9,27],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a8583f200919a05ebd2988ba596176d2d":[1,0,0,0,0,0,5,0,11,0,0,9,27],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a862762395a2c01601e1684ea8a92af06":[0,0,0,0,0,0,5,0,11,0,0,9,15],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a862762395a2c01601e1684ea8a92af06":[1,0,0,0,0,0,5,0,11,0,0,9,15],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a898f0626bb585625f5c9400efb1d9314":[0,0,0,0,0,0,5,0,11,0,0,9,13]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1DeliveryBarEvent.html#a862762395a2c01601e1684ea8a92af06":[0,0,0,0,0,0,5,0,11,0,0,9,15]
 };

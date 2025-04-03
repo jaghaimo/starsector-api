@@ -1,5 +1,11 @@
 var NAVTREEINDEX142 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dem_1_1DEMScript.html#a708331866c7a108101de69eec716857c":[1,0,0,0,0,0,5,2,0,1,11],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dem_1_1DEMScript.html#a774b6989dc134baf33cfbca71370f003":[0,0,0,0,0,0,5,2,0,1,46],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dem_1_1DEMScript.html#a774b6989dc134baf33cfbca71370f003":[1,0,0,0,0,0,5,2,0,1,46],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dem_1_1DEMScript.html#a786f19309024edf9f7c852a615f20fed":[0,0,0,0,0,0,5,2,0,1,47],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dem_1_1DEMScript.html#a786f19309024edf9f7c852a615f20fed":[1,0,0,0,0,0,5,2,0,1,47],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dem_1_1DEMScript.html#a7f98da45b9f137c9033049bb41277e1f":[0,0,0,0,0,0,5,2,0,1,39],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dem_1_1DEMScript.html#a7f98da45b9f137c9033049bb41277e1f":[1,0,0,0,0,0,5,2,0,1,39],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dem_1_1DEMScript.html#a8089f5e10c53abc0bd346451bb561a73":[0,0,0,0,0,0,5,2,0,1,8],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dem_1_1DEMScript.html#a8089f5e10c53abc0bd346451bb561a73":[1,0,0,0,0,0,5,2,0,1,8],
@@ -243,11 +249,5 @@ var NAVTREEINDEX142 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1DarkenedGazeSystemScript.html#a1bf071e8a84003b15e8e47f13ce88410":[1,0,0,0,0,0,5,2,1,7,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1DarkenedGazeSystemScript.html#a21d159638e095e20510175976845196b":[0,0,0,0,0,0,5,2,1,7,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1DarkenedGazeSystemScript.html#a21d159638e095e20510175976845196b":[1,0,0,0,0,0,5,2,1,7,4],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1DarkenedGazeSystemScript.html#a45e735367ad44e13defcee805abf6a68":[0,0,0,0,0,0,5,2,1,7,6],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1DarkenedGazeSystemScript.html#a45e735367ad44e13defcee805abf6a68":[1,0,0,0,0,0,5,2,1,7,6],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1DarkenedGazeSystemScript.html#a4ed1ea35874f341d78080872d8f5a652":[0,0,0,0,0,0,5,2,1,7,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1DarkenedGazeSystemScript.html#a4ed1ea35874f341d78080872d8f5a652":[1,0,0,0,0,0,5,2,1,7,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1DarkenedGazeSystemScript.html#aa41b0165cbb6a1947ccb21423e7fe48c":[0,0,0,0,0,0,5,2,1,7,7],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1DarkenedGazeSystemScript.html#aa41b0165cbb6a1947ccb21423e7fe48c":[1,0,0,0,0,0,5,2,1,7,7],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1DarkenedGazeSystemScript.html#ac7a0b7baafb799eabecf156d1b170b43":[0,0,0,0,0,0,5,2,1,7,8]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1DarkenedGazeSystemScript.html#a45e735367ad44e13defcee805abf6a68":[0,0,0,0,0,0,5,2,1,7,6]
 };

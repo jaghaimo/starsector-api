@@ -1,5 +1,13 @@
 var NAVTREEINDEX172 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetDataAPI.html#aa8a92dfcdabaca844bc576c674d01656":[0,0,0,0,0,0,0,62,24],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetDataAPI.html#aa8a92dfcdabaca844bc576c674d01656":[1,0,0,0,0,0,0,62,24],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetDataAPI.html#aac3da6109643b61c9fbf54915cef5271":[0,0,0,0,0,0,0,62,27],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetDataAPI.html#aac3da6109643b61c9fbf54915cef5271":[1,0,0,0,0,0,0,62,27],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetDataAPI.html#aadb5afa47963d2ce331fa7f203f695e1":[0,0,0,0,0,0,0,62,19],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetDataAPI.html#aadb5afa47963d2ce331fa7f203f695e1":[1,0,0,0,0,0,0,62,19],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetDataAPI.html#aae3057dba1c046f7e1bbe35de5f20119":[0,0,0,0,0,0,0,62,0],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetDataAPI.html#aae3057dba1c046f7e1bbe35de5f20119":[1,0,0,0,0,0,0,62,0],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetDataAPI.html#ab2de0db9c0af59dc8a00f1b88655c64f":[0,0,0,0,0,0,0,62,22],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetDataAPI.html#ab2de0db9c0af59dc8a00f1b88655c64f":[1,0,0,0,0,0,0,62,22],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetDataAPI.html#abb064b3d45eed03afac0e39fccaeeedb":[0,0,0,0,0,0,0,62,21],
@@ -241,13 +249,5 @@ var NAVTREEINDEX172 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1GroundRaidTargetPickerDelegate.html#a557a1dbef9ed437e4072c2cf253e46b8":[0,0,0,0,0,0,0,70,8],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1GroundRaidTargetPickerDelegate.html#a557a1dbef9ed437e4072c2cf253e46b8":[1,0,0,0,0,0,0,70,8],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1GroundRaidTargetPickerDelegate.html#a708e71bd7575b09eecd19a39d6f0530c":[0,0,0,0,0,0,0,70,5],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1GroundRaidTargetPickerDelegate.html#a708e71bd7575b09eecd19a39d6f0530c":[1,0,0,0,0,0,0,70,5],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1GroundRaidTargetPickerDelegate.html#a7c73ab6ecd10c1ab1a9beb99a5243cc4":[0,0,0,0,0,0,0,70,11],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1GroundRaidTargetPickerDelegate.html#a7c73ab6ecd10c1ab1a9beb99a5243cc4":[1,0,0,0,0,0,0,70,11],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1GroundRaidTargetPickerDelegate.html#a8bcc81db97aa029b40702e70729aed14":[0,0,0,0,0,0,0,70,0],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1GroundRaidTargetPickerDelegate.html#a8bcc81db97aa029b40702e70729aed14":[1,0,0,0,0,0,0,70,0],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1GroundRaidTargetPickerDelegate.html#a8d67b09fa07ff307ce3944de05565163":[0,0,0,0,0,0,0,70,10],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1GroundRaidTargetPickerDelegate.html#a8d67b09fa07ff307ce3944de05565163":[1,0,0,0,0,0,0,70,10],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1GroundRaidTargetPickerDelegate.html#a9449a98f32c8f7fadfb035e5d49942af":[0,0,0,0,0,0,0,70,7],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1GroundRaidTargetPickerDelegate.html#a9449a98f32c8f7fadfb035e5d49942af":[1,0,0,0,0,0,0,70,7]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1GroundRaidTargetPickerDelegate.html#a708e71bd7575b09eecd19a39d6f0530c":[1,0,0,0,0,0,0,70,5]
 };

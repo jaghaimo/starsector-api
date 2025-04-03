@@ -1,5 +1,11 @@
 var NAVTREEINDEX150 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1NavRelay.html#af4ca18f23e2f14e6dece835f534496e2":[1,0,0,0,0,0,5,3,46,1],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1NeuralIntegrator.html":[0,0,0,0,0,0,5,3,47],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1NeuralIntegrator.html":[1,0,0,0,0,0,5,3,47],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1NeuralIntegrator.html#a13aa0c5ab3a167593149d16ab7e7ef3e":[0,0,0,0,0,0,5,3,47,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1NeuralIntegrator.html#a13aa0c5ab3a167593149d16ab7e7ef3e":[1,0,0,0,0,0,5,3,47,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1NeuralIntegrator.html#ade7685eea2febafa950e49742ca22535":[0,0,0,0,0,0,5,3,47,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1NeuralIntegrator.html#ade7685eea2febafa950e49742ca22535":[1,0,0,0,0,0,5,3,47,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1NeuralIntegrator.html#aff7e037b5972acd253425df100ef14fd":[0,0,0,0,0,0,5,3,47,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1NeuralIntegrator.html#aff7e037b5972acd253425df100ef14fd":[1,0,0,0,0,0,5,3,47,1],
@@ -243,11 +249,5 @@ var NAVTREEINDEX150 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1BarEventSpec.html#acc50e3b94dd1a9d0bf88c311cf0ac463":[1,0,0,0,0,0,7,1,23],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1BarEventSpec.html#ad57a7b64f5c03c5349348df59cbb54f7":[0,0,0,0,0,0,7,1,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1BarEventSpec.html#ad57a7b64f5c03c5349348df59cbb54f7":[1,0,0,0,0,0,7,1,5],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1BarEventSpec.html#ad78ec04609f09a73e3258f10eb027218":[0,0,0,0,0,0,7,1,22],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1BarEventSpec.html#ad78ec04609f09a73e3258f10eb027218":[1,0,0,0,0,0,7,1,22],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1BarEventSpec.html#ad9a90fea57de150bf3cd50da44333faf":[0,0,0,0,0,0,7,1,14],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1BarEventSpec.html#ad9a90fea57de150bf3cd50da44333faf":[1,0,0,0,0,0,7,1,14],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1BarEventSpec.html#ada393dc7834a8bd400bc4679c4c91d3a":[0,0,0,0,0,0,7,1,30],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1BarEventSpec.html#ada393dc7834a8bd400bc4679c4c91d3a":[1,0,0,0,0,0,7,1,30],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1BarEventSpec.html#ade30c482d97cf7779066dc6d52a4703e":[0,0,0,0,0,0,7,1,2]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1BarEventSpec.html#ad78ec04609f09a73e3258f10eb027218":[0,0,0,0,0,0,7,1,22]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX39 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Farming.html#aca5825b5d36ed95f78686f634ffa6468":[1,0,0,0,0,0,5,0,2,0,8,10],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Farming.html#acd4e755daa6684da17cc2cc29df9afab":[0,0,0,0,0,0,5,0,2,0,8,7],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Farming.html#acd4e755daa6684da17cc2cc29df9afab":[1,0,0,0,0,0,5,0,2,0,8,7],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Farming.html#ae75eb131897a936513b40b625c06752d":[0,0,0,0,0,0,5,0,2,0,8,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Farming.html#ae75eb131897a936513b40b625c06752d":[1,0,0,0,0,0,5,0,2,0,8,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX39 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a774e103ddb7d9edcdc849ba5b73f5c36":[1,0,0,0,0,0,5,0,2,0,17,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a785a660a3b48fb6ae2c23951e5458b94":[0,0,0,0,0,0,5,0,2,0,17,15],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a785a660a3b48fb6ae2c23951e5458b94":[1,0,0,0,0,0,5,0,2,0,17,15],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a78bc57516fbd9898595938b79ef7b17f":[0,0,0,0,0,0,5,0,2,0,17,32],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a78bc57516fbd9898595938b79ef7b17f":[1,0,0,0,0,0,5,0,2,0,17,32],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a790b1fdeff9d77bb014d07af66e7ef08":[0,0,0,0,0,0,5,0,2,0,17,33]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1MilitaryBase.html#a78bc57516fbd9898595938b79ef7b17f":[0,0,0,0,0,0,5,0,2,0,17,32]
 };

@@ -1,5 +1,13 @@
 var NAVTREEINDEX208 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#a0d049d09373f37f7b0ec6b2c23b9e4da":[0,0,0,0,0,0,3,4,47],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#a0d049d09373f37f7b0ec6b2c23b9e4da":[1,0,0,0,0,0,3,4,47],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#a1230c04f66b7ca8a4a0d859f6602d7d7":[0,0,0,0,0,0,3,4,43],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#a1230c04f66b7ca8a4a0d859f6602d7d7":[1,0,0,0,0,0,3,4,43],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#a13eb0519006764001bf3514c70f1fb16":[0,0,0,0,0,0,3,4,24],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#a13eb0519006764001bf3514c70f1fb16":[1,0,0,0,0,0,3,4,24],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#a15d427f27cc94e8d054dad5d9e7dc576":[0,0,0,0,0,0,3,4,13],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#a15d427f27cc94e8d054dad5d9e7dc576":[1,0,0,0,0,0,3,4,13],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#a1bda1938a6487d3e4d1ffbe74ea10ab6":[0,0,0,0,0,0,3,4,51],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#a1bda1938a6487d3e4d1ffbe74ea10ab6":[1,0,0,0,0,0,3,4,51],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html#a1cbcfbb31c83c52ca7629c6a2699f77a":[0,0,0,0,0,0,3,4,37],
@@ -241,13 +249,5 @@ var NAVTREEINDEX208 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableFleetStatsAPI.html#a3e54f5cb8e87fa544cf6533ee7b26dba":[0,0,0,0,0,0,3,8,17],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableFleetStatsAPI.html#a3e54f5cb8e87fa544cf6533ee7b26dba":[1,0,0,0,0,0,3,8,17],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableFleetStatsAPI.html#a402ce64120fa7d6627195b55b715338b":[0,0,0,0,0,0,3,8,8],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableFleetStatsAPI.html#a402ce64120fa7d6627195b55b715338b":[1,0,0,0,0,0,3,8,8],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableFleetStatsAPI.html#a44b952722038e5a95ac5bd299569e9a9":[0,0,0,0,0,0,3,8,21],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableFleetStatsAPI.html#a44b952722038e5a95ac5bd299569e9a9":[1,0,0,0,0,0,3,8,21],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableFleetStatsAPI.html#a534af0347d0cdf1ecbfd8f5b9c0ad9a9":[0,0,0,0,0,0,3,8,4],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableFleetStatsAPI.html#a534af0347d0cdf1ecbfd8f5b9c0ad9a9":[1,0,0,0,0,0,3,8,4],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableFleetStatsAPI.html#a78a8f16c0c55aac9c6495d1655320663":[0,0,0,0,0,0,3,8,11],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableFleetStatsAPI.html#a78a8f16c0c55aac9c6495d1655320663":[1,0,0,0,0,0,3,8,11],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableFleetStatsAPI.html#a86463b4d8fe660bd965a95beef05e7d6":[0,0,0,0,0,0,3,8,20],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableFleetStatsAPI.html#a86463b4d8fe660bd965a95beef05e7d6":[1,0,0,0,0,0,3,8,20]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1MutableFleetStatsAPI.html#a402ce64120fa7d6627195b55b715338b":[1,0,0,0,0,0,3,8,8]
 };

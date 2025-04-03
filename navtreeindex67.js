@@ -1,5 +1,7 @@
 var NAVTREEINDEX67 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanIncentiveScript.html#a9e31a63cadb18dad271df10d42e9c560":[1,0,0,0,0,0,5,0,11,0,0,34,10],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanIncentiveScript.html#adb67ce9218cdb810d6bc609691a563ef":[0,0,0,0,0,0,5,0,11,0,0,34,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanIncentiveScript.html#adb67ce9218cdb810d6bc609691a563ef":[1,0,0,0,0,0,5,0,11,0,0,34,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanIncentiveScript.html#add088b5d88ac8cda84dc620af027b8a1":[0,0,0,0,0,0,5,0,11,0,0,34,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1TriTachLoanIncentiveScript.html#add088b5d88ac8cda84dc620af027b8a1":[1,0,0,0,0,0,5,0,11,0,0,34,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX67 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1DonationOffer.html#ae9c8f2d976053a65d03cdab19fad357a":[1,0,0,0,0,0,5,0,11,0,0,0,4,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1DonationOffer.html#afdd19d36e263914292cf8f1073f9cd9f":[0,0,0,0,0,0,5,0,11,0,0,0,4,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1DonationOffer.html#afdd19d36e263914292cf8f1073f9cd9f":[1,0,0,0,0,0,5,0,11,0,0,0,4,4],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1DonationOfferCreator.html":[0,0,0,0,0,0,5,0,11,0,0,0,5],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1DonationOfferCreator.html":[1,0,0,0,0,0,5,0,11,0,0,0,5],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1DonationOfferCreator.html#abcd05ca4101fb65514d87ea4e8749491":[0,0,0,0,0,0,5,0,11,0,0,0,5,0]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1DonationOfferCreator.html":[0,0,0,0,0,0,5,0,11,0,0,0,5]
 };

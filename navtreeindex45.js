@@ -1,5 +1,7 @@
 var NAVTREEINDEX45 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html#a79ea4099d510283d9e5054bba8f1b41d":[1,0,0,0,0,0,5,0,6,2,6],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html#a7d6ad3fc91a69814413e49b462078973":[0,0,0,0,0,0,5,0,6,2,14],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html#a7d6ad3fc91a69814413e49b462078973":[1,0,0,0,0,0,5,0,6,2,14],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html#aab0745be93561cb7ff433f29ac98480a":[0,0,0,0,0,0,5,0,6,2,10],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1CivilDisorder.html#aab0745be93561cb7ff433f29ac98480a":[1,0,0,0,0,0,5,0,6,2,10],
@@ -247,7 +249,5 @@ var NAVTREEINDEX45 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1OfficerManagerEvent.html#ae6206cd870bae9a00dd60b812fa18c2a":[1,0,0,0,0,0,5,0,6,11,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1OfficerManagerEvent.html#af38e6def92921e366f943f2964209d11":[0,0,0,0,0,0,5,0,6,11,23],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1OfficerManagerEvent.html#af38e6def92921e366f943f2964209d11":[1,0,0,0,0,0,5,0,6,11,23],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1OfficerManagerEvent.html#afb98d77729038a9f3b5c74ecc236cac9":[0,0,0,0,0,0,5,0,6,11,17],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1OfficerManagerEvent.html#afb98d77729038a9f3b5c74ecc236cac9":[1,0,0,0,0,0,5,0,6,11,17],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1OfficerManagerEvent.html#afbe691dfa4e3278666f4554c63414797":[0,0,0,0,0,0,5,0,6,11,15]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1events_1_1OfficerManagerEvent.html#afb98d77729038a9f3b5c74ecc236cac9":[0,0,0,0,0,0,5,0,6,11,17]
 };

@@ -1,5 +1,11 @@
 var NAVTREEINDEX148 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1ThreatSwarmAI.html#a532d89fa32c972d00fbf57b2037f59ad":[1,0,0,0,0,0,5,2,2,31,34],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1ThreatSwarmAI.html#a59524af6ed445ef9eac6bc9e7bec8a16":[0,0,0,0,0,0,5,2,2,31,15],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1ThreatSwarmAI.html#a59524af6ed445ef9eac6bc9e7bec8a16":[1,0,0,0,0,0,5,2,2,31,15],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1ThreatSwarmAI.html#a630b1902b9faec38998df2028e1f6cd7":[0,0,0,0,0,0,5,2,2,31,18],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1ThreatSwarmAI.html#a630b1902b9faec38998df2028e1f6cd7":[1,0,0,0,0,0,5,2,2,31,18],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1ThreatSwarmAI.html#a7284d8dc57d060cd9cd4b2de5e1755da":[0,0,0,0,0,0,5,2,2,31,16],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1ThreatSwarmAI.html#a7284d8dc57d060cd9cd4b2de5e1755da":[1,0,0,0,0,0,5,2,2,31,16],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1ThreatSwarmAI.html#a75ad203c8729f522a98f7be6467fd46d":[0,0,0,0,0,0,5,2,2,31,13],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1ThreatSwarmAI.html#a75ad203c8729f522a98f7be6467fd46d":[1,0,0,0,0,0,5,2,2,31,13],
@@ -243,11 +249,5 @@ var NAVTREEINDEX148 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DefectiveManufactory.html#a8f40be02fb6a927db1c06079b1c3200e":[1,0,0,0,0,0,5,3,16,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DefensiveTargetingArray.html":[0,0,0,0,0,0,5,3,17],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DefensiveTargetingArray.html":[1,0,0,0,0,0,5,3,17],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DefensiveTargetingArray.html#a6323599dd29db84761d104cb601777f0":[0,0,0,0,0,0,5,3,17,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DefensiveTargetingArray.html#a6323599dd29db84761d104cb601777f0":[1,0,0,0,0,0,5,3,17,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DefensiveTargetingArray.html#a785c73cddc13df07475a48a4a972b093":[0,0,0,0,0,0,5,3,17,3],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DefensiveTargetingArray.html#a785c73cddc13df07475a48a4a972b093":[1,0,0,0,0,0,5,3,17,3],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DefensiveTargetingArray.html#a8483215001685b69b37ec08d60002918":[0,0,0,0,0,0,5,3,17,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DefensiveTargetingArray.html#a8483215001685b69b37ec08d60002918":[1,0,0,0,0,0,5,3,17,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DefensiveTargetingArray.html#abb9c1fedef73fe5ac081e8fa5cc651b1":[0,0,0,0,0,0,5,3,17,4]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DefensiveTargetingArray.html#a6323599dd29db84761d104cb601777f0":[0,0,0,0,0,0,5,3,17,2]
 };

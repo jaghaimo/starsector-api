@@ -1,5 +1,9 @@
 var NAVTREEINDEX87 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PEOrganizeStage.html":[1,0,0,0,0,0,5,0,11,8,3],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PEOrganizeStage.html#a3cc088db8b85fb32e63c6b92130e5cd2":[0,0,0,0,0,0,5,0,11,8,3,2],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PEOrganizeStage.html#a3cc088db8b85fb32e63c6b92130e5cd2":[1,0,0,0,0,0,5,0,11,8,3,2],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PEOrganizeStage.html#a5cc66fd2722b66aacb02dd3ff771f3f2":[0,0,0,0,0,0,5,0,11,8,3,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PEOrganizeStage.html#a5cc66fd2722b66aacb02dd3ff771f3f2":[1,0,0,0,0,0,5,0,11,8,3,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PEOrganizeStage.html#a7b12257e1e982671ba17e4bc5f1a5317":[0,0,0,0,0,0,5,0,11,8,3,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PEOrganizeStage.html#a7b12257e1e982671ba17e4bc5f1a5317":[1,0,0,0,0,0,5,0,11,8,3,1],
@@ -245,9 +249,5 @@ var NAVTREEINDEX87 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#aab1ea814b50b87547368023808c8cb57":[1,0,0,0,0,0,5,0,11,9,2,12],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#ac018ab420df4ef8d678e85ac168d7ac1":[0,0,0,0,0,0,5,0,11,9,2,16],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#ac018ab420df4ef8d678e85ac168d7ac1":[1,0,0,0,0,0,5,0,11,9,2,16],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#acd4d779945530c08d0e95e8ceebb994d":[0,0,0,0,0,0,5,0,11,9,2,17],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#acd4d779945530c08d0e95e8ceebb994d":[1,0,0,0,0,0,5,0,11,9,2,17],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#af2aae93f95271f838f1bc2e473c41620":[0,0,0,0,0,0,5,0,11,9,2,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#af2aae93f95271f838f1bc2e473c41620":[1,0,0,0,0,0,5,0,11,9,2,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#af2c2902e709af65f26b92b547712af33":[0,0,0,0,0,0,5,0,11,9,2,7]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1raid_1_1BaseRaidStage.html#acd4d779945530c08d0e95e8ceebb994d":[0,0,0,0,0,0,5,0,11,9,2,17]
 };

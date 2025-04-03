@@ -1,5 +1,7 @@
 var NAVTREEINDEX68 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1DonationOfferCreator.html":[1,0,0,0,0,0,5,0,11,0,0,0,5],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1DonationOfferCreator.html#abcd05ca4101fb65514d87ea4e8749491":[0,0,0,0,0,0,5,0,11,0,0,0,5,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1DonationOfferCreator.html#abcd05ca4101fb65514d87ea4e8749491":[1,0,0,0,0,0,5,0,11,0,0,0,5,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1DonationOfferCreator.html#aea7f79ddec9ece190b71a15af33c576d":[0,0,0,0,0,0,5,0,11,0,0,0,5,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1DonationOfferCreator.html#aea7f79ddec9ece190b71a15af33c576d":[1,0,0,0,0,0,5,0,11,0,0,0,5,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX68 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1WeaponBlueprintOffer.html#a9aa6c11652951726f2d7c8846f6c92a8":[1,0,0,0,0,0,5,0,11,0,0,0,16,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1WeaponBlueprintOffer.html#ac2afbaabdbd9c78f1f29e01c298c796b":[0,0,0,0,0,0,5,0,11,0,0,0,16,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1WeaponBlueprintOffer.html#ac2afbaabdbd9c78f1f29e01c298c796b":[1,0,0,0,0,0,5,0,11,0,0,0,16,3],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1WeaponBlueprintOffer.html#ad48fac33f729ac1004761329d8e82be8":[0,0,0,0,0,0,5,0,11,0,0,0,16,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1WeaponBlueprintOffer.html#ad48fac33f729ac1004761329d8e82be8":[1,0,0,0,0,0,5,0,11,0,0,0,16,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1WeaponBlueprintOffer.html#ae60e842c17895b609e3f5c0382f1eca4":[0,0,0,0,0,0,5,0,11,0,0,0,16,2]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1historian_1_1WeaponBlueprintOffer.html#ad48fac33f729ac1004761329d8e82be8":[0,0,0,0,0,0,5,0,11,0,0,0,16,1]
 };

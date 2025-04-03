@@ -1,11 +1,3 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1AutofitPlugin_1_1AutofitPluginDelegate.html" title=" " alt="" coords="5,71,227,111"/>
-<area shape="rect" id="Node000001" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1SimulatorPluginImpl.html" title=" " alt="" coords="321,23,482,63"/>
-<area shape="poly" id="edge1465_Node000000_Node000001" title=" " alt="" coords="242,67,320,54,321,59,243,72"/>
-<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1DefaultFleetInflater.html" title=" " alt="" coords="275,104,529,145"/>
-<area shape="poly" id="edge1466_Node000000_Node000003" title=" " alt="" coords="242,103,275,107,274,112,242,108"/>
-<area shape="rect" id="Node000004" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetInflater.html" title=" " alt="" coords="19,136,213,177"/>
-<area shape="poly" id="edge1467_Node000004_Node000003" title=" " alt="" coords="228,141,274,136,274,141,228,146"/>
-<area shape="rect" id="Node000002" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1SimulatorPlugin.html" title=" " alt="" coords="27,5,205,46"/>
-<area shape="poly" id="edge1468_Node000002_Node000001" title=" " alt="" coords="221,29,321,35,321,41,221,35"/>
+<area shape="rect" id="Node000000" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1AutofitPlugin_1_1AvailableFighter.html" title=" " alt="" coords="5,5,196,46"/>
 </map>

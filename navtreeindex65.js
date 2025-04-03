@@ -1,5 +1,7 @@
 var NAVTREEINDEX65 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicFarmerBarEvent.html#a4ef433377d71fe10d8e846d99cc21e13":[1,0,0,0,0,0,5,0,11,0,0,17,12],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicFarmerBarEvent.html#a506f5d792c9d76e104ef2a13735e7121":[0,0,0,0,0,0,5,0,11,0,0,17,9],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicFarmerBarEvent.html#a506f5d792c9d76e104ef2a13735e7121":[1,0,0,0,0,0,5,0,11,0,0,17,9],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicFarmerBarEvent.html#a5596138a86d32ea11ff575ce52cef821":[0,0,0,0,0,0,5,0,11,0,0,17,10],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1LuddicFarmerBarEvent.html#a5596138a86d32ea11ff575ce52cef821":[1,0,0,0,0,0,5,0,11,0,0,17,10],
@@ -247,7 +249,5 @@ var NAVTREEINDEX65 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1QuartermasterCargoSwapBarEvent.html#a81b908dd12f82682c02412182088dbff":[1,0,0,0,0,0,5,0,11,0,0,26,17],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1QuartermasterCargoSwapBarEvent.html#a886021f40fb04ce98fdc288fa50b9d08":[0,0,0,0,0,0,5,0,11,0,0,26,16],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1QuartermasterCargoSwapBarEvent.html#a886021f40fb04ce98fdc288fa50b9d08":[1,0,0,0,0,0,5,0,11,0,0,26,16],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1QuartermasterCargoSwapBarEvent.html#a8b7c91fa6cf9447a3b15da3a8b3eb100":[0,0,0,0,0,0,5,0,11,0,0,26,23],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1QuartermasterCargoSwapBarEvent.html#a8b7c91fa6cf9447a3b15da3a8b3eb100":[1,0,0,0,0,0,5,0,11,0,0,26,23],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1QuartermasterCargoSwapBarEvent.html#aa4223c6e349143c17ec7ec9501f0cd90":[0,0,0,0,0,0,5,0,11,0,0,26,19]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1QuartermasterCargoSwapBarEvent.html#a8b7c91fa6cf9447a3b15da3a8b3eb100":[0,0,0,0,0,0,5,0,11,0,0,26,23]
 };

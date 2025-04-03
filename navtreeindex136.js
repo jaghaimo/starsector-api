@@ -1,5 +1,11 @@
 var NAVTREEINDEX136 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1VelocityField.html#a8e86b02a6e4360b23b31c93c7ea227f2":[1,0,0,0,0,0,5,0,22,10,6],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1VelocityField.html#a8f8b3becaf7eab5b45ff93278e5465ca":[0,0,0,0,0,0,5,0,22,10,4],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1VelocityField.html#a8f8b3becaf7eab5b45ff93278e5465ca":[1,0,0,0,0,0,5,0,22,10,4],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1VelocityField.html#ae48f449a597fdbdf144bcd1f01c4125b":[0,0,0,0,0,0,5,0,22,10,1],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1VelocityField.html#ae48f449a597fdbdf144bcd1f01c4125b":[1,0,0,0,0,0,5,0,22,10,1],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1VelocityField.html#aef007bc6e496e88b0c846e660e93596e":[0,0,0,0,0,0,5,0,22,10,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1VelocityField.html#aef007bc6e496e88b0c846e660e93596e":[1,0,0,0,0,0,5,0,22,10,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1world_1_1GateHaulerLocation.html":[0,0,0,0,0,0,5,0,23,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1world_1_1GateHaulerLocation.html":[1,0,0,0,0,0,5,0,23,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX136 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1codex_1_1CodexIntelAdder.html#a79475316d65eee8683411e49d6298391":[1,0,0,0,0,0,5,1,5,6],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1codex_1_1CodexIntelAdder.html#aa27101747759e738468cceac533522e2":[0,0,0,0,0,0,5,1,5,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1codex_1_1CodexIntelAdder.html#aa27101747759e738468cceac533522e2":[1,0,0,0,0,0,5,1,5,4],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1codex_1_1CodexIntelAdder.html#ac5ddc9e9c795da4e2006932e9d727307":[0,0,0,0,0,0,5,1,5,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1codex_1_1CodexIntelAdder.html#ac5ddc9e9c795da4e2006932e9d727307":[1,0,0,0,0,0,5,1,5,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1codex_1_1CodexTextEntryLoader.html":[0,0,0,0,0,0,5,1,6],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1codex_1_1CodexTextEntryLoader.html":[1,0,0,0,0,0,5,1,6],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1codex_1_1CodexUnlocker.html":[0,0,0,0,0,0,5,1,7],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1codex_1_1CodexUnlocker.html":[1,0,0,0,0,0,5,1,7],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1codex_1_1CodexUnlocker.html#a308349fd618f664db20cf4425416ca79":[0,0,0,0,0,0,5,1,7,6]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1codex_1_1CodexIntelAdder.html#ac5ddc9e9c795da4e2006932e9d727307":[0,0,0,0,0,0,5,1,5,1]
 };

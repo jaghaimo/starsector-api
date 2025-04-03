@@ -1,5 +1,11 @@
 var NAVTREEINDEX127 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisFieldTerrainPlugin.html#ad4c8ed8a1cca4ced6acf48ed387c8d76":[1,0,0,0,0,0,5,0,20,11,2],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisFieldTerrainPlugin.html#ae6e66c72a6b4a34e762c772bd50b2b0e":[0,0,0,0,0,0,5,0,20,11,3],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisFieldTerrainPlugin.html#ae6e66c72a6b4a34e762c772bd50b2b0e":[1,0,0,0,0,0,5,0,20,11,3],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisFieldTerrainPlugin.html#ae6e7babb5888fdeabe3ffc75351e9059":[0,0,0,0,0,0,5,0,20,11,1],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisFieldTerrainPlugin.html#ae6e7babb5888fdeabe3ffc75351e9059":[1,0,0,0,0,0,5,0,20,11,1],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisFieldTerrainPlugin.html#aee449c1024df601d3a070241c34a5637":[0,0,0,0,0,0,5,0,20,11,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisFieldTerrainPlugin.html#aee449c1024df601d3a070241c34a5637":[1,0,0,0,0,0,5,0,20,11,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisFieldTerrainPlugin.html#aeec87b125eee1a74cc8f7609d6208260":[0,0,0,0,0,0,5,0,20,11,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1DebrisFieldTerrainPlugin.html#aeec87b125eee1a74cc8f7609d6208260":[1,0,0,0,0,0,5,0,20,11,4],
@@ -243,11 +249,5 @@ var NAVTREEINDEX127 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1HyperspaceTerrainPlugin.html#a541ac12dea204e294aec73e269d31e07":[1,0,0,0,0,0,5,0,20,18,11],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1HyperspaceTerrainPlugin.html#a5501676d2fe465386ae4017c5f423c7e":[0,0,0,0,0,0,5,0,20,18,22],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1HyperspaceTerrainPlugin.html#a5501676d2fe465386ae4017c5f423c7e":[1,0,0,0,0,0,5,0,20,18,22],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1HyperspaceTerrainPlugin.html#a5d79081263603240ec6db1f109dac2d1":[0,0,0,0,0,0,5,0,20,18,56],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1HyperspaceTerrainPlugin.html#a5d79081263603240ec6db1f109dac2d1":[1,0,0,0,0,0,5,0,20,18,56],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1HyperspaceTerrainPlugin.html#a6004acf24576c4c331fb4639d8e74617":[0,0,0,0,0,0,5,0,20,18,26],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1HyperspaceTerrainPlugin.html#a6004acf24576c4c331fb4639d8e74617":[1,0,0,0,0,0,5,0,20,18,26],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1HyperspaceTerrainPlugin.html#a6354763ee073c770e5e64018667bb024":[0,0,0,0,0,0,5,0,20,18,40],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1HyperspaceTerrainPlugin.html#a6354763ee073c770e5e64018667bb024":[1,0,0,0,0,0,5,0,20,18,40],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1HyperspaceTerrainPlugin.html#a69da4b487a98ebaf7c261a15616b7e82":[0,0,0,0,0,0,5,0,20,18,54]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1HyperspaceTerrainPlugin.html#a5d79081263603240ec6db1f109dac2d1":[0,0,0,0,0,0,5,0,20,18,56]
 };

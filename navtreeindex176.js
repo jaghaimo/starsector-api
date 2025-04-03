@@ -1,5 +1,13 @@
 var NAVTREEINDEX176 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PluginPickerAPI.html#acd541a248a810dcf5d4c08a919cb0d1a":[0,0,0,0,0,0,0,90,0],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1PluginPickerAPI.html#acd541a248a810dcf5d4c08a919cb0d1a":[1,0,0,0,0,0,0,90,0],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RenderingAffectedByAbyssalDepth.html":[0,0,0,0,0,0,0,91],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RenderingAffectedByAbyssalDepth.html":[1,0,0,0,0,0,0,91],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RenderingAffectedByAbyssalDepth.html#abb310a26032764e9ffe1920f26f8a668":[0,0,0,0,0,0,0,91,0],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1RenderingAffectedByAbyssalDepth.html#abb310a26032764e9ffe1920f26f8a668":[1,0,0,0,0,0,0,91,0],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ReputationActionResponsePlugin.html":[0,0,0,0,0,0,0,93],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ReputationActionResponsePlugin.html":[1,0,0,0,0,0,0,93],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ReputationActionResponsePlugin.html#a5bce182b66091cb4d77023a23016e6c9":[0,0,0,0,0,0,0,93,1],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ReputationActionResponsePlugin.html#a5bce182b66091cb4d77023a23016e6c9":[1,0,0,0,0,0,0,93,1],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1ReputationActionResponsePlugin.html#ad4cb272a5f73ad5e9deb724468ab1df7":[0,0,0,0,0,0,0,93,0],
@@ -241,13 +249,5 @@ var NAVTREEINDEX176 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorAPI.html#a8d3e7b12237d401a483dcfb5363c131c":[0,0,0,0,0,0,0,97,60],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorAPI.html#a8d3e7b12237d401a483dcfb5363c131c":[1,0,0,0,0,0,0,97,60],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorAPI.html#a901ab90a1280474a874dcdb128ed8e2e":[0,0,0,0,0,0,0,97,34],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorAPI.html#a901ab90a1280474a874dcdb128ed8e2e":[1,0,0,0,0,0,0,97,34],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorAPI.html#a90d63029bac7fc678a48e2778156ed25":[0,0,0,0,0,0,0,97,32],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorAPI.html#a90d63029bac7fc678a48e2778156ed25":[1,0,0,0,0,0,0,97,32],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorAPI.html#a92863eb4add7a80c0b090210a35c10ba":[0,0,0,0,0,0,0,97,116],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorAPI.html#a92863eb4add7a80c0b090210a35c10ba":[1,0,0,0,0,0,0,97,116],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorAPI.html#a94008498d97a169af7278406268b20d7":[0,0,0,0,0,0,0,97,15],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorAPI.html#a94008498d97a169af7278406268b20d7":[1,0,0,0,0,0,0,97,15],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorAPI.html#a98354d026444835dc3562e1e99862a96":[0,0,0,0,0,0,0,97,27],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorAPI.html#a98354d026444835dc3562e1e99862a96":[1,0,0,0,0,0,0,97,27]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorAPI.html#a901ab90a1280474a874dcdb128ed8e2e":[1,0,0,0,0,0,0,97,34]
 };

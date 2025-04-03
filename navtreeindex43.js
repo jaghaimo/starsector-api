@@ -1,5 +1,7 @@
 var NAVTREEINDEX43 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnim.html#a6e531c0ef9523b571fb4b9a7ec5c10fb":[1,0,0,0,0,0,5,0,5,4,17],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnim.html#a7c47e824389529db58478d1ed6febf43":[0,0,0,0,0,0,5,0,5,4,19],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnim.html#a7c47e824389529db58478d1ed6febf43":[1,0,0,0,0,0,5,0,5,4,19],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnim.html#a7ea2f306b2d1c06de62e82a76e0d1511":[0,0,0,0,0,0,5,0,5,4,21],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1CharAnim.html#a7ea2f306b2d1c06de62e82a76e0d1511":[1,0,0,0,0,0,5,0,5,4,21],
@@ -247,7 +249,5 @@ var NAVTREEINDEX43 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelTutorialPanel.html#ade5393984b3d05caf2149f01fb3252d2":[1,0,0,0,0,0,5,0,5,11,11],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelTutorialPanel.html#aedfb783c217d138565ddc297bb5d95a8":[0,0,0,0,0,0,5,0,5,11,13],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1DuelTutorialPanel.html#aedfb783c217d138565ddc297bb5d95a8":[1,0,0,0,0,0,5,0,5,11,13],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1EventideDuelBackground.html":[0,0,0,0,0,0,5,0,5,12],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1EventideDuelBackground.html":[1,0,0,0,0,0,5,0,5,12],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1EventideDuelBackground.html#a120ae9be2cdd2f39c5ef8d5e5bdb2060":[0,0,0,0,0,0,5,0,5,12,5]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1eventide_1_1EventideDuelBackground.html":[0,0,0,0,0,0,5,0,5,12]
 };

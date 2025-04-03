@@ -1,5 +1,7 @@
 var NAVTREEINDEX51 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1BaseMiscFleetCreatorPlugin.html#a1d7af6c35d6b024d5994df006d36c6c0":[1,0,0,0,0,0,5,0,7,0,0,6],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1BaseMiscFleetCreatorPlugin.html#a2549af2071300b44629f212fcdb5af5c":[0,0,0,0,0,0,5,0,7,0,0,12],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1BaseMiscFleetCreatorPlugin.html#a2549af2071300b44629f212fcdb5af5c":[1,0,0,0,0,0,5,0,7,0,0,12],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1BaseMiscFleetCreatorPlugin.html#a2bce6a57d982239a845083deae1c6ddb":[0,0,0,0,0,0,5,0,7,0,0,9],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1BaseMiscFleetCreatorPlugin.html#a2bce6a57d982239a845083deae1c6ddb":[1,0,0,0,0,0,5,0,7,0,0,9],
@@ -247,7 +249,5 @@ var NAVTREEINDEX51 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseSensorGhost.html#a9001316ce04cd7d369f2a64f3e50a010":[1,0,0,0,0,0,5,0,8,3,38],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseSensorGhost.html#a997e50c91cd89c0ddf2715dea25ffb20":[0,0,0,0,0,0,5,0,8,3,33],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseSensorGhost.html#a997e50c91cd89c0ddf2715dea25ffb20":[1,0,0,0,0,0,5,0,8,3,33],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseSensorGhost.html#a9a8d2420bd95120149ffc2683b65b786":[0,0,0,0,0,0,5,0,8,3,35],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseSensorGhost.html#a9a8d2420bd95120149ffc2683b65b786":[1,0,0,0,0,0,5,0,8,3,35],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseSensorGhost.html#a9c74a2476b7efa3fd222a89758a28dae":[0,0,0,0,0,0,5,0,8,3,37]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1ghosts_1_1BaseSensorGhost.html#a9a8d2420bd95120149ffc2683b65b786":[0,0,0,0,0,0,5,0,8,3,35]
 };

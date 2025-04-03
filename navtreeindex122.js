@@ -1,5 +1,11 @@
 var NAVTREEINDEX122 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1ReputationChangeTracker.html":[1,0,0,0,0,0,5,0,17,6],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1ReputationChangeTracker.html#a2d1f4a7cac674178ab41a570938cc9a9":[0,0,0,0,0,0,5,0,17,6,3],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1ReputationChangeTracker.html#a2d1f4a7cac674178ab41a570938cc9a9":[1,0,0,0,0,0,5,0,17,6,3],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1ReputationChangeTracker.html#a8088ce259e1f5694048b6e6005a80807":[0,0,0,0,0,0,5,0,17,6,2],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1ReputationChangeTracker.html#a8088ce259e1f5694048b6e6005a80807":[1,0,0,0,0,0,5,0,17,6,2],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1ReputationChangeTracker.html#a99de81cd7e86c3b65b892dc5d6dda627":[0,0,0,0,0,0,5,0,17,6,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1ReputationChangeTracker.html#a99de81cd7e86c3b65b892dc5d6dda627":[1,0,0,0,0,0,5,0,17,6,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1ReputationChangeTracker.html#adfcb668a79343f2ddc4b6ef3a50d1bee":[0,0,0,0,0,0,5,0,17,6,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1ReputationChangeTracker.html#adfcb668a79343f2ddc4b6ef3a50d1bee":[1,0,0,0,0,0,5,0,17,6,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX122 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1DerelictContingent.html":[1,0,0,0,0,0,5,0,18,21],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1Effects.html":[0,0,0,0,0,0,5,0,18,22],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1Effects.html":[1,0,0,0,0,0,5,0,18,22],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ElectronicWarfare.html":[0,0,0,0,0,0,5,0,18,23],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ElectronicWarfare.html":[1,0,0,0,0,0,5,0,18,23],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ElectronicWarfareScript.html":[0,0,0,0,0,0,5,0,18,24],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ElectronicWarfareScript.html":[1,0,0,0,0,0,5,0,18,24],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ElectronicWarfareScript.html#a0e8aa3ae96cb45adff91b44e0ee89a18":[0,0,0,0,0,0,5,0,18,24,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ElectronicWarfareScript.html#a0e8aa3ae96cb45adff91b44e0ee89a18":[1,0,0,0,0,0,5,0,18,24,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ElectronicWarfareScript.html#a27654cbbb8b830589ce2929a81a3c8e1":[0,0,0,0,0,0,5,0,18,24,1]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1skills_1_1ElectronicWarfare.html":[0,0,0,0,0,0,5,0,18,23]
 };

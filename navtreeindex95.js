@@ -1,5 +1,11 @@
 var NAVTREEINDEX95 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html#a6db89148c7c179a87b26158c64973a28":[1,0,0,0,0,0,5,0,12,0,17,23],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html#a73dcfff0660268bd19378a01295f87f0":[0,0,0,0,0,0,5,0,12,0,17,20],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html#a73dcfff0660268bd19378a01295f87f0":[1,0,0,0,0,0,5,0,12,0,17,20],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html#a7c192e91e77065509df48905f9662f2a":[0,0,0,0,0,0,5,0,12,0,17,16],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html#a7c192e91e77065509df48905f9662f2a":[1,0,0,0,0,0,5,0,12,0,17,16],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html#a803e65e30ac454d39d602d0eb030703b":[0,0,0,0,0,0,5,0,12,0,17,19],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html#a803e65e30ac454d39d602d0eb030703b":[1,0,0,0,0,0,5,0,12,0,17,19],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html#a91edac65cad8a350062a5959cb3c6a2d":[0,0,0,0,0,0,5,0,12,0,17,11],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1academy_1_1GAProjectZiggurat.html#a91edac65cad8a350062a5959cb3c6a2d":[1,0,0,0,0,0,5,0,12,0,17,11],
@@ -243,11 +249,5 @@ var NAVTREEINDEX95 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty.html#ae2f6954d83496312d70eb4fe10e79e80":[1,0,0,0,0,0,5,0,12,2,0,36],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty.html#ae5188180fb4819c9dddc5eaedbfd19d8":[0,0,0,0,0,0,5,0,12,2,0,33],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty.html#ae5188180fb4819c9dddc5eaedbfd19d8":[1,0,0,0,0,0,5,0,12,2,0,33],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty.html#ae525e130beeeea68e2bdf2d69fe53446":[0,0,0,0,0,0,5,0,12,2,0,18],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty.html#ae525e130beeeea68e2bdf2d69fe53446":[1,0,0,0,0,0,5,0,12,2,0,18],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty.html#ae5b2e2ff567bb1df02490cab758bdad7":[0,0,0,0,0,0,5,0,12,2,0,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty.html#ae5b2e2ff567bb1df02490cab758bdad7":[1,0,0,0,0,0,5,0,12,2,0,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty.html#aeda41b70323c6c7fa0a8dc773b95802d":[0,0,0,0,0,0,5,0,12,2,0,34],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty.html#aeda41b70323c6c7fa0a8dc773b95802d":[1,0,0,0,0,0,5,0,12,2,0,34],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty.html#af13fcad79e38d1d2520572d4de734d2b":[0,0,0,0,0,0,5,0,12,2,0,32]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1cb_1_1BaseCustomBounty.html#ae525e130beeeea68e2bdf2d69fe53446":[0,0,0,0,0,0,5,0,12,2,0,18]
 };

@@ -1,5 +1,11 @@
 var NAVTREEINDEX129 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MaxBurnBuff.html#a4eaefe1ff4b48ea5d2fa0315786c22bf":[1,0,0,0,0,0,5,0,20,21,2],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MaxBurnBuff.html#a7724dfadd533130729bfc41bde55c934":[0,0,0,0,0,0,5,0,20,21,7],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MaxBurnBuff.html#a7724dfadd533130729bfc41bde55c934":[1,0,0,0,0,0,5,0,20,21,7],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MaxBurnBuff.html#aa0e367c30a95fe710a798b1d772dc524":[0,0,0,0,0,0,5,0,20,21,5],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MaxBurnBuff.html#aa0e367c30a95fe710a798b1d772dc524":[1,0,0,0,0,0,5,0,20,21,5],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MaxBurnBuff.html#ab8c4e22dfceff8f607527fc00f745877":[0,0,0,0,0,0,5,0,20,21,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MaxBurnBuff.html#ab8c4e22dfceff8f607527fc00f745877":[1,0,0,0,0,0,5,0,20,21,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MaxBurnBuff.html#ae4e651c538ac8d458ec2a7f0c6820a51":[0,0,0,0,0,0,5,0,20,21,6],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1MaxBurnBuff.html#ae4e651c538ac8d458ec2a7f0c6820a51":[1,0,0,0,0,0,5,0,20,21,6],
@@ -243,11 +249,5 @@ var NAVTREEINDEX129 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RingRenderer.html#a28d505b68780fbd75601d9ef7cd1f5d7":[1,0,0,0,0,0,5,0,20,28,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RingRenderer.html#a497c98d391b3b1394caf6a1a8bda1b83":[0,0,0,0,0,0,5,0,20,28,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RingRenderer.html#a497c98d391b3b1394caf6a1a8bda1b83":[1,0,0,0,0,0,5,0,20,28,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RingSystemTerrainPlugin.html":[0,0,0,0,0,0,5,0,20,29],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RingSystemTerrainPlugin.html":[1,0,0,0,0,0,5,0,20,29],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RingSystemTerrainPlugin.html#a0885d7622c06ac86b7565146a19b5c28":[0,0,0,0,0,0,5,0,20,29,5],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RingSystemTerrainPlugin.html#a0885d7622c06ac86b7565146a19b5c28":[1,0,0,0,0,0,5,0,20,29,5],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RingSystemTerrainPlugin.html#a2f83b0e9e27eab98678305b68bb93c37":[0,0,0,0,0,0,5,0,20,29,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RingSystemTerrainPlugin.html#a2f83b0e9e27eab98678305b68bb93c37":[1,0,0,0,0,0,5,0,20,29,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RingSystemTerrainPlugin.html#a3ab06af095d7534bcf1c5bde12db55a6":[0,0,0,0,0,0,5,0,20,29,7]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RingSystemTerrainPlugin.html":[0,0,0,0,0,0,5,0,20,29]
 };

@@ -408,6 +408,25 @@ var sectionId = 'dynsection-1';
 </g>
 <text text-anchor="middle" x="1027.12" y="-50.75" font-family="Helvetica,sans-Serif" font-size="10.00" fill="grey"> first</text>
 </g>
+<!-- Node19 -->
+<g id="Node000019" class="node">
+<title>Node19</title>
+<g id="a_Node000019"><a xlink:href="interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WithSourceMod.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="573.12,-30.5 439.38,-30.5 439.38,0 573.12,0 573.12,-30.5"/>
+<text text-anchor="start" x="447.38" y="-17" font-family="Helvetica,sans-Serif" font-size="10.00">com.fs.starfarer.api.loading.</text>
+<text text-anchor="middle" x="506.25" y="-5.75" font-family="Helvetica,sans-Serif" font-size="10.00">WithSourceMod</text>
+</a>
+</g>
+</g>
+<!-- Node19&#45;&gt;Node18 -->
+<g id="edge19_Node000018_Node000019" class="edge">
+<title>Node19&#45;&gt;Node18</title>
+<g id="a_edge19_Node000018_Node000019"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M584.97,-15.25C647.54,-15.25 734.21,-15.25 791.45,-15.25"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="585.09,-11.75 575.09,-15.25 585.09,-18.75 585.09,-11.75"/>
+</a>
+</g>
+</g>
 </g>
 </svg>
 

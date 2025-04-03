@@ -1,5 +1,11 @@
 var NAVTREEINDEX137 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1codex_1_1CodexIntelAdder.html#ac5ddc9e9c795da4e2006932e9d727307":[1,0,0,0,0,0,5,1,5,1],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1codex_1_1CodexTextEntryLoader.html":[0,0,0,0,0,0,5,1,6],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1codex_1_1CodexTextEntryLoader.html":[1,0,0,0,0,0,5,1,6],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1codex_1_1CodexUnlocker.html":[0,0,0,0,0,0,5,1,7],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1codex_1_1CodexUnlocker.html":[1,0,0,0,0,0,5,1,7],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1codex_1_1CodexUnlocker.html#a308349fd618f664db20cf4425416ca79":[0,0,0,0,0,0,5,1,7,6],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1codex_1_1CodexUnlocker.html#a308349fd618f664db20cf4425416ca79":[1,0,0,0,0,0,5,1,7,6],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1codex_1_1CodexUnlocker.html#a49e3e266c768002e3eb3d2a837a9dfdd":[0,0,0,0,0,0,5,1,7,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1codex_1_1CodexUnlocker.html#a49e3e266c768002e3eb3d2a837a9dfdd":[1,0,0,0,0,0,5,1,7,5],
@@ -243,11 +249,5 @@ var NAVTREEINDEX137 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CombatEntityPluginWithParticles.html#aa487c24e2520f521fd6f7347d9bbeb8d":[1,0,0,0,0,0,5,2,11,9],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CombatEntityPluginWithParticles.html#ab348364127aeaa9b2cfab193668a0607":[0,0,0,0,0,0,5,2,11,11],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CombatEntityPluginWithParticles.html#ab348364127aeaa9b2cfab193668a0607":[1,0,0,0,0,0,5,2,11,11],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CombatEntityPluginWithParticles.html#aea53f62a858fda4453426733d72c21bd":[0,0,0,0,0,0,5,2,11,20],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CombatEntityPluginWithParticles.html#aea53f62a858fda4453426733d72c21bd":[1,0,0,0,0,0,5,2,11,20],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CombatEntityPluginWithParticles.html#aec56457e407ab4dbeb86c8c5ebad2f52":[0,0,0,0,0,0,5,2,11,15],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CombatEntityPluginWithParticles.html#aec56457e407ab4dbeb86c8c5ebad2f52":[1,0,0,0,0,0,5,2,11,15],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CombatEntityPluginWithParticles.html#af39e8183829140eda48a3d7667bf5611":[0,0,0,0,0,0,5,2,11,18],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CombatEntityPluginWithParticles.html#af39e8183829140eda48a3d7667bf5611":[1,0,0,0,0,0,5,2,11,18],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CombatEntityPluginWithParticles.html#afbeb9471661a4ad0c3449d8ef45e0b23":[0,0,0,0,0,0,5,2,11,23]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CombatEntityPluginWithParticles.html#aea53f62a858fda4453426733d72c21bd":[0,0,0,0,0,0,5,2,11,20]
 };

@@ -1,5 +1,11 @@
 var NAVTREEINDEX90 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CommodityProductionMission.html#a94bc6e33cb020d518efcbb18b9cce5a1":[1,0,0,0,0,0,5,0,12,11,11],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CommodityProductionMission.html#aa690479b17b07d5761c17954442e3f34":[0,0,0,0,0,0,5,0,12,11,21],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CommodityProductionMission.html#aa690479b17b07d5761c17954442e3f34":[1,0,0,0,0,0,5,0,12,11,21],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CommodityProductionMission.html#aa88be1b0c9e8ed9b3b022a49002089f7":[0,0,0,0,0,0,5,0,12,11,6],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CommodityProductionMission.html#aa88be1b0c9e8ed9b3b022a49002089f7":[1,0,0,0,0,0,5,0,12,11,6],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CommodityProductionMission.html#ad8dce4d5fea3635bd6ec8652e5fe716b":[0,0,0,0,0,0,5,0,12,11,8],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CommodityProductionMission.html#ad8dce4d5fea3635bd6ec8652e5fe716b":[1,0,0,0,0,0,5,0,12,11,8],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CommodityProductionMission.html#adbb2d4104f5e9d582b56c65686be6ba6":[0,0,0,0,0,0,5,0,12,11,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1CommodityProductionMission.html#adbb2d4104f5e9d582b56c65686be6ba6":[1,0,0,0,0,0,5,0,12,11,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX90 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter_1_1CanSpawnFleetConditionChecker.html#a9b1ea259abe00aaaa9f9c7166b87d84b":[1,0,0,0,0,0,5,0,12,14,0,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter_1_1CanSpawnFleetConditionChecker.html#ab3889bdfa654e13d61f8bfa6be2bd30e":[0,0,0,0,0,0,5,0,12,14,0,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter_1_1CanSpawnFleetConditionChecker.html#ab3889bdfa654e13d61f8bfa6be2bd30e":[1,0,0,0,0,0,5,0,12,14,0,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter_1_1DFEPlaceFleetAction.html":[0,0,0,0,0,0,5,0,12,14,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter_1_1DFEPlaceFleetAction.html":[1,0,0,0,0,0,5,0,12,14,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter_1_1DFEPlaceFleetAction.html#a27b85683f08eb2e59c8b5130844e9d62":[0,0,0,0,0,0,5,0,12,14,1,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter_1_1DFEPlaceFleetAction.html#a27b85683f08eb2e59c8b5130844e9d62":[1,0,0,0,0,0,5,0,12,14,1,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter_1_1DFEPlaceFleetAction.html#acbb3803971ef9a6c46de12831f0e42d8":[0,0,0,0,0,0,5,0,12,14,1,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter_1_1DFEPlaceFleetAction.html#acbb3803971ef9a6c46de12831f0e42d8":[1,0,0,0,0,0,5,0,12,14,1,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DisruptCompetitorMission.html":[0,0,0,0,0,0,5,0,12,15]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1DelayedFleetEncounter_1_1DFEPlaceFleetAction.html":[0,0,0,0,0,0,5,0,12,14,1]
 };

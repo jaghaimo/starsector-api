@@ -1,5 +1,13 @@
 var NAVTREEINDEX195 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatNebulaAPI_1_1CloudAPI.html#a2b735d1ecc6044e1d7925591b76cfe68":[0,0,0,0,0,0,2,27,0,3],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatNebulaAPI_1_1CloudAPI.html#a2b735d1ecc6044e1d7925591b76cfe68":[1,0,0,0,0,0,2,27,0,3],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatNebulaAPI_1_1CloudAPI.html#a679766079d6f40afafb79329c565df0e":[0,0,0,0,0,0,2,27,0,1],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatNebulaAPI_1_1CloudAPI.html#a679766079d6f40afafb79329c565df0e":[1,0,0,0,0,0,2,27,0,1],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatNebulaAPI_1_1CloudAPI.html#af08c4689c66c58083c85aaa3c95c5f12":[0,0,0,0,0,0,2,27,0,2],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatNebulaAPI_1_1CloudAPI.html#af08c4689c66c58083c85aaa3c95c5f12":[1,0,0,0,0,0,2,27,0,2],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatReadinessPlugin.html":[0,0,0,0,0,0,2,28],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatReadinessPlugin.html":[1,0,0,0,0,0,2,28],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatReadinessPlugin.html#a1dc0a44f20bde596c1bf0b89295a4bab":[0,0,0,0,0,0,2,28,9],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatReadinessPlugin.html#a1dc0a44f20bde596c1bf0b89295a4bab":[1,0,0,0,0,0,2,28,9],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatReadinessPlugin.html#a41e1e54af6e8542047cbc8da9f728711":[0,0,0,0,0,0,2,28,1],
@@ -241,13 +249,5 @@ var NAVTREEINDEX195 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DroneLauncherShipSystemAPI.html":[0,0,0,0,0,0,2,35],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DroneLauncherShipSystemAPI.html":[1,0,0,0,0,0,2,35],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DroneLauncherShipSystemAPI.html#a35c2d2f89927d38650f7676670bea84f":[0,0,0,0,0,0,2,35,0],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DroneLauncherShipSystemAPI.html#a35c2d2f89927d38650f7676670bea84f":[1,0,0,0,0,0,2,35,0],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DroneLauncherShipSystemAPI.html#a624522db1acfc0e480cd58da15cb7a1f":[0,0,0,0,0,0,2,35,3],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DroneLauncherShipSystemAPI.html#a624522db1acfc0e480cd58da15cb7a1f":[1,0,0,0,0,0,2,35,3],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DroneLauncherShipSystemAPI.html#abade55decbd91598760df3ee8a43d0d9":[0,0,0,0,0,0,2,35,1],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DroneLauncherShipSystemAPI.html#abade55decbd91598760df3ee8a43d0d9":[1,0,0,0,0,0,2,35,1],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DroneLauncherShipSystemAPI.html#ac956d92249e1c45be3a93c2878fbd918":[0,0,0,0,0,0,2,35,2],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DroneLauncherShipSystemAPI.html#ac956d92249e1c45be3a93c2878fbd918":[1,0,0,0,0,0,2,35,2],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1EmpArcEntityAPI.html":[0,0,0,0,0,0,2,36],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1EmpArcEntityAPI.html":[1,0,0,0,0,0,2,36]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1DroneLauncherShipSystemAPI.html#a35c2d2f89927d38650f7676670bea84f":[1,0,0,0,0,0,2,35,0]
 };

@@ -1,5 +1,11 @@
 var NAVTREEINDEX109 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1MagFieldGenPlugin.html":[1,0,0,0,0,0,5,0,15,18],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1MagFieldGenPlugin.html#a3d830e0a407fd5aa1ad54eddf983fefb":[0,0,0,0,0,0,5,0,15,18,1],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1MagFieldGenPlugin.html#a3d830e0a407fd5aa1ad54eddf983fefb":[1,0,0,0,0,0,5,0,15,18,1],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1MagFieldGenPlugin.html#af6179392712491ac67590c8ce5179060":[0,0,0,0,0,0,5,0,15,18,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1MagFieldGenPlugin.html#af6179392712491ac67590c8ce5179060":[1,0,0,0,0,0,5,0,15,18,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1MarkovNames.html":[0,0,0,0,0,0,5,0,15,19],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1MarkovNames.html":[1,0,0,0,0,0,5,0,15,19],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameAssigner.html":[0,0,0,0,0,0,5,0,15,20],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1NameAssigner.html":[1,0,0,0,0,0,5,0,15,20],
@@ -243,11 +249,5 @@ var NAVTREEINDEX109 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1PlayerFleetGenPluginImpl.html#aa2b03dc9699c4d5ead07511ce92f0280":[1,0,0,0,0,0,5,0,15,27,29],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1PlayerFleetGenPluginImpl.html#ab2592d4c08d5d27fb1b0ebad304363a7":[0,0,0,0,0,0,5,0,15,27,23],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1PlayerFleetGenPluginImpl.html#ab2592d4c08d5d27fb1b0ebad304363a7":[1,0,0,0,0,0,5,0,15,27,23],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1PlayerFleetGenPluginImpl.html#ab3ef7e5f4ea144e12a08a2b5bb8926c6":[0,0,0,0,0,0,5,0,15,27,26],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1PlayerFleetGenPluginImpl.html#ab3ef7e5f4ea144e12a08a2b5bb8926c6":[1,0,0,0,0,0,5,0,15,27,26],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1PlayerFleetGenPluginImpl.html#aba76efd749d312bdb903d5dd75c8769d":[0,0,0,0,0,0,5,0,15,27,24],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1PlayerFleetGenPluginImpl.html#aba76efd749d312bdb903d5dd75c8769d":[1,0,0,0,0,0,5,0,15,27,24],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1PlayerFleetGenPluginImpl.html#abbcfdf5141b497cffefee8e439dcf138":[0,0,0,0,0,0,5,0,15,27,17],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1PlayerFleetGenPluginImpl.html#abbcfdf5141b497cffefee8e439dcf138":[1,0,0,0,0,0,5,0,15,27,17],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1PlayerFleetGenPluginImpl.html#ac4c32237b031b562522e4d911aa81d7c":[0,0,0,0,0,0,5,0,15,27,2]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1PlayerFleetGenPluginImpl.html#ab3ef7e5f4ea144e12a08a2b5bb8926c6":[0,0,0,0,0,0,5,0,15,27,26]
 };

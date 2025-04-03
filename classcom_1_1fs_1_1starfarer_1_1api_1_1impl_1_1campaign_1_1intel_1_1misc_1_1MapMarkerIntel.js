@@ -24,6 +24,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1M
     [ "getTitle", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1MapMarkerIntel.html#ad604225b2fe96aa62672b00621f1f66c", null ],
     [ "init", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1MapMarkerIntel.html#a9c9af1d85b5bae864a9aa6562d991c31", null ],
     [ "init", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1MapMarkerIntel.html#a549a0fa9da2ca4afae50bfd798caec10", null ],
+    [ "isHidden", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1MapMarkerIntel.html#ae2b5c1f79e6828f9afc1c1a38a2225b2", null ],
     [ "isWithDeleteButton", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1MapMarkerIntel.html#a5ee9269fe9c649e78a6c0701cc6320ba", null ],
     [ "isWithDesc", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1MapMarkerIntel.html#a8fee9354bc132284e68989c0e5756aef", null ],
     [ "isWithTimestamp", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1MapMarkerIntel.html#ac276dee567b1c6be7748cabf022bf318", null ],

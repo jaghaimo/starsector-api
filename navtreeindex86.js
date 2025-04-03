@@ -1,5 +1,9 @@
 var NAVTREEINDEX86 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1SimUpdateIntel.html#af173d6d1da8dab142c38f7d84c092e9e":[1,0,0,0,0,0,5,0,11,7,16,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1SurveyDataForPlanetIntel.html":[0,0,0,0,0,0,5,0,11,7,17],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1SurveyDataForPlanetIntel.html":[1,0,0,0,0,0,5,0,11,7,17],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1SurveyDataForPlanetIntel.html#a102a1e3a1f07bdd6ba1d0bd64692bf3c":[0,0,0,0,0,0,5,0,11,7,17,6],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1SurveyDataForPlanetIntel.html#a102a1e3a1f07bdd6ba1d0bd64692bf3c":[1,0,0,0,0,0,5,0,11,7,17,6],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1SurveyDataForPlanetIntel.html#a2e2816781540e950a6f16f7c03233640":[0,0,0,0,0,0,5,0,11,7,17,8],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1misc_1_1SurveyDataForPlanetIntel.html#a2e2816781540e950a6f16f7c03233640":[1,0,0,0,0,0,5,0,11,7,17,8],
@@ -245,9 +249,5 @@ var NAVTREEINDEX86 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PEAvertInteractionDialogPluginImpl.html#afbe7788815463eb2f032a7ac857a713b":[1,0,0,0,0,0,5,0,11,8,2,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PEAvertInteractionDialogPluginImpl.html#afddba31f9a1abf3e234ae6001b54f0a0":[0,0,0,0,0,0,5,0,11,8,2,8],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PEAvertInteractionDialogPluginImpl.html#afddba31f9a1abf3e234ae6001b54f0a0":[1,0,0,0,0,0,5,0,11,8,2,8],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PEOrganizeStage.html":[0,0,0,0,0,0,5,0,11,8,3],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PEOrganizeStage.html":[1,0,0,0,0,0,5,0,11,8,3],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PEOrganizeStage.html#a3cc088db8b85fb32e63c6b92130e5cd2":[0,0,0,0,0,0,5,0,11,8,3,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PEOrganizeStage.html#a3cc088db8b85fb32e63c6b92130e5cd2":[1,0,0,0,0,0,5,0,11,8,3,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PEOrganizeStage.html#a5cc66fd2722b66aacb02dd3ff771f3f2":[0,0,0,0,0,0,5,0,11,8,3,0]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1punitive_1_1PEOrganizeStage.html":[0,0,0,0,0,0,5,0,11,8,3]
 };

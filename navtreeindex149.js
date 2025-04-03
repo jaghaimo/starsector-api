@@ -1,5 +1,11 @@
 var NAVTREEINDEX149 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DefensiveTargetingArray.html#a6323599dd29db84761d104cb601777f0":[1,0,0,0,0,0,5,3,17,2],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DefensiveTargetingArray.html#a785c73cddc13df07475a48a4a972b093":[0,0,0,0,0,0,5,3,17,3],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DefensiveTargetingArray.html#a785c73cddc13df07475a48a4a972b093":[1,0,0,0,0,0,5,3,17,3],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DefensiveTargetingArray.html#a8483215001685b69b37ec08d60002918":[0,0,0,0,0,0,5,3,17,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DefensiveTargetingArray.html#a8483215001685b69b37ec08d60002918":[1,0,0,0,0,0,5,3,17,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DefensiveTargetingArray.html#abb9c1fedef73fe5ac081e8fa5cc651b1":[0,0,0,0,0,0,5,3,17,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DefensiveTargetingArray.html#abb9c1fedef73fe5ac081e8fa5cc651b1":[1,0,0,0,0,0,5,3,17,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DefensiveTargetingArray.html#ae3dd06db06a199ca7971b6427bcd671a":[0,0,0,0,0,0,5,3,17,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1DefensiveTargetingArray.html#ae3dd06db06a199ca7971b6427bcd671a":[1,0,0,0,0,0,5,3,17,5],
@@ -243,11 +249,5 @@ var NAVTREEINDEX149 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1NavRelay.html":[1,0,0,0,0,0,5,3,46],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1NavRelay.html#ab82176439418368164df7b2b56503c8d":[0,0,0,0,0,0,5,3,46,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1NavRelay.html#ab82176439418368164df7b2b56503c8d":[1,0,0,0,0,0,5,3,46,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1NavRelay.html#af4ca18f23e2f14e6dece835f534496e2":[0,0,0,0,0,0,5,3,46,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1NavRelay.html#af4ca18f23e2f14e6dece835f534496e2":[1,0,0,0,0,0,5,3,46,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1NeuralIntegrator.html":[0,0,0,0,0,0,5,3,47],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1NeuralIntegrator.html":[1,0,0,0,0,0,5,3,47],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1NeuralIntegrator.html#a13aa0c5ab3a167593149d16ab7e7ef3e":[0,0,0,0,0,0,5,3,47,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1NeuralIntegrator.html#a13aa0c5ab3a167593149d16ab7e7ef3e":[1,0,0,0,0,0,5,3,47,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1NeuralIntegrator.html#ade7685eea2febafa950e49742ca22535":[0,0,0,0,0,0,5,3,47,2]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1hullmods_1_1NavRelay.html#af4ca18f23e2f14e6dece835f534496e2":[0,0,0,0,0,0,5,3,46,1]
 };

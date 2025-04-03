@@ -1,5 +1,13 @@
 var NAVTREEINDEX190 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1ImportantPeopleAPI_1_1PersonLocationAPI.html#af69e0bd1c2e7ad7c929fab0030233469":[0,0,0,0,0,0,1,12,2,5],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1ImportantPeopleAPI_1_1PersonLocationAPI.html#af69e0bd1c2e7ad7c929fab0030233469":[1,0,0,0,0,0,1,12,2,5],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1LevelBasedEffect.html":[0,0,0,0,0,0,1,13],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1LevelBasedEffect.html":[1,0,0,0,0,0,1,13],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1LevelBasedEffect.html#a5dd4648e8b392aceffd2392a025b3fac":[0,0,0,0,0,0,1,13,1],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1LevelBasedEffect.html#a5dd4648e8b392aceffd2392a025b3fac":[1,0,0,0,0,0,1,13,1],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1LevelBasedEffect.html#ab16af5f700a1a02c966156e56b8f240e":[0,0,0,0,0,0,1,13,0],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1LevelBasedEffect.html#ab16af5f700a1a02c966156e56b8f240e":[1,0,0,0,0,0,1,13,0],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1LevelBasedEffect.html#ac93a8bb7bd7f6ed190549d6a2efe2b71":[0,0,0,0,0,0,1,13,2],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1LevelBasedEffect.html#ac93a8bb7bd7f6ed190549d6a2efe2b71":[1,0,0,0,0,0,1,13,2],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1MarketConditionSpecAPI.html":[0,0,0,0,0,0,1,14],
@@ -241,13 +249,5 @@ var NAVTREEINDEX190 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#a44911bf5908cae348e701e21b50e59d2":[0,0,0,0,0,0,1,20,39],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#a44911bf5908cae348e701e21b50e59d2":[1,0,0,0,0,0,1,20,39],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#a498e2eeb65eb69d6cab15d5d5f58253f":[0,0,0,0,0,0,1,20,47],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#a498e2eeb65eb69d6cab15d5d5f58253f":[1,0,0,0,0,0,1,20,47],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#a53818e558437cea73c480aea898dbc37":[0,0,0,0,0,0,1,20,45],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#a53818e558437cea73c480aea898dbc37":[1,0,0,0,0,0,1,20,45],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#a5783e84b757b50dedc282b69c1854225":[0,0,0,0,0,0,1,20,51],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#a5783e84b757b50dedc282b69c1854225":[1,0,0,0,0,0,1,20,51],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#a5958807ed987cf5274832d9f4e057236":[0,0,0,0,0,0,1,20,11],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#a5958807ed987cf5274832d9f4e057236":[1,0,0,0,0,0,1,20,11],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#a6562cf3ba97840b60bed1eb2e38c5a45":[0,0,0,0,0,0,1,20,0],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#a6562cf3ba97840b60bed1eb2e38c5a45":[1,0,0,0,0,0,1,20,0]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1PersonAPI.html#a498e2eeb65eb69d6cab15d5d5f58253f":[1,0,0,0,0,0,1,20,47]
 };

@@ -1,5 +1,11 @@
 var NAVTREEINDEX117 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1academy_1_1GenGAIntroAcademician.html#a1d81e38f9ce03ab1a48f6193d72bca3b":[1,0,0,0,0,0,5,0,16,0,3,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1academy_1_1ShowGAOfficer.html":[0,0,0,0,0,0,5,0,16,0,4],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1academy_1_1ShowGAOfficer.html":[1,0,0,0,0,0,5,0,16,0,4],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1academy_1_1ShowGAOfficer.html#a6b1c83dd6769b55b1b96fe163ec07aa1":[0,0,0,0,0,0,5,0,16,0,4,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1academy_1_1ShowGAOfficer.html#a6b1c83dd6769b55b1b96fe163ec07aa1":[1,0,0,0,0,0,5,0,16,0,4,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1academy_1_1UnhideGACharacters.html":[0,0,0,0,0,0,5,0,16,0,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1academy_1_1UnhideGACharacters.html":[1,0,0,0,0,0,5,0,16,0,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1academy_1_1UnhideGACharacters.html#ace693a18c71d6d72a971d98eeadc661c":[0,0,0,0,0,0,5,0,16,0,5,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1academy_1_1UnhideGACharacters.html#ace693a18c71d6d72a971d98eeadc661c":[1,0,0,0,0,0,5,0,16,0,5,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX117 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AICores.html#a3455c51fad18be5efcf55de02dc5549f":[1,0,0,0,0,0,5,0,16,3,3,10],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AICores.html#a356f7fa28b5649308710c0891a3134d8":[0,0,0,0,0,0,5,0,16,3,3,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AICores.html#a356f7fa28b5649308710c0891a3134d8":[1,0,0,0,0,0,5,0,16,3,3,3],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AICores.html#a377689eecd2e5f4c0c083d6a795debcf":[0,0,0,0,0,0,5,0,16,3,3,17],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AICores.html#a377689eecd2e5f4c0c083d6a795debcf":[1,0,0,0,0,0,5,0,16,3,3,17],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AICores.html#a39b72729afb89fbd8da9dc79b73eed52":[0,0,0,0,0,0,5,0,16,3,3,15],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AICores.html#a39b72729afb89fbd8da9dc79b73eed52":[1,0,0,0,0,0,5,0,16,3,3,15],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AICores.html#a5098e015512d1b16e66e4568f9ee394b":[0,0,0,0,0,0,5,0,16,3,3,11],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AICores.html#a5098e015512d1b16e66e4568f9ee394b":[1,0,0,0,0,0,5,0,16,3,3,11],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AICores.html#a5e7b5836c850968f44c8e951eb30ae69":[0,0,0,0,0,0,5,0,16,3,3,5]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1AICores.html#a377689eecd2e5f4c0c083d6a795debcf":[0,0,0,0,0,0,5,0,16,3,3,17]
 };

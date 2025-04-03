@@ -1,5 +1,7 @@
 var NAVTREEINDEX75 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a78c955fd621030603d41d81a743729a7":[1,0,0,0,0,0,5,0,11,4,29,14],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a7f4b77f1908a0f37462aa9482dd20df7":[0,0,0,0,0,0,5,0,11,4,29,64],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a7f4b77f1908a0f37462aa9482dd20df7":[1,0,0,0,0,0,5,0,11,4,29,64],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a92674d900e850b1dcd53a9827ae7f90d":[0,0,0,0,0,0,5,0,11,4,29,47],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a92674d900e850b1dcd53a9827ae7f90d":[1,0,0,0,0,0,5,0,11,4,29,47],
@@ -247,7 +249,5 @@ var NAVTREEINDEX75 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1LuddicPathHostileActivityFactor.html#a7980fcb2d6923ce0d7c281cbb69b1535":[1,0,0,0,0,0,5,0,11,4,38,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1LuddicPathHostileActivityFactor.html#a99a4a8b60af86d473c12449becffdf1c":[0,0,0,0,0,0,5,0,11,4,38,21],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1LuddicPathHostileActivityFactor.html#a99a4a8b60af86d473c12449becffdf1c":[1,0,0,0,0,0,5,0,11,4,38,21],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1LuddicPathHostileActivityFactor.html#aa9d7a38c831c276fb510856b462f4d72":[0,0,0,0,0,0,5,0,11,4,38,17],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1LuddicPathHostileActivityFactor.html#aa9d7a38c831c276fb510856b462f4d72":[1,0,0,0,0,0,5,0,11,4,38,17],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1LuddicPathHostileActivityFactor.html#ab2eae1423477291a634915bbacb3cb4b":[0,0,0,0,0,0,5,0,11,4,38,15]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1LuddicPathHostileActivityFactor.html#aa9d7a38c831c276fb510856b462f4d72":[0,0,0,0,0,0,5,0,11,4,38,17]
 };

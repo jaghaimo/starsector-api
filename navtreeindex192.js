@@ -1,5 +1,13 @@
 var NAVTREEINDEX192 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillSpecAPI_1_1SkillEffectSpecAPI.html#ac52a9831b8ca0d5f2f1008f4fab69546":[0,0,0,0,0,0,1,29,0,12],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillSpecAPI_1_1SkillEffectSpecAPI.html#ac52a9831b8ca0d5f2f1008f4fab69546":[1,0,0,0,0,0,1,29,0,12],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillSpecAPI_1_1SkillEffectSpecAPI.html#ac8dbb43ca8e2c6e79c97a169c9755de1":[0,0,0,0,0,0,1,29,0,3],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillSpecAPI_1_1SkillEffectSpecAPI.html#ac8dbb43ca8e2c6e79c97a169c9755de1":[1,0,0,0,0,0,1,29,0,3],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillSpecAPI_1_1SkillEffectSpecAPI.html#adf88def716d22223738bcc3ae6854387":[0,0,0,0,0,0,1,29,0,11],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillSpecAPI_1_1SkillEffectSpecAPI.html#adf88def716d22223738bcc3ae6854387":[1,0,0,0,0,0,1,29,0,11],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillSpecAPI_1_1SkillEffectSpecAPI.html#aee88da2436789536741a19bce7eaeee6":[0,0,0,0,0,0,1,29,0,2],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillSpecAPI_1_1SkillEffectSpecAPI.html#aee88da2436789536741a19bce7eaeee6":[1,0,0,0,0,0,1,29,0,2],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillSpecAPI_1_1SkillEffectSpecAPI.html#aefaec7737131ca1725048aa7f6599905":[0,0,0,0,0,0,1,29,0,6],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillSpecAPI_1_1SkillEffectSpecAPI.html#aefaec7737131ca1725048aa7f6599905":[1,0,0,0,0,0,1,29,0,6],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1characters_1_1SkillSpecAPI_1_1SkillEffectSpecAPI.html#af2faae0e1e493dfd122edef4dfe6f63f":[0,0,0,0,0,0,1,29,0,20],
@@ -241,13 +249,5 @@ var NAVTREEINDEX192 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a03153631df82153915e5a87e74852bed":[0,0,0,0,0,0,2,21,10],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a03153631df82153915e5a87e74852bed":[1,0,0,0,0,0,2,21,10],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a03286a2a90891ce8be1e941a20696007":[0,0,0,0,0,0,2,21,6],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a03286a2a90891ce8be1e941a20696007":[1,0,0,0,0,0,2,21,6],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a03da8796904c5c6203528b1dc1c23b96":[0,0,0,0,0,0,2,21,123],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a03da8796904c5c6203528b1dc1c23b96":[1,0,0,0,0,0,2,21,123],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a03eec6c2504502280c84e1086a84ec8c":[0,0,0,0,0,0,2,21,28],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a03eec6c2504502280c84e1086a84ec8c":[1,0,0,0,0,0,2,21,28],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a06ed535facf58a9b89c51f2c8f8ac40e":[0,0,0,0,0,0,2,21,106],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a06ed535facf58a9b89c51f2c8f8ac40e":[1,0,0,0,0,0,2,21,106],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a07a363bfd1fb86aa1fb5eee4254c1e8b":[0,0,0,0,0,0,2,21,133],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a07a363bfd1fb86aa1fb5eee4254c1e8b":[1,0,0,0,0,0,2,21,133]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CombatEngineAPI.html#a03286a2a90891ce8be1e941a20696007":[1,0,0,0,0,0,2,21,6]
 };

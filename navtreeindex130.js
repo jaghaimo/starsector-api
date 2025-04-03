@@ -1,5 +1,11 @@
 var NAVTREEINDEX130 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RingSystemTerrainPlugin.html":[1,0,0,0,0,0,5,0,20,29],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RingSystemTerrainPlugin.html#a0885d7622c06ac86b7565146a19b5c28":[0,0,0,0,0,0,5,0,20,29,5],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RingSystemTerrainPlugin.html#a0885d7622c06ac86b7565146a19b5c28":[1,0,0,0,0,0,5,0,20,29,5],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RingSystemTerrainPlugin.html#a2f83b0e9e27eab98678305b68bb93c37":[0,0,0,0,0,0,5,0,20,29,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RingSystemTerrainPlugin.html#a2f83b0e9e27eab98678305b68bb93c37":[1,0,0,0,0,0,5,0,20,29,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RingSystemTerrainPlugin.html#a3ab06af095d7534bcf1c5bde12db55a6":[0,0,0,0,0,0,5,0,20,29,7],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RingSystemTerrainPlugin.html#a3ab06af095d7534bcf1c5bde12db55a6":[1,0,0,0,0,0,5,0,20,29,7],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RingSystemTerrainPlugin.html#a44d9f7844c3d74f97574f51a9f5f289f":[0,0,0,0,0,0,5,0,20,29,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1RingSystemTerrainPlugin.html#a44d9f7844c3d74f97574f51a9f5f289f":[1,0,0,0,0,0,5,0,20,29,3],
@@ -243,11 +249,5 @@ var NAVTREEINDEX130 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a645b989d3d7cc2abbe09905cc6f63d4a":[1,0,0,0,0,0,5,0,20,35,75],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a653767238464f76775a03104b176e99c":[0,0,0,0,0,0,5,0,20,35,31],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a653767238464f76775a03104b176e99c":[1,0,0,0,0,0,5,0,20,35,31],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a6710a0099292d7263e748cdc3cc1c2ba":[0,0,0,0,0,0,5,0,20,35,66],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a6710a0099292d7263e748cdc3cc1c2ba":[1,0,0,0,0,0,5,0,20,35,66],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a6757b49e74b75e58b9fa6bc122a3acd2":[0,0,0,0,0,0,5,0,20,35,17],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a6757b49e74b75e58b9fa6bc122a3acd2":[1,0,0,0,0,0,5,0,20,35,17],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a6a219c71386eefe03dff8c52cae4afa2":[0,0,0,0,0,0,5,0,20,35,40],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a6a219c71386eefe03dff8c52cae4afa2":[1,0,0,0,0,0,5,0,20,35,40],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a6b8e4df386668bfe49f7e0881cd89091":[0,0,0,0,0,0,5,0,20,35,57]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1terrain_1_1StarCoronaTerrainPlugin.html#a6710a0099292d7263e748cdc3cc1c2ba":[0,0,0,0,0,0,5,0,20,35,66]
 };

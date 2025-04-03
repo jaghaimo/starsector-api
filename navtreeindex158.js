@@ -1,5 +1,11 @@
 var NAVTREEINDEX158 =
 {
+"enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEngineLayers.html#af32aa4c7ff22657ce959aa2e86971022":[0,0,0,0,0,0,0,25,13],
+"enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEngineLayers.html#af32aa4c7ff22657ce959aa2e86971022":[1,0,0,0,0,0,0,25,13],
+"enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEngineLayers.html#afab3a37f56b335c70af40001dfa02a70":[0,0,0,0,0,0,0,25,19],
+"enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignEngineLayers.html#afab3a37f56b335c70af40001dfa02a70":[1,0,0,0,0,0,0,25,19],
+"enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CoreUITabId.html":[0,0,0,0,0,0,0,47],
+"enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CoreUITabId.html":[1,0,0,0,0,0,0,47],
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CoreUITabId.html#a4da2baa0034516ffc598a3e1716ff71c":[0,0,0,0,0,0,0,47,3],
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CoreUITabId.html#a4da2baa0034516ffc598a3e1716ff71c":[1,0,0,0,0,0,0,47,3],
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CoreUITabId.html#a50fa3a80eaf02bcc65f762fa6abd7200":[0,0,0,0,0,0,0,47,6],
@@ -243,11 +249,5 @@ var NAVTREEINDEX158 =
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CollisionClass.html#a456272b2504f9e8cc7722428a605a42f":[0,0,0,0,0,0,2,17,6],
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CollisionClass.html#a456272b2504f9e8cc7722428a605a42f":[1,0,0,0,0,0,2,17,6],
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CollisionClass.html#a5cfbc2655ffd666df6d64161e8ec78fe":[0,0,0,0,0,0,2,17,3],
-"enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CollisionClass.html#a5cfbc2655ffd666df6d64161e8ec78fe":[1,0,0,0,0,0,2,17,3],
-"enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CollisionClass.html#a62eee8d8ce6a2fc09eda98cd885f94ab":[0,0,0,0,0,0,2,17,0],
-"enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CollisionClass.html#a62eee8d8ce6a2fc09eda98cd885f94ab":[1,0,0,0,0,0,2,17,0],
-"enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CollisionClass.html#a7317db19f1addf6947f3ede1297dce02":[0,0,0,0,0,0,2,17,13],
-"enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CollisionClass.html#a7317db19f1addf6947f3ede1297dce02":[1,0,0,0,0,0,2,17,13],
-"enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CollisionClass.html#a7f7d259e521992196b218b9d277f5ee6":[0,0,0,0,0,0,2,17,15],
-"enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CollisionClass.html#a7f7d259e521992196b218b9d277f5ee6":[1,0,0,0,0,0,2,17,15]
+"enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CollisionClass.html#a5cfbc2655ffd666df6d64161e8ec78fe":[1,0,0,0,0,0,2,17,3]
 };

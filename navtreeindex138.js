@@ -1,5 +1,11 @@
 var NAVTREEINDEX138 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CombatEntityPluginWithParticles.html#aea53f62a858fda4453426733d72c21bd":[1,0,0,0,0,0,5,2,11,20],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CombatEntityPluginWithParticles.html#aec56457e407ab4dbeb86c8c5ebad2f52":[0,0,0,0,0,0,5,2,11,15],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CombatEntityPluginWithParticles.html#aec56457e407ab4dbeb86c8c5ebad2f52":[1,0,0,0,0,0,5,2,11,15],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CombatEntityPluginWithParticles.html#af39e8183829140eda48a3d7667bf5611":[0,0,0,0,0,0,5,2,11,18],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CombatEntityPluginWithParticles.html#af39e8183829140eda48a3d7667bf5611":[1,0,0,0,0,0,5,2,11,18],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CombatEntityPluginWithParticles.html#afbeb9471661a4ad0c3449d8ef45e0b23":[0,0,0,0,0,0,5,2,11,23],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CombatEntityPluginWithParticles.html#afbeb9471661a4ad0c3449d8ef45e0b23":[1,0,0,0,0,0,5,2,11,23],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CombatEntityPluginWithParticles.html#afcbeaab2bc6be364ff2e5d033f87a5e6":[0,0,0,0,0,0,5,2,11,7],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1CombatEntityPluginWithParticles.html#afcbeaab2bc6be364ff2e5d033f87a5e6":[1,0,0,0,0,0,5,2,11,7],
@@ -243,11 +249,5 @@ var NAVTREEINDEX138 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1EntropyAmplifierStats.html#acb1c06ea8aecfc2774d79bc0e703ae03":[1,0,0,0,0,0,5,2,22,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1EscapeRevealPlugin.html":[0,0,0,0,0,0,5,2,23],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1EscapeRevealPlugin.html":[1,0,0,0,0,0,5,2,23],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1EscapeRevealPlugin.html#a1b38edebd09709a4e149ae198411ab0f":[0,0,0,0,0,0,5,2,23,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1EscapeRevealPlugin.html#a1b38edebd09709a4e149ae198411ab0f":[1,0,0,0,0,0,5,2,23,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1EscapeRevealPlugin.html#aac2f5628dc00cc7039885d8ef1cb4dd2":[0,0,0,0,0,0,5,2,23,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1EscapeRevealPlugin.html#aac2f5628dc00cc7039885d8ef1cb4dd2":[1,0,0,0,0,0,5,2,23,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1EscapeRevealPlugin.html#ae8b96fb8317c007efbbcf3ae6f62b65c":[0,0,0,0,0,0,5,2,23,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1EscapeRevealPlugin.html#ae8b96fb8317c007efbbcf3ae6f62b65c":[1,0,0,0,0,0,5,2,23,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1GenericCombatPlugin.html":[0,0,0,0,0,0,5,2,24]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1EscapeRevealPlugin.html#a1b38edebd09709a4e149ae198411ab0f":[0,0,0,0,0,0,5,2,23,1]
 };

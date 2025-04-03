@@ -1,5 +1,11 @@
 var NAVTREEINDEX144 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1RiftLightningMineExplosion.html#ace6ecf61956ee7094b84b03ec4449294":[1,0,0,0,0,0,5,2,1,21,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1ShroudedEjectaAI.html":[0,0,0,0,0,0,5,2,1,22],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1ShroudedEjectaAI.html":[1,0,0,0,0,0,5,2,1,22],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1ShroudedEjectaAI.html#a04324451045a25cdd61005a8d6090077":[0,0,0,0,0,0,5,2,1,22,8],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1ShroudedEjectaAI.html#a04324451045a25cdd61005a8d6090077":[1,0,0,0,0,0,5,2,1,22,8],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1ShroudedEjectaAI.html#a0f0697b7fe14e691efcdd2a1b27d4c09":[0,0,0,0,0,0,5,2,1,22,13],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1ShroudedEjectaAI.html#a0f0697b7fe14e691efcdd2a1b27d4c09":[1,0,0,0,0,0,5,2,1,22,13],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1ShroudedEjectaAI.html#a3a62c1184e42d7d16281cb72f135b63e":[0,0,0,0,0,0,5,2,1,22,10],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1ShroudedEjectaAI.html#a3a62c1184e42d7d16281cb72f135b63e":[1,0,0,0,0,0,5,2,1,22,10],
@@ -243,11 +249,5 @@ var NAVTREEINDEX144 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1WarpingSpriteRendererUtilV2.html#a51dcd7a21cd0bf0b574f9acb3d7e9926":[1,0,0,0,0,0,5,2,1,37,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1WarpingSpriteRendererUtilV2.html#a72675ed185bf3ebe65bcb90f66de6f90":[0,0,0,0,0,0,5,2,1,37,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1WarpingSpriteRendererUtilV2.html#a72675ed185bf3ebe65bcb90f66de6f90":[1,0,0,0,0,0,5,2,1,37,3],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1WarpingSpriteRendererUtilV2.html#a82323d5efc9229598566dbe00ce8b0a4":[0,0,0,0,0,0,5,2,1,37,4],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1WarpingSpriteRendererUtilV2.html#a82323d5efc9229598566dbe00ce8b0a4":[1,0,0,0,0,0,5,2,1,37,4],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1WarpingSpriteRendererUtilV2.html#a82b1d483927fd6aaa9596d6c5e60abfd":[0,0,0,0,0,0,5,2,1,37,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1WarpingSpriteRendererUtilV2.html#a82b1d483927fd6aaa9596d6c5e60abfd":[1,0,0,0,0,0,5,2,1,37,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1WarpingSpriteRendererUtilV2.html#a8948be8fd1bb398c9a464515d02b3b08":[0,0,0,0,0,0,5,2,1,37,7],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1WarpingSpriteRendererUtilV2.html#a8948be8fd1bb398c9a464515d02b3b08":[1,0,0,0,0,0,5,2,1,37,7],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1WarpingSpriteRendererUtilV2.html#a8df7718217f3dfd1d33df634a3b9a5ad":[0,0,0,0,0,0,5,2,1,37,9]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1WarpingSpriteRendererUtilV2.html#a82323d5efc9229598566dbe00ce8b0a4":[0,0,0,0,0,0,5,2,1,37,4]
 };

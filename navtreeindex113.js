@@ -1,5 +1,11 @@
 var NAVTREEINDEX113 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RuinsFleetRouteManager.html#a61f1c66295a8c17d173553f106404612":[1,0,0,0,0,0,5,0,15,0,12,8],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RuinsFleetRouteManager.html#a623bcc4314f24d1e32149fb2f7dd022b":[0,0,0,0,0,0,5,0,15,0,12,7],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RuinsFleetRouteManager.html#a623bcc4314f24d1e32149fb2f7dd022b":[1,0,0,0,0,0,5,0,15,0,12,7],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RuinsFleetRouteManager.html#a83e21dc1ce71772793eadb407d6efc44":[0,0,0,0,0,0,5,0,15,0,12,2],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RuinsFleetRouteManager.html#a83e21dc1ce71772793eadb407d6efc44":[1,0,0,0,0,0,5,0,15,0,12,2],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RuinsFleetRouteManager.html#a955620bbbb854dc1f9b824eded444e7f":[0,0,0,0,0,0,5,0,15,0,12,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RuinsFleetRouteManager.html#a955620bbbb854dc1f9b824eded444e7f":[1,0,0,0,0,0,5,0,15,0,12,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RuinsFleetRouteManager.html#ac4f368c1e10528421b78cb827002bc33":[0,0,0,0,0,0,5,0,15,0,12,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RuinsFleetRouteManager.html#ac4f368c1e10528421b78cb827002bc33":[1,0,0,0,0,0,5,0,15,0,12,5],
@@ -243,11 +249,5 @@ var NAVTREEINDEX113 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CargoScanApplyResult.html#a0a2c33debdcef6715e60dfdeb7208dd3":[1,0,0,0,0,0,5,0,16,39,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CheckSetting.html":[0,0,0,0,0,0,5,0,16,40],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CheckSetting.html":[1,0,0,0,0,0,5,0,16,40],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CheckSetting.html#afc683a7825c7b95c3e4a14cefd99f911":[0,0,0,0,0,0,5,0,16,40,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CheckSetting.html#afc683a7825c7b95c3e4a14cefd99f911":[1,0,0,0,0,0,5,0,16,40,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ClearActiveMission.html":[0,0,0,0,0,0,5,0,16,41],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ClearActiveMission.html":[1,0,0,0,0,0,5,0,16,41],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ClearActiveMission.html#a88a293990c9b67ad23ea6cd49c739501":[0,0,0,0,0,0,5,0,16,41,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ClearActiveMission.html#a88a293990c9b67ad23ea6cd49c739501":[1,0,0,0,0,0,5,0,16,41,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1ClearText.html":[0,0,0,0,0,0,5,0,16,42]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1CheckSetting.html#afc683a7825c7b95c3e4a14cefd99f911":[0,0,0,0,0,0,5,0,16,40,0]
 };

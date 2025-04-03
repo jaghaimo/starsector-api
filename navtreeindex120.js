@@ -1,5 +1,11 @@
 var NAVTREEINDEX120 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1PrintWreckDescription.html#aa767782934912830bd334bba8c49a80b":[1,0,0,0,0,0,5,0,16,3,13,7],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1PrintWreckDescription.html#ab6380796651c622dba2591e80c0c51a9":[0,0,0,0,0,0,5,0,16,3,13,9],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1PrintWreckDescription.html#ab6380796651c622dba2591e80c0c51a9":[1,0,0,0,0,0,5,0,16,3,13,9],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1PrintWreckDescription.html#adaf6436083be4b4028fc98262a79c5f1":[0,0,0,0,0,0,5,0,16,3,13,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1PrintWreckDescription.html#adaf6436083be4b4028fc98262a79c5f1":[1,0,0,0,0,0,5,0,16,3,13,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1PrintWreckDescription.html#aeb9162440160e1aa57fdb141933c745d":[0,0,0,0,0,0,5,0,16,3,13,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1PrintWreckDescription.html#aeb9162440160e1aa57fdb141933c745d":[1,0,0,0,0,0,5,0,16,3,13,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1RedPlanet.html":[0,0,0,0,0,0,5,0,16,3,14],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1RedPlanet.html":[1,0,0,0,0,0,5,0,16,3,14],
@@ -243,11 +249,5 @@ var NAVTREEINDEX120 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BreadcrumbSpecial.html#a44f2f6bcd18fccf62b126e4295cae105":[1,0,0,0,0,0,5,0,16,3,0,2,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BreadcrumbSpecial.html#a906b34575c777a62895c6aaeaef5e1e5":[0,0,0,0,0,0,5,0,16,3,0,2,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1BreadcrumbSpecial.html#a906b34575c777a62895c6aaeaef5e1e5":[1,0,0,0,0,0,5,0,16,3,0,2,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1CargoManifestSpecial.html":[0,0,0,0,0,0,5,0,16,3,0,3],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1CargoManifestSpecial.html":[1,0,0,0,0,0,5,0,16,3,0,3],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1CargoManifestSpecial.html#a4b9f168c4406f57626f6fdcfd742251d":[0,0,0,0,0,0,5,0,16,3,0,3,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1CargoManifestSpecial.html#a4b9f168c4406f57626f6fdcfd742251d":[1,0,0,0,0,0,5,0,16,3,0,3,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1CargoManifestSpecial.html#ab488050f26c37ce515e5b16e1ca0db68":[0,0,0,0,0,0,5,0,16,3,0,3,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1CargoManifestSpecial.html#ab488050f26c37ce515e5b16e1ca0db68":[1,0,0,0,0,0,5,0,16,3,0,3,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1CryopodOfficerGen.html":[0,0,0,0,0,0,5,0,16,3,0,4]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1CargoManifestSpecial.html":[0,0,0,0,0,0,5,0,16,3,0,3]
 };

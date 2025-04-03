@@ -1,5 +1,11 @@
 var NAVTREEINDEX135 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamManager.html#adfe0bf226587e21fa63c2310048713b7":[1,0,0,0,0,0,5,0,22,4,14],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamManager.html#ae20d4837a77857731b479ac9914658f2":[0,0,0,0,0,0,5,0,22,4,15],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamManager.html#ae20d4837a77857731b479ac9914658f2":[1,0,0,0,0,0,5,0,22,4,15],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamManager.html#ae60638ffee17c42ce6bf0c06e8b9610c":[0,0,0,0,0,0,5,0,22,4,9],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamManager.html#ae60638ffee17c42ce6bf0c06e8b9610c":[1,0,0,0,0,0,5,0,22,4,9],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamManager.html#af4bc52b1cbb041c179999dc1f7d4f308":[0,0,0,0,0,0,5,0,22,4,6],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamManager.html#af4bc52b1cbb041c179999dc1f7d4f308":[1,0,0,0,0,0,5,0,22,4,6],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamTerrainPlugin2.html":[0,0,0,0,0,0,5,0,22,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1SlipstreamTerrainPlugin2.html":[1,0,0,0,0,0,5,0,22,5],
@@ -243,11 +249,5 @@ var NAVTREEINDEX135 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1VelocityField.html#a697f95bda0cbcaaeb9f9f87ade6248b0":[1,0,0,0,0,0,5,0,22,10,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1VelocityField.html#a840b30129cb04d4d8a05e1a330188022":[0,0,0,0,0,0,5,0,22,10,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1VelocityField.html#a840b30129cb04d4d8a05e1a330188022":[1,0,0,0,0,0,5,0,22,10,5],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1VelocityField.html#a8e86b02a6e4360b23b31c93c7ea227f2":[0,0,0,0,0,0,5,0,22,10,6],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1VelocityField.html#a8e86b02a6e4360b23b31c93c7ea227f2":[1,0,0,0,0,0,5,0,22,10,6],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1VelocityField.html#a8f8b3becaf7eab5b45ff93278e5465ca":[0,0,0,0,0,0,5,0,22,10,4],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1VelocityField.html#a8f8b3becaf7eab5b45ff93278e5465ca":[1,0,0,0,0,0,5,0,22,10,4],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1VelocityField.html#ae48f449a597fdbdf144bcd1f01c4125b":[0,0,0,0,0,0,5,0,22,10,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1VelocityField.html#ae48f449a597fdbdf144bcd1f01c4125b":[1,0,0,0,0,0,5,0,22,10,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1VelocityField.html#aef007bc6e496e88b0c846e660e93596e":[0,0,0,0,0,0,5,0,22,10,3]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1VelocityField.html#a8e86b02a6e4360b23b31c93c7ea227f2":[0,0,0,0,0,0,5,0,22,10,6]
 };

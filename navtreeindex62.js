@@ -1,5 +1,7 @@
 var NAVTREEINDEX62 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SystemBountyManager.html#a7ce66c4f13ce38f6ce64245105be68b3":[1,0,0,0,0,0,5,0,11,34,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SystemBountyManager.html#a952fc5b4c8f5b34818f52d124916b73a":[0,0,0,0,0,0,5,0,11,34,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SystemBountyManager.html#a952fc5b4c8f5b34818f52d124916b73a":[1,0,0,0,0,0,5,0,11,34,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SystemBountyManager.html#ac2d3fd5396678a94021447cbdfae5de0":[0,0,0,0,0,0,5,0,11,34,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1SystemBountyManager.html#ac2d3fd5396678a94021447cbdfae5de0":[1,0,0,0,0,0,5,0,11,34,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX62 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventIntel.html#ad12d03451625e0d041a3a987218f5927":[1,0,0,0,0,0,5,0,11,0,0,4,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventIntel.html#af82d877f19fb4f2318ea1ca1cc01f062":[0,0,0,0,0,0,5,0,11,0,0,4,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventIntel.html#af82d877f19fb4f2318ea1ca1cc01f062":[1,0,0,0,0,0,5,0,11,0,0,4,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson.html":[0,0,0,0,0,0,5,0,11,0,0,5],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson.html":[1,0,0,0,0,0,5,0,11,0,0,5],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson.html#a0fa89e3da1a5271deef8f0a1587523b2":[0,0,0,0,0,0,5,0,11,0,0,5,17]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1bar_1_1events_1_1BaseBarEventWithPerson.html":[0,0,0,0,0,0,5,0,11,0,0,5]
 };

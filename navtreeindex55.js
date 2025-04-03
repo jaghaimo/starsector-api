@@ -1,5 +1,7 @@
 var NAVTREEINDEX55 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1AbstractGoalGroundRaidObjectivePluginImpl.html#a14a7a639117ac8b636be7e7bd6a7a2b9":[1,0,0,0,0,0,5,0,9,0,2],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1AbstractGoalGroundRaidObjectivePluginImpl.html#a1692a3e8c979c51dd1b5713da033f66c":[0,0,0,0,0,0,5,0,9,0,7],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1AbstractGoalGroundRaidObjectivePluginImpl.html#a1692a3e8c979c51dd1b5713da033f66c":[1,0,0,0,0,0,5,0,9,0,7],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1AbstractGoalGroundRaidObjectivePluginImpl.html#a1d4c0c4c9b130d34952d11b94999b21c":[0,0,0,0,0,0,5,0,9,0,9],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1AbstractGoalGroundRaidObjectivePluginImpl.html#a1d4c0c4c9b130d34952d11b94999b21c":[1,0,0,0,0,0,5,0,9,0,9],
@@ -247,7 +249,5 @@ var NAVTREEINDEX55 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#a6df2db93dae9f6ad15298668af08e51f":[1,0,0,0,0,0,5,0,9,5,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#a97363a84aac3f8f02259ebbb58e7b6f7":[0,0,0,0,0,0,5,0,9,5,8],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#a97363a84aac3f8f02259ebbb58e7b6f7":[1,0,0,0,0,0,5,0,9,5,8],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#aa1773ccb185fa991f6421447aefb80bc":[0,0,0,0,0,0,5,0,9,5,18],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#aa1773ccb185fa991f6421447aefb80bc":[1,0,0,0,0,0,5,0,9,5,18],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#aa9790c01956ae1948bd98eba2a4e7826":[0,0,0,0,0,0,5,0,9,5,5]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1graid_1_1CreditsGroundRaidObjectivePluginImpl.html#aa1773ccb185fa991f6421447aefb80bc":[0,0,0,0,0,0,5,0,9,5,18]
 };

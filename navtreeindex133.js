@@ -1,5 +1,11 @@
 var NAVTREEINDEX133 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a25e22ea996e196700e8f3f6a6070473f":[1,0,0,0,0,0,5,0,21,11,15],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a2689370fc237daaeee4e8df1e5dbec67":[0,0,0,0,0,0,5,0,21,11,13],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a2689370fc237daaeee4e8df1e5dbec67":[1,0,0,0,0,0,5,0,21,11,13],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a268cbc580c52d25b2261bf328bff044f":[0,0,0,0,0,0,5,0,21,11,26],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a268cbc580c52d25b2261bf328bff044f":[1,0,0,0,0,0,5,0,21,11,26],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a2c4d6f20f71510fed1c8b3407c71e8c0":[0,0,0,0,0,0,5,0,21,11,23],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a2c4d6f20f71510fed1c8b3407c71e8c0":[1,0,0,0,0,0,5,0,21,11,23],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a388baabfe08ca91b2d663d3e8f034eb7":[0,0,0,0,0,0,5,0,21,11,38],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a388baabfe08ca91b2d663d3e8f034eb7":[1,0,0,0,0,0,5,0,21,11,38],
@@ -243,11 +249,5 @@ var NAVTREEINDEX133 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1BoundingBox.html#ae1a7993c61aa304183212db6c36ca9c4":[1,0,0,0,0,0,5,0,22,0,12],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1BoundingBox.html#ae4ed880df3aa3b3bd5b91371ddac01ba":[0,0,0,0,0,0,5,0,22,0,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1BoundingBox.html#ae4ed880df3aa3b3bd5b91371ddac01ba":[1,0,0,0,0,0,5,0,22,0,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1BoundingBox.html#ae8aaf84b7643537455e45d2c45cfded2":[0,0,0,0,0,0,5,0,22,0,3],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1BoundingBox.html#ae8aaf84b7643537455e45d2c45cfded2":[1,0,0,0,0,0,5,0,22,0,3],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1BoundingBox.html#ae9ea4f69921ffe9e491973b8aadba2df":[0,0,0,0,0,0,5,0,22,0,4],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1BoundingBox.html#ae9ea4f69921ffe9e491973b8aadba2df":[1,0,0,0,0,0,5,0,22,0,4],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1BoundingBox.html#aebc32980d5f85a3c11c9af4c22823882":[0,0,0,0,0,0,5,0,22,0,16],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1BoundingBox.html#aebc32980d5f85a3c11c9af4c22823882":[1,0,0,0,0,0,5,0,22,0,16],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1BoundingBox.html#aecf5dab5e1fece35275e298e3e3fe084":[0,0,0,0,0,0,5,0,22,0,15]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1velfield_1_1BoundingBox.html#ae8aaf84b7643537455e45d2c45cfded2":[0,0,0,0,0,0,5,0,22,0,3]
 };

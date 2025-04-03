@@ -1,5 +1,11 @@
 var NAVTREEINDEX121 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1CargoManifestSpecial.html":[1,0,0,0,0,0,5,0,16,3,0,3],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1CargoManifestSpecial.html#a4b9f168c4406f57626f6fdcfd742251d":[0,0,0,0,0,0,5,0,16,3,0,3,1],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1CargoManifestSpecial.html#a4b9f168c4406f57626f6fdcfd742251d":[1,0,0,0,0,0,5,0,16,3,0,3,1],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1CargoManifestSpecial.html#ab488050f26c37ce515e5b16e1ca0db68":[0,0,0,0,0,0,5,0,16,3,0,3,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1CargoManifestSpecial.html#ab488050f26c37ce515e5b16e1ca0db68":[1,0,0,0,0,0,5,0,16,3,0,3,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1CryopodOfficerGen.html":[0,0,0,0,0,0,5,0,16,3,0,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1CryopodOfficerGen.html":[1,0,0,0,0,0,5,0,16,3,0,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1DomainSurveyDerelictSpecial.html":[0,0,0,0,0,0,5,0,16,3,0,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1special_1_1DomainSurveyDerelictSpecial.html":[1,0,0,0,0,0,5,0,16,3,0,5],
@@ -243,11 +249,5 @@ var NAVTREEINDEX121 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeProfitabilityData.html#acf47c07c978ccbe821a56f1b40611765":[1,0,0,0,0,0,5,0,17,5,6],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeProfitabilityData.html#ade14c9c8ebe15a74ed4cc68bc9bb96e1":[0,0,0,0,0,0,5,0,17,5,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1PlayerTradeProfitabilityData.html#ade14c9c8ebe15a74ed4cc68bc9bb96e1":[1,0,0,0,0,0,5,0,17,5,5],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1ReputationChangeTracker.html":[0,0,0,0,0,0,5,0,17,6],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1ReputationChangeTracker.html":[1,0,0,0,0,0,5,0,17,6],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1ReputationChangeTracker.html#a2d1f4a7cac674178ab41a570938cc9a9":[0,0,0,0,0,0,5,0,17,6,3],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1ReputationChangeTracker.html#a2d1f4a7cac674178ab41a570938cc9a9":[1,0,0,0,0,0,5,0,17,6,3],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1ReputationChangeTracker.html#a8088ce259e1f5694048b6e6005a80807":[0,0,0,0,0,0,5,0,17,6,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1ReputationChangeTracker.html#a8088ce259e1f5694048b6e6005a80807":[1,0,0,0,0,0,5,0,17,6,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1ReputationChangeTracker.html#a99de81cd7e86c3b65b892dc5d6dda627":[0,0,0,0,0,0,5,0,17,6,1]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1shared_1_1ReputationChangeTracker.html":[0,0,0,0,0,0,5,0,17,6]
 };

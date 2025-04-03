@@ -10,23 +10,25 @@
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="488,154,713,154,713,159,488,159"/>
 <area shape="rect" id="Node000006" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1fleet_1_1FleetMemberAPI.html" title=" " alt="" coords="760,201,922,242"/>
 <area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="937,244,1065,278,1136,297,1135,302,1063,283,936,249"/>
-<area shape="rect" id="Node000007" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html" title=" " alt="" coords="751,267,931,307"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="947,294,1088,306,1087,312,947,299"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="735,332,946,373"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="962,339,1087,329,1088,334,962,345"/>
-<area shape="rect" id="Node000009" title=" " alt="" coords="735,397,946,438"/>
-<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="936,390,1134,339,1135,344,937,396"/>
-<area shape="rect" id="Node000010" title=" " alt="" coords="791,462,890,488"/>
-<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="905,463,967,447,1028,422,1087,393,1180,339,1183,344,1089,398,1030,427,969,452,907,468"/>
-<area shape="rect" id="Node000011" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html" title=" " alt="" coords="744,512,938,553"/>
-<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="945,505,967,498,1017,481,1063,457,1102,428,1138,396,1194,339,1198,343,1142,400,1105,432,1065,462,1019,486,969,503,947,510"/>
-<area shape="rect" id="Node000012" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="279,449,472,490"/>
-<area shape="poly" id="edge11_Node000011_Node000012" title=" " alt="" coords="488,482,744,517,743,522,487,487"/>
-<area shape="rect" id="Node000013" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,556,230,597"/>
-<area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="174,546,278,501,311,488,313,493,280,505,176,551"/>
-<area shape="rect" id="Node000015" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html" title=" " alt="" coords="496,572,690,613"/>
-<area shape="poly" id="edge15_Node000015_Node000013" title=" " alt="" coords="245,578,496,586,496,592,245,583"/>
-<area shape="rect" id="Node000014" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetOrStubAPI.html" title=" " alt="" coords="279,515,472,555"/>
-<area shape="poly" id="edge13_Node000011_Node000014" title=" " alt="" coords="488,532,744,530,744,536,488,537"/>
-<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="705,605,767,607,834,605,902,596,967,577,1010,556,1049,528,1085,496,1117,461,1168,393,1200,340,1205,343,1173,396,1121,465,1089,500,1052,532,1012,560,969,582,903,601,834,610,767,613,705,610"/>
+<area shape="rect" id="Node000007" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1WithSourceMod.html" title=" " alt="" coords="286,201,465,242"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="480,219,760,219,760,224,480,224"/>
+<area shape="rect" id="Node000008" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html" title=" " alt="" coords="751,267,931,307"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="947,294,1088,306,1087,312,947,299"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="735,332,946,373"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="962,339,1087,329,1088,334,962,345"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="735,397,946,438"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="936,390,1134,339,1135,344,937,396"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="791,462,890,488"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="905,463,967,447,1028,422,1087,393,1180,339,1183,344,1089,398,1030,427,969,452,907,468"/>
+<area shape="rect" id="Node000012" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html" title=" " alt="" coords="744,512,938,553"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="945,505,967,498,1017,481,1063,457,1102,428,1138,396,1194,339,1198,343,1142,400,1105,432,1065,462,1019,486,969,503,947,510"/>
+<area shape="rect" id="Node000013" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1SectorEntityToken.html" title=" " alt="" coords="279,515,472,555"/>
+<area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="488,532,744,530,744,536,488,537"/>
+<area shape="rect" id="Node000014" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1rules_1_1HasMemory.html" title=" " alt="" coords="5,556,230,597"/>
+<area shape="poly" id="edge13_Node000013_Node000014" title=" " alt="" coords="245,553,278,548,279,553,245,559"/>
+<area shape="rect" id="Node000016" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FactionAPI.html" title=" " alt="" coords="496,572,690,613"/>
+<area shape="poly" id="edge16_Node000016_Node000014" title=" " alt="" coords="245,578,496,586,496,592,245,583"/>
+<area shape="rect" id="Node000015" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1FleetOrStubAPI.html" title=" " alt="" coords="279,449,472,490"/>
+<area shape="poly" id="edge14_Node000012_Node000015" title=" " alt="" coords="488,482,744,517,743,522,487,487"/>
+<area shape="poly" id="edge15_Node000001_Node000016" title=" " alt="" coords="705,605,767,607,834,605,902,596,967,577,1010,556,1049,528,1085,496,1117,461,1168,393,1200,340,1205,343,1173,396,1121,465,1089,500,1052,532,1012,560,969,582,903,601,834,610,767,613,705,610"/>
 </map>

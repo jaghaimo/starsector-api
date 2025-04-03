@@ -1,5 +1,7 @@
 var NAVTREEINDEX76 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1LuddicPathHostileActivityFactor.html#aa9d7a38c831c276fb510856b462f4d72":[1,0,0,0,0,0,5,0,11,4,38,17],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1LuddicPathHostileActivityFactor.html#ab2eae1423477291a634915bbacb3cb4b":[0,0,0,0,0,0,5,0,11,4,38,15],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1LuddicPathHostileActivityFactor.html#ab2eae1423477291a634915bbacb3cb4b":[1,0,0,0,0,0,5,0,11,4,38,15],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1LuddicPathHostileActivityFactor.html#aba3489f89a97e54f6f5d565648e7b85e":[0,0,0,0,0,0,5,0,11,4,38,20],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1LuddicPathHostileActivityFactor.html#aba3489f89a97e54f6f5d565648e7b85e":[1,0,0,0,0,0,5,0,11,4,38,20],
@@ -247,7 +249,5 @@ var NAVTREEINDEX76 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1SindrianDiktatHostileActivityFactor.html#a18ecec666e844b1ab2f16356f9fffb75":[1,0,0,0,0,0,5,0,11,4,45,8],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1SindrianDiktatHostileActivityFactor.html#a2301084b61d684625e06e61382cc6528":[0,0,0,0,0,0,5,0,11,4,45,10],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1SindrianDiktatHostileActivityFactor.html#a2301084b61d684625e06e61382cc6528":[1,0,0,0,0,0,5,0,11,4,45,10],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1SindrianDiktatHostileActivityFactor.html#a2582ce4160521e266555b93f58b4f2ae":[0,0,0,0,0,0,5,0,11,4,45,5],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1SindrianDiktatHostileActivityFactor.html#a2582ce4160521e266555b93f58b4f2ae":[1,0,0,0,0,0,5,0,11,4,45,5],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1SindrianDiktatHostileActivityFactor.html#a441909beeaa5187379b88feef0cb785f":[0,0,0,0,0,0,5,0,11,4,45,18]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1SindrianDiktatHostileActivityFactor.html#a2582ce4160521e266555b93f58b4f2ae":[0,0,0,0,0,0,5,0,11,4,45,5]
 };

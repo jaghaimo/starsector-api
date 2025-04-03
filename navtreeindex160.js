@@ -1,5 +1,11 @@
 var NAVTREEINDEX160 =
 {
+"enumcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1FormationType.html#a6364eda5b14cc9723796ed366cf0260d":[0,0,0,0,0,0,7,9,3],
+"enumcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1FormationType.html#a6364eda5b14cc9723796ed366cf0260d":[1,0,0,0,0,0,7,9,3],
+"enumcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1FormationType.html#a7f1dc006d34603415503e0e31d83ae31":[0,0,0,0,0,0,7,9,1],
+"enumcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1FormationType.html#a7f1dc006d34603415503e0e31d83ae31":[1,0,0,0,0,0,7,9,1],
+"enumcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1FormationType.html#ab99b1b95e92e238cbc8dab4917d24e50":[0,0,0,0,0,0,7,9,2],
+"enumcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1FormationType.html#ab99b1b95e92e238cbc8dab4917d24e50":[1,0,0,0,0,0,7,9,2],
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1ProjectileSpawnType.html":[0,0,0,0,0,0,7,15],
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1ProjectileSpawnType.html":[1,0,0,0,0,0,7,15],
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1ProjectileSpawnType.html#a1b62c1089bfb992f31860f6dd1fa00d3":[0,0,0,0,0,0,7,15,2],
@@ -243,11 +249,5 @@ var NAVTREEINDEX160 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScriptWithCleanup.html":[0,0,0,0,0,0,16],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScriptWithCleanup.html":[1,0,0,0,0,0,16],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScriptWithCleanup.html#a3eb9153b5cc87acaca29d0609b8eec29":[0,0,0,0,0,0,16,0],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScriptWithCleanup.html#a3eb9153b5cc87acaca29d0609b8eec29":[1,0,0,0,0,0,16,0],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1FactoryAPI.html":[0,0,0,0,0,0,17],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1FactoryAPI.html":[1,0,0,0,0,0,17],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1FactoryAPI.html#a00b3901783aae6ae74ed0ae21ca05053":[0,0,0,0,0,0,17,1],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1FactoryAPI.html#a00b3901783aae6ae74ed0ae21ca05053":[1,0,0,0,0,0,17,1],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1FactoryAPI.html#a029ec4844bf199ed376b7b40bdd4dcbe":[0,0,0,0,0,0,17,7],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1FactoryAPI.html#a029ec4844bf199ed376b7b40bdd4dcbe":[1,0,0,0,0,0,17,7]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1EveryFrameScriptWithCleanup.html#a3eb9153b5cc87acaca29d0609b8eec29":[1,0,0,0,0,0,16,0]
 };

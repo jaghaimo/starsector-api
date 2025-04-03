@@ -1,5 +1,11 @@
 var NAVTREEINDEX141 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftCascadeEffect.html#a3233a8c4996b11c8da6ed6f1ee8a46f8":[1,0,0,0,0,0,5,2,57,5],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftCascadeEffect.html#a61c238022fdd59e5a048afb60c563261":[0,0,0,0,0,0,5,2,57,9],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftCascadeEffect.html#a61c238022fdd59e5a048afb60c563261":[1,0,0,0,0,0,5,2,57,9],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftCascadeEffect.html#a6d28a0f1f472be73d7bf8f229191b710":[0,0,0,0,0,0,5,2,57,12],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftCascadeEffect.html#a6d28a0f1f472be73d7bf8f229191b710":[1,0,0,0,0,0,5,2,57,12],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftCascadeEffect.html#a7875b9e93108d32c55b579955d0abdd1":[0,0,0,0,0,0,5,2,57,13],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftCascadeEffect.html#a7875b9e93108d32c55b579955d0abdd1":[1,0,0,0,0,0,5,2,57,13],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftCascadeEffect.html#a8367d84d9fe6c4d0a8ae8bb1666167b2":[0,0,0,0,0,0,5,2,57,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1RiftCascadeEffect.html#a8367d84d9fe6c4d0a8ae8bb1666167b2":[1,0,0,0,0,0,5,2,57,1],
@@ -243,11 +249,5 @@ var NAVTREEINDEX141 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dem_1_1DEMScript.html#a6625f5e6055bc0cfcf7de927087d998b":[1,0,0,0,0,0,5,2,0,1,17],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dem_1_1DEMScript.html#a6f0e1a23b717549f1cbe952e3f506aea":[0,0,0,0,0,0,5,2,0,1,12],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dem_1_1DEMScript.html#a6f0e1a23b717549f1cbe952e3f506aea":[1,0,0,0,0,0,5,2,0,1,12],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dem_1_1DEMScript.html#a708331866c7a108101de69eec716857c":[0,0,0,0,0,0,5,2,0,1,11],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dem_1_1DEMScript.html#a708331866c7a108101de69eec716857c":[1,0,0,0,0,0,5,2,0,1,11],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dem_1_1DEMScript.html#a774b6989dc134baf33cfbca71370f003":[0,0,0,0,0,0,5,2,0,1,46],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dem_1_1DEMScript.html#a774b6989dc134baf33cfbca71370f003":[1,0,0,0,0,0,5,2,0,1,46],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dem_1_1DEMScript.html#a786f19309024edf9f7c852a615f20fed":[0,0,0,0,0,0,5,2,0,1,47],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dem_1_1DEMScript.html#a786f19309024edf9f7c852a615f20fed":[1,0,0,0,0,0,5,2,0,1,47],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dem_1_1DEMScript.html#a7f98da45b9f137c9033049bb41277e1f":[0,0,0,0,0,0,5,2,0,1,39]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dem_1_1DEMScript.html#a708331866c7a108101de69eec716857c":[0,0,0,0,0,0,5,2,0,1,11]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX73 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#acd6ac828613893c8d1097069d8a7be5f":[1,0,0,0,0,0,5,0,11,4,3,64],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#acf0bae62125cd9582dba8e499d941ac4":[0,0,0,0,0,0,5,0,11,4,3,93],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#acf0bae62125cd9582dba8e499d941ac4":[1,0,0,0,0,0,5,0,11,4,3,93],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad00fcb944d26c95dcd71888578da03d1":[0,0,0,0,0,0,5,0,11,4,3,86],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1BaseEventIntel.html#ad00fcb944d26c95dcd71888578da03d1":[1,0,0,0,0,0,5,0,11,4,3,86],
@@ -247,7 +249,5 @@ var NAVTREEINDEX73 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HADefensiveMeasuresFactor.html#a46d51dc698dda0244acb5e2b62680d13":[1,0,0,0,0,0,5,0,11,4,15,11],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HADefensiveMeasuresFactor.html#a4ac8bd308aa02a5441cf7e7953ca2c8d":[0,0,0,0,0,0,5,0,11,4,15,10],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HADefensiveMeasuresFactor.html#a4ac8bd308aa02a5441cf7e7953ca2c8d":[1,0,0,0,0,0,5,0,11,4,15,10],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HADefensiveMeasuresFactor.html#a532ff9a3f705d9a4552fd59b41ba2ccc":[0,0,0,0,0,0,5,0,11,4,15,7],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HADefensiveMeasuresFactor.html#a532ff9a3f705d9a4552fd59b41ba2ccc":[1,0,0,0,0,0,5,0,11,4,15,7],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HADefensiveMeasuresFactor.html#a5bc361c44c9a8db0f1911667bb7d56b7":[0,0,0,0,0,0,5,0,11,4,15,2]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HADefensiveMeasuresFactor.html#a532ff9a3f705d9a4552fd59b41ba2ccc":[0,0,0,0,0,0,5,0,11,4,15,7]
 };

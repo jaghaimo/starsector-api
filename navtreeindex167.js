@@ -1,5 +1,13 @@
 var NAVTREEINDEX167 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a52f9c80d9b4e4d483bb5640ab91be7db":[0,0,0,0,0,0,0,35,16],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a52f9c80d9b4e4d483bb5640ab91be7db":[1,0,0,0,0,0,0,35,16],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a5319db26355ad2a4a9b85faad9439106":[0,0,0,0,0,0,0,35,13],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a5319db26355ad2a4a9b85faad9439106":[1,0,0,0,0,0,0,35,13],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a58b502616e01d21d1c1e105baa5df8eb":[0,0,0,0,0,0,0,35,52],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a58b502616e01d21d1c1e105baa5df8eb":[1,0,0,0,0,0,0,35,52],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a5d115a0360f839c6ff5521672136eaae":[0,0,0,0,0,0,0,35,30],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a5d115a0360f839c6ff5521672136eaae":[1,0,0,0,0,0,0,35,30],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a6071768e078b736bd1499c9ad9dc808b":[0,0,0,0,0,0,0,35,32],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a6071768e078b736bd1499c9ad9dc808b":[1,0,0,0,0,0,0,35,32],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CargoAPI.html#a60edc1d1b4a25ee0c2094b8d58cef65e":[0,0,0,0,0,0,0,35,27],
@@ -241,13 +249,5 @@ var NAVTREEINDEX167 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CommDirectoryAPI.html#a3c8e5c2b669923461c8d803197885336":[0,0,0,0,0,0,0,42,3],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CommDirectoryAPI.html#a3c8e5c2b669923461c8d803197885336":[1,0,0,0,0,0,0,42,3],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CommDirectoryAPI.html#a54a873bf4ea8b197507e577c9fa5bafd":[0,0,0,0,0,0,0,42,1],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CommDirectoryAPI.html#a54a873bf4ea8b197507e577c9fa5bafd":[1,0,0,0,0,0,0,42,1],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CommDirectoryAPI.html#a8127e92a802c2be95e0d63398ec1a07a":[0,0,0,0,0,0,0,42,4],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CommDirectoryAPI.html#a8127e92a802c2be95e0d63398ec1a07a":[1,0,0,0,0,0,0,42,4],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CommDirectoryAPI.html#a8e28e303f2f4f0e377d3534c20a6329c":[0,0,0,0,0,0,0,42,7],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CommDirectoryAPI.html#a8e28e303f2f4f0e377d3534c20a6329c":[1,0,0,0,0,0,0,42,7],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CommDirectoryAPI.html#a95333872a7e060561f560587b5abc51a":[0,0,0,0,0,0,0,42,0],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CommDirectoryAPI.html#a95333872a7e060561f560587b5abc51a":[1,0,0,0,0,0,0,42,0],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CommDirectoryAPI.html#aa7076279455f2b43e76b3231a0f6758f":[0,0,0,0,0,0,0,42,5],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CommDirectoryAPI.html#aa7076279455f2b43e76b3231a0f6758f":[1,0,0,0,0,0,0,42,5]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CommDirectoryAPI.html#a54a873bf4ea8b197507e577c9fa5bafd":[1,0,0,0,0,0,0,42,1]
 };

@@ -7,5 +7,6 @@ var interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1
     [ "getSpecialNotes", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1InstallableItemEffect.html#a408b2d7cbdd24b9dd27f1597645a4600", null ],
     [ "getSpecialNotesName", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1InstallableItemEffect.html#a236068e04129f118158416cd8e704411", null ],
     [ "getUnmetRequirements", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1InstallableItemEffect.html#a1027f747d9e4ef605afa9a27d4c6e2fa", null ],
+    [ "getUnmetRequirements", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1InstallableItemEffect.html#aeafd71722bbe56314b66d05d80158c60", null ],
     [ "unapply", "interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1InstallableItemEffect.html#a8610309d0f4273ab3223f78be13c6906", null ]
 ];

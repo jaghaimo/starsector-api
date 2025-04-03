@@ -10,6 +10,7 @@ var classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1Ba
     [ "getRequirements", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableItemEffect.html#a2b868bf8995ab8b0179ea99322871ea3", null ],
     [ "getSimpleReqs", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableItemEffect.html#ab9a31b944334947aa56e8967f40169b4", null ],
     [ "getUnmetRequirements", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableItemEffect.html#a0834431166fd3a486c1975715953ea35", null ],
+    [ "getUnmetRequirements", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableItemEffect.html#aafaebede95830cf2587d00f1e31ed739", null ],
     [ "id", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableItemEffect.html#a0790e6505ea1830853ce6a7a26d347c5", null ],
     [ "spec", "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1econ_1_1impl_1_1BaseInstallableItemEffect.html#aaebfa36075e87ef235ee73a12feca6d6", null ]
 ];

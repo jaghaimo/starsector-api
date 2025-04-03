@@ -1,5 +1,11 @@
 var NAVTREEINDEX159 =
 {
+"enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CollisionClass.html#a62eee8d8ce6a2fc09eda98cd885f94ab":[0,0,0,0,0,0,2,17,0],
+"enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CollisionClass.html#a62eee8d8ce6a2fc09eda98cd885f94ab":[1,0,0,0,0,0,2,17,0],
+"enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CollisionClass.html#a7317db19f1addf6947f3ede1297dce02":[0,0,0,0,0,0,2,17,13],
+"enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CollisionClass.html#a7317db19f1addf6947f3ede1297dce02":[1,0,0,0,0,0,2,17,13],
+"enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CollisionClass.html#a7f7d259e521992196b218b9d277f5ee6":[0,0,0,0,0,0,2,17,15],
+"enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CollisionClass.html#a7f7d259e521992196b218b9d277f5ee6":[1,0,0,0,0,0,2,17,15],
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CollisionClass.html#a862c49840e492fdede8397f762603bab":[0,0,0,0,0,0,2,17,11],
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CollisionClass.html#a862c49840e492fdede8397f762603bab":[1,0,0,0,0,0,2,17,11],
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1CollisionClass.html#a90386fdd97fdb096578b63ee544246f2":[0,0,0,0,0,0,2,17,12],
@@ -243,11 +249,5 @@ var NAVTREEINDEX159 =
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1FormationType.html":[0,0,0,0,0,0,7,9],
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1FormationType.html":[1,0,0,0,0,0,7,9],
 "enumcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1FormationType.html#a5348d0ec31b8620701240b2f35e39c95":[0,0,0,0,0,0,7,9,0],
-"enumcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1FormationType.html#a5348d0ec31b8620701240b2f35e39c95":[1,0,0,0,0,0,7,9,0],
-"enumcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1FormationType.html#a6364eda5b14cc9723796ed366cf0260d":[0,0,0,0,0,0,7,9,3],
-"enumcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1FormationType.html#a6364eda5b14cc9723796ed366cf0260d":[1,0,0,0,0,0,7,9,3],
-"enumcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1FormationType.html#a7f1dc006d34603415503e0e31d83ae31":[0,0,0,0,0,0,7,9,1],
-"enumcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1FormationType.html#a7f1dc006d34603415503e0e31d83ae31":[1,0,0,0,0,0,7,9,1],
-"enumcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1FormationType.html#ab99b1b95e92e238cbc8dab4917d24e50":[0,0,0,0,0,0,7,9,2],
-"enumcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1FormationType.html#ab99b1b95e92e238cbc8dab4917d24e50":[1,0,0,0,0,0,7,9,2]
+"enumcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1FormationType.html#a5348d0ec31b8620701240b2f35e39c95":[1,0,0,0,0,0,7,9,0]
 };

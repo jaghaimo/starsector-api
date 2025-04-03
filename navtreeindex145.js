@@ -1,5 +1,11 @@
 var NAVTREEINDEX145 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1WarpingSpriteRendererUtilV2.html#a82323d5efc9229598566dbe00ce8b0a4":[1,0,0,0,0,0,5,2,1,37,4],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1WarpingSpriteRendererUtilV2.html#a82b1d483927fd6aaa9596d6c5e60abfd":[0,0,0,0,0,0,5,2,1,37,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1WarpingSpriteRendererUtilV2.html#a82b1d483927fd6aaa9596d6c5e60abfd":[1,0,0,0,0,0,5,2,1,37,0],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1WarpingSpriteRendererUtilV2.html#a8948be8fd1bb398c9a464515d02b3b08":[0,0,0,0,0,0,5,2,1,37,7],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1WarpingSpriteRendererUtilV2.html#a8948be8fd1bb398c9a464515d02b3b08":[1,0,0,0,0,0,5,2,1,37,7],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1WarpingSpriteRendererUtilV2.html#a8df7718217f3dfd1d33df634a3b9a5ad":[0,0,0,0,0,0,5,2,1,37,9],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1WarpingSpriteRendererUtilV2.html#a8df7718217f3dfd1d33df634a3b9a5ad":[1,0,0,0,0,0,5,2,1,37,9],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1WarpingSpriteRendererUtilV2.html#a9e9886e867383684eb5a30a8064ce13f":[0,0,0,0,0,0,5,2,1,37,12],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1WarpingSpriteRendererUtilV2.html#a9e9886e867383684eb5a30a8064ce13f":[1,0,0,0,0,0,5,2,1,37,12],
@@ -243,11 +249,5 @@ var NAVTREEINDEX145 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1EnergyLashSystemAI.html#a3a5d90202663b6dba8197b0bbc2f9f3b":[1,0,0,0,0,0,5,2,2,9,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1EnergyLashSystemAI.html#a5421b3f2c34366c7feb1f91b9a6521da":[0,0,0,0,0,0,5,2,2,9,6],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1EnergyLashSystemAI.html#a5421b3f2c34366c7feb1f91b9a6521da":[1,0,0,0,0,0,5,2,2,9,6],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1EnergyLashSystemAI.html#a5c99e7e08672b431bf91c8c0017c8cb9":[0,0,0,0,0,0,5,2,2,9,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1EnergyLashSystemAI.html#a5c99e7e08672b431bf91c8c0017c8cb9":[1,0,0,0,0,0,5,2,2,9,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1EnergyLashSystemAI.html#a62ad9592d0d52b195d973557e317d588":[0,0,0,0,0,0,5,2,2,9,9],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1EnergyLashSystemAI.html#a62ad9592d0d52b195d973557e317d588":[1,0,0,0,0,0,5,2,2,9,9],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1EnergyLashSystemAI.html#a67c7d943594dc511963d1c2308aae802":[0,0,0,0,0,0,5,2,2,9,8],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1EnergyLashSystemAI.html#a67c7d943594dc511963d1c2308aae802":[1,0,0,0,0,0,5,2,2,9,8],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1EnergyLashSystemAI.html#a7632d38c5ba6b69ff01e204e71c4f083":[0,0,0,0,0,0,5,2,2,9,4]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1EnergyLashSystemAI.html#a5c99e7e08672b431bf91c8c0017c8cb9":[0,0,0,0,0,0,5,2,2,9,0]
 };

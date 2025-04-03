@@ -1,5 +1,7 @@
 var NAVTREEINDEX74 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HADefensiveMeasuresFactor.html#a532ff9a3f705d9a4552fd59b41ba2ccc":[1,0,0,0,0,0,5,0,11,4,15,7],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HADefensiveMeasuresFactor.html#a5bc361c44c9a8db0f1911667bb7d56b7":[0,0,0,0,0,0,5,0,11,4,15,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HADefensiveMeasuresFactor.html#a5bc361c44c9a8db0f1911667bb7d56b7":[1,0,0,0,0,0,5,0,11,4,15,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HADefensiveMeasuresFactor.html#a5ec89378f09b5aae32dcf4aa0e965020":[0,0,0,0,0,0,5,0,11,4,15,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HADefensiveMeasuresFactor.html#a5ec89378f09b5aae32dcf4aa0e965020":[1,0,0,0,0,0,5,0,11,4,15,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX74 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a72c9ce949d0205dc40a9feeeaf4941d1":[1,0,0,0,0,0,5,0,11,4,29,16],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a7557d2bbe380bfb630303062ca945ce2":[0,0,0,0,0,0,5,0,11,4,29,48],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a7557d2bbe380bfb630303062ca945ce2":[1,0,0,0,0,0,5,0,11,4,29,48],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a78c955fd621030603d41d81a743729a7":[0,0,0,0,0,0,5,0,11,4,29,14],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a78c955fd621030603d41d81a743729a7":[1,0,0,0,0,0,5,0,11,4,29,14],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a7f4b77f1908a0f37462aa9482dd20df7":[0,0,0,0,0,0,5,0,11,4,29,64]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1HostileActivityEventIntel.html#a78c955fd621030603d41d81a743729a7":[0,0,0,0,0,0,5,0,11,4,29,14]
 };

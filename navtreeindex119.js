@@ -1,5 +1,11 @@
 var NAVTREEINDEX119 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1MarketCMD.html#a2c1c147761bf2d946c005b64681192e5":[1,0,0,0,0,0,5,0,16,3,10,51],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1MarketCMD.html#a37128d172ad29d6ac2f2f64ecb1f329a":[0,0,0,0,0,0,5,0,16,3,10,14],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1MarketCMD.html#a37128d172ad29d6ac2f2f64ecb1f329a":[1,0,0,0,0,0,5,0,16,3,10,14],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1MarketCMD.html#a3ab2d18b037acc77fd597d5a93da4085":[0,0,0,0,0,0,5,0,16,3,10,43],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1MarketCMD.html#a3ab2d18b037acc77fd597d5a93da4085":[1,0,0,0,0,0,5,0,16,3,10,43],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1MarketCMD.html#a3e06592e1423b6b67c8035c43203ef08":[0,0,0,0,0,0,5,0,16,3,10,34],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1MarketCMD.html#a3e06592e1423b6b67c8035c43203ef08":[1,0,0,0,0,0,5,0,16,3,10,34],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1MarketCMD.html#a3e3f511afa1a650d242c3123a65fd46c":[0,0,0,0,0,0,5,0,16,3,10,24],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1MarketCMD.html#a3e3f511afa1a650d242c3123a65fd46c":[1,0,0,0,0,0,5,0,16,3,10,24],
@@ -243,11 +249,5 @@ var NAVTREEINDEX119 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1PrintWreckDescription.html#a7b2a11035262e68bb02acee09cb90d94":[1,0,0,0,0,0,5,0,16,3,13,8],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1PrintWreckDescription.html#a90b215a5a36e49683fdd8878e5f85ac3":[0,0,0,0,0,0,5,0,16,3,13,10],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1PrintWreckDescription.html#a90b215a5a36e49683fdd8878e5f85ac3":[1,0,0,0,0,0,5,0,16,3,13,10],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1PrintWreckDescription.html#aa767782934912830bd334bba8c49a80b":[0,0,0,0,0,0,5,0,16,3,13,7],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1PrintWreckDescription.html#aa767782934912830bd334bba8c49a80b":[1,0,0,0,0,0,5,0,16,3,13,7],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1PrintWreckDescription.html#ab6380796651c622dba2591e80c0c51a9":[0,0,0,0,0,0,5,0,16,3,13,9],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1PrintWreckDescription.html#ab6380796651c622dba2591e80c0c51a9":[1,0,0,0,0,0,5,0,16,3,13,9],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1PrintWreckDescription.html#adaf6436083be4b4028fc98262a79c5f1":[0,0,0,0,0,0,5,0,16,3,13,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1PrintWreckDescription.html#adaf6436083be4b4028fc98262a79c5f1":[1,0,0,0,0,0,5,0,16,3,13,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1PrintWreckDescription.html#aeb9162440160e1aa57fdb141933c745d":[0,0,0,0,0,0,5,0,16,3,13,3]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1rulecmd_1_1salvage_1_1PrintWreckDescription.html#aa767782934912830bd334bba8c49a80b":[0,0,0,0,0,0,5,0,16,3,13,7]
 };

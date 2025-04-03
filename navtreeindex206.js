@@ -1,5 +1,13 @@
 var NAVTREEINDEX206 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#acc9944c791d9afcea350dd6b109f9df4":[0,0,0,0,0,0,2,70,1],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#acc9944c791d9afcea350dd6b109f9df4":[1,0,0,0,0,0,2,70,1],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#acf85da119950e9f5342955445a0a8110":[0,0,0,0,0,0,2,70,9],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#acf85da119950e9f5342955445a0a8110":[1,0,0,0,0,0,2,70,9],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#ad505ad31ad20ca6ba2c4fd256dd2a81a":[0,0,0,0,0,0,2,70,21],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#ad505ad31ad20ca6ba2c4fd256dd2a81a":[1,0,0,0,0,0,2,70,21],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#ad7997e5feb333738eedcde8d7fbba1d4":[0,0,0,0,0,0,2,70,74],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#ad7997e5feb333738eedcde8d7fbba1d4":[1,0,0,0,0,0,2,70,74],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#adacf4eab61a801aecec8e2262f23d57f":[0,0,0,0,0,0,2,70,27],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#adacf4eab61a801aecec8e2262f23d57f":[1,0,0,0,0,0,2,70,27],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1ShipVariantAPI.html#ae0585e4df06dbfe43f7a29d4f2649d4f":[0,0,0,0,0,0,2,70,33],
@@ -241,13 +249,5 @@ var NAVTREEINDEX206 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponAPI.html#ac268e192a2c18dff8e4624ba86f6533d":[0,0,0,0,0,0,2,74,61],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponAPI.html#ac268e192a2c18dff8e4624ba86f6533d":[1,0,0,0,0,0,2,74,61],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponAPI.html#ac73b44f66557434321e765eea7423630":[0,0,0,0,0,0,2,74,14],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponAPI.html#ac73b44f66557434321e765eea7423630":[1,0,0,0,0,0,2,74,14],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponAPI.html#ad080f1b06d80b6ad81807306e2640dc3":[0,0,0,0,0,0,2,74,55],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponAPI.html#ad080f1b06d80b6ad81807306e2640dc3":[1,0,0,0,0,0,2,74,55],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponAPI.html#ad30da50cb67043370adb78c0fac8d0fb":[0,0,0,0,0,0,2,74,90],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponAPI.html#ad30da50cb67043370adb78c0fac8d0fb":[1,0,0,0,0,0,2,74,90],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponAPI.html#ad432610d87c49e07c5b85e3451227669":[0,0,0,0,0,0,2,74,43],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponAPI.html#ad432610d87c49e07c5b85e3451227669":[1,0,0,0,0,0,2,74,43],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponAPI.html#ad490b7a0b50e180238801bb5710b5e30":[0,0,0,0,0,0,2,74,25],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponAPI.html#ad490b7a0b50e180238801bb5710b5e30":[1,0,0,0,0,0,2,74,25]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1combat_1_1WeaponAPI.html#ac73b44f66557434321e765eea7423630":[1,0,0,0,0,0,2,74,14]
 };

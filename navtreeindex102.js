@@ -1,5 +1,11 @@
 var NAVTREEINDEX102 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch.html#ab3addf6437748ee56d7da2f4fcd58d70":[1,0,0,0,0,0,5,0,12,3,7,129],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch.html#ab3bfac46780c6b70fbf925c1bb328a46":[0,0,0,0,0,0,5,0,12,3,7,41],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch.html#ab3bfac46780c6b70fbf925c1bb328a46":[1,0,0,0,0,0,5,0,12,3,7,41],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch.html#ab6fb1624c4e8e7a97725cb4c1c8940fc":[0,0,0,0,0,0,5,0,12,3,7,209],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch.html#ab6fb1624c4e8e7a97725cb4c1c8940fc":[1,0,0,0,0,0,5,0,12,3,7,209],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch.html#ab71d9dda888861449a0564c87b7f8c71":[0,0,0,0,0,0,5,0,12,3,7,185],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch.html#ab71d9dda888861449a0564c87b7f8c71":[1,0,0,0,0,0,5,0,12,3,7,185],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch.html#ab7aaf9352b87bf2e44a790c1e564575a":[0,0,0,0,0,0,5,0,12,3,7,158],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithSearch.html#ab7aaf9352b87bf2e44a790c1e564575a":[1,0,0,0,0,0,5,0,12,3,7,158],
@@ -243,11 +249,5 @@ var NAVTREEINDEX102 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#a26de3a639882292d84a51e8b25904c3b":[1,0,0,0,0,0,5,0,12,3,8,30],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#a28033dabc11e8932b8fdbfa5c8b514e4":[0,0,0,0,0,0,5,0,12,3,8,235],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#a28033dabc11e8932b8fdbfa5c8b514e4":[1,0,0,0,0,0,5,0,12,3,8,235],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#a2b4b7ae3f0d7e0dad3847337f2c403a5":[0,0,0,0,0,0,5,0,12,3,8,68],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#a2b4b7ae3f0d7e0dad3847337f2c403a5":[1,0,0,0,0,0,5,0,12,3,8,68],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#a2bef6f7cc78c736f32707ba5a9897840":[0,0,0,0,0,0,5,0,12,3,8,23],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#a2bef6f7cc78c736f32707ba5a9897840":[1,0,0,0,0,0,5,0,12,3,8,23],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#a2c80f3cea86aef2f7b56754689ca15b9":[0,0,0,0,0,0,5,0,12,3,8,172],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#a2c80f3cea86aef2f7b56754689ca15b9":[1,0,0,0,0,0,5,0,12,3,8,172],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#a2c978acfead0760c52b6fc91b82b7b6f":[0,0,0,0,0,0,5,0,12,3,8,93]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#a2b4b7ae3f0d7e0dad3847337f2c403a5":[0,0,0,0,0,0,5,0,12,3,8,68]
 };

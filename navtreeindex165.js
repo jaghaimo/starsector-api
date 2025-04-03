@@ -1,5 +1,13 @@
 var NAVTREEINDEX165 =
 {
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a4f835ad577030fbf863f4a9d12f802c7":[0,0,0,0,0,0,0,28,21],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a4f835ad577030fbf863f4a9d12f802c7":[1,0,0,0,0,0,0,28,21],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a508022a0635848df8bd917aa8f20abfc":[0,0,0,0,0,0,0,28,98],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a508022a0635848df8bd917aa8f20abfc":[1,0,0,0,0,0,0,28,98],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a50e56c739239af216e7156536f2c9433":[0,0,0,0,0,0,0,28,44],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a50e56c739239af216e7156536f2c9433":[1,0,0,0,0,0,0,28,44],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a53c439794d52c908f8154affa06671a9":[0,0,0,0,0,0,0,28,103],
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a53c439794d52c908f8154affa06671a9":[1,0,0,0,0,0,0,28,103],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a54ddde9f56c93520ca5e9450a8a2876c":[0,0,0,0,0,0,0,28,16],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a54ddde9f56c93520ca5e9450a8a2876c":[1,0,0,0,0,0,0,28,16],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignFleetAPI.html#a57780cd4fd850607b3213ae59daec077":[0,0,0,0,0,0,0,28,40],
@@ -241,13 +249,5 @@ var NAVTREEINDEX165 =
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignProgressIndicatorAPI.html#a0f8c233ecc997f3bfcc32c253cf2aa1e":[0,0,0,0,0,0,0,31,3],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignProgressIndicatorAPI.html#a0f8c233ecc997f3bfcc32c253cf2aa1e":[1,0,0,0,0,0,0,31,3],
 "interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignProgressIndicatorAPI.html#a15d5ef4c1a6571ec9a4fe348925d01f1":[0,0,0,0,0,0,0,31,2],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignProgressIndicatorAPI.html#a15d5ef4c1a6571ec9a4fe348925d01f1":[1,0,0,0,0,0,0,31,2],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignProgressIndicatorAPI.html#a22eb9bad1f4f63e528ee2410537a7305":[0,0,0,0,0,0,0,31,4],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignProgressIndicatorAPI.html#a22eb9bad1f4f63e528ee2410537a7305":[1,0,0,0,0,0,0,31,4],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignProgressIndicatorAPI.html#a5562fed6a843e62750c2e34bad090fb4":[0,0,0,0,0,0,0,31,6],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignProgressIndicatorAPI.html#a5562fed6a843e62750c2e34bad090fb4":[1,0,0,0,0,0,0,31,6],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignProgressIndicatorAPI.html#a671104f4e69ddce3ba00adebf28f08c0":[0,0,0,0,0,0,0,31,5],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignProgressIndicatorAPI.html#a671104f4e69ddce3ba00adebf28f08c0":[1,0,0,0,0,0,0,31,5],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignProgressIndicatorAPI.html#af846653c7107b6340a399464c7f73d3e":[0,0,0,0,0,0,0,31,0],
-"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignProgressIndicatorAPI.html#af846653c7107b6340a399464c7f73d3e":[1,0,0,0,0,0,0,31,0]
+"interfacecom_1_1fs_1_1starfarer_1_1api_1_1campaign_1_1CampaignProgressIndicatorAPI.html#a15d5ef4c1a6571ec9a4fe348925d01f1":[1,0,0,0,0,0,0,31,2]
 };

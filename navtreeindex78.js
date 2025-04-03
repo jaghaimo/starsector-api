@@ -1,5 +1,7 @@
 var NAVTREEINDEX78 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HTFactorTracker.html#ada9aa12bf330a11bc6382bd0fe948c65":[1,0,0,0,0,0,5,0,11,4,0,2,14],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HTFactorTracker.html#add11c5ec690a52c9dae957b928e57e71":[0,0,0,0,0,0,5,0,11,4,0,2,17],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HTFactorTracker.html#add11c5ec690a52c9dae957b928e57e71":[1,0,0,0,0,0,5,0,11,4,0,2,17],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HTFactorTracker.html#aef76d4665739960d7d6d7203e5336d1b":[0,0,0,0,0,0,5,0,11,4,0,2,16],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ht_1_1HTFactorTracker.html#aef76d4665739960d7d6d7203e5336d1b":[1,0,0,0,0,0,5,0,11,4,0,2,16],
@@ -247,7 +249,5 @@ var NAVTREEINDEX78 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ttcr_1_1TriTachyonCommerceRaiding.html#aeebaed6266b3b8fe3148cafd481a2592":[1,0,0,0,0,0,5,0,11,4,1,0,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ttcr_1_1TriTachyonCommerceRaiding.html#af2a32b492507b6f19164e982daaaebae":[0,0,0,0,0,0,5,0,11,4,1,0,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1events_1_1ttcr_1_1TriTachyonCommerceRaiding.html#af2a32b492507b6f19164e982daaaebae":[1,0,0,0,0,0,5,0,11,4,1,0,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1BaseFGAction.html":[0,0,0,0,0,0,5,0,11,5,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1BaseFGAction.html":[1,0,0,0,0,0,5,0,11,5,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1BaseFGAction.html#a04e28ef9728abc32b3ebf4b82a985db9":[0,0,0,0,0,0,5,0,11,5,0,3]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1BaseFGAction.html":[0,0,0,0,0,0,5,0,11,5,0]
 };

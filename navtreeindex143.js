@@ -1,5 +1,11 @@
 var NAVTREEINDEX143 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1DarkenedGazeSystemScript.html#a45e735367ad44e13defcee805abf6a68":[1,0,0,0,0,0,5,2,1,7,6],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1DarkenedGazeSystemScript.html#a4ed1ea35874f341d78080872d8f5a652":[0,0,0,0,0,0,5,2,1,7,2],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1DarkenedGazeSystemScript.html#a4ed1ea35874f341d78080872d8f5a652":[1,0,0,0,0,0,5,2,1,7,2],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1DarkenedGazeSystemScript.html#aa41b0165cbb6a1947ccb21423e7fe48c":[0,0,0,0,0,0,5,2,1,7,7],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1DarkenedGazeSystemScript.html#aa41b0165cbb6a1947ccb21423e7fe48c":[1,0,0,0,0,0,5,2,1,7,7],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1DarkenedGazeSystemScript.html#ac7a0b7baafb799eabecf156d1b170b43":[0,0,0,0,0,0,5,2,1,7,8],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1DarkenedGazeSystemScript.html#ac7a0b7baafb799eabecf156d1b170b43":[1,0,0,0,0,0,5,2,1,7,8],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1DarkenedGazeSystemScript.html#af320a0577c6e7bddc19e766e14a14204":[0,0,0,0,0,0,5,2,1,7,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1DarkenedGazeSystemScript.html#af320a0577c6e7bddc19e766e14a14204":[1,0,0,0,0,0,5,2,1,7,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX143 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1RiftLightningEffect.html#ae25316ccf4a7dffcdc91c3efdc0a57a7":[1,0,0,0,0,0,5,2,1,20,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1RiftLightningMineExplosion.html":[0,0,0,0,0,0,5,2,1,21],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1RiftLightningMineExplosion.html":[1,0,0,0,0,0,5,2,1,21],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1RiftLightningMineExplosion.html#ace6ecf61956ee7094b84b03ec4449294":[0,0,0,0,0,0,5,2,1,21,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1RiftLightningMineExplosion.html#ace6ecf61956ee7094b84b03ec4449294":[1,0,0,0,0,0,5,2,1,21,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1ShroudedEjectaAI.html":[0,0,0,0,0,0,5,2,1,22],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1ShroudedEjectaAI.html":[1,0,0,0,0,0,5,2,1,22],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1ShroudedEjectaAI.html#a04324451045a25cdd61005a8d6090077":[0,0,0,0,0,0,5,2,1,22,8],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1ShroudedEjectaAI.html#a04324451045a25cdd61005a8d6090077":[1,0,0,0,0,0,5,2,1,22,8],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1ShroudedEjectaAI.html#a0f0697b7fe14e691efcdd2a1b27d4c09":[0,0,0,0,0,0,5,2,1,22,13]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1dweller_1_1RiftLightningMineExplosion.html#ace6ecf61956ee7094b84b03ec4449294":[0,0,0,0,0,0,5,2,1,21,0]
 };

@@ -1,5 +1,11 @@
 var NAVTREEINDEX132 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1GalatianAcademyStipend.html#a3bf1a6b877a52d127b2d240fb98ca2cf":[1,0,0,0,0,0,5,0,21,2,6],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1GalatianAcademyStipend.html#a63ab036067f17ccb7b9758ccc8f553aa":[0,0,0,0,0,0,5,0,21,2,7],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1GalatianAcademyStipend.html#a63ab036067f17ccb7b9758ccc8f553aa":[1,0,0,0,0,0,5,0,21,2,7],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1GalatianAcademyStipend.html#a996fb7a39780739ceab1ef1aff443ead":[0,0,0,0,0,0,5,0,21,2,5],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1GalatianAcademyStipend.html#a996fb7a39780739ceab1ef1aff443ead":[1,0,0,0,0,0,5,0,21,2,5],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1GalatianAcademyStipend.html#ab19545ca9fab7a079ddd7b13668ed6fa":[0,0,0,0,0,0,5,0,21,2,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1GalatianAcademyStipend.html#ab19545ca9fab7a079ddd7b13668ed6fa":[1,0,0,0,0,0,5,0,21,2,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1GalatianAcademyStipend.html#ab6853dee84a3d47992bc1fc2d95e7f3f":[0,0,0,0,0,0,5,0,21,2,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1GalatianAcademyStipend.html#ab6853dee84a3d47992bc1fc2d95e7f3f":[1,0,0,0,0,0,5,0,21,2,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX132 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a17f908af0b0bba6e7fdd6b0d5ba1a17a":[1,0,0,0,0,0,5,0,21,11,3],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a1fbc412401dd63321baaf962277a6ff6":[0,0,0,0,0,0,5,0,21,11,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a1fbc412401dd63321baaf962277a6ff6":[1,0,0,0,0,0,5,0,21,11,1],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a25e22ea996e196700e8f3f6a6070473f":[0,0,0,0,0,0,5,0,21,11,15],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a25e22ea996e196700e8f3f6a6070473f":[1,0,0,0,0,0,5,0,21,11,15],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a2689370fc237daaeee4e8df1e5dbec67":[0,0,0,0,0,0,5,0,21,11,13],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a2689370fc237daaeee4e8df1e5dbec67":[1,0,0,0,0,0,5,0,21,11,13],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a268cbc580c52d25b2261bf328bff044f":[0,0,0,0,0,0,5,0,21,11,26],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a268cbc580c52d25b2261bf328bff044f":[1,0,0,0,0,0,5,0,21,11,26],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a2c4d6f20f71510fed1c8b3407c71e8c0":[0,0,0,0,0,0,5,0,21,11,23]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1tutorial_1_1TutorialMissionIntel.html#a25e22ea996e196700e8f3f6a6070473f":[0,0,0,0,0,0,5,0,21,11,15]
 };

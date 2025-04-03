@@ -1,5 +1,11 @@
 var NAVTREEINDEX156 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutableValue.html#abc1b3f85c61b352cf5ed261b8e0e2007":[1,0,0,0,0,0,11,19,5],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutatingValueUtil.html":[0,0,0,0,0,0,11,20],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutatingValueUtil.html":[1,0,0,0,0,0,11,20],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutatingValueUtil.html#a0b5c2e24032862e0991da194bee7b14c":[0,0,0,0,0,0,11,20,12],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutatingValueUtil.html#a0b5c2e24032862e0991da194bee7b14c":[1,0,0,0,0,0,11,20,12],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutatingValueUtil.html#a0d07561d35e24d219a7b9a988ea7019e":[0,0,0,0,0,0,11,20,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutatingValueUtil.html#a0d07561d35e24d219a7b9a988ea7019e":[1,0,0,0,0,0,11,20,1],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutatingValueUtil.html#a18ce263d6c22491685e1d5514def8709":[0,0,0,0,0,0,11,20,6],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1MutatingValueUtil.html#a18ce263d6c22491685e1d5514def8709":[1,0,0,0,0,0,11,20,6],
@@ -243,11 +249,5 @@ var NAVTREEINDEX156 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTrackerMap.html":[1,0,0,0,0,0,11,34],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTrackerMap.html#a20867c301d460e5ae4d84905e34724eb":[0,0,0,0,0,0,11,34,8],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTrackerMap.html#a20867c301d460e5ae4d84905e34724eb":[1,0,0,0,0,0,11,34,8],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTrackerMap.html#a2794e695c01709f8337657a8e5729bd0":[0,0,0,0,0,0,11,34,7],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTrackerMap.html#a2794e695c01709f8337657a8e5729bd0":[1,0,0,0,0,0,11,34,7],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTrackerMap.html#a291e69ef575f7ddcd4a2a3b9a352b556":[0,0,0,0,0,0,11,34,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTrackerMap.html#a291e69ef575f7ddcd4a2a3b9a352b556":[1,0,0,0,0,0,11,34,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTrackerMap.html#a3f2b461aeb40eef8510628841cc3907a":[0,0,0,0,0,0,11,34,6],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTrackerMap.html#a3f2b461aeb40eef8510628841cc3907a":[1,0,0,0,0,0,11,34,6],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTrackerMap.html#a43f3ba27eb19e3a99ef16f12ca5b314f":[0,0,0,0,0,0,11,34,1]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1util_1_1TimeoutTrackerMap.html#a2794e695c01709f8337657a8e5729bd0":[0,0,0,0,0,0,11,34,7]
 };

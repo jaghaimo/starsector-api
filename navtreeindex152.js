@@ -1,5 +1,11 @@
 var NAVTREEINDEX152 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#a9b231319c156e0b2e13acd54187e470b":[1,0,0,0,0,0,7,6,21],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#ab5b58b295e427a65cc701fe723717faf":[0,0,0,0,0,0,7,6,3],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#ab5b58b295e427a65cc701fe723717faf":[1,0,0,0,0,0,7,6,3],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#ab74f3e96dfe3d009d3a67eb07335b4d9":[0,0,0,0,0,0,7,6,17],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#ab74f3e96dfe3d009d3a67eb07335b4d9":[1,0,0,0,0,0,7,6,17],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#ab9a869db7496b9513e22d641913fc26a":[0,0,0,0,0,0,7,6,25],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#ab9a869db7496b9513e22d641913fc26a":[1,0,0,0,0,0,7,6,25],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#abc1268de4eb4745ac5f9fc7e8900020c":[0,0,0,0,0,0,7,6,12],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1loading_1_1Description.html#abc1268de4eb4745ac5f9fc7e8900020c":[1,0,0,0,0,0,7,6,12],
@@ -243,11 +249,5 @@ var NAVTREEINDEX152 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#a4d9f191dbaa87cc6d0e22152816859cc":[1,0,0,0,0,0,9,0,1,9],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#a5c035396881e5c581030bd21fa85726a":[0,0,0,0,0,0,9,0,1,64],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#a5c035396881e5c581030bd21fa85726a":[1,0,0,0,0,0,9,0,1,64],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#a61adddf3de4dc791ad5928977a67c26f":[0,0,0,0,0,0,9,0,1,3],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#a61adddf3de4dc791ad5928977a67c26f":[1,0,0,0,0,0,9,0,1,3],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#a63a03b3282a40d90c8b333e1825d3083":[0,0,0,0,0,0,9,0,1,21],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#a63a03b3282a40d90c8b333e1825d3083":[1,0,0,0,0,0,9,0,1,21],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#a64e8d7b4b5186ba4f35a638c9a260d02":[0,0,0,0,0,0,9,0,1,56],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#a64e8d7b4b5186ba4f35a638c9a260d02":[1,0,0,0,0,0,9,0,1,56],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#a66d1f589f56af495fa178778017de8db":[0,0,0,0,0,0,9,0,1,1]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1plugins_1_1impl_1_1CoreAutofitPlugin.html#a61adddf3de4dc791ad5928977a67c26f":[0,0,0,0,0,0,9,0,1,3]
 };

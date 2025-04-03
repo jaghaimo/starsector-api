@@ -1,5 +1,11 @@
 var NAVTREEINDEX147 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1SeekerFragmentMissileEffect.html#a1e89fc7d2f36e880a15adce3018b8efb":[1,0,0,0,0,0,5,2,2,21,1],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1SeekerFragmentMissileEffect.html#a32756fecfdd144619e682deb04e45d0c":[0,0,0,0,0,0,5,2,2,21,3],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1SeekerFragmentMissileEffect.html#a32756fecfdd144619e682deb04e45d0c":[1,0,0,0,0,0,5,2,2,21,3],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1SeekerFragmentMissileEffect.html#a85a2a55e957a93e64261d2fd7242ed4e":[0,0,0,0,0,0,5,2,2,21,4],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1SeekerFragmentMissileEffect.html#a85a2a55e957a93e64261d2fd7242ed4e":[1,0,0,0,0,0,5,2,2,21,4],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1SeekerFragmentMissileEffect.html#a85d2ec15ae2dfc5a6c8540e5afe32748":[0,0,0,0,0,0,5,2,2,21,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1SeekerFragmentMissileEffect.html#a85d2ec15ae2dfc5a6c8540e5afe32748":[1,0,0,0,0,0,5,2,2,21,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1SeekerFragmentMissileEffect.html#abdcdf3edbe4a58d75e845f6c70725316":[0,0,0,0,0,0,5,2,2,21,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1SeekerFragmentMissileEffect.html#abdcdf3edbe4a58d75e845f6c70725316":[1,0,0,0,0,0,5,2,2,21,2],
@@ -243,11 +249,5 @@ var NAVTREEINDEX147 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1ThreatSwarmAI.html#a4a2fe44c2d6ca6fecf89a733e0ac0e51":[1,0,0,0,0,0,5,2,2,31,31],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1ThreatSwarmAI.html#a529f61b5284dbb3ec4ec2ba58a17e7d5":[0,0,0,0,0,0,5,2,2,31,8],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1ThreatSwarmAI.html#a529f61b5284dbb3ec4ec2ba58a17e7d5":[1,0,0,0,0,0,5,2,2,31,8],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1ThreatSwarmAI.html#a532d89fa32c972d00fbf57b2037f59ad":[0,0,0,0,0,0,5,2,2,31,34],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1ThreatSwarmAI.html#a532d89fa32c972d00fbf57b2037f59ad":[1,0,0,0,0,0,5,2,2,31,34],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1ThreatSwarmAI.html#a59524af6ed445ef9eac6bc9e7bec8a16":[0,0,0,0,0,0,5,2,2,31,15],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1ThreatSwarmAI.html#a59524af6ed445ef9eac6bc9e7bec8a16":[1,0,0,0,0,0,5,2,2,31,15],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1ThreatSwarmAI.html#a630b1902b9faec38998df2028e1f6cd7":[0,0,0,0,0,0,5,2,2,31,18],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1ThreatSwarmAI.html#a630b1902b9faec38998df2028e1f6cd7":[1,0,0,0,0,0,5,2,2,31,18],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1ThreatSwarmAI.html#a7284d8dc57d060cd9cd4b2de5e1755da":[0,0,0,0,0,0,5,2,2,31,16]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1combat_1_1threat_1_1ThreatSwarmAI.html#a532d89fa32c972d00fbf57b2037f59ad":[0,0,0,0,0,0,5,2,2,31,34]
 };

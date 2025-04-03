@@ -1,5 +1,11 @@
 var NAVTREEINDEX104 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#aa424aaf355dbf77647f1ffcfafe59812":[1,0,0,0,0,0,5,0,12,3,8,197],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#aa468c8ee40a1eb59cded1cccc0604851":[0,0,0,0,0,0,5,0,12,3,8,17],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#aa468c8ee40a1eb59cded1cccc0604851":[1,0,0,0,0,0,5,0,12,3,8,17],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#aa4b64c893b6c104422881ab5f51741fc":[0,0,0,0,0,0,5,0,12,3,8,39],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#aa4b64c893b6c104422881ab5f51741fc":[1,0,0,0,0,0,5,0,12,3,8,39],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#aa53d74f2d0f86f309da5fc5c07503977":[0,0,0,0,0,0,5,0,12,3,8,87],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#aa53d74f2d0f86f309da5fc5c07503977":[1,0,0,0,0,0,5,0,12,3,8,87],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#aa557733bcc382ceeb9735cdd116cef4b":[0,0,0,0,0,0,5,0,12,3,8,76],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1HubMissionWithTriggers.html#aa557733bcc382ceeb9735cdd116cef4b":[1,0,0,0,0,0,5,0,12,3,8,76],
@@ -243,11 +249,5 @@ var NAVTREEINDEX104 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1MissionFleetInterceptPlayerIfNearby.html":[1,0,0,0,0,0,5,0,12,3,11],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1MissionFleetInterceptPlayerIfNearby.html#a0aa39e1ba998a487cd47e3b846120f23":[0,0,0,0,0,0,5,0,12,3,11,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1MissionFleetInterceptPlayerIfNearby.html#a0aa39e1ba998a487cd47e3b846120f23":[1,0,0,0,0,0,5,0,12,3,11,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1MissionFleetInterceptPlayerIfNearby.html#a25af07faa59c55b5a19ca79aca675ad0":[0,0,0,0,0,0,5,0,12,3,11,13],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1MissionFleetInterceptPlayerIfNearby.html#a25af07faa59c55b5a19ca79aca675ad0":[1,0,0,0,0,0,5,0,12,3,11,13],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1MissionFleetInterceptPlayerIfNearby.html#a30de847eaa9c508d8bd6eb2172a0d222":[0,0,0,0,0,0,5,0,12,3,11,8],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1MissionFleetInterceptPlayerIfNearby.html#a30de847eaa9c508d8bd6eb2172a0d222":[1,0,0,0,0,0,5,0,12,3,11,8],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1MissionFleetInterceptPlayerIfNearby.html#a33c28c12275d05393a1f361d248f3b3e":[0,0,0,0,0,0,5,0,12,3,11,4],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1MissionFleetInterceptPlayerIfNearby.html#a33c28c12275d05393a1f361d248f3b3e":[1,0,0,0,0,0,5,0,12,3,11,4],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1MissionFleetInterceptPlayerIfNearby.html#a3db01fcad9f60f0ed98965715793f2df":[0,0,0,0,0,0,5,0,12,3,11,11]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1missions_1_1hub_1_1MissionFleetInterceptPlayerIfNearby.html#a25af07faa59c55b5a19ca79aca675ad0":[0,0,0,0,0,0,5,0,12,3,11,13]
 };

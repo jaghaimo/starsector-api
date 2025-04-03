@@ -1,5 +1,7 @@
 var NAVTREEINDEX50 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1PilgrimageFleetAssignmentAI.html#afc83f24831bf90708c3eabcb1d45e25d":[1,0,0,0,0,0,5,0,7,30,2],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1PilgrimageFleetRouteManager.html":[0,0,0,0,0,0,5,0,7,31],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1PilgrimageFleetRouteManager.html":[1,0,0,0,0,0,5,0,7,31],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1PilgrimageFleetRouteManager.html#a2f15b61dd49f237adbd22a6735de0668":[0,0,0,0,0,0,5,0,7,31,2],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1PilgrimageFleetRouteManager.html#a2f15b61dd49f237adbd22a6735de0668":[1,0,0,0,0,0,5,0,7,31,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX50 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1SourceBasedFleetManager.html#af80f25d8a7c692e451497dee8a85339f":[1,0,0,0,0,0,5,0,7,42,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1BaseMiscFleetCreatorPlugin.html":[0,0,0,0,0,0,5,0,7,0,0],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1BaseMiscFleetCreatorPlugin.html":[1,0,0,0,0,0,5,0,7,0,0],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1BaseMiscFleetCreatorPlugin.html#a1d7af6c35d6b024d5994df006d36c6c0":[0,0,0,0,0,0,5,0,7,0,0,6],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1BaseMiscFleetCreatorPlugin.html#a1d7af6c35d6b024d5994df006d36c6c0":[1,0,0,0,0,0,5,0,7,0,0,6],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1BaseMiscFleetCreatorPlugin.html#a2549af2071300b44629f212fcdb5af5c":[0,0,0,0,0,0,5,0,7,0,0,12]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1misc_1_1BaseMiscFleetCreatorPlugin.html#a1d7af6c35d6b024d5994df006d36c6c0":[0,0,0,0,0,0,5,0,7,0,0,6]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX49 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html#acd68ef4457a2fd2eb846c339f8b643d9":[1,0,0,0,0,0,5,0,7,17,53],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html#ad04db2d4ba0d8f545d926d423b931923":[0,0,0,0,0,0,5,0,7,17,44],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html#ad04db2d4ba0d8f545d926d423b931923":[1,0,0,0,0,0,5,0,7,17,44],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html#ae09eb9a7aaf37b15c83a88e23969f9d6":[0,0,0,0,0,0,5,0,7,17,5],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html#ae09eb9a7aaf37b15c83a88e23969f9d6":[1,0,0,0,0,0,5,0,7,17,5],
@@ -247,7 +249,5 @@ var NAVTREEINDEX49 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1PilgrimageFleetAssignmentAI.html#aaa19b7eaab3cc66faa6990dc87a7cfc8":[1,0,0,0,0,0,5,0,7,30,7],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1PilgrimageFleetAssignmentAI.html#aef84b74907ff27125d37a2e553c40ec8":[0,0,0,0,0,0,5,0,7,30,4],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1PilgrimageFleetAssignmentAI.html#aef84b74907ff27125d37a2e553c40ec8":[1,0,0,0,0,0,5,0,7,30,4],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1PilgrimageFleetAssignmentAI.html#afc83f24831bf90708c3eabcb1d45e25d":[0,0,0,0,0,0,5,0,7,30,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1PilgrimageFleetAssignmentAI.html#afc83f24831bf90708c3eabcb1d45e25d":[1,0,0,0,0,0,5,0,7,30,2],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1PilgrimageFleetRouteManager.html":[0,0,0,0,0,0,5,0,7,31]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1PilgrimageFleetAssignmentAI.html#afc83f24831bf90708c3eabcb1d45e25d":[0,0,0,0,0,0,5,0,7,30,2]
 };

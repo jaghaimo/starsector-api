@@ -1,5 +1,7 @@
 var NAVTREEINDEX80 =
 {
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1FGTravelAction.html#a7558942ae4d17ce6eb2a30389a7a22f8":[1,0,0,0,0,0,5,0,11,5,8,13],
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1FGTravelAction.html#a912cf1a590b639fe2599af2265e5c810":[0,0,0,0,0,0,5,0,11,5,8,22],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1FGTravelAction.html#a912cf1a590b639fe2599af2265e5c810":[1,0,0,0,0,0,5,0,11,5,8,22],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1FGTravelAction.html#a98803a70f3bebcb84407eacd1da0deda":[0,0,0,0,0,0,5,0,11,5,8,21],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1FGTravelAction.html#a98803a70f3bebcb84407eacd1da0deda":[1,0,0,0,0,0,5,0,11,5,8,21],
@@ -247,7 +249,5 @@ var NAVTREEINDEX80 =
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1FleetGroupIntel.html#aba79d9f9ad1a0af32b0078a6fdf1270e":[1,0,0,0,0,0,5,0,11,5,10,35],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1FleetGroupIntel.html#abeb071c9479655e02b400ad38f6c1332":[0,0,0,0,0,0,5,0,11,5,10,57],
 "classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1FleetGroupIntel.html#abeb071c9479655e02b400ad38f6c1332":[1,0,0,0,0,0,5,0,11,5,10,57],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1FleetGroupIntel.html#ac0c44acd6fc91c87c6c784f31dff8e67":[0,0,0,0,0,0,5,0,11,5,10,11],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1FleetGroupIntel.html#ac0c44acd6fc91c87c6c784f31dff8e67":[1,0,0,0,0,0,5,0,11,5,10,11],
-"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1FleetGroupIntel.html#ac280560c5d990b492c94f68f8758c430":[0,0,0,0,0,0,5,0,11,5,10,67]
+"classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1intel_1_1group_1_1FleetGroupIntel.html#ac0c44acd6fc91c87c6c784f31dff8e67":[0,0,0,0,0,0,5,0,11,5,10,11]
 };

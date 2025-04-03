@@ -1,3 +1,9 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1FleetParamsV3.html" title=" " alt="" coords="5,5,260,46"/>
+<area shape="rect" id="Node000000" href="$interfacecom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1GenerateFleetOfficersPlugin.html" title=" " alt="" coords="5,39,260,79"/>
+<area shape="rect" id="Node000001" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1fleets_1_1BaseGenerateFleetOfficersPlugin.html" title=" " alt="" coords="308,39,562,79"/>
+<area shape="poly" id="edge1243_Node000000_Node000001" title=" " alt="" coords="275,56,307,56,307,62,275,62"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1OmegaOfficerGeneratorPlugin.html" title=" " alt="" coords="610,5,925,46"/>
+<area shape="poly" id="edge1244_Node000001_Node000002" title=" " alt="" coords="577,42,609,39,610,44,578,47"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1fs_1_1starfarer_1_1api_1_1impl_1_1campaign_1_1procgen_1_1themes_1_1RemnantOfficerGeneratorPlugin.html" title=" " alt="" coords="610,71,925,111"/>
+<area shape="poly" id="edge1245_Node000001_Node000003" title=" " alt="" coords="578,70,610,73,609,78,577,75"/>
 </map>
